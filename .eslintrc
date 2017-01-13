@@ -1,0 +1,9 @@
+{
+	"parser": "babel-eslint",
+	"extends": "tamia/react",
+	"globals": {
+		"expect": false,
+		"shallow": false,
+		"render": false
+	}
+}
