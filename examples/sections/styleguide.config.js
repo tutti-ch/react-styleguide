@@ -2,7 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const extend = require('util')._extend
 
-const REACT_MYPAGES_SRC = '../../../react-mypages/src'
+const REACT_MYPAGES_SRC = 'node_modules/react-mypages/src'
 
 const utils_paths = function () {
   const resolve = path.resolve
@@ -113,7 +113,7 @@ module.exports = {
 
     webpackConfig.module.loaders.push({
 	test: /\.(js|jsx)$/,
-	exclude: /(node_modules|\.min\.)/,
+	exclude: (absolutePath) => /node_modules|\.min\./.test(absolutePath) && !dir.reduce( (before, include) => absolutePath.indexOf(include) === 0 || before, false),
 	include: dir,
 	loader: 'babel',
 	query: {
