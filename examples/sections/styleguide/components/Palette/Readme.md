@@ -1,5 +1,8 @@
 # UI Colors
-The user interface colors derive from the brand and used according to WCAG AA standards.
+
+The user interface colors derive from the brand and are used according to WCAG AA standards.
+
+The colors can be found in [react-mypages/src/styles/style_guide/_colors.scss](https://github.com/tutti-ch/react-mypages/blob/master/src/styles/style_guide/_colors.scss "Link to react-mypages github repo").
 
 ## Greyscale
 The base colors are used for navigation & other interface elements.
