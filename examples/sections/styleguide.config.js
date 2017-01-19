@@ -3,6 +3,10 @@ const glob = require('glob')
 const extend = require('util')._extend
 
 const REACT_MYPAGES_SRC = 'node_modules/react-mypages/src'
+const REACT_MYPAGES_HELPERS = REACT_MYPAGES_SRC + '/helpers'
+const REACT_STYLEGUIDE_COMPONENTS = 'styleguide'
+
+const ASSET_PATHS = [REACT_MYPAGES_SRC, REACT_STYLEGUIDE_COMPONENTS]
 
 const utils_paths = function () {
   const resolve = path.resolve
@@ -22,59 +26,48 @@ const utils_paths = function () {
   }
 }()
 
+function getComponents(directory) {
+    return function() {
+	return glob.sync(path.resolve(__dirname, directory + '/components/**/*.js')).filter(function(module) {
+	  return /\/[A-Z]\w*\.js$/.test(module)
+	})
+    };
+}
+
 module.exports = {
   title: 'tutti.ch Style Guide',
   defaultExample: false,
   skipComponentsWithoutExample: true,
-  styleguideDir: 'docs/styleguide', // this allow to publish the styleguide in GH-pages
+  styleguideDir: '../../docs', // this allow to publish the styleguide in GH-pages
   sections: [
     {
       name: 'Components',
-      components: function() {
-	return glob.sync(path.resolve(__dirname, REACT_MYPAGES_SRC + '/components/**/*.js')).filter(function(module) {
-	  return /\/[A-Z]\w*\.js$/.test(module)
-	})
-      }
+      components: getComponents(REACT_MYPAGES_SRC)
     },
     {
       name: 'Styleguide',
-      components: function() {
-	return glob.sync(path.resolve(__dirname, REACT_MYPAGES_SRC + '/styleguide/components/**/*.js')).filter(function(module) {
-	  return /\/[A-Z]\w*\.js$/.test(module)
-	})
-      }
-    },
+      components: getComponents(REACT_STYLEGUIDE_COMPONENTS)
+    }
   ],
   updateWebpackConfig: function(webpackConfig, env) {
-    const dir = [
-      path.resolve(__dirname, REACT_MYPAGES_SRC + '/components'),
-      path.resolve(__dirname, REACT_MYPAGES_SRC + '/styleguide'),
-      path.resolve(__dirname, REACT_MYPAGES_SRC + '/helpers')
-    ]
+    const dir = ASSET_PATHS.concat([REACT_MYPAGES_HELPERS]).map( (_path) =>  path.resolve(__dirname, _path) )
 
     webpackConfig.sassLoader = {
       includePaths: utils_paths.client('styles')
     }
 
-    // add fallback resolve path so that we can include components
-    // like components/Foo/Foo
-    // that was not included in the default config so we had to extend it
+    // Add fallback resolve path so that we can include components like components/Foo/Foo.
+    // That was not included in the default config so we had to extend it.
     webpackConfig.resolve = extend(webpackConfig.resolve, {
-      fallback: [utils_paths.base(REACT_MYPAGES_SRC)]
+	fallback: ASSET_PATHS.map( (path) => utils_paths.base(path) )
     })
 
     const BASE_CSS_LOADER = 'css?sourceMap&-minimize&camelCase'
 
-    // Add any packge names here whose styles need to be treated as CSS modules.
+    // Add any package names here whose styles need to be treated as CSS modules.
     // These paths will be combined into a single regex.
-    const PATHS_TO_TREAT_AS_CSS_MODULES = [
-      // 'react-toolbox', (example)
-    ]
-
     // If config has CSS modules enabled, treat this project's styles as CSS modules.
-    PATHS_TO_TREAT_AS_CSS_MODULES.push(
-      utils_paths.base(REACT_MYPAGES_SRC).replace(/[\^\$\.\*\+\-\?=!:\|\\\/\(\)\[\]\{\},]/g, '\\$&')
-    )
+    const PATHS_TO_TREAT_AS_CSS_MODULES = ASSET_PATHS.map( (path) => utils_paths.base(path).replace(/[\^\$\.\*\+\-\?=!:\|\\\/\(\)\[\]\{\},]/g, '\\$&') )
 
     const isUsingCSSModules = !!PATHS_TO_TREAT_AS_CSS_MODULES.length
     const cssModulesRegex = new RegExp(`(${PATHS_TO_TREAT_AS_CSS_MODULES.join('|')})`)
@@ -113,7 +106,6 @@ module.exports = {
 
     webpackConfig.module.loaders.push({
 	test: /\.(js|jsx)$/,
-	exclude: (absolutePath) => /node_modules|\.min\./.test(absolutePath) && !dir.reduce( (before, include) => absolutePath.indexOf(include) === 0 || before, false),
 	include: dir,
 	loader: 'babel',
 	query: {

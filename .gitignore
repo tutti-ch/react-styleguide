@@ -4,3 +4,6 @@ examples/**/styleguide/index.html
 node_modules/
 Changelog.md
 *.log
+*~
+*.DS_Store
+*#* 
