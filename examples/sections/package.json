@@ -32,7 +32,7 @@
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "styleguide-server": "styleguidist server",
-    "styleguide-build": "styleguidist build"
+    "styleguide-server": "node scripts/generateIconsFile.js && styleguidist server",
+    "styleguide-build": "node scripts/generateIconsFile.js && styleguidist build"
   }
 }

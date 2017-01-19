@@ -1,0 +1,35 @@
+@import '~susy/sass/susy';
+@import 'config';
+@import 'helpers';
+@import 'style_guide';
+
+.iconSet {
+  @include clearfix;
+}
+
+.icon {
+  box-sizing: border-box;
+  display: block;
+  height: $size-xxxl * 4;
+  width: $size-xxxl * 4;
+  float: left;
+  position: relative;
+  margin-bottom: $size-m;
+  margin-right: $size-m;
+  border: 1px solid $greyscale-80;
+  background-color: $greyscale-100;
+}
+
+.name {
+  border-top: 1px solid $greyscale-80;
+  background-color: $greyscale-100;
+  padding: $size-xxs;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  font-size: $size-xs;
+}
+
+.image {
+  @include center;
+}

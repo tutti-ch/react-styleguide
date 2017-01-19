@@ -1,0 +1,45 @@
+@import '~susy/sass/susy';
+@import 'config';
+@import 'helpers';
+@import 'style_guide';
+
+@mixin palette($colorMap, $name) {
+  @each $shade, $color in $colorMap {
+    .#{$name}-#{$shade} {
+      background-color: #{$color};
+    }
+  }
+}
+
+.palette {
+  @include clearfix;
+  box-sizing: border-box;
+}
+
+.color {
+  box-sizing: border-box;
+  display: block;
+  height: $size-xxxl * 4;
+  width: $size-xxxl * 4;
+  float: left;
+  position: relative;
+  margin-bottom: $size-m;
+  margin-right: $size-m;
+  border: 1px solid $greyscale-80;
+}
+
+.code {
+  border-top: 1px solid $greyscale-80;
+  background-color: $greyscale-100;
+  padding: $size-xxs;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+@include palette($greyscale, 'greyscale');
+@include palette($orange, 'orange');
+@include palette($blue, 'blue');
+@include palette($green, 'green');
+@include palette($yellow, 'yellow');
+@include palette($red, 'red');
