@@ -35,6 +35,7 @@ function getComponents(directory) {
 }
 
 module.exports = {
+  template: 'templates/index.html',
   title: 'tutti.ch Style Guide',
   defaultExample: false,
   skipComponentsWithoutExample: true,
