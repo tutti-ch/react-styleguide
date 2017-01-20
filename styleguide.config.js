@@ -39,7 +39,7 @@ module.exports = {
   title: 'tutti.ch Style Guide',
   defaultExample: false,
   skipComponentsWithoutExample: true,
-  styleguideDir: '../../docs', // this allow to publish the styleguide in GH-pages
+  styleguideDir: 'docs', // this allow to publish the styleguide in GH-pages
   sections: [
     {
       name: 'Components',
