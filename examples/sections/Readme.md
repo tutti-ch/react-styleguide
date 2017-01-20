@@ -1,14 +1,20 @@
-# React Styleguidist example style guide with sections
+# tutti.ch Styleguide
 
-![](http://wow.sapegin.me/3F1u0m1g2w07/Image%202016-04-20%20at%209.15.24%20AM.png)
-
-How to start locally:
+## How to start
 
 ```
-git clone https://github.com/styleguidist/react-styleguidist.git
+git clone https://github.com/tutti-ch/react-styleguide.git
 cd react-styleguidist/examples/sections
 npm install
 npm run styleguide-server
 ```
 
 Then open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Changing content
+
+t.b.d.
+
+## Publishing to Github Pages
+
+t.b.d.
