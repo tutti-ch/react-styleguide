@@ -27,11 +27,13 @@
     "react-styleguidist": "^4.4.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
+    "recursive-readdir": "^2.1.0",
     "susy": "^2.2.12",
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "styleguide-server": "node scripts/generateIconsFile.js && styleguidist server",
-    "styleguide-build": "node scripts/generateIconsFile.js && styleguidist build"
+    "styleguide-server": "scripts/build.sh && styleguidist server",
+    "styleguide-build": "scripts/build.sh && styleguidist build",
+    "test": "node scripts/generateAssetIconsFile.js"
   }
 }
