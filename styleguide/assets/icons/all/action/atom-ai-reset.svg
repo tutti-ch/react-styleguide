@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Search_copy" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="281 371 50 50"
+	 enable-background="new 281 371 50 50" xml:space="preserve">
+<switch>
+	
+	<g i:extraneous="self">
+		<g>
+			<path fill="none" stroke="#A6A39C" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M281.8,382.7l3.9,10.5
+				c0.2,0.5,0.6,0.6,1,0.5l9.3-4.3"/>
+			<path fill="none" stroke="#A6A39C" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M324.9,389.6
+				c-3.1-10.5-14-16.3-24.5-13.2c-7.9,2.4-13.2,9.2-13.9,16.9"/>
+		</g>
+		<g>
+			<path fill="none" stroke="#A6A39C" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M330.2,409.6l-3.9-10.5
+				c-0.2-0.5-0.6-0.6-1-0.5l-9.3,4.3"/>
+			<path fill="none" stroke="#A6A39C" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" d="M287.3,402.6
+				c3.1,10.5,14,16.4,24.3,13.4c7.9-2.3,13.2-9.2,14-16.9"/>
+		</g>
+	</g>
+</switch>
+
+</svg>
