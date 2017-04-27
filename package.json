@@ -1,15 +1,15 @@
 {
-  "name": "react-styleguidist-example-sections",
-  "description": "React styleguidist sections example",
+  "name": "react-styleguide",
+  "description": "React-based styleguide for tutti.ch",
   "version": "1.0.0",
-  "homepage": "https://github.com/styleguidist/react-styleguidist",
+  "homepage": "https://github.com/tutti-ch/react-styleguide",
   "author": {
-    "name": "Artem Sapegin",
-    "url": "http://sapegin.me/"
+    "name": "Tutti AG Switzerland",
+    "url": "tutti.ch"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/styleguidist/react-styleguidist.git"
+    "url": "git://github.com/tutti-ch/react-styleguide.git"
   },
   "license": "MIT",
   "engines": {
@@ -33,7 +33,6 @@
   },
   "scripts": {
     "styleguide-server": "scripts/build.sh && styleguidist server",
-    "styleguide-build": "scripts/build.sh && styleguidist build",
-    "test": "node scripts/generateAssetIconsFile.js"
+    "styleguide-build": "scripts/build.sh && styleguidist build"
   }
 }
