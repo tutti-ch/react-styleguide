@@ -4,7 +4,7 @@
 
 ```
 git clone https://github.com/tutti-ch/react-styleguide.git
-cd react-styleguidist/examples/sections
+cd react-styleguide
 npm install
 npm run styleguide-server
 ```
