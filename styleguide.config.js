@@ -42,16 +42,23 @@ module.exports = {
   skipComponentsWithoutExample: true,
   styleguideDir: 'docs', // this allow to publish the styleguide in GH-pages
   sections: [
-    // {
-    //   name: 'Components',
-    //   components: getComponents(REACT_MYPAGES_SRC)
-    // },
+    {
+      name: 'Components',
+      components: getComponents(REACT_MYPAGES_SRC)
+    },
     {
       name: 'Styleguide',
       components: getComponents(REACT_STYLEGUIDE_COMPONENTS)
     }
   ],
   webpackConfig: {
+    resolve: {
+      modules: [
+        ...ASSET_PATHS.map( (path) => utils_paths.base(path) ),
+        'node_modules'
+      ],
+      extensions: ['*', '.js', '.jsx', '.json']
+    },
     module: {
       loaders: [
         // Babel loader, will use your project’s .babelrc
