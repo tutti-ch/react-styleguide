@@ -29,10 +29,13 @@
     "react-transform-hmr": "^1.0.4",
     "recursive-readdir": "^2.1.0",
     "susy": "^2.2.12",
-    "webpack": "^1.14.0"
+    "webpack": "2.6.1"
   },
   "scripts": {
     "styleguide-server": "scripts/build.sh && styleguidist server",
     "styleguide-build": "scripts/build.sh && styleguidist build"
+  },
+  "devDependencies": {
+    "loaders": "1.1.3"
   }
 }
