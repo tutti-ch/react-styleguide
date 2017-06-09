@@ -1,6 +1,8 @@
 const path = require('path')
 const glob = require('glob')
 const extend = require('util')._extend
+const loaders = require('loaders')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const REACT_MYPAGES_SRC = 'node_modules/react-mypages/src'
 const REACT_MYPAGES_HELPERS = REACT_MYPAGES_SRC + '/helpers'
@@ -35,6 +37,12 @@ function getComponents(directory) {
   };
 }
 
+const extractStyles = new ExtractTextPlugin({
+  filename: '[name].[contenthash].css',
+  allChunks: true,
+  disable: true
+})
+
 module.exports = {
   // template: 'templates/index.html',
   title: 'tutti.ch Style Guide',
@@ -54,7 +62,7 @@ module.exports = {
   webpackConfig: {
     resolve: {
       modules: [
-        ...ASSET_PATHS.map( (path) => utils_paths.base(path) ),
+        ...ASSET_PATHS.map((path) => utils_paths.base(path)),
         'node_modules'
       ],
       extensions: ['*', '.js', '.jsx', '.json']
@@ -71,8 +79,7 @@ module.exports = {
               cacheDirectory: true,
               plugins: [
                 'babel-plugin-transform-class-properties',
-                'babel-plugin-syntax-dynamic-import',
-                [
+                'babel-plugin-syntax-dynamic-import', [
                   'babel-plugin-transform-runtime',
                   {
                     helpers: true,
@@ -89,8 +96,7 @@ module.exports = {
               ],
               presets: [
                 'stage-0',
-                'babel-preset-react',
-                ['babel-preset-env', {
+                'babel-preset-react', ['babel-preset-env', {
                   targets: {
                     ie9: false,
                     uglify: true,
@@ -102,23 +108,26 @@ module.exports = {
           }]
         },
         {
-          test: /\.(css|sass|scss)$/,
-          include: dir,
+          test: /\.scss$/,
           use: [
+            {
+              loader: 'style-loader'
+            },
             {
               loader: 'css-loader',
               options: {
                 modules: true,
+                import: true,
                 localIdentName: '[name]__[local]___[hash:base64:5]',
-                sourceMap: true,
+                importLoaders: 1,
                 camelCase: true
               }
             },
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true,
                 includePaths: [
+                  utils_paths.base('styles'),
                   utils_paths.client('styles')
                 ]
               }
