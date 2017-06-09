@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px"
+	 viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" width="35" height="35" x="280" y="192"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<g id="Ebene_4" display="none">
+	<circle display="inline" fill="#40CFFF" cx="17.5" cy="17.499" r="17.475"/>
+</g>
+<polygon fill="#FFFFFF" points="12.888,0.469 12.888,34.361 12.899,34.366 12.899,0.465 "/>
+<path fill="#23B758" d="M0.375,17.395c0,7.85,5.306,14.442,12.513,16.412V0.979C5.681,2.952,0.375,9.543,0.375,17.395z"/>
+<path fill="#FFFFFF" d="M22.111,34.045V1.005c-0.745-0.2-1.514-0.353-2.299-0.455h-4.626c-0.78,0.102-1.542,0.254-2.288,0.451V34.05
+	c1.469,0.39,3.006,0.618,4.602,0.618C19.1,34.668,20.643,34.441,22.111,34.045z"/>
+<path fill="#EA3648" d="M22.473,1.019c-0.119-0.036-0.24-0.059-0.361-0.092V33.82c0.121-0.03,0.242-0.059,0.361-0.094v0.002
+	c7.072-2.097,12.235-8.619,12.235-16.354C34.708,9.639,29.545,3.113,22.473,1.019z"/>
+<path id="border" fill="#CCCCCC" d="M17.5,1C26.6,1,34,8.402,34,17.5C34,26.6,26.6,34,17.5,34C8.402,34,1,26.6,1,17.5
+	C1,8.402,8.402,1,17.5,1 M17.5,0C7.835,0,0,7.835,0,17.5S7.835,35,17.5,35S35,27.165,35,17.5S27.165,0,17.5,0L17.5,0z"/>
+<g id="Ebene_3">
+	<line fill="none" stroke="#FFFFFF" stroke-width="0.754" x1="27.334" y1="6.707" x2="27.334" y2="12.564"/>
+	<line fill="none" stroke="#FFFFFF" stroke-width="0.754" x1="24.546" y1="9.667" x2="30.123" y2="9.667"/>
+</g>
+<g id="Ebene_1" display="none">
+</g>
+</svg>

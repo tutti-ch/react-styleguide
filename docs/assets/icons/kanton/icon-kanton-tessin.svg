@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="35px" height="35px"
+	 viewBox="0 0 35 35" enable-background="new 0 0 35 35" xml:space="preserve">
+<metadata>
+	<sfw  xmlns="&ns_sfw;">
+		<slices></slices>
+		<sliceSourceBounds  bottomLeftOrigin="true" width="35" height="35" x="0" y="0"></sliceSourceBounds>
+	</sfw>
+</metadata>
+<path fill="#2D6DBA" d="M24.044,2.009c-2.013-0.851-4.223-1.321-6.543-1.321v33.625c2.322,0,4.531-0.472,6.544-1.321
+	c5.529-2.341,9.549-7.558,10.182-13.773c0.059-0.565,0.086-1.139,0.086-1.719s-0.027-1.153-0.086-1.718
+	C33.596,9.564,29.573,4.352,24.044,2.009z"/>
+<path fill="#EF3F58" d="M17.499,0.688c-3.482,0.002-6.716,1.06-9.398,2.871c-0.447,0.301-0.88,0.625-1.294,0.969
+	c-2.907,2.398-4.993,5.755-5.777,9.584c-0.224,1.095-0.342,2.229-0.342,3.39c0,1.161,0.118,2.293,0.341,3.389
+	c0.784,3.831,2.871,7.186,5.777,9.585c0.415,0.341,0.847,0.664,1.295,0.968c2.682,1.811,5.917,2.871,9.398,2.871V0.688z"/>
+<path id="border" fill="#CCCCCC" d="M17.5,1C26.6,1,34,8.402,34,17.5C34,26.6,26.6,34,17.5,34C8.402,34,1,26.6,1,17.5
+	C1,8.402,8.402,1,17.5,1 M17.5,0C7.835,0,0,7.835,0,17.5S7.835,35,17.5,35S35,27.165,35,17.5S27.165,0,17.5,0L17.5,0z"/>
+</svg>
