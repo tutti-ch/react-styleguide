@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="30px" height="30px" viewBox="0 36.875 30 30" enable-background="new 0 36.875 30 30" xml:space="preserve">
+	 width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
 <g id="Layer_1_1_">
 </g>
 <g id="Layer_5" display="none">
-	<rect x="-609.168" y="-466.853" display="inline" fill="#333333" width="3016" height="1758"/>
+	<rect x="-609.2" y="-466.9" display="inline" fill="#333333" width="3016" height="1758"/>
 </g>
 <g id="Layer_4">
 </g>
 <g id="Layer_3">
 </g>
 <g>
-	<path fill="#999999" d="M11.208,61.371c-0.291,0-0.583-0.101-0.819-0.307l-7.888-6.85c-0.521-0.452-0.577-1.241-0.125-1.763
-		c0.452-0.522,1.242-0.579,1.763-0.124l6.98,6.061l14.648-15.615c0.474-0.503,1.265-0.527,1.768-0.057
-		c0.503,0.473,0.528,1.264,0.057,1.768L12.12,60.976C11.874,61.238,11.542,61.371,11.208,61.371z"/>
+	<path d="M11.2,61.4c-0.3,0-0.6-0.1-0.8-0.3l-7.9-6.8C2,53.8,1.9,53,2.4,52.5s1.2-0.6,1.8-0.1l7,6.1l14.6-15.6
+		c0.5-0.5,1.3-0.5,1.8-0.1c0.5,0.5,0.5,1.3,0.1,1.8L12.1,61C11.9,61.2,11.5,61.4,11.2,61.4z"/>
 </g>
 </svg>

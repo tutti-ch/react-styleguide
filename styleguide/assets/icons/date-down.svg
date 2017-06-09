@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<style type="text/css">
-<![CDATA[
-	.st0{display:inline;fill:#333333;}
-	.st1{display:none;}
-	.st2{fill:#A6A39C;}
-]]>
-</style>
+	 width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
 <g id="Layer_1_1_">
 </g>
-<g id="Layer_5" class="st1">
-	<rect x="-214.411" y="-831.636" class="st0" width="3016" height="1758"/>
+<g id="Layer_5" display="none">
+	<rect x="-214.4" y="-831.6" display="inline" fill="#333333" width="3016" height="1758"/>
 </g>
 <g id="Layer_4">
 </g>
 <g id="Layer_3">
 </g>
 <g>
-	<path class="st2" d="M8,9.961c-2.782,0-5.037,2.256-5.037,5.037c0,2.783,2.255,5.039,5.037,5.039c2.783,0,5.038-2.256,5.038-5.039
-		C13.038,12.217,10.783,9.961,8,9.961z M10.368,18.191l-3.066-2.73l-0.057-0.426l0.218-4.099h0.639l0.215,4.042l2.536,2.717
-		L10.368,18.191z"/>
-	<path class="st2" d="M15,0C6.729,0,0,6.729,0,14.998C0,23.271,6.729,30,15,30c8.271,0,15-6.729,15-15.002C30,6.729,23.271,0,15,0z
-		 M8,21c-3.314,0-6-2.686-6-6c0-3.313,2.687-6,6-6c3.314,0,6,2.687,6,6C14,18.314,11.314,21,8,21z M20.998,22.492l-5-6.82h3.117V5.5
-		h3.732v10.172h3.149L20.998,22.492z"/>
+	<path d="M8,10c-2.8,0-5,2.3-5,5c0,2.8,2.3,5,5,5c2.8,0,5-2.3,5-5C13,12.2,10.8,10,8,10z M10.4,18.2l-3.1-2.7L7.2,15l0.2-4.1h0.6
+		l0.2,4l2.5,2.7L10.4,18.2z"/>
+	<path d="M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15s15-6.7,15-15C30,6.7,23.3,0,15,0z M8,21c-3.3,0-6-2.7-6-6c0-3.3,2.7-6,6-6
+		c3.3,0,6,2.7,6,6C14,18.3,11.3,21,8,21z M21,22.5l-5-6.8h3.1V5.5h3.7v10.2H26L21,22.5z"/>
 </g>
 </svg>

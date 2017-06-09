@@ -1,32 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="30px" height="30px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
-<style type="text/css">
-<![CDATA[
-	.st0{display:inline;fill:#333333;}
-	.st1{display:none;}
-	.st2{fill:#A6A39C;}
-]]>
-</style>
+	 width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
 <g id="Layer_1_1_">
 </g>
-<g id="Layer_5" class="st1">
-	<rect x="-688.299" y="-752.979" class="st0" width="3016" height="1758"/>
+<g id="Layer_5" display="none">
+	<rect x="-688.3" y="-753" display="inline" fill="#333333" width="3016" height="1758"/>
 </g>
 <g id="Layer_4">
 </g>
 <g id="Layer_3">
 </g>
 <g>
-	<circle class="st2" cx="10.205" cy="21.208" r="0.881"/>
-	
-		<rect x="9.925" y="13.358" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 35.5719 13.4158)" class="st2" width="10.165" height="1.435"/>
-	<path class="st2" d="M15,0C6.729,0,0,6.729,0,14.999C0,23.271,6.729,30,15,30c8.271,0,15-6.729,15-15.001C30,6.729,23.271,0,15,0z
-		 M14.041,4.369l2.828,1.345l-7.502,7.265L14.041,4.369z M15.451,23.688l-7.707,0.019l0.017-7.709l10.466-10.38l7.692,7.689
-		L15.451,23.688z"/>
-	
-		<rect x="12.189" y="15.632" transform="matrix(-0.7069 0.7073 -0.7073 -0.7069 40.9933 15.7137)" class="st2" width="10.105" height="1.436"/>
+	<circle cx="10.2" cy="21.2" r="0.9"/>
+	<rect x="9.9" y="13.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -5.5569 14.7342)" width="10.2" height="1.4"/>
+	<path d="M15,0C6.7,0,0,6.7,0,15c0,8.3,6.7,15,15,15s15-6.7,15-15C30,6.7,23.3,0,15,0z M14,4.4l2.8,1.3L9.4,13L14,4.4z M15.5,23.7
+		l-7.7,0l0-7.7L18.2,5.6l7.7,7.7L15.5,23.7z"/>
+	<rect x="12.2" y="15.6" transform="matrix(0.7069 -0.7073 0.7073 0.7069 -6.5118 16.9869)" width="10.1" height="1.4"/>
 </g>
 </svg>
