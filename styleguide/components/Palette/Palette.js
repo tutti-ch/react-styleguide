@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 import classNames from 'classnames'
 
 import classes from './Palette.scss'
+import './test.css'
 
 const Palette = ({ color, shades }) => {
   return (
