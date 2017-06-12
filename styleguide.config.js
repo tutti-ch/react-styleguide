@@ -69,7 +69,10 @@ module.exports = {
     },
     module: {
       loaders: [
-        // Babel loader, will use your project’s .babelrc
+        {
+          test: /\.pdf$/,
+          loader: 'ignore-loader'
+        },
         {
           test: /\.js?$/,
           include: dir,

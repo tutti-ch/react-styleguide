@@ -38,6 +38,7 @@
     "styleguide-build": "scripts/build.sh && styleguidist build"
   },
   "devDependencies": {
+    "ignore-loader": "0.1.2",
     "loaders": "1.1.3"
   }
 }
