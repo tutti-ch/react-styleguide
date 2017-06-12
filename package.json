@@ -23,6 +23,7 @@
     "classnames": "2.2.5",
     "react": "15.5.4",
     "react-dom": "^15.4.1",
+    "react-intl": "2.3.0",
     "react-modal": "^1.6.3",
     "react-mypages": "github:tutti-ch/react-mypages",
     "react-styleguidist": "5.4.1",

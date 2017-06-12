@@ -65,7 +65,10 @@ module.exports = {
         ...ASSET_PATHS.map((path) => utils_paths.base(path)),
         'node_modules'
       ],
-      extensions: ['*', '.js', '.jsx', '.json']
+      extensions: ['*', '.js', '.jsx', '.json'],
+      alias: {
+        'rsg-components/Wrapper': path.join(__dirname, 'styleguide/internal/Wrapper')
+      }
     },
     module: {
       loaders: [
