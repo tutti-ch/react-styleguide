@@ -1,8 +1,11 @@
+const webpack = require('webpack')
 const path = require('path')
 const glob = require('glob')
 const extend = require('util')._extend
 const loaders = require('loaders')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+const globals = require('./styleguide/internal/globals')
 
 const REACT_MYPAGES_SRC = 'node_modules/react-mypages/src'
 const REACT_MYPAGES_HELPERS = REACT_MYPAGES_SRC + '/helpers'
@@ -70,6 +73,9 @@ module.exports = {
         'rsg-components/Wrapper': path.join(__dirname, 'styleguide/internal/Wrapper')
       }
     },
+    plugins: [
+      new webpack.DefinePlugin(globals)
+    ],
     module: {
       loaders: [
         {
