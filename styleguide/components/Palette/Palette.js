@@ -7,14 +7,14 @@ const Palette = ({ color, shades }) => {
   return (
     <div className={classes.palette}>
       {
-        shades.map((shade) => {
+        shades.map((shade, index) => {
           const colorClasses = classNames(
             [classes.color],
             classes[`${color}-${shade}`]
           )
 
           return (
-            <div className={colorClasses}>
+            <div className={colorClasses} key={`palette-${index}`}>
               <code className={classes.code}>${color}-{shade}</code>
             </div>
           )

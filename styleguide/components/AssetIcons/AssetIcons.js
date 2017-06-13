@@ -18,8 +18,8 @@ for (let i = 0, n = iconList.length, icon; i < n; i++) {
 const AssetIcons = () => {
   return (
     <div className={classes.iconSet}>
-      {icons.map(({base64, name}) => (
-        <div className={classes.icon}>
+      {icons.map(({base64, name}, index) => (
+        <div className={classes.icon} key={`asset-${index}`}>
           <img className={classes.image} src={base64} width='75' height='75' />
           <code className={classes.name}>{name}</code>
         </div>
