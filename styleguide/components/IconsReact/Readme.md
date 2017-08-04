@@ -8,4 +8,4 @@ The keyline shape of the product icons are circlular. This is to maintain a cons
 ## System Icons
 The keyline shape of the system icons are square. If outlined, icons will have a `1px` stroke.
 
-    <IconSet />
+    <IconsReact />

@@ -1,3 +1,3 @@
 #!/bin/sh
+node scripts/generateIconsReactFile.js
 node scripts/generateIconsFile.js
-node scripts/generateAssetIconsFile.js

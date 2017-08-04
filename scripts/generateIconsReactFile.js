@@ -3,7 +3,7 @@ var path = require('path')
 var fs = require('fs')
 
 var REACT_STYLEGUIDE_ASSET_ICONS_DIRECTORY = 'styleguide/assets/icons/'
-var REACT_STYLEGUIDE_ASSET_ICONS_COMPONENT_DIRECTORY = '../styleguide/components/AssetIcons'
+var REACT_STYLEGUIDE_ASSET_ICONS_COMPONENT_DIRECTORY = '../styleguide/components/IconsReact'
 
 function ignoreNonSVGFiles(file, stats) {
     return !stats.isDirectory() && !/\.svg$/.test(path.basename(file))
@@ -18,4 +18,3 @@ recursivelyListDirectory(REACT_STYLEGUIDE_ASSET_ICONS_DIRECTORY, [ignoreNonSVGFi
     var template = 'module.exports = [' + filenames.join(',') + '];\n\n'
     fs.writeFile(path.resolve(__dirname, REACT_STYLEGUIDE_ASSET_ICONS_COMPONENT_DIRECTORY + '/iconList.js'), template, function (err) { if(err) console.warn('Write failed: ',JSON.stringify(err)); } )
 })
-

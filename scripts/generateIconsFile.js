@@ -4,8 +4,8 @@ var fs = require('fs')
 
 var REACT_MYPAGES_SOURCE_DIRECTORY = '../node_modules/react-mypages/src';
 var REACT_MYPAGES_SVG_DIRECTORY = '/icons/tutti-icons/';
-var REACT_MYPAGES_SVG_ICONS = REACT_MYPAGES_SVG_DIRECTORY + '*.svg'; 
-var REACT_STYLEGUIDE_ICONSET_DIRECTORY = '../styleguide/components/IconSet/iconList.js'
+var REACT_MYPAGES_SVG_ICONS = REACT_MYPAGES_SVG_DIRECTORY + '*.svg';
+var REACT_STYLEGUIDE_ICONSET_DIRECTORY = '../styleguide/components/Icons/iconList.js'
 
 var options = {
   root: path.resolve(__dirname, REACT_MYPAGES_SOURCE_DIRECTORY)
@@ -20,4 +20,3 @@ glob(path.resolve(__dirname, REACT_MYPAGES_SVG_ICONS), options, function (err, r
 	console.warn('Error globbing ' + REACT_MYPAGES_SOURCE_DIRECTORY + REACT_MYPAGES_SVG_ICONS + ': ',JSON.stringify(err));
     }
 })
-

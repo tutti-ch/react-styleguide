@@ -1,0 +1,2 @@
+module.exports = ["archive","arrow-circular-right","arrow-down","arrow-end","arrow-left","arrow-right","arrow-start","blackpoint","bubble_speech","check-circle","check","clock","close","error","eye","gear","house","info","label","login","logout","mail","menu","pause-circle","pause","pencil","phone","play","plus","premium-bump","premium-dbump","premium-wbump","rotate","search","select","sell_faster","star","trash","tutti-cube","tutti-premium","user"];
+
