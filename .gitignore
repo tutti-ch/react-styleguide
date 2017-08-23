@@ -6,4 +6,5 @@ Changelog.md
 *.log
 *~
 *.DS_Store
-*#* 
+*#*
+.idea/
