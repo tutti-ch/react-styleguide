@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="49.781px" height="51.914px" viewBox="-3.65 -5.514 49.781 51.914" enable-background="new -3.65 -5.514 49.781 51.914"
-	 xml:space="preserve">
+	 width="49.8px" height="51.9px" viewBox="0 0 49.8 51.9" style="enable-background:new 0 0 49.8 51.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#999999;}
+</style>
 <g id="aligners">
 </g>
 <g id="Layer_2">
 </g>
-<g>
-	<polygon fill="#999999" points="39.528,7.664 39.528,42.115 21.53,32.579 20.243,31.936 18.958,32.579 1.172,42.007 1.172,1.079 
-		32.953,1.079 32.953,-1.6 -1.506,-1.6 -1.506,46.4 20.35,34.828 42.206,46.4 42.206,7.664 	"/>
-</g>
-<polygon fill="#999999" points="46.131,-1.604 42.221,-1.604 42.221,-5.514 39.542,-5.514 39.542,-1.604 35.631,-1.604 
-	35.631,1.075 39.542,1.075 39.542,4.986 42.221,4.986 42.221,1.075 46.131,1.075 "/>
+<path class="st0" d="M49.3,16.4c0-8.9-7.2-16.1-16.1-16.1c-6.1,0-11.3,3.4-14.1,8.3H0.5v43L20,41.3l19.6,10.4V31.2
+	C45.3,28.7,49.3,23,49.3,16.4z M37.2,47.8l-16.1-8.5l-1.2-0.6l-1.2,0.6L2.9,47.7V11h15.2c-0.6,1.7-0.9,3.5-0.9,5.4
+	c0,8.9,7.2,16.1,16.1,16.1c1.4,0,2.7-0.2,4-0.5V47.8z M40,17.5h-5.6v5.6H32v-5.6h-5.6v-2.4H32V9.5h2.4v5.6H40V17.5z"/>
 </svg>
