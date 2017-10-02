@@ -6,9 +6,7 @@ function configureStore (initialState = {}, history) {
   let middleware = applyMiddleware(thunk)
 
   // Create final store and subscribe router in debug env ie. for devtools
-  const store = createStore(state => state, initialState, middleware)
-
-  return store
+  return createStore(state => state, initialState, middleware)
 }
 
 export default configureStore({
