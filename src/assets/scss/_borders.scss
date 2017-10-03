@@ -1,0 +1,7 @@
+// Borders don't need to have relative size in our closeButtonText
+// Decision taken by Erick and Sergi on 19.07.2016
+$border-s: 1px;
+$border-m: 2px;
+$border-l: 3px;
+
+$border-default: $border-s solid $greyscale-90;

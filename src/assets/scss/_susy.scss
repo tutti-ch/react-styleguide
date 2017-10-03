@@ -1,0 +1,23 @@
+// Configuration for Susy
+// ======================
+
+$susy: (
+        flow: ltr,
+        math: fluid,
+        output: float,
+        gutter-position: after,
+        container: 994px,
+        container-position: left,
+        columns: 12,
+        gutters: 0.25,
+        column-width: false,
+        global-box-sizing: border-box,
+        last-flow: to,
+        use-custom: (
+                background-image: true,
+                background-options: false,
+                box-sizing: true,
+                clearfix: false,
+                rem: true,
+        )
+);

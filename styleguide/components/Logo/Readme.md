@@ -1,5 +1,0 @@
-### Implementation guidelines
-
-
-
-    <Logo />

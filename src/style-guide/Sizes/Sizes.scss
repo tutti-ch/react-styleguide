@@ -1,0 +1,32 @@
+@import 'main';
+
+@mixin sizes($sizes) {
+  @each $key, $value in $sizes {
+    .size-#{$key} {
+      font-size: #{$value};
+    }
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  line-height: $size-xxxl + $size-xs;
+  border-bottom: 1px solid $greyscale-80;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.label {
+  flex: 0 0 auto;
+  width: 30%;
+}
+
+.value {
+  flex: 1 1 auto;
+  width: 40%;
+}
+
+@include sizes($sizes)

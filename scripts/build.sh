@@ -1,3 +1,3 @@
-#!/bin/sh
-node scripts/generateIconsReactFile.js
-node scripts/generateIconsFile.js
+#!/usr/bin/env bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+bash "$DIR/generateIcons.sh"

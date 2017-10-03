@@ -1,0 +1,63 @@
+/* line-height */
+$line-height-m: 1.3rem;
+
+/* stylelint-disable value-keyword-case */
+$font-main:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$font-heading:'Nunito', sans-serif;
+/* stylelint-enable */
+
+h1,h2,h3,h4,h5,h6, strong {
+  font-family: $font-heading;
+}
+
+h1 {
+  font-size: $size-l;
+  margin-top: $size-m;
+  margin-bottom: $size-m;
+
+  @include tablet-and-bigger {
+    font-size: $size-xl;
+    margin-top: $size-l;
+    margin-bottom: $size-l;
+  }
+}
+
+h2 {
+  font-size: 1.25rem; // We currently don't have a size variable for that
+  margin-top: $size-s;
+  margin-bottom: $size-xl;
+
+  @include tablet-and-bigger {
+    font-size: $size-l;
+    margin-top: $size-m;
+    margin-bottom: $size-xl;
+  }
+}
+
+h3 {
+  font-size: $size-m;
+  margin-top: $size-xs;
+  margin-bottom: $size-xs;
+
+  @include tablet-and-bigger {
+    font-size: $size-m;
+    margin-top: $size-s;
+    margin-bottom: $size-s;
+  }
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: $greyscale-60;
+}
+
+// Fonts sizes for Landing pages
+
+$font-s: 1.125rem; //18px
+$font-m: 1.375rem; //22px
+$font-l: 1.875rem; //30px
+$font-xl: 2.5rem; //40px

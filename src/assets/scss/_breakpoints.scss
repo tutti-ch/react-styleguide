@@ -1,0 +1,38 @@
+@import '~susy/sass/susy';
+@import 'susy';
+
+$wrapperAdvertisement: 1364px;
+$wrapper: 994px;
+$desktop: 800px;
+$tablet: 480px;
+$phone: 319px;
+
+@mixin phone-and-smaller {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin tablet-and-bigger {
+  @include susy-breakpoint($tablet, $susy) {
+    @content;
+  }
+}
+
+@mixin desktop-and-bigger {
+  @include susy-breakpoint($desktop, $susy) {
+    @content;
+  }
+}
+
+@mixin wrapper-and-bigger {
+  @include susy-breakpoint($wrapper, $susy) {
+    @content;
+  }
+}
+
+@mixin wrapperAdvertisement-and-bigger {
+  @include susy-breakpoint($wrapperAdvertisement, $susy) {
+    @content;
+  }
+}

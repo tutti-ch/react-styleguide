@@ -1,0 +1,154 @@
+// Greyscale palette
+
+$greyscale-00: #000000;
+$greyscale-20: #333333;
+$greyscale-40: #666666;
+$greyscale-50: #808080;
+$greyscale-60: #999999;
+$greyscale-70: #b2b2b2;
+$greyscale-75: #bfbfbf;
+$greyscale-80: #cccccc;
+$greyscale-85: #d9d9d9;
+$greyscale-90: #e5e5e5;
+$greyscale-95: #f2f2f2;
+$greyscale-99: #fcfcfc;
+$greyscale-100: #ffffff;
+
+$greyscale: (
+  '00': $greyscale-00,
+  '20': $greyscale-20,
+  '40': $greyscale-40,
+  '50': $greyscale-50,
+  '60': $greyscale-60,
+  '70': $greyscale-70,
+  '75': $greyscale-75,
+  '80': $greyscale-80,
+  '85': $greyscale-85,
+  '90': $greyscale-90,
+  '95': $greyscale-95,
+  '99': $greyscale-99,
+  '100': $greyscale-100
+);
+
+// Blue palette
+
+$blue-10: #001e2d;
+$blue-20: #003d5b;
+$blue-30: #005b89;
+$blue-40: #007ab7;
+$blue-50: #0099e5;
+$blue-60: #33adea;
+$blue-70: #66c1ef;
+$blue-80: #99d6f4;
+$blue-90: #cceaf9;
+$blue-95: #e6f5fc;
+$blue-99: #e6f5fc;
+
+$blue: (
+  '10': $blue-10,
+  '20': $blue-20,
+  '30': $blue-30,
+  '40': $blue-40,
+  '50': $blue-50,
+  '60': $blue-60,
+  '70': $blue-70,
+  '80': $blue-80,
+  '90': $blue-90,
+  '95': $blue-95
+);
+
+// Green palette
+
+$green-10: #082000;
+$green-20: #104100;
+$green-30: #186100;
+$green-40: #218200;
+$green-50: #24a300;
+$green-60: #52b532;
+$green-70: #7dc766;
+$green-80: #a8da99;
+$green-90: #d3eccc;
+
+$green: (
+  '10': $green-10,
+  '20': $green-20,
+  '30': $green-30,
+  '40': $green-40,
+  '50': $green-50,
+  '60': $green-60,
+  '70': $green-70,
+  '80': $green-80,
+  '90': $green-90
+);
+
+// Red palette
+
+$red-10: #2e0807;
+$red-20: #5e1010;
+$red-30: #8d1a18;
+$red-40: #bc2320;
+$red-50: #ed2c28;
+$red-60: #ef4d4a;
+$red-70: #f27e7c;
+$red-80: #f7a8a8;
+$red-90: #fad3d3;
+
+$red: (
+  '10': $red-10,
+  '20': $red-20,
+  '30': $red-30,
+  '40': $red-40,
+  '50': $red-50,
+  '60': $red-60,
+  '70': $red-70,
+  '80': $red-80,
+  '90': $red-90
+);
+
+// Yellow palette
+
+$yellow-10: #332801;
+$yellow-20: #665102;
+$yellow-30: #997903;
+$yellow-40: #cca204;
+$yellow-50: #ffcb05;
+$yellow-60: #ffd537;
+$yellow-70: #ffdf69;
+$yellow-80: #ffea9b;
+$yellow-90: #fff4cd;
+
+$yellow: (
+  '10': $yellow-10,
+  '20': $yellow-20,
+  '30': $yellow-30,
+  '40': $yellow-40,
+  '50': $yellow-50,
+  '60': $yellow-60,
+  '70': $yellow-70,
+  '80': $yellow-80,
+  '90': $yellow-90
+);
+
+// Orange palette
+
+$orange-10: #301808;
+$orange-20: #613110;
+$orange-30: #914919;
+$orange-40: #c26221;
+$orange-50: #f27a29;
+$orange-60: #f59554;
+$orange-70: #f7af7f;
+$orange-80: #facaa9;
+$orange-90: #fce4d4;
+
+$orange: (
+  '10': $orange-10,
+  '20': $orange-20,
+  '30': $orange-30,
+  '40': $orange-40,
+  '50': $orange-50,
+  '60': $orange-60,
+  '70': $orange-70,
+  '80': $orange-80,
+  '90': $orange-90
+);
