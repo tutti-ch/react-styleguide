@@ -7,8 +7,7 @@
     "test": "jest",
     "dev": "npm run styleguide",
     "styleguide": "./scripts/build.sh && styleguidist server",
-    "styleguide:build": "./scripts/build.sh && styleguidist build",
-    "precommit": "npm run styleguide:build"
+    "styleguide:build": "./scripts/build.sh && styleguidist build"
   },
   "repository": {
     "type": "git",
