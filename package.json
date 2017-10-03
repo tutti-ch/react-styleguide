@@ -4,7 +4,7 @@
   "description": "React-based styleguide for tutti.ch",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "npm run styleguide",
     "styleguide": "./scripts/build.sh && styleguidist server",
     "styleguide:build": "./scripts/build.sh && styleguidist build",
