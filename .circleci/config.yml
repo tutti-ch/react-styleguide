@@ -36,4 +36,17 @@ jobs:
       # run tests!
       - run: yarn test
 
+      # Build the dist folder and push to gh-pages branch
+      - run: pwd
+      - run: remote=$(git config remote.origin.url)
+      - run: git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
+      - run: git config --global user.name "$GH_NAME" > /dev/null 2>&1
+      - run: git init
+      - run: git remote add --fetch origin "$remote"
+      - run: git checkout gh-pages
+      - run: yarn styleguide:build
+      - run: git add -A
+      - run: git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
+      - run: git push --force --quiet origin gh-pages
+      - run: echo Success!
 
