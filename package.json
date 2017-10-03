@@ -34,6 +34,7 @@
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "file-loader": "^1.1.4",
+    "git-hooks": "^1.1.8",
     "jest": "^21.2.1",
     "node-sass": "^4.5.3",
     "react-styleguidist": "^6.0.26",
