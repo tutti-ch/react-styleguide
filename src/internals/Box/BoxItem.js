@@ -13,8 +13,10 @@ import classes from './Box.scss'
  */
 const BoxItem = ({ className, children, name }) => (
   <div className={classNames(className, classes.item)}>
-    {children}
-    <div className={classes.desc}>{ name }</div>
+    <div className={classes.inner}>
+      <div className={classes.content}>{children}</div>
+      <div className={classes.desc}>{ name }</div>
+    </div>
   </div>
 )
 

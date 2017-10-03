@@ -3,23 +3,23 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import classes from './Palette.scss'
-import styleGuide from '../style-guide.scss'
+import { BoxWrapper, BoxItem } from 'internals/Box'
 
 const Palette = ({ color, shades }) => {
   return (
-    <div className={styleGuide.wrapper}>
+    <BoxWrapper>
       {
         shades.map((shade, index) => {
           const colorClasses = classNames(classes.color, classes[`${color}-${shade}`])
 
           return (
-            <div className={colorClasses} key={`palette-${index}`}>
-              <code className={classes.code}>${color}-{shade}</code>
-            </div>
+            <BoxItem name={`$${color}-${shade}`} key={`palette-${index}`}>
+              <div className={colorClasses} />
+            </BoxItem>
           )
         })
       }
-    </div>
+    </BoxWrapper>
   )
 }
 

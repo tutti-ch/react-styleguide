@@ -10,28 +10,15 @@
 }
 
 .color {
-  box-sizing: border-box;
-  height: $size-xxxl * 4;
-  position: relative;
-  margin-bottom: 1%;
-  margin-right: 1%;
-  border: 1px solid $greyscale-80;
-  display: inline-block;
-  width: 24.2%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 
   &:nth-child(4n) {
     margin-right: 0;
   }
-}
-
-.code {
-  border-top: 1px solid $greyscale-80;
-  background-color: $greyscale-100;
-  padding: $size-xxs;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 
 @include palette($greyscale, 'greyscale');

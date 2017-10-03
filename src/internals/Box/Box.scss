@@ -2,9 +2,46 @@
 
 .wrapper {
   background-color: $greyscale-95;
-  padding: 1.5%;
+  padding: 1.5% 1.5% 0 1.5%;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .item {
+  flex: 0 1 auto;
+  height: $size-xxxl * 4;
+  position: relative;
+  margin-right: 1.66%;
+  margin-bottom: 1.75%;
+  width: 23.5%;
+  border: 1px solid $greyscale-80;
+  background: $greyscale-100;
 
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .desc {
+    box-sizing: border-box;
+    border-top: 1px solid $greyscale-80;
+    background-color: $greyscale-100;
+    padding: $size-xxs;
+    font-size: $size-xs;
+    text-align: center;
+    flex: 0 0 auto;
+  }
 }

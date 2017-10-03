@@ -1,8 +1,9 @@
+/* global require */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import classes from './Icons.scss'
-import styleGuide from '../style-guide.scss'
+import { BoxWrapper, BoxItem } from 'internals/Box'
 
 export default class Icons extends Component {
   static propTypes = {
@@ -31,14 +32,13 @@ export default class Icons extends Component {
     const icons = this.getIconList()
 
     return (
-      <div className={styleGuide.wrapper}>
+      <BoxWrapper>
         {Object.keys(icons).map((icon, index) => (
-          <div className={classes.icon} key={`asset-${index}`}>
+          <BoxItem key={`asset-${index}`} name={icon}>
             <img className={classes.image} src={icons[icon]} width='75' height='75'/>
-            <code className={classes.name}>{icon}</code>
-          </div>
+          </BoxItem>
         ))}
-      </div>
+      </BoxWrapper>
     )
   }
 }
