@@ -2,7 +2,7 @@
 
 # Navigate to the folder
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cd "$DIR/src/assets/icons"
+cd "$DIR/../src/assets/icons"
 
 # Transform spinal case to camel case
 # icon-canton-zurich => IconCantonZurich
