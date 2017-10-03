@@ -1,6 +1,14 @@
 const path = require('path')
 
 module.exports = {
+  // The base directory for resolving the entry option
+  resolve: {
+    modules: [
+      path.resolve('./node_modules'),
+      path.resolve('./src')
+    ]
+  },
+
   module: {
     rules: [
       // Babel loader, will use your project’s .babelrc
