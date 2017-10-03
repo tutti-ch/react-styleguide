@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Spinner should match the snapshot 1`] = `
+<div
+  className="my-class"
+>
+  <div
+    className={undefined}
+    style={
+      Object {
+        "borderBottom": "0.8rem solid rgba(0, 0, 0, 0.1)",
+        "borderLeft": "0.8rem solid rgba(0, 0, 0, 0.3)",
+        "borderRight": "0.8rem solid rgba(0, 0, 0, 0.1)",
+        "borderTop": "0.8rem solid rgba(0, 0, 0, 0.1)",
+        "height": "8rem",
+        "width": "8rem",
+      }
+    }
+  />
+</div>
+`;
