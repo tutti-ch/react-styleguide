@@ -1,8 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  // Tells the styleguide where to search the components.
-  components: 'src/components/**/[A-Z]*.js',
+  styleguideDir: 'docs',
 
   // @see https://react-styleguidist.js.org/docs/components.html#sections
   //
