@@ -33,6 +33,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "file-loader": "^1.1.4",
     "fs": "0.0.1-security",
+    "git-hooks": "^1.1.8",
     "node-sass": "^4.5.3",
     "react-styleguidist": "^6.0.26",
     "sass-loader": "^6.0.6",
