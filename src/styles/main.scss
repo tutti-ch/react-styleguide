@@ -1,9 +1,9 @@
 @import 'normalize';
 @import 'breakpoints';
 @import 'susy';
-@import 'colors';
-@import 'sizes';
-@import 'fonts';
+@import './Palette/colors';
+@import './Sizes/sizes';
+@import './Fonts/fonts';
 @import 'borders';
 @import 'border_radius';
 @import 'shadows';

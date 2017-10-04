@@ -33,7 +33,7 @@ module.exports = {
           // compiles Sass to CSS
           loader: "sass-loader",
           options: {
-            includePaths: [path.join(__dirname, "src/assets/scss")]
+            includePaths: [path.join(__dirname, "src/styles")]
           }
         }]
       },

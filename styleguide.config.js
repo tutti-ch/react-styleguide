@@ -24,6 +24,6 @@ module.exports = {
 
   require: [
     // Include our main scss file.
-    path.join(__dirname, 'src/assets/scss/main.scss')
+    path.join(__dirname, 'src/styles/main.scss')
   ]
 }
