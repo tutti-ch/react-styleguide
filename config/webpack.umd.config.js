@@ -49,7 +49,7 @@ config.stats = {
 
 
 config.plugins = [
-  new CleanWebPackPlugin([path.join(root, 'dist')]),
+  new CleanWebPackPlugin([path.join(root, 'dist')], { root: root }),
   new ExtractTextPlugin("[name].bundle.css"),
   new CopyWebPackPlugin([
     {
