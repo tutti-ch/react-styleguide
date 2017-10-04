@@ -6,10 +6,9 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
-    "dist": "NODE_ENV=umd webpack",
+    "dist": "npm run test && NODE_ENV=umd webpack && npm version patch -m \"Upgrade package\"",
     "styleguide": "./scripts/build.sh && styleguidist server",
-    "styleguide:build": "./scripts/build.sh && styleguidist build",
-    "prepublish": "npm version patch -m \"Upgrade package\" && npm run test && npm run dist"
+    "styleguide:build": "./scripts/build.sh && styleguidist build"
   },
   "repository": {
     "type": "git",
