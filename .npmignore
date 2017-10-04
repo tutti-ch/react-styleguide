@@ -1,0 +1,13 @@
+.circleci/
+scripts/
+test/
+src/
+docs/
+coverage/
+node_modules/
+webpack.config.js
+styleguide.config.js
+yarn.lock
+package-lock.json
+jest.config.js
+config/
