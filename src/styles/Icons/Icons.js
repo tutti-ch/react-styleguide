@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import classes from './Icons.scss'
-import { BoxWrapper, BoxItem } from 'internals/Box'
+import { BoxCardWrapper, BoxCard } from 'internals/Box'
 
 export default class Icons extends Component {
   static propTypes = {
@@ -32,13 +32,13 @@ export default class Icons extends Component {
     const icons = this.getIconList()
 
     return (
-      <BoxWrapper>
+      <BoxCardWrapper>
         {Object.keys(icons).map((icon, index) => (
-          <BoxItem key={`asset-${index}`} name={icon}>
+          <BoxCard key={`asset-${index}`} name={icon}>
             <img className={classes.image} src={icons[icon]} width='75' height='75'/>
-          </BoxItem>
+          </BoxCard>
         ))}
-      </BoxWrapper>
+      </BoxCardWrapper>
     )
   }
 }

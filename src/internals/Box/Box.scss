@@ -7,7 +7,22 @@
   flex-flow: row wrap;
 }
 
+.BoxItemWrapper {
+  flex-direction: column;
+}
+
 .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: $size-l 0;
+
+  .label {
+    margin-left: $size-m;
+  }
+}
+
+.card {
   flex: 0 1 auto;
   height: $size-xxxl * 4;
   position: relative;

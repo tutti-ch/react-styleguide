@@ -11,17 +11,19 @@ import classes from './Box.scss'
  * @param name
  * @constructor
  */
-const BoxItem = ({ className, children, label }) => (
-  <div className={classNames(className, classes.item)}>
-    <div className={classes.content}>{children}</div>
-    <div className={classes.label}>{ label }</div>
+const BoxCard = ({ className, children, name }) => (
+  <div className={classNames(className, classes.card)}>
+    <div className={classes.inner}>
+      <div className={classes.content}>{children}</div>
+      <div className={classes.desc}>{ name }</div>
+    </div>
   </div>
 )
 
-BoxItem.propTypes = {
+BoxCard.propTypes = {
   className: PropTypes.oneOf([PropTypes.array, PropTypes.object, PropTypes.string]),
   children: PropTypes.node, // The content of the box
-  label: PropTypes.string  // The label of the box (this will be displayed at the left of the box item)
+  name: PropTypes.string  // The name of the box (this will be displayed at the bottom of the box card)
 }
 
-export default BoxItem
+export default BoxCard

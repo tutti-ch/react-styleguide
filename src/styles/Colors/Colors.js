@@ -2,28 +2,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-import classes from './Palette.scss'
-import { BoxWrapper, BoxItem } from 'internals/Box'
+import classes from './Colors.scss'
+import { BoxCardWrapper, BoxCard } from 'internals/Box'
 
-const Palette = ({ color, shades }) => {
+const Colors = ({ color, shades }) => {
   return (
-    <BoxWrapper>
+    <BoxCardWrapper>
       {
         shades.map((shade, index) => {
           const colorClasses = classNames(classes.color, classes[`${color}-${shade}`])
 
           return (
-            <BoxItem name={`$${color}-${shade}`} key={`palette-${index}`}>
+            <BoxCard name={`$${color}-${shade}`} key={`colors-${index}`}>
               <div className={colorClasses} />
-            </BoxItem>
+            </BoxCard>
           )
         })
       }
-    </BoxWrapper>
+    </BoxCardWrapper>
   )
 }
 
-Palette.propTypes = {
+Colors.propTypes = {
   /**
    * @ignore
    */
@@ -35,4 +35,4 @@ Palette.propTypes = {
   shades: PropTypes.array
 }
 
-export default Palette
+export default Colors

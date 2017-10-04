@@ -1,4 +1,4 @@
-@import './Palette/colors';
+@import '../Colors/colors';
 
 @mixin mediumShadow {
   box-shadow: 0 3px 5px 0 transparentize($greyscale-00, 0.85);
