@@ -9,7 +9,7 @@
     "dist": "NODE_ENV=umd webpack",
     "styleguide": "./scripts/build.sh && styleguidist server",
     "styleguide:build": "./scripts/build.sh && styleguidist build",
-    "prepublish": "npm version patch -m \"Upgrade package\""
+    "prepublish": "npm version patch -m \"Upgrade package\" && npm run test && npm run dist"
   },
   "repository": {
     "type": "git",
