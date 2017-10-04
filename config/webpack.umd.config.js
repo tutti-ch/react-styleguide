@@ -19,6 +19,29 @@ config.output = {
   libraryTarget: 'umd'
 }
 
+// Exclude react from the bundle
+config.externals = {
+  react: {
+    root: 'React',
+    commonjs2: 'react',
+    commonjs: 'react',
+    amd: 'react'
+  },
+  'react-dom': {
+    root: 'ReactDOM',
+    commonjs2: 'react-dom',
+    commonjs: 'react-dom',
+    amd: 'react-dom'
+  },
+  'prop-types': {
+    root: 'PropTypes',
+    commonjs2: 'prop-types',
+    commonjs: 'prop-types',
+    amd: 'prop-types'
+  }
+}
+
+
 // Add rules to extract less into css
 config.module.rules.push({
   test: /\.s?css$/,
@@ -29,13 +52,32 @@ config.module.rules.push({
         // translates CSS into CommonJS
         loader: "css-loader",
         options: {
-          modules: true
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+          sourceMap: true,
+          camelCase: true,
+          minimize: {
+            autoprefixer: {
+              add: true,
+              remove: true,
+              browsers: ['ie >= 10', 'last 5 versions', '> 2%']
+            },
+            discardComments: {
+              removeAll: true
+            },
+            discardUnused: false,
+            mergeIdents: false,
+            reduceIdents: false,
+            safe: true,
+            sourcemap: true
+          }
         }
       },
       {
         // compiles Sass to CSS
         loader: "sass-loader",
         options: {
+          sourceMap: true,
           includePaths: [path.join(root, "src/styles")]
         }
       }]
@@ -47,10 +89,9 @@ config.stats = {
   children: false
 }
 
-
 config.plugins = [
   new CleanWebPackPlugin([path.join(root, 'dist')], { root: root }),
-  new ExtractTextPlugin("[name].bundle.css"),
+  new ExtractTextPlugin({ filename: "[name].bundle.css", allChunks: true }),
   new CopyWebPackPlugin([
     {
       from: path.join(root, 'src/styles/Icons/assets/**/*.svg'),

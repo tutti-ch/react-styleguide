@@ -12,7 +12,10 @@ config.module.rules.push(
       // translates CSS into CommonJS
       loader: "css-loader",
       options: {
-        modules: true
+        modules: true,
+        localIdentName: '[name]_[local]_[hash:base64:5]',
+        sourceMap: true,
+        camelCase: true,
       }
     }, {
       // compiles Sass to CSS

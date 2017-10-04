@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
-    "dist": "npm run test && NODE_ENV=umd webpack && npm version patch -m \"Upgrade package\"",
+    "dist:build": "npm run test && NODE_ENV=umd webpack",
+    "dist:publish": "npm run dist:build && npm version patch -m \"Upgrade package\"",
     "styleguide": "./scripts/build.sh && styleguidist server",
     "styleguide:build": "./scripts/build.sh && styleguidist build"
   },
