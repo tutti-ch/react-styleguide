@@ -25,7 +25,7 @@ export default class Icons extends Component {
    * Return the icon list from the given directory name.
    */
   getIconList() {
-    return require('../../assets/icons/' + this.props.directory + '/index.js')
+    return require('./assets/' + this.props.directory + '/index.js')
   }
 
   render() {

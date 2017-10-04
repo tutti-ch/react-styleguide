@@ -13,12 +13,11 @@ module.exports = {
   // -- sections: Array of subsections (can be nested)
   sections: [
     {
-      name: 'CSS Style Guide',
-      components: 'src/style-guide/**/[A-Z]*.js'
+      name: 'Styles',
+      components: 'src/styles/**/[A-Z]*.js'
     },
     {
-      name: 'UI Components',
-      // content: 'docs/ui-components.md'
+      name: 'Components',
       components: 'src/components/**/[A-Z]*.js'
     }
   ],

@@ -18,13 +18,13 @@ We have currently divided the style guide into two sections.
 ### 1. Styles
 
 Everything related to styles (colors, sizes, icons etc...) goes under this folder. The styleguide will 
-look into the `src/style-guide` folder and load every file matching the following glob:
+look into the `src/styles` folder and load every file matching the following glob:
 
 ```bash
-src/style-guide/**/[A-Z]*.js
+src/styles/**/[A-Z]*.js
 ```
 
-These files will be directly included in the style guide under the `CSS Style Guide` Section.
+These files will be directly included in the style guide under the `Styles` Section.
 
 ### 2. UI Components
 
