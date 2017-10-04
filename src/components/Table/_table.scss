@@ -1,0 +1,34 @@
+@import 'main';
+
+table {
+  margin: 0;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  @include tablet-and-bigger {
+    background: $greyscale-100; // Needed to fill empty cells in two column layout
+  }
+}
+
+caption {
+  padding-bottom: $size-m;
+  text-align: left;
+  font-size: $size-ml;
+}
+
+th,
+td {
+  border: 1px solid $greyscale-90;
+  padding: $size-l;
+
+  @media (max-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+}

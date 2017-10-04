@@ -1,0 +1,7 @@
+@import "./table";
+
+// Required for Readme.md
+:global .table-cell-styled {
+  font-weight: bold;
+  color: $green-50;
+}
