@@ -393,34 +393,12 @@ h3 {
       margin-top: 0.875rem;
       margin-bottom: 0.875rem; } }
 
-._2C5JZtGFBBE9Oyerc0UPmv {
+._3O03cYV-GUisCjaJT3CjpS {
   margin-bottom: 0; }
 
-._2SrcGguovAFWGpjjpRp8Pg {
+._34voXtXaaDmO3d-f59ifs8 {
   margin: 0;
   color: #999999; }
-
-._3DuxWIBKR1noQceD0yJd6s {
-  display: inline-block; }
-
-._3q8xbTG4aotRgd6r45oikk {
-  transform: translateZ(0);
-  animation: _1chwDKWbG7L_JM91Gwfxky 0.8s infinite linear;
-  display: inline-block; }
-
-._3q8xbTG4aotRgd6r45oikk {
-  border-radius: 50%; }
-
-._3q8xbTG4aotRgd6r45oikk:after {
-  border-radius: 50%;
-  height: 100%;
-  width: 100%; }
-
-@keyframes _1chwDKWbG7L_JM91Gwfxky {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -816,37 +794,13 @@ h3 {
       margin-top: 0.875rem;
       margin-bottom: 0.875rem; } }
 
-._13ixk0kJSm9uGSJvne79EJ {
+._5FxKzbFK5Pq7quDpaQ4RJ {
   margin-bottom: 0; }
 
-._3_Z6dyOYa87VS22qDXOPfq {
+.y_7RJKyBtFdvZJ-GjOmwa {
   margin: 0;
   color: #999999; }
 
-table {
-  margin: 0;
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse; }
-  @media (min-width: 480px) {
-    table {
-      background: #ffffff; } }
-
-caption {
-  padding-bottom: 1rem;
-  text-align: left;
-  font-size: 1.25rem; }
-
-th,
-td {
-  border: 1px solid #e5e5e5;
-  padding: 1.5rem; }
-  @media (max-width: 480px) {
-    th,
-    td {
-      display: flex;
-      align-items: center; } }
-
-th {
-  font-weight: bold;
-  text-align: center; }
+._1hJ5OCyQfgPtrXO4opWubF {
+  background-color: #f2f2f2;
+  padding: 1.5%; }

@@ -1,6 +1,10 @@
 const path = require('path')
 const config = require('./webpack.base.config')
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebPackPlugin = require('copy-webpack-plugin')
+const CleanWebPackPlugin = require('clean-webpack-plugin')
+
+const root = path.join(__dirname, '../')
 
 // The entry file
 config.entry = {
@@ -9,7 +13,7 @@ config.entry = {
 
 // Configurations for output folder
 config.output = {
-  path: path.join(__dirname, '/dist'),
+  path: path.join(root, 'dist'),
   filename: '[name].bundle.js',
   library: 'TuttiCH',
   libraryTarget: 'umd'
@@ -32,7 +36,7 @@ config.module.rules.push({
         // compiles Sass to CSS
         loader: "sass-loader",
         options: {
-          includePaths: [path.join(__dirname, "src/styles")]
+          includePaths: [path.join(root, "src/styles")]
         }
       }]
   })
@@ -45,7 +49,15 @@ config.stats = {
 
 
 config.plugins = [
-  new ExtractTextPlugin("[name].bundle.css")
+  new CleanWebPackPlugin([path.join(root, 'dist')]),
+  new ExtractTextPlugin("[name].bundle.css"),
+  new CopyWebPackPlugin([
+    {
+      from: path.join(root, 'src/styles/Icons/assets/**/*.svg'),
+      to: path.join(root, 'dist/assets/icons/'),
+      flatten: true
+    }
+  ])
 ]
 
 module.exports = config

@@ -9,4 +9,4 @@ Changelog.md
 *.DS_Store
 *#*
 .idea/
-.dist/
+dist/

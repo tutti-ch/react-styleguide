@@ -18,7 +18,7 @@ config.module.rules.push(
       // compiles Sass to CSS
       loader: "sass-loader",
       options: {
-        includePaths: [path.join(__dirname, "src/styles")]
+        includePaths: [path.join(__dirname, "../src/styles")]
       }
     }]
   }

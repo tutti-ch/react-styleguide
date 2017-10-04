@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
-    "build": "NODE_ENV=production webpack",
+    "dist": "NODE_ENV=umd webpack",
     "styleguide": "./scripts/build.sh && styleguidist server",
     "styleguide:build": "./scripts/build.sh && styleguidist build",
     "prepublish": "npm version patch -m \"Upgrade package\""
@@ -33,6 +33,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.1.0",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "extract-text-webpack-plugin": "^3.0.1",
