@@ -4,21 +4,21 @@ import classNames from 'classnames'
 import classes from './Box.scss'
 
 /**
- * Wrapper component for box items.
+ * BoxCardWrapper component for box items.
  *
  * @param className
  * @param children
  * @constructor
  */
-const Wrapper = ({ className, children }) => (
-  <div className={classNames(className, classes.wrapper)}>
+const BoxCardWrapper = ({ className, children }) => (
+  <div className={classNames(className, classes.wrapper, classes.BoxCardWrapper)}>
     {children}
   </div>
 )
 
-Wrapper.propTypes = {
+BoxCardWrapper.propTypes = {
   className: PropTypes.oneOf([PropTypes.array, PropTypes.object, PropTypes.string]),
   children: PropTypes.node
 }
 
-export default Wrapper
+export default BoxCardWrapper

@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '../style-guide.scss'
+import classes from '../styleGuide.scss'
 
 const Fonts = () => (
   <div className={classes.wrapper}>

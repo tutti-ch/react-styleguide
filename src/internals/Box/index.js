@@ -1,2 +1,5 @@
 export BoxItem from './BoxItem'
-export BoxWrapper from './BoxWrapper'
+export BoxCard from './BoxCard'
+export BoxCardWrapper from './BoxCardWrapper'
+export BoxItemWrapper from './BoxItemWrapper'
+

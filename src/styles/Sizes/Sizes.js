@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import classes from './Sizes.scss'
-import styleGuide from '../style-guide.scss'
+import styleGuide from '../styleGuide.scss'
 
 const sizes = {
   'size-xxxs': [0.25, 4],
