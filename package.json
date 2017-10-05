@@ -2,7 +2,7 @@
   "name": "tutti-ch-styleguide",
   "version": "1.0.6",
   "description": "React-based styleguide for tutti.ch",
-  "main": "dist/main.bundle.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
