@@ -1,4 +1,5 @@
 .circleci/
+.idea/
 scripts/
 test/
 src/
