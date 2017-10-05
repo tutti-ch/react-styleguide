@@ -12,13 +12,13 @@ const root = path.join(__dirname, '../')
 
 // The entry file
 config.entry = {
-  'main': path.resolve('src', 'index.js')
+  'index': path.join(root, 'src/index.js')
 }
 
 // Configurations for output folder
 config.output = {
   path: path.join(root, 'dist'),
-  filename: '[name].bundle.js',
+  filename: '[name].js',
   library: 'TuttiCH',
   libraryTarget: 'umd'
 }
@@ -84,19 +84,13 @@ config.plugins = [
       flatten: true
     },
     {
-      context: path.join(root, 'src/components/'),
-      from: path.join(root, 'src/components/**/*'),
-      to: path.join(root, 'dist/components')
-      // ignore: [path.join(root, 'src/components/**/*.test.js')]
-    },
-    {
       context: path.join(root, 'src/styles/'),
       from: path.join(root, 'src/styles/**/_*.scss'),
       to: path.join(root, 'dist/styles')
     },
     {
       from: {
-        glob: path.join(root, 'src/*'),
+        glob: path.join(root, 'src/*.scss'),
         dot: true
       },
       to: path.join(root, 'dist'),
