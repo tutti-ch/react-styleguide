@@ -1,6 +1,29 @@
 @import 'main';
 
-.wrapper {
-  background-color: $greyscale-95;
-  padding: 1.5%;
+.block {
+  border: 1px solid $greyscale-90;
+  margin-bottom: $size-xl;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  line-height: $size-xxxl + $size-xs;
+  border-bottom: 1px solid $greyscale-90;
+  padding: 0 $size-m;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.label {
+  flex: 0 0 auto;
+  width: 30%;
+}
+
+.value {
+  flex: 1 1 auto;
+  width: 40%;
+  color: $greyscale-60;
 }

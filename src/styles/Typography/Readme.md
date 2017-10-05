@@ -3,5 +3,5 @@ Our main font is Helvetica Neue Light.
 Our heading font is Nunito.
 
 ```jsx noeditor
-<Fonts />
+<Typography />
 ```
