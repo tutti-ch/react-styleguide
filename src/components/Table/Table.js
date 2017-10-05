@@ -13,7 +13,7 @@ export default class Table extends Component {
   static Body = ({ children }) => <tbody>{children}</tbody>
   static Head = ({ children }) => <thead>{children}</thead>
   static Foot = ({ children }) => <tfoot>{children}</tfoot>
-  static Row = ({ children }) => <tr>{children}</tr>
+  static Row = props => <tr {...props}>{children}</tr>
   static Cell = props => <td {...props}>{props.children}</td>
   static HCell = props => <th {...props}>{props.children}</th>
 
