@@ -26,8 +26,8 @@ yarn add tutti-ch-styleguide
 We do work with scss files. In order to include the styles in your project, simply:
 
 ```css
-@import '~tutti-ch-styleguide/normalize.scss'
-@import '~tutti-ch-styleguide/index.scss'
+@import '~tutti-ch-styleguide/dist/normalize.scss'
+@import '~tutti-ch-styleguide/dist/index.scss'
 ```
 
 The first file `normalize.scss` is a normalizer to have a common style accross browsers. The second file will give you access to all variables that are mentioned in the styleguide.
