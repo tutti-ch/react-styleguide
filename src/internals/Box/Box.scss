@@ -1,8 +1,7 @@
 @import 'main';
 
 .wrapper {
-  background-color: $greyscale-95;
-  padding: 1.5% 1.5% 0 1.5%;
+  padding: 0;
   display: flex;
   flex-flow: row wrap;
 }
@@ -24,17 +23,13 @@
 
 .card {
   flex: 0 1 auto;
-  height: $size-xxxl * 4;
+  height: $size-xxxl * 3;
   position: relative;
   margin-right: 1.66%;
   margin-bottom: 1.75%;
-  width: 23.5%;
-  border: 1px solid $greyscale-80;
+  width: $size-xxxl * 3;
+  border: 1px solid $greyscale-90;
   background: $greyscale-100;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
 
   .inner {
     display: flex;
@@ -52,7 +47,7 @@
 
   .desc {
     box-sizing: border-box;
-    border-top: 1px solid $greyscale-80;
+    border-top: 1px solid $greyscale-90;
     background-color: $greyscale-100;
     padding: $size-xxs;
     font-size: $size-xs;

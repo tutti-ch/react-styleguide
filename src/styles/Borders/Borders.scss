@@ -6,15 +6,15 @@
 }
 
 .borderS {
-    border-top: $border-s solid $greyscale-60;
+    border-top: $border-s solid $blue-60;
 }
 
 .borderM {
-    border-top: $border-m solid $greyscale-60;
+    border-top: $border-m solid $blue-60;
 }
 
 .borderL {
-    border-top: $border-l solid $greyscale-60;
+    border-top: $border-l solid $blue-60;
 }
 
 .borderRadiusSample {
@@ -23,16 +23,16 @@
 }
 
 .borderRadiusS {
-    border: $border-l solid $greyscale-60;
+    background: $blue-60;
     border-radius: $border-radius-s;
 }
 
 .borderRadiusM {
-    border: $border-l solid $greyscale-60;
+    background: $blue-60;
     border-radius: $border-radius-m;
 }
 
 .borderRadiusL {
-    border: $border-l solid $greyscale-60;
+    background: $blue-60;
     border-radius: $border-radius-l;
 }

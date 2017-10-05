@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from '../styleGuide.scss'
 
-const Fonts = () => (
+const Typography = () => (
   <div className={classes.wrapper}>
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -13,4 +13,4 @@ const Fonts = () => (
   </div>
 )
 
-export default Fonts
+export default Typography

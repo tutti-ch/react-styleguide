@@ -1,14 +1,51 @@
 @import '~susy/sass/susy';
 @import 'susy';
 
-$wrapperAdvertisement: 1364px;
+// Layout sizes
+
 $wrapper: 994px;
-$desktop: 800px;
-$tablet: 480px;
+$wrapperAdvertisement: 1364px;
+
+// Device sizes
+
 $phone: 319px;
+$phablet: 480px;
+$tablet: 800px;
+$laptop: $wrapper;
+$desktop: $wrapperAdvertisement;
+
+// Phone breakpoints
 
 @mixin phone-and-smaller {
   @media (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin phone-and-bigger {
+  @include susy-breakpoint($phonephablet, $susy) {
+    @content;
+  }
+}
+
+// Phablet breakpoints
+
+@mixin phablet-and-smaller {
+  @media (max-width: $phablet) {
+    @content;
+  }
+}
+
+@mixin phablet-and-bigger {
+  @include susy-breakpoint($phablet, $susy) {
+    @content;
+  }
+}
+
+// Tablet breakpoints
+
+@mixin tablet-and-smaller {
+  @media (max-width: $tablet) {
     @content;
   }
 }
@@ -19,20 +56,30 @@ $phone: 319px;
   }
 }
 
+// Laptop breakpoints
+
+@mixin laptop-and-smaller {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin laptop-and-bigger {
+  @include susy-breakpoint($laptop, $susy) {
+    @content;
+  }
+}
+
+// Desktop breakpoints
+
+@mixin desktop-and-smaller {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
 @mixin desktop-and-bigger {
   @include susy-breakpoint($desktop, $susy) {
-    @content;
-  }
-}
-
-@mixin wrapper-and-bigger {
-  @include susy-breakpoint($wrapper, $susy) {
-    @content;
-  }
-}
-
-@mixin wrapperAdvertisement-and-bigger {
-  @include susy-breakpoint($wrapperAdvertisement, $susy) {
     @content;
   }
 }
