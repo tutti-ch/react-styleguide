@@ -23,7 +23,7 @@ $desktop: $wrapperAdvertisement;
 }
 
 @mixin phone-and-bigger {
-  @include susy-breakpoint($phonephablet, $susy) {
+  @include susy-breakpoint($phone, $susy) {
     @content;
   }
 }
