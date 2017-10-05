@@ -1,9 +1,7 @@
 # tutti.ch Styleguide
----
 [![CircleCI](https://img.shields.io/circleci/project/github/tutti-ch/react-styleguide.svg)](https://circleci.com/gh/tutti-ch/react-styleguide)
 
 ## How to start
----
 ### To develop:
 
 ```
@@ -25,11 +23,14 @@ or
 yarn add tutti-ch-styleguide
 ```
 
-To load the style, in your `main.scss` (or whatever the name is):
+We do work with scss files. In order to include the styles in your project, simply:
 
 ```css
-@import '~tutti-ch-styleguide/main.bundle.css'
+@import '~tutti-ch-styleguide/normalize.scss'
+@import '~tutti-ch-styleguide/index.scss'
 ```
+
+The first file `normalize.scss` is a normalizer to have a common style accross browsers. The second file will give you access to all variables that are mentioned in the styleguide.
 
 Then you can easily import our components like: 
 
@@ -38,7 +39,6 @@ import { Table, Spinner } from 'tutti-ch-styleguide' // See our styleguide for a
 ```
 
 ## Changing content
----
 
 We have currently divided the style guide into two sections.
 
