@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from '../styleGuide.scss'
+import classes from '../style-guide.scss'
 
 const Typography = () => (
   <div className={classes.wrapper}>

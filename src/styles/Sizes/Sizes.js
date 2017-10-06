@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import classes from './Sizes.scss'
-import styleGuide from '../styleGuide.scss'
 
 const sizes = {
   'size-xxxs': [0.25, 4],
@@ -18,7 +17,7 @@ const sizes = {
 
 const Sizes = () => {
   return (
-    <div className={styleGuide.wrapper}>
+    <div className="wrapper">
       {
         Object.keys(sizes).map(key => (
           <div className={classes.row} key={`size-${key}`}>

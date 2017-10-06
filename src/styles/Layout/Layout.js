@@ -1,6 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
-import classes from '../styleGuide.scss'
+import classes from '../style-guide.scss'
 
 const smallerBreakpoints = {
   'phone-and-smaller': 319,
