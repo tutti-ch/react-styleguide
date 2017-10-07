@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Image renders correctly 1`] = `
+<img
+  alt={undefined}
+  className="image"
+  draggable={true}
+  height={undefined}
+  onError={[Function]}
+  onLoad={[Function]}
+  src="/react/2.svg"
+  width={undefined}
+/>
+`;

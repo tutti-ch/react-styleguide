@@ -1,0 +1,14 @@
+@import "main";
+
+.image-wrapper {
+  display: inline-block;
+}
+
+.image {
+  display: inline-block;
+}
+
+.error {
+  font-size: $size-xl;
+  color: $greyscale-60;
+}
