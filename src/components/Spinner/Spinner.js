@@ -33,7 +33,7 @@ export default class Spinner extends Component {
 
   static defaultProps = {
     size: Spinner.SIZE_MEDIUM,
-    color: Spinner.COLOR_LIGHT
+    color: Spinner.COLOR_DARK
   }
 
   constructor(props) {
