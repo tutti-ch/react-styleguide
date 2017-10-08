@@ -2,6 +2,7 @@ module.exports = {
   verbose: true,
   testMatch: ['<rootDir>/src/**/?(*.)(spec|test).js?(x)'],
   moduleDirectories: [ 'node_modules', 'src' ],
+  snapshotSerializers: ["enzyme-to-json/serializer"],
   moduleNameMapper: {
     '.*\\.(css|scss)$': '<rootDir>/test/config/styles.js'
   },
