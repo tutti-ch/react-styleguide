@@ -1,6 +1,5 @@
 ```jsx noeditor
-const classes = require('./preview.scss');
-<Table class="">
+<Table>
   <Table.Body>
     <Table.Row>
       <Table.Cell width='20%'>
