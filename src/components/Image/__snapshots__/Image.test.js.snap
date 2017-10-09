@@ -1,14 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`(Component) Image renders correctly 1`] = `
-<img
-  alt={undefined}
-  className="image"
-  draggable={true}
-  height={undefined}
-  onError={[Function]}
-  onLoad={[Function]}
-  src="/react/2.svg"
-  width={undefined}
-/>
+exports[`(Component) Image snapshot should pass all props down 1`] = `
+<Image
+  src="https://tutti.ch/my-icon.jpg"
+>
+  <img
+    className=""
+    draggable={true}
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://tutti.ch/my-icon.jpg"
+  />
+</Image>
+`;
+
+exports[`(Component) Image snapshot should pass all props down 2`] = `
+<Image
+  src="https://tutti.ch/my-icon.jpg"
+>
+  <img
+    className=""
+    draggable={true}
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://tutti.ch/my-icon.jpg"
+  />
+</Image>
 `;

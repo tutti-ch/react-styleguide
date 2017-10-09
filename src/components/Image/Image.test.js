@@ -1,21 +1,25 @@
 /* global describe, test, beforeEach, expect, jest */
 import React from "react";
 import Image from "components/Image";
-import renderer from "react-test-renderer";
 import { mount } from "enzyme";
+import toJson from 'enzyme-to-json'
 
 describe("(Component) Image", function() {
   let comp;
-  const initialSrc = "/react/2.svg";
+  const initialSrc = 'https://tutti.ch/my-icon.jpg'
 
   beforeEach(function() {
     comp = mount(<Image src={initialSrc} />);
     comp.setState({ loaded: true });
   });
 
-  test("renders correctly", () => {
-    const tree = renderer.create(<Image src="/react/2.svg" />);
-    expect(tree).toMatchSnapshot();
+  test("snapshot should pass all props down", () => {
+    const tree = mount(<Image src={initialSrc} />);
+    const inst = tree.instance()
+    inst.onLoad()
+    expect(toJson(tree)).toMatchSnapshot();
+    inst.onError()
+    expect(toJson(tree)).toMatchSnapshot();
   });
 
   test("should render the image when loaded", () => {
@@ -29,18 +33,18 @@ describe("(Component) Image", function() {
     comp.update();
 
     expect(comp.find("img").exists()).toBe(false);
-    expect(comp.find("span.error").exists()).toBe(true);
+    expect(comp.find("span.ico.ico-tutti-cube").exists()).toBe(true);
 
     // It should revert on load
     comp.instance().onLoad();
     comp.update();
 
     expect(comp.find("img").exists()).toBe(true);
-    expect(comp.find("span.error").exists()).toBe(false);
+    expect(comp.find("span.ico.ico-tutti-cube").exists()).toBe(false);
   });
 
   test("should always trigger callbacks", () => {
-    const img = mount(<Image />);
+    const img = mount(<Image src="my-image" />);
     const inst = img.instance();
     expect(inst.state.loaded).toBe(true);
   });
