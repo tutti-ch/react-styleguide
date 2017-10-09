@@ -21,14 +21,34 @@ th,
 td {
   border: 1px solid $greyscale-90;
   padding: $size-l;
-
-  @media (max-width: $tablet) {
-    display: flex;
-    align-items: center;
-  }
 }
 
 th {
   font-weight: bold;
   text-align: center;
+}
+
+@include tablet-and-smaller {
+  table, thead, tbody, tfoot, tr, caption {
+    display: block;
+  }
+
+  td, th {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-top: none;
+  }
+
+  tr:first-child {
+    td:first-child, th:first-child {
+      border-top: 1px solid $greyscale-90;
+    }
+  }
+
+  tbody + tfoot tr:first-child td:first-child,
+  thead + tbody tr:first-child td:first-child {
+    border-top: none;
+  }
 }
