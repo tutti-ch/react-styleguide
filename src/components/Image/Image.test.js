@@ -23,7 +23,8 @@ describe("(Component) Image", function() {
   });
 
   test("should render the image when loaded", () => {
-    expect(comp.find("img").exists()).toBe(true);
+    comp.setProps({ draggable: false })
+    expect(comp.find("img[draggable]").exists()).toBe(true);
   });
 
   test("should render tutti cube on error", () => {
@@ -77,4 +78,9 @@ describe("(Component) Image", function() {
     comp.update();
     expect(comp.find("Spinner").length).toBe(1);
   });
+
+  test("should render null when spinner is empty", () => {
+    comp.setState({ error: false, loaded: false })
+    expect(comp.instance().renderSpinner()).toBe(null)
+  })
 });

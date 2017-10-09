@@ -2,11 +2,11 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
 import Spinner from './index'
-import renderer from 'react-test-renderer'
+import toJson from 'enzyme-to-json'
 
 describe('(Component) Spinner', () => {
   test('should calculate the styles correctly', () => {
-    const comp = shallow(<Spinner />)
+    const comp = shallow(<Spinner color={Spinner.COLOR_LIGHT} />)
     const inst = comp.instance()
 
     expect(inst.calculateStyles()).toEqual({
@@ -31,7 +31,7 @@ describe('(Component) Spinner', () => {
   })
 
   test('should match the snapshot', () => {
-    const comp = renderer.create(<Spinner size={Spinner.SIZE_LARGE} color={Spinner.COLOR_DARK} className='my-class'/>)
-    expect(comp.toJSON()).toMatchSnapshot()
+    const comp = mount(<Spinner size={Spinner.SIZE_LARGE} color={Spinner.COLOR_DARK} className='my-class'/>)
+    expect(toJson(comp)).toMatchSnapshot()
   })
 })
