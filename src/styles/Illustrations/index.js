@@ -1,1 +1,1 @@
-export { default } from './Illustrations.js'
+export { default } from "./Illustrations.js";

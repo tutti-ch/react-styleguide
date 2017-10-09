@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import classes from "./Image.scss";
 import classNames from "classnames";
 import Spinner from "components/Spinner";
-import { filterProps } from 'helpers/functions'
+import { filterProps } from "helpers/functions";
 
 // This gets overwritten by the Readme.md for some reason
 // Apparently, it uses the component name as a global variable.
 // Small hack to prevent this behavior.
-const NativeImage = window.Image
+const NativeImage = window.Image;
 
 /**
  * The Image component.
@@ -57,8 +57,8 @@ export default class Image extends Component {
 
     this.onLoad = this.onLoad.bind(this);
     this.onError = this.onError.bind(this);
-    this.renderError = this.renderError.bind(this)
-    this.renderSpinner = this.renderSpinner.bind(this)
+    this.renderError = this.renderError.bind(this);
+    this.renderSpinner = this.renderSpinner.bind(this);
   }
 
   /**
@@ -115,8 +115,17 @@ export default class Image extends Component {
    * @return {*}
    */
   renderError() {
-    const { errorClassName } = this.props
-    return <span className={classNames(classes.error, errorClassName, "ico", "ico-tutti-cube")}/>
+    const { errorClassName } = this.props;
+    return (
+      <span
+        className={classNames(
+          classes.error,
+          errorClassName,
+          "ico",
+          "ico-tutti-cube"
+        )}
+      />
+    );
   }
 
   /**
@@ -126,14 +135,14 @@ export default class Image extends Component {
    * @return {*}
    */
   renderSpinner() {
-    const { spinnerClassName, spinnerSize } = this.props
+    const { spinnerClassName, spinnerSize } = this.props;
 
     // Do not render if the spinner size is not provided
     if (!spinnerSize) {
-      return null
+      return null;
     }
 
-    return <Spinner className={spinnerClassName} size={spinnerSize}/>
+    return <Spinner className={spinnerClassName} size={spinnerSize} />;
   }
 
   /**
@@ -146,17 +155,20 @@ export default class Image extends Component {
     const { error, loaded } = this.state;
 
     if (error) {
-      return this.renderError()
+      return this.renderError();
     }
 
     if (loaded) {
-      const attrs = filterProps(Image.propTypes, this.props)
-      attrs.draggable = typeof attrs.draggable === "undefined" ? true : attrs.draggable // By default is true
-      attrs.className = classNames(classes.image, attrs.className)
+      const attrs = filterProps(Image.propTypes, this.props);
+      attrs.draggable =
+        typeof attrs.draggable === "undefined" ? true : attrs.draggable; // By default is true
+      attrs.className = classNames(classes.image, attrs.className);
 
-      return <img {...attrs} src={src} onLoad={this.onLoad} onError={this.onError}/>;
+      return (
+        <img {...attrs} src={src} onLoad={this.onLoad} onError={this.onError} />
+      );
     }
 
-    return this.renderSpinner()
+    return this.renderSpinner();
   }
 }

@@ -1,10 +1,10 @@
 /* global describe, expect, test, jest */
-import React from 'react'
-import Table from './index'
-import renderer from 'react-test-renderer'
+import React from "react";
+import Table from "./index";
+import renderer from "react-test-renderer";
 
-describe('(Component) Table', () => {
-  test('should render correctly', () => {
+describe("(Component) Table", () => {
+  test("should render correctly", () => {
     const tree = renderer.create(
       <Table>
         <Table.Caption>This is the table caption</Table.Caption>
@@ -33,13 +33,15 @@ describe('(Component) Table', () => {
         </Table.Body>
         <Table.Foot>
           <Table.Row>
-            <Table.Cell style={{ color: 'red' }}>Narrow column</Table.Cell>
-            <Table.Cell colSpan={2} className='table-cell-styled'>Extra styles</Table.Cell>
+            <Table.Cell style={{ color: "red" }}>Narrow column</Table.Cell>
+            <Table.Cell colSpan={2} className="table-cell-styled">
+              Extra styles
+            </Table.Cell>
           </Table.Row>
         </Table.Foot>
       </Table>
-    )
+    );
 
-    expect(tree).toMatchSnapshot()
-  })
-})
+    expect(tree).toMatchSnapshot();
+  });
+});

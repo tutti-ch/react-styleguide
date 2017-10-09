@@ -1,4 +1,4 @@
-@import 'main';
+@import "main";
 
 table {
   margin: 0;
@@ -29,11 +29,17 @@ th {
 }
 
 @include phablet-and-smaller {
-  table, thead, tbody, tfoot, tr, caption {
+  table,
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  caption {
     display: block;
   }
 
-  td, th {
+  td,
+  th {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -42,7 +48,8 @@ th {
   }
 
   tr:first-child {
-    td:first-child, th:first-child {
+    td:first-child,
+    th:first-child {
       border-top: 1px solid $greyscale-90;
     }
   }

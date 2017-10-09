@@ -1,5 +1,5 @@
-import React from 'react'
-import classes from '../style-guide.scss'
+import React from "react";
+import classes from "../style-guide.scss";
 
 const Typography = () => (
   <div className={classes.wrapper}>
@@ -9,8 +9,11 @@ const Typography = () => (
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
-    <p>This is a paragraph with <i>italic</i>, <u>underlined</u> and <b>bold</b> text.</p>
+    <p>
+      This is a paragraph with <i>italic</i>, <u>underlined</u> and <b>bold</b>{" "}
+      text.
+    </p>
   </div>
-)
+);
 
-export default Typography
+export default Typography;

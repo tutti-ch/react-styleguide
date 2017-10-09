@@ -1,1 +1,1 @@
-export * from './tuttilino'
+export * from "./tuttilino";

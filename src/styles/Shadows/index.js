@@ -1,1 +1,1 @@
-export { default } from './Sizes.js'
+export { default } from "./Sizes.js";

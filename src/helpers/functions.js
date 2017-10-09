@@ -7,11 +7,11 @@
  * @param {Object} props The instance props.
  */
 export const filterProps = (propTypes, props) => {
-  const filteredProps = {}
+  const filteredProps = {};
 
   Object.keys(props)
     .filter(k => propTypes[k] === undefined)
-    .forEach(k => filteredProps[k] = props[k])
+    .forEach(k => (filteredProps[k] = props[k]));
 
-  return filteredProps
-}
+  return filteredProps;
+};
