@@ -130,8 +130,8 @@ export default class Button extends Component {
       classes[size],
       classes[role],
       classes[position],
-      responsive && classes.responsive,
       {
+        [classes.responsive]: responsive,
         [classes.noRounded]: rounded === false,
         [classes.buttonLoading]: loading
       }

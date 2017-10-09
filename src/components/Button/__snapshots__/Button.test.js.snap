@@ -44,11 +44,12 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
   loading={true}
   rounded={true}
   size="large"
+  type="button"
 >
   <button
     className="my-class undefined"
     disabled={true}
-    type="submit"
+    type="button"
   >
     <span
       className="ico ico-tutti-cube undefined"

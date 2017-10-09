@@ -21,7 +21,7 @@ describe('(Component) Button', () => {
 
     expect(toJson(comp)).toMatchSnapshot()
 
-    comp.setProps({ loading: true })
+    comp.setProps({ loading: true, type: 'button' })
     expect(toJson(comp)).toMatchSnapshot()
   })
 })
