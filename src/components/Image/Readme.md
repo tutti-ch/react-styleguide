@@ -1,5 +1,7 @@
-Empty Image:
+### Image component
+
+Simple Image component
 
 ```jsx
-<Image alt='Cube' src='http://thecatapi.com/api/images/get?format=src&type=gif' spinnerSize={5}  />
+<Image src='http://thecatapi.com/api/images/get?format=src&type=gif' />
 ```
