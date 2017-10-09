@@ -7,9 +7,6 @@ import classes from "./Button.scss";
 import { filterProps } from 'helpers/functions'
 
 export default class Button extends Component {
-  static TYPE_BUTTON = 'button'
-  static TYPE_SUBMIT = 'submit'
-
   static LEVEL_PRIMARY = 'primary'
   static LEVEL_SECONDARY = 'secondary'
   static LEVEL_TERTIARY = 'tertiary'
@@ -35,14 +32,6 @@ export default class Button extends Component {
      * The class name that will be passed to the button.
      */
     className: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]),
-
-    /**
-     * Define the type of the button.
-     */
-    type: PropTypes.oneOf([
-      Button.TYPE_BUTTON,
-      Button.TYPE_SUBMIT
-    ]),
 
     /**
      * The level of the button. This has impact on the shape of the button.
@@ -110,8 +99,7 @@ export default class Button extends Component {
   static defaultProps = {
     rounded: true,
     loading: false,
-    size: Button.SIZE_MEDIUM,
-    type: Button.TYPE_BUTTON
+    size: Button.SIZE_MEDIUM
   };
 
   constructor(props) {
@@ -170,11 +158,15 @@ export default class Button extends Component {
    * @return {*}
    */
   render() {
-    const { type } = this.props
     const attrs = filterProps(Button.propTypes, this.props)
 
+    // By default, the type is submit
+    if (typeof attrs.type === "undefined") {
+      attrs.type = "submit"
+    }
+
     return (
-      <button className={this.getClasses()} type={type} {...attrs}>
+      <button className={this.getClasses()} {...attrs}>
         {this.renderContent()}
       </button>
     );

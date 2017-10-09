@@ -10,12 +10,11 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
   loading={false}
   rounded={true}
   size="large"
-  type="button"
 >
   <button
     className="my-class"
     disabled={true}
-    type="button"
+    type="submit"
   >
     <span
       className="ico ico-tutti-cube undefined"
@@ -45,12 +44,11 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
   loading={true}
   rounded={true}
   size="large"
-  type="button"
 >
   <button
     className="my-class undefined"
     disabled={true}
-    type="button"
+    type="submit"
   >
     <span
       className="ico ico-tutti-cube undefined"
