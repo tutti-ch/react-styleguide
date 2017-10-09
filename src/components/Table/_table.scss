@@ -28,7 +28,7 @@ th {
   text-align: center;
 }
 
-@include tablet-and-smaller {
+@include phablet-and-smaller {
   table, thead, tbody, tfoot, tr, caption {
     display: block;
   }
