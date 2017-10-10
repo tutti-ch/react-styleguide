@@ -1,9 +1,9 @@
 /* global require */
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import classes from './Icons.scss'
-import { BoxCardWrapper, BoxCard } from 'internals/Box'
+import classes from "./Icons.scss";
+import { BoxCardWrapper, BoxCard } from "internals/Box";
 
 export default class Icons extends Component {
   static propTypes = {
@@ -13,32 +13,37 @@ export default class Icons extends Component {
      * @ignore
      */
     directory: PropTypes.string
-  }
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.getIconList = this.getIconList.bind(this)
+    this.getIconList = this.getIconList.bind(this);
   }
 
   /**
    * Return the icon list from the given directory name.
    */
   getIconList() {
-    return require('./assets/' + this.props.directory + '/index.js')
+    return require("./assets/" + this.props.directory + "/index.js");
   }
 
   render() {
-    const icons = this.getIconList()
+    const icons = this.getIconList();
 
     return (
       <BoxCardWrapper>
         {Object.keys(icons).map((icon, index) => (
           <BoxCard key={`asset-${index}`} name={icon}>
-            <img className={classes.image} src={icons[icon]} width='75' height='75'/>
+            <img
+              className={classes.image}
+              src={icons[icon]}
+              width="75"
+              height="75"
+            />
           </BoxCard>
         ))}
       </BoxCardWrapper>
-    )
+    );
   }
 }

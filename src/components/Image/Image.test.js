@@ -2,11 +2,11 @@
 import React from "react";
 import Image from "components/Image";
 import { mount } from "enzyme";
-import toJson from 'enzyme-to-json'
+import toJson from "enzyme-to-json";
 
 describe("(Component) Image", function() {
   let comp;
-  const initialSrc = 'https://tutti.ch/my-icon.jpg'
+  const initialSrc = "https://tutti.ch/my-icon.jpg";
 
   beforeEach(function() {
     comp = mount(<Image src={initialSrc} />);
@@ -15,15 +15,15 @@ describe("(Component) Image", function() {
 
   test("snapshot should pass all props down", () => {
     const tree = mount(<Image src={initialSrc} />);
-    const inst = tree.instance()
-    inst.onLoad()
+    const inst = tree.instance();
+    inst.onLoad();
     expect(toJson(tree)).toMatchSnapshot();
-    inst.onError()
+    inst.onError();
     expect(toJson(tree)).toMatchSnapshot();
   });
 
   test("should render the image when loaded", () => {
-    comp.setProps({ draggable: false })
+    comp.setProps({ draggable: false });
     expect(comp.find("img[draggable]").exists()).toBe(true);
   });
 
@@ -80,7 +80,7 @@ describe("(Component) Image", function() {
   });
 
   test("should render null when spinner is empty", () => {
-    comp.setState({ error: false, loaded: false })
-    expect(comp.instance().renderSpinner()).toBe(null)
-  })
+    comp.setState({ error: false, loaded: false });
+    expect(comp.instance().renderSpinner()).toBe(null);
+  });
 });

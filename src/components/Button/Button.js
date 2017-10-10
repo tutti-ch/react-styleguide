@@ -4,34 +4,39 @@ import classNames from "classnames";
 
 import Spinner from "components/Spinner";
 import classes from "./Button.scss";
-import { filterProps } from 'helpers/functions'
+import { filterProps } from "helpers/functions";
 
 export default class Button extends Component {
-  static LEVEL_PRIMARY = 'primary'
-  static LEVEL_SECONDARY = 'secondary'
-  static LEVEL_TERTIARY = 'tertiary'
+  static LEVEL_PRIMARY = "primary";
+  static LEVEL_SECONDARY = "secondary";
+  static LEVEL_TERTIARY = "tertiary";
 
-  static ROLE_WARNING = 'warning'
-  static ROLE_PROMOTE = 'promote'
+  static ROLE_WARNING = "warning";
+  static ROLE_PROMOTE = "promote";
 
-  static SIZE_SMALL = 'small'
-  static SIZE_MEDIUM = 'medium'
-  static SIZE_LARGE = 'large'
+  static SIZE_SMALL = "small";
+  static SIZE_MEDIUM = "medium";
+  static SIZE_LARGE = "large";
 
-  static POSITION_LEFT = 'left'
-  static POSITION_RIGHT = 'right'
-  static POSITION_FULL_WIDTH = 'fullWidth'
+  static POSITION_LEFT = "left";
+  static POSITION_RIGHT = "right";
+  static POSITION_FULL_WIDTH = "fullWidth";
 
   static propTypes = {
     /**
      * The content that will be rendered inside the button.
      */
-    children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
+      .isRequired,
 
     /**
      * The class name that will be passed to the button.
      */
-    className: PropTypes.oneOfType([PropTypes.array, PropTypes.object, PropTypes.string]),
+    className: PropTypes.oneOfType([
+      PropTypes.array,
+      PropTypes.object,
+      PropTypes.string
+    ]),
 
     /**
      * The level of the button. This has impact on the shape of the button.
@@ -45,10 +50,7 @@ export default class Button extends Component {
     /**
      * The role of the button. This will change the color of the button.
      */
-    role: PropTypes.oneOf([
-      Button.ROLE_PROMOTE,
-      Button.ROLE_WARNING
-    ]),
+    role: PropTypes.oneOf([Button.ROLE_PROMOTE, Button.ROLE_WARNING]),
 
     /**
      * The size of the button.
@@ -103,9 +105,9 @@ export default class Button extends Component {
   };
 
   constructor(props) {
-    super(props)
-    this.getClasses = this.getClasses.bind(this)
-    this.renderContent = this.renderContent.bind(this)
+    super(props);
+    this.getClasses = this.getClasses.bind(this);
+    this.renderContent = this.renderContent.bind(this);
   }
 
   /**
@@ -142,14 +144,30 @@ export default class Button extends Component {
    * Render the content for the button.
    */
   renderContent() {
-    const { icon, iconAfter, loading, children } = this.props
+    const { icon, iconAfter, loading, children } = this.props;
 
     return [
-      icon && <span className={`ico ico-${icon} ${classes.icon}`} key="icon"/>,
-      children && <span className={classes.text} key="text">{children}</span>,
-      loading && <Spinner className={classes.spinner} size={1.25} color={Spinner.COLOR_LIGHT} key="spinner"/>,
-      iconAfter && <span className={`ico ico-${iconAfter} ${classes.iconAfter}`} key="icon-after"/>
-    ]
+      icon && <span className={`ico ico-${icon} ${classes.icon}`} key="icon" />,
+      children && (
+        <span className={classes.text} key="text">
+          {children}
+        </span>
+      ),
+      loading && (
+        <Spinner
+          className={classes.spinner}
+          size={1.25}
+          color={Spinner.COLOR_LIGHT}
+          key="spinner"
+        />
+      ),
+      iconAfter && (
+        <span
+          className={`ico ico-${iconAfter} ${classes.iconAfter}`}
+          key="icon-after"
+        />
+      )
+    ];
   }
 
   /**
@@ -158,11 +176,11 @@ export default class Button extends Component {
    * @return {*}
    */
   render() {
-    const attrs = filterProps(Button.propTypes, this.props)
+    const attrs = filterProps(Button.propTypes, this.props);
 
     // By default, the type is submit
     if (typeof attrs.type === "undefined") {
-      attrs.type = "submit"
+      attrs.type = "submit";
     }
 
     return (

@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import classes from './Box.scss'
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import classes from "./Box.scss";
 
 /**
  * BoxCardWrapper component for box items.
@@ -11,14 +11,20 @@ import classes from './Box.scss'
  * @constructor
  */
 const BoxCardWrapper = ({ className, children }) => (
-  <div className={classNames(className, classes.wrapper, classes.BoxCardWrapper)}>
+  <div
+    className={classNames(className, classes.wrapper, classes.BoxCardWrapper)}
+  >
     {children}
   </div>
-)
+);
 
 BoxCardWrapper.propTypes = {
-  className: PropTypes.oneOf([PropTypes.array, PropTypes.object, PropTypes.string]),
+  className: PropTypes.oneOf([
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.string
+  ]),
   children: PropTypes.node
-}
+};
 
-export default BoxCardWrapper
+export default BoxCardWrapper;

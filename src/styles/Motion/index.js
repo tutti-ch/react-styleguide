@@ -1,1 +1,1 @@
-export { default } from './Motion.js'
+export { default } from "./Motion.js";

@@ -1,1 +1,1 @@
-export { default } from './Spinner.js'
+export { default } from "./Spinner.js";

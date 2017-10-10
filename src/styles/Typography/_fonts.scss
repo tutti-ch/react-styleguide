@@ -4,11 +4,18 @@
 $line-height-m: 1.3rem;
 
 /* stylelint-disable value-keyword-case */
-$font-main:'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-$font-heading:'Nunito', sans-serif;
+$font-main: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-heading: "Nunito", sans-serif;
 /* stylelint-enable */
 
-h1,h2,h3,h4,h5,h6, strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
   font-family: $font-heading;
 }
 

@@ -1,5 +1,5 @@
-@import '~susy/sass/susy';
-@import 'main';
+@import "~susy/sass/susy";
+@import "main";
 
 @mixin palette($colorMap, $name) {
   @each $shade, $color in $colorMap {
@@ -21,9 +21,9 @@
   }
 }
 
-@include palette($greyscale, 'greyscale');
-@include palette($orange, 'orange');
-@include palette($blue, 'blue');
-@include palette($green, 'green');
-@include palette($yellow, 'yellow');
-@include palette($red, 'red');
+@include palette($greyscale, "greyscale");
+@include palette($orange, "orange");
+@include palette($blue, "blue");
+@include palette($green, "green");
+@include palette($yellow, "yellow");
+@include palette($red, "red");

@@ -1,1 +1,1 @@
-export { default } from './Borders.js'
+export { default } from "./Borders.js";

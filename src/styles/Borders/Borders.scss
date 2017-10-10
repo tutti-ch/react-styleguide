@@ -1,38 +1,38 @@
-@import 'main';
+@import "main";
 
 .borderSample {
-    width: 10rem;
-    height: 0;
+  width: 10rem;
+  height: 0;
 }
 
 .borderS {
-    border-top: $border-s solid $blue-60;
+  border-top: $border-s solid $blue-60;
 }
 
 .borderM {
-    border-top: $border-m solid $blue-60;
+  border-top: $border-m solid $blue-60;
 }
 
 .borderL {
-    border-top: $border-l solid $blue-60;
+  border-top: $border-l solid $blue-60;
 }
 
 .borderRadiusSample {
-    width: 10rem;
-    height: 3rem;
+  width: 10rem;
+  height: 3rem;
 }
 
 .borderRadiusS {
-    background: $blue-60;
-    border-radius: $border-radius-s;
+  background: $blue-60;
+  border-radius: $border-radius-s;
 }
 
 .borderRadiusM {
-    background: $blue-60;
-    border-radius: $border-radius-m;
+  background: $blue-60;
+  border-radius: $border-radius-m;
 }
 
 .borderRadiusL {
-    background: $blue-60;
-    border-radius: $border-radius-l;
+  background: $blue-60;
+  border-radius: $border-radius-l;
 }
