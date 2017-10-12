@@ -1,20 +1,22 @@
 {
   "name": "tutti-ch-styleguide",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "React-based styleguide for tutti.ch",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
     "dist:build": "npm run test && NODE_ENV=umd webpack",
-    "dist:publish":
-      "npm run dist:build && npm version patch -m \"Upgrade package\" && npm publish",
+    "dist:publish": "npm run dist:build && npm version patch -m \"Upgrade package\" && npm publish",
     "styleguide": "./scripts/build.sh && styleguidist server",
     "styleguide:build": "./scripts/build.sh && styleguidist build",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"],
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ],
     "*.scss": [
       "prettier --parser postcss --write",
       "stylelint-staged",
@@ -25,7 +27,11 @@
     "type": "git",
     "url": "git://github.com/tutti-ch/react-styleguide.git"
   },
-  "keywords": ["react", "tutti.ch", "styleguide"],
+  "keywords": [
+    "react",
+    "tutti.ch",
+    "styleguide"
+  ],
   "author": "Tutti AG Switzerland",
   "license": "MIT",
   "bugs": {
