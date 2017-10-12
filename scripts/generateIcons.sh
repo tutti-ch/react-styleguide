@@ -12,7 +12,7 @@ spinal_to_upper() {
 }
 
 # Iterate in folders
-find . -maxdepth 1 -mindepth 1 -type d |while read dname; do
+find . -maxdepth 1 -mindepth 1 -type d | sort -k2,2 -k1,1n |while read dname; do
     cd "$dname";
     rm index.js 2> /dev/null
     touch index.js
