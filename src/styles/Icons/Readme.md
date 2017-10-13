@@ -23,3 +23,10 @@ The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/t
 ```jsx noeditor
 <Icons directory="premium" />
 ```
+
+
+### Social media icons
+
+```jsx noeditor
+<Icons directory="social_media" />
+```
