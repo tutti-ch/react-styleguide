@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Pagination should match the snapshot 1`] = `
+<Pagination
+  itemsPerPage={10}
+  onChange={[Function]}
+  page={302}
+  pageBucket={10}
+  pageText="Page"
+  totalItems={3020}
+>
+  <div>
+    <ul
+      className={undefined}
+    >
+      <Page
+        disabled={false}
+        icon="ico-arrow-start"
+        number={1}
+        onClick={[Function]}
+      >
+        <li
+          className=""
+          onClick={undefined}
+        >
+          <div
+            className="link  ico ico-arrow-start"
+          />
+        </li>
+      </Page>
+      <Page
+        disabled={false}
+        icon="ico-arrow-left"
+        number={301}
+        onClick={[Function]}
+      >
+        <li
+          className=""
+          onClick={undefined}
+        >
+          <div
+            className="link  ico ico-arrow-left"
+          />
+        </li>
+      </Page>
+      <li
+        className={undefined}
+      >
+        Page
+      </li>
+      <Page
+        active={false}
+        key="pagination-300"
+        number={300}
+        onClick={[Function]}
+      >
+        <li
+          className=""
+          onClick={undefined}
+        >
+          <div
+            className="link "
+          >
+            300
+          </div>
+        </li>
+      </Page>
+      <Page
+        active={false}
+        key="pagination-301"
+        number={301}
+        onClick={[Function]}
+      >
+        <li
+          className=""
+          onClick={undefined}
+        >
+          <div
+            className="link "
+          >
+            301
+          </div>
+        </li>
+      </Page>
+      <Page
+        active={true}
+        key="pagination-302"
+        number={302}
+        onClick={[Function]}
+      >
+        <li
+          className=""
+          onClick={undefined}
+        >
+          <div
+            className="link "
+          >
+            302
+          </div>
+        </li>
+      </Page>
+      <Page
+        disabled={true}
+        icon="ico-arrow-right"
+        number={302}
+        onClick={[Function]}
+      >
+        <li
+          className="undefined"
+          onClick={undefined}
+        >
+          <div
+            className="link  ico ico-arrow-right"
+          />
+        </li>
+      </Page>
+      <Page
+        disabled={true}
+        icon="ico-arrow-end"
+        number={302}
+        onClick={[Function]}
+      >
+        <li
+          className="undefined"
+          onClick={undefined}
+        >
+          <div
+            className="link  ico ico-arrow-end"
+          />
+        </li>
+      </Page>
+    </ul>
+  </div>
+</Pagination>
+`;
