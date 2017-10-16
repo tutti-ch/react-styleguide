@@ -1,0 +1,88 @@
+@import "main";
+
+.pagination_bar {
+  width: $phone;
+  margin: $size-m auto $size-xl auto;
+  display: flex;
+  justify-content: center;
+  //   @include clearfix;
+
+  @include tablet-and-bigger {
+    width: 100%;
+    margin: $size-m 0 $size-xl 0;
+  }
+
+  @include phone-and-smaller {
+    width: 100%; // To avoid breaking layout in small phones
+  }
+}
+
+.page {
+  display: block;
+  text-align: center;
+  height: 100%;
+  width: 20%; // Can't use flex: 1 (with max-width) because breaks in ie11
+
+  @include tablet-and-bigger {
+    width: 7.14%; // 100% divided in 14 blocks
+    // Can't use flexbox with max-width because breaks in ie11
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.active {
+  width: auto;
+  padding-left: $size-xxs;
+  color: $greyscale-20;
+
+  @include tablet-and-bigger {
+    width: 7.14%; // 100% divided in 14 blocks
+    padding-left: 0;
+    background: $greyscale-95;
+  }
+}
+
+.inactive {
+  display: none;
+
+  @include tablet-and-bigger {
+    display: block;
+  }
+}
+
+.disabled {
+  opacity: 0.3;
+
+  .link:hover {
+    cursor: default;
+  }
+}
+
+.active,
+.disabled,
+body.offline .page {
+  pointer-events: none;
+}
+
+.link {
+  width: 100%;
+  height: 100%;
+  display: block;
+  line-height: $size-xxl !important;
+}
+
+// the text 'page' appears for small screens
+.text {
+  float: left;
+  display: block;
+  color: $blue-40;
+  text-align: center;
+  line-height: $size-xxl;
+
+  @include tablet-and-bigger {
+    display: none;
+  }
+}
