@@ -2,7 +2,6 @@
 .idea/
 scripts/
 test/
-src/
 docs/
 coverage/
 node_modules/
