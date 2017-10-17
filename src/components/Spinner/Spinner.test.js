@@ -2,7 +2,6 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import Spinner from "./index";
-import toJson from "enzyme-to-json";
 
 describe("(Component) Spinner", () => {
   test("should calculate the styles correctly", () => {
@@ -38,6 +37,6 @@ describe("(Component) Spinner", () => {
         className="my-class"
       />
     );
-    expect(toJson(comp)).toMatchSnapshot();
+    expect(comp).toMatchSnapshot();
   });
 });

@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "components/Image";
 import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
 
 describe("(Component) Image", function() {
   let comp;
@@ -17,9 +16,9 @@ describe("(Component) Image", function() {
     const tree = mount(<Image src={initialSrc} />);
     const inst = tree.instance();
     inst.onLoad();
-    expect(toJson(tree)).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
     inst.onError();
-    expect(toJson(tree)).toMatchSnapshot();
+    expect(tree).toMatchSnapshot();
   });
 
   test("should render the image when loaded", () => {

@@ -2,7 +2,6 @@
 import React from "react";
 import Button from "./Button";
 import { mount } from "enzyme";
-import toJson from "enzyme-to-json";
 
 describe("(Component) Button", () => {
   test("should render snapshot correctly", () => {
@@ -19,9 +18,9 @@ describe("(Component) Button", () => {
       </Button>
     );
 
-    expect(toJson(comp)).toMatchSnapshot();
+    expect(comp).toMatchSnapshot();
 
     comp.setProps({ loading: true, type: "button" });
-    expect(toJson(comp)).toMatchSnapshot();
+    expect(comp).toMatchSnapshot();
   });
 });

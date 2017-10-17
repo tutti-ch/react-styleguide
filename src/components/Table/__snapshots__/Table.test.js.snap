@@ -1,77 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(Component) Table should render correctly 1`] = `
-<table
-  className=""
->
-  <caption>
-    This is the table caption
-  </caption>
-  <thead>
-    <tr>
-      <th
-        colSpan={2}
-      >
-        Wide column
-      </th>
-      <th>
-        Narrow column
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        R1C1
-      </td>
-      <td>
-        R1C2
-      </td>
-      <td>
-        R1C3
-      </td>
-    </tr>
-    <tr>
-      <td>
-        R2C1
-      </td>
-      <td>
-        R2C2
-      </td>
-      <td>
-        R2C3
-      </td>
-    </tr>
-    <tr>
-      <td>
-        R3C1
-      </td>
-      <td>
-        R3C2
-      </td>
-      <td>
-        R3C3
-      </td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <td
-        style={
-          Object {
-            "color": "red",
-          }
-        }
-      >
-        Narrow column
-      </td>
-      <td
-        className="table-cell-styled"
-        colSpan={2}
-      >
-        Extra styles
-      </td>
-    </tr>
-  </tfoot>
-</table>
+<Table>
+  <table
+    className=""
+  >
+    <Component>
+      <caption>
+        This is the table caption
+      </caption>
+    </Component>
+    <Component>
+      <thead>
+        <Component>
+          <tr>
+            <Component
+              colSpan={2}
+            >
+              <th
+                colSpan={2}
+              >
+                Wide column
+              </th>
+            </Component>
+            <Component>
+              <th>
+                Narrow column
+              </th>
+            </Component>
+          </tr>
+        </Component>
+      </thead>
+    </Component>
+    <Component>
+      <tbody>
+        <Component>
+          <tr>
+            <Component>
+              <td>
+                R1C1
+              </td>
+            </Component>
+            <Component>
+              <td>
+                R1C2
+              </td>
+            </Component>
+            <Component>
+              <td>
+                R1C3
+              </td>
+            </Component>
+          </tr>
+        </Component>
+        <Component>
+          <tr>
+            <Component>
+              <td>
+                R2C1
+              </td>
+            </Component>
+            <Component>
+              <td>
+                R2C2
+              </td>
+            </Component>
+            <Component>
+              <td>
+                R2C3
+              </td>
+            </Component>
+          </tr>
+        </Component>
+        <Component>
+          <tr>
+            <Component>
+              <td>
+                R3C1
+              </td>
+            </Component>
+            <Component>
+              <td>
+                R3C2
+              </td>
+            </Component>
+            <Component>
+              <td>
+                R3C3
+              </td>
+            </Component>
+          </tr>
+        </Component>
+      </tbody>
+    </Component>
+    <Component>
+      <tfoot>
+        <Component>
+          <tr>
+            <Component
+              style={
+                Object {
+                  "color": "red",
+                }
+              }
+            >
+              <td
+                style={
+                  Object {
+                    "color": "red",
+                  }
+                }
+              >
+                Narrow column
+              </td>
+            </Component>
+            <Component
+              className="table-cell-styled"
+              colSpan={2}
+            >
+              <td
+                className="table-cell-styled"
+                colSpan={2}
+              >
+                Extra styles
+              </td>
+            </Component>
+          </tr>
+        </Component>
+      </tfoot>
+    </Component>
+  </table>
+</Table>
 `;

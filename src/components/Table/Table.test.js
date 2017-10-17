@@ -1,11 +1,11 @@
 /* global describe, expect, test, jest */
 import React from "react";
+import { mount } from "enzyme";
 import Table from "./index";
-import renderer from "react-test-renderer";
 
 describe("(Component) Table", () => {
   test("should render correctly", () => {
-    const tree = renderer.create(
+    const tree = mount(
       <Table>
         <Table.Caption>This is the table caption</Table.Caption>
         <Table.Head>

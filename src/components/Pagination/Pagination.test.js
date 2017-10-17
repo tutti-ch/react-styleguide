@@ -2,14 +2,13 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
 import Pagination from "./index";
-import toJson from "enzyme-to-json";
 
 describe("(Component) Pagination", () => {
   test("should match the snapshot", () => {
     const comp = mount(
       <Pagination page={302} totalItems={3020} pageText="Page" />
     );
-    expect(toJson(comp)).toMatchSnapshot();
+    expect(comp).toMatchSnapshot();
   });
 
   test("should not show any page if there are no items", () => {
