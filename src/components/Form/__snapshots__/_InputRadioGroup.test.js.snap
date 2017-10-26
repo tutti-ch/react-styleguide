@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) InputRadioGroup should handle the change of the children states 1`] = `
+<InputGroup>
+  <InputRadio
+    checked={false}
+    key=".0"
+    label="React.js"
+    onChange={[Function]}
+  >
+    <span
+      className={undefined}
+      onClick={[Function]}
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value={undefined}
+      />
+      <span
+        className={undefined}
+      >
+        React.js
+      </span>
+    </span>
+  </InputRadio>
+  <InputRadio
+    checked={false}
+    key=".1"
+    label="Vue.js"
+    onChange={[Function]}
+  >
+    <span
+      className={undefined}
+      onClick={[Function]}
+    >
+      <input
+        checked={false}
+        onChange={[Function]}
+        type="radio"
+        value={undefined}
+      />
+      <span
+        className={undefined}
+      >
+        Vue.js
+      </span>
+    </span>
+  </InputRadio>
+  <InputRadio
+    checked={true}
+    key=".2"
+    label="Angular.js"
+    onChange={[Function]}
+  >
+    <span
+      className={undefined}
+      onClick={[Function]}
+    >
+      <input
+        checked={true}
+        onChange={[Function]}
+        type="radio"
+        value={undefined}
+      />
+      <span
+        className={undefined}
+      >
+        Angular.js
+      </span>
+    </span>
+  </InputRadio>
+</InputGroup>
+`;

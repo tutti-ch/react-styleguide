@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HOC (WithWrapper) snapshot should display an error span when there is an error 1`] = `
+<WithWrapper
+  checked={true}
+  error="Cannot proceed like this"
+>
+  <span
+    className=""
+  >
+    <InputCheckbox
+      checked={true}
+      label={undefined}
+      onChange={[Function]}
+    >
+      <span
+        className={undefined}
+        onClick={[Function]}
+      >
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+          value={undefined}
+        />
+        <span
+          className={undefined}
+        />
+      </span>
+    </InputCheckbox>
+    <span
+      className={undefined}
+    >
+      Cannot proceed like this
+    </span>
+  </span>
+</WithWrapper>
+`;
+
+exports[`HOC (WithWrapper) snapshot should include a label span when label is not defined in the child component 1`] = `
+<WithWrapper
+  label="My awesome label"
+  value="hello-world"
+>
+  <span
+    className="undefined"
+  >
+    <Input
+      onChange={[Function]}
+      type="text"
+      value="hello-world"
+    >
+      <input
+        onChange={[Function]}
+        type="text"
+        value="hello-world"
+      />
+    </Input>
+    <span
+      className={undefined}
+    >
+      My awesome label
+    </span>
+  </span>
+</WithWrapper>
+`;
+
+exports[`HOC (WithWrapper) snapshot should not include a label span when the label is defined in the child component 1`] = `
+<WithWrapper
+  checked={true}
+>
+  <span
+    className=""
+  >
+    <InputCheckbox
+      checked={true}
+      label={undefined}
+      onChange={[Function]}
+    >
+      <span
+        className={undefined}
+        onClick={[Function]}
+      >
+        <input
+          checked={true}
+          onChange={[Function]}
+          type="checkbox"
+          value={undefined}
+        />
+        <span
+          className={undefined}
+        />
+      </span>
+    </InputCheckbox>
+  </span>
+</WithWrapper>
+`;

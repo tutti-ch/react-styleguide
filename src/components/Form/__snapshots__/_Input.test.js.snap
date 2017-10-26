@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Input snapshot 1`] = `
+<Input
+  type="text"
+  value="Life is good"
+>
+  <input
+    onChange={[Function]}
+    type="text"
+    value="Life is good"
+  />
+</Input>
+`;

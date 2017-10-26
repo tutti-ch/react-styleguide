@@ -1,0 +1,193 @@
+@import "../styles/main";
+
+@mixin placeholder {
+  // IMPORTANT: Do not combine the following placeholder styles, as otherwise they will break.
+
+  // Chrome/Opera/Safari
+  ::-webkit-input-placeholder {
+    @content
+  }
+
+  // Firefox 19+
+  :-moz-placeholder {
+    @content
+  }
+
+  // IE 10+
+  ::-moz-placeholder {
+    @content
+  }
+
+  // Firefox 18-
+  :-ms-input-placeholder {
+    @content
+  }
+}
+
+@include placeholder {
+  color: $greyscale-60;
+}
+
+@mixin focus {
+  transition: $transition-m;
+  box-shadow: none;
+
+  &:focus {
+    outline: none;
+    @include mediumShadow();
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="phone"],
+input[type="number"],
+textarea {
+  border: $border-default;
+  background-color: $greyscale-100;
+  padding: $size-s;
+  border-radius: 2px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  @include focus();
+}
+
+input[type="number"] {
+  width: 6rem;
+}
+
+textarea {
+  min-height: 8rem;
+  resize: none;
+}
+
+textarea + .label {
+  top: $size-s;
+  transform: translateY(0);
+}
+
+input:focus + .label,
+textarea:focus + .label,
+.slider .label,
+.has-value .label {
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(-100% - 0.25rem));
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  font: inherit;
+  vertical-align: middle;
+  background: $greyscale-100;
+  border-radius: $size-xxxs / 2;
+  box-sizing: border-box;
+  border: $border-default;
+  position: relative;
+  margin-right: $size-m;
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  font-size: 1rem;
+
+  &.inline {
+    display: inline-block;
+  }
+
+  & + .wrapper {
+    margin-top: $size-xl;
+  }
+
+  & + label.wrapper {
+    margin-top: $size-m;
+  }
+}
+
+.cb-label {
+  user-select: none;
+  cursor: pointer;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  left: $size-s;
+  top: 50%;
+  color: $greyscale-60;
+  transform: translateY(-50%);
+  transition: $transition-s;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: $size-xxs;
+  background: $blue-50;
+  border-radius: $size-xxxs / 2;
+  border: 0 solid #010101;
+  outline: none;
+
+  .label {
+    top: -$size-xxxs;
+  }
+
+  .labelText {
+    display: inline-block;
+    margin-right: $size-xs;
+
+    &:after {
+      content: ':'
+    }
+  }
+
+  .rangeMin {
+    display: inline-block;
+    min-width: 5.5rem;
+  }
+
+  .rangeMax {
+    margin-left: $size-xs;
+  }
+
+  .thumb {
+    user-select: none;
+    display: inline-block;
+    border: $border-default;
+    height: $size-ml;
+    width: $size-ml;
+    border-radius: 50%;
+    background: #ffffff;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    transition: width 0.1s ease-out, height 0.1s ease-out;
+    top: 50%;
+    margin-left: -$size-ml / 2;
+    transform: translateY(-50%);
+
+    &.trans {
+      transition: $transition-m;
+    }
+
+    &[name=min] {
+      margin-left: -1px;
+    }
+
+    &[name=max] {
+      margin-right: -1px
+    }
+
+    &[data-value]:before {
+      position: absolute;
+      content: attr(data-value);
+      left: -50%;
+      right: -50%
+    }
+  }
+}
