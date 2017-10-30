@@ -6,6 +6,7 @@ import { mount } from "enzyme"
 describe("(Component) SelectOption", () => {
   test("[select] should trigger the onClick prop", () => {
     const onClick = jest.fn()
+    const event = {}
 
     const comp = mount(
       <SelectOption
@@ -17,8 +18,8 @@ describe("(Component) SelectOption", () => {
     )
     const inst = comp.instance()
 
-    inst.select()
-    expect(onClick).toHaveBeenCalledWith(inst.props)
+    inst.select(event)
+    expect(onClick).toHaveBeenCalledWith(inst.props, event)
     expect(comp).toMatchSnapshot()
   })
 })

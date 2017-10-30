@@ -24,10 +24,10 @@ class Option extends Component {
     this.select = this.select.bind(this);
   }
 
-  select() {
+  select(e) {
     // istanbul ignore else
     if (typeof this.props.onClick === "function") {
-      this.props.onClick(this.props);
+      this.props.onClick(this.props, e);
     }
   }
 

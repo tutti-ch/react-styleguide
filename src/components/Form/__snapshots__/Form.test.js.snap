@@ -716,11 +716,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   icon={undefined}
                                   image={undefined}
                                   key="null"
+                                  onClick={undefined}
                                   selected={false}
                                   text="Favorite framework"
+                                  value={null}
                                 >
                                   <div
                                     className=""
+                                    key="null"
                                     onClick={[Function]}
                                   >
                                     <span
@@ -1058,11 +1061,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   icon={undefined}
                                   image={undefined}
                                   key="null"
+                                  onClick={undefined}
                                   selected={false}
                                   text="Favorite framework"
+                                  value={null}
                                 >
                                   <div
                                     className=""
+                                    key="null"
                                     onClick={[Function]}
                                   >
                                     <span
@@ -1400,11 +1406,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   icon={undefined}
                                   image={undefined}
                                   key="null"
+                                  onClick={undefined}
                                   selected={false}
                                   text="Favorite framework"
+                                  value={null}
                                 >
                                   <div
                                     className=""
+                                    key="null"
                                     onClick={[Function]}
                                   >
                                     <span

@@ -67,11 +67,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             icon={undefined}
             image={undefined}
             key="null"
+            onClick={undefined}
             selected={false}
             text="my-placeholder"
+            value={null}
           >
             <div
               className=""
+              key="null"
               onClick={[Function]}
             >
               <span
@@ -360,11 +363,14 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             icon={undefined}
             image={undefined}
             key="jQuery"
+            onClick={undefined}
             selected={false}
             text="jQuery"
+            value="jQuery"
           >
             <div
               className=""
+              key="jQuery"
               onClick={[Function]}
             >
               <span

@@ -394,6 +394,28 @@ input[type="radio"] {
 }
 
 .select.multiple {
+  &:not(.placeholder) {
+    .ph {
+      height: 100%;
+      line-height: 1rem;
+      align-items: center;
+
+      .option {
+        background: $greyscale-80;
+        border: $border-default;
+        border-radius: 3px;
+        padding: $size-xxxs $size-m;
+        font-size: 0.8rem;
+
+        &:after {
+          content: "x";
+          margin-left: $size-xxs;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
   .options .option.selected {
     position: relative;
 

@@ -70,6 +70,7 @@ export class Select extends Component {
     this.close = this.close.bind(this)
     this.toggle = this.toggle.bind(this)
     this.select = this.select.bind(this)
+    this.unselect = this.unselect.bind(this)
     this.keyDown = this.keyDown.bind(this)
     this.handleOnFocus = this.handleOnFocus.bind(this)
     this.handleOnBlur = this.handleOnBlur.bind(this)
@@ -82,7 +83,7 @@ export class Select extends Component {
       highlighted: this.findIndexByValue(selected[0]),
       isOpen: false,
       options: options.filter(i => i).map(i => ({ ...i, value: i.value.toString() })),
-      selected: selected.filter(i => i).map(i => i.toString())
+      selected: selected.filter(i => i).map(i => i.toString()),
     }
   }
 
@@ -231,25 +232,47 @@ export class Select extends Component {
    * Select and highlight the given item.
    *
    * @param value
+   * @param {*} event
    */
-  select({ value }) {
+  select({ value }, event) {
     const { multiple } = this.props
 
     let selected = [value]
 
     // Add support for multiple selections
     if (multiple) {
+      // Do not propagate when multi box is open
+      event.stopPropagation()
+
       // If the item is already there unselect it otherwise add it.
       selected = this.state.selected.slice(0)
       const index = selected.indexOf(value)
       index > -1 ? selected.splice(index, 1) : selected.push(value)
     }
 
-    this.setState({ selected, highlighted: this.findIndexByValue(value) })
-    this.close()
+    this.setState({ selected, highlighted: this.findIndexByValue(value) }, () => {
+      if (typeof this.props.onChange === "function") {
+        this.props.onChange(`${value}`)
+      }
+    })
+  }
 
-    if (typeof this.props.onChange === "function") {
-      this.props.onChange(`${value}`)
+  /**
+   * Unselect the given value.
+   *
+   * @param value
+   * @param {*} event
+   */
+  unselect({ value }, event) {
+    event.preventDefault()
+    event.stopPropagation()
+
+    const selected = this.state.selected.slice(0)
+    const index = selected.indexOf(value)
+
+    if (index > -1) {
+      selected.splice(index, 1)
+      this.setState({ selected })
     }
   }
 
@@ -333,7 +356,14 @@ export class Select extends Component {
             <div className={classNames(classes.ph)}>
               {
                 this.getSelectedOptions().map(o => (
-                  <Option text={o.text} icon={o.icon} image={o.image} key={o.value}/>
+                  <Option
+                    text={o.text}
+                    icon={o.icon}
+                    image={o.image}
+                    value={o.value}
+                    key={o.value}
+                    onClick={multiple && o.value ? this.unselect : undefined}
+                  />
                 ))
               }
             </div>
