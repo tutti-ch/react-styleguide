@@ -8,8 +8,9 @@ import { filterProps } from "../../helpers/functions"
  * This is a high order component for having a wrapper around inputs.
  *
  * @param WrappedComponent
+ * @param mergeProps The properties to merge.
  */
-export default (WrappedComponent) => {
+export default (WrappedComponent, mergeProps = {}) => {
   return class WithWrapper extends Component {
     static propTypes = {
       /**
@@ -73,14 +74,14 @@ export default (WrappedComponent) => {
       const wrapperClasses = classNames(classes.wrapper, {
         [classes.inline]: inline,
         [classes.hasValue]: hasValue
-      })
+      }, mergeProps.className)
 
       return (
-        <span className={wrapperClasses}>
+        <div className={wrapperClasses}>
           { <WrappedComponent {...injectedProps} /> }
           { label && <span className={classes.label}>{label}</span> }
           { error && <span className={classes.error}>{error}</span> }
-        </span>
+        </div>
       )
     }
   }

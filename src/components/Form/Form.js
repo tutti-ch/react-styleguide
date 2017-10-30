@@ -6,6 +6,7 @@ import Textarea from "./_Textarea"
 import Slider from "./_Slider"
 import Table from "../Table"
 import InputRadioGroup from "./_InputRadioGroup"
+import Select from "./_Select"
 
 /**
  * This component is only used by the style guide.
@@ -46,7 +47,7 @@ export default () => (
       </Table.Row>
       <Table.Row>
         <Table.Cell>
-          <h3>Checkbox Group</h3>
+          <h3>Checkbox</h3>
         </Table.Cell>
         <Table.Cell colSpan={4}>
           <InputCheckbox value="red" label="Red" checked/>
@@ -72,6 +73,57 @@ export default () => (
         </Table.Cell>
         <Table.Cell colSpan={4}>
           <Textarea label="This is a textarea"/>
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          Dropdown
+        </Table.Cell>
+        <Table.Cell colSpan={4}>
+          <Select
+            label="Block select input"
+            placeholder="Favorite framework"
+            options={[
+              { value: "React.js", text: "React.js" },
+              { value: "Vue.js", text: "Vue.js" },
+              { value: "Angular.js", text: "Angular.js", },
+              { value: "jQuery", text: "jQuery" },
+              { value: "Knockout", text: "Knockout", },
+              { value: "Backbone", text: "Backbone", },
+              { value: "Ember", text: "Ember" },
+              { value: "Bootstrap", text: "Bootstrap", },
+              { value: "Other", text: "Other" },
+            ]}/>
+          <Select
+            label="Multiple select input"
+            multiple
+            placeholder="Favorite framework"
+            options={[
+              { value: "React.js", text: "React.js" },
+              { value: "Vue.js", text: "Vue.js" },
+              { value: "Angular.js", text: "Angular.js", },
+              { value: "jQuery", text: "jQuery" },
+              { value: "Knockout", text: "Knockout", },
+              { value: "Backbone", text: "Backbone", },
+              { value: "Ember", text: "Ember" },
+              { value: "Bootstrap", text: "Bootstrap", },
+              { value: "Other", text: "Other" },
+            ]}/>
+          <Select
+            label="Inline select input"
+            inline
+            placeholder="Favorite framework"
+            options={[
+              { value: "React.js", text: "React.js" },
+              { value: "Vue.js", text: "Vue.js" },
+              { value: "Angular.js", text: "Angular.js", },
+              { value: "jQuery", text: "jQuery" },
+              { value: "Knockout", text: "Knockout", },
+              { value: "Backbone", text: "Backbone", },
+              { value: "Ember", text: "Ember" },
+              { value: "Bootstrap", text: "Bootstrap", },
+              { value: "Other", text: "Other" },
+            ]}/>
         </Table.Cell>
       </Table.Row>
     </Table.Body>

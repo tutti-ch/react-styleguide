@@ -26,7 +26,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                   <WithWrapper
                     label="Block text input"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Input
@@ -45,13 +45,13 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         Block text input
                       </span>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     inline={true}
                     label="Inline text input"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Input
@@ -70,7 +70,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         Inline text input
                       </span>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     label="Number"
@@ -80,7 +80,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="number"
                     value="150"
                   >
-                    <span
+                    <div
                       className="undefined"
                     >
                       <Input
@@ -105,13 +105,13 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         Number
                       </span>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     label="Password"
                     type="password"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Input
@@ -130,13 +130,13 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         Password
                       </span>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     label="Email"
                     type="email"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Input
@@ -155,13 +155,13 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         Email
                       </span>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     label="Phone"
                     type="phone"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Input
@@ -180,7 +180,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         Phone
                       </span>
-                    </span>
+                    </div>
                   </WithWrapper>
                 </td>
               </Component>
@@ -218,7 +218,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     step={100}
                     suffix=".-"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Slider
@@ -291,7 +291,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           />
                         </span>
                       </Slider>
-                    </span>
+                    </div>
                   </WithWrapper>
                 </td>
               </Component>
@@ -302,7 +302,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
               <Component>
                 <td>
                   <h3>
-                    Checkbox Group
+                    Checkbox
                   </h3>
                 </td>
               </Component>
@@ -317,7 +317,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="Red"
                     value="red"
                   >
-                    <span
+                    <div
                       className="undefined"
                     >
                       <InputCheckbox
@@ -343,14 +343,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </span>
                         </span>
                       </InputCheckbox>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     checked={true}
                     label="Blue"
                     value="blue"
                   >
-                    <span
+                    <div
                       className="undefined"
                     >
                       <InputCheckbox
@@ -376,13 +376,13 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </span>
                         </span>
                       </InputCheckbox>
-                    </span>
+                    </div>
                   </WithWrapper>
                   <WithWrapper
                     label="Green"
                     value="green"
                   >
-                    <span
+                    <div
                       className="undefined"
                     >
                       <InputCheckbox
@@ -408,7 +408,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </span>
                         </span>
                       </InputCheckbox>
-                    </span>
+                    </div>
                   </WithWrapper>
                 </td>
               </Component>
@@ -438,7 +438,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       onChange={[Function]}
                       value={10}
                     >
-                      <span
+                      <div
                         className="undefined"
                       >
                         <InputRadio
@@ -466,7 +466,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             </span>
                           </span>
                         </InputRadio>
-                      </span>
+                      </div>
                     </WithWrapper>
                     <WithWrapper
                       checked={false}
@@ -476,7 +476,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       onChange={[Function]}
                       value={10}
                     >
-                      <span
+                      <div
                         className="undefined"
                       >
                         <InputRadio
@@ -504,7 +504,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             </span>
                           </span>
                         </InputRadio>
-                      </span>
+                      </div>
                     </WithWrapper>
                     <WithWrapper
                       checked={false}
@@ -514,7 +514,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       onChange={[Function]}
                       value={10}
                     >
-                      <span
+                      <div
                         className="undefined"
                       >
                         <InputRadio
@@ -542,7 +542,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             </span>
                           </span>
                         </InputRadio>
-                      </span>
+                      </div>
                     </WithWrapper>
                   </InputGroup>
                 </td>
@@ -567,7 +567,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                   <WithWrapper
                     label="This is a textarea"
                   >
-                    <span
+                    <div
                       className=""
                     >
                       <Textarea
@@ -584,7 +584,1049 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         This is a textarea
                       </span>
-                    </span>
+                    </div>
+                  </WithWrapper>
+                </td>
+              </Component>
+            </tr>
+          </Component>
+          <Component>
+            <tr>
+              <Component>
+                <td>
+                  Dropdown
+                </td>
+              </Component>
+              <Component
+                colSpan={4}
+              >
+                <td
+                  colSpan={4}
+                >
+                  <WithWrapper
+                    label="Block select input"
+                    options={
+                      Array [
+                        Object {
+                          "text": "React.js",
+                          "value": "React.js",
+                        },
+                        Object {
+                          "text": "Vue.js",
+                          "value": "Vue.js",
+                        },
+                        Object {
+                          "text": "Angular.js",
+                          "value": "Angular.js",
+                        },
+                        Object {
+                          "text": "jQuery",
+                          "value": "jQuery",
+                        },
+                        Object {
+                          "text": "Knockout",
+                          "value": "Knockout",
+                        },
+                        Object {
+                          "text": "Backbone",
+                          "value": "Backbone",
+                        },
+                        Object {
+                          "text": "Ember",
+                          "value": "Ember",
+                        },
+                        Object {
+                          "text": "Bootstrap",
+                          "value": "Bootstrap",
+                        },
+                        Object {
+                          "text": "Other",
+                          "value": "Other",
+                        },
+                      ]
+                    }
+                    placeholder="Favorite framework"
+                  >
+                    <div
+                      className=""
+                    >
+                      <Select
+                        multiple={false}
+                        onChange={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "text": "React.js",
+                              "value": "React.js",
+                            },
+                            Object {
+                              "text": "Vue.js",
+                              "value": "Vue.js",
+                            },
+                            Object {
+                              "text": "Angular.js",
+                              "value": "Angular.js",
+                            },
+                            Object {
+                              "text": "jQuery",
+                              "value": "jQuery",
+                            },
+                            Object {
+                              "text": "Knockout",
+                              "value": "Knockout",
+                            },
+                            Object {
+                              "text": "Backbone",
+                              "value": "Backbone",
+                            },
+                            Object {
+                              "text": "Ember",
+                              "value": "Ember",
+                            },
+                            Object {
+                              "text": "Bootstrap",
+                              "value": "Bootstrap",
+                            },
+                            Object {
+                              "text": "Other",
+                              "value": "Other",
+                            },
+                          ]
+                        }
+                        placeholder="Favorite framework"
+                        size="medium"
+                      >
+                        <OutsideClickable
+                          onOutsideClick={[Function]}
+                        >
+                          <div
+                            className="undefined"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className=""
+                              onBlur={[Function]}
+                              onFocus={[Function]}
+                              tabIndex={0}
+                            >
+                              <div
+                                className=""
+                              >
+                                <Option
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="null"
+                                  selected={false}
+                                  text="Favorite framework"
+                                >
+                                  <div
+                                    className=""
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Favorite framework
+                                    </span>
+                                  </div>
+                                </Option>
+                              </div>
+                              <div
+                                className=""
+                              >
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="React.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="React.js"
+                                  value="React.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="React.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      React.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Vue.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Vue.js"
+                                  value="Vue.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="Vue.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Vue.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Angular.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Angular.js"
+                                  value="Angular.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="Angular.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Angular.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="jQuery"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="jQuery"
+                                  value="jQuery"
+                                >
+                                  <div
+                                    className=""
+                                    key="jQuery"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      jQuery
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Knockout"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Knockout"
+                                  value="Knockout"
+                                >
+                                  <div
+                                    className=""
+                                    key="Knockout"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Knockout
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Backbone"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Backbone"
+                                  value="Backbone"
+                                >
+                                  <div
+                                    className=""
+                                    key="Backbone"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Backbone
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Ember"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Ember"
+                                  value="Ember"
+                                >
+                                  <div
+                                    className=""
+                                    key="Ember"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Ember
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Bootstrap"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Bootstrap"
+                                  value="Bootstrap"
+                                >
+                                  <div
+                                    className=""
+                                    key="Bootstrap"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Bootstrap
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Other"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Other"
+                                  value="Other"
+                                >
+                                  <div
+                                    className=""
+                                    key="Other"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Other
+                                    </span>
+                                  </div>
+                                </Option>
+                              </div>
+                            </div>
+                          </div>
+                        </OutsideClickable>
+                      </Select>
+                      <span
+                        className={undefined}
+                      >
+                        Block select input
+                      </span>
+                    </div>
+                  </WithWrapper>
+                  <WithWrapper
+                    label="Multiple select input"
+                    multiple={true}
+                    options={
+                      Array [
+                        Object {
+                          "text": "React.js",
+                          "value": "React.js",
+                        },
+                        Object {
+                          "text": "Vue.js",
+                          "value": "Vue.js",
+                        },
+                        Object {
+                          "text": "Angular.js",
+                          "value": "Angular.js",
+                        },
+                        Object {
+                          "text": "jQuery",
+                          "value": "jQuery",
+                        },
+                        Object {
+                          "text": "Knockout",
+                          "value": "Knockout",
+                        },
+                        Object {
+                          "text": "Backbone",
+                          "value": "Backbone",
+                        },
+                        Object {
+                          "text": "Ember",
+                          "value": "Ember",
+                        },
+                        Object {
+                          "text": "Bootstrap",
+                          "value": "Bootstrap",
+                        },
+                        Object {
+                          "text": "Other",
+                          "value": "Other",
+                        },
+                      ]
+                    }
+                    placeholder="Favorite framework"
+                  >
+                    <div
+                      className=""
+                    >
+                      <Select
+                        multiple={true}
+                        onChange={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "text": "React.js",
+                              "value": "React.js",
+                            },
+                            Object {
+                              "text": "Vue.js",
+                              "value": "Vue.js",
+                            },
+                            Object {
+                              "text": "Angular.js",
+                              "value": "Angular.js",
+                            },
+                            Object {
+                              "text": "jQuery",
+                              "value": "jQuery",
+                            },
+                            Object {
+                              "text": "Knockout",
+                              "value": "Knockout",
+                            },
+                            Object {
+                              "text": "Backbone",
+                              "value": "Backbone",
+                            },
+                            Object {
+                              "text": "Ember",
+                              "value": "Ember",
+                            },
+                            Object {
+                              "text": "Bootstrap",
+                              "value": "Bootstrap",
+                            },
+                            Object {
+                              "text": "Other",
+                              "value": "Other",
+                            },
+                          ]
+                        }
+                        placeholder="Favorite framework"
+                        size="medium"
+                      >
+                        <OutsideClickable
+                          onOutsideClick={[Function]}
+                        >
+                          <div
+                            className="undefined"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className=""
+                              onBlur={[Function]}
+                              onFocus={[Function]}
+                              tabIndex={0}
+                            >
+                              <div
+                                className=""
+                              >
+                                <Option
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="null"
+                                  selected={false}
+                                  text="Favorite framework"
+                                >
+                                  <div
+                                    className=""
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Favorite framework
+                                    </span>
+                                  </div>
+                                </Option>
+                              </div>
+                              <div
+                                className=""
+                              >
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="React.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="React.js"
+                                  value="React.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="React.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      React.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Vue.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Vue.js"
+                                  value="Vue.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="Vue.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Vue.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Angular.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Angular.js"
+                                  value="Angular.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="Angular.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Angular.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="jQuery"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="jQuery"
+                                  value="jQuery"
+                                >
+                                  <div
+                                    className=""
+                                    key="jQuery"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      jQuery
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Knockout"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Knockout"
+                                  value="Knockout"
+                                >
+                                  <div
+                                    className=""
+                                    key="Knockout"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Knockout
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Backbone"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Backbone"
+                                  value="Backbone"
+                                >
+                                  <div
+                                    className=""
+                                    key="Backbone"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Backbone
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Ember"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Ember"
+                                  value="Ember"
+                                >
+                                  <div
+                                    className=""
+                                    key="Ember"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Ember
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Bootstrap"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Bootstrap"
+                                  value="Bootstrap"
+                                >
+                                  <div
+                                    className=""
+                                    key="Bootstrap"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Bootstrap
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Other"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Other"
+                                  value="Other"
+                                >
+                                  <div
+                                    className=""
+                                    key="Other"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Other
+                                    </span>
+                                  </div>
+                                </Option>
+                              </div>
+                            </div>
+                          </div>
+                        </OutsideClickable>
+                      </Select>
+                      <span
+                        className={undefined}
+                      >
+                        Multiple select input
+                      </span>
+                    </div>
+                  </WithWrapper>
+                  <WithWrapper
+                    inline={true}
+                    label="Inline select input"
+                    options={
+                      Array [
+                        Object {
+                          "text": "React.js",
+                          "value": "React.js",
+                        },
+                        Object {
+                          "text": "Vue.js",
+                          "value": "Vue.js",
+                        },
+                        Object {
+                          "text": "Angular.js",
+                          "value": "Angular.js",
+                        },
+                        Object {
+                          "text": "jQuery",
+                          "value": "jQuery",
+                        },
+                        Object {
+                          "text": "Knockout",
+                          "value": "Knockout",
+                        },
+                        Object {
+                          "text": "Backbone",
+                          "value": "Backbone",
+                        },
+                        Object {
+                          "text": "Ember",
+                          "value": "Ember",
+                        },
+                        Object {
+                          "text": "Bootstrap",
+                          "value": "Bootstrap",
+                        },
+                        Object {
+                          "text": "Other",
+                          "value": "Other",
+                        },
+                      ]
+                    }
+                    placeholder="Favorite framework"
+                  >
+                    <div
+                      className=""
+                    >
+                      <Select
+                        multiple={false}
+                        onChange={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "text": "React.js",
+                              "value": "React.js",
+                            },
+                            Object {
+                              "text": "Vue.js",
+                              "value": "Vue.js",
+                            },
+                            Object {
+                              "text": "Angular.js",
+                              "value": "Angular.js",
+                            },
+                            Object {
+                              "text": "jQuery",
+                              "value": "jQuery",
+                            },
+                            Object {
+                              "text": "Knockout",
+                              "value": "Knockout",
+                            },
+                            Object {
+                              "text": "Backbone",
+                              "value": "Backbone",
+                            },
+                            Object {
+                              "text": "Ember",
+                              "value": "Ember",
+                            },
+                            Object {
+                              "text": "Bootstrap",
+                              "value": "Bootstrap",
+                            },
+                            Object {
+                              "text": "Other",
+                              "value": "Other",
+                            },
+                          ]
+                        }
+                        placeholder="Favorite framework"
+                        size="medium"
+                      >
+                        <OutsideClickable
+                          onOutsideClick={[Function]}
+                        >
+                          <div
+                            className="undefined"
+                            onClick={[Function]}
+                          >
+                            <div
+                              className=""
+                              onBlur={[Function]}
+                              onFocus={[Function]}
+                              tabIndex={0}
+                            >
+                              <div
+                                className=""
+                              >
+                                <Option
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="null"
+                                  selected={false}
+                                  text="Favorite framework"
+                                >
+                                  <div
+                                    className=""
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Favorite framework
+                                    </span>
+                                  </div>
+                                </Option>
+                              </div>
+                              <div
+                                className=""
+                              >
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="React.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="React.js"
+                                  value="React.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="React.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      React.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Vue.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Vue.js"
+                                  value="Vue.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="Vue.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Vue.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Angular.js"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Angular.js"
+                                  value="Angular.js"
+                                >
+                                  <div
+                                    className=""
+                                    key="Angular.js"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Angular.js
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="jQuery"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="jQuery"
+                                  value="jQuery"
+                                >
+                                  <div
+                                    className=""
+                                    key="jQuery"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      jQuery
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Knockout"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Knockout"
+                                  value="Knockout"
+                                >
+                                  <div
+                                    className=""
+                                    key="Knockout"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Knockout
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Backbone"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Backbone"
+                                  value="Backbone"
+                                >
+                                  <div
+                                    className=""
+                                    key="Backbone"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Backbone
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Ember"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Ember"
+                                  value="Ember"
+                                >
+                                  <div
+                                    className=""
+                                    key="Ember"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Ember
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Bootstrap"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Bootstrap"
+                                  value="Bootstrap"
+                                >
+                                  <div
+                                    className=""
+                                    key="Bootstrap"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Bootstrap
+                                    </span>
+                                  </div>
+                                </Option>
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key="Other"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Other"
+                                  value="Other"
+                                >
+                                  <div
+                                    className=""
+                                    key="Other"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      Other
+                                    </span>
+                                  </div>
+                                </Option>
+                              </div>
+                            </div>
+                          </div>
+                        </OutsideClickable>
+                      </Select>
+                      <span
+                        className={undefined}
+                      >
+                        Inline select input
+                      </span>
+                    </div>
                   </WithWrapper>
                 </td>
               </Component>

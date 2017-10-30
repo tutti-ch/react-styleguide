@@ -5,7 +5,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
   checked={true}
   error="Cannot proceed like this"
 >
-  <span
+  <div
     className=""
   >
     <InputCheckbox
@@ -33,7 +33,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
     >
       Cannot proceed like this
     </span>
-  </span>
+  </div>
 </WithWrapper>
 `;
 
@@ -42,7 +42,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
   label="My awesome label"
   value="hello-world"
 >
-  <span
+  <div
     className="undefined"
   >
     <Input
@@ -61,7 +61,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
     >
       My awesome label
     </span>
-  </span>
+  </div>
 </WithWrapper>
 `;
 
@@ -69,7 +69,7 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
 <WithWrapper
   checked={true}
 >
-  <span
+  <div
     className=""
   >
     <InputCheckbox
@@ -92,6 +92,6 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
         />
       </span>
     </InputCheckbox>
-  </span>
+  </div>
 </WithWrapper>
 `;

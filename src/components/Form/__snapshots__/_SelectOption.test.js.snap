@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] = `
+<Option
+  highlighted={true}
+  icon="ico ico-tutti-cube"
+  onClick={[Function]}
+  selected={true}
+  text="my option"
+>
+  <div
+    className="undefined"
+    onClick={[Function]}
+  >
+    <span
+      className="ico ico-tutti-cube"
+    />
+    <span
+      className={undefined}
+    >
+      my option
+    </span>
+  </div>
+</Option>
+`;
