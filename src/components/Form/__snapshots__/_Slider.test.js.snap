@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Slider snapshots should create the right snapshot for multiple thumbs 1`] = `
+<Slider
+  crossThumbs={false}
+  max={1500}
+  min={500}
+  minRange={100}
+  multiple={true}
+  prefix=""
+  step={250}
+  suffix=""
+  template=""
+>
+  <span
+    className={undefined}
+  >
+    <span
+      className={undefined}
+    >
+      <span
+        className={undefined}
+      />
+      <span
+        className={undefined}
+      >
+        500
+      </span>
+      <span
+        className={undefined}
+      >
+        1500
+      </span>
+    </span>
+    <span
+      className={undefined}
+      name="minValue"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+      tabIndex={1}
+    />
+    <span
+      className={undefined}
+      name="maxValue"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+      tabIndex={1}
+    />
+  </span>
+</Slider>
+`;
+
+exports[`(Component) Slider snapshots should create the right snapshot for single thumb 1`] = `
+<Slider
+  crossThumbs={false}
+  max={1500}
+  min={500}
+  minRange={100}
+  prefix=""
+  step={250}
+  suffix=""
+  template=""
+>
+  <span
+    className={undefined}
+  >
+    <span
+      className={undefined}
+    >
+      <span
+        className={undefined}
+      />
+      <span
+        className={undefined}
+      >
+        500
+      </span>
+    </span>
+    <span
+      className={undefined}
+      name="minValue"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+      tabIndex={1}
+    />
+  </span>
+</Slider>
+`;

@@ -5,6 +5,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import "main";
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,600");
 
 html {
   font-family: sans-serif; /* 1 */
@@ -425,4 +427,59 @@ table {
 td,
 th {
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: $font-heading;
+}
+
+h1 {
+  font-size: $size-l;
+  margin-top: $size-m;
+  margin-bottom: $size-m;
+
+  @include tablet-and-bigger {
+    font-size: $size-xl;
+    margin-top: $size-l;
+    margin-bottom: $size-l;
+  }
+}
+
+h2 {
+  font-size: 1.25rem; // We currently don't have a size variable for that
+  margin-top: $size-s;
+  margin-bottom: $size-xl;
+
+  @include tablet-and-bigger {
+    font-size: $size-l;
+    margin-top: $size-m;
+    margin-bottom: $size-xl;
+  }
+}
+
+h3 {
+  font-size: $size-m;
+  margin-top: $size-xs;
+  margin-bottom: $size-xs;
+
+  @include tablet-and-bigger {
+    font-size: $size-m;
+    margin-top: $size-s;
+    margin-bottom: $size-s;
+  }
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: $greyscale-60;
 }

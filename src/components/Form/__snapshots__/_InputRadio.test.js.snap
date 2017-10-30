@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) InputRadio snapshot 1`] = `
+<InputRadio
+  checked={true}
+  label="My label"
+  value="Life is good"
+>
+  <span
+    className={undefined}
+    onClick={[Function]}
+  >
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="radio"
+      value={undefined}
+    />
+    <span
+      className={undefined}
+    >
+      My label
+    </span>
+  </span>
+</InputRadio>
+`;
