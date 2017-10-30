@@ -74,9 +74,9 @@ textarea:focus + .label,
 .wrapper:not(.inline) .select + .label,
 .has-value:not(.select-wrapper) .label {
   font-size: 0.85rem;
-  top: 0;
+  top: -$size-xxxs;
   left: 0;
-  transform: translateY(calc(-100% - 0.25rem));
+  transform: translateY(-100%);
 }
 
 input[type="checkbox"],
@@ -138,7 +138,7 @@ input[type="radio"] {
   outline: none;
 
   .label {
-    top: -$size-xxxs;
+    top: -$size-s;
   }
 
   .labelText {
@@ -344,6 +344,8 @@ input[type="radio"] {
 .wrapper.inline.select-wrapper {
   flex-direction: row-reverse;
   align-items: center;
+  line-height: 1;
+  font-size: 1rem;
 
   .select {
     flex: 0 0 auto;
