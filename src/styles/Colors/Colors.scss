@@ -1,5 +1,5 @@
 @import "~susy/sass/susy";
-@import "main";
+@import "../styles/main";
 
 @mixin palette($colorMap, $name) {
   @each $shade, $color in $colorMap {

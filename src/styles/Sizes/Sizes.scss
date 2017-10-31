@@ -1,4 +1,4 @@
-@import "main";
+@import "../main";
 
 @mixin sizes($sizes) {
   @each $key, $value in $sizes {
