@@ -1,11 +1,12 @@
 /**
  * This file will get exported.
  */
-export Image from "components/Image";
-export Spinner from "components/Spinner";
-export Table from "components/Table";
-export Button from "components/Button";
-export Pagination from "components/Pagination";
+export Image from "./components/Image";
+export Spinner from "./components/Spinner";
+export Table from "./components/Table";
+export Button from "./components/Button";
+export Pagination from "./components/Pagination";
+export Form from "./components/Form"
 
 export const icons = {
   categories: {
