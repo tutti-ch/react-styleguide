@@ -1,6 +1,6 @@
 /* global describe, test, beforeEach, expect, jest */
 import React from "react";
-import Image from "components/Image";
+import Image from "./index";
 import { mount } from "enzyme";
 
 describe("(Component) Image", function() {

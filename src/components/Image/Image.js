@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classes from "./Image.scss";
 import classNames from "classnames";
-import Spinner from "components/Spinner";
+import Spinner from "../Spinner";
 import { filterProps } from "helpers/functions";
 
 // This gets overwritten by the Readme.md for some reason

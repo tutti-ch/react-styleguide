@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import Spinner from "components/Spinner";
+import Spinner from "../Spinner";
 import classes from "./Button.scss";
 import { filterProps } from "helpers/functions";
 
