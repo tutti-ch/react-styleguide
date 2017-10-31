@@ -1,5 +1,4 @@
 const config = require('./webpack.base.config')
-const path = require('path')
 
 config.module.rules.push(
   // Other loaders that are needed for your components
@@ -20,9 +19,6 @@ config.module.rules.push(
     }, {
       // compiles Sass to CSS
       loader: "sass-loader",
-      options: {
-        includePaths: [path.join(__dirname, "../src/styles")]
-      }
     }]
   }
 )

@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import classes from "./Shadows.scss";
-import { BoxItemWrapper, BoxItem } from "internals/Box";
+import { BoxItemWrapper, BoxItem } from "../../internals/Box";
 
 const Shadows = () => {
   return (

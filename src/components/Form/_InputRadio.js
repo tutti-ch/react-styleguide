@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react"
 import PropTypes from "prop-types"
-import { filterProps } from "helpers/functions"
+import { filterProps } from "../../helpers/functions"
 import classes from "./Form.scss"
 import WithWrapper from "./_WithWrapper"
 

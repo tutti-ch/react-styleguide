@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Illustrations.scss";
-import { BoxItemWrapper, BoxItem } from "internals/Box";
+import { BoxItemWrapper, BoxItem } from "../../internals/Box";
 
 export default class Illustrations extends Component {
   static propTypes = {

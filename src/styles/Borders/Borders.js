@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classes from "./Borders.scss";
 import classNames from "classnames";
-import { BoxItemWrapper, BoxItem } from "internals/Box";
+import { BoxItemWrapper, BoxItem } from "../../internals/Box";
 
 export default class Borders extends Component {
   static propTypes = {

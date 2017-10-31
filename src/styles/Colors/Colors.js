@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 import classes from "./Colors.scss";
-import { BoxCardWrapper, BoxCard } from "internals/Box";
+import { BoxCardWrapper, BoxCard } from "../../internals/Box";
 
 const Colors = ({ color, shades }) => {
   return (

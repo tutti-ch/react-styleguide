@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import classNames from "classnames"
-import { filterProps } from "helpers/functions"
-import classes from "./Form.scss"
+import { filterProps } from "../../helpers/functions"
 import WithWrapper from "./_WithWrapper"
 
 export class Textarea extends Component {

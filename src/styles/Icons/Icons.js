@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Icons.scss";
-import { BoxCardWrapper, BoxCard } from "internals/Box";
+import { BoxCardWrapper, BoxCard } from "../../internals/Box";
 
 export default class Icons extends Component {
   static propTypes = {

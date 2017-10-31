@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { filterProps } from "helpers/functions"
+import { filterProps } from "../../helpers/functions"
 import WithWrapper from "./_WithWrapper"
 
 export class Input extends Component {

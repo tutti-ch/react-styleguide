@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import Spinner from "../Spinner";
 import classes from "./Button.scss";
-import { filterProps } from "helpers/functions";
+import { filterProps } from "../../helpers/functions";
 
 export default class Button extends Component {
   static LEVEL_PRIMARY = "primary";

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classes from "./Image.scss";
 import classNames from "classnames";
 import Spinner from "../Spinner";
-import { filterProps } from "helpers/functions";
+import { filterProps } from "../../helpers/functions";
 
 // This gets overwritten by the Readme.md for some reason
 // Apparently, it uses the component name as a global variable.
