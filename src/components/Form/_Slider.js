@@ -78,6 +78,11 @@ export class Slider extends Component {
      * The name of the input. In case of multiple inputs, provide an array with two indexes.
      */
     name: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+
+    /**
+     * Number of decimals in case step is < 0.
+     */
+    decimals: PropTypes.number,
   }
 
   constructor(props) {
@@ -263,12 +268,12 @@ export class Slider extends Component {
   }
 
   render() {
-    const { multiple, label, step } = this.props
+    const { multiple, label, step, decimals = 2 } = this.props
     let { minValue, maxValue } = this.state
     let { prefix, suffix } = this.props
 
     // Formatter function
-    const f = step < 1 ? i => i.toFixed(2) : Math.floor
+    const f = step < 1 ? i => i.toFixed(decimals) : Math.floor
 
     if (Array.isArray(prefix) === false) prefix = [prefix, prefix]
     if (Array.isArray(suffix) === false) suffix = [suffix, suffix]
