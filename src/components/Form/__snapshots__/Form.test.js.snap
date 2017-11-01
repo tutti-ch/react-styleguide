@@ -265,6 +265,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </span>
                           <span
                             className={undefined}
+                            key="minValue"
                             name="minValue"
                             onMouseDown={[Function]}
                             onTouchMove={[Function]}
@@ -276,8 +277,15 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             }
                             tabIndex={1}
                           />
+                          <input
+                            key="hidden-minValue"
+                            name={undefined}
+                            type="hidden"
+                            value={1300}
+                          />
                           <span
                             className={undefined}
+                            key="maxValue"
                             name="maxValue"
                             onMouseDown={[Function]}
                             onTouchMove={[Function]}
@@ -288,6 +296,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               }
                             }
                             tabIndex={1}
+                          />
+                          <input
+                            key="hidden-maxValue"
+                            name={undefined}
+                            type="hidden"
+                            value={10000}
                           />
                         </span>
                       </Slider>
@@ -699,6 +713,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <OutsideClickable
                           onOutsideClick={[Function]}
                         >
+                          <input
+                            name={undefined}
+                            type="hidden"
+                            value=""
+                          />
                           <div
                             className="undefined"
                             onClick={[Function]}
@@ -1044,6 +1063,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <OutsideClickable
                           onOutsideClick={[Function]}
                         >
+                          <input
+                            name={undefined}
+                            type="hidden"
+                            value=""
+                          />
                           <div
                             className="undefined"
                             onClick={[Function]}
@@ -1389,6 +1413,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <OutsideClickable
                           onOutsideClick={[Function]}
                         >
+                          <input
+                            name={undefined}
+                            type="hidden"
+                            value=""
+                          />
                           <div
                             className="undefined"
                             onClick={[Function]}

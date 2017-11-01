@@ -34,6 +34,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
     </span>
     <span
       className={undefined}
+      key="minValue"
       name="minValue"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
@@ -45,8 +46,15 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       }
       tabIndex={1}
     />
+    <input
+      key="hidden-minValue"
+      name={undefined}
+      type="hidden"
+      value={500}
+    />
     <span
       className={undefined}
+      key="maxValue"
       name="maxValue"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
@@ -57,6 +65,12 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
         }
       }
       tabIndex={1}
+    />
+    <input
+      key="hidden-maxValue"
+      name={undefined}
+      type="hidden"
+      value={1500}
     />
   </span>
 </Slider>
@@ -90,6 +104,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
     </span>
     <span
       className={undefined}
+      key="minValue"
       name="minValue"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
@@ -100,6 +115,12 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
         }
       }
       tabIndex={1}
+    />
+    <input
+      key="hidden-minValue"
+      name={undefined}
+      type="hidden"
+      value={500}
     />
   </span>
 </Slider>

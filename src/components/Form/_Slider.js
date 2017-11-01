@@ -73,6 +73,11 @@ export class Slider extends Component {
      * Whether min and max thumbs can cross and change positions.
      */
     crossThumbs: PropTypes.bool,
+
+    /**
+     * The name of the input. In case of multiple inputs, provide an array with two indexes.
+     */
+    name: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
   }
 
   constructor(props) {
@@ -231,7 +236,7 @@ export class Slider extends Component {
    * Function to render the thumbs.
    *
    * @param {string} prop minValue|maxValue
-   * @return {XML}
+   * @return {Array}
    */
   renderThumb(prop) {
     const events = {
@@ -240,12 +245,21 @@ export class Slider extends Component {
       onTouchMove: this.handleMouseMove,
     }
 
+    const { name } = this.props
     const position = this.calculatePosition(this.state[prop])
     const styles = { left: `${position}%` }
 
-    return (
-      <span className={classes.thumb} name={prop} style={styles} {...events} tabIndex={1}/>
-    )
+    return [
+      <span className={classes.thumb}
+            name={prop} style={styles}
+            tabIndex={1}
+            key={prop}
+            {...events} />,
+      <input type="hidden"
+             key={`hidden-${prop}`}
+             value={this.state[prop]}
+             name={Array.isArray(name) ? name[prop === "maxValue" ? 1 : 0] : name}/>,
+    ]
   }
 
   render() {

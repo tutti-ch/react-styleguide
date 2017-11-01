@@ -123,10 +123,22 @@ describe("(Component) Slider", () => {
     expect(event.preventDefault).toHaveBeenCalledTimes(3)
 
     // Here the mouse value should be greater than max, so we won't call the setState fn
-    const stateSpy = jest.spyOn(inst, 'setState')
+    const stateSpy = jest.spyOn(inst, "setState")
     inst.calculateMousePosition = jest.fn().mockReturnValue(150)
     inst.handleMouseMove(event)
     expect(stateSpy).not.toHaveBeenCalled()
+  })
+
+  test("[renderThumb] should choose the correct name for inputs", () => {
+    const comp = mount(<Slider min={500} max={1500} step={250} minRange={100} name={["pe", "ps"]} multiple/>)
+    const inst = comp.instance()
+
+    expect(mount(<div>{inst.renderThumb("maxValue")}</div>).find("input").prop("name")).toBe("ps")
+    expect(mount(<div>{inst.renderThumb("minValue")}</div>).find("input").prop("name")).toBe("pe")
+
+    comp.setProps({ name: "my-name" })
+    expect(mount(<div>{inst.renderThumb("minValue")}</div>).find("input").prop("name")).toBe("my-name")
+    expect(mount(<div>{inst.renderThumb("maxValue")}</div>).find("input").prop("name")).toBe("my-name")
   })
 
   describe("snapshots", () => {

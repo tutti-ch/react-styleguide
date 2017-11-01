@@ -56,6 +56,11 @@ export class Select extends Component {
      * The placeholder value to display when none of the options is selected.
      */
     placeholder: PropTypes.string,
+
+    /**
+     * The input name.
+     */
+    name: PropTypes.string,
   }
 
   static defaultProps = {
@@ -334,7 +339,7 @@ export class Select extends Component {
   }
 
   render() {
-    const { disabled, placeholder, multiple } = this.props
+    const { disabled, placeholder, multiple, name } = this.props
     const { highlighted, isOpen, options, selected: selectedValues } = this.state
 
     const selectClasses = classNames(classes.select, {
@@ -346,6 +351,7 @@ export class Select extends Component {
 
     return (
       <OutsideClickable onOutsideClick={this.close}>
+        <input type="hidden" name={name} value={selectedValues.join(",")} />
         <div className={selectClasses} onClick={this.toggle}>
           <div
             className={classNames(classes.selectInner)}
