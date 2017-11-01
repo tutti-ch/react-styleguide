@@ -6,7 +6,7 @@ export Spinner from "./components/Spinner";
 export Table from "./components/Table";
 export Button from "./components/Button";
 export Pagination from "./components/Pagination";
-export Form from "./components/Form"
+export * as Form from "./components/Form"
 
 export const icons = {
   categories: {

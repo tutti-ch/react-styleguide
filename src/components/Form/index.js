@@ -6,7 +6,7 @@ import Checkbox from "./_InputCheckbox"
 import Select from "./_Select"
 import Slider from "./_Slider"
 
-export default {
+export {
   Input,
   Textarea,
   Radio,

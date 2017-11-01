@@ -1,7 +1,7 @@
 /* global describe, test, expect, jest */
 import React from "react"
 import { mount } from "enzyme"
-import { Input, Checkbox } from "./index"
+import { Input, Checkbox } from "../Form"
 
 describe("HOC (WithWrapper)", () => {
   test("[handleOnChange] should set a hasValue and call the onChange prop", () => {
