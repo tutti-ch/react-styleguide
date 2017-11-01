@@ -30,11 +30,10 @@
 
 @mixin focus {
   transition: $transition-m;
-  box-shadow: none;
 
   &:focus {
     outline: none;
-    @include mediumShadow();
+    border-color: $greyscale-00;
   }
 }
 
