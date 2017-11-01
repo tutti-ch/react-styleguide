@@ -1,7 +1,17 @@
-export Input from "./_Input"
-export Textarea from "./_Textarea"
-export Radio from "./_InputRadio"
-export RadioGroup from "./_InputRadioGroup"
-export Checkbox from "./_InputCheckbox"
-export Select from "./_Select"
-export Slider from "./_Slider"
+import Input from "./_Input"
+import Textarea from "./_Textarea"
+import Radio from "./_InputRadio"
+import RadioGroup from "./_InputRadioGroup"
+import Checkbox from "./_InputCheckbox"
+import Select from "./_Select"
+import Slider from "./_Slider"
+
+export default {
+  Input,
+  Textarea,
+  Radio,
+  RadioGroup,
+  Checkbox,
+  Select,
+  Slider
+}
