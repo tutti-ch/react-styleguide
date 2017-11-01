@@ -7,7 +7,7 @@ import classes from "./Form.scss"
 export class Slider extends Component {
   static defaultProps = {
     template: "",
-    minRange: 100,
+    minRange: 10,
     prefix: "",
     suffix: "",
     crossThumbs: false,
@@ -263,15 +263,18 @@ export class Slider extends Component {
   }
 
   render() {
-    const { multiple, label } = this.props
-    const { minValue, maxValue } = this.state
+    const { multiple, label, step } = this.props
+    let { minValue, maxValue } = this.state
     let { prefix, suffix } = this.props
+
+    // Formatter function
+    const f = step < 1 ? i => i.toFixed(2) : Math.floor
 
     if (Array.isArray(prefix) === false) prefix = [prefix, prefix]
     if (Array.isArray(suffix) === false) suffix = [suffix, suffix]
 
-    const minValueText = prefix[0] + `${Math.floor(Math.min(minValue, maxValue))}` + suffix[0]
-    const maxValueText = prefix[1] + `${Math.floor(Math.max(minValue, maxValue))}` + suffix[1]
+    const minValueText = prefix[0] + `${f(Math.min(minValue, maxValue))}` + suffix[0]
+    const maxValueText = prefix[1] + `${f(Math.max(minValue, maxValue))}` + suffix[1]
 
     return (
       <span className={classes.slider}>
