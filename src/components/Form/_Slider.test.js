@@ -95,7 +95,7 @@ describe("(Component) Slider", () => {
     comp.setState({ dragging: elem, minValue: 550, maxValue: 750 })
 
     inst.handleMouseMove(event)
-    expect(comp.state("minValue")).toBe(600)
+    expect(comp.state("minValue")).toBe(500)
 
     // Should not let continue when minValue > maxValue - range
     comp.setState({ minValue: 550, maxValue: 650 })
@@ -149,6 +149,11 @@ describe("(Component) Slider", () => {
 
     test("should create the right snapshot for multiple thumbs", () => {
       const comp = mount(<Slider min={500} max={1500} step={250} minRange={100} multiple/>)
+      expect(comp).toMatchSnapshot()
+    })
+
+    test("should create the right snapshot for decimals and steps specified", () => {
+      const comp = mount(<Slider min={1} max={10} step={0.5} minRange={1} decimals={2} multiple/>)
       expect(comp).toMatchSnapshot()
     })
   })

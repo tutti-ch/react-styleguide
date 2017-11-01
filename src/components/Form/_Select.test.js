@@ -199,6 +199,21 @@ describe("(Component) Select", () => {
     expect(comp).toMatchSnapshot()
   })
 
+  test("[unselect] should unselect the given value", () => {
+    const options = getOptions()
+    const comp = mount(<Select options={options} selected={["React.js", "jQuery"]} multiple/>)
+    const inst = comp.instance()
+    const event = {
+      stopPropagation: jest.fn(),
+      preventDefault: jest.fn(),
+    }
+
+    inst.unselect({ value: "React.js" }, event)
+    expect(comp.state("selected")).toEqual(["jQuery"])
+    inst.unselect({ value: "Ember" }, event)
+    expect(comp.state("selected")).toEqual(["jQuery"])
+  })
+
   test("[snapshot] should match", () => {
     const options = getOptions()
     const comp = mount(<Select options={options} selected={["jQuery"]}/>)

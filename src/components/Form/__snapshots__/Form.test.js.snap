@@ -215,7 +215,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         "To ",
                       ]
                     }
-                    step={100}
+                    step={250}
                     suffix=".-"
                   >
                     <div
@@ -237,7 +237,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             "To ",
                           ]
                         }
-                        step={100}
+                        step={250}
                         suffix=".-"
                         template=""
                       >

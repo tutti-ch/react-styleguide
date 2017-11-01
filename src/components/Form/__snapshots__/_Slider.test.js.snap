@@ -1,5 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 1`] = `
+<Slider
+  crossThumbs={false}
+  decimals={2}
+  max={10}
+  min={1}
+  minRange={1}
+  multiple={true}
+  prefix=""
+  step={0.5}
+  suffix=""
+  template=""
+>
+  <span
+    className={undefined}
+  >
+    <span
+      className={undefined}
+    >
+      <span
+        className={undefined}
+      />
+      <span
+        className={undefined}
+      >
+        1.00
+      </span>
+      <span
+        className={undefined}
+      >
+        10.00
+      </span>
+    </span>
+    <span
+      className={undefined}
+      key="minValue"
+      name="minValue"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+      tabIndex={1}
+    />
+    <input
+      key="hidden-minValue"
+      name={undefined}
+      type="hidden"
+      value={1}
+    />
+    <span
+      className={undefined}
+      key="maxValue"
+      name="maxValue"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+      tabIndex={1}
+    />
+    <input
+      key="hidden-maxValue"
+      name={undefined}
+      type="hidden"
+      value={10}
+    />
+  </span>
+</Slider>
+`;
+
 exports[`(Component) Slider snapshots should create the right snapshot for multiple thumbs 1`] = `
 <Slider
   crossThumbs={false}

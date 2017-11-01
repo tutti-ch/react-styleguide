@@ -41,7 +41,7 @@ export default () => (
                   minRange={500}
                   prefix={["From ", "To "]}
                   suffix=".-"
-                  step={100}
+                  step={250}
                   multiple/>
         </Table.Cell>
       </Table.Row>

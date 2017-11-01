@@ -149,12 +149,12 @@ export class Slider extends Component {
    * a value of 170 will be rounded to 200 (as long as they are within min and
    * max limits).
    *
-   * @param {string} prop minValue|maxValue
+   * @param {string|number} propOrValue minValue|maxValue or the value
    * @return {number}
    */
-  calculateClosestValue(prop) {
+  calculateClosestValue(propOrValue) {
     const { min, max, step } = this.props
-    const value = this.state[prop]
+    const value = this.state[propOrValue] || propOrValue
     const mod = value % step
 
     // The math functions make sure that the values are always between min and max
@@ -233,7 +233,7 @@ export class Slider extends Component {
     }
 
     if (mouseValue >= min && mouseValue <= max) {
-      this.setState({ [prop]: mouseValue })
+      this.setState({ [prop]: this.calculateClosestValue(mouseValue) })
     }
   }
 
