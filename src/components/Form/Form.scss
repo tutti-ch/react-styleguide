@@ -207,7 +207,10 @@ input[type="radio"] {
   // Styles for when the placeholder is active
   &.placeholder {
     position: relative;
-    color: $greyscale-60;
+
+    .ph {
+      color: $greyscale-60;
+    }
   }
 
   .ph {

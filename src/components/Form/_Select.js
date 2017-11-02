@@ -351,7 +351,6 @@ export class Select extends Component {
 
     return (
       <OutsideClickable onOutsideClick={this.close}>
-        <input type="hidden" name={name} value={selectedValues.join(",")} />
         <div className={selectClasses} onClick={this.toggle}>
           <div
             className={classNames(classes.selectInner)}
@@ -395,6 +394,8 @@ export class Select extends Component {
                 )
               })}
             </div>
+
+            <input type="hidden" name={name} value={selectedValues.join(",")} />
           </div>
         </div>
       </OutsideClickable>

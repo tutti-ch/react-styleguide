@@ -50,11 +50,6 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
   <OutsideClickable
     onOutsideClick={[Function]}
   >
-    <input
-      name={undefined}
-      type="hidden"
-      value=""
-    />
     <div
       className="undefined"
       onClick={[Function]}
@@ -292,6 +287,11 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             </div>
           </Option>
         </div>
+        <input
+          name={undefined}
+          type="hidden"
+          value=""
+        />
       </div>
     </div>
   </OutsideClickable>
@@ -351,11 +351,6 @@ exports[`(Component) Select [snapshot] should match 1`] = `
   <OutsideClickable
     onOutsideClick={[Function]}
   >
-    <input
-      name={undefined}
-      type="hidden"
-      value="jQuery"
-    />
     <div
       className=""
       onClick={[Function]}
@@ -593,6 +588,11 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             </div>
           </Option>
         </div>
+        <input
+          name={undefined}
+          type="hidden"
+          value="jQuery"
+        />
       </div>
     </div>
   </OutsideClickable>

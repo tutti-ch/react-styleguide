@@ -713,11 +713,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <OutsideClickable
                           onOutsideClick={[Function]}
                         >
-                          <input
-                            name={undefined}
-                            type="hidden"
-                            value=""
-                          />
                           <div
                             className="undefined"
                             onClick={[Function]}
@@ -955,6 +950,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   </div>
                                 </Option>
                               </div>
+                              <input
+                                name={undefined}
+                                type="hidden"
+                                value=""
+                              />
                             </div>
                           </div>
                         </OutsideClickable>
@@ -1063,11 +1063,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <OutsideClickable
                           onOutsideClick={[Function]}
                         >
-                          <input
-                            name={undefined}
-                            type="hidden"
-                            value=""
-                          />
                           <div
                             className="undefined"
                             onClick={[Function]}
@@ -1305,6 +1300,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   </div>
                                 </Option>
                               </div>
+                              <input
+                                name={undefined}
+                                type="hidden"
+                                value=""
+                              />
                             </div>
                           </div>
                         </OutsideClickable>
@@ -1413,11 +1413,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <OutsideClickable
                           onOutsideClick={[Function]}
                         >
-                          <input
-                            name={undefined}
-                            type="hidden"
-                            value=""
-                          />
                           <div
                             className="undefined"
                             onClick={[Function]}
@@ -1655,6 +1650,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   </div>
                                 </Option>
                               </div>
+                              <input
+                                name={undefined}
+                                type="hidden"
+                                value=""
+                              />
                             </div>
                           </div>
                         </OutsideClickable>
