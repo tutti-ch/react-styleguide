@@ -61,8 +61,8 @@ export class InputRadio extends PureComponent {
   toggle() {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
-        const { name, checked } = this.props
-        this.props.onChange(this.state.checked, { name, initialValue: checked })
+        const { name, checked, value } = this.props
+        this.props.onChange(this.state.checked ? value : undefined, { name, initialValue: checked })
       }
     })
   }
