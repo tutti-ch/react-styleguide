@@ -6,7 +6,7 @@ import WithWrapper from "./_WithWrapper"
 
 export class InputCheckbox extends Component {
   static defaultProps = {
-    checked: false
+    checked: false,
   }
 
   static propTypes = {
@@ -24,6 +24,11 @@ export class InputCheckbox extends Component {
      * The label for the input.
      */
     label: PropTypes.string,
+
+    /**
+     * The input name.
+     */
+    name: PropTypes.string,
   }
 
   constructor(props) {
@@ -51,14 +56,15 @@ export class InputCheckbox extends Component {
   toggle() {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(this.state.checked)
+        const { name, checked } = this.props
+        this.props.onChange(this.state.checked, { name, initialValue: checked })
       }
     })
   }
 
   render() {
     const { value, checked } = this.state
-    const { label } = this.props
+    const { label, name } = this.props
     const props = filterProps(InputCheckbox.propTypes, this.props)
 
     return (
@@ -67,6 +73,7 @@ export class InputCheckbox extends Component {
       <span onClick={this.toggle} className={classes.cbLabel}>
         <input
           {...props}
+          name={name}
           type="checkbox"
           value={value}
           checked={checked}

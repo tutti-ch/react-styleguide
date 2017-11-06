@@ -240,7 +240,7 @@ export class Select extends Component {
    * @param {*} event
    */
   select({ value }, event) {
-    const { multiple } = this.props
+    const { multiple, name } = this.props
 
     let selected = [value]
 
@@ -257,7 +257,7 @@ export class Select extends Component {
 
     this.setState({ selected, highlighted: this.findIndexByValue(value) }, () => {
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(`${value}`)
+        this.props.onChange(`${value}`, { name, initialValue: this.props.selected })
       }
     })
   }
@@ -395,7 +395,7 @@ export class Select extends Component {
               })}
             </div>
 
-            <input type="hidden" name={name} value={selectedValues.join(",")} />
+            <input type="hidden" name={name} value={selectedValues.join(",")}/>
           </div>
         </div>
       </OutsideClickable>

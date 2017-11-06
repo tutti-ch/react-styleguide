@@ -21,9 +21,19 @@ export class InputRadio extends PureComponent {
     value: PropTypes.any,
 
     /**
+     * The input name.
+     */
+    name: PropTypes.string,
+
+    /**
      * The label for the input.
      */
     label: PropTypes.string,
+
+    /**
+     * The on change callback handler.
+     */
+    onChange: PropTypes.func,
   }
 
   constructor(props) {
@@ -51,14 +61,15 @@ export class InputRadio extends PureComponent {
   toggle() {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(this.state.checked)
+        const { name, checked } = this.props
+        this.props.onChange(this.state.checked, { name, initialValue: checked })
       }
     })
   }
 
   render() {
     const { value, checked } = this.state
-    const { label } = this.props
+    const { label, name } = this.props
     const props = filterProps(InputRadio.propTypes, this.props)
 
     return (
@@ -67,6 +78,7 @@ export class InputRadio extends PureComponent {
       <span onClick={this.toggle} className={classes.cbLabel}>
         <input
           {...props}
+          name={name}
           type="radio"
           value={value}
           checked={checked}

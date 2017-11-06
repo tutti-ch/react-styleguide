@@ -141,6 +141,16 @@ describe("(Component) Slider", () => {
     expect(mount(<div>{inst.renderThumb("maxValue")}</div>).find("input").prop("name")).toBe("my-name")
   })
 
+  test("[handleOnChange] should inform the parent when there is a change on the input", () => {
+    const onChange = jest.fn()
+    const comp = mount(<Slider min={500} max={1500} step={250} minValue={1000} name={["pe", "ps"]} onChange={onChange}
+                               multiple/>)
+    const inst = comp.instance()
+
+    inst.handleOnChange("pe", 1000)({ target: { value: 750 } })
+    expect(onChange).toHaveBeenCalledWith(750, { name: "pe", initialValue: 1000 })
+  })
+
   describe("snapshots", () => {
     test("should create the right snapshot for single thumb", () => {
       const comp = mount(<Slider min={500} max={1500} step={250} minRange={100}/>)

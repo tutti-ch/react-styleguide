@@ -12,6 +12,7 @@ exports[`(Component) InputRadio snapshot 1`] = `
   >
     <input
       checked={true}
+      name={undefined}
       onChange={[Function]}
       type="radio"
       value={undefined}

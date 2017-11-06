@@ -50,6 +50,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
     <input
       key="hidden-minValue"
       name={undefined}
+      onChange={[Function]}
       type="hidden"
       value={1}
     />
@@ -70,6 +71,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
     <input
       key="hidden-maxValue"
       name={undefined}
+      onChange={[Function]}
       type="hidden"
       value={10}
     />
@@ -126,6 +128,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
     <input
       key="hidden-minValue"
       name={undefined}
+      onChange={[Function]}
       type="hidden"
       value={500}
     />
@@ -146,6 +149,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
     <input
       key="hidden-maxValue"
       name={undefined}
+      onChange={[Function]}
       type="hidden"
       value={1500}
     />
@@ -196,6 +200,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
     <input
       key="hidden-minValue"
       name={undefined}
+      onChange={[Function]}
       type="hidden"
       value={500}
     />

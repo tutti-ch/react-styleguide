@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 export default class InputGroup extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
+
+    onChange: PropTypes.func, // The on change callback handler
   }
 
   constructor(props) {
@@ -26,15 +28,23 @@ export default class InputGroup extends PureComponent {
    * @param index
    * @return {function()}
    */
-  handleOnChange (index) {
-    return () => this.setState({ selected: index })
+  handleOnChange(index) {
+    return (value, props) => {
+      const { onChange } = this.props
+
+      if (typeof onChange === "function") {
+        onChange(value, props)
+      }
+
+      this.setState({ selected: index })
+    }
   }
 
   render() {
     return Children.map(this.props.children, (child, index) => (
       cloneElement(child, {
         checked: this.state.selected === index,
-        onChange: this.handleOnChange(index)
+        onChange: this.handleOnChange(index),
       })
     ))
   }

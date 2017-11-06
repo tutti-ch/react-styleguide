@@ -31,14 +31,14 @@ export default (WrappedComponent, mergeProps = {}) => {
       /**
        * The children to render.
        */
-      children: PropTypes.node
+      children: PropTypes.node,
     }
 
-    constructor (props) {
+    constructor(props) {
       super(props)
 
       this.state = {
-        hasValue: !!this.props.value
+        hasValue: !!this.props.value,
       }
 
       this.handleOnChange = this.handleOnChange.bind(this)
@@ -46,12 +46,15 @@ export default (WrappedComponent, mergeProps = {}) => {
 
     /**
      * Update the state to track if the input has value or not.
+     *
+     * @param {string} value The changed value
+     * @param {*} opts The additional props that we want to pass to the parent (such as the input name)
      */
-    handleOnChange (value) {
+    handleOnChange(value, opts) {
       this.setState({ hasValue: !!value })
 
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(value)
+        this.props.onChange(value, opts)
       }
     }
 
@@ -73,7 +76,7 @@ export default (WrappedComponent, mergeProps = {}) => {
 
       const wrapperClasses = classNames(classes.wrapper, {
         [classes.inline]: inline,
-        [classes.hasValue]: hasValue
+        [classes.hasValue]: hasValue,
       }, mergeProps.className)
 
       return (

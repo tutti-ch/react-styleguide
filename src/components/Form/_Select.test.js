@@ -155,7 +155,7 @@ describe("(Component) Select", () => {
   test("[select] should select the given value and set the highlighted item - multiple", () => {
     const options = getOptions()
     const onChange = jest.fn()
-    const comp = mount(<Select options={options} onChange={onChange} selected={["Ember"]} multiple/>)
+    const comp = mount(<Select options={options} onChange={onChange} selected={["Ember"]} name="favs" multiple/>)
     const inst = comp.instance()
     const event = { stopPropagation: jest.fn() }
 
@@ -170,7 +170,7 @@ describe("(Component) Select", () => {
     inst.select({ value: "jQuery" }, event)
     expect(comp.state("selected")).toEqual(["Ember"])
     expect(comp.state("highlighted")).toBe(3)
-    expect(onChange).toHaveBeenCalledWith("jQuery")
+    expect(onChange).toHaveBeenCalledWith("jQuery", { name: "favs", initialValue: ["Ember"] })
   })
 
   test("[handleOnFocus/handleOnBlur] should add/remove the listener", () => {

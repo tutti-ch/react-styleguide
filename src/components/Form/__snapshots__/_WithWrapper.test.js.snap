@@ -19,6 +19,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
       >
         <input
           checked={true}
+          name={undefined}
           onChange={[Function]}
           type="checkbox"
           value={undefined}
@@ -51,6 +52,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
       value="hello-world"
     >
       <input
+        name={undefined}
         onChange={[Function]}
         type="text"
         value="hello-world"
@@ -83,6 +85,7 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
       >
         <input
           checked={true}
+          name={undefined}
           onChange={[Function]}
           type="checkbox"
           value={undefined}

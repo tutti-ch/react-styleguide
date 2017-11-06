@@ -13,6 +13,11 @@ export class Textarea extends Component {
      * The initial value.
      */
     value: PropTypes.string,
+
+    /**
+     * The input name.
+     */
+    name: PropTypes.string,
   }
 
   constructor(props) {
@@ -40,16 +45,18 @@ export class Textarea extends Component {
   handleChange(event) {
     this.setState({ value: event.target.value }, () => {
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(this.state.value)
+        const { name, value } = this.props
+        this.props.onChange(this.state.value, { name, initialValue: value })
       }
     })
   }
 
   render() {
     const { value } = this.state
+    const { name } = this.props
     const props = filterProps(Textarea.propTypes, this.props)
 
-    return <textarea {...props} value={value} onChange={this.handleChange}/>
+    return <textarea {...props} name={name} value={value} onChange={this.handleChange}/>
   }
 }
 

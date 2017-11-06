@@ -6,7 +6,7 @@ import WithWrapper from "./_WithWrapper"
 export class Input extends Component {
   static defaultProps = {
     value: "",
-    type: "text"
+    type: "text",
   }
 
   static propTypes = {
@@ -19,6 +19,11 @@ export class Input extends Component {
      * The input type.
      */
     type: PropTypes.string,
+
+    /**
+     * The input name.
+     */
+    name: PropTypes.string,
   }
 
   constructor(props) {
@@ -46,18 +51,20 @@ export class Input extends Component {
   handleChange(event) {
     this.setState({ value: event.target.value }, () => {
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(this.state.value)
+        const { name, value } = this.props
+        this.props.onChange(this.state.value, { name, initialValue: value })
       }
     })
   }
 
   render() {
     const { value } = this.state
-    const { type } = this.props
+    const { type, name } = this.props
     const props = filterProps(Input.propTypes, this.props)
 
     return <input
       {...props}
+      name={name}
       type={type}
       value={value}
       onChange={this.handleChange}

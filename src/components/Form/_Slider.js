@@ -91,6 +91,7 @@ export class Slider extends Component {
     this.handleMouseDown = this.handleMouseDown.bind(this)
     this.handleMouseUp = this.handleMouseUp.bind(this)
     this.handleMouseMove = this.handleMouseMove.bind(this)
+    this.handleOnChange = this.handleOnChange.bind(this)
     this.calculatePosition = this.calculatePosition.bind(this)
     this.calculateMousePosition = this.calculateMousePosition.bind(this)
     this.calculateClosestValue = this.calculateClosestValue.bind(this)
@@ -238,6 +239,20 @@ export class Slider extends Component {
   }
 
   /**
+   * Handle on change callback.
+   *
+   * @param {string} name The input name.
+   * @param {*} initialValue
+   */
+  handleOnChange(name, initialValue) {
+    return event => {
+      if (typeof this.props.onChange === "function") {
+        this.props.onChange(event.target.value, { name, initialValue })
+      }
+    }
+  }
+
+  /**
    * Function to render the thumbs.
    *
    * @param {string} prop minValue|maxValue
@@ -253,6 +268,7 @@ export class Slider extends Component {
     const { name } = this.props
     const position = this.calculatePosition(this.state[prop])
     const styles = { left: `${position}%` }
+    const inputName = Array.isArray(name) ? name[prop === "maxValue" ? 1 : 0] : name
 
     return [
       <span className={classes.thumb}
@@ -263,7 +279,8 @@ export class Slider extends Component {
       <input type="hidden"
              key={`hidden-${prop}`}
              value={this.state[prop]}
-             name={Array.isArray(name) ? name[prop === "maxValue" ? 1 : 0] : name}/>,
+             onChange={this.handleOnChange(inputName, this.state[prop])}
+             name={inputName}/>,
     ]
   }
 

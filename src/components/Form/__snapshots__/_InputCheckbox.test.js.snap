@@ -12,6 +12,7 @@ exports[`(Component) InputCheckbox snapshot 1`] = `
   >
     <input
       checked={true}
+      name={undefined}
       onChange={[Function]}
       type="checkbox"
       value={undefined}
