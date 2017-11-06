@@ -87,7 +87,8 @@ describe("(Component) Slider", () => {
   })
 
   test("[handleMouseMove] should move the element to the mouse position", () => {
-    const comp = mount(<Slider min={500} max={1500} step={250} minRange={100}/>)
+    const onChange = jest.fn()
+    const comp = mount(<Slider min={500} max={1500} step={250} minRange={100} onChange={onChange} name={["ps", "pe"]}/>)
     const inst = comp.instance()
     const elem = { getAttribute: jest.fn().mockReturnValue("minValue") }
     const event = { preventDefault: jest.fn(), clientX: 570 }
@@ -102,6 +103,7 @@ describe("(Component) Slider", () => {
     inst.calculateMousePosition = jest.fn().mockReturnValue(75)
     inst.handleMouseMove(event)
     expect(comp.state("minValue")).toBe(550) // Should remain the same
+    expect(onChange).toHaveBeenCalledWith(500, { name: "ps", initialValue: undefined })
 
     elem.getAttribute = jest.fn().mockReturnValue("maxValue")
     inst.handleMouseMove(event)
@@ -133,22 +135,12 @@ describe("(Component) Slider", () => {
     const comp = mount(<Slider min={500} max={1500} step={250} minRange={100} name={["pe", "ps"]} multiple/>)
     const inst = comp.instance()
 
-    expect(mount(<div>{inst.renderThumb("maxValue")}</div>).find("input").prop("name")).toBe("ps")
-    expect(mount(<div>{inst.renderThumb("minValue")}</div>).find("input").prop("name")).toBe("pe")
+    expect(mount(<div>{inst.renderThumb("maxValue", "ps")}</div>).find("input").prop("name")).toBe("ps")
+    expect(mount(<div>{inst.renderThumb("minValue", "pe")}</div>).find("input").prop("name")).toBe("pe")
 
     comp.setProps({ name: "my-name" })
-    expect(mount(<div>{inst.renderThumb("minValue")}</div>).find("input").prop("name")).toBe("my-name")
-    expect(mount(<div>{inst.renderThumb("maxValue")}</div>).find("input").prop("name")).toBe("my-name")
-  })
-
-  test("[handleOnChange] should inform the parent when there is a change on the input", () => {
-    const onChange = jest.fn()
-    const comp = mount(<Slider min={500} max={1500} step={250} minValue={1000} name={["pe", "ps"]} onChange={onChange}
-                               multiple/>)
-    const inst = comp.instance()
-
-    inst.handleOnChange("pe", 1000)({ target: { value: 750 } })
-    expect(onChange).toHaveBeenCalledWith(750, { name: "pe", initialValue: 1000 })
+    expect(mount(<div>{inst.renderThumb("minValue", "my-name")}</div>).find("input").prop("name")).toBe("my-name")
+    expect(mount(<div>{inst.renderThumb("maxValue", "my-name")}</div>).find("input").prop("name")).toBe("my-name")
   })
 
   describe("snapshots", () => {

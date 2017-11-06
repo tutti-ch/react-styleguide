@@ -286,7 +286,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           <input
                             key="hidden-minValue"
                             name={undefined}
-                            onChange={[Function]}
                             type="hidden"
                             value={1300}
                           />
@@ -307,7 +306,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           <input
                             key="hidden-maxValue"
                             name={undefined}
-                            onChange={[Function]}
                             type="hidden"
                             value={10000}
                           />

@@ -91,13 +91,14 @@ export class Slider extends Component {
     this.handleMouseDown = this.handleMouseDown.bind(this)
     this.handleMouseUp = this.handleMouseUp.bind(this)
     this.handleMouseMove = this.handleMouseMove.bind(this)
-    this.handleOnChange = this.handleOnChange.bind(this)
     this.calculatePosition = this.calculatePosition.bind(this)
     this.calculateMousePosition = this.calculateMousePosition.bind(this)
     this.calculateClosestValue = this.calculateClosestValue.bind(this)
     this.renderThumb = this.renderThumb.bind(this)
 
     this.state = {
+      minInputName: Array.isArray(props.name) ? props.name[0] : props.name,
+      maxInputName: Array.isArray(props.name) ? props.name[1] : props.name,
       minValue: props.minValue || props.min,
       maxValue: props.maxValue || props.max,
       dragging: false // The element we are currently dragging.
@@ -219,14 +220,16 @@ export class Slider extends Component {
     if (e.clientX) e.preventDefault()
 
     const prop = elem.getAttribute("name")
+    const isMin = prop === "minValue"
+    const isMax = !isMin
     const mousePos = this.calculateMousePosition(e)
     const mouseValue = min + ((max - min) * mousePos / 100) // The value at the mouse position
 
     // If cross thumbs is not allowed, make
     // sure that min never passes max thumb.
     if (crossThumbs !== true) {
-      const minValue = prop === "minValue" ? mouseValue : this.state.minValue
-      const maxValue = prop === "maxValue" ? mouseValue : this.state.maxValue
+      const minValue = isMin ? mouseValue : this.state.minValue
+      const maxValue = isMax ? mouseValue : this.state.maxValue
 
       if (minValue + minRange > maxValue) {
         return
@@ -234,21 +237,15 @@ export class Slider extends Component {
     }
 
     if (mouseValue >= min && mouseValue <= max) {
-      this.setState({ [prop]: this.calculateClosestValue(mouseValue) })
-    }
-  }
-
-  /**
-   * Handle on change callback.
-   *
-   * @param {string} name The input name.
-   * @param {*} initialValue
-   */
-  handleOnChange(name, initialValue) {
-    return event => {
-      if (typeof this.props.onChange === "function") {
-        this.props.onChange(event.target.value, { name, initialValue })
-      }
+      this.setState({ [prop]: this.calculateClosestValue(mouseValue) }, () => {
+        if (typeof this.props.onChange === "function") {
+          const { minInputName, maxInputName } = this.state
+          this.props.onChange(this.state[prop], {
+            name: isMin ? minInputName : maxInputName,
+            initialValue: this.props[prop],
+          })
+        }
+      })
     }
   }
 
@@ -256,19 +253,18 @@ export class Slider extends Component {
    * Function to render the thumbs.
    *
    * @param {string} prop minValue|maxValue
+   * @param {string} inputName The name of the hidden input.
    * @return {Array}
    */
-  renderThumb(prop) {
+  renderThumb(prop, inputName) {
     const events = {
       onMouseDown: this.handleMouseDown,
       onTouchStart: this.handleMouseDown,
       onTouchMove: this.handleMouseMove,
     }
 
-    const { name } = this.props
     const position = this.calculatePosition(this.state[prop])
     const styles = { left: `${position}%` }
-    const inputName = Array.isArray(name) ? name[prop === "maxValue" ? 1 : 0] : name
 
     return [
       <span className={classes.thumb}
@@ -279,14 +275,13 @@ export class Slider extends Component {
       <input type="hidden"
              key={`hidden-${prop}`}
              value={this.state[prop]}
-             onChange={this.handleOnChange(inputName, this.state[prop])}
              name={inputName}/>,
     ]
   }
 
   render() {
     const { multiple, label, step, decimals = 2 } = this.props
-    let { minValue, maxValue } = this.state
+    let { minValue, maxValue, minInputName, maxInputName } = this.state
     let { prefix, suffix } = this.props
 
     // Formatter function
@@ -305,8 +300,8 @@ export class Slider extends Component {
           <span className={classes.rangeMin}>{minValueText}</span>
           { multiple && <span className={classes.rangeMax}>{maxValueText}</span> }
         </span>
-        { this.renderThumb("minValue") }
-        { multiple && this.renderThumb("maxValue")}
+        { this.renderThumb("minValue", minInputName) }
+        { multiple && this.renderThumb("maxValue", maxInputName)}
       </span>
     )
   }
