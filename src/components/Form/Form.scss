@@ -123,6 +123,11 @@ input[type="radio"] {
   transition: $transition-s;
 }
 
+.slider .label,
+.has-value .slider .label {
+  top: -$size-s;
+}
+
 /**
  * STYLES FOR THE SLIDER
  */
@@ -136,11 +141,7 @@ input[type="radio"] {
   border: 0 solid #010101;
   outline: none;
 
-  .label {
-    top: -$size-s;
-  }
-
-  .labelText {
+  .label-text {
     display: inline-block;
     margin-right: $size-xs;
 
@@ -149,12 +150,12 @@ input[type="radio"] {
     }
   }
 
-  .rangeMin {
+  .range-min {
     display: inline-block;
     min-width: 5.5rem;
   }
 
-  .rangeMax {
+  .range-max {
     margin-left: $size-xs;
   }
 

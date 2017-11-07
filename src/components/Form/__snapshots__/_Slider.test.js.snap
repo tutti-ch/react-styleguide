@@ -6,12 +6,14 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   decimals={2}
   max={10}
   min={1}
+  minDistance={10}
   minRange={1}
   multiple={true}
   prefix=""
   step={0.5}
   suffix=""
   template=""
+  values={Array []}
 >
   <span
     className={undefined}
@@ -24,19 +26,21 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       />
       <span
         className={undefined}
+        key="minval"
       >
         1.00
       </span>
       <span
         className={undefined}
+        key="maxval"
       >
         10.00
       </span>
     </span>
     <span
       className={undefined}
-      key="minValue"
-      name="minValue"
+      key="min"
+      name="min"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
@@ -48,15 +52,22 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       tabIndex={1}
     />
     <input
-      key="hidden-minValue"
+      key="hidden-min"
       name={undefined}
       type="hidden"
-      value={1}
+      value={
+        Object {
+          "input": undefined,
+          "position": 0,
+          "range": 1,
+          "value": 1,
+        }
+      }
     />
     <span
       className={undefined}
-      key="maxValue"
-      name="maxValue"
+      key="max"
+      name="max"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
@@ -68,10 +79,118 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       tabIndex={1}
     />
     <input
-      key="hidden-maxValue"
+      key="hidden-max"
       name={undefined}
       type="hidden"
-      value={10}
+      value={
+        Object {
+          "input": undefined,
+          "position": 100,
+          "range": 10,
+          "value": 10,
+        }
+      }
+    />
+  </span>
+</Slider>
+`;
+
+exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 2`] = `
+<Slider
+  crossThumbs={false}
+  decimals={2}
+  max={10}
+  min={1}
+  minDistance={10}
+  minRange={1}
+  multiple={true}
+  name={
+    Array [
+      "pe",
+      "ps",
+    ]
+  }
+  prefix=""
+  step={0.5}
+  suffix=""
+  template=""
+  values={Array []}
+>
+  <span
+    className={undefined}
+  >
+    <span
+      className={undefined}
+    >
+      <span
+        className={undefined}
+      />
+      <span
+        className={undefined}
+        key="minval"
+      >
+        1.00
+      </span>
+      <span
+        className={undefined}
+        key="maxval"
+      >
+        10.00
+      </span>
+    </span>
+    <span
+      className={undefined}
+      key="min"
+      name="min"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+      tabIndex={1}
+    />
+    <input
+      key="hidden-min"
+      name="pe"
+      type="hidden"
+      value={
+        Object {
+          "input": "pe",
+          "position": 0,
+          "range": 1,
+          "value": 1,
+        }
+      }
+    />
+    <span
+      className={undefined}
+      key="max"
+      name="max"
+      onMouseDown={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+      tabIndex={1}
+    />
+    <input
+      key="hidden-max"
+      name="ps"
+      type="hidden"
+      value={
+        Object {
+          "input": "ps",
+          "position": 100,
+          "range": 10,
+          "value": 10,
+        }
+      }
     />
   </span>
 </Slider>
@@ -82,12 +201,14 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
   crossThumbs={false}
   max={1500}
   min={500}
+  minDistance={10}
   minRange={100}
   multiple={true}
   prefix=""
   step={250}
   suffix=""
   template=""
+  values={Array []}
 >
   <span
     className={undefined}
@@ -100,19 +221,21 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       />
       <span
         className={undefined}
+        key="minval"
       >
         500
       </span>
       <span
         className={undefined}
+        key="maxval"
       >
         1500
       </span>
     </span>
     <span
       className={undefined}
-      key="minValue"
-      name="minValue"
+      key="min"
+      name="min"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
@@ -124,15 +247,22 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       tabIndex={1}
     />
     <input
-      key="hidden-minValue"
+      key="hidden-min"
       name={undefined}
       type="hidden"
-      value={500}
+      value={
+        Object {
+          "input": undefined,
+          "position": 0,
+          "range": 500,
+          "value": 500,
+        }
+      }
     />
     <span
       className={undefined}
-      key="maxValue"
-      name="maxValue"
+      key="max"
+      name="max"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
@@ -144,10 +274,17 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       tabIndex={1}
     />
     <input
-      key="hidden-maxValue"
+      key="hidden-max"
       name={undefined}
       type="hidden"
-      value={1500}
+      value={
+        Object {
+          "input": undefined,
+          "position": 100,
+          "range": 1500,
+          "value": 1500,
+        }
+      }
     />
   </span>
 </Slider>
@@ -158,11 +295,13 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
   crossThumbs={false}
   max={1500}
   min={500}
+  minDistance={10}
   minRange={100}
   prefix=""
   step={250}
   suffix=""
   template=""
+  values={Array []}
 >
   <span
     className={undefined}
@@ -175,14 +314,15 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
       />
       <span
         className={undefined}
+        key="minval"
       >
         500
       </span>
     </span>
     <span
       className={undefined}
-      key="minValue"
-      name="minValue"
+      key="min"
+      name="min"
       onMouseDown={[Function]}
       onTouchMove={[Function]}
       onTouchStart={[Function]}
@@ -194,10 +334,17 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
       tabIndex={1}
     />
     <input
-      key="hidden-minValue"
+      key="hidden-min"
       name={undefined}
       type="hidden"
-      value={500}
+      value={
+        Object {
+          "input": undefined,
+          "position": 0,
+          "range": 500,
+          "value": 500,
+        }
+      }
     />
   </span>
 </Slider>

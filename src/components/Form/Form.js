@@ -33,16 +33,44 @@ export default () => (
           <h3>Slider</h3>
         </Table.Cell>
         <Table.Cell colSpan={4}>
-          <Slider label="Slider"
-                  min={1000}
-                  max={10000}
-                  minValue={1300}
-                  maxValue={10000}
-                  minRange={500}
-                  prefix={["From ", "To "]}
-                  suffix=".-"
-                  step={250}
-                  multiple/>
+          <div style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+            <Slider label="Slider with step 750"
+                    min={1000}
+                    max={10000}
+                    values={[1300, 5780]}
+                    minDistance={2000}
+                    prefix={["From ", "To "]}
+                    suffix=".-"
+                    step={750}
+                    multiple/>
+          </div>
+          <div style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+            <Slider label="Slider single"
+                    range={[
+                      { value: "1", label: "OMG! SAVAS <3" },
+                      { value: "2", label: "Wow! Savas is great" },
+                      { value: "3", label: "It is great, Thanks Savas " },
+                      { value: "4", label: "I like it very much, Savas is fantastic" },
+                      { value: "5", label: "I love it, Savas is awesome." },
+                    ]}
+                    values={["5"]} />
+          </div>
+          <div>
+            <Slider label="Slider with array values"
+                    range={[
+                      { value: "1", label: "CHF 25" },
+                      { value: "2", label: "CHF 35" },
+                      { value: "3", label: "CHF 50" },
+                      { value: "4", label: "CHF 100" },
+                      { value: "5", label: "CHF 500" },
+                      { value: "6", label: "CHF 1'000" },
+                    ]}
+                    values={["2", "5"]}
+                    minDistance={1}
+                    prefix={["From ", "To "]}
+                    step={1}
+                    multiple/>
+          </div>
         </Table.Cell>
       </Table.Row>
       <Table.Row>

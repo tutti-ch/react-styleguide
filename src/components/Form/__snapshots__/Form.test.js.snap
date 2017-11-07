@@ -207,48 +207,61 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                 <td
                   colSpan={4}
                 >
-                  <WithWrapper
-                    label="Slider"
-                    max={10000}
-                    maxValue={10000}
-                    min={1000}
-                    minRange={500}
-                    minValue={1300}
-                    multiple={true}
-                    prefix={
-                      Array [
-                        "From ",
-                        "To ",
-                      ]
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": "4rem",
+                        "marginTop": "2rem",
+                      }
                     }
-                    step={250}
-                    suffix=".-"
                   >
-                    <div
-                      className=""
+                    <WithWrapper
+                      label="Slider with step 750"
+                      max={10000}
+                      min={1000}
+                      minDistance={2000}
+                      multiple={true}
+                      prefix={
+                        Array [
+                          "From ",
+                          "To ",
+                        ]
+                      }
+                      step={750}
+                      suffix=".-"
+                      values={
+                        Array [
+                          1300,
+                          5780,
+                        ]
+                      }
                     >
-                      <Slider
-                        crossThumbs={false}
-                        label="Slider"
-                        max={10000}
-                        maxValue={10000}
-                        min={1000}
-                        minRange={500}
-                        minValue={1300}
-                        multiple={true}
-                        onChange={[Function]}
-                        prefix={
-                          Array [
-                            "From ",
-                            "To ",
-                          ]
-                        }
-                        step={250}
-                        suffix=".-"
-                        template=""
+                      <div
+                        className=""
                       >
-                        <span
-                          className={undefined}
+                        <Slider
+                          crossThumbs={false}
+                          label="Slider with step 750"
+                          max={10000}
+                          min={1000}
+                          minDistance={2000}
+                          multiple={true}
+                          onChange={[Function]}
+                          prefix={
+                            Array [
+                              "From ",
+                              "To ",
+                            ]
+                          }
+                          step={750}
+                          suffix=".-"
+                          template=""
+                          values={
+                            Array [
+                              1300,
+                              5780,
+                            ]
+                          }
                         >
                           <span
                             className={undefined}
@@ -256,63 +269,397 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             <span
                               className={undefined}
                             >
-                              Slider
+                              <span
+                                className={undefined}
+                              >
+                                Slider with step 750
+                              </span>
+                              <span
+                                className={undefined}
+                                key="minval"
+                              >
+                                From  1300 .-
+                              </span>
+                              <span
+                                className={undefined}
+                                key="maxval"
+                              >
+                                To 5780.-
+                              </span>
                             </span>
                             <span
                               className={undefined}
-                            >
-                              From 1300.-
-                            </span>
+                              key="min"
+                              name="min"
+                              onMouseDown={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                Object {
+                                  "left": "3.3333333333333335%",
+                                }
+                              }
+                              tabIndex={1}
+                            />
+                            <input
+                              key="hidden-min"
+                              name={undefined}
+                              type="hidden"
+                              value={
+                                Object {
+                                  "input": undefined,
+                                  "position": 3.3333333333333335,
+                                  "range": 1000,
+                                  "value": 1300,
+                                }
+                              }
+                            />
                             <span
                               className={undefined}
-                            >
-                              To 10000.-
-                            </span>
+                              key="max"
+                              name="max"
+                              onMouseDown={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                Object {
+                                  "left": "53.111111111111114%",
+                                }
+                              }
+                              tabIndex={1}
+                            />
+                            <input
+                              key="hidden-max"
+                              name={undefined}
+                              type="hidden"
+                              value={
+                                Object {
+                                  "input": undefined,
+                                  "position": 53.111111111111114,
+                                  "range": 10000,
+                                  "value": 5780,
+                                }
+                              }
+                            />
                           </span>
+                        </Slider>
+                      </div>
+                    </WithWrapper>
+                  </div>
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": "4rem",
+                        "marginTop": "2rem",
+                      }
+                    }
+                  >
+                    <WithWrapper
+                      label="Slider single"
+                      range={
+                        Array [
+                          Object {
+                            "label": "OMG! SAVAS <3",
+                            "value": "1",
+                          },
+                          Object {
+                            "label": "Wow! Savas is great",
+                            "value": "2",
+                          },
+                          Object {
+                            "label": "It is great, Thanks Savas ",
+                            "value": "3",
+                          },
+                          Object {
+                            "label": "I like it very much, Savas is fantastic",
+                            "value": "4",
+                          },
+                          Object {
+                            "label": "I love it, Savas is awesome.",
+                            "value": "5",
+                          },
+                        ]
+                      }
+                      values={
+                        Array [
+                          "5",
+                        ]
+                      }
+                    >
+                      <div
+                        className=""
+                      >
+                        <Slider
+                          crossThumbs={false}
+                          label="Slider single"
+                          minDistance={10}
+                          onChange={[Function]}
+                          prefix=""
+                          range={
+                            Array [
+                              Object {
+                                "label": "OMG! SAVAS <3",
+                                "value": "1",
+                              },
+                              Object {
+                                "label": "Wow! Savas is great",
+                                "value": "2",
+                              },
+                              Object {
+                                "label": "It is great, Thanks Savas ",
+                                "value": "3",
+                              },
+                              Object {
+                                "label": "I like it very much, Savas is fantastic",
+                                "value": "4",
+                              },
+                              Object {
+                                "label": "I love it, Savas is awesome.",
+                                "value": "5",
+                              },
+                            ]
+                          }
+                          suffix=""
+                          template=""
+                          values={
+                            Array [
+                              "5",
+                            ]
+                          }
+                        >
                           <span
                             className={undefined}
-                            key="minValue"
-                            name="minValue"
-                            onMouseDown={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            style={
-                              Object {
-                                "left": "3.3333333333333335%",
+                          >
+                            <span
+                              className={undefined}
+                            >
+                              <span
+                                className={undefined}
+                              >
+                                Slider single
+                              </span>
+                              <span
+                                className={undefined}
+                                key="minval"
+                              >
+                                I love it, Savas is awesome.
+                              </span>
+                            </span>
+                            <span
+                              className={undefined}
+                              key="min"
+                              name="min"
+                              onMouseDown={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                Object {
+                                  "left": "100%",
+                                }
                               }
-                            }
-                            tabIndex={1}
-                          />
-                          <input
-                            key="hidden-minValue"
-                            name={undefined}
-                            type="hidden"
-                            value={1300}
-                          />
+                              tabIndex={1}
+                            />
+                            <input
+                              key="hidden-min"
+                              name={undefined}
+                              type="hidden"
+                              value={
+                                Object {
+                                  "input": undefined,
+                                  "position": 100,
+                                  "range": 1,
+                                  "value": 5,
+                                }
+                              }
+                            />
+                          </span>
+                        </Slider>
+                      </div>
+                    </WithWrapper>
+                  </div>
+                  <div>
+                    <WithWrapper
+                      label="Slider with array values"
+                      minDistance={1}
+                      multiple={true}
+                      prefix={
+                        Array [
+                          "From ",
+                          "To ",
+                        ]
+                      }
+                      range={
+                        Array [
+                          Object {
+                            "label": "CHF 25",
+                            "value": "1",
+                          },
+                          Object {
+                            "label": "CHF 35",
+                            "value": "2",
+                          },
+                          Object {
+                            "label": "CHF 50",
+                            "value": "3",
+                          },
+                          Object {
+                            "label": "CHF 100",
+                            "value": "4",
+                          },
+                          Object {
+                            "label": "CHF 500",
+                            "value": "5",
+                          },
+                          Object {
+                            "label": "CHF 1'000",
+                            "value": "6",
+                          },
+                        ]
+                      }
+                      step={1}
+                      values={
+                        Array [
+                          "2",
+                          "5",
+                        ]
+                      }
+                    >
+                      <div
+                        className=""
+                      >
+                        <Slider
+                          crossThumbs={false}
+                          label="Slider with array values"
+                          minDistance={1}
+                          multiple={true}
+                          onChange={[Function]}
+                          prefix={
+                            Array [
+                              "From ",
+                              "To ",
+                            ]
+                          }
+                          range={
+                            Array [
+                              Object {
+                                "label": "CHF 25",
+                                "value": "1",
+                              },
+                              Object {
+                                "label": "CHF 35",
+                                "value": "2",
+                              },
+                              Object {
+                                "label": "CHF 50",
+                                "value": "3",
+                              },
+                              Object {
+                                "label": "CHF 100",
+                                "value": "4",
+                              },
+                              Object {
+                                "label": "CHF 500",
+                                "value": "5",
+                              },
+                              Object {
+                                "label": "CHF 1'000",
+                                "value": "6",
+                              },
+                            ]
+                          }
+                          step={1}
+                          suffix=""
+                          template=""
+                          values={
+                            Array [
+                              "2",
+                              "5",
+                            ]
+                          }
+                        >
                           <span
                             className={undefined}
-                            key="maxValue"
-                            name="maxValue"
-                            onMouseDown={[Function]}
-                            onTouchMove={[Function]}
-                            onTouchStart={[Function]}
-                            style={
-                              Object {
-                                "left": "100%",
+                          >
+                            <span
+                              className={undefined}
+                            >
+                              <span
+                                className={undefined}
+                              >
+                                Slider with array values
+                              </span>
+                              <span
+                                className={undefined}
+                                key="minval"
+                              >
+                                From  CHF 35
+                              </span>
+                              <span
+                                className={undefined}
+                                key="maxval"
+                              >
+                                To CHF 500
+                              </span>
+                            </span>
+                            <span
+                              className={undefined}
+                              key="min"
+                              name="min"
+                              onMouseDown={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                Object {
+                                  "left": "20%",
+                                }
                               }
-                            }
-                            tabIndex={1}
-                          />
-                          <input
-                            key="hidden-maxValue"
-                            name={undefined}
-                            type="hidden"
-                            value={10000}
-                          />
-                        </span>
-                      </Slider>
-                    </div>
-                  </WithWrapper>
+                              tabIndex={1}
+                            />
+                            <input
+                              key="hidden-min"
+                              name={undefined}
+                              type="hidden"
+                              value={
+                                Object {
+                                  "input": undefined,
+                                  "position": 20,
+                                  "range": 1,
+                                  "value": 2,
+                                }
+                              }
+                            />
+                            <span
+                              className={undefined}
+                              key="max"
+                              name="max"
+                              onMouseDown={[Function]}
+                              onTouchMove={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                Object {
+                                  "left": "80%",
+                                }
+                              }
+                              tabIndex={1}
+                            />
+                            <input
+                              key="hidden-max"
+                              name={undefined}
+                              type="hidden"
+                              value={
+                                Object {
+                                  "input": undefined,
+                                  "position": 80,
+                                  "range": 6,
+                                  "value": 5,
+                                }
+                              }
+                            />
+                          </span>
+                        </Slider>
+                      </div>
+                    </WithWrapper>
+                  </div>
                 </td>
               </Component>
             </tr>
