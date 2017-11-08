@@ -267,6 +267,13 @@ export class Slider extends Component {
     this.setState({
       dragging: false,
       [prop]: { ...state, value, position: this.calculatePosition(value) },
+    }, () => {
+      if (typeof this.props.onChange === "function") {
+        this.props.onChange(this.state[prop].value, {
+          name: this.state[prop].input,
+          initialValue: this.props.values[prop === "min" ? 0 : 1],
+        })
+      }
     })
   }
 
@@ -315,14 +322,7 @@ export class Slider extends Component {
         position: mousePos,
       }
 
-      this.setState({ [prop]: state }, () => {
-        if (typeof this.props.onChange === "function") {
-          this.props.onChange(this.state[prop].value, {
-            name: this.state[prop].input,
-            initialValue: this.props.values[isMin ? 0 : 1],
-          })
-        }
-      })
+      this.setState({ [prop]: state })
     }
   }
 

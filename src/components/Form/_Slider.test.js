@@ -83,7 +83,9 @@ describe("(Component) Slider", () => {
   })
 
   test("[handleMouseUp] should remove the listeners and set the position of the element to the nearest step value", () => {
-    const comp = mount(<Slider min={500} max={1500} step={250}/>)
+    const onChange = jest.fn()
+
+    const comp = mount(<Slider min={500} max={1500} step={250} onChange={onChange} name="ps"/>)
     const inst = comp.instance()
     const elem = {
       getAttribute: jest.fn().mockReturnValue("min"),
@@ -97,6 +99,7 @@ describe("(Component) Slider", () => {
     expect(elem.classList.add).toHaveBeenCalled()
     expect(comp.state("dragging")).toBe(false)
     expect(comp.state("min").value).toBe(750)
+    expect(onChange).toHaveBeenCalledWith(750, { name: "ps", initialValue: undefined })
     expect(window.removeEventListener).toHaveBeenCalledWith("mouseup", inst.handleMouseUp)
     expect(window.removeEventListener).toHaveBeenCalledWith("touchend", inst.handleMouseUp)
     expect(window.removeEventListener).toHaveBeenCalledWith("mousemove", inst.handleMouseMove)
@@ -104,9 +107,7 @@ describe("(Component) Slider", () => {
   })
 
   test("[handleMouseMove] should move the element to the mouse position", () => {
-    const onChange = jest.fn()
-    const comp = mount(<Slider min={500} max={1500} values={[750, 1250]} step={250} minRange={100} onChange={onChange}
-                               name={["ps", "pe"]} multiple/>)
+    const comp = mount(<Slider min={500} max={1500} values={[750, 1250]} step={250} minRange={100} name={["ps", "pe"]} multiple/>)
     const inst = comp.instance()
     const elem = { getAttribute: jest.fn().mockReturnValue("min") }
     const event = { preventDefault: jest.fn(), clientX: 570 }
@@ -122,7 +123,6 @@ describe("(Component) Slider", () => {
     inst.calculateMousePosition = jest.fn().mockReturnValue(75)
     inst.handleMouseMove(event)
     expect(comp.state("minValue")).toBe(550) // Should remain the same
-    expect(onChange).toHaveBeenCalledWith(600, { name: "ps", initialValue: 750 })
 
     elem.getAttribute = jest.fn().mockReturnValue("max")
     inst.handleMouseMove(event)
