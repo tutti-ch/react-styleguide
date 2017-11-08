@@ -27,7 +27,10 @@ export class Textarea extends Component {
       value: props.value,
     }
 
+    this.notify = this.notify.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.handleKeyUp = this.handleKeyUp.bind(this)
+    this.handleBlur = this.handleBlur.bind(this)
   }
 
   /**
@@ -44,11 +47,50 @@ export class Textarea extends Component {
    */
   handleChange(event) {
     this.setState({ value: event.target.value }, () => {
-      if (typeof this.props.onChange === "function") {
-        const { name, value } = this.props
-        this.props.onChange(this.state.value, { name, initialValue: value })
-      }
+      this.changed = true
     })
+  }
+
+  /**
+   * Notify the parent of the change.
+   */
+  notify() {
+    if (this.changed === true && typeof this.props.onChange === "function") {
+      const { name, value } = this.props
+      this.props.onChange(this.state.value, { name, initialValue: value })
+    }
+
+    // Reset the value
+    this.changed = false
+  }
+
+  /**
+   * Notify the parent when blur occurs.
+   *
+   * @param event
+   */
+  handleBlur(event) {
+    this.notify()
+
+    // istanbul ignore else
+    if (typeof this.props.onBlur === "function") {
+      this.props.onBlur(event)
+    }
+  }
+
+  /**
+   * Notify the parent when user presses enter.
+   *
+   * @param event
+   */
+  handleKeyUp(event) {
+    if (event.key === "Enter") {
+      this.notify()
+    }
+
+    if (typeof this.props.onKeyUp === "function") {
+      this.props.onKeyUp(event)
+    }
   }
 
   render() {
@@ -56,7 +98,12 @@ export class Textarea extends Component {
     const { name } = this.props
     const props = filterProps(Textarea.propTypes, this.props)
 
-    return <textarea {...props} name={name} value={value} onChange={this.handleChange}/>
+    return <textarea {...props}
+                     name={name}
+                     value={value}
+                     onBlur={this.handleBlur}
+                     onKeyUp={this.handleKeyUp}
+                     onChange={this.handleChange}/>
   }
 }
 

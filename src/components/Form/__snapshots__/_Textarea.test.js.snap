@@ -7,7 +7,9 @@ exports[`(Component) Textarea snapshot 1`] = `
 >
   <textarea
     name={undefined}
+    onBlur={[Function]}
     onChange={[Function]}
+    onKeyUp={[Function]}
     type="text"
     value="Life is good"
   />

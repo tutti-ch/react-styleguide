@@ -36,7 +36,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         <input
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           type="text"
                           value=""
                         />
@@ -62,7 +64,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         <input
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           type="text"
                           value=""
                         />
@@ -97,7 +101,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           max="1000"
                           min="100"
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           step="50"
                           type="number"
                           value="150"
@@ -124,7 +130,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         <input
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           type="password"
                           value=""
                         />
@@ -150,7 +158,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         <input
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           type="email"
                           value=""
                         />
@@ -176,7 +186,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         <input
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           type="phone"
                           value=""
                         />
@@ -946,7 +958,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       >
                         <textarea
                           name={undefined}
+                          onBlur={[Function]}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           value=""
                         />
                       </Textarea>

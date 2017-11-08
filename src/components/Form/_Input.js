@@ -33,7 +33,10 @@ export class Input extends Component {
       value: props.value,
     }
 
+    this.notify = this.notify.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.handleKeyUp = this.handleKeyUp.bind(this)
+    this.handleBlur = this.handleBlur.bind(this)
   }
 
   /**
@@ -46,14 +49,55 @@ export class Input extends Component {
   }
 
   /**
+   * Notify the parent of the change.
+   */
+  notify() {
+    if (this.changed === true && typeof this.props.onChange === "function") {
+      const { name, value } = this.props
+      this.props.onChange(this.state.value, { name, initialValue: value })
+    }
+
+    // Reset the value
+    this.changed = false
+  }
+
+  /**
+   * Notify the parent when blur occurs.
+   *
+   * @param event
+   */
+  handleBlur(event) {
+    this.notify()
+
+    // istanbul ignore else
+    if (typeof this.props.onBlur === "function") {
+      this.props.onBlur(event)
+    }
+  }
+
+  /**
+   * Notify the parent when user presses enter.
+   *
+   * @param event
+   */
+  handleKeyUp(event) {
+    if (event.key === "Enter") {
+      this.notify()
+    }
+
+    if (typeof this.props.onKeyUp === "function") {
+      this.props.onKeyUp(event)
+    }
+  }
+
+  /**
    * Handle the change event.
    */
   handleChange(event) {
     this.setState({ value: event.target.value }, () => {
-      if (typeof this.props.onChange === "function") {
-        const { name, value } = this.props
-        this.props.onChange(this.state.value, { name, initialValue: value })
-      }
+      // Next time when on blur or key up occurs,
+      // they will know that the value changed.
+      this.changed = true
     })
   }
 
@@ -67,6 +111,8 @@ export class Input extends Component {
       name={name}
       type={type}
       value={value}
+      onBlur={this.handleBlur}
+      onKeyUp={this.handleKeyUp}
       onChange={this.handleChange}
     />
   }
