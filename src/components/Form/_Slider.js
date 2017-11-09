@@ -404,7 +404,7 @@ export class Slider extends Component {
 
     // Return first non null value
     if (range[0]) {
-      return range[0].value
+      return +range[0].value
     }
 
     return +this.props.min
@@ -420,7 +420,7 @@ export class Slider extends Component {
 
     // Return first non null value
     if (range[range.length - 1]) {
-      return range[range.length - 1].value
+      return +range[range.length - 1].value
     }
 
     return +this.props.max

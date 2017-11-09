@@ -479,7 +479,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 Object {
                                   "input": undefined,
                                   "position": 100,
-                                  "range": "1",
+                                  "range": 1,
                                   "value": 5,
                                 }
                               }
@@ -642,7 +642,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 Object {
                                   "input": undefined,
                                   "position": 20,
-                                  "range": "1",
+                                  "range": 1,
                                   "value": 2,
                                 }
                               }
@@ -669,7 +669,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 Object {
                                   "input": undefined,
                                   "position": 80,
-                                  "range": "6",
+                                  "range": 6,
                                   "value": 5,
                                 }
                               }
@@ -813,7 +813,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 Object {
                                   "input": undefined,
                                   "position": 0,
-                                  "range": "1",
+                                  "range": 1,
                                   "value": NaN,
                                 }
                               }
@@ -840,7 +840,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 Object {
                                   "input": undefined,
                                   "position": 100,
-                                  "range": "6",
+                                  "range": 6,
                                   "value": NaN,
                                 }
                               }
