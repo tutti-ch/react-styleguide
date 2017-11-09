@@ -790,10 +790,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 Slider placeholder
                               </span>
-                              <span
-                                className={undefined}
-                                key="maxval"
-                              />
                             </span>
                             <span
                               className={undefined}
@@ -804,7 +800,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               onTouchStart={[Function]}
                               style={
                                 Object {
-                                  "left": "-20%",
+                                  "left": "0%",
                                 }
                               }
                               tabIndex={1}
@@ -816,9 +812,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               value={
                                 Object {
                                   "input": undefined,
-                                  "position": -20,
+                                  "position": 0,
                                   "range": 1,
-                                  "value": 0,
+                                  "value": NaN,
                                 }
                               }
                             />
@@ -831,7 +827,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               onTouchStart={[Function]}
                               style={
                                 Object {
-                                  "left": "-20%",
+                                  "left": "100%",
                                 }
                               }
                               tabIndex={1}
@@ -843,9 +839,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               value={
                                 Object {
                                   "input": undefined,
-                                  "position": -20,
+                                  "position": 100,
                                   "range": 6,
-                                  "value": 0,
+                                  "value": NaN,
                                 }
                               }
                             />

@@ -96,6 +96,11 @@ export class Slider extends Component {
      * The placeholder in case value is empty.
      */
     placeholder: PropTypes.string,
+
+    /**
+     * Whether the extremes should return value null or not. Defaults false.
+     */
+    extremes: PropTypes.bool,
   }
 
   constructor(props) {
@@ -118,12 +123,12 @@ export class Slider extends Component {
       min: {
         range: this.getMinRange(),
         input: Array.isArray(props.name) ? props.name[0] : props.name,
-        value: +props.values[0],
+        value: parseInt(props.values[0]),
       },
       max: {
         range: this.getMaxRange(),
         input: Array.isArray(props.name) ? props.name[1] : props.name,
-        value: +props.values[1],
+        value: parseInt(props.values[1]),
       },
       prefix: Array.isArray(props.prefix) ? props.prefix : [props.prefix, props.prefix],
       suffix: Array.isArray(props.suffix) ? props.suffix : [props.suffix, props.suffix],
@@ -309,7 +314,7 @@ export class Slider extends Component {
 
     // Limits of the slider (minimum and maximum value) and the thumb that is being dragged
     const { dragging: elem, min: { range: minRange }, max: { range: maxRange } } = this.state
-    const { minDistance, crossThumbs } = this.props
+    const { minDistance, crossThumbs, values, extremes } = this.props
 
     const prop = elem.getAttribute("name")
     const rect = elem.getBoundingClientRect()
@@ -319,11 +324,11 @@ export class Slider extends Component {
     const mouseValue = Math.round(minRange + ((maxRange - minRange) * mousePos / 100)) // The value at the mouse position
 
     // If the mouse position is in the left or right extreme, reset the values (only if initials values are null)
-    if (isMin && this.props.values[0] === null && clientX < rect.left - MOUSE_THRESHOLD) {
+    if (isMin && (values[0] === null || extremes) && clientX < rect.left - MOUSE_THRESHOLD) {
       return this.setState({ min: { ...this.state.min, value: null, position: 0, } })
     }
 
-    if (!isMin && this.props.values[1] === null && clientX > rect.right + MOUSE_THRESHOLD) {
+    if (!isMin && (values[1] === null || extremes ) && clientX > rect.right + MOUSE_THRESHOLD) {
       return this.setState({ max: { ...this.state.max, value: null, position: 100, }, })
     }
 
