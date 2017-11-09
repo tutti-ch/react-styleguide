@@ -155,7 +155,7 @@ input[type="radio"] {
     min-width: 5.5rem;
   }
 
-  .range-max {
+  .range-min + .range-max {
     margin-left: $size-xs;
   }
 

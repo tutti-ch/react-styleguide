@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import WithWrapper from "./_WithWrapper"
 import classes from "./Form.scss"
 
+export const MOUSE_THRESHOLD = 50
+
 export class Slider extends Component {
   static defaultProps = {
     template: "",
@@ -89,6 +91,11 @@ export class Slider extends Component {
      * Number of decimals in case step is < 0.
      */
     decimals: PropTypes.number,
+
+    /**
+     * The placeholder in case value is empty.
+     */
+    placeholder: PropTypes.string,
   }
 
   constructor(props) {
@@ -102,27 +109,29 @@ export class Slider extends Component {
     this.calculateClosestValue = this.calculateClosestValue.bind(this)
     this.getFormattedValue = this.getFormattedValue.bind(this)
     this.getRangeIndex = this.getRangeIndex.bind(this)
+    this.getMaxRange = this.getMaxRange.bind(this)
+    this.getMinRange = this.getMinRange.bind(this)
     this.renderThumb = this.renderThumb.bind(this)
     this.renderDesc = this.renderDesc.bind(this)
 
-    const { range = [] } = props
-
     this.state = {
       min: {
-        range: +(range.length ? range[0].value : props.min),
+        range: this.getMinRange(),
         input: Array.isArray(props.name) ? props.name[0] : props.name,
         value: +(props.values[0] || props.min),
       },
       max: {
-        range: +(range.length ? range[range.length - 1].value : props.max),
+        range: this.getMaxRange(),
         input: Array.isArray(props.name) ? props.name[1] : props.name,
         value: +(props.values[1] || props.max),
       },
+      prefix: Array.isArray(props.prefix) ? props.prefix : [props.prefix, props.prefix],
+      suffix: Array.isArray(props.suffix) ? props.suffix : [props.suffix, props.suffix],
       dragging: false // The element we are currently dragging.
     }
 
-    this.state.min.position = this.calculatePosition(this.state.min.value)
-    this.state.max.position = this.calculatePosition(this.state.max.value)
+    this.state.min.position = this.calculatePosition(this.state.min.value) || 0
+    this.state.max.position = this.calculatePosition(this.state.max.value) || 100
   }
 
   /**
@@ -149,9 +158,11 @@ export class Slider extends Component {
    * Given a value, calculate the position in percentage.
    *
    * @param {number} value
-   * @return {number}
+   * @return {number|null} Returns null in case value is also empty.
    */
   calculatePosition(value) {
+    if (value === null) return null
+
     const minRange = this.state.min.range
     const maxRange = this.state.max.range
 
@@ -175,7 +186,6 @@ export class Slider extends Component {
     const rect = this.root.getBoundingClientRect()
     const totalLen = this.root.offsetWidth
     const clientX = Slider.clientX(e)
-
     return Math.max(Math.min(((clientX - rect.left) * 100) / totalLen, 100), 0)
   }
 
@@ -188,6 +198,16 @@ export class Slider extends Component {
   static clientX(e) {
     if (e.clientX) return e.clientX
     if (e.touches && e.touches[0]) return e.touches[0].clientX
+  }
+
+  /**
+   * Returns true if value is NaN or a null value.
+   *
+   * @param val
+   * @return {boolean}
+   */
+  static isEmpty(val) {
+    return isNaN(val) || val === null || typeof val === "undefined"
   }
 
   /**
@@ -287,25 +307,31 @@ export class Slider extends Component {
     // TouchMove throws a warning for e.preventDefault
     if (e.clientX) e.preventDefault()
 
-    const { dragging: elem } = this.state
+    // Limits of the slider (minimum and maximum value) and the thumb that is being dragged
+    const { dragging: elem, min: { range: minRange }, max: { range: maxRange } } = this.state
     const { minDistance, crossThumbs } = this.props
 
-    // Limits of the slider (minimum and maximum value)
-    const minRange = this.state.min.range
-    const maxRange = this.state.max.range
-
-    // Elem is the thumb that is being dragged
     const prop = elem.getAttribute("name")
+    const rect = elem.getBoundingClientRect()
     const isMin = prop === "min"
+    const clientX = Slider.clientX(e)
     const mousePos = this.calculateMousePosition(e) // The mouse position in percentage
     const mouseValue = Math.round(minRange + ((maxRange - minRange) * mousePos / 100)) // The value at the mouse position
+
+    // If the mouse position is in the left or right extreme, reset the values (only if initials values are null)
+    if (isMin && this.props.values[0] === null && clientX < rect.left - MOUSE_THRESHOLD) {
+      return this.setState({ min: { ...this.state.min, value: null, position: 0, } })
+    }
+
+    if (!isMin && this.props.values[1] === null && clientX > rect.right + MOUSE_THRESHOLD) {
+      return this.setState({ max: { ...this.state.max, value: null, position: 100, }, })
+    }
 
     // Save the direction so that the calculatePosition
     // function can compute properly
     this.direction = this.clientX < Slider.clientX(e) ? "R" : "L"
 
-    // If cross thumbs is not allowed, make
-    // sure that min never passes max thumb.
+    // If cross thumbs is not allowed, make sure that min never passes max thumb.
     if (crossThumbs !== true) {
       const minValue = isMin ? mouseValue : this.state.min.value
       const maxValue = !isMin ? mouseValue : this.state.max.value
@@ -333,7 +359,7 @@ export class Slider extends Component {
    * @return {number}
    */
   getRangeIndex(value) {
-    const { range } = this.props
+    const { range = [] } = this.props
 
     for (let i = 0; i < range.length; i++) {
       if (+range[i].value === +value) {
@@ -351,6 +377,10 @@ export class Slider extends Component {
    * @return {*}
    */
   getFormattedValue(val) {
+    if (Slider.isEmpty(val)) {
+      return
+    }
+
     const { range = [], step, decimals = 2 } = this.props
 
     if (range.length) {
@@ -362,6 +392,38 @@ export class Slider extends Component {
     }
 
     return Math.floor(val)
+  }
+
+  /**
+   * Return the first non null minimum value that is provided.
+   *
+   * @return {Number}
+   */
+  getMinRange() {
+    const { range = [] } = this.props
+
+    // Return first non null value
+    if (range[0]) {
+      return range[0].value
+    }
+
+    return +this.props.min
+  }
+
+  /**
+   * Return the first non null maximum value that is provided.
+   *
+   * @return {Number}
+   */
+  getMaxRange() {
+    const { range = [] } = this.props
+
+    // Return first non null value
+    if (range[range.length - 1]) {
+      return range[range.length - 1].value
+    }
+
+    return +this.props.max
   }
 
   /**
@@ -399,29 +461,33 @@ export class Slider extends Component {
    * Render the description part.
    */
   renderDesc() {
-    const { multiple } = this.props
+    const { multiple, crossThumbs } = this.props
     let { min: { value: minValue }, max: { value: maxValue } } = this.state
     let { prefix, suffix } = this.props
     let minValueText, maxValueText
 
+    if (Slider.isEmpty(minValue) && Slider.isEmpty(maxValue)) {
+      return this.props.placeholder
+    }
+
     // Formatter function
     const f = this.getFormattedValue
 
-    if (Array.isArray(prefix) === false) prefix = [prefix, prefix]
-    if (Array.isArray(suffix) === false) suffix = [suffix, suffix]
-
     if (multiple) {
-      const min = minValue < maxValue ? minValue : maxValue
-      const max = maxValue > minValue ? maxValue : minValue
+      // If crossThumbs is enabled, check for the min value (min and max can be swapped)
+      // Otherwise, minValue is always minValue. Do not need to swap here.
+      const min = !crossThumbs ? minValue : minValue < maxValue ? minValue : maxValue
+      const max = !crossThumbs ? maxValue : maxValue > minValue ? maxValue : minValue
 
-      minValueText = [prefix[0], f(min), suffix[0]].filter(i => i).join(" ")
-      maxValueText = prefix[1] + f(max) + suffix[1]
+      // Join prefix and suffixes only when the value is not empty.
+      minValueText = min ? [prefix[0], f(min), suffix[0]].filter(i => i).join(" ") : null
+      maxValueText = max ? [prefix[1], f(max), suffix[1]].filter(i => i).join(" ") : null
     } else {
-      minValueText = f(minValue)
+      minValueText = [prefix[0], f(minValue), suffix[0]].filter(i => i).join(" ")
     }
 
     return [
-      <span key="minval" className={classes.rangeMin}>{minValueText}</span>,
+      minValueText && <span key="minval" className={classes.rangeMin}>{minValueText}</span>,
       multiple ? <span key="maxval" className={classes.rangeMax}>{maxValueText}</span> : null,
     ]
   }

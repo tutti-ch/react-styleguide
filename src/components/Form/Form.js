@@ -53,9 +53,9 @@ export default () => (
                       { value: "4", label: "I like it very much, Savas is fantastic" },
                       { value: "5", label: "I love it, Savas is awesome." },
                     ]}
-                    values={["5"]} />
+                    values={["5"]}/>
           </div>
-          <div>
+          <div style={{ marginTop: "2rem", marginBottom: "4rem" }}>
             <Slider label="Slider with array values"
                     range={[
                       { value: "1", label: "CHF 25" },
@@ -66,6 +66,22 @@ export default () => (
                       { value: "6", label: "CHF 1'000" },
                     ]}
                     values={["2", "5"]}
+                    minDistance={1}
+                    prefix={["From ", "To "]}
+                    step={1}
+                    multiple/>
+          </div>
+          <div>
+            <Slider label="Slider placeholder"
+                    range={[
+                      { value: "1", label: "CHF 25" },
+                      { value: "2", label: "CHF 35" },
+                      { value: "3", label: "CHF 50" },
+                      { value: "4", label: "CHF 100" },
+                      { value: "5", label: "CHF 500" },
+                      { value: "6", label: "CHF 1'000" },
+                    ]}
+                    values={[null, null]}
                     minDistance={1}
                     prefix={["From ", "To "]}
                     step={1}

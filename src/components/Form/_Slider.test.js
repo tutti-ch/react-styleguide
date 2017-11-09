@@ -1,7 +1,7 @@
 /* global describe, test, expect, jest */
 import React from "react"
 import { mount } from "enzyme"
-import { Slider } from "./_Slider"
+import { Slider, MOUSE_THRESHOLD } from "./_Slider"
 
 describe("(Component) Slider", () => {
   test("[componentDidMount] should register a root element", () => {
@@ -107,9 +107,18 @@ describe("(Component) Slider", () => {
   })
 
   test("[handleMouseMove] should move the element to the mouse position", () => {
-    const comp = mount(<Slider min={500} max={1500} values={[750, 1250]} step={250} minRange={100} name={["ps", "pe"]} multiple/>)
+    const comp = mount(
+      <Slider min={500}
+              max={1500}
+              values={[750, 1250]}
+              step={250}
+              minRange={100}
+              name={["ps", "pe"]}
+              multiple/>,
+    )
+
     const inst = comp.instance()
-    const elem = { getAttribute: jest.fn().mockReturnValue("min") }
+    const elem = { getAttribute: jest.fn().mockReturnValue("min"), getBoundingClientRect: () => ({ left: 100 }) }
     const event = { preventDefault: jest.fn(), clientX: 570 }
     inst.root = { getBoundingClientRect: jest.fn().mockReturnValue({ left: 470 }), offsetWidth: 1000 }
     comp.setState({ dragging: elem })
@@ -180,6 +189,61 @@ describe("(Component) Slider", () => {
     expect(inst.getRangeIndex(5)).toBe(2)
     expect(inst.getRangeIndex(1)).toBe(0)
     expect(inst.getRangeIndex(10)).toBe(4)
+  })
+
+  describe("values null", () => {
+    test("[isEmpty] should return empty when empty values are provided", () => {
+      expect(Slider.isEmpty(null)).toBe(true)
+      expect(Slider.isEmpty()).toBe(true)
+      expect(Slider.isEmpty(1)).toBe(false)
+      expect(Slider.isEmpty(NaN)).toBe(true)
+    })
+
+    test("[getFormattedValue] should return undefined when value is null", () => {
+      const comp = mount(<Slider />)
+      const inst = comp.instance()
+      expect(inst.getFormattedValue()).toBeUndefined()
+    })
+
+    test("[getRangeIndex] should return -1 when there is no range", () => {
+      const comp = mount(<Slider />)
+      const inst = comp.instance()
+      expect(inst.getRangeIndex("123")).toBe(-1)
+    })
+
+    test("[calculatePosition] should return null when the value is null", () => {
+      const comp = mount(<Slider />)
+      const inst = comp.instance()
+      expect(inst.calculatePosition(null)).toBe(null)
+    })
+
+    test("[handleMouseMove] should set the state to null when the mouse is over the extremes", () => {
+      // This behavior is valid only when initial values are null
+      const comp = mount(<Slider values={[null, null]}/>)
+      const inst = comp.instance()
+
+      const event = { preventDefault: jest.fn(), clientX: 150 }
+      const elem = {
+        getBoundingClientRect() {
+          return { left: 150 + MOUSE_THRESHOLD + 1, right: 150 - MOUSE_THRESHOLD - 1  }
+        },
+        getAttribute: () => "min",
+      }
+
+      comp.setState({ min: { ...comp.state("min"), value: "60" }, dragging: elem })
+      comp.setState({ max: { ...comp.state("max"), value: "80" } })
+
+      inst.handleMouseMove(event)
+      expect(comp.state("min").value).toBe(null)
+      expect(comp.state("min").position).toBe(0)
+
+      elem.getAttribute = () => "max"
+      inst.handleMouseMove(event)
+      expect(comp.state("min").value).toBe(null)
+      expect(comp.state("min").position).toBe(0)
+      expect(comp.state("max").value).toBe(null)
+      expect(comp.state("max").position).toBe(100)
+    })
   })
 
   describe("snapshots", () => {
