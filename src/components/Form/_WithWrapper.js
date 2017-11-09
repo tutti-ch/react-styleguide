@@ -29,6 +29,11 @@ export default (WrappedComponent, mergeProps = {}) => {
       label: PropTypes.string,
 
       /**
+       * The class name.
+       */
+      className: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
+
+      /**
        * The children to render.
        */
       children: PropTypes.node,
@@ -59,7 +64,7 @@ export default (WrappedComponent, mergeProps = {}) => {
     }
 
     render() {
-      const { error, inline } = this.props
+      const { error, inline, className } = this.props
       const { hasValue } = this.state
       const injectedProps = filterProps(WithWrapper.propTypes, this.props)
 
@@ -77,7 +82,7 @@ export default (WrappedComponent, mergeProps = {}) => {
       const wrapperClasses = classNames(classes.wrapper, {
         [classes.inline]: inline,
         [classes.hasValue]: hasValue,
-      }, mergeProps.className)
+      }, mergeProps.className, className)
 
       return (
         <div className={wrapperClasses}>
