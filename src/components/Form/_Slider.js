@@ -118,12 +118,12 @@ export class Slider extends Component {
       min: {
         range: this.getMinRange(),
         input: Array.isArray(props.name) ? props.name[0] : props.name,
-        value: +(props.values[0] || props.min),
+        value: +props.values[0],
       },
       max: {
         range: this.getMaxRange(),
         input: Array.isArray(props.name) ? props.name[1] : props.name,
-        value: +(props.values[1] || props.max),
+        value: +props.values[1],
       },
       prefix: Array.isArray(props.prefix) ? props.prefix : [props.prefix, props.prefix],
       suffix: Array.isArray(props.suffix) ? props.suffix : [props.suffix, props.suffix],

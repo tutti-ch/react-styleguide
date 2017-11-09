@@ -24,18 +24,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       <span
         className={undefined}
       />
-      <span
-        className={undefined}
-        key="minval"
-      >
-        1.00
-      </span>
-      <span
-        className={undefined}
-        key="maxval"
-      >
-        10.00
-      </span>
     </span>
     <span
       className={undefined}
@@ -60,7 +48,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
           "input": undefined,
           "position": 0,
           "range": 1,
-          "value": 1,
+          "value": NaN,
         }
       }
     />
@@ -87,7 +75,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
           "input": undefined,
           "position": 100,
           "range": 10,
-          "value": 10,
+          "value": NaN,
         }
       }
     />
@@ -125,18 +113,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       <span
         className={undefined}
       />
-      <span
-        className={undefined}
-        key="minval"
-      >
-        1.00
-      </span>
-      <span
-        className={undefined}
-        key="maxval"
-      >
-        10.00
-      </span>
     </span>
     <span
       className={undefined}
@@ -161,7 +137,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
           "input": "pe",
           "position": 0,
           "range": 1,
-          "value": 1,
+          "value": NaN,
         }
       }
     />
@@ -188,7 +164,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
           "input": "ps",
           "position": 100,
           "range": 10,
-          "value": 10,
+          "value": NaN,
         }
       }
     />
@@ -219,18 +195,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       <span
         className={undefined}
       />
-      <span
-        className={undefined}
-        key="minval"
-      >
-        500
-      </span>
-      <span
-        className={undefined}
-        key="maxval"
-      >
-        1500
-      </span>
     </span>
     <span
       className={undefined}
@@ -255,7 +219,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
           "input": undefined,
           "position": 0,
           "range": 500,
-          "value": 500,
+          "value": NaN,
         }
       }
     />
@@ -282,7 +246,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
           "input": undefined,
           "position": 100,
           "range": 1500,
-          "value": 1500,
+          "value": NaN,
         }
       }
     />
@@ -312,12 +276,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
       <span
         className={undefined}
       />
-      <span
-        className={undefined}
-        key="minval"
-      >
-        500
-      </span>
     </span>
     <span
       className={undefined}
@@ -342,7 +300,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
           "input": undefined,
           "position": 0,
           "range": 500,
-          "value": 500,
+          "value": NaN,
         }
       }
     />
