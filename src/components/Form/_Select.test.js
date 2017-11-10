@@ -92,7 +92,8 @@ describe("(Component) Select", () => {
 
     event.key = "Enter"
     inst.keyDown(event)
-    expect(inst.select).toHaveBeenCalledWith(options[1])
+    expect(inst.select).toHaveBeenCalledWith(options[1], event)
+    expect(spy).toHaveBeenCalledTimes(1)
 
     event.key = "Esc"
     inst.keyDown(event)
@@ -167,10 +168,11 @@ describe("(Component) Select", () => {
     expect(event.stopPropagation).toHaveBeenCalled()
     expect(comp.state("selected")).toEqual(["Ember", "jQuery"])
     expect(comp.state("highlighted")).toBe(3)
+    expect(onChange).toHaveBeenCalledWith(["Ember", "jQuery"], { name: "favs", initialValue: ["Ember"] })
     inst.select({ value: "jQuery" }, event)
     expect(comp.state("selected")).toEqual(["Ember"])
     expect(comp.state("highlighted")).toBe(3)
-    expect(onChange).toHaveBeenCalledWith("jQuery", { name: "favs", initialValue: ["Ember"] })
+    expect(onChange).toHaveBeenCalledWith(["Ember"], { name: "favs", initialValue: ["Ember"] })
   })
 
   test("[handleOnFocus/handleOnBlur] should add/remove the listener", () => {

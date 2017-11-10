@@ -182,7 +182,8 @@ export class Select extends Component {
         return this.handleArrowUp()
       case "Enter":
       case " ":
-        return this.select(this.props.options[highlighted])
+        this.select(this.props.options[highlighted], event)
+        return this.props.multiple ? null : this.close()
       case "Escape":
       case "Esc":
         event.preventDefault()
@@ -257,7 +258,10 @@ export class Select extends Component {
 
     this.setState({ selected, highlighted: this.findIndexByValue(value) }, () => {
       if (typeof this.props.onChange === "function") {
-        this.props.onChange(`${value}`, { name, initialValue: this.props.selected })
+        this.props.onChange(multiple ? selected : selected[0], {
+          name,
+          initialValue: this.props.selected
+        })
       }
     })
   }

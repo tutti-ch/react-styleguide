@@ -399,6 +399,11 @@ input[type="radio"] {
 }
 
 .select.multiple {
+  .ph {
+    width: 95%;
+    overflow: hidden;
+  }
+
   &:not(.placeholder) {
     .ph {
       height: 100%;
