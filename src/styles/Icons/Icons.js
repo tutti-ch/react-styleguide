@@ -33,16 +33,18 @@ export default class Icons extends Component {
 
     return (
       <BoxCardWrapper>
-        {Object.keys(icons).map((icon, index) => (
-          <BoxCard key={`asset-${index}`} name={icon}>
-            <img
-              className={classes.image}
-              src={icons[icon]}
-              width="75"
-              height="75"
-            />
-          </BoxCard>
-        ))}
+        {Object.keys(icons)
+          .sort()
+          .map((icon, index) => (
+            <BoxCard key={`asset-${index}`} name={icon}>
+              <img
+                className={classes.image}
+                src={icons[icon]}
+                width="75"
+                height="75"
+              />
+            </BoxCard>
+          ))}
       </BoxCardWrapper>
     );
   }
