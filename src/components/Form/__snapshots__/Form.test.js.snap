@@ -1167,9 +1167,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                   colSpan={4}
                 >
                   <WithWrapper
+                    allOptions="All the frameworks!"
                     label="Block select input"
                     options={
                       Array [
+                        Object {
+                          "text": "All the frameworks!",
+                          "value": "",
+                        },
                         Object {
                           "text": "React.js",
                           "value": "React.js",
@@ -1214,10 +1219,15 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       className=""
                     >
                       <Select
+                        allOptions="All the frameworks!"
                         multiple={false}
                         onChange={[Function]}
                         options={
                           Array [
+                            Object {
+                              "text": "All the frameworks!",
+                              "value": "",
+                            },
                             Object {
                               "text": "React.js",
                               "value": "React.js",
@@ -1300,6 +1310,28 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               <div
                                 className=""
                               >
+                                <Option
+                                  highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
+                                  key=""
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="All the frameworks!"
+                                  value=""
+                                >
+                                  <div
+                                    className=""
+                                    key=""
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className={undefined}
+                                    >
+                                      All the frameworks!
+                                    </span>
+                                  </div>
+                                </Option>
                                 <Option
                                   highlighted={false}
                                   icon={undefined}
