@@ -119,6 +119,7 @@ export class Select extends Component {
    */
   componentWillReceiveProps({ selected, options, sort }) {
     const state = {};
+    const { allOptions } = this.props;
 
     // Update the selected value
     if (!isEqual(selected, this.props.selected)) {
@@ -131,11 +132,12 @@ export class Select extends Component {
       options = options.map(i => ({ ...i, value: i.value.toString() }));
       state.options = sort ? this.sortOptions(options) : options;
 
-      if (allOptions)
+      if (allOptions) {
         options.unshift({
           text: allOptions,
           value: ""
         });
+      }
     }
 
     if (Object.keys(state).length) {
