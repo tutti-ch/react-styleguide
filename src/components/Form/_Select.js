@@ -67,12 +67,7 @@ export class Select extends Component {
     /**
      * The input name.
      */
-    name: PropTypes.string,
-
-    /**
-     * Text for the option to select all the options
-     */
-    allOptions: PropTypes.string
+    name: PropTypes.string
   };
 
   static defaultProps = {
@@ -92,13 +87,12 @@ export class Select extends Component {
     this.handleOnFocus = this.handleOnFocus.bind(this);
     this.handleOnBlur = this.handleOnBlur.bind(this);
     this.getSelectedOptions = this.getSelectedOptions.bind(this);
+    this.resetSelected = this.resetSelected.bind(this);
 
-    let { sort, options, selected, allOptions } = props;
+    let { sort, options, selected } = props;
 
     options = sort ? this.sortOptions(options) : options;
     selected = Array.isArray(selected) ? selected : [selected];
-
-    if (allOptions) options.unshift({ text: allOptions, value: "" });
 
     this.state = {
       highlighted: this.findIndexByValue(selected[0]),
@@ -119,7 +113,6 @@ export class Select extends Component {
    */
   componentWillReceiveProps({ selected, options, sort }) {
     const state = {};
-    const { allOptions } = this.props;
 
     // Update the selected value
     if (!isEqual(selected, this.props.selected)) {
@@ -131,13 +124,6 @@ export class Select extends Component {
     if (!isEqual(options, this.props.options)) {
       options = options.map(i => ({ ...i, value: i.value.toString() }));
       state.options = sort ? this.sortOptions(options) : options;
-
-      if (allOptions) {
-        options.unshift({
-          text: allOptions,
-          value: ""
-        });
-      }
     }
 
     if (Object.keys(state).length) {
@@ -314,14 +300,14 @@ export class Select extends Component {
     if (index > -1) {
       const { onChange, name } = this.props;
       selected.splice(index, 1);
-      this.setState({ selected });
-
-      if (typeof onChange === "function") {
-        onChange(selected, {
-          name,
-          initialValue: selected
-        });
-      }
+      this.setState({ selected }, () => {
+        if (typeof onChange === "function") {
+          onChange(selected, {
+            name,
+            initialValue: selected
+          });
+        }
+      });
     }
   }
 
@@ -382,6 +368,22 @@ export class Select extends Component {
     return selectedOpts;
   }
 
+  /**
+   * Reset selected values.
+   */
+  resetSelected() {
+    this.setState({ selected: [], highlighted: -1 }, () => {
+      const { onChange, name, selected } = this.props;
+
+      if (typeof onChange === "function") {
+        onChange(null, {
+          name,
+          initialValue: selected
+        });
+      }
+    });
+  }
+
   render() {
     const { disabled, placeholder, multiple, name } = this.props;
     const {
@@ -415,6 +417,7 @@ export class Select extends Component {
                   image={o.image}
                   value={o.value}
                   key={o.value}
+                  className={o.className}
                   onClick={multiple && o.value ? this.unselect : undefined}
                 />
               ))}
@@ -426,6 +429,13 @@ export class Select extends Component {
                 this.optionsDiv = r;
               }}
             >
+              {placeholder && !multiple && selectedValues.length > 0 ? (
+                <Option
+                  text={placeholder}
+                  value={null}
+                  onClick={this.resetSelected}
+                />
+              ) : null}
               {options.map(({ value, icon, image, text }, key) => {
                 return (
                   <Option
@@ -436,7 +446,7 @@ export class Select extends Component {
                     value={value}
                     selected={selectedValues.indexOf(value) > -1}
                     highlighted={highlighted === key}
-                    key={value}
+                    key={`opt-${value}`}
                   />
                 );
               })}

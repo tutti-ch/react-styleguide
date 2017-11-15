@@ -9,7 +9,7 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
   text="my option"
 >
   <div
-    className="undefined"
+    className=""
     onClick={[Function]}
   >
     <span
