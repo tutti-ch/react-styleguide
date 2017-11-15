@@ -45,7 +45,7 @@ input[type="number"],
 textarea {
   border: $border-default;
   background-color: $greyscale-100;
-  padding: $size-s;
+  padding: 0 $size-s;
   border-radius: 2px;
   position: relative;
   box-sizing: border-box;
