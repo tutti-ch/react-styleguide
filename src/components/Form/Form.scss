@@ -1,10 +1,8 @@
 @import "../../styles/main";
 
-
 // Form variables
 
 $inputHeight: $size-xxxl;
-
 
 @mixin placeholder {
   // IMPORTANT: Do not combine the following placeholder styles, as otherwise they will break.
@@ -98,8 +96,8 @@ $inputHeight: $size-xxxl;
   input:focus + .label,
   textarea:focus + .label,
   .slider .label,
-  .wrapper:not(.inline) .select + .label,
-  .has-value:not(.select-wrapper) .label {
+  &:not(.inline) .select + .label,
+  &.has-value:not(.select-wrapper) .label {
     font-size: 0.85rem;
     top: -$size-xxxs;
     left: 0;
@@ -134,7 +132,7 @@ $inputHeight: $size-xxxl;
   }
 
   .slider .label,
-  .has-value .slider .label {
+  &.has-value .slider .label {
     top: -$size-s;
   }
 
@@ -354,7 +352,7 @@ $inputHeight: $size-xxxl;
   /**
   * Styles for an inline select
   */
-  .wrapper.inline.select-wrapper {
+  &.inline.select-wrapper {
     flex-direction: row-reverse;
     align-items: center;
     line-height: 1;
