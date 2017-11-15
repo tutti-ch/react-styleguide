@@ -1,5 +1,11 @@
 @import "../../styles/main";
 
+
+// Form variables
+
+$inputHeight: $size-xxxl;
+
+
 @mixin placeholder {
   // IMPORTANT: Do not combine the following placeholder styles, as otherwise they will break.
 
@@ -37,6 +43,7 @@
   }
 }
 
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -45,12 +52,16 @@ input[type="number"],
 textarea {
   border: $border-default;
   background-color: $greyscale-100;
-  padding: 0 $size-s;
   border-radius: 2px;
   position: relative;
   box-sizing: border-box;
   width: 100%;
   @include focus();
+}
+
+input {
+  line-height: $inputHeight;
+  padding: 0 $size-s;
 }
 
 input[type="number"] {
@@ -60,6 +71,7 @@ input[type="number"] {
 textarea {
   min-height: 8rem;
   resize: none;
+  padding: $size-s;
 }
 
 textarea + .label {
