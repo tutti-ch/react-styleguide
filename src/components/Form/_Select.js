@@ -312,8 +312,16 @@ export class Select extends Component {
     const index = selected.indexOf(value);
 
     if (index > -1) {
+      const { onChange, name } = this.props;
       selected.splice(index, 1);
       this.setState({ selected });
+
+      if (typeof onChange === "function") {
+        onChange(selected, {
+          name,
+          initialValue: selected
+        });
+      }
     }
   }
 
