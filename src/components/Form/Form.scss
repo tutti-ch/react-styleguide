@@ -304,6 +304,16 @@ $inputHeight: $size-xxxl;
         display: flex;
         align-items: center;
       }
+
+      // This is the placeholder
+      .option.placeholder {
+        color: $greyscale-60;
+
+        &.selected {
+          font-weight: normal;
+        }
+      }
+
     }
 
     .icon {
@@ -383,8 +393,8 @@ $inputHeight: $size-xxxl;
         height: $size-xxxl;
       }
 
-      &:not(.disabled):hover .select-inner {
-        border: none;
+      &:not(.disabled):hover {
+        border: 1px solid transparent;
       }
     }
 

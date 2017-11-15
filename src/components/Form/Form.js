@@ -143,7 +143,6 @@ export default () => (
           <Select
             label="Block select input"
             placeholder="Favorite framework"
-            allOptions="All the frameworks!"
             options={[
               { value: "React.js", text: "React.js" },
               { value: "Vue.js", text: "Vue.js" },
