@@ -121,15 +121,21 @@ export class Select extends Component {
     const state = {};
 
     // Update the selected value
-    if (isEqual(selected, this.props.selected) === false) {
+    if (!isEqual(selected, this.props.selected)) {
       state.selected = Array.isArray(selected) ? selected : [selected];
       state.selected = state.selected.map(i => i.toString());
     }
 
     // Re-sort options if the order has been changed
-    if (isEqual(options, this.props.options) === false) {
+    if (!isEqual(options, this.props.options)) {
       options = options.map(i => ({ ...i, value: i.value.toString() }));
       state.options = sort ? this.sortOptions(options) : options;
+
+      if (allOptions)
+        options.unshift({
+          text: allOptions,
+          value: ""
+        });
     }
 
     if (Object.keys(state).length) {
