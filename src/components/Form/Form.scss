@@ -182,7 +182,6 @@ $inputHeight: $size-xxxl;
       position: absolute;
       transition: width 0.1s ease-out, height 0.1s ease-out;
       top: 50%;
-      margin-left: -$size-xl;
       transform: translateY(-50%);
 
       &.trans {
@@ -190,11 +189,11 @@ $inputHeight: $size-xxxl;
       }
 
       &[name=min] {
-        margin-left: -1px;
+        margin-left: -$size-xl / 2;
       }
 
       &[name=max] {
-        margin-right: -1px
+        margin-left: -$size-xl / 2;
       }
 
       &[data-value]:before {

@@ -101,6 +101,7 @@ export default () => (
               values={[null, null]}
               minDistance={1}
               prefix={["From ", "To "]}
+              mouseThreshold={10}
               step={1}
               multiple
             />

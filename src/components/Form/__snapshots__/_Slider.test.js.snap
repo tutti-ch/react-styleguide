@@ -8,6 +8,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   min={1}
   minDistance={10}
   minRange={1}
+  mouseThreshold={50}
   multiple={true}
   prefix=""
   step={0.5}
@@ -91,6 +92,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   min={1}
   minDistance={10}
   minRange={1}
+  mouseThreshold={50}
   multiple={true}
   name={
     Array [
@@ -179,6 +181,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
   min={500}
   minDistance={10}
   minRange={100}
+  mouseThreshold={50}
   multiple={true}
   prefix=""
   step={250}
@@ -261,6 +264,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
   min={500}
   minDistance={10}
   minRange={100}
+  mouseThreshold={50}
   prefix=""
   step={250}
   suffix=""

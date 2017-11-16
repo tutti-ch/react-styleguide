@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import WithWrapper from "./_WithWrapper";
 import classes from "./Form.scss";
 
-export const MOUSE_THRESHOLD = 50;
 
 export class Slider extends Component {
   static defaultProps = {
@@ -13,7 +12,8 @@ export class Slider extends Component {
     prefix: "",
     suffix: "",
     crossThumbs: false,
-    values: []
+    values: [],
+    mouseThreshold: 50
   };
 
   static propTypes = {
@@ -103,7 +103,12 @@ export class Slider extends Component {
     /**
      * Whether the extremes should return value null or not. Defaults false.
      */
-    extremes: PropTypes.bool
+    extremes: PropTypes.bool,
+
+    /**
+     * Number of pixels that you need to pull in order to reset filters.
+     */
+    mouseThreshold: PropTypes.number,
   };
 
   constructor(props) {
@@ -334,7 +339,7 @@ export class Slider extends Component {
       min: { range: minRange },
       max: { range: maxRange }
     } = this.state;
-    const { minDistance, crossThumbs, values, extremes } = this.props;
+    const { minDistance, crossThumbs, values, extremes, mouseThreshold } = this.props;
 
     const prop = elem.getAttribute("name");
     const rect = elem.getBoundingClientRect();
@@ -349,7 +354,7 @@ export class Slider extends Component {
     if (
       isMin &&
       (values[0] === null || extremes) &&
-      clientX < rect.left - MOUSE_THRESHOLD
+      clientX < rect.left - mouseThreshold
     ) {
       return this.setState({
         min: { ...this.state.min, value: null, position: 0 }
@@ -359,7 +364,7 @@ export class Slider extends Component {
     if (
       !isMin &&
       (values[1] === null || extremes) &&
-      clientX > rect.right + MOUSE_THRESHOLD
+      clientX > rect.right + mouseThreshold
     ) {
       return this.setState({
         max: { ...this.state.max, value: null, position: 100 }

@@ -1,7 +1,7 @@
 /* global describe, test, expect, jest */
 import React from "react";
 import { mount } from "enzyme";
-import { Slider, MOUSE_THRESHOLD } from "./_Slider";
+import { Slider } from "./_Slider";
 
 describe("(Component) Slider", () => {
   test("[componentDidMount] should register a root element", () => {
@@ -275,6 +275,8 @@ describe("(Component) Slider", () => {
       const comp = mount(<Slider />);
       const inst = comp.instance();
       expect(inst.getFormattedValue()).toBeUndefined();
+      comp.setProps({ step: 0.5 })
+      expect(inst.getFormattedValue(10)).toBe("10.00");
     });
 
     test("[getRangeIndex] should return -1 when there is no range", () => {
@@ -298,8 +300,8 @@ describe("(Component) Slider", () => {
       const elem = {
         getBoundingClientRect() {
           return {
-            left: 150 + MOUSE_THRESHOLD + 1,
-            right: 150 - MOUSE_THRESHOLD - 1
+            left: 150 + inst.props.mouseThreshold + 1,
+            right: 150 - inst.props.mouseThreshold - 1
           };
         },
         getAttribute: () => "min"
