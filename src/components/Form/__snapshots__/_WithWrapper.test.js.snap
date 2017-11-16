@@ -10,28 +10,20 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
   >
     <InputCheckbox
       checked={true}
-      label={undefined}
       onChange={[Function]}
     >
       <span
-        className={undefined}
         onClick={[Function]}
       >
         <input
           checked={true}
-          name={undefined}
           onChange={[Function]}
           type="checkbox"
-          value={undefined}
         />
-        <span
-          className={undefined}
-        />
+        <span />
       </span>
     </InputCheckbox>
-    <span
-      className={undefined}
-    >
+    <span>
       Cannot proceed like this
     </span>
   </div>
@@ -52,7 +44,6 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
       value="hello-world"
     >
       <input
-        name={undefined}
         onBlur={[Function]}
         onChange={[Function]}
         onKeyUp={[Function]}
@@ -60,9 +51,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
         value="hello-world"
       />
     </Input>
-    <span
-      className={undefined}
-    >
+    <span>
       My awesome label
     </span>
   </div>
@@ -78,23 +67,17 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
   >
     <InputCheckbox
       checked={true}
-      label={undefined}
       onChange={[Function]}
     >
       <span
-        className={undefined}
         onClick={[Function]}
       >
         <input
           checked={true}
-          name={undefined}
           onChange={[Function]}
           type="checkbox"
-          value={undefined}
         />
-        <span
-          className={undefined}
-        />
+        <span />
       </span>
     </InputCheckbox>
   </div>

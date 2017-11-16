@@ -15,9 +15,7 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
     <span
       className="ico ico-tutti-cube"
     />
-    <span
-      className={undefined}
-    >
+    <span>
       my option
     </span>
   </div>
