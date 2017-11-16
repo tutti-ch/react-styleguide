@@ -10,6 +10,7 @@ exports[`(Component) Spinner should match the snapshot 1`] = `
     className="my-class"
   >
     <div
+      className={undefined}
       style={
         Object {
           "borderBottom": "0.8rem solid rgba(0, 0, 0, 0.1)",

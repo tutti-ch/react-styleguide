@@ -7,14 +7,19 @@ exports[`(Component) InputRadio snapshot 1`] = `
   value="Life is good"
 >
   <span
+    className={undefined}
     onClick={[Function]}
   >
     <input
       checked={true}
+      name={undefined}
       onChange={[Function]}
       type="radio"
+      value={undefined}
     />
-    <span>
+    <span
+      className={undefined}
+    >
       My label
     </span>
   </span>

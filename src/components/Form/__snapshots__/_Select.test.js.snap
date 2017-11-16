@@ -64,7 +64,11 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
           className=""
         >
           <Option
+            className={undefined}
+            icon={undefined}
+            image={undefined}
             key="null"
+            onClick={undefined}
             selected={false}
             text="my-placeholder"
             value={null}
@@ -74,7 +78,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="null"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 my-placeholder
               </span>
             </div>
@@ -85,6 +91,8 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
         >
           <Option
             highlighted={true}
+            icon={undefined}
+            image={undefined}
             key="opt-React.js"
             onClick={[Function]}
             selected={false}
@@ -96,13 +104,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="React.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 React.js
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Vue.js"
             onClick={[Function]}
             selected={false}
@@ -114,13 +126,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Vue.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Vue.js
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Angular.js"
             onClick={[Function]}
             selected={false}
@@ -132,13 +148,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Angular.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Angular.js
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-jQuery"
             onClick={[Function]}
             selected={false}
@@ -150,13 +170,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 jQuery
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Knockout"
             onClick={[Function]}
             selected={false}
@@ -168,13 +192,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Knockout"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Knockout
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Backbone"
             onClick={[Function]}
             selected={false}
@@ -186,13 +214,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Backbone"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Backbone
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Ember"
             onClick={[Function]}
             selected={false}
@@ -204,13 +236,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Ember"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Ember
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Bootstrap"
             onClick={[Function]}
             selected={false}
@@ -222,13 +258,17 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Bootstrap"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Bootstrap
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Other"
             onClick={[Function]}
             selected={false}
@@ -240,13 +280,16 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               key="Other"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Other
               </span>
             </div>
           </Option>
         </div>
         <input
+          name={undefined}
           type="hidden"
           value=""
         />
@@ -323,7 +366,11 @@ exports[`(Component) Select [snapshot] should match 1`] = `
           className=""
         >
           <Option
+            className={undefined}
+            icon={undefined}
+            image={undefined}
             key="jQuery"
+            onClick={undefined}
             selected={false}
             text="jQuery"
             value="jQuery"
@@ -333,7 +380,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 jQuery
               </span>
             </div>
@@ -344,6 +393,8 @@ exports[`(Component) Select [snapshot] should match 1`] = `
         >
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-React.js"
             onClick={[Function]}
             selected={false}
@@ -355,13 +406,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="React.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 React.js
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Vue.js"
             onClick={[Function]}
             selected={false}
@@ -373,13 +428,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Vue.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Vue.js
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Angular.js"
             onClick={[Function]}
             selected={false}
@@ -391,13 +450,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Angular.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Angular.js
               </span>
             </div>
           </Option>
           <Option
             highlighted={true}
+            icon={undefined}
+            image={undefined}
             key="opt-jQuery"
             onClick={[Function]}
             selected={true}
@@ -409,13 +472,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 jQuery
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Knockout"
             onClick={[Function]}
             selected={false}
@@ -427,13 +494,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Knockout"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Knockout
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Backbone"
             onClick={[Function]}
             selected={false}
@@ -445,13 +516,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Backbone"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Backbone
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Ember"
             onClick={[Function]}
             selected={false}
@@ -463,13 +538,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Ember"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Ember
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Bootstrap"
             onClick={[Function]}
             selected={false}
@@ -481,13 +560,17 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Bootstrap"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Bootstrap
               </span>
             </div>
           </Option>
           <Option
             highlighted={false}
+            icon={undefined}
+            image={undefined}
             key="opt-Other"
             onClick={[Function]}
             selected={false}
@@ -499,13 +582,16 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               key="Other"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className={undefined}
+              >
                 Other
               </span>
             </div>
           </Option>
         </div>
         <input
+          name={undefined}
           type="hidden"
           value="jQuery"
         />

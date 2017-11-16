@@ -12,6 +12,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
     onChange={[Function]}
   >
     <span
+      className={undefined}
       onClick={[Function]}
     >
       <input
@@ -19,8 +20,11 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
         name="fmw"
         onChange={[Function]}
         type="radio"
+        value={undefined}
       />
-      <span>
+      <span
+        className={undefined}
+      >
         React.js
       </span>
     </span>
@@ -33,6 +37,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
     onChange={[Function]}
   >
     <span
+      className={undefined}
       onClick={[Function]}
     >
       <input
@@ -40,8 +45,11 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
         name="fmw"
         onChange={[Function]}
         type="radio"
+        value={undefined}
       />
-      <span>
+      <span
+        className={undefined}
+      >
         Vue.js
       </span>
     </span>
@@ -55,6 +63,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
     value="ang"
   >
     <span
+      className={undefined}
       onClick={[Function]}
     >
       <input
@@ -62,8 +71,11 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
         name="fmw"
         onChange={[Function]}
         type="radio"
+        value={undefined}
       />
-      <span>
+      <span
+        className={undefined}
+      >
         Angular.js
       </span>
     </span>

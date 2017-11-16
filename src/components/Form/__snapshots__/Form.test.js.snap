@@ -35,6 +35,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value=""
                       >
                         <input
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
@@ -42,7 +43,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value=""
                         />
                       </Input>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Block text input
                       </span>
                     </div>
@@ -60,6 +63,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value=""
                       >
                         <input
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
@@ -67,7 +71,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value=""
                         />
                       </Input>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Inline text input
                       </span>
                     </div>
@@ -94,6 +100,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         <input
                           max="1000"
                           min="100"
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
@@ -102,7 +109,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value="150"
                         />
                       </Input>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Number
                       </span>
                     </div>
@@ -120,6 +129,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value=""
                       >
                         <input
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
@@ -127,7 +137,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value=""
                         />
                       </Input>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Password
                       </span>
                     </div>
@@ -145,6 +157,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value=""
                       >
                         <input
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
@@ -152,7 +165,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value=""
                         />
                       </Input>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Email
                       </span>
                     </div>
@@ -170,6 +185,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value=""
                       >
                         <input
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
@@ -177,7 +193,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value=""
                         />
                       </Input>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Phone
                       </span>
                     </div>
@@ -257,23 +275,32 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                         >
-                          <span>
-                            <span>
-                              <span>
+                          <span
+                            className={undefined}
+                          >
+                            <span
+                              className={undefined}
+                            >
+                              <span
+                                className={undefined}
+                              >
                                 Slider with step 750
                               </span>
                               <span
+                                className={undefined}
                                 key="minval"
                               >
                                 From  1300 .
                               </span>
                               <span
+                                className={undefined}
                                 key="maxval"
                               >
                                 To  5780 -
                               </span>
                             </span>
                             <span
+                              className={undefined}
                               key="min"
                               name="min"
                               onMouseDown={[Function]}
@@ -288,6 +315,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-min"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -299,6 +327,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               }
                             />
                             <span
+                              className={undefined}
                               key="max"
                               name="max"
                               onMouseDown={[Function]}
@@ -313,6 +342,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-max"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -409,18 +439,26 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                         >
-                          <span>
-                            <span>
-                              <span>
+                          <span
+                            className={undefined}
+                          >
+                            <span
+                              className={undefined}
+                            >
+                              <span
+                                className={undefined}
+                              >
                                 Slider single
                               </span>
                               <span
+                                className={undefined}
                                 key="minval"
                               >
                                 I love it, Savas is awesome.
                               </span>
                             </span>
                             <span
+                              className={undefined}
                               key="min"
                               name="min"
                               onMouseDown={[Function]}
@@ -435,6 +473,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-min"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -557,23 +596,32 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                         >
-                          <span>
-                            <span>
-                              <span>
+                          <span
+                            className={undefined}
+                          >
+                            <span
+                              className={undefined}
+                            >
+                              <span
+                                className={undefined}
+                              >
                                 Slider with array values
                               </span>
                               <span
+                                className={undefined}
                                 key="minval"
                               >
                                 From  CHF 35
                               </span>
                               <span
+                                className={undefined}
                                 key="maxval"
                               >
                                 To  CHF 500
                               </span>
                             </span>
                             <span
+                              className={undefined}
                               key="min"
                               name="min"
                               onMouseDown={[Function]}
@@ -588,6 +636,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-min"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -599,6 +648,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               }
                             />
                             <span
+                              className={undefined}
                               key="max"
                               name="max"
                               onMouseDown={[Function]}
@@ -613,6 +663,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-max"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -728,13 +779,20 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                         >
-                          <span>
-                            <span>
-                              <span>
+                          <span
+                            className={undefined}
+                          >
+                            <span
+                              className={undefined}
+                            >
+                              <span
+                                className={undefined}
+                              >
                                 Slider placeholder
                               </span>
                             </span>
                             <span
+                              className={undefined}
                               key="min"
                               name="min"
                               onMouseDown={[Function]}
@@ -749,6 +807,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-min"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -760,6 +819,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               }
                             />
                             <span
+                              className={undefined}
                               key="max"
                               name="max"
                               onMouseDown={[Function]}
@@ -774,6 +834,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             />
                             <input
                               key="hidden-max"
+                              name={undefined}
                               type="hidden"
                               value={
                                 Object {
@@ -823,14 +884,19 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value="red"
                       >
                         <span
+                          className={undefined}
                           onClick={[Function]}
                         >
                           <input
                             checked={true}
+                            name={undefined}
                             onChange={[Function]}
                             type="checkbox"
+                            value={undefined}
                           />
-                          <span>
+                          <span
+                            className={undefined}
+                          >
                             Red
                           </span>
                         </span>
@@ -852,14 +918,19 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value="blue"
                       >
                         <span
+                          className={undefined}
                           onClick={[Function]}
                         >
                           <input
                             checked={true}
+                            name={undefined}
                             onChange={[Function]}
                             type="checkbox"
+                            value={undefined}
                           />
-                          <span>
+                          <span
+                            className={undefined}
+                          >
                             Blue
                           </span>
                         </span>
@@ -880,14 +951,19 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value="green"
                       >
                         <span
+                          className={undefined}
                           onClick={[Function]}
                         >
                           <input
                             checked={false}
+                            name={undefined}
                             onChange={[Function]}
                             type="checkbox"
+                            value={undefined}
                           />
-                          <span>
+                          <span
+                            className={undefined}
+                          >
                             Green
                           </span>
                         </span>
@@ -933,6 +1009,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value={10}
                         >
                           <span
+                            className={undefined}
                             onClick={[Function]}
                           >
                             <input
@@ -940,8 +1017,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               name="r1"
                               onChange={[Function]}
                               type="radio"
+                              value={undefined}
                             />
-                            <span>
+                            <span
+                              className={undefined}
+                            >
                               React.js
                             </span>
                           </span>
@@ -967,6 +1047,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value={10}
                         >
                           <span
+                            className={undefined}
                             onClick={[Function]}
                           >
                             <input
@@ -974,8 +1055,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               name="r1"
                               onChange={[Function]}
                               type="radio"
+                              value={undefined}
                             />
-                            <span>
+                            <span
+                              className={undefined}
+                            >
                               Vue.js
                             </span>
                           </span>
@@ -1001,6 +1085,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           value={10}
                         >
                           <span
+                            className={undefined}
                             onClick={[Function]}
                           >
                             <input
@@ -1008,8 +1093,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               name="r1"
                               onChange={[Function]}
                               type="radio"
+                              value={undefined}
                             />
-                            <span>
+                            <span
+                              className={undefined}
+                            >
                               Angular.js
                             </span>
                           </span>
@@ -1047,13 +1135,16 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         value=""
                       >
                         <textarea
+                          name={undefined}
                           onBlur={[Function]}
                           onChange={[Function]}
                           onKeyUp={[Function]}
                           value=""
                         />
                       </Textarea>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         This is a textarea
                       </span>
                     </div>
@@ -1185,7 +1276,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  className={undefined}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="null"
+                                  onClick={undefined}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1195,7 +1290,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="null"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Favorite framework
                                     </span>
                                   </div>
@@ -1206,6 +1303,8 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-React.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1217,13 +1316,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="React.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       React.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Vue.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1235,13 +1338,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Vue.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Vue.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Angular.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1253,13 +1360,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Angular.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Angular.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-jQuery"
                                   onClick={[Function]}
                                   selected={false}
@@ -1271,13 +1382,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="jQuery"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       jQuery
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Knockout"
                                   onClick={[Function]}
                                   selected={false}
@@ -1289,13 +1404,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Knockout"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Knockout
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Backbone"
                                   onClick={[Function]}
                                   selected={false}
@@ -1307,13 +1426,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Backbone"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Backbone
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Ember"
                                   onClick={[Function]}
                                   selected={false}
@@ -1325,13 +1448,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Ember"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Ember
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Bootstrap"
                                   onClick={[Function]}
                                   selected={false}
@@ -1343,13 +1470,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Bootstrap"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Bootstrap
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Other"
                                   onClick={[Function]}
                                   selected={false}
@@ -1361,13 +1492,16 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Other"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Other
                                     </span>
                                   </div>
                                 </Option>
                               </div>
                               <input
+                                name={undefined}
                                 type="hidden"
                                 value=""
                               />
@@ -1375,7 +1509,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </div>
                         </OutsideClickable>
                       </Select>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Block select input
                       </span>
                     </div>
@@ -1491,7 +1627,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  className={undefined}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="null"
+                                  onClick={undefined}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1501,7 +1641,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="null"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Favorite framework
                                     </span>
                                   </div>
@@ -1512,6 +1654,8 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-React.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1523,13 +1667,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="React.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       React.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Vue.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1541,13 +1689,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Vue.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Vue.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Angular.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1559,13 +1711,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Angular.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Angular.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-jQuery"
                                   onClick={[Function]}
                                   selected={false}
@@ -1577,13 +1733,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="jQuery"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       jQuery
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Knockout"
                                   onClick={[Function]}
                                   selected={false}
@@ -1595,13 +1755,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Knockout"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Knockout
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Backbone"
                                   onClick={[Function]}
                                   selected={false}
@@ -1613,13 +1777,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Backbone"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Backbone
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Ember"
                                   onClick={[Function]}
                                   selected={false}
@@ -1631,13 +1799,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Ember"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Ember
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Bootstrap"
                                   onClick={[Function]}
                                   selected={false}
@@ -1649,13 +1821,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Bootstrap"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Bootstrap
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Other"
                                   onClick={[Function]}
                                   selected={false}
@@ -1667,13 +1843,16 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Other"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Other
                                     </span>
                                   </div>
                                 </Option>
                               </div>
                               <input
+                                name={undefined}
                                 type="hidden"
                                 value=""
                               />
@@ -1681,7 +1860,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </div>
                         </OutsideClickable>
                       </Select>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Multiple select input
                       </span>
                     </div>
@@ -1797,7 +1978,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  className={undefined}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="null"
+                                  onClick={undefined}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1807,7 +1992,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="null"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Favorite framework
                                     </span>
                                   </div>
@@ -1818,6 +2005,8 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-React.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1829,13 +2018,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="React.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       React.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Vue.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1847,13 +2040,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Vue.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Vue.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Angular.js"
                                   onClick={[Function]}
                                   selected={false}
@@ -1865,13 +2062,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Angular.js"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Angular.js
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-jQuery"
                                   onClick={[Function]}
                                   selected={false}
@@ -1883,13 +2084,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="jQuery"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       jQuery
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Knockout"
                                   onClick={[Function]}
                                   selected={false}
@@ -1901,13 +2106,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Knockout"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Knockout
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Backbone"
                                   onClick={[Function]}
                                   selected={false}
@@ -1919,13 +2128,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Backbone"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Backbone
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Ember"
                                   onClick={[Function]}
                                   selected={false}
@@ -1937,13 +2150,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Ember"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Ember
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Bootstrap"
                                   onClick={[Function]}
                                   selected={false}
@@ -1955,13 +2172,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Bootstrap"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Bootstrap
                                     </span>
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
+                                  icon={undefined}
+                                  image={undefined}
                                   key="opt-Other"
                                   onClick={[Function]}
                                   selected={false}
@@ -1973,13 +2194,16 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     key="Other"
                                     onClick={[Function]}
                                   >
-                                    <span>
+                                    <span
+                                      className={undefined}
+                                    >
                                       Other
                                     </span>
                                   </div>
                                 </Option>
                               </div>
                               <input
+                                name={undefined}
                                 type="hidden"
                                 value=""
                               />
@@ -1987,7 +2211,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           </div>
                         </OutsideClickable>
                       </Select>
-                      <span>
+                      <span
+                        className={undefined}
+                      >
                         Inline select input
                       </span>
                     </div>

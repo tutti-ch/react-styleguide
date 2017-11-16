@@ -21,6 +21,7 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
       key="icon"
     />
     <span
+      className={undefined}
       key="text"
     >
       Test content
@@ -55,11 +56,13 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
       key="icon"
     />
     <span
+      className={undefined}
       key="text"
     >
       Test content
     </span>
     <Spinner
+      className={undefined}
       color="light"
       key="spinner"
       size={1.25}
@@ -68,6 +71,7 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
         className=""
       >
         <div
+          className={undefined}
           style={
             Object {
               "borderBottom": "0.125rem solid rgba(255, 255, 255, 0.6)",
