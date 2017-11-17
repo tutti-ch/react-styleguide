@@ -231,10 +231,15 @@ describe("(Component) Select", () => {
   });
 
   test("[unselect] should unselect the given value", () => {
-    const onChange = jest.fn()
+    const onChange = jest.fn();
     const options = getOptions();
     const comp = mount(
-      <Select options={options} selected={["React.js", "jQuery"]} multiple onChange={onChange} />
+      <Select
+        options={options}
+        selected={["React.js", "jQuery"]}
+        multiple
+        onChange={onChange}
+      />
     );
     const inst = comp.instance();
     const event = {
@@ -246,21 +251,32 @@ describe("(Component) Select", () => {
     expect(comp.state("selected")).toEqual(["jQuery"]);
     inst.unselect({ value: "Ember" }, event);
     expect(comp.state("selected")).toEqual(["jQuery"]);
-    expect(onChange).toHaveBeenCalledWith(["jQuery"], { initialValue: ["jQuery"], name: undefined })
+    expect(onChange).toHaveBeenCalledWith(["jQuery"], {
+      initialValue: ["jQuery"],
+      name: undefined
+    });
   });
 
   test("[resetSelected] should reset selected state", () => {
-    const onChange = jest.fn()
+    const onChange = jest.fn();
     const options = getOptions();
     const comp = mount(
-      <Select options={options} selected={["React.js", "jQuery"]} multiple onChange={onChange} />
+      <Select
+        options={options}
+        selected={["React.js", "jQuery"]}
+        multiple
+        onChange={onChange}
+      />
     );
     const inst = comp.instance();
 
-    inst.resetSelected()
-    expect(comp.state("selected")).toEqual([])
-    expect(onChange).toHaveBeenCalledWith(null, { name: undefined, initialValue: ["React.js", "jQuery"] })
-  })
+    inst.resetSelected();
+    expect(comp.state("selected")).toEqual([]);
+    expect(onChange).toHaveBeenCalledWith(null, {
+      name: undefined,
+      initialValue: ["React.js", "jQuery"]
+    });
+  });
 
   test("[snapshot] should match", () => {
     const options = getOptions();

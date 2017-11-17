@@ -275,7 +275,7 @@ describe("(Component) Slider", () => {
       const comp = mount(<Slider />);
       const inst = comp.instance();
       expect(inst.getFormattedValue()).toBeUndefined();
-      comp.setProps({ step: 0.5 })
+      comp.setProps({ step: 0.5 });
       expect(inst.getFormattedValue(10)).toBe("10.00");
     });
 

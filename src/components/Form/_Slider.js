@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import WithWrapper from "./_WithWrapper";
 import classes from "./Form.scss";
 
-
 export class Slider extends Component {
   static defaultProps = {
     template: "",
@@ -108,7 +107,7 @@ export class Slider extends Component {
     /**
      * Number of pixels that you need to pull in order to reset filters.
      */
-    mouseThreshold: PropTypes.number,
+    mouseThreshold: PropTypes.number
   };
 
   constructor(props) {
@@ -339,7 +338,13 @@ export class Slider extends Component {
       min: { range: minRange },
       max: { range: maxRange }
     } = this.state;
-    const { minDistance, crossThumbs, values, extremes, mouseThreshold } = this.props;
+    const {
+      minDistance,
+      crossThumbs,
+      values,
+      extremes,
+      mouseThreshold
+    } = this.props;
 
     const prop = elem.getAttribute("name");
     const rect = elem.getBoundingClientRect();

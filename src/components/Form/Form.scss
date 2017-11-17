@@ -9,22 +9,22 @@ $inputHeight: $size-xxxl;
 
   // Chrome/Opera/Safari
   ::-webkit-input-placeholder {
-    @content
+    @content;
   }
 
   // Firefox 19+
   :-moz-placeholder {
-    @content
+    @content;
   }
 
   // IE 10+
   ::-moz-placeholder {
-    @content
+    @content;
   }
 
   // Firefox 18-
   :-ms-input-placeholder {
-    @content
+    @content;
   }
 }
 
@@ -156,7 +156,7 @@ $inputHeight: $size-xxxl;
       margin-right: $size-xs;
 
       &:after {
-        content: ':'
+        content: ":";
       }
     }
 
@@ -188,11 +188,11 @@ $inputHeight: $size-xxxl;
         transition: $transition-m;
       }
 
-      &[name=min] {
+      &[name="min"] {
         margin-left: -$size-xl / 2;
       }
 
-      &[name=max] {
+      &[name="max"] {
         margin-left: -$size-xl / 2;
       }
 
@@ -200,7 +200,7 @@ $inputHeight: $size-xxxl;
         position: absolute;
         content: attr(data-value);
         left: -50%;
-        right: -50%
+        right: -50%;
       }
     }
   }
@@ -314,7 +314,6 @@ $inputHeight: $size-xxxl;
           font-weight: normal;
         }
       }
-
     }
 
     .icon {
