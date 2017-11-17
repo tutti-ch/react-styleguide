@@ -1,13 +1,13 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { filterProps } from "../../helpers/functions"
-import WithWrapper from "./_WithWrapper"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { filterProps } from "../../helpers/functions";
+import WithWrapper from "./_WithWrapper";
 
 export class Input extends Component {
   static defaultProps = {
     value: "",
-    type: "text",
-  }
+    type: "text"
+  };
 
   static propTypes = {
     /**
@@ -23,20 +23,20 @@ export class Input extends Component {
     /**
      * The input name.
      */
-    name: PropTypes.string,
-  }
+    name: PropTypes.string
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      value: props.value,
-    }
+      value: props.value
+    };
 
-    this.notify = this.notify.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.handleKeyUp = this.handleKeyUp.bind(this)
-    this.handleBlur = this.handleBlur.bind(this)
+    this.notify = this.notify.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
   }
 
   /**
@@ -44,7 +44,7 @@ export class Input extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (nextProps.value !== this.props.value) {
-      this.setState({ value: nextProps.value })
+      this.setState({ value: nextProps.value });
     }
   }
 
@@ -53,12 +53,12 @@ export class Input extends Component {
    */
   notify() {
     if (this.changed === true && typeof this.props.onChange === "function") {
-      const { name, value } = this.props
-      this.props.onChange(this.state.value, { name, initialValue: value })
+      const { name, value } = this.props;
+      this.props.onChange(this.state.value, { name, initialValue: value });
     }
 
     // Reset the value
-    this.changed = false
+    this.changed = false;
   }
 
   /**
@@ -67,11 +67,11 @@ export class Input extends Component {
    * @param event
    */
   handleBlur(event) {
-    this.notify()
+    this.notify();
 
     // istanbul ignore else
     if (typeof this.props.onBlur === "function") {
-      this.props.onBlur(event)
+      this.props.onBlur(event);
     }
   }
 
@@ -82,11 +82,11 @@ export class Input extends Component {
    */
   handleKeyUp(event) {
     if (event.key === "Enter") {
-      this.notify()
+      this.notify();
     }
 
     if (typeof this.props.onKeyUp === "function") {
-      this.props.onKeyUp(event)
+      this.props.onKeyUp(event);
     }
   }
 
@@ -97,25 +97,27 @@ export class Input extends Component {
     this.setState({ value: event.target.value }, () => {
       // Next time when on blur or key up occurs,
       // they will know that the value changed.
-      this.changed = true
-    })
+      this.changed = true;
+    });
   }
 
   render() {
-    const { value } = this.state
-    const { type, name } = this.props
-    const props = filterProps(Input.propTypes, this.props)
+    const { value } = this.state;
+    const { type, name } = this.props;
+    const props = filterProps(Input.propTypes, this.props);
 
-    return <input
-      {...props}
-      name={name}
-      type={type}
-      value={value}
-      onBlur={this.handleBlur}
-      onKeyUp={this.handleKeyUp}
-      onChange={this.handleChange}
-    />
+    return (
+      <input
+        {...props}
+        name={name}
+        type={type}
+        value={value}
+        onBlur={this.handleBlur}
+        onKeyUp={this.handleKeyUp}
+        onChange={this.handleChange}
+      />
+    );
   }
 }
 
-export default WithWrapper(Input)
+export default WithWrapper(Input);

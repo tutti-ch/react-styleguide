@@ -1,13 +1,13 @@
-import React, { Component } from "react"
-import PropTypes from "prop-types"
-import { filterProps } from "../../helpers/functions"
-import classes from "./Form.scss"
-import WithWrapper from "./_WithWrapper"
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { filterProps } from "../../helpers/functions";
+import classes from "./Form.scss";
+import WithWrapper from "./_WithWrapper";
 
 export class InputCheckbox extends Component {
   static defaultProps = {
-    checked: false,
-  }
+    checked: false
+  };
 
   static propTypes = {
     /**
@@ -28,17 +28,17 @@ export class InputCheckbox extends Component {
     /**
      * The input name.
      */
-    name: PropTypes.string,
-  }
+    name: PropTypes.string
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      checked: props.checked,
-    }
+      checked: props.checked
+    };
 
-    this.toggle = this.toggle.bind(this)
+    this.toggle = this.toggle.bind(this);
   }
 
   /**
@@ -46,7 +46,7 @@ export class InputCheckbox extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (nextProps.checked !== this.props.checked) {
-      this.setState({ checked: nextProps.checked })
+      this.setState({ checked: nextProps.checked });
     }
   }
 
@@ -56,16 +56,19 @@ export class InputCheckbox extends Component {
   toggle() {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
-        const { name, checked, value } = this.props
-        this.props.onChange(this.state.checked ? value : undefined, { name, initialValue: checked })
+        const { name, checked, value } = this.props;
+        this.props.onChange(this.state.checked ? value : undefined, {
+          name,
+          initialValue: checked
+        });
       }
-    })
+    });
   }
 
   render() {
-    const { value, checked } = this.state
-    const { label, name } = this.props
-    const props = filterProps(InputCheckbox.propTypes, this.props)
+    const { value, checked } = this.state;
+    const { label, name } = this.props;
+    const props = filterProps(InputCheckbox.propTypes, this.props);
 
     return (
       // We do not use a real label here because react complains
@@ -79,12 +82,10 @@ export class InputCheckbox extends Component {
           checked={checked}
           onChange={this.toggle}
         />
-        <span className={classes.labelText}>
-          {label}
-        </span>
+        <span className={classes.labelText}>{label}</span>
       </span>
-    )
+    );
   }
 }
 
-export default WithWrapper(InputCheckbox)
+export default WithWrapper(InputCheckbox);

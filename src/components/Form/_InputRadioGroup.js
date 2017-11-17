@@ -1,25 +1,25 @@
-import React, { PureComponent, cloneElement, Children } from "react"
-import PropTypes from "prop-types"
+import React, { PureComponent, cloneElement, Children } from "react";
+import PropTypes from "prop-types";
 
 export default class InputGroup extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
 
-    onChange: PropTypes.func, // The on change callback handler
-  }
+    onChange: PropTypes.func // The on change callback handler
+  };
 
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      selected: null,
-    }
+      selected: null
+    };
 
     Children.map(this.props.children, (child, index) => {
       if (child.props.checked) {
-        this.state.selected = index
+        this.state.selected = index;
       }
-    })
+    });
   }
 
   /**
@@ -30,22 +30,22 @@ export default class InputGroup extends PureComponent {
    */
   handleOnChange(index) {
     return (value, props) => {
-      const { onChange } = this.props
+      const { onChange } = this.props;
 
       if (typeof onChange === "function") {
-        onChange(value, props)
+        onChange(value, props);
       }
 
-      this.setState({ selected: index })
-    }
+      this.setState({ selected: index });
+    };
   }
 
   render() {
-    return Children.map(this.props.children, (child, index) => (
+    return Children.map(this.props.children, (child, index) =>
       cloneElement(child, {
         checked: this.state.selected === index,
-        onChange: this.handleOnChange(index),
+        onChange: this.handleOnChange(index)
       })
-    ))
+    );
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "tutti-ch-styleguide",
-  "version": "1.1.16",
+  "version": "1.2.2",
   "description": "React-based styleguide for tutti.ch",
   "main": "src/index.js",
   "scripts": {
@@ -16,11 +16,7 @@
   },
   "lint-staged": {
     "*.{js,json}": ["prettier --write", "git add"],
-    "*.scss": [
-      "prettier --parser postcss --write",
-      "stylelint-staged",
-      "git add"
-    ]
+    "*.scss": ["prettier --parser postcss --write", "git add"]
   },
   "repository": {
     "type": "git",

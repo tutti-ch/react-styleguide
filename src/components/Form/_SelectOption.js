@@ -6,12 +6,39 @@ import classes from "./Form.scss";
 
 class Option extends Component {
   static propTypes = {
+    /**
+     * The on function which is triggered on click.
+     */
     onClick: PropTypes.func,
+
+    /**
+     * Option value.
+     */
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+    /**
+     * Text to display.
+     */
     text: PropTypes.string.isRequired,
+
+    /**
+     * The icon className.
+     */
     icon: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+
+    /**
+     * The src of an img.
+     */
     image: PropTypes.string,
+
+    /**
+     * Whether the option is selected or not.
+     */
     selected: PropTypes.bool,
+
+    /**
+     * Whether the option is highlighted or not.
+     */
     highlighted: PropTypes.bool
   };
 
@@ -35,15 +62,17 @@ class Option extends Component {
     const { value, text, icon, selected, highlighted } = this.props;
     const isImage = !!(icon && icon.match(/^(\/|data:|https?:)/)); // If either absolute url, or dataURI or url is an image
 
+    const optClasses = classNames(
+      {
+        [classes.selected]: selected,
+        [classes.highlighted]: highlighted,
+        [classes.placeholder]: value === null
+      },
+      classes.option
+    );
+
     return (
-      <div
-        onClick={this.select}
-        className={classNames(
-          { [classes.selected]: selected, [classes.highlighted]: highlighted },
-          classes.option
-        )}
-        key={value}
-      >
+      <div onClick={this.select} className={optClasses} key={value}>
         {icon &&
           isImage === false && (
             <span className={classNames(classes.icon, icon)} />
