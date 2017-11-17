@@ -16,18 +16,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   template=""
   values={Array []}
 >
-  <span
-    className={undefined}
-  >
-    <span
-      className={undefined}
-    >
-      <span
-        className={undefined}
-      />
+  <span>
+    <span>
+      <span />
     </span>
     <span
-      className={undefined}
       key="min"
       name="min"
       onMouseDown={[Function]}
@@ -42,7 +35,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
     />
     <input
       key="hidden-min"
-      name={undefined}
       type="hidden"
       value={
         Object {
@@ -54,7 +46,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       }
     />
     <span
-      className={undefined}
       key="max"
       name="max"
       onMouseDown={[Function]}
@@ -69,7 +60,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
     />
     <input
       key="hidden-max"
-      name={undefined}
       type="hidden"
       value={
         Object {
@@ -106,18 +96,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   template=""
   values={Array []}
 >
-  <span
-    className={undefined}
-  >
-    <span
-      className={undefined}
-    >
-      <span
-        className={undefined}
-      />
+  <span>
+    <span>
+      <span />
     </span>
     <span
-      className={undefined}
       key="min"
       name="min"
       onMouseDown={[Function]}
@@ -144,7 +127,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       }
     />
     <span
-      className={undefined}
       key="max"
       name="max"
       onMouseDown={[Function]}
@@ -189,18 +171,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
   template=""
   values={Array []}
 >
-  <span
-    className={undefined}
-  >
-    <span
-      className={undefined}
-    >
-      <span
-        className={undefined}
-      />
+  <span>
+    <span>
+      <span />
     </span>
     <span
-      className={undefined}
       key="min"
       name="min"
       onMouseDown={[Function]}
@@ -215,7 +190,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
     />
     <input
       key="hidden-min"
-      name={undefined}
       type="hidden"
       value={
         Object {
@@ -227,7 +201,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       }
     />
     <span
-      className={undefined}
       key="max"
       name="max"
       onMouseDown={[Function]}
@@ -242,7 +215,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
     />
     <input
       key="hidden-max"
-      name={undefined}
       type="hidden"
       value={
         Object {
@@ -271,18 +243,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
   template=""
   values={Array []}
 >
-  <span
-    className={undefined}
-  >
-    <span
-      className={undefined}
-    >
-      <span
-        className={undefined}
-      />
+  <span>
+    <span>
+      <span />
     </span>
     <span
-      className={undefined}
       key="min"
       name="min"
       onMouseDown={[Function]}
@@ -297,7 +262,6 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
     />
     <input
       key="hidden-min"
-      name={undefined}
       type="hidden"
       value={
         Object {
