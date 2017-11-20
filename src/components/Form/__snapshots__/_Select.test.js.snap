@@ -84,7 +84,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
           className=""
         >
           <Option
-            highlighted={true}
+            highlighted={false}
             key="opt-React.js"
             onClick={[Function]}
             selected={false}

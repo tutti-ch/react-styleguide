@@ -42,7 +42,7 @@ $inputHeight: $size-xxxl;
 }
 
 .wrapper {
-  height: $size-xxxl;
+  min-height: $size-xxxl;
   display: flex;
   align-items: center;
   position: relative;

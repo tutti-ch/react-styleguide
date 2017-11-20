@@ -89,13 +89,13 @@ export class Select extends Component {
     this.getSelectedOptions = this.getSelectedOptions.bind(this);
     this.resetSelected = this.resetSelected.bind(this);
 
-    let { sort, options, selected } = props;
+    let { sort, options, selected, multiple } = props;
 
     options = sort ? this.sortOptions(options) : options;
     selected = Array.isArray(selected) ? selected : [selected];
 
     this.state = {
-      highlighted: this.findIndexByValue(selected[0]),
+      highlighted: !multiple ? this.findIndexByValue(selected[0]) : -1,
       isOpen: false,
       options: options
         .filter(i => i)
@@ -110,14 +110,15 @@ export class Select extends Component {
    * @param selected
    * @param sort
    * @param options
+   * @param multiple
    */
-  componentWillReceiveProps({ selected, options, sort }) {
+  componentWillReceiveProps({ selected, options, sort, multiple }) {
     const state = {};
 
     // Update the selected value
     if (!isEqual(selected, this.props.selected)) {
       state.selected = Array.isArray(selected) ? selected : [selected];
-      state.selected = state.selected.map(i => i.toString());
+      state.selected = state.selected.filter(i => i).map(i => i.toString());
     }
 
     // Re-sort options if the order has been changed
@@ -127,6 +128,8 @@ export class Select extends Component {
     }
 
     if (Object.keys(state).length) {
+      const selected = state.selected || this.state.selected
+      state.highlighted = !multiple ? this.findIndexByValue(selected[0], state.options) : -1;
       this.setState(state);
     }
   }
@@ -235,8 +238,15 @@ export class Select extends Component {
     }
   }
 
-  findIndexByValue(value) {
-    const { options } = this.props;
+  /**
+   * Find the index by its value.
+   *
+   * @param value
+   * @param options
+   * @return {number}
+   */
+  findIndexByValue(value, options = null) {
+    options = options || this.props.options
 
     if (value) {
       for (let key = 0; key < options.length; key++) {
@@ -268,11 +278,16 @@ export class Select extends Component {
       // If the item is already there unselect it otherwise add it.
       selected = this.state.selected.slice(0);
       const index = selected.indexOf(value);
-      index > -1 ? selected.splice(index, 1) : selected.push(value);
+
+      if (index > -1) {
+        selected.splice(index, 1);
+      } else {
+        selected.push(value);
+      }
     }
 
     this.setState(
-      { selected, highlighted: this.findIndexByValue(value) },
+      { selected, highlighted: multiple ? -1 : this.findIndexByValue(value) },
       () => {
         if (typeof this.props.onChange === "function") {
           this.props.onChange(multiple ? selected : selected[0], {
@@ -300,7 +315,7 @@ export class Select extends Component {
     if (index > -1) {
       const { onChange, name } = this.props;
       selected.splice(index, 1);
-      this.setState({ selected }, () => {
+      this.setState({ selected, highlighted: -1 }, () => {
         if (typeof onChange === "function") {
           onChange(selected, {
             name,

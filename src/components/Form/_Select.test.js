@@ -39,9 +39,30 @@ describe("(Component) Select", () => {
 
     comp.setProps({ options, sort: false, selected: "React.js" });
     expect(setStateSpy).toHaveBeenCalledWith({
+      highlighted: - 1,
       selected: ["React.js"],
       options: options
     });
+  });
+
+  test("[componentWillReceiveProps] should handle highlighted state", () => {
+    const options = getOptions();
+    const comp = mount(<Select options={options} selected="jQuery" />);
+    const inst = comp.instance()
+    expect(comp.state("selected")).toEqual(["jQuery"]);
+    expect(comp.state("highlighted")).toBe(3)
+
+    options[3].value = "nojQuery"
+    inst.componentWillReceiveProps({ options })
+    expect(comp.state("highlighted")).toBe(-1)
+    expect(comp.state("selected")).toEqual([])
+    options[3].value = "jQuery"
+    inst.componentWillReceiveProps({ options, selected: ["jQuery"] })
+    expect(comp.state("selected")).toEqual(["jQuery"])
+    expect(comp.state("highlighted")).toBe(3)
+    inst.componentWillReceiveProps({ options, selected: ["jQuery"], multiple: true })
+    expect(comp.state("selected")).toEqual(["jQuery"])
+    expect(comp.state("highlighted")).toBe(-1) // does not support multiple
   });
 
   test("[handleArrowDown/handleArrowUp] should increase/decrease the highlight index", () => {
@@ -182,18 +203,18 @@ describe("(Component) Select", () => {
     expect(inst.props.options).toEqual(options);
     expect(comp.state("selected")).toEqual(["Ember"]);
     expect(inst.findIndexByValue("Ember")).toBe(6);
-    expect(comp.state("highlighted")).toBe(6);
+    expect(comp.state("highlighted")).toBe(-1); // Multiples are not highlighted
     inst.select({ value: "jQuery" }, event);
     expect(event.stopPropagation).toHaveBeenCalled();
     expect(comp.state("selected")).toEqual(["Ember", "jQuery"]);
-    expect(comp.state("highlighted")).toBe(3);
+    expect(comp.state("highlighted")).toBe(-1);
     expect(onChange).toHaveBeenCalledWith(["Ember", "jQuery"], {
       name: "favs",
       initialValue: ["Ember"]
     });
     inst.select({ value: "jQuery" }, event);
     expect(comp.state("selected")).toEqual(["Ember"]);
-    expect(comp.state("highlighted")).toBe(3);
+    expect(comp.state("highlighted")).toBe(-1);
     expect(onChange).toHaveBeenCalledWith(["Ember"], {
       name: "favs",
       initialValue: ["Ember"]
