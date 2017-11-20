@@ -353,7 +353,7 @@ export class Select extends Component {
    */
   handleOnFocus() {
     // istanbul ignore else
-    if (document) {
+    if (typeof document !== "undefined") {
       document.addEventListener("keydown", this.keyDown);
     }
   }
@@ -363,7 +363,7 @@ export class Select extends Component {
    */
   handleOnBlur() {
     // istanbul ignore else
-    if (document) {
+    if (typeof document !== "undefined") {
       document.removeEventListener("keydown", this.keyDown);
     }
   }
