@@ -128,8 +128,10 @@ export class Select extends Component {
     }
 
     if (Object.keys(state).length) {
-      const selected = state.selected || this.state.selected
-      state.highlighted = !multiple ? this.findIndexByValue(selected[0], state.options) : -1;
+      const selected = state.selected || this.state.selected;
+      state.highlighted = !multiple
+        ? this.findIndexByValue(selected[0], state.options)
+        : -1;
       this.setState(state);
     }
   }
@@ -246,7 +248,7 @@ export class Select extends Component {
    * @return {number}
    */
   findIndexByValue(value, options = null) {
-    options = options || this.props.options
+    options = options || this.props.options;
 
     if (value) {
       for (let key = 0; key < options.length; key++) {
@@ -372,8 +374,8 @@ export class Select extends Component {
    * @return {*}
    */
   getSelectedOptions() {
-    const { options, placeholder } = this.props;
-    const { selected } = this.state;
+    const { placeholder } = this.props;
+    const { options, selected } = this.state;
     const selectedOpts = options.filter(o => selected.indexOf(o.value) > -1);
 
     if (selectedOpts.length === 0 && placeholder) {
