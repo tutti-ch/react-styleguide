@@ -419,6 +419,10 @@ $inputHeight: $size-xxxl;
     }
   }
 
+  .icoClose {
+    display: none;
+  }
+
   .select.multiple {
     .ph {
       width: 95%;
@@ -441,10 +445,9 @@ $inputHeight: $size-xxxl;
           &:after {
             display: none;
           }
-
-          .icoClose {
-            color: $greyscale-100;
-          }
+        }
+        .icoClose {
+          display: block;
         }
       }
     }
