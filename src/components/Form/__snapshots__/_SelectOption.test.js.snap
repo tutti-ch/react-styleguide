@@ -18,9 +18,6 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
     <span>
       my option
     </span>
-    <span
-      className="ico ico-close"
-    />
   </div>
 </Option>
 `;

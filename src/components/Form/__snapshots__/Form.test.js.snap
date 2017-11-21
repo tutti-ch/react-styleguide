@@ -1203,9 +1203,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Favorite framework
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                               </div>
@@ -1215,6 +1212,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="React.js"
@@ -1228,14 +1226,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       React.js
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Vue.js"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Vue.js"
@@ -1249,14 +1245,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Vue.js
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Angular.js"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Angular.js"
@@ -1270,14 +1264,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Angular.js
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-jQuery"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="jQuery"
@@ -1291,14 +1283,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       jQuery
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Knockout"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Knockout"
@@ -1312,14 +1302,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Knockout
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Backbone"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Backbone"
@@ -1333,14 +1321,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Backbone
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Ember"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Ember"
@@ -1354,14 +1340,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Ember
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Bootstrap"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Bootstrap"
@@ -1375,14 +1359,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Bootstrap
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Other"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Other"
@@ -1396,9 +1378,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Other
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                               </div>
@@ -1539,9 +1518,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Favorite framework
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                               </div>
@@ -1551,6 +1527,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="React.js"
@@ -1565,13 +1542,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       React.js
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Vue.js"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Vue.js"
@@ -1586,13 +1564,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Vue.js
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Angular.js"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Angular.js"
@@ -1607,13 +1586,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Angular.js
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-jQuery"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="jQuery"
@@ -1628,13 +1608,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       jQuery
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Knockout"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Knockout"
@@ -1649,13 +1630,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Knockout
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Backbone"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Backbone"
@@ -1670,13 +1652,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Backbone
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Ember"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Ember"
@@ -1691,13 +1674,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Ember
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Bootstrap"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Bootstrap"
@@ -1712,13 +1696,14 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Bootstrap
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Other"
+                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Other"
@@ -1733,7 +1718,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Other
                                     </span>
                                     <span
-                                      className="ico ico-close"
+                                      className="ico ico-close undefined"
                                     />
                                   </div>
                                 </Option>
@@ -1875,9 +1860,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Favorite framework
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                               </div>
@@ -1887,6 +1869,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="React.js"
@@ -1900,14 +1883,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       React.js
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Vue.js"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Vue.js"
@@ -1921,14 +1902,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Vue.js
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Angular.js"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Angular.js"
@@ -1942,14 +1921,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Angular.js
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-jQuery"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="jQuery"
@@ -1963,14 +1940,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       jQuery
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Knockout"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Knockout"
@@ -1984,14 +1959,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Knockout
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Backbone"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Backbone"
@@ -2005,14 +1978,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Backbone
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Ember"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Ember"
@@ -2026,14 +1997,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Ember
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Bootstrap"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Bootstrap"
@@ -2047,14 +2016,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Bootstrap
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-Other"
+                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Other"
@@ -2068,9 +2035,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Other
                                     </span>
-                                    <span
-                                      className="ico ico-close"
-                                    />
                                   </div>
                                 </Option>
                               </div>

@@ -77,9 +77,6 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 my-placeholder
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
         </div>
@@ -89,6 +86,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
           <Option
             highlighted={false}
             key="opt-React.js"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="React.js"
@@ -103,13 +101,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 React.js
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Vue.js"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Vue.js"
@@ -124,13 +123,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Vue.js
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Angular.js"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Angular.js"
@@ -145,13 +145,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Angular.js
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-jQuery"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="jQuery"
@@ -166,13 +167,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 jQuery
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Knockout"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Knockout"
@@ -187,13 +189,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Knockout
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Backbone"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Backbone"
@@ -208,13 +211,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Backbone
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Ember"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Ember"
@@ -229,13 +233,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Ember
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Bootstrap"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Bootstrap"
@@ -250,13 +255,14 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Bootstrap
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Other"
+            multiple={true}
             onClick={[Function]}
             selected={false}
             text="Other"
@@ -271,7 +277,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                 Other
               </span>
               <span
-                className="ico ico-close"
+                className="ico ico-close undefined"
               />
             </div>
           </Option>
@@ -366,9 +372,6 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 jQuery
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
         </div>
@@ -378,6 +381,7 @@ exports[`(Component) Select [snapshot] should match 1`] = `
           <Option
             highlighted={false}
             key="opt-React.js"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="React.js"
@@ -391,14 +395,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 React.js
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Vue.js"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Vue.js"
@@ -412,14 +414,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Vue.js
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Angular.js"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Angular.js"
@@ -433,14 +433,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Angular.js
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={true}
             key="opt-jQuery"
+            multiple={false}
             onClick={[Function]}
             selected={true}
             text="jQuery"
@@ -454,14 +452,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 jQuery
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Knockout"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Knockout"
@@ -475,14 +471,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Knockout
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Backbone"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Backbone"
@@ -496,14 +490,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Backbone
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Ember"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Ember"
@@ -517,14 +509,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Ember
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Bootstrap"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Bootstrap"
@@ -538,14 +528,12 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Bootstrap
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
           <Option
             highlighted={false}
             key="opt-Other"
+            multiple={false}
             onClick={[Function]}
             selected={false}
             text="Other"
@@ -559,9 +547,6 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Other
               </span>
-              <span
-                className="ico ico-close"
-              />
             </div>
           </Option>
         </div>
