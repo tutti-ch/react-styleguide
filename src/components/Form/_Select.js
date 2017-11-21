@@ -462,6 +462,7 @@ export class Select extends Component {
                     text={text}
                     value={value}
                     selected={selectedValues.indexOf(value) > -1}
+                    multiple={multiple}
                     highlighted={highlighted === key}
                     key={`opt-${value}`}
                   />

@@ -39,7 +39,12 @@ class Option extends Component {
     /**
      * Whether the option is highlighted or not.
      */
-    highlighted: PropTypes.bool
+    highlighted: PropTypes.bool,
+
+    /**
+     * Whether this is a multi select or not.
+     */
+    multiple: PropTypes.bool
   };
 
   static defaultProps = {
@@ -59,7 +64,7 @@ class Option extends Component {
   }
 
   render() {
-    const { value, text, icon, selected, highlighted } = this.props;
+    const { value, text, icon, selected, highlighted, multiple } = this.props;
     const isImage = !!(icon && icon.match(/^(\/|data:|https?:)/)); // If either absolute url, or dataURI or url is an image
 
     const optClasses = classNames(
@@ -80,7 +85,9 @@ class Option extends Component {
         {icon &&
           isImage === true && <Image className={classes.icon} src={icon} />}
         <span className={classes.text}>{text}</span>
-        <span className='ico ico-close'></span>
+        { multiple &&
+          <span className={`ico ico-close ${classes.icoClose}`}></span>
+        }
       </div>
     );
   }
