@@ -7,7 +7,7 @@
     "test": "jest --coverage",
     "dev": "npm run styleguide",
     "dist:build": "npm run test && NODE_ENV=umd webpack",
-    "dist:publish": "npm run dist:build && npm version patch -m \"Upgrade package\" && npm publish",
+    "dist:publish": "git pull && npm run dist:build && npm version patch -m \"Upgrade package\" && git push && npm publish",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "node ./scripts/generateIcons.js && styleguidist server",
