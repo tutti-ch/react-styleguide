@@ -225,6 +225,7 @@ $inputHeight: $size-xxxl;
 
     .ph {
       display: flex;
+      flex-wrap: wrap;
 
       .option {
         padding-right: $size-xs;
@@ -256,12 +257,14 @@ $inputHeight: $size-xxxl;
     .select-inner {
       border: $border-default;
       background: $greyscale-100;
-      height: $size-xxxl;
+      min-height: $size-xxxl;
       line-height: $size-xxxl;
       position: relative;
       text-align: left;
       padding: 0 $size-xs;
       cursor: pointer;
+      display: flex;
+      align-items: center;
 
       &:focus {
         border-color: $greyscale-00;
@@ -419,7 +422,6 @@ $inputHeight: $size-xxxl;
   .select.multiple {
     .ph {
       width: 95%;
-      overflow: hidden;
     }
 
     &:not(.placeholder) {
@@ -427,18 +429,21 @@ $inputHeight: $size-xxxl;
         height: 100%;
         line-height: 1rem;
         align-items: center;
+        padding-top: $size-s;
 
         .option {
-          background: $greyscale-80;
-          border: $border-default;
+          background: $blue-50;
+          color: $greyscale-100;
           border-radius: 3px;
           padding: $size-xxxs $size-m;
-          font-size: 0.8rem;
+          margin: 0 $size-s $size-s 0;
 
           &:after {
-            content: "x";
-            margin-left: $size-xxs;
-            display: inline-block;
+            display: none;
+          }
+
+          .icoClose {
+            color: $greyscale-100;
           }
         }
       }

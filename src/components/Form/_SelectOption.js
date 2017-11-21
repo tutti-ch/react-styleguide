@@ -80,6 +80,7 @@ class Option extends Component {
         {icon &&
           isImage === true && <Image className={classes.icon} src={icon} />}
         <span className={classes.text}>{text}</span>
+        <span className='ico ico-close'></span>
       </div>
     );
   }
