@@ -77,6 +77,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 my-placeholder
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
         </div>
@@ -99,6 +102,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 React.js
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -117,6 +123,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Vue.js
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -135,6 +144,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Angular.js
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -153,6 +165,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 jQuery
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -171,6 +186,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Knockout
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -189,6 +207,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Backbone
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -207,6 +228,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Ember
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -225,6 +249,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Bootstrap
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -243,6 +270,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Other
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
         </div>
@@ -336,6 +366,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 jQuery
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
         </div>
@@ -358,6 +391,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 React.js
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -376,6 +412,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Vue.js
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -394,6 +433,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Angular.js
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -412,6 +454,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 jQuery
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -430,6 +475,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Knockout
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -448,6 +496,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Backbone
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -466,6 +517,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Ember
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -484,6 +538,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Bootstrap
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
           <Option
@@ -502,6 +559,9 @@ exports[`(Component) Select [snapshot] should match 1`] = `
               <span>
                 Other
               </span>
+              <span
+                className="ico ico-close"
+              />
             </div>
           </Option>
         </div>
