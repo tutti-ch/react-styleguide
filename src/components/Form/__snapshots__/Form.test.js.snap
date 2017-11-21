@@ -1191,6 +1191,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 <Option
                                   key="null"
+                                  multiple={false}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1506,6 +1507,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 <Option
                                   key="null"
+                                  multiple={true}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1518,6 +1520,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Favorite framework
                                     </span>
+                                    <span
+                                      className="ico ico-close undefined"
+                                    />
                                   </div>
                                 </Option>
                               </div>
@@ -1848,6 +1853,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               >
                                 <Option
                                   key="null"
+                                  multiple={false}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}

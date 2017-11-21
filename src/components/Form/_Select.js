@@ -435,6 +435,7 @@ export class Select extends Component {
                   value={o.value}
                   key={o.value}
                   className={o.className}
+                  multiple={multiple}
                   onClick={multiple && o.value ? this.unselect : undefined}
                 />
               ))}

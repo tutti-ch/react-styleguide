@@ -65,6 +65,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
         >
           <Option
             key="null"
+            multiple={true}
             selected={false}
             text="my-placeholder"
             value={null}
@@ -77,6 +78,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 my-placeholder
               </span>
+              <span
+                className="ico ico-close undefined"
+              />
             </div>
           </Option>
         </div>
@@ -360,6 +364,7 @@ exports[`(Component) Select [snapshot] should match 1`] = `
         >
           <Option
             key="jQuery"
+            multiple={false}
             selected={false}
             text="jQuery"
             value="jQuery"
