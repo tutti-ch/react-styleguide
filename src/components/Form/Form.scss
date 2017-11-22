@@ -423,11 +423,6 @@ $inputHeight: $size-xxxl;
     display: none;
   }
 
-  .icoCheck {
-    color: $blue-50;
-    margin: 0;
-  }
-
   .select.multiple {
     .ph {
       width: 95%;
@@ -481,16 +476,17 @@ $inputHeight: $size-xxxl;
     .options .option.selected {
       position: relative;
 
-      &:after {
+      .icoCheck {
         content: "";
         display: inline-block;
         position: absolute;
         right: $size-xs;
         top: 50%;
         transform: translateY(-50%);
-        background: $green-50;
         width: $size-xs;
         height: $size-xs;
+        color: $blue-50;
+        margin: 0;
       }
     }
   }
