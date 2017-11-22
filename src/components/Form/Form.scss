@@ -423,6 +423,11 @@ $inputHeight: $size-xxxl;
     display: none;
   }
 
+  .icoCheck {
+    color: $blue-50;
+    margin: 0;
+  }
+
   .select.multiple {
     .ph {
       width: 95%;
@@ -465,6 +470,10 @@ $inputHeight: $size-xxxl;
             margin: 0;
             font-size: $size-xs;
           }
+        }
+
+        .icoCheck {
+          display: none;
         }
       }
     }

@@ -85,9 +85,8 @@ class Option extends Component {
         {icon &&
           isImage === true && <Image className={classes.icon} src={icon} />}
         <span className={classes.text}>{text}</span>
-        { multiple &&
-          <span className={`ico ico-close ${classes.icoClose}`}></span>
-        }
+        { multiple && <span className={`ico ico-close ${classes.icoClose}`}></span>}
+        { multiple && <span className={`ico ico-check ${classes.icoClose}`}></span>}
       </div>
     );
   }

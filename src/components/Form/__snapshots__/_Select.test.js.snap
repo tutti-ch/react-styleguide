@@ -81,6 +81,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span
                 className="ico ico-close undefined"
               />
+              <span
+                className="ico ico-check undefined"
+              />
             </div>
           </Option>
         </div>
@@ -107,6 +110,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span
                 className="ico ico-close undefined"
               />
+              <span
+                className="ico ico-check undefined"
+              />
             </div>
           </Option>
           <Option
@@ -128,6 +134,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               </span>
               <span
                 className="ico ico-close undefined"
+              />
+              <span
+                className="ico ico-check undefined"
               />
             </div>
           </Option>
@@ -151,6 +160,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span
                 className="ico ico-close undefined"
               />
+              <span
+                className="ico ico-check undefined"
+              />
             </div>
           </Option>
           <Option
@@ -172,6 +184,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               </span>
               <span
                 className="ico ico-close undefined"
+              />
+              <span
+                className="ico ico-check undefined"
               />
             </div>
           </Option>
@@ -195,6 +210,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span
                 className="ico ico-close undefined"
               />
+              <span
+                className="ico ico-check undefined"
+              />
             </div>
           </Option>
           <Option
@@ -216,6 +234,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               </span>
               <span
                 className="ico ico-close undefined"
+              />
+              <span
+                className="ico ico-check undefined"
               />
             </div>
           </Option>
@@ -239,6 +260,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span
                 className="ico ico-close undefined"
               />
+              <span
+                className="ico ico-check undefined"
+              />
             </div>
           </Option>
           <Option
@@ -261,6 +285,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span
                 className="ico ico-close undefined"
               />
+              <span
+                className="ico ico-check undefined"
+              />
             </div>
           </Option>
           <Option
@@ -282,6 +309,9 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               </span>
               <span
                 className="ico ico-close undefined"
+              />
+              <span
+                className="ico ico-check undefined"
               />
             </div>
           </Option>

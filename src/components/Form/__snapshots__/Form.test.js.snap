@@ -1523,6 +1523,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span
                                       className="ico ico-close undefined"
                                     />
+                                    <span
+                                      className="ico ico-check undefined"
+                                    />
                                   </div>
                                 </Option>
                               </div>
@@ -1549,6 +1552,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span
                                       className="ico ico-close undefined"
                                     />
+                                    <span
+                                      className="ico ico-check undefined"
+                                    />
                                   </div>
                                 </Option>
                                 <Option
@@ -1570,6 +1576,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     </span>
                                     <span
                                       className="ico ico-close undefined"
+                                    />
+                                    <span
+                                      className="ico ico-check undefined"
                                     />
                                   </div>
                                 </Option>
@@ -1593,6 +1602,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span
                                       className="ico ico-close undefined"
                                     />
+                                    <span
+                                      className="ico ico-check undefined"
+                                    />
                                   </div>
                                 </Option>
                                 <Option
@@ -1614,6 +1626,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     </span>
                                     <span
                                       className="ico ico-close undefined"
+                                    />
+                                    <span
+                                      className="ico ico-check undefined"
                                     />
                                   </div>
                                 </Option>
@@ -1637,6 +1652,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span
                                       className="ico ico-close undefined"
                                     />
+                                    <span
+                                      className="ico ico-check undefined"
+                                    />
                                   </div>
                                 </Option>
                                 <Option
@@ -1658,6 +1676,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     </span>
                                     <span
                                       className="ico ico-close undefined"
+                                    />
+                                    <span
+                                      className="ico ico-check undefined"
                                     />
                                   </div>
                                 </Option>
@@ -1681,6 +1702,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span
                                       className="ico ico-close undefined"
                                     />
+                                    <span
+                                      className="ico ico-check undefined"
+                                    />
                                   </div>
                                 </Option>
                                 <Option
@@ -1703,6 +1727,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span
                                       className="ico ico-close undefined"
                                     />
+                                    <span
+                                      className="ico ico-check undefined"
+                                    />
                                   </div>
                                 </Option>
                                 <Option
@@ -1724,6 +1751,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     </span>
                                     <span
                                       className="ico ico-close undefined"
+                                    />
+                                    <span
+                                      className="ico ico-check undefined"
                                     />
                                   </div>
                                 </Option>
