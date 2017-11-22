@@ -419,13 +419,21 @@ $inputHeight: $size-xxxl;
     }
   }
 
-  .icoClose {
+  .icoClose,
+  .icoCheck {
     display: none;
   }
 
   .select.multiple {
     .ph {
       width: 95%;
+
+    // Styles for the arrow
+    &:after {
+      top: $size-xxxl / 2;
+      transform: none;
+      margin-top: 0;
+      }
     }
 
     &:not(.placeholder) {
@@ -481,10 +489,6 @@ $inputHeight: $size-xxxl;
         display: inline-block;
         position: absolute;
         right: $size-xs;
-        top: 50%;
-        transform: translateY(-50%);
-        width: $size-xs;
-        height: $size-xs;
         color: $blue-50;
         margin: 0;
       }
