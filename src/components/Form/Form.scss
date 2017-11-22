@@ -436,22 +436,34 @@ $inputHeight: $size-xxxl;
         padding-top: $size-s;
 
         .option {
-          background: $blue-50;
+          background-color: $blue-50;
           color: $greyscale-100;
           border-radius: 3px;
-          padding: $size-xxxs $size-xxxs $size-xxxs $size-xxs;
+          padding: $size-xxxs $size-xxs;
           margin: 0 $size-s $size-s 0;
+          transition: all $transition-m;
+
+          &:hover {
+            background-color: $blue-60;
+          }
 
           &:after {
             display: none;
           }
         }
+
         .icoClose {
           display: block;
-          margin-left: $size-xxs;
+          margin: 0 0 0 $size-xxs;
+          transition: all $transition-s;
+
+          &:hover {
+            color: $blue-20;
+          }
 
           &:before {
             margin: 0;
+            font-size: $size-xs;
           }
         }
       }
