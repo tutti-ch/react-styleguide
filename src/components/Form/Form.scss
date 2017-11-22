@@ -439,7 +439,7 @@ $inputHeight: $size-xxxl;
           background: $blue-50;
           color: $greyscale-100;
           border-radius: 3px;
-          padding: $size-xxxs $size-m;
+          padding: $size-xxxs $size-xxxs $size-xxxs $size-xxs;
           margin: 0 $size-s $size-s 0;
 
           &:after {
@@ -448,6 +448,11 @@ $inputHeight: $size-xxxl;
         }
         .icoClose {
           display: block;
+          margin-left: $size-xxs;
+
+          &:before {
+            margin: 0;
+          }
         }
       }
     }
