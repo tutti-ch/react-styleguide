@@ -1,0 +1,145 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  margin-right: -1em;
+  padding-right: 2em;
+  &:before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
+@mixin textTruncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin valign {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin boxShadow {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+@mixin rainbow {
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: linear-gradient(
+      to right,
+      $red-50 0%,
+      $yellow-50 32%,
+      $green-50 66%,
+      $blue-50 100%
+    );
+    @include z-index(topbar, ground);
+  }
+}
+
+/* stylelint-disable plugin/no-z-index */
+@mixin z-index($layer, $level) {
+  $content: ("penthouse": 90, "first": 20, "ground": 10, "basement": -10);
+
+  $topbar: ("penthouse": 900, "first": 200, "ground": 100, "basement": -100);
+
+  $overlay: (
+    "penthouse": 900000,
+    "first": 200000,
+    "ground": 100000,
+    "basement": -100000
+  );
+
+  @if $layer == "content" {
+    z-index: map-get($content, $level);
+  } @else if $layer == "topbar" {
+    z-index: map-get($topbar, $level);
+  } @else if $layer == "overlay" {
+    z-index: map-get($overlay, $level);
+  }
+}
+/* stylelint-enable plugin/no-z-index */
+
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either top, right, bottom or left.";
+  }
+
+  width: 0;
+  height: 0;
+  content: "";
+  top: 20%;
+  margin-top: -$size;
+  position: absolute;
+
+  $perpendicular-borders: $size solid transparent;
+
+  @if $direction == top {
+    border-left: $perpendicular-borders;
+    border-right: $perpendicular-borders;
+    border-bottom: $size solid $color;
+    border-top: $perpendicular-borders;
+    top: -$size*2;
+  } @else if $direction == bottom {
+    border-left: $perpendicular-borders;
+    border-right: $perpendicular-borders;
+    border-top: $size solid $color;
+    border-bottom: $perpendicular-borders;
+    bottom: -$size*2;
+  } @else if $direction == right {
+    border-bottom: $perpendicular-borders;
+    border-top: $perpendicular-borders;
+    border-left: $size solid $color;
+    border-right: $perpendicular-borders;
+    right: -$size*2;
+  } @else if $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top: $perpendicular-borders;
+    border-right: $size solid $color;
+    border-left: $perpendicular-borders;
+    left: -$size*2;
+  }
+}
+
+//Mixin to target ie10+ (Edge excluded)
+
+@mixin ifInternetExplorer {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
