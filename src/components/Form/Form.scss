@@ -373,7 +373,7 @@ $inputHeight: $size-xxxl;
     font-size: 1rem;
 
     .select {
-      flex: 1;
+      flex: 0 0 auto;
       width: auto;
     }
 
@@ -387,6 +387,7 @@ $inputHeight: $size-xxxl;
 
     .select-inner {
       border: 1px solid transparent;
+      display: inline-block;
       background-color: transparent;
       height: auto;
 
