@@ -27,7 +27,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="Block text input"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Input
                         onChange={[Function]}
@@ -52,7 +52,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="Inline text input"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Input
                         onChange={[Function]}
@@ -112,7 +112,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="password"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Input
                         onChange={[Function]}
@@ -137,7 +137,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="email"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Input
                         onChange={[Function]}
@@ -162,7 +162,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="phone"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Input
                         onChange={[Function]}
@@ -819,7 +819,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     value="red"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <InputCheckbox
                         checked={true}
@@ -848,7 +848,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     value="blue"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <InputCheckbox
                         checked={true}
@@ -876,7 +876,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     value="green"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <InputCheckbox
                         checked={false}
@@ -928,7 +928,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       value={10}
                     >
                       <div
-                        className="undefined"
+                        className=""
                       >
                         <InputRadio
                           checked={true}
@@ -962,7 +962,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       value={10}
                     >
                       <div
-                        className="undefined"
+                        className=""
                       >
                         <InputRadio
                           checked={false}
@@ -996,7 +996,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       value={10}
                     >
                       <div
-                        className="undefined"
+                        className=""
                       >
                         <InputRadio
                           checked={false}
@@ -1045,7 +1045,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="This is a textarea"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Textarea
                         onChange={[Function]}
@@ -1125,7 +1125,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     placeholder="Favorite framework"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Select
                         multiple={false}
@@ -1441,7 +1441,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     placeholder="Favorite framework"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Select
                         multiple={true}
@@ -1817,7 +1817,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     placeholder="Favorite framework"
                   >
                     <div
-                      className=""
+                      className="undefined"
                     >
                       <Select
                         multiple={false}

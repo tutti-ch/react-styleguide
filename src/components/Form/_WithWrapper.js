@@ -87,7 +87,8 @@ export default (WrappedComponent, mergeProps = {}) => {
         classes.wrapper,
         {
           [classes.inline]: inline,
-          [classes.hasValue]: hasValue
+          [classes.hasValue]: hasValue,
+          [classes.hasLabel]: label
         },
         mergeProps.className,
         className

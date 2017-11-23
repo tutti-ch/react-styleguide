@@ -367,10 +367,13 @@ $inputHeight: $size-xxxl;
   * Styles for an inline select
   */
   &.inline.select-wrapper {
-    flex-direction: row-reverse;
     align-items: center;
     line-height: 1;
     font-size: 1rem;
+
+    &.hasLabel {
+      flex-direction: row-reverse;      
+    }
 
     .select {
       flex: 0 0 auto;
