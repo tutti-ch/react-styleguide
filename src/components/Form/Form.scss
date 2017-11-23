@@ -287,6 +287,7 @@ $inputHeight: $size-xxxl;
         @include mediumShadow();
         border: $border-default;
         user-select: none;
+        @include z-index("overlay", "ground");        
 
         // Keep the style separated for the placeholder option
         .option {
@@ -412,7 +413,6 @@ $inputHeight: $size-xxxl;
 
     .options {
       left: auto;
-      margin-top: $size-m;
       min-width: 250px;
       max-height: 320px;
     }
