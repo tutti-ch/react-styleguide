@@ -15,7 +15,9 @@ const BoxCard = ({ className, children, name }) => (
   <div className={classNames(className, classes.card)}>
     <div className={classes.inner}>
       <div className={classes.content}>{children}</div>
-      <div className={classes.desc}>{name}</div>
+      <div className={classes.desc}>{
+        Array.isArray(name) ? name.map(n => <div>{n}</div>) : name}
+      </div>
     </div>
   </div>
 );

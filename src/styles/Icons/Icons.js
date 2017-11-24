@@ -30,13 +30,14 @@ export default class Icons extends Component {
 
   render() {
     const icons = this.getIconList();
+    const icoCase = s => s.replace(/\.?([A-Z])/g, (x,y) => "-" + y.toLowerCase()).replace(/^-/, "ico-")
 
     return (
       <BoxCardWrapper>
         {Object.keys(icons)
           .sort()
           .map((icon, index) => (
-            <BoxCard key={`asset-${index}`} name={icon}>
+            <BoxCard key={`asset-${index}`} name={[icon, icoCase(icon)]}>
               <img
                 className={classes.image}
                 src={icons[icon]}
