@@ -189,11 +189,11 @@ $inputHeight: $size-xxxl;
       }
 
       &[name="min"] {
-        margin-left: -$size-xl / 2;
+        margin-left: 0;
       }
 
       &[name="max"] {
-        margin-left: -$size-xl / 2;
+        margin-left: - $size-xl;
       }
 
       &[data-value]:before {
@@ -201,6 +201,10 @@ $inputHeight: $size-xxxl;
         content: attr(data-value);
         left: -50%;
         right: -50%;
+      }
+
+      &:hover {
+        border: 1px solid $greyscale-80;
       }
     }
   }
@@ -372,7 +376,7 @@ $inputHeight: $size-xxxl;
     font-size: 1rem;
 
     &.hasLabel {
-      flex-direction: row-reverse;      
+      flex-direction: row-reverse;
     }
 
     .select {
