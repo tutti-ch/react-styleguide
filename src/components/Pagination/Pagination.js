@@ -22,7 +22,7 @@ export default class Pagination extends Component {
     pageText: PropTypes.string,
 
     /**
-     * Function called when a page number is clicked 
+     * Function called when a page number is clicked
      */
     onChange: PropTypes.func,
 

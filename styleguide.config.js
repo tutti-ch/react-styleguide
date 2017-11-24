@@ -1,9 +1,9 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
-  styleguideDir: 'docs',
+  styleguideDir: "docs",
 
-  template: 'src/templates/index.html',
+  template: "src/templates/index.html",
 
   // @see https://react-styleguidist.js.org/docs/components.html#sections
   //
@@ -15,18 +15,19 @@ module.exports = {
   // -- sections: Array of subsections (can be nested)
   sections: [
     {
-      name: 'Styles',
-      components: 'src/styles/**/[A-Z]*.js'
+      name: "Styles",
+      components: "src/styles/**/[A-Z]*.js"
     },
     {
-      name: 'Components',
-      components: 'src/components/**/[A-Z]*.js'
+      name: "Components",
+      components: "src/components/**/[A-Z]*.js"
     }
   ],
 
   require: [
     // Include our main scss file.
-    path.join(__dirname, 'src/index.scss'),
-    path.join(__dirname, 'src/normalize.scss')
+    path.join(__dirname, "src/styles/Typography/fonts/TuttiFont.css"),
+    path.join(__dirname, "src/index.scss"),
+    path.join(__dirname, "src/normalize.scss")
   ]
-}
+};

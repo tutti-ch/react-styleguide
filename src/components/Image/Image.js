@@ -8,7 +8,10 @@ import { filterProps } from "../../helpers/functions";
 // This gets overwritten by the Readme.md for some reason
 // Apparently, it uses the component name as a global variable.
 // Small hack to prevent this behavior.
-const NativeImage = typeof window !== "undefined" ? window.Image : /* istanbul ignore next */ () => {};
+const NativeImage =
+  typeof window !== "undefined"
+    ? window.Image
+    : /* istanbul ignore next */ () => {};
 
 /**
  * The Image component.

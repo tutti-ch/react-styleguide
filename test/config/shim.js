@@ -2,4 +2,4 @@
 // Here is a simple shim:
 global.requestAnimationFrame = callback => {
   setTimeout(callback, 0);
-}
+};

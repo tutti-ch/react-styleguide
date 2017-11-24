@@ -59,7 +59,9 @@ export default class Spinner extends Component {
     }
 
     const thickness = size / 10;
-    const border = `${thickness}rem solid rgba(${rgba}, ${rgba}, ${rgba}, ${intensity})`;
+    const border = `${thickness}rem solid rgba(${rgba}, ${rgba}, ${rgba}, ${
+      intensity
+    })`;
     const sizeInRem = `${size}rem`;
 
     return {
@@ -68,9 +70,9 @@ export default class Spinner extends Component {
       borderTop: border,
       borderRight: border,
       borderBottom: border,
-      borderLeft: `${thickness}rem solid rgba(${rgba}, ${rgba}, ${rgba}, ${Math.round(
-        (intensity + 0.2) * 100
-      ) / 100})`
+      borderLeft: `${thickness}rem solid rgba(${rgba}, ${rgba}, ${
+        rgba
+      }, ${Math.round((intensity + 0.2) * 100) / 100})`
     };
   }
 
