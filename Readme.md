@@ -70,12 +70,14 @@ In order to generate icons one must execute the following command:
 
 `npm run icons`
 
-This command will search for `svg` files recursively under `styles/` folder and will create an `index.js` file within each folder that svgs are located. This index file serves to import the svgs files directly into react as images. If you prefer to use it as a font, then simply use the corresponding class name. For instance, for `kanton-aargau.svg` file one will be able to write (in the near future): 
+This command will search for `svg` files recursively under `styles/` folder and will create an `index.js` file within each folder that svgs are located. This index file serves to import the svgs files directly into react as images. If you prefer to use it as a font, then simply use the corresponding class name. For instance, for `kanton-aargau.svg` file one will be able to write: 
 ```js
 import { icons } from "tutti-ch-styleguide"
-icons.cantons.KantonAargau // TODO: This is still not implemented
+icons.cantons.CantonAargau
+icons.categories.Tv
+icons.SocialFacebook
 ```
-or simply use it as a css class `ico ico-kanton-aargau` (this works)
+or simply use it as a css class `ico ico-canton-aargau`
 
 
 ## Publishing to Github Pages
