@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
-    "dist:build": "npm run test && NODE_ENV=umd webpack",
+    "dist:build": "npm run test",
     "dist:publish": "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "stylelint-staged": "stylelint --syntax scss",
@@ -52,7 +52,6 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "enzyme-to-json": "^3.2.2",
-    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
     "git-hooks": "^1.1.9",
     "glob": "^7.1.2",
@@ -65,7 +64,7 @@
     "sass-loader": "^6.0.6",
     "stylelint": "^8.2.0",
     "svgo": "^1.0.3",
-    "url-loader": "^0.5.9",
+    "url-loader": "^0.6.2",
     "webfonts-generator": "^0.4.0",
     "webpack": "^3.8.1"
   },
