@@ -64,6 +64,19 @@ src/components/**/[A-Z]*.js
 
 These files will be directly included in the style guide under the `UI Components` Section.
 
+### 3. Icons
+
+In order to generate icons one must execute the following command:
+
+`npm run icons`
+
+This command will search for `svg` files recursively under `styles/` folder and will create an `index.js` file within each folder that svgs are located. This index file serves to import the svgs files directly into react as images. If you prefer to use it as a font, then simply use the corresponding class name. For instance, for `kanton-aargau.svg` file one will be able to write (in the near future): 
+```js
+import { icons } from "tutti-ch-styleguide"
+icons.cantons.KantonAargau // TODO: This is still not implemented
+```
+or simply use it as a css class `ico ico-kanton-aargau` (this works)
+
 
 ## Publishing to Github Pages
 ---
@@ -77,3 +90,15 @@ the main file to be loaded.
 To facilitate the build procedure, we have configured the styleguide to build directly into
 the `docs/` folder. If you ever have to change this behaviour, check the `styleguideDir` configuration
 under `styleguide.config.js` file.
+
+## Publishing to npm
+---
+
+In order to publish to npm one must first create an npm user.
+`npm adduser`
+
+Once done, an admin should provide access to the created user on npm's admin page. Afterwards it is as simple as executing the following command:
+
+`npm run dist:publish`
+
+This command will pull the latest version from the master, build the styleguide, patch the package version, push the changes to master and finally will publish.
