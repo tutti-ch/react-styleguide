@@ -1190,8 +1190,8 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  closeIcon={false}
                                   key="null"
-                                  multiple={false}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1213,10 +1213,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="React.js"
+                                  tickIcon={false}
                                   value="React.js"
                                 >
                                   <div
@@ -1232,10 +1232,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Vue.js"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Vue.js"
+                                  tickIcon={false}
                                   value="Vue.js"
                                 >
                                   <div
@@ -1251,10 +1251,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Angular.js"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Angular.js"
+                                  tickIcon={false}
                                   value="Angular.js"
                                 >
                                   <div
@@ -1270,10 +1270,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-jQuery"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="jQuery"
+                                  tickIcon={false}
                                   value="jQuery"
                                 >
                                   <div
@@ -1289,10 +1289,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Knockout"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Knockout"
+                                  tickIcon={false}
                                   value="Knockout"
                                 >
                                   <div
@@ -1308,10 +1308,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Backbone"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Backbone"
+                                  tickIcon={false}
                                   value="Backbone"
                                 >
                                   <div
@@ -1327,10 +1327,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Ember"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Ember"
+                                  tickIcon={false}
                                   value="Ember"
                                 >
                                   <div
@@ -1346,10 +1346,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Bootstrap"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Bootstrap"
+                                  tickIcon={false}
                                   value="Bootstrap"
                                 >
                                   <div
@@ -1365,10 +1365,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Other"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Other"
+                                  tickIcon={false}
                                   value="Other"
                                 >
                                   <div
@@ -1506,8 +1506,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  closeIcon={true}
                                   key="null"
-                                  multiple={true}
+                                  onClose={[Function]}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1522,9 +1523,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     </span>
                                     <span
                                       className="ico ico-close undefined"
-                                    />
-                                    <span
-                                      className="ico ico-tick undefined"
+                                      onClick={[Function]}
                                     />
                                   </div>
                                 </Option>
@@ -1535,10 +1534,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="React.js"
+                                  tickIcon={true}
                                   value="React.js"
                                 >
                                   <div
@@ -1550,9 +1549,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       React.js
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1560,10 +1556,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Vue.js"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Vue.js"
+                                  tickIcon={true}
                                   value="Vue.js"
                                 >
                                   <div
@@ -1575,9 +1571,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Vue.js
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1585,10 +1578,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Angular.js"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Angular.js"
+                                  tickIcon={true}
                                   value="Angular.js"
                                 >
                                   <div
@@ -1600,9 +1593,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Angular.js
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1610,10 +1600,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-jQuery"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="jQuery"
+                                  tickIcon={true}
                                   value="jQuery"
                                 >
                                   <div
@@ -1625,9 +1615,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       jQuery
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1635,10 +1622,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Knockout"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Knockout"
+                                  tickIcon={true}
                                   value="Knockout"
                                 >
                                   <div
@@ -1650,9 +1637,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Knockout
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1660,10 +1644,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Backbone"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Backbone"
+                                  tickIcon={true}
                                   value="Backbone"
                                 >
                                   <div
@@ -1675,9 +1659,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Backbone
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1685,10 +1666,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Ember"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Ember"
+                                  tickIcon={true}
                                   value="Ember"
                                 >
                                   <div
@@ -1700,9 +1681,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Ember
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1710,10 +1688,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Bootstrap"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Bootstrap"
+                                  tickIcon={true}
                                   value="Bootstrap"
                                 >
                                   <div
@@ -1725,9 +1703,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       Bootstrap
                                     </span>
                                     <span
-                                      className="ico ico-close undefined"
-                                    />
-                                    <span
                                       className="ico ico-tick undefined"
                                     />
                                   </div>
@@ -1735,10 +1710,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Other"
-                                  multiple={true}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Other"
+                                  tickIcon={true}
                                   value="Other"
                                 >
                                   <div
@@ -1749,9 +1724,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     <span>
                                       Other
                                     </span>
-                                    <span
-                                      className="ico ico-close undefined"
-                                    />
                                     <span
                                       className="ico ico-tick undefined"
                                     />
@@ -1882,8 +1854,8 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  closeIcon={false}
                                   key="null"
-                                  multiple={false}
                                   selected={false}
                                   text="Favorite framework"
                                   value={null}
@@ -1905,10 +1877,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="React.js"
+                                  tickIcon={false}
                                   value="React.js"
                                 >
                                   <div
@@ -1924,10 +1896,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Vue.js"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Vue.js"
+                                  tickIcon={false}
                                   value="Vue.js"
                                 >
                                   <div
@@ -1943,10 +1915,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Angular.js"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Angular.js"
+                                  tickIcon={false}
                                   value="Angular.js"
                                 >
                                   <div
@@ -1962,10 +1934,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-jQuery"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="jQuery"
+                                  tickIcon={false}
                                   value="jQuery"
                                 >
                                   <div
@@ -1981,10 +1953,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Knockout"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Knockout"
+                                  tickIcon={false}
                                   value="Knockout"
                                 >
                                   <div
@@ -2000,10 +1972,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Backbone"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Backbone"
+                                  tickIcon={false}
                                   value="Backbone"
                                 >
                                   <div
@@ -2019,10 +1991,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Ember"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Ember"
+                                  tickIcon={false}
                                   value="Ember"
                                 >
                                   <div
@@ -2038,10 +2010,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Bootstrap"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Bootstrap"
+                                  tickIcon={false}
                                   value="Bootstrap"
                                 >
                                   <div
@@ -2057,10 +2029,10 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 <Option
                                   highlighted={false}
                                   key="opt-Other"
-                                  multiple={false}
                                   onClick={[Function]}
                                   selected={false}
                                   text="Other"
+                                  tickIcon={false}
                                   value="Other"
                                 >
                                   <div

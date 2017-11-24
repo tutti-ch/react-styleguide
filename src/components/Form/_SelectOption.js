@@ -7,9 +7,14 @@ import classes from "./Form.scss";
 class Option extends Component {
   static propTypes = {
     /**
-     * The on function which is triggered on click.
+     * The function which is triggered on click.
      */
     onClick: PropTypes.func,
+
+    /**
+     * The callback function which is triggered when close icon is clicked.
+     */
+    onClose: PropTypes.func,
 
     /**
      * Option value.
@@ -42,9 +47,14 @@ class Option extends Component {
     highlighted: PropTypes.bool,
 
     /**
-     * Whether this is a multi select or not.
+     * Whether the close icon is enabled or not.
      */
-    multiple: PropTypes.bool
+    closeIcon: PropTypes.bool,
+
+    /**
+     * Whether tick icon is enabled or not.
+     */
+    tickIcon: PropTypes.bool
   };
 
   static defaultProps = {
@@ -54,6 +64,7 @@ class Option extends Component {
   constructor(props) {
     super(props);
     this.select = this.select.bind(this);
+    this.close = this.close.bind(this);
   }
 
   select(e) {
@@ -63,8 +74,26 @@ class Option extends Component {
     }
   }
 
+  close(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // istanbul ignore else
+    if (typeof this.props.onClose === "function") {
+      this.props.onClose(this.props);
+    }
+  }
+
   render() {
-    const { value, text, icon, selected, highlighted, multiple } = this.props;
+    const {
+      value,
+      text,
+      icon,
+      selected,
+      highlighted,
+      closeIcon,
+      tickIcon
+    } = this.props;
     const isImage = !!(icon && icon.match(/^(\/|data:|https?:)/)); // If either absolute url, or dataURI or url is an image
 
     const optClasses = classNames(
@@ -83,10 +112,15 @@ class Option extends Component {
             <span className={classNames(classes.icon, icon)} />
           )}
         {icon &&
-          isImage === true && <Image className={classes.icon} src={icon} />}
+          isImage === true && /* istanbul ignore next */ <Image className={classes.icon} src={icon} />}
         <span className={classes.text}>{text}</span>
-        {multiple && <span className={`ico ico-close ${classes.icoClose}`} />}
-        {multiple && <span className={`ico ico-tick ${classes.icoCheck}`} />}
+        {closeIcon && (
+          <span
+            onClick={this.close}
+            className={`ico ico-close ${classes.icoClose}`}
+          />
+        )}
+        {tickIcon && <span className={`ico ico-tick ${classes.icoCheck}`} />}
       </div>
     );
   }

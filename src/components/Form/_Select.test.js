@@ -267,14 +267,10 @@ describe("(Component) Select", () => {
       />
     );
     const inst = comp.instance();
-    const event = {
-      stopPropagation: jest.fn(),
-      preventDefault: jest.fn()
-    };
 
-    inst.unselect({ value: "React.js" }, event);
+    inst.unselect({ value: "React.js" });
     expect(comp.state("selected")).toEqual(["jQuery"]);
-    inst.unselect({ value: "Ember" }, event);
+    inst.unselect({ value: "Ember" });
     expect(comp.state("selected")).toEqual(["jQuery"]);
     expect(onChange).toHaveBeenCalledWith(["jQuery"], {
       initialValue: ["jQuery"],

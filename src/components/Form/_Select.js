@@ -305,12 +305,8 @@ export class Select extends Component {
    * Unselect the given value.
    *
    * @param value
-   * @param {*} event
    */
-  unselect({ value }, event) {
-    event.preventDefault();
-    event.stopPropagation();
-
+  unselect({ value }) {
     const selected = this.state.selected.slice(0);
     const index = selected.indexOf(value);
 
@@ -435,8 +431,8 @@ export class Select extends Component {
                   value={o.value}
                   key={o.value}
                   className={o.className}
-                  multiple={multiple}
-                  onClick={multiple && o.value ? this.unselect : undefined}
+                  onClose={multiple ? this.unselect : undefined}
+                  closeIcon={multiple}
                 />
               ))}
             </div>
@@ -463,9 +459,9 @@ export class Select extends Component {
                     text={text}
                     value={value}
                     selected={selectedValues.indexOf(value) > -1}
-                    multiple={multiple}
                     highlighted={highlighted === key}
                     key={`opt-${value}`}
+                    tickIcon={multiple}
                   />
                 );
               })}
