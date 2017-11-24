@@ -15,21 +15,26 @@ const BoxCard = ({ className, children, name }) => (
   <div className={classNames(className, classes.card)}>
     <div className={classes.inner}>
       <div className={classes.content}>{children}</div>
-      <div className={classes.desc}>{
-        Array.isArray(name) ? name.map(n => <div>{n}</div>) : name}
+      <div className={classes.desc}>
+        {Array.isArray(name)
+          ? name.map((n, i) => <div key={`key-${i}`}>{n}</div>)
+          : name}
       </div>
     </div>
   </div>
 );
 
 BoxCard.propTypes = {
-  className: PropTypes.oneOf([
+  className: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object,
     PropTypes.string
   ]),
   children: PropTypes.node, // The content of the box
-  name: PropTypes.string // The name of the box (this will be displayed at the bottom of the box card)
+  name: PropTypes.oneOfType([
+    PropTypes.string, // The name of the box (this will be displayed at the bottom of the box card)
+    PropTypes.array
+  ])
 };
 
 export default BoxCard;
