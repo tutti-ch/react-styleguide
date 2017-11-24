@@ -38,7 +38,7 @@ const toCamelCase = str => {
   );
 };
 
-glob(src, (err, results) => {
+glob(src + "/**/*.svg", (err, results) => {
   let folders = {};
 
   results.forEach(file => {

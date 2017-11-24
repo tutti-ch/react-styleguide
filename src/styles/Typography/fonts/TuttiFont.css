@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?a51c27c024ecfb4eb07fa559ad07bb3f?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?a51c27c024ecfb4eb07fa559ad07bb3f") format("woff2"),
-url("TuttiFont.woff?a51c27c024ecfb4eb07fa559ad07bb3f") format("woff");
+	src: url("TuttiFont.eot?7aeb70f4d0016b722f448f8349b73332?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?7aeb70f4d0016b722f448f8349b73332") format("woff2"),
+url("TuttiFont.woff?7aeb70f4d0016b722f448f8349b73332") format("woff");
 }
 
 .ico {
@@ -16,76 +16,76 @@ url("TuttiFont.woff?a51c27c024ecfb4eb07fa559ad07bb3f") format("woff");
 	vertical-align: top;
 }
 
-.ico-icon-kanton-aargau:before {
+.ico-kanton-aargau:before {
 	content: "\f101";
 }
-.ico-icon-kanton-appenzell:before {
+.ico-kanton-appenzell:before {
 	content: "\f102";
 }
-.ico-icon-kanton-basel:before {
+.ico-kanton-basel:before {
 	content: "\f103";
 }
-.ico-icon-kanton-bern:before {
+.ico-kanton-bern:before {
 	content: "\f104";
 }
-.ico-icon-kanton-freiburg:before {
+.ico-kanton-freiburg:before {
 	content: "\f105";
 }
-.ico-icon-kanton-genf:before {
+.ico-kanton-genf:before {
 	content: "\f106";
 }
-.ico-icon-kanton-glarus:before {
+.ico-kanton-glarus:before {
 	content: "\f107";
 }
-.ico-icon-kanton-graubunden:before {
+.ico-kanton-graubunden:before {
 	content: "\f108";
 }
-.ico-icon-kanton-jura:before {
+.ico-kanton-jura:before {
 	content: "\f109";
 }
-.ico-icon-kanton-liechtenstein:before {
+.ico-kanton-liechtenstein:before {
 	content: "\f10a";
 }
-.ico-icon-kanton-luzern:before {
+.ico-kanton-luzern:before {
 	content: "\f10b";
 }
-.ico-icon-kanton-neuenburg:before {
+.ico-kanton-neuenburg:before {
 	content: "\f10c";
 }
-.ico-icon-kanton-niedobwalden:before {
+.ico-kanton-niedobwalden:before {
 	content: "\f10d";
 }
-.ico-icon-kanton-schaffhausen:before {
+.ico-kanton-schaffhausen:before {
 	content: "\f10e";
 }
-.ico-icon-kanton-schwyz:before {
+.ico-kanton-schwyz:before {
 	content: "\f10f";
 }
-.ico-icon-kanton-solothurn:before {
+.ico-kanton-solothurn:before {
 	content: "\f110";
 }
-.ico-icon-kanton-stgallen:before {
+.ico-kanton-stgallen:before {
 	content: "\f111";
 }
-.ico-icon-kanton-tessin:before {
+.ico-kanton-tessin:before {
 	content: "\f112";
 }
-.ico-icon-kanton-thurgau:before {
+.ico-kanton-thurgau:before {
 	content: "\f113";
 }
-.ico-icon-kanton-uri:before {
+.ico-kanton-uri:before {
 	content: "\f114";
 }
-.ico-icon-kanton-waadt:before {
+.ico-kanton-waadt:before {
 	content: "\f115";
 }
-.ico-icon-kanton-wallis:before {
+.ico-kanton-wallis:before {
 	content: "\f116";
 }
-.ico-icon-kanton-zug:before {
+.ico-kanton-zug:before {
 	content: "\f117";
 }
-.ico-icon-kanton-zurich:before {
+.ico-kanton-zurich:before {
 	content: "\f118";
 }
 .ico-antiquitaten:before {
@@ -355,34 +355,34 @@ url("TuttiFont.woff?a51c27c024ecfb4eb07fa559ad07bb3f") format("woff");
 .ico-google-plus:before {
 	content: "\f171";
 }
-.ico-icon-social-facebook:before {
+.ico-instagram:before {
 	content: "\f172";
 }
-.ico-icon-social-gplus:before {
+.ico-share-facebook:before {
 	content: "\f173";
 }
-.ico-icon-social-instagram:before {
+.ico-share-messenger:before {
 	content: "\f174";
 }
-.ico-icon-social-rss:before {
+.ico-share-whatsapp:before {
 	content: "\f175";
 }
-.ico-icon-social-twitter:before {
+.ico-social-facebook:before {
 	content: "\f176";
 }
-.ico-icon-social-youtube:before {
+.ico-social-gplus:before {
 	content: "\f177";
 }
-.ico-instagram:before {
+.ico-social-instagram:before {
 	content: "\f178";
 }
-.ico-share-facebook:before {
+.ico-social-rss:before {
 	content: "\f179";
 }
-.ico-share-messenger:before {
+.ico-social-twitter:before {
 	content: "\f17a";
 }
-.ico-share-whatsapp:before {
+.ico-social-youtube:before {
 	content: "\f17b";
 }
 .ico-twitter:before {
