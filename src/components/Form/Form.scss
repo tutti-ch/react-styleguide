@@ -73,6 +73,7 @@ $inputHeight: $size-xxxl;
     box-sizing: border-box;
     width: 100%;
     @include focus();
+    min-height: $size-xxxl;
   }
 
   input {
