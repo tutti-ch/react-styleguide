@@ -94,7 +94,7 @@ class Option extends Component {
       closeIcon,
       tickIcon
     } = this.props;
-    const isImage = !!(icon && icon.match(/^(\/|data:|https?:)/)); // If either absolute url, or dataURI or url is an image
+    const isImage = !!(icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)); // If either absolute url, or dataURI or url is an image
 
     const optClasses = classNames(
       {
