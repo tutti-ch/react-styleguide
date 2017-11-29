@@ -79,10 +79,10 @@
   $topbar: ("penthouse": 900, "first": 200, "ground": 100, "basement": -100);
 
   $overlay: (
-    "penthouse": 900000,
-    "first": 200000,
-    "ground": 100000,
-    "basement": -100000
+    "penthouse": 900000000,
+    "first": 200000000,
+    "ground": 100000000,
+    "basement": -100000000
   );
 
   @if $layer == "content" {

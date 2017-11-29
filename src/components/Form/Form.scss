@@ -73,6 +73,7 @@ $inputHeight: $size-xxxl;
     box-sizing: border-box;
     width: 100%;
     @include focus();
+    min-height: $size-xxxl;
   }
 
   input {
@@ -328,6 +329,11 @@ $inputHeight: $size-xxxl;
       margin-right: $size-xs;
       width: $size-xl;
       height: $size-xl;
+
+      @include ifInternetExplorer {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
     }
 
     // When the select box is open or is hover make the border black
