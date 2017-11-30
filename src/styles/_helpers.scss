@@ -74,15 +74,25 @@
 
 /* stylelint-disable plugin/no-z-index */
 @mixin z-index($layer, $level) {
-  $content: ("penthouse": 90, "first": 20, "ground": 10, "basement": -10);
+  $content: (
+    "penthouse": 90,
+    "first": 20,
+    "ground": 10,
+    "basement": -10
+  );
 
-  $topbar: ("penthouse": 900, "first": 200, "ground": 100, "basement": -100);
-
-  $overlay: (
+  $topbar: (
     "penthouse": 900000000,
     "first": 200000000,
     "ground": 100000000,
     "basement": -100000000
+  );
+
+  $overlay: (
+    "penthouse": 9000000000,
+    "first": 2000000000,
+    "ground": 1000000000,
+    "basement": -1000000000
   );
 
   @if $layer == "content" {
