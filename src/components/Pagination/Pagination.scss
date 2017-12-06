@@ -20,7 +20,7 @@
 .page {
   display: block;
   text-align: center;
-  height: 100%;
+  height: auto;
   width: 20%; // Can't use flex: 1 (with max-width) because breaks in ie11
 
   @include tablet-and-bigger {
@@ -69,7 +69,7 @@ body.offline .page {
 
 .link {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   line-height: $size-xxl !important;
 }
