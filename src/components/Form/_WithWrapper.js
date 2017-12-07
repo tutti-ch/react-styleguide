@@ -53,6 +53,10 @@ export default (WrappedComponent, mergeProps = {}) => {
       this.handleOnChange = this.handleOnChange.bind(this);
     }
 
+    componentWillReceiveProps(nextProps) {
+      this.setState({ hasValue: !!nextProps.value });
+    }
+
     /**
      * Update the state to track if the input has value or not.
      *

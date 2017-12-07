@@ -19,6 +19,13 @@ describe("HOC (WithWrapper)", () => {
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
+  test("hasValue gets updated when new props arrive", () => {
+    const comp = mount(<Input />);
+    expect(comp.state("hasValue")).toBe(false);
+    comp.setProps({ value: "hey" });
+    expect(comp.state("hasValue")).toBe(true);
+  });
+
   describe("snapshot", () => {
     test("should include a label span when label is not defined in the child component", () => {
       const comp = mount(
