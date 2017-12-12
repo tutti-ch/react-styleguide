@@ -157,6 +157,22 @@ export default () => (
             ]}
           />
           <Select
+            label="Default Value for Select"
+            placeholder="Favorite framework"
+            selected="React.js"
+            options={[
+              { value: "React.js", text: "React.js" },
+              { value: "Vue.js", text: "Vue.js" },
+              { value: "Angular.js", text: "Angular.js" },
+              { value: "jQuery", text: "jQuery" },
+              { value: "Knockout", text: "Knockout" },
+              { value: "Backbone", text: "Backbone" },
+              { value: "Ember", text: "Ember" },
+              { value: "Bootstrap", text: "Bootstrap" },
+              { value: "Other", text: "Other" }
+            ]}
+          />
+          <Select
             label="Multiple select input"
             multiple
             placeholder="Favorite framework"
