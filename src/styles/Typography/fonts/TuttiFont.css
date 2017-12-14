@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?426d0865f20bf09f128f9c0f92030705?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?426d0865f20bf09f128f9c0f92030705") format("woff2"),
-url("TuttiFont.woff?426d0865f20bf09f128f9c0f92030705") format("woff");
+	src: url("TuttiFont.eot?b577472bf96c09d278fb129ce470ab9a?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?b577472bf96c09d278fb129ce470ab9a") format("woff2"),
+url("TuttiFont.woff?b577472bf96c09d278fb129ce470ab9a") format("woff");
 }
 
 .ico {
@@ -247,162 +247,168 @@ url("TuttiFont.woff?426d0865f20bf09f128f9c0f92030705") format("woff");
 .ico-play:before {
 	content: "\f14d";
 }
-.ico-prev:before {
+.ico-plus:before {
 	content: "\f14e";
 }
-.ico-price-down:before {
+.ico-prev:before {
 	content: "\f14f";
 }
-.ico-price-up:before {
+.ico-price-down:before {
 	content: "\f150";
 }
-.ico-printer:before {
+.ico-price-up:before {
 	content: "\f151";
 }
-.ico-privat:before {
+.ico-printer:before {
 	content: "\f152";
 }
-.ico-reset:before {
+.ico-privat:before {
 	content: "\f153";
 }
-.ico-rotate:before {
+.ico-pro:before {
 	content: "\f154";
 }
-.ico-rss:before {
+.ico-reset:before {
 	content: "\f155";
 }
-.ico-saved-searches:before {
+.ico-rotate:before {
 	content: "\f156";
 }
-.ico-savedSearches-off-add:before {
+.ico-rss:before {
 	content: "\f157";
 }
-.ico-search:before {
+.ico-saved-searches:before {
 	content: "\f158";
 }
-.ico-select:before {
+.ico-savedSearches-off-add:before {
 	content: "\f159";
 }
-.ico-share-ios:before {
+.ico-search:before {
 	content: "\f15a";
 }
-.ico-share:before {
+.ico-select:before {
 	content: "\f15b";
 }
-.ico-shield:before {
+.ico-share-ios:before {
 	content: "\f15c";
 }
-.ico-sms:before {
+.ico-share:before {
 	content: "\f15d";
 }
-.ico-sort-by_date-down:before {
+.ico-shield:before {
 	content: "\f15e";
 }
-.ico-sort-by_date-up:before {
+.ico-sms:before {
 	content: "\f15f";
 }
-.ico-sort-by_price-down:before {
+.ico-sort-by_date-down:before {
 	content: "\f160";
 }
-.ico-sort-by_price-up:before {
+.ico-sort-by_date-up:before {
 	content: "\f161";
 }
-.ico-star:before {
+.ico-sort-by_price-down:before {
 	content: "\f162";
 }
-.ico-tick-circle:before {
+.ico-sort-by_price-up:before {
 	content: "\f163";
 }
-.ico-tick-empty:before {
+.ico-star:before {
 	content: "\f164";
 }
-.ico-tick-solid:before {
+.ico-tick-circle:before {
 	content: "\f165";
 }
-.ico-tick:before {
+.ico-tick-empty:before {
 	content: "\f166";
 }
-.ico-user:before {
+.ico-tick-solid:before {
 	content: "\f167";
 }
-.ico-view-big:before {
+.ico-tick:before {
 	content: "\f168";
 }
-.ico-view-list:before {
+.ico-user:before {
 	content: "\f169";
 }
-.ico-warning:before {
+.ico-view-big:before {
 	content: "\f16a";
 }
-.ico-bump:before {
+.ico-view-list:before {
 	content: "\f16b";
 }
-.ico-combo:before {
+.ico-warning:before {
 	content: "\f16c";
 }
-.ico-gallery:before {
+.ico-bump:before {
 	content: "\f16d";
 }
-.ico-highlight:before {
+.ico-combo:before {
 	content: "\f16e";
 }
-.ico-sell-faster:before {
+.ico-gallery:before {
 	content: "\f16f";
 }
-.ico-facebook:before {
+.ico-highlight:before {
 	content: "\f170";
 }
-.ico-google-plus:before {
+.ico-sell-faster:before {
 	content: "\f171";
 }
-.ico-instagram:before {
+.ico-facebook:before {
 	content: "\f172";
 }
-.ico-share-facebook:before {
+.ico-google-plus:before {
 	content: "\f173";
 }
-.ico-share-messenger:before {
+.ico-instagram:before {
 	content: "\f174";
 }
-.ico-share-whatsapp:before {
+.ico-share-facebook:before {
 	content: "\f175";
 }
-.ico-social-facebook:before {
+.ico-share-messenger:before {
 	content: "\f176";
 }
-.ico-social-gplus:before {
+.ico-share-whatsapp:before {
 	content: "\f177";
 }
-.ico-social-instagram:before {
+.ico-social-facebook:before {
 	content: "\f178";
 }
-.ico-social-rss:before {
+.ico-social-gplus:before {
 	content: "\f179";
 }
-.ico-social-twitter:before {
+.ico-social-instagram:before {
 	content: "\f17a";
 }
-.ico-social-youtube:before {
+.ico-social-rss:before {
 	content: "\f17b";
 }
-.ico-twitter:before {
+.ico-social-twitter:before {
 	content: "\f17c";
 }
-.ico-youtube:before {
+.ico-social-youtube:before {
 	content: "\f17d";
 }
-.ico-badge:before {
+.ico-twitter:before {
 	content: "\f17e";
 }
-.ico-ticino_map:before {
+.ico-youtube:before {
 	content: "\f17f";
 }
-.ico-tuttilino-error:before {
+.ico-badge:before {
 	content: "\f180";
 }
-.ico-tuttilino-hey:before {
+.ico-ticino_map:before {
 	content: "\f181";
 }
-.ico-TuttiFont:before {
+.ico-tuttilino-error:before {
 	content: "\f182";
+}
+.ico-tuttilino-hey:before {
+	content: "\f183";
+}
+.ico-TuttiFont:before {
+	content: "\f184";
 }
