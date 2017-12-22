@@ -7,10 +7,12 @@ export Table from "./components/Table";
 export Button from "./components/Button";
 export Pagination from "./components/Pagination";
 export * as Form from "./components/Form";
-import * as Icons from "./styles/Icons/assets"
+import * as Icons from "./styles/Icons/assets";
+import * as Illustrations from "./styles/Illustrations/assets";
 
 export const icons = {
   ...Icons,
+  ...Illustrations,
   categories: {
     "1000": Icons.Immobilien,
     "4020": Icons.Antiquitaten,
@@ -60,5 +62,5 @@ export const icons = {
     "22": Icons.CantonZug,
     "23": Icons.CantonZurich,
     "24": Icons.CantonLiechtenstein
-  },
+  }
 };
