@@ -94,7 +94,9 @@ class Option extends Component {
       closeIcon,
       tickIcon
     } = this.props;
-    const isImage = !!(icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)); // If either absolute url, or dataURI or url is an image
+    const isImage = !!(
+      icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)
+    ); // If either absolute url, or dataURI or url is an image
 
     const optClasses = classNames(
       {
@@ -112,7 +114,12 @@ class Option extends Component {
             <span className={classNames(classes.icon, icon)} />
           )}
         {icon &&
-          isImage === true && /* istanbul ignore next */ <Image className={classes.icon} src={icon} />}
+          isImage === true && (
+            /* istanbul ignore next */ <Image
+              className={classes.icon}
+              src={icon}
+            />
+          )}
         <span className={classes.text}>{text}</span>
         {closeIcon && (
           <span

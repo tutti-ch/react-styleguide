@@ -25,11 +25,11 @@ describe("(Component) SelectOption", () => {
   });
 
   test("[unselect] should trigger the onClose prop", () => {
-    const onClose = jest.fn()
+    const onClose = jest.fn();
     const event = {
       preventDefault: jest.fn(),
       stopPropagation: jest.fn()
-    }
+    };
 
     const comp = mount(
       <SelectOption
@@ -43,7 +43,7 @@ describe("(Component) SelectOption", () => {
 
     inst.close(event);
     expect(onClose).toHaveBeenCalledWith(inst.props);
-    expect(event.preventDefault).toHaveBeenCalled()
-    expect(event.stopPropagation).toHaveBeenCalled()
-  })
+    expect(event.preventDefault).toHaveBeenCalled();
+    expect(event.stopPropagation).toHaveBeenCalled();
+  });
 });
