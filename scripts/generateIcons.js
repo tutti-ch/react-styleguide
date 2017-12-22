@@ -1,11 +1,15 @@
 const src = __dirname + "/../src/styles";
 const fs = require("fs");
-const path = require("path");
 const glob = require("glob");
-const svgo = require("svgo");
 const WebfontsGenerator = require("webfonts-generator");
 
+const ignoreFolder = /(canton|category)\//;
+
+// Normalize svg files - they might be broken as svg editors
+// tend to insert their own attributes, which might break the files.
 glob(src + "/**/*.svg", (err, files) => {
+  files = files.filter(f => !f.match(ignoreFolder));
+
   WebfontsGenerator(
     {
       files,
@@ -28,21 +32,24 @@ glob(src + "/**/*.svg", (err, files) => {
   );
 });
 
+// Support svg and png files.
+const extRegex = /\.(svg|png|jpg)$/;
+
 const toCamelCase = str => {
   return (
     str[0].toUpperCase() +
     str
       .substr(1)
-      .replace(/[-_]([a-z])/g, g => g[1].toUpperCase())
-      .replace(".svg", "")
+      .replace(/[-_]([a-z0-9])/g, g => g[1].toUpperCase())
+      .replace(extRegex, "")
   );
 };
 
-glob(src + "/**/*.svg", (err, results) => {
+glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   let folders = {};
 
   results.forEach(file => {
-    if (/\.svg$/.test(file)) {
+    if (extRegex.test(file)) {
       const pieces = file.split("/");
       const fname = pieces.pop();
       const path = pieces.join("/") + "/index.js";

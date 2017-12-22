@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?b577472bf96c09d278fb129ce470ab9a?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?b577472bf96c09d278fb129ce470ab9a") format("woff2"),
-url("TuttiFont.woff?b577472bf96c09d278fb129ce470ab9a") format("woff");
+	src: url("TuttiFont.eot?75f56d827d944b7b6f5b21211247d51e?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?75f56d827d944b7b6f5b21211247d51e") format("woff2"),
+url("TuttiFont.woff?75f56d827d944b7b6f5b21211247d51e") format("woff");
 }
 
 .ico {
@@ -16,399 +16,258 @@ url("TuttiFont.woff?b577472bf96c09d278fb129ce470ab9a") format("woff");
 	vertical-align: top;
 }
 
-.ico-canton-aargau:before {
+.ico-arrow-link:before {
 	content: "\f101";
 }
-.ico-canton-appenzell:before {
+.ico-call:before {
 	content: "\f102";
 }
-.ico-canton-basel:before {
+.ico-categories:before {
 	content: "\f103";
 }
-.ico-canton-bern:before {
+.ico-clock:before {
 	content: "\f104";
 }
-.ico-canton-freiburg:before {
+.ico-close-tags:before {
 	content: "\f105";
 }
-.ico-canton-genf:before {
+.ico-close:before {
 	content: "\f106";
 }
-.ico-canton-glarus:before {
+.ico-date-down:before {
 	content: "\f107";
 }
-.ico-canton-graubunden:before {
+.ico-date-up:before {
 	content: "\f108";
 }
-.ico-canton-jura:before {
+.ico-dropdown:before {
 	content: "\f109";
 }
-.ico-canton-liechtenstein:before {
+.ico-email:before {
 	content: "\f10a";
 }
-.ico-canton-luzern:before {
+.ico-error:before {
 	content: "\f10b";
 }
-.ico-canton-neuenburg:before {
+.ico-eye:before {
 	content: "\f10c";
 }
-.ico-canton-niedobwalden:before {
+.ico-filter-off:before {
 	content: "\f10d";
 }
-.ico-canton-schaffhausen:before {
+.ico-filter-on:before {
 	content: "\f10e";
 }
-.ico-canton-schwyz:before {
+.ico-firma:before {
 	content: "\f10f";
 }
-.ico-canton-solothurn:before {
+.ico-garbage:before {
 	content: "\f110";
 }
-.ico-canton-stgallen:before {
+.ico-gear:before {
 	content: "\f111";
 }
-.ico-canton-tessin:before {
+.ico-house:before {
 	content: "\f112";
 }
-.ico-canton-thurgau:before {
+.ico-infinite:before {
 	content: "\f113";
 }
-.ico-canton-uri:before {
+.ico-info:before {
 	content: "\f114";
 }
-.ico-canton-waadt:before {
+.ico-insert-ad:before {
 	content: "\f115";
 }
-.ico-canton-wallis:before {
+.ico-insert-image:before {
 	content: "\f116";
 }
-.ico-canton-zug:before {
+.ico-logout:before {
 	content: "\f117";
 }
-.ico-canton-zurich:before {
+.ico-my-ads:before {
 	content: "\f118";
 }
-.ico-antiquitaten:before {
+.ico-next:before {
 	content: "\f119";
 }
-.ico-baby:before {
+.ico-pause-circle:before {
 	content: "\f11a";
 }
-.ico-buecher:before {
+.ico-pause:before {
 	content: "\f11b";
 }
-.ico-buro:before {
+.ico-pencil:before {
 	content: "\f11c";
 }
-.ico-computer:before {
+.ico-pin:before {
 	content: "\f11d";
 }
-.ico-fahrzeuge:before {
+.ico-play:before {
 	content: "\f11e";
 }
-.ico-filme:before {
+.ico-plus:before {
 	content: "\f11f";
 }
-.ico-foto:before {
+.ico-prev:before {
 	content: "\f120";
 }
-.ico-free:before {
+.ico-price-down:before {
 	content: "\f121";
 }
-.ico-garten:before {
+.ico-price-up:before {
 	content: "\f122";
 }
-.ico-haushalt:before {
+.ico-printer:before {
 	content: "\f123";
 }
-.ico-immobilien:before {
+.ico-privat:before {
 	content: "\f124";
 }
-.ico-kleidung:before {
+.ico-pro:before {
 	content: "\f125";
 }
-.ico-musik:before {
+.ico-reset:before {
 	content: "\f126";
 }
-.ico-sammeln:before {
+.ico-rotate:before {
 	content: "\f127";
 }
-.ico-sonstiges:before {
+.ico-rss:before {
 	content: "\f128";
 }
-.ico-spielzeuge:before {
+.ico-saved-searches:before {
 	content: "\f129";
 }
-.ico-sport:before {
+.ico-savedSearches-off-add:before {
 	content: "\f12a";
 }
-.ico-stellen:before {
+.ico-search:before {
 	content: "\f12b";
 }
-.ico-telefon:before {
+.ico-select:before {
 	content: "\f12c";
 }
-.ico-tickets:before {
+.ico-share-ios:before {
 	content: "\f12d";
 }
-.ico-tiere:before {
+.ico-share:before {
 	content: "\f12e";
 }
-.ico-tv:before {
+.ico-shield:before {
 	content: "\f12f";
 }
-.ico-arrow-link:before {
+.ico-sms:before {
 	content: "\f130";
 }
-.ico-call:before {
+.ico-sort-by_date-down:before {
 	content: "\f131";
 }
-.ico-categories:before {
+.ico-sort-by_date-up:before {
 	content: "\f132";
 }
-.ico-clock:before {
+.ico-sort-by_price-down:before {
 	content: "\f133";
 }
-.ico-close-tags:before {
+.ico-sort-by_price-up:before {
 	content: "\f134";
 }
-.ico-close:before {
+.ico-star:before {
 	content: "\f135";
 }
-.ico-date-down:before {
+.ico-tick-circle:before {
 	content: "\f136";
 }
-.ico-date-up:before {
+.ico-tick-empty:before {
 	content: "\f137";
 }
-.ico-dropdown:before {
+.ico-tick-solid:before {
 	content: "\f138";
 }
-.ico-email:before {
+.ico-tick:before {
 	content: "\f139";
 }
-.ico-error:before {
+.ico-user:before {
 	content: "\f13a";
 }
-.ico-eye:before {
+.ico-view-big:before {
 	content: "\f13b";
 }
-.ico-filter-off:before {
+.ico-view-list:before {
 	content: "\f13c";
 }
-.ico-filter-on:before {
+.ico-warning:before {
 	content: "\f13d";
 }
-.ico-firma:before {
+.ico-bump:before {
 	content: "\f13e";
 }
-.ico-garbage:before {
+.ico-combo:before {
 	content: "\f13f";
 }
-.ico-gear:before {
+.ico-gallery:before {
 	content: "\f140";
 }
-.ico-house:before {
+.ico-highlight:before {
 	content: "\f141";
 }
-.ico-infinite:before {
+.ico-sell-faster:before {
 	content: "\f142";
 }
-.ico-info:before {
+.ico-facebook:before {
 	content: "\f143";
 }
-.ico-insert-ad:before {
+.ico-google-plus:before {
 	content: "\f144";
 }
-.ico-insert-image:before {
+.ico-instagram:before {
 	content: "\f145";
 }
-.ico-logout:before {
+.ico-share-facebook:before {
 	content: "\f146";
 }
-.ico-my-ads:before {
+.ico-share-messenger:before {
 	content: "\f147";
 }
-.ico-next:before {
+.ico-share-whatsapp:before {
 	content: "\f148";
 }
-.ico-pause-circle:before {
+.ico-social-facebook:before {
 	content: "\f149";
 }
-.ico-pause:before {
+.ico-social-gplus:before {
 	content: "\f14a";
 }
-.ico-pencil:before {
+.ico-social-instagram:before {
 	content: "\f14b";
 }
-.ico-pin:before {
+.ico-social-rss:before {
 	content: "\f14c";
 }
-.ico-play:before {
+.ico-social-twitter:before {
 	content: "\f14d";
 }
-.ico-plus:before {
+.ico-social-youtube:before {
 	content: "\f14e";
 }
-.ico-prev:before {
+.ico-twitter:before {
 	content: "\f14f";
 }
-.ico-price-down:before {
+.ico-youtube:before {
 	content: "\f150";
 }
-.ico-price-up:before {
+.ico-badge:before {
 	content: "\f151";
 }
-.ico-printer:before {
+.ico-ticino_map:before {
 	content: "\f152";
 }
-.ico-privat:before {
+.ico-tuttilino-error:before {
 	content: "\f153";
 }
-.ico-pro:before {
+.ico-tuttilino-hey:before {
 	content: "\f154";
 }
-.ico-reset:before {
-	content: "\f155";
-}
-.ico-rotate:before {
-	content: "\f156";
-}
-.ico-rss:before {
-	content: "\f157";
-}
-.ico-saved-searches:before {
-	content: "\f158";
-}
-.ico-savedSearches-off-add:before {
-	content: "\f159";
-}
-.ico-search:before {
-	content: "\f15a";
-}
-.ico-select:before {
-	content: "\f15b";
-}
-.ico-share-ios:before {
-	content: "\f15c";
-}
-.ico-share:before {
-	content: "\f15d";
-}
-.ico-shield:before {
-	content: "\f15e";
-}
-.ico-sms:before {
-	content: "\f15f";
-}
-.ico-sort-by_date-down:before {
-	content: "\f160";
-}
-.ico-sort-by_date-up:before {
-	content: "\f161";
-}
-.ico-sort-by_price-down:before {
-	content: "\f162";
-}
-.ico-sort-by_price-up:before {
-	content: "\f163";
-}
-.ico-star:before {
-	content: "\f164";
-}
-.ico-tick-circle:before {
-	content: "\f165";
-}
-.ico-tick-empty:before {
-	content: "\f166";
-}
-.ico-tick-solid:before {
-	content: "\f167";
-}
-.ico-tick:before {
-	content: "\f168";
-}
-.ico-user:before {
-	content: "\f169";
-}
-.ico-view-big:before {
-	content: "\f16a";
-}
-.ico-view-list:before {
-	content: "\f16b";
-}
-.ico-warning:before {
-	content: "\f16c";
-}
-.ico-bump:before {
-	content: "\f16d";
-}
-.ico-combo:before {
-	content: "\f16e";
-}
-.ico-gallery:before {
-	content: "\f16f";
-}
-.ico-highlight:before {
-	content: "\f170";
-}
-.ico-sell-faster:before {
-	content: "\f171";
-}
-.ico-facebook:before {
-	content: "\f172";
-}
-.ico-google-plus:before {
-	content: "\f173";
-}
-.ico-instagram:before {
-	content: "\f174";
-}
-.ico-share-facebook:before {
-	content: "\f175";
-}
-.ico-share-messenger:before {
-	content: "\f176";
-}
-.ico-share-whatsapp:before {
-	content: "\f177";
-}
-.ico-social-facebook:before {
-	content: "\f178";
-}
-.ico-social-gplus:before {
-	content: "\f179";
-}
-.ico-social-instagram:before {
-	content: "\f17a";
-}
-.ico-social-rss:before {
-	content: "\f17b";
-}
-.ico-social-twitter:before {
-	content: "\f17c";
-}
-.ico-social-youtube:before {
-	content: "\f17d";
-}
-.ico-twitter:before {
-	content: "\f17e";
-}
-.ico-youtube:before {
-	content: "\f17f";
-}
-.ico-badge:before {
-	content: "\f180";
-}
-.ico-ticino_map:before {
-	content: "\f181";
-}
-.ico-tuttilino-error:before {
-	content: "\f182";
-}
-.ico-tuttilino-hey:before {
-	content: "\f183";
-}
 .ico-TuttiFont:before {
-	content: "\f184";
+	content: "\f155";
 }
