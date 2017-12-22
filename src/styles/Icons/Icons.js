@@ -19,6 +19,7 @@ export default class Icons extends Component {
     super(props);
 
     this.getIconList = this.getIconList.bind(this);
+    this.toIconName = this.toIconName.bind(this);
   }
 
   /**
@@ -28,16 +29,32 @@ export default class Icons extends Component {
     return require("./assets/" + this.props.directory + "/index.js");
   }
 
+  /**
+   * Given a ico name, generate
+   */
+  toIconName(icon) {
+    // Ignore font cases for these folders.
+    if (["canton", "category"].indexOf(this.props.directory) > -1) {
+      return icon;
+    }
+
+    return [
+      icon,
+      icon
+        .replace(/\.?([A-Z])/g, (x, y) => "-" + y.toLowerCase())
+        .replace(/^-/, "ico-")
+    ];
+  }
+
   render() {
     const icons = this.getIconList();
-    const icoCase = s => s.replace(/\.?([A-Z])/g, (x,y) => "-" + y.toLowerCase()).replace(/^-/, "ico-")
 
     return (
       <BoxCardWrapper>
         {Object.keys(icons)
           .sort()
           .map((icon, index) => (
-            <BoxCard key={`asset-${index}`} name={[icon, icoCase(icon)]}>
+            <BoxCard key={`asset-${index}`} name={this.toIconName(icon)}>
               <img
                 className={classes.image}
                 src={icons[icon]}
