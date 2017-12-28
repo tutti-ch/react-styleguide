@@ -13,7 +13,7 @@ export class Input extends Component {
     /**
      * The initial value.
      */
-    value: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      * The input type.
