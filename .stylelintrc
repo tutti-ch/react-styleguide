@@ -3,7 +3,6 @@
     "src/styles/vendor/**/*.scss"
   ],
   "rules": {
-    "plugin/no-z-index": 2,
     "max-empty-lines": 1,
     "no-missing-end-of-source-newline": true,
     "color-named": "never",
