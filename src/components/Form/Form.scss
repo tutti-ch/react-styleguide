@@ -81,10 +81,6 @@ $inputHeight: $size-xxxl;
     padding: 0 $size-s;
   }
 
-  input[type="number"] {
-    width: 6rem;
-  }
-
   textarea {
     min-height: 8rem;
     resize: none;
@@ -440,11 +436,11 @@ $inputHeight: $size-xxxl;
     .ph {
       width: 95%;
 
-    // Styles for the arrow
-    &:after {
-      top: $size-xxxl / 2;
-      transform: none;
-      margin-top: 0;
+      // Styles for the arrow
+      &:after {
+        top: $size-xxxl / 2;
+        transform: none;
+        margin-top: 0;
       }
     }
 

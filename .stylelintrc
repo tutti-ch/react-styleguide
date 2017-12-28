@@ -1,0 +1,23 @@
+{
+  "ignoreFiles": [
+    "src/styles/vendor/**/*.scss"
+  ],
+  "rules": {
+    "plugin/no-z-index": 2,
+    "max-empty-lines": 1,
+    "no-missing-end-of-source-newline": true,
+    "color-named": "never",
+    "number-leading-zero": "always",
+    "number-no-trailing-zeros": true,
+    "unit-case": "lower",
+    "value-keyword-case": "lower",
+    "declaration-block-no-duplicate-properties": true,
+    "selector-max-id": 0,
+    "property-no-vendor-prefix": true,
+    "block-no-empty": null,
+    "color-no-invalid-hex": true,
+    "declaration-colon-space-after": "always",
+    "block-closing-brace-newline-after": "always-single-line",
+    "unit-whitelist": ["em", "rem", "%", "s", "px", "deg", "vw", "vh"]
+  }
+}
