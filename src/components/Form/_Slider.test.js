@@ -368,8 +368,6 @@ describe("(Component) Slider", () => {
       const inst = comp.instance();
       expect(inst.calculatePosition(null)).toBe(null);
     });
-
-    test("[handleMouseMove] should set the state to null when the mouse is over the extremes", () => {});
   });
 
   describe("snapshots", () => {
