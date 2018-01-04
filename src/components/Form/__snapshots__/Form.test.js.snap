@@ -210,7 +210,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     }
                   >
                     <WithWrapper
-                      label="Slider with step 750"
+                      label="Slider { step: 750, minDistance: 2000 }"
                       max={10000}
                       min={1000}
                       minDistance={2000}
@@ -234,8 +234,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         className=""
                       >
                         <Slider
-                          crossThumbs={false}
-                          label="Slider with step 750"
+                          label="Slider { step: 750, minDistance: 2000 }"
                           max={10000}
                           min={1000}
                           minDistance={2000}
@@ -259,9 +258,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           }
                         >
                           <span>
+                            <span
+                              style={
+                                Object {
+                                  "left": "0%",
+                                  "width": "100%",
+                                }
+                              }
+                            />
                             <span>
                               <span>
-                                Slider with step 750
+                                Slider { step: 750, minDistance: 2000 }
                               </span>
                               <span
                                 key="minval"
@@ -274,56 +281,191 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 To  5780 -
                               </span>
                             </span>
+                            <span>
+                              <span
+                                data-name="min"
+                                key="min"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
+                                }
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-min"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 1000,
+                                    "value": 1300,
+                                  }
+                                }
+                              />
+                              <span
+                                data-name="max"
+                                key="max"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
+                                }
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-max"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 10000,
+                                    "value": 5780,
+                                  }
+                                }
+                              />
+                            </span>
+                          </span>
+                        </Slider>
+                      </div>
+                    </WithWrapper>
+                  </div>
+                  <div
+                    style={
+                      Object {
+                        "marginBottom": "4rem",
+                        "marginTop": "2rem",
+                      }
+                    }
+                  >
+                    <WithWrapper
+                      label="Slider { step: 1000, minDistance: 0 }"
+                      max={10000}
+                      min={1000}
+                      minDistance={0}
+                      multiple={true}
+                      prefix={
+                        Array [
+                          "From ",
+                          "To ",
+                        ]
+                      }
+                      step={1000}
+                      suffix=".-"
+                      values={
+                        Array [
+                          1300,
+                          5780,
+                        ]
+                      }
+                    >
+                      <div
+                        className=""
+                      >
+                        <Slider
+                          label="Slider { step: 1000, minDistance: 0 }"
+                          max={10000}
+                          min={1000}
+                          minDistance={0}
+                          mouseThreshold={50}
+                          multiple={true}
+                          onChange={[Function]}
+                          prefix={
+                            Array [
+                              "From ",
+                              "To ",
+                            ]
+                          }
+                          step={1000}
+                          suffix=".-"
+                          template=""
+                          values={
+                            Array [
+                              1300,
+                              5780,
+                            ]
+                          }
+                        >
+                          <span>
                             <span
-                              key="min"
-                              name="min"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
                               style={
                                 Object {
-                                  "left": "3.3333333333333335%",
-                                }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-min"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 3.3333333333333335,
-                                  "range": 1000,
-                                  "value": 1300,
+                                  "left": "0%",
+                                  "width": "100%",
                                 }
                               }
                             />
-                            <span
-                              key="max"
-                              name="max"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "left": "53.111111111111114%",
+                            <span>
+                              <span>
+                                Slider { step: 1000, minDistance: 0 }
+                              </span>
+                              <span
+                                key="minval"
+                              >
+                                From  1300 .
+                              </span>
+                              <span
+                                key="maxval"
+                              >
+                                To  5780 -
+                              </span>
+                            </span>
+                            <span>
+                              <span
+                                data-name="min"
+                                key="min"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
                                 }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-max"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 53.111111111111114,
-                                  "range": 10000,
-                                  "value": 5780,
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-min"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 1000,
+                                    "value": 1300,
+                                  }
                                 }
-                              }
-                            />
+                              />
+                              <span
+                                data-name="max"
+                                key="max"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
+                                }
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-max"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 10000,
+                                    "value": 5780,
+                                  }
+                                }
+                              />
+                            </span>
                           </span>
                         </Slider>
                       </div>
@@ -373,7 +515,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         className=""
                       >
                         <Slider
-                          crossThumbs={false}
                           label="Slider single"
                           minDistance={10}
                           mouseThreshold={50}
@@ -412,6 +553,15 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           }
                         >
                           <span>
+                            <span
+                              style={
+                                Object {
+                                  "left": 0,
+                                  "marginLeft": 0,
+                                  "width": "0%",
+                                }
+                              }
+                            />
                             <span>
                               <span>
                                 Slider single
@@ -422,31 +572,32 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 I love it, Savas is awesome.
                               </span>
                             </span>
-                            <span
-                              key="min"
-                              name="min"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "left": "100%",
+                            <span>
+                              <span
+                                data-name="min"
+                                key="min"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
                                 }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-min"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 100,
-                                  "range": 1,
-                                  "value": 5,
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-min"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 1,
+                                    "value": 5,
+                                  }
                                 }
-                              }
-                            />
+                              />
+                            </span>
                           </span>
                         </Slider>
                       </div>
@@ -461,7 +612,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     }
                   >
                     <WithWrapper
-                      label="Slider with array values"
+                      label="Slider { range: Array, minDistance: 1, step: 1 }"
                       minDistance={1}
                       multiple={true}
                       prefix={
@@ -510,8 +661,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         className=""
                       >
                         <Slider
-                          crossThumbs={false}
-                          label="Slider with array values"
+                          label="Slider { range: Array, minDistance: 1, step: 1 }"
                           minDistance={1}
                           mouseThreshold={50}
                           multiple={true}
@@ -561,9 +711,17 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           }
                         >
                           <span>
+                            <span
+                              style={
+                                Object {
+                                  "left": "0%",
+                                  "width": "100%",
+                                }
+                              }
+                            />
                             <span>
                               <span>
-                                Slider with array values
+                                Slider { range: Array, minDistance: 1, step: 1 }
                               </span>
                               <span
                                 key="minval"
@@ -576,56 +734,56 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 To  CHF 500
                               </span>
                             </span>
-                            <span
-                              key="min"
-                              name="min"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "left": "20%",
+                            <span>
+                              <span
+                                data-name="min"
+                                key="min"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
                                 }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-min"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 20,
-                                  "range": 1,
-                                  "value": 2,
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-min"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 1,
+                                    "value": 2,
+                                  }
                                 }
-                              }
-                            />
-                            <span
-                              key="max"
-                              name="max"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "left": "80%",
+                              />
+                              <span
+                                data-name="max"
+                                key="max"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
                                 }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-max"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 80,
-                                  "range": 6,
-                                  "value": 5,
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-max"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 6,
+                                    "value": 5,
+                                  }
                                 }
-                              }
-                            />
+                              />
+                            </span>
                           </span>
                         </Slider>
                       </div>
@@ -633,8 +791,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                   </div>
                   <div>
                     <WithWrapper
-                      label="Slider placeholder"
-                      minDistance={1}
+                      extremes={true}
+                      label="Slider { range: Array, minDistance: 0, step: 1, extremes, mouseThreshold: 10 }"
+                      minDistance={0}
                       mouseThreshold={10}
                       multiple={true}
                       prefix={
@@ -683,9 +842,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         className=""
                       >
                         <Slider
-                          crossThumbs={false}
-                          label="Slider placeholder"
-                          minDistance={1}
+                          extremes={true}
+                          label="Slider { range: Array, minDistance: 0, step: 1, extremes, mouseThreshold: 10 }"
+                          minDistance={0}
                           mouseThreshold={10}
                           multiple={true}
                           onChange={[Function]}
@@ -734,61 +893,69 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           }
                         >
                           <span>
-                            <span>
-                              <span>
-                                Slider placeholder
-                              </span>
-                            </span>
                             <span
-                              key="min"
-                              name="min"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
                               style={
                                 Object {
                                   "left": "0%",
-                                }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-min"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 0,
-                                  "range": 1,
-                                  "value": NaN,
+                                  "width": "100%",
                                 }
                               }
                             />
-                            <span
-                              key="max"
-                              name="max"
-                              onMouseDown={[Function]}
-                              onTouchMove={[Function]}
-                              onTouchStart={[Function]}
-                              style={
-                                Object {
-                                  "left": "100%",
+                            <span>
+                              <span>
+                                Slider { range: Array, minDistance: 0, step: 1, extremes, mouseThreshold: 10 }
+                              </span>
+                            </span>
+                            <span>
+                              <span
+                                data-name="min"
+                                key="min"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
                                 }
-                              }
-                              tabIndex={1}
-                            />
-                            <input
-                              key="hidden-max"
-                              type="hidden"
-                              value={
-                                Object {
-                                  "input": undefined,
-                                  "position": 100,
-                                  "range": 6,
-                                  "value": NaN,
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-min"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 1,
+                                    "value": NaN,
+                                  }
                                 }
-                              }
-                            />
+                              />
+                              <span
+                                data-name="max"
+                                key="max"
+                                onMouseDown={[Function]}
+                                onTouchMove={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                  Object {
+                                    "left": "undefined%",
+                                  }
+                                }
+                                tabIndex={1}
+                              />
+                              <input
+                                key="hidden-max"
+                                type="hidden"
+                                value={
+                                  Object {
+                                    "input": undefined,
+                                    "range": 6,
+                                    "value": NaN,
+                                  }
+                                }
+                              />
+                            </span>
                           </span>
                         </Slider>
                       </div>
