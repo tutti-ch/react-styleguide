@@ -42,7 +42,7 @@ export default () => (
         <Table.Cell colSpan={4}>
           <div style={{ marginTop: "2rem", marginBottom: "4rem" }}>
             <Slider
-              label="Slider with step 750"
+              label="Slider { step: 750, minDistance: 2000 }"
               min={1000}
               max={10000}
               values={[1300, 5780]}
@@ -50,6 +50,19 @@ export default () => (
               prefix={["From ", "To "]}
               suffix=".-"
               step={750}
+              multiple
+            />
+          </div>
+          <div style={{ marginTop: "2rem", marginBottom: "4rem" }}>
+            <Slider
+              label="Slider { step: 1000, minDistance: 0 }"
+              min={1000}
+              max={10000}
+              values={[1300, 5780]}
+              minDistance={0}
+              prefix={["From ", "To "]}
+              suffix=".-"
+              step={1000}
               multiple
             />
           </div>
@@ -71,7 +84,7 @@ export default () => (
           </div>
           <div style={{ marginTop: "2rem", marginBottom: "4rem" }}>
             <Slider
-              label="Slider with array values"
+              label="Slider { range: Array, minDistance: 1, step: 1 }"
               range={[
                 { value: "1", label: "CHF 25" },
                 { value: "2", label: "CHF 35" },
@@ -89,7 +102,7 @@ export default () => (
           </div>
           <div>
             <Slider
-              label="Slider placeholder"
+              label="Slider { range: Array, minDistance: 0, step: 1, extremes, mouseThreshold: 10 }"
               range={[
                 { value: "1", label: "CHF 25" },
                 { value: "2", label: "CHF 35" },
@@ -99,10 +112,11 @@ export default () => (
                 { value: "6", label: "CHF 1'000" }
               ]}
               values={[null, null]}
-              minDistance={1}
+              minDistance={0}
               prefix={["From ", "To "]}
               mouseThreshold={10}
               step={1}
+              extremes
               multiple
             />
           </div>

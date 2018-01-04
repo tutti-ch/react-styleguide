@@ -138,12 +138,14 @@ $inputHeight: $size-xxxl;
   /**
   * STYLES FOR THE SLIDER
   */
+  $slider-height: $size-xxs;
+
   .slider {
     position: relative;
     display: inline-block;
     width: 100%;
-    height: $size-xxs;
-    background: $blue-50;
+    height: $slider-height;
+    background: $greyscale-50;
     border-radius: $size-xxxs / 2;
     border: 0 solid #010101;
     outline: none;
@@ -166,12 +168,21 @@ $inputHeight: $size-xxxl;
       margin-left: $size-xs;
     }
 
+    $thumb-size: $size-xl;
+
+    .thumbBg {
+      display: inline-block;
+      height: $slider-height;
+      background: $blue-50;
+      position: absolute;
+      margin-left: $thumb-size;
+    }
+
     .thumb {
-      user-select: none;
       display: inline-block;
       border: $border-default;
-      height: $size-xl;
-      width: $size-xl;
+      height: $thumb-size;
+      width: $thumb-size;
       border-radius: 50%;
       background: #ffffff;
       outline: none;
@@ -183,14 +194,6 @@ $inputHeight: $size-xxxl;
 
       &.trans {
         transition: $transition-m;
-      }
-
-      &[name="min"] {
-        margin-left: 0;
-      }
-
-      &[name="max"] {
-        margin-left: - $size-xl;
       }
 
       &[data-value]:before {

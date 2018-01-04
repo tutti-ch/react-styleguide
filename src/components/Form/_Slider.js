@@ -10,7 +10,6 @@ export class Slider extends Component {
     minDistance: 10,
     prefix: "",
     suffix: "",
-    crossThumbs: false,
     values: [],
     mouseThreshold: 50
   };
@@ -42,8 +41,7 @@ export class Slider extends Component {
     ),
 
     /**
-     * The minumum range in pixels between the two thumbs. This will only
-     * work when crossThumbs is false. By default it works.
+     * The minimum range in pixels between the two thumbs.
      */
     minDistance: PropTypes.number,
 
@@ -77,11 +75,6 @@ export class Slider extends Component {
     label: PropTypes.string,
 
     /**
-     * Whether min and max thumbs can cross and change positions.
-     */
-    crossThumbs: PropTypes.bool,
-
-    /**
      * The name of the input. In case of multiple inputs, provide an array with two indexes.
      */
     name: PropTypes.oneOfType([
@@ -110,6 +103,38 @@ export class Slider extends Component {
     mouseThreshold: PropTypes.number
   };
 
+  /**
+   * Return the clientX value of the event.
+   *
+   * @param e
+   * @return {*}
+   */
+  static clientX(e) {
+    if (e.clientX) return e.clientX;
+    if (e.touches && e.touches[0]) return e.touches[0].clientX;
+  }
+
+  /**
+   * Return the percentage.
+   *
+   * @param val
+   * @param total
+   * @return {number}
+   */
+  static perc(val, total) {
+    return 100 * val / total;
+  }
+
+  /**
+   * Returns true if value is NaN or a null value.
+   *
+   * @param val
+   * @return {boolean}
+   */
+  static isEmpty(val) {
+    return isNaN(val) || val === null || typeof val === "undefined";
+  }
+
   constructor(props) {
     super(props);
 
@@ -118,9 +143,11 @@ export class Slider extends Component {
     this.handleMouseMove = this.handleMouseMove.bind(this);
     this.calculatePosition = this.calculatePosition.bind(this);
     this.calculateMousePosition = this.calculateMousePosition.bind(this);
+    this.calculateMouseValue = this.calculateMouseValue.bind(this);
     this.calculateClosestValue = this.calculateClosestValue.bind(this);
+    this.validateThumbPosition = this.validateThumbPosition.bind(this);
+    this.handleExtremes = this.handleExtremes.bind(this);
     this.getFormattedValue = this.getFormattedValue.bind(this);
-    this.getRangeIndex = this.getRangeIndex.bind(this);
     this.getMaxRange = this.getMaxRange.bind(this);
     this.getMinRange = this.getMinRange.bind(this);
     this.renderThumb = this.renderThumb.bind(this);
@@ -142,13 +169,8 @@ export class Slider extends Component {
         : [props.prefix, props.prefix],
       suffix: Array.isArray(props.suffix)
         ? props.suffix
-        : [props.suffix, props.suffix],
-      dragging: false // The element we are currently dragging.
+        : [props.suffix, props.suffix]
     };
-
-    this.state.min.position = this.calculatePosition(this.state.min.value) || 0;
-    this.state.max.position =
-      this.calculatePosition(this.state.max.value) || 100;
   }
 
   /**
@@ -156,6 +178,24 @@ export class Slider extends Component {
    */
   componentDidMount() {
     this.root = ReactDOM.findDOMNode(this);
+
+    // The timeout is required so that refs are mounted properly
+    setTimeout(() => {
+      const max = { ...this.state.max };
+      const min = { ...this.state.min };
+
+      if (this.refs.min) {
+        this.target = this.refs.min;
+        min.position = this.calculatePosition(min.value || this.getMinRange());
+      }
+
+      if (this.refs.max) {
+        this.target = this.refs.max;
+        max.position = this.calculatePosition(max.value || this.getMaxRange());
+      }
+
+      this.setState({ max, min });
+    });
   }
 
   componentWillReceiveProps({ name }) {
@@ -180,7 +220,7 @@ export class Slider extends Component {
   /**
    * Given a value, calculate the position in percentage.
    *
-   * @param {number} value
+   * @param {number|string} value
    * @return {number|null} Returns null in case value is also empty.
    */
   calculatePosition(value) {
@@ -190,12 +230,12 @@ export class Slider extends Component {
     const maxRange = this.state.max.range;
 
     if (value === minRange) return 0;
-    if (value === maxRange) return 100;
+    if (value === maxRange) return this.validateThumbPosition(100);
 
     const total = maxRange - minRange;
     const distance = value - minRange;
 
-    return distance * 100 / total;
+    return this.validateThumbPosition(distance * 100 / total);
   }
 
   /**
@@ -213,24 +253,18 @@ export class Slider extends Component {
   }
 
   /**
-   * Return the clientX value of the event.
+   * Calculate the value at mouse position.
    *
    * @param e
-   * @return {*}
+   * @return {number}
    */
-  static clientX(e) {
-    if (e.clientX) return e.clientX;
-    if (e.touches && e.touches[0]) return e.touches[0].clientX;
-  }
+  calculateMouseValue(e) {
+    const { min: { range: minRange }, max: { range: maxRange } } = this.state;
 
-  /**
-   * Returns true if value is NaN or a null value.
-   *
-   * @param val
-   * @return {boolean}
-   */
-  static isEmpty(val) {
-    return isNaN(val) || val === null || typeof val === "undefined";
+    const total = maxRange - minRange;
+    const mousePos = this.calculateMousePosition(e);
+
+    return Math.round(minRange + total * mousePos / 100);
   }
 
   /**
@@ -240,10 +274,13 @@ export class Slider extends Component {
    * max limits).
    *
    * @param {string|number} value
+   * @param {string} propName min|max
    * @return {number}
    */
-  calculateClosestValue(value) {
+  calculateClosestValue(value, propName) {
     const { step, range = [] } = this.props;
+
+    const isMin = propName === "min";
 
     let prevValue;
     let nextValue;
@@ -259,11 +296,76 @@ export class Slider extends Component {
       nextValue = sorted.filter(i => i > value).shift();
     }
 
-    if (this.direction === "R") {
-      return value - prevValue >= nextValue - value ? nextValue : prevValue;
-    } else {
-      return value - prevValue > nextValue - value ? nextValue : prevValue;
+    // Make sure that the minimum distance is respected
+    const { minDistance: dist } = this.props;
+
+    if (dist && isMin && prevValue + dist > this.state.max.value) {
+      return this.calculateClosestValue(prevValue - step, propName);
+    } else if (dist && !isMin && prevValue - dist < this.state.min.value) {
+      return this.calculateClosestValue(prevValue + step, propName);
     }
+
+    return value - prevValue >= nextValue - value ? nextValue : prevValue;
+  }
+
+  /**
+   * When the user drags the mouse outside the slider (on left or right extreme)
+   * we reset the values if certain conditions are satisfied.
+   *
+   * @param {number} delta The mouse movement.
+   * @param {object} rect The rect client of the dragged element.
+   * @param {number} clientX The client x of the mouse.
+   * @return {boolean} Returns true the state was not, false otherwise.
+   */
+  handleExtremes(delta, rect, clientX) {
+    const { extremes, mouseThreshold } = this.props;
+
+    if (!extremes) {
+      return false;
+    }
+
+    if (delta < 0 && clientX < rect.left - mouseThreshold) {
+      this.setState({ min: { ...this.state.min, value: null, position: 0 } });
+      return true;
+    }
+
+    if (delta > 0 && clientX > rect.right + mouseThreshold) {
+      this.setState({
+        max: {
+          ...this.state.max,
+          value: null,
+          position: this.validateThumbPosition(100)
+        }
+      });
+      return true;
+    }
+
+    return false;
+  }
+
+  /**
+   * Validate the thumb positions based on the new values. This function makes sure
+   * that the thumb is within 0 and 100, and also minimum is never greater than maximum.
+   */
+  validateThumbPosition(newP) {
+    const size = this.root.offsetWidth;
+    const target = this.target;
+    const which = target.getAttribute("data-name");
+    const isMin = which === "min";
+    const thumbSize = Slider.perc(target.offsetWidth, size);
+
+    // Make sure it is greater than 0 and lower than 100 - its width
+    newP = Math.max(0, newP);
+    newP = Math.min(newP, 100 - thumbSize); // Make sure it is lower than 100 - elem width.
+
+    // Make sure they do not cross each other.
+    if (isMin && newP + thumbSize > this.state.max.position) {
+      newP = Math.min(newP, this.state.max.position - thumbSize);
+    } else if (!isMin && newP < this.state.min.position + thumbSize) {
+      newP = Math.max(newP, this.state.min.position + thumbSize);
+    }
+
+    return newP;
   }
 
   /**
@@ -274,10 +376,12 @@ export class Slider extends Component {
    * @param e
    */
   handleMouseDown(e) {
-    this.setState({ dragging: e.target });
     this.clientX = Slider.clientX(e);
-
-    e.target.classList.remove(classes.trans);
+    this.target = e.target;
+    this.target.classList.remove(classes.trans);
+    this.initialPosition = parseInt(
+      this.state[this.target.getAttribute("data-name")].position
+    );
 
     // istanbul ignore else
     if (window && window.addEventListener) {
@@ -299,17 +403,23 @@ export class Slider extends Component {
       window.removeEventListener("mousemove", this.handleMouseMove);
     }
 
-    const { dragging: elem } = this.state;
-    const prop = elem.getAttribute("name");
-    elem.classList.add(classes.trans);
+    // If extremes were set, there is no need for a correction.
+    if (this.extremes) {
+      return;
+    }
 
-    const value = this.calculateClosestValue(this.state[prop].value);
-    const state = this.state[prop];
+    const elem = this.target;
+    const prop = elem.getAttribute("data-name");
+    const value = this.calculateClosestValue(this.state[prop].value, prop);
+    elem.classList.add(classes.trans);
 
     this.setState(
       {
-        dragging: false,
-        [prop]: { ...state, value, position: this.calculatePosition(value) }
+        [prop]: {
+          ...this.state[prop],
+          value,
+          position: this.calculatePosition(value)
+        }
       },
       () => {
         if (typeof this.props.onChange === "function") {
@@ -332,91 +442,29 @@ export class Slider extends Component {
     // TouchMove throws a warning for e.preventDefault
     if (e.clientX) e.preventDefault();
 
-    // Limits of the slider (minimum and maximum value) and the thumb that is being dragged
-    const {
-      dragging: elem,
-      min: { range: minRange },
-      max: { range: maxRange }
-    } = this.state;
-    const {
-      minDistance,
-      crossThumbs,
-      values,
-      extremes,
-      mouseThreshold
-    } = this.props;
-
-    const prop = elem.getAttribute("name");
-    const rect = elem.getBoundingClientRect();
-    const isMin = prop === "min";
     const clientX = Slider.clientX(e);
-    const mousePos = this.calculateMousePosition(e); // The mouse position in percentage
-    const mouseValue = Math.round(
-      minRange + (maxRange - minRange) * mousePos / 100
-    ); // The value at the mouse position
+    const slider = this.root;
+    const rect = slider.getBoundingClientRect();
+    const prop = this.target.getAttribute("data-name");
+    const size = slider.offsetWidth;
+    const oldP = this.initialPosition;
+    const delta = clientX - this.clientX; // Number of pixels in mouse movement
+    const newP = this.validateThumbPosition(oldP + Slider.perc(delta, size));
 
-    // If the mouse position is in the left or right extreme, reset the values (only if initials values are null)
-    if (
-      isMin &&
-      (values[0] === null || extremes) &&
-      clientX < rect.left - mouseThreshold
-    ) {
-      return this.setState({
-        min: { ...this.state.min, value: null, position: 0 }
+    if ((this.extremes = this.handleExtremes(delta, rect, clientX))) {
+      return;
+    }
+
+    // istanbul ignore else
+    if (this.state[prop].position !== newP) {
+      this.setState({
+        [prop]: {
+          ...this.state[prop],
+          position: newP,
+          value: this.calculateMouseValue(e)
+        }
       });
     }
-
-    if (
-      !isMin &&
-      (values[1] === null || extremes) &&
-      clientX > rect.right + mouseThreshold
-    ) {
-      return this.setState({
-        max: { ...this.state.max, value: null, position: 100 }
-      });
-    }
-
-    // Save the direction so that the calculatePosition
-    // function can compute properly
-    this.direction = this.clientX < Slider.clientX(e) ? "R" : "L";
-
-    // If cross thumbs is not allowed, make sure that min never passes max thumb.
-    if (crossThumbs !== true) {
-      const minValue = isMin ? mouseValue : this.state.min.value;
-      const maxValue = !isMin ? mouseValue : this.state.max.value;
-
-      if (minValue + minDistance > maxValue) {
-        return;
-      }
-    }
-
-    if (mouseValue >= minRange && mouseValue <= maxRange) {
-      const state = {
-        ...this.state[prop],
-        value: mouseValue,
-        position: mousePos
-      };
-
-      this.setState({ [prop]: state });
-    }
-  }
-
-  /**
-   * Return the index of the given value in the range.
-   *
-   * @param value
-   * @return {number}
-   */
-  getRangeIndex(value) {
-    const { range = [] } = this.props;
-
-    for (let i = 0; i < range.length; i++) {
-      if (+range[i].value === +value) {
-        return i;
-      }
-    }
-
-    return -1;
   }
 
   /**
@@ -495,10 +543,11 @@ export class Slider extends Component {
     return [
       <span
         className={classes.thumb}
-        name={prop}
+        data-name={prop}
         style={styles}
         tabIndex={1}
         key={prop}
+        ref={prop}
         {...events}
       />,
       <input
@@ -514,7 +563,7 @@ export class Slider extends Component {
    * Render the description part.
    */
   renderDesc() {
-    const { multiple, crossThumbs } = this.props;
+    const { multiple } = this.props;
     let { min: { value: minValue }, max: { value: maxValue } } = this.state;
     let { prefix, suffix } = this.props;
     let minValueText, maxValueText;
@@ -527,21 +576,12 @@ export class Slider extends Component {
     const f = this.getFormattedValue;
 
     if (multiple) {
-      // If crossThumbs is enabled, check for the min value (min and max can be swapped)
-      // Otherwise, minValue is always minValue. Do not need to swap here.
-      const min = !crossThumbs
-        ? minValue
-        : minValue < maxValue ? minValue : maxValue;
-      const max = !crossThumbs
-        ? maxValue
-        : maxValue > minValue ? maxValue : minValue;
-
       // Join prefix and suffixes only when the value is not empty.
-      minValueText = min
-        ? [prefix[0], f(min), suffix[0]].filter(i => i).join(" ")
+      minValueText = minValue
+        ? [prefix[0], f(minValue), suffix[0]].filter(i => i).join(" ")
         : null;
-      maxValueText = max
-        ? [prefix[1], f(max), suffix[1]].filter(i => i).join(" ")
+      maxValueText = maxValue
+        ? [prefix[1], f(maxValue), suffix[1]].filter(i => i).join(" ")
         : null;
     } else {
       minValueText = [prefix[0], f(minValue), suffix[0]]
@@ -566,14 +606,27 @@ export class Slider extends Component {
   render() {
     const { multiple, label } = this.props;
 
+    const minPos = this.state.min.position || 0;
+    const maxPos = this.state.max.position || 100;
+    const styles = { left: `${minPos}%`, width: `${maxPos - minPos}%` };
+
+    if (!multiple) {
+      styles.marginLeft = 0;
+      styles.left = 0;
+      styles.width = `${minPos}%`;
+    }
+
     return (
       <span className={classes.slider}>
+        <span className={classes.thumbBg} style={styles} />
         <span className={classes.label}>
           <span className={classes.labelText}>{label}</span>
           {this.renderDesc()}
         </span>
-        {this.renderThumb("min")}
-        {multiple && this.renderThumb("max")}
+        <span className={classes.thumbs}>
+          {this.renderThumb("min")}
+          {multiple && this.renderThumb("max")}
+        </span>
       </span>
     );
   }

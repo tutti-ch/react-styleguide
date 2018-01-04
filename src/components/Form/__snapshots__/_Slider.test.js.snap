@@ -2,7 +2,6 @@
 
 exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 1`] = `
 <Slider
-  crossThumbs={false}
   decimals={2}
   max={10}
   min={1}
@@ -17,66 +16,73 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   values={Array []}
 >
   <span>
-    <span>
-      <span />
-    </span>
     <span
-      key="min"
-      name="min"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
       style={
         Object {
           "left": "0%",
-        }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-min"
-      type="hidden"
-      value={
-        Object {
-          "input": undefined,
-          "position": 0,
-          "range": 1,
-          "value": NaN,
+          "width": "100%",
         }
       }
     />
-    <span
-      key="max"
-      name="max"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "left": "100%",
+    <span>
+      <span />
+    </span>
+    <span>
+      <span
+        data-name="min"
+        key="min"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
         }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-max"
-      type="hidden"
-      value={
-        Object {
-          "input": undefined,
-          "position": 100,
-          "range": 10,
-          "value": NaN,
+        tabIndex={1}
+      />
+      <input
+        key="hidden-min"
+        type="hidden"
+        value={
+          Object {
+            "input": undefined,
+            "range": 1,
+            "value": NaN,
+          }
         }
-      }
-    />
+      />
+      <span
+        data-name="max"
+        key="max"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
+        }
+        tabIndex={1}
+      />
+      <input
+        key="hidden-max"
+        type="hidden"
+        value={
+          Object {
+            "input": undefined,
+            "range": 10,
+            "value": NaN,
+          }
+        }
+      />
+    </span>
   </span>
 </Slider>
 `;
 
 exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 2`] = `
 <Slider
-  crossThumbs={false}
   decimals={2}
   max={10}
   min={1}
@@ -97,68 +103,75 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   values={Array []}
 >
   <span>
-    <span>
-      <span />
-    </span>
     <span
-      key="min"
-      name="min"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
       style={
         Object {
           "left": "0%",
-        }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-min"
-      name="pe"
-      type="hidden"
-      value={
-        Object {
-          "input": "pe",
-          "position": 0,
-          "range": 1,
-          "value": NaN,
+          "width": "100%",
         }
       }
     />
-    <span
-      key="max"
-      name="max"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "left": "100%",
+    <span>
+      <span />
+    </span>
+    <span>
+      <span
+        data-name="min"
+        key="min"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
         }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-max"
-      name="ps"
-      type="hidden"
-      value={
-        Object {
-          "input": "ps",
-          "position": 100,
-          "range": 10,
-          "value": NaN,
+        tabIndex={1}
+      />
+      <input
+        key="hidden-min"
+        name="pe"
+        type="hidden"
+        value={
+          Object {
+            "input": "pe",
+            "range": 1,
+            "value": NaN,
+          }
         }
-      }
-    />
+      />
+      <span
+        data-name="max"
+        key="max"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
+        }
+        tabIndex={1}
+      />
+      <input
+        key="hidden-max"
+        name="ps"
+        type="hidden"
+        value={
+          Object {
+            "input": "ps",
+            "range": 10,
+            "value": NaN,
+          }
+        }
+      />
+    </span>
   </span>
 </Slider>
 `;
 
 exports[`(Component) Slider snapshots should create the right snapshot for multiple thumbs 1`] = `
 <Slider
-  crossThumbs={false}
   max={1500}
   min={500}
   minDistance={10}
@@ -172,66 +185,73 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
   values={Array []}
 >
   <span>
-    <span>
-      <span />
-    </span>
     <span
-      key="min"
-      name="min"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
       style={
         Object {
           "left": "0%",
-        }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-min"
-      type="hidden"
-      value={
-        Object {
-          "input": undefined,
-          "position": 0,
-          "range": 500,
-          "value": NaN,
+          "width": "100%",
         }
       }
     />
-    <span
-      key="max"
-      name="max"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "left": "100%",
+    <span>
+      <span />
+    </span>
+    <span>
+      <span
+        data-name="min"
+        key="min"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
         }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-max"
-      type="hidden"
-      value={
-        Object {
-          "input": undefined,
-          "position": 100,
-          "range": 1500,
-          "value": NaN,
+        tabIndex={1}
+      />
+      <input
+        key="hidden-min"
+        type="hidden"
+        value={
+          Object {
+            "input": undefined,
+            "range": 500,
+            "value": NaN,
+          }
         }
-      }
-    />
+      />
+      <span
+        data-name="max"
+        key="max"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
+        }
+        tabIndex={1}
+      />
+      <input
+        key="hidden-max"
+        type="hidden"
+        value={
+          Object {
+            "input": undefined,
+            "range": 1500,
+            "value": NaN,
+          }
+        }
+      />
+    </span>
   </span>
 </Slider>
 `;
 
 exports[`(Component) Slider snapshots should create the right snapshot for single thumb 1`] = `
 <Slider
-  crossThumbs={false}
   max={1500}
   min={500}
   minDistance={10}
@@ -244,34 +264,44 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
   values={Array []}
 >
   <span>
+    <span
+      style={
+        Object {
+          "left": 0,
+          "marginLeft": 0,
+          "width": "0%",
+        }
+      }
+    />
     <span>
       <span />
     </span>
-    <span
-      key="min"
-      name="min"
-      onMouseDown={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "left": "0%",
+    <span>
+      <span
+        data-name="min"
+        key="min"
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "left": "undefined%",
+          }
         }
-      }
-      tabIndex={1}
-    />
-    <input
-      key="hidden-min"
-      type="hidden"
-      value={
-        Object {
-          "input": undefined,
-          "position": 0,
-          "range": 500,
-          "value": NaN,
+        tabIndex={1}
+      />
+      <input
+        key="hidden-min"
+        type="hidden"
+        value={
+          Object {
+            "input": undefined,
+            "range": 500,
+            "value": NaN,
+          }
         }
-      }
-    />
+      />
+    </span>
   </span>
 </Slider>
 `;

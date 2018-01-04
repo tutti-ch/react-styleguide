@@ -4,18 +4,55 @@ import { mount } from "enzyme";
 import { Slider } from "./_Slider";
 
 describe("(Component) Slider", () => {
-  test("[componentDidMount] should register a root element", () => {
+  test("[componentDidMount] should register a root element", done => {
     const comp = mount(<Slider min={1000} max={2000} />);
     const inst = comp.instance();
+    inst.root = { offsetWidth: 500 };
+    inst.refs.min = {
+      getAttribute: jest.fn().mockReturnValue("min"),
+      offsetWidth: 50
+    };
+    inst.refs.max = {
+      getAttribute: jest.fn().mockReturnValue("max"),
+      offsetWidth: 50
+    };
     expect(inst.root).not.toBeUndefined();
+
+    setTimeout(() => {
+      expect(comp.state("min").position).toBe(0);
+      expect(comp.state("max").position).toBe(90);
+
+      inst.refs.min = undefined;
+      inst.refs.max = undefined;
+      inst.calculatePosition = jest.fn();
+      inst.componentDidMount();
+
+      setTimeout(() => {
+        expect(inst.calculatePosition).not.toHaveBeenCalled();
+        done();
+      });
+    });
+  });
+
+  test("[calculateMouseValue] should calculate the value at mouse position", () => {
+    const comp = mount(<Slider min={1000} max={2000} />);
+    const inst = comp.instance();
+    inst.calculateMousePosition = jest.fn().mockReturnValue(75);
+    expect(inst.calculateMouseValue({})).toBe(1750);
+    expect(inst.calculateMousePosition).toHaveBeenCalledWith({});
   });
 
   test("[calculatePosition] should calculate the position given a value", () => {
     const comp = mount(<Slider min={1000} max={2000} />);
     const inst = comp.instance();
+    inst.root = { offsetWidth: 1000 };
+    inst.target = {
+      getAttribute: jest.fn().mockReturnValue("min"),
+      offsetWidth: 50
+    };
     expect(inst.calculatePosition(1500)).toBe(50);
     expect(inst.calculatePosition(1000)).toBe(0);
-    expect(inst.calculatePosition(2000)).toBe(100);
+    expect(inst.calculatePosition(2000)).toBe(95); // Since thumbSize equals 5% of the size (1000 * 5/100 = 50)
     expect(inst.calculatePosition(1750)).toBe(75);
   });
 
@@ -35,49 +72,100 @@ describe("(Component) Slider", () => {
     );
   });
 
-  test("[calculateClosestValue] should return the closest step value", () => {
-    const comp = mount(<Slider min={500} max={1500} step={250} />);
-    const inst = comp.instance();
-    expect(inst.calculateClosestValue(800)).toBe(750);
-    expect(inst.calculateClosestValue(900)).toBe(1000);
-    expect(inst.calculateClosestValue(1450)).toBe(1500);
-    expect(inst.calculateClosestValue(10000)).toBe(1500);
-    expect(inst.calculateClosestValue(100)).toBe(500);
-    expect(inst.calculateClosestValue(501)).toBe(500);
-    expect(inst.calculateClosestValue(625)).toBe(500);
+  describe("calculateClosestValue", () => {
+    test("should return the closest step value", () => {
+      const comp = mount(<Slider min={500} max={1500} step={250} />);
+      const inst = comp.instance();
+      expect(inst.calculateClosestValue(800)).toBe(750);
+      expect(inst.calculateClosestValue(900)).toBe(1000);
+      expect(inst.calculateClosestValue(1450)).toBe(1500);
+      expect(inst.calculateClosestValue(10000)).toBe(1500);
+      expect(inst.calculateClosestValue(100)).toBe(500);
+      expect(inst.calculateClosestValue(501)).toBe(500);
+      expect(inst.calculateClosestValue(625)).toBe(750);
 
-    comp.setProps({
-      min: undefined,
-      max: undefined,
-      step: 0.5,
-      range: [
-        { label: "1000", value: "1" },
-        { label: "2000", value: "2.5" },
-        { label: "3000", value: "5" },
-        { label: "4000", value: "7.5" },
-        { label: "5000", value: "10" }
-      ]
+      comp.setProps({
+        min: undefined,
+        max: undefined,
+        step: 0.5,
+        range: [
+          { label: "1000", value: "1" },
+          { label: "2000", value: "2.5" },
+          { label: "3000", value: "5" },
+          { label: "4000", value: "7.5" },
+          { label: "5000", value: "10" }
+        ]
+      });
+
+      inst.direction = "R";
+
+      expect(inst.calculateClosestValue(6)).toBe(5);
+      expect(inst.calculateClosestValue(7)).toBe(7.5);
+      expect(inst.calculateClosestValue(9.9)).toBe(10);
+      expect(inst.calculateClosestValue(1.9)).toBe(2.5);
     });
 
-    inst.direction = "R";
+    test("should recursively find the previous value until minimum distance is satisfied", () => {
+      const comp = mount(
+        <Slider min={500} max={1500} step={250} minDistance={300} />
+      );
+      const inst = comp.instance();
+      comp.setState({ max: { ...comp.state("max"), value: 1010 } });
+      expect(inst.calculateClosestValue(1200, "min")).toBe(500);
+      comp.setState({ max: { ...comp.state("max"), value: 1100 } });
+      expect(inst.calculateClosestValue(1200, "min")).toBe(750);
+      comp.setState({ min: { ...comp.state("min"), value: 640 } });
+      expect(inst.calculateClosestValue(1200, "max")).toBe(1250);
+      expect(inst.calculateClosestValue(750, "max")).toBe(1000);
+    });
+  });
 
-    expect(inst.calculateClosestValue(6)).toBe(5);
-    expect(inst.calculateClosestValue(7)).toBe(7.5);
-    expect(inst.calculateClosestValue(9.9)).toBe(10);
-    expect(inst.calculateClosestValue(1.9)).toBe(2.5);
+  test("[handleExtremes] should set the value state to null if extremes provided", () => {
+    const comp = mount(
+      <Slider
+        min={500}
+        max={1500}
+        step={250}
+        minDistance={300}
+        mouseThreshold={10}
+        extremes
+        multiple
+      />
+    );
+    const inst = comp.instance();
+    inst.target = {
+      getAttribute: jest.fn().mockReturnValue("min"),
+      offsetWidth: 10
+    };
+    expect(inst.handleExtremes(-100, { left: 10, right: 900 }, 910)).toBe(
+      false
+    );
+    expect(inst.handleExtremes(-100, { left: 10, right: 900 }, 0)).toBe(false);
+    expect(inst.handleExtremes(-100, { left: 10, right: 900 }, -1)).toBe(true);
+
+    expect(inst.handleExtremes(100, { left: 10, right: 900 }, 910)).toBe(false);
+    expect(inst.handleExtremes(100, { left: 10, right: 900 }, 911)).toBe(true);
+    expect(inst.handleExtremes(100, { left: 10, right: 900 }, 50)).toBe(false);
+
+    comp.setProps({ extremes: false });
+    expect(inst.handleExtremes(100, { left: 10, right: 900 }, 911)).toBe(false);
   });
 
   test("[handleMouseDown] should set the element that triggered the event and register variables", () => {
     const comp = mount(<Slider min={500} max={1500} step={250} />);
     const inst = comp.instance();
-    expect(comp.state("dragging")).toBe(false);
 
-    const event = { target: { classList: { remove: jest.fn() } } };
+    const event = {
+      target: {
+        getAttribute: jest.fn().mockReturnValue("min"),
+        classList: { remove: jest.fn() }
+      }
+    };
     const spy = jest.spyOn(window, "addEventListener");
 
     inst.handleMouseDown(event);
     expect(event.target.classList.remove).toHaveBeenCalled();
-    expect(comp.state("dragging")).toBe(event.target);
+    expect(event.target.getAttribute).toHaveBeenCalledWith("data-name");
     expect(window.addEventListener).toHaveBeenCalledWith(
       "mouseup",
       inst.handleMouseUp
@@ -106,14 +194,13 @@ describe("(Component) Slider", () => {
     };
 
     comp.setState({
-      dragging: elem,
       min: { ...comp.state("min"), value: 770 }
     });
+    inst.target = elem;
     const spy = jest.spyOn(window, "removeEventListener");
 
     inst.handleMouseUp();
     expect(elem.classList.add).toHaveBeenCalled();
-    expect(comp.state("dragging")).toBe(false);
     expect(comp.state("min").value).toBe(750);
     expect(onChange).toHaveBeenCalledWith(750, {
       name: "ps",
@@ -131,136 +218,131 @@ describe("(Component) Slider", () => {
       "mousemove",
       inst.handleMouseMove
     );
+
+    // In case extremes are specified, should return undefined
+    inst.extremes = true;
+    inst.setState = jest.fn();
+    inst.handleMouseUp();
+    expect(inst.setState).not.toHaveBeenCalled();
     spy.mockRestore();
   });
 
-  test("[handleMouseMove] should move the element to the mouse position", () => {
-    const comp = mount(
-      <Slider
-        min={500}
-        max={1500}
-        values={[750, 1250]}
-        step={250}
-        minRange={100}
-        name={["ps", "pe"]}
-        multiple
-      />
-    );
+  describe("handleMouseDown", () => {
+    test("should setup the variables and event listeners", () => {
+      const comp = mount(
+        <Slider
+          min={500}
+          max={1500}
+          values={[750, 1250]}
+          step={250}
+          minRange={100}
+          name={["ps", "pe"]}
+          multiple
+        />
+      );
 
-    const inst = comp.instance();
-    const elem = {
-      getAttribute: jest.fn().mockReturnValue("min"),
-      getBoundingClientRect: () => ({ left: 100 })
-    };
-    const event = { preventDefault: jest.fn(), clientX: 570 };
-    inst.root = {
-      getBoundingClientRect: jest.fn().mockReturnValue({ left: 470 }),
-      offsetWidth: 1000
-    };
-    comp.setState({ dragging: elem });
-    expect(comp.state("min").value).toBe(750);
+      const inst = comp.instance();
+      const window = global.window;
+      const event = {
+        target: {
+          classList: { remove: jest.fn() },
+          getAttribute: jest.fn().mockReturnValue("min")
+        }
+      };
+      global.window.addEventListener = jest.fn();
+      inst.handleMouseDown(event);
+      expect(global.window.addEventListener).toHaveBeenCalledWith(
+        "mouseup",
+        inst.handleMouseUp
+      );
+      expect(global.window.addEventListener).toHaveBeenCalledWith(
+        "touchend",
+        inst.handleMouseUp
+      );
+      expect(global.window.addEventListener).toHaveBeenCalledWith(
+        "mousemove",
+        inst.handleMouseMove
+      );
+      global.window = window;
+    });
+  });
 
-    inst.handleMouseMove(event);
-    expect(comp.state("min")).toEqual({
-      value: 600,
-      position: 10,
-      range: 500,
-      input: "ps"
+  describe("handleMouseMove", () => {
+    test("should return undefined if extremes returns true", () => {
+      const comp = mount(<Slider min={100} max={1000} />);
+      const inst = comp.instance();
+      inst.handleExtremes = jest.fn().mockReturnValue(true);
+      inst.setState = jest.fn();
+      inst.root = {
+        getBoundingClientRect: jest
+          .fn()
+          .mockReturnValue({ left: 100, right: 500 }),
+        offsetWidth: 1000
+      };
+      inst.target = {
+        getAttribute: jest.fn().mockReturnValue("min"),
+        offsetWidth: 50
+      };
+      expect(inst.handleMouseMove({})).toBeUndefined();
+      expect(inst.setState).not.toHaveBeenCalled();
     });
 
-    // Should not let continue when minValue > maxValue - range
-    comp.setState({ minValue: 550, maxValue: 650 });
-    inst.calculateMousePosition = jest.fn().mockReturnValue(75);
-    inst.handleMouseMove(event);
-    expect(comp.state("minValue")).toBe(550); // Should remain the same
-
-    elem.getAttribute = jest.fn().mockReturnValue("max");
-    inst.handleMouseMove(event);
-    expect(comp.state("min").value).toBe(600);
-    expect(comp.state("max").value).toBe(1250);
-
-    // The preventDefault should be called every time until now
-    expect(event.preventDefault).toHaveBeenCalledTimes(3);
-    // Now lets set clientX to undefined to simulate a touch event
-    delete event.clientX;
-
-    // In this case minValue can be greater than maxValue
-    comp.setProps({ crossThumbs: true });
-    comp.setState({ minValue: 550, maxValue: 650 });
-    elem.getAttribute = jest.fn().mockReturnValue("min");
-    inst.calculateMousePosition = jest.fn().mockReturnValue(75);
-    inst.handleMouseMove(event);
-    expect(comp.state("min").value).toBe(1250);
-    expect(comp.state("min").position).toBe(75);
-    expect(event.preventDefault).toHaveBeenCalledTimes(3);
-
-    // Here the mouse value should be greater than max, so we won't call the setState fn
-    const stateSpy = jest.spyOn(inst, "setState");
-    inst.calculateMousePosition = jest.fn().mockReturnValue(150);
-    inst.handleMouseMove(event);
-    expect(stateSpy).not.toHaveBeenCalled();
+    test("should return undefined if extremes returns true", () => {
+      const comp = mount(<Slider min={100} max={1000} />);
+      const inst = comp.instance();
+      const event = { clientX: 51, preventDefault: jest.fn() };
+      inst.handleExtremes = jest.fn().mockReturnValue(null);
+      inst.validateThumbPosition = jest.fn().mockReturnValue(75);
+      inst.setState = jest.fn();
+      inst.calculateMouseValue = jest.fn();
+      inst.clientX = 101;
+      inst.root = {
+        getBoundingClientRect: jest
+          .fn()
+          .mockReturnValue({ left: 100, right: 500 }),
+        offsetWidth: 1000
+      };
+      inst.target = {
+        getAttribute: jest.fn().mockReturnValue("min"),
+        offsetWidth: 50
+      };
+      inst.handleMouseMove(event);
+      expect(event.preventDefault).toHaveBeenCalled();
+      expect(inst.calculateMouseValue).toHaveBeenCalledWith(event);
+      expect(inst.setState).toHaveBeenCalledWith({
+        min: { input: undefined, position: 75, range: 100 }
+      });
+    });
   });
 
-  test("[renderThumb] should choose the correct name for inputs", () => {
-    const comp = mount(
-      <Slider
-        min={500}
-        max={1500}
-        step={250}
-        minRange={100}
-        name={["pe", "ps"]}
-        multiple
-      />
-    );
+  test("[validateThumbPosition] should validate the thumb position and make sure everything is alright", () => {
+    const comp = mount(<Slider min={100} max={1000} />);
     const inst = comp.instance();
-
-    expect(
-      mount(<div>{inst.renderThumb("max")}</div>)
-        .find("input")
-        .prop("name")
-    ).toBe("ps");
-    expect(
-      mount(<div>{inst.renderThumb("min")}</div>)
-        .find("input")
-        .prop("name")
-    ).toBe("pe");
-
-    comp.setProps({ name: "my-name" });
-    expect(
-      mount(<div>{inst.renderThumb("min")}</div>)
-        .find("input")
-        .prop("name")
-    ).toBe("my-name");
-    expect(
-      mount(<div>{inst.renderThumb("max")}</div>)
-        .find("input")
-        .prop("name")
-    ).toBe("my-name");
+    inst.setState({ max: { position: 40 }, min: { position: 20 } });
+    inst.target = {
+      getAttribute: jest.fn().mockReturnValue("min"),
+      offsetWidth: 50
+    };
+    inst.root = { offsetWidth: 1000 };
+    expect(inst.validateThumbPosition(50)).toBe(35);
+    inst.target.getAttribute = jest.fn().mockReturnValue("max");
+    expect(inst.validateThumbPosition(15)).toBe(25);
   });
 
-  test("[getRangeIndex] should return the index value", () => {
-    const comp = mount(
-      <Slider
-        step={1}
-        minRange={1}
-        name={["pe", "ps"]}
-        multiple
-        range={[
-          { label: "1000", value: "1" },
-          { label: "2000", value: "2.5" },
-          { label: "3000", value: "5" },
-          { label: "4000", value: "7.5" },
-          { label: "5000", value: "10" }
-        ]}
-      />
-    );
-
+  test("[getMaxRange] should return the max range", () => {
+    const comp = mount(<Slider range={[{}, { value: 100 }]} />);
     const inst = comp.instance();
-    expect(inst.getRangeIndex(15)).toBe(-1);
-    expect(inst.getRangeIndex("5")).toBe(2);
-    expect(inst.getRangeIndex(5)).toBe(2);
-    expect(inst.getRangeIndex(1)).toBe(0);
-    expect(inst.getRangeIndex(10)).toBe(4);
+    expect(inst.getMaxRange()).toBe(100);
+    comp.setProps({ range: undefined, max: 41 });
+    expect(inst.getMaxRange()).toBe(41);
+  });
+
+  test("[getMinRange] should return the min range", () => {
+    const comp = mount(<Slider range={[{ value: 415 }, {}]} />);
+    const inst = comp.instance();
+    expect(inst.getMinRange()).toBe(415);
+    comp.setProps({ range: undefined, min: 411 });
+    expect(inst.getMinRange()).toBe(411);
   });
 
   describe("values null", () => {
@@ -277,12 +359,8 @@ describe("(Component) Slider", () => {
       expect(inst.getFormattedValue()).toBeUndefined();
       comp.setProps({ step: 0.5 });
       expect(inst.getFormattedValue(10)).toBe("10.00");
-    });
-
-    test("[getRangeIndex] should return -1 when there is no range", () => {
-      const comp = mount(<Slider />);
-      const inst = comp.instance();
-      expect(inst.getRangeIndex("123")).toBe(-1);
+      comp.setProps({ range: [{ value: "2.5", label: "Cabron" }] });
+      expect(inst.getFormattedValue(2.5)).toBe("Cabron");
     });
 
     test("[calculatePosition] should return null when the value is null", () => {
@@ -291,39 +369,7 @@ describe("(Component) Slider", () => {
       expect(inst.calculatePosition(null)).toBe(null);
     });
 
-    test("[handleMouseMove] should set the state to null when the mouse is over the extremes", () => {
-      // This behavior is valid only when initial values are null
-      const comp = mount(<Slider values={[null, null]} />);
-      const inst = comp.instance();
-
-      const event = { preventDefault: jest.fn(), clientX: 150 };
-      const elem = {
-        getBoundingClientRect() {
-          return {
-            left: 150 + inst.props.mouseThreshold + 1,
-            right: 150 - inst.props.mouseThreshold - 1
-          };
-        },
-        getAttribute: () => "min"
-      };
-
-      comp.setState({
-        min: { ...comp.state("min"), value: "60" },
-        dragging: elem
-      });
-      comp.setState({ max: { ...comp.state("max"), value: "80" } });
-
-      inst.handleMouseMove(event);
-      expect(comp.state("min").value).toBe(null);
-      expect(comp.state("min").position).toBe(0);
-
-      elem.getAttribute = () => "max";
-      inst.handleMouseMove(event);
-      expect(comp.state("min").value).toBe(null);
-      expect(comp.state("min").position).toBe(0);
-      expect(comp.state("max").value).toBe(null);
-      expect(comp.state("max").position).toBe(100);
-    });
+    test("[handleMouseMove] should set the state to null when the mouse is over the extremes", () => {});
   });
 
   describe("snapshots", () => {
