@@ -317,11 +317,18 @@ export class Slider extends Component {
 
     // Make sure that the minimum distance is respected
     const { minDistance: dist } = this.props;
+    const maxValue = this.state.max.value;
+    const minValue = this.state.min.value;
 
-    if (dist && isMin && prevValue + dist > this.state.max.value) {
-      return this.calculateClosestValue(prevValue - step, propName);
-    } else if (dist && !isMin && prevValue - dist < this.state.min.value) {
-      return this.calculateClosestValue(prevValue + step, propName);
+    // Cases when max or min value are null cause an infinite loop.
+    // To avoid that, always make sure that maxValue and minValue actually have values.
+    // istanbul ignore else
+    if (dist) {
+      if (maxValue && isMin && prevValue + dist > maxValue) {
+        return this.calculateClosestValue(prevValue - step, propName);
+      } else if (minValue && !isMin && prevValue - dist < minValue) {
+        return this.calculateClosestValue(prevValue + step, propName);
+      }
     }
 
     return value - prevValue >= nextValue - value ? nextValue : prevValue;
