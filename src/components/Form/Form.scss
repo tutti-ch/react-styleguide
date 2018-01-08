@@ -191,6 +191,7 @@ $inputHeight: $size-xxxl;
       transition: width 0.1s ease-out, height 0.1s ease-out;
       top: 50%;
       transform: translateY(-50%);
+      user-select: none;
 
       &.trans {
         transition: $transition-m;
