@@ -345,6 +345,26 @@ describe("(Component) Slider", () => {
     expect(inst.getMinRange()).toBe(411);
   });
 
+  test("[notifyParent] should return a callback that notifies the parent", () => {
+    const comp = mount(
+      <Slider min={100} max={500} values={[120, 450]} name="test" />
+    );
+    const inst = comp.instance();
+    // It should work when there is no on change defined
+    inst.notifyParent("min")();
+    comp.setProps({ onChange: jest.fn() });
+    inst.notifyParent("min")();
+    expect(inst.props.onChange).toHaveBeenCalledWith(120, {
+      initialValue: 120,
+      name: "test"
+    });
+    inst.notifyParent("max")();
+    expect(inst.props.onChange).toHaveBeenCalledWith(450, {
+      initialValue: 450,
+      name: "test"
+    });
+  });
+
   describe("values null", () => {
     test("[isEmpty] should return empty when empty values are provided", () => {
       expect(Slider.isEmpty(null)).toBe(true);

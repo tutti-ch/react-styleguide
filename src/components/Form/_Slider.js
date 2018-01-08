@@ -152,6 +152,7 @@ export class Slider extends Component {
     this.getMinRange = this.getMinRange.bind(this);
     this.renderThumb = this.renderThumb.bind(this);
     this.renderDesc = this.renderDesc.bind(this);
+    this.notifyParent = this.notifyParent.bind(this);
 
     this.state = {
       min: {
@@ -215,6 +216,24 @@ export class Slider extends Component {
     if (Object.keys(state).length) {
       this.setState(state);
     }
+  }
+
+  /**
+   * Return a callback function to notify the parent of the changes.
+   *
+   * @param {string} prop min|max
+   */
+  notifyParent(prop) {
+    return () => {
+      const { onChange } = this.props;
+
+      if (typeof onChange === "function") {
+        onChange(this.state[prop].value, {
+          name: this.state[prop].input,
+          initialValue: this.props.values[prop === "min" ? 0 : 1]
+        });
+      }
+    };
   }
 
   /**
@@ -324,23 +343,25 @@ export class Slider extends Component {
       return false;
     }
 
+    const min = this.state.min;
+    const max = this.state.max;
+    let state;
+
     if (delta < 0 && clientX < rect.left - mouseThreshold) {
-      this.setState({ min: { ...this.state.min, value: null, position: 0 } });
-      return true;
+      state = { min: { ...min, value: null, position: 0 } };
     }
 
     if (delta > 0 && clientX > rect.right + mouseThreshold) {
-      this.setState({
-        max: {
-          ...this.state.max,
-          value: null,
-          position: this.validateThumbPosition(100)
-        }
-      });
-      return true;
+      state = {
+        max: { ...max, value: null, position: this.validateThumbPosition(100) }
+      };
     }
 
-    return false;
+    if (state) {
+      this.setState(state, this.notifyParent(Object.keys(state)[0]));
+    }
+
+    return !!state;
   }
 
   /**
@@ -421,14 +442,7 @@ export class Slider extends Component {
           position: this.calculatePosition(value)
         }
       },
-      () => {
-        if (typeof this.props.onChange === "function") {
-          this.props.onChange(this.state[prop].value, {
-            name: this.state[prop].input,
-            initialValue: this.props.values[prop === "min" ? 0 : 1]
-          });
-        }
-      }
+      this.notifyParent(prop)
     );
   }
 
@@ -457,6 +471,7 @@ export class Slider extends Component {
 
     // istanbul ignore else
     if (this.state[prop].position !== newP) {
+      // Do not notify the parent here as it is the duty of mouseUp callback
       this.setState({
         [prop]: {
           ...this.state[prop],
