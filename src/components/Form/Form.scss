@@ -48,6 +48,32 @@ $inputHeight: $size-xxxl;
   position: relative;
   font-size: 1rem;
 
+  .error {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: $size-xs;
+    background: $greyscale-00;
+    color: $greyscale-100;
+    padding: $size-xxxs;
+    border-radius: $size-xxxs;
+    font-size: $size-s;
+    @include z-index("overlay", "ground");
+
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      right: $size-m;
+      bottom: 100%;
+      width: 0;
+      height: 0;
+      border-left: $size-xxs solid transparent;
+      border-right: $size-xxs solid transparent;
+      border-bottom: $size-xxs solid $greyscale-00;
+    }
+  }
+
   &.inline {
     display: inline-flex;
   }

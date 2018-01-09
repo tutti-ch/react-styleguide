@@ -20,7 +20,7 @@ export default () => (
           <h3>Inputs</h3>
         </Table.Cell>
         <Table.Cell colSpan={4}>
-          <Input label="Block text input" />
+          <Input label="Block text input" error="With error message" />
           <Input label="Inline text input" inline />
           <Input
             label="Number"

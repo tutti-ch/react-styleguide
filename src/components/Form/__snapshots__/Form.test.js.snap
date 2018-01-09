@@ -24,6 +24,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                   colSpan={4}
                 >
                   <WithWrapper
+                    error="With error message"
                     label="Block text input"
                   >
                     <div
@@ -44,6 +45,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       </Input>
                       <span>
                         Block text input
+                      </span>
+                      <span>
+                        With error message
                       </span>
                     </div>
                   </WithWrapper>
