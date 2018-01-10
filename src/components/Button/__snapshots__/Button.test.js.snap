@@ -14,21 +14,11 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
   <button
     className="my-class"
     disabled={true}
+    icon="tutti-cube"
+    iconAfter="test-ico"
     type="submit"
   >
-    <span
-      className="ico ico-tutti-cube undefined"
-      key="icon"
-    />
-    <span
-      key="text"
-    >
-      Test content
-    </span>
-    <span
-      className="ico ico-test-ico undefined"
-      key="icon-after"
-    />
+    Test content
   </button>
 </Button>
 `;
@@ -48,17 +38,10 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
   <button
     className="my-class undefined"
     disabled={true}
+    icon="tutti-cube"
+    iconAfter="test-ico"
     type="button"
   >
-    <span
-      className="ico ico-tutti-cube undefined"
-      key="icon"
-    />
-    <span
-      key="text"
-    >
-      Test content
-    </span>
     <Spinner
       color="light"
       key="spinner"
@@ -81,10 +64,6 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
         />
       </div>
     </Spinner>
-    <span
-      className="ico ico-test-ico undefined"
-      key="icon-after"
-    />
   </button>
 </Button>
 `;
