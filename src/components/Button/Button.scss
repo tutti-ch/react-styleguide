@@ -57,19 +57,22 @@
 
   height: $size-xl;
 
-  .icon,
-  .iconAfter {
+  .icon {
     height: $size-xl;
     line-height: $size-xl;
   }
 
-  .icon {
+  .icon:first-child {
     margin-right: $size-xxs;
   }
 
-  .iconAfter {
+  .icon:last-child {
     margin-right: 0;
     margin-left: $size-xxs;
+  }
+
+  .icon:only-child {
+    margin: 0;
   }
 }
 
@@ -79,19 +82,22 @@
 
   height: $size-xxl;
 
-  .icon,
-  .iconAfter {
+  .icon {
     height: $size-xxl;
     line-height: $size-xxl;
   }
 
-  .icon {
+  .icon:first-child  {
     margin-right: $size-xs;
   }
 
-  .iconAfter {
+  .icon:last-child {
     margin-right: 0;
     margin-left: $size-xs;
+  }
+
+  .icon:only-child {
+    margin: 0;
   }
 }
 
@@ -101,14 +107,22 @@
 
   height: $size-xxxl;
 
-  .icon,
-  .iconAfter {
+  .icon {
     height: $size-xxxl;
     line-height: $size-xxxl;
   }
 
-  .iconAfter {
+  .icon:first-child  {
+    margin-right: $size-s;
+  }
+
+  .icon:last-child {
     margin-right: 0;
+    margin-left: $size-s;
+  }
+
+  .icon:only-child {
+    margin: 0;
   }
 }
 
@@ -248,7 +262,6 @@
   position: relative;
 
   .icon,
-  .iconAfter,
   .text {
     visibility: hidden;
   }

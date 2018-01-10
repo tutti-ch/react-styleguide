@@ -71,18 +71,6 @@ export default class Button extends Component {
     loading: PropTypes.bool,
 
     /**
-     * If an ico-{name} has been provided (name being the parameter passed here)
-     * the icon will be displayed before the children.
-     */
-    icon: PropTypes.string,
-
-    /**
-     * If an ico-{name} has been provided (name being the parameter passed here)
-     * the icon will be displayed after the children.
-     */
-    iconAfter: PropTypes.string,
-
-    /**
      * The position of the button.
      */
     position: PropTypes.oneOf([
@@ -102,6 +90,9 @@ export default class Button extends Component {
     loading: false,
     size: Button.SIZE_MEDIUM
   };
+
+  static Icon = props => <span className={`ico ico-${props.icon} ${classes.icon}`} key="icon" />
+  static Text = props => <span className={classes.text} key="text">{props.children}</span>
 
   constructor(props) {
     super(props);
@@ -143,30 +134,20 @@ export default class Button extends Component {
    * Render the content for the button.
    */
   renderContent() {
-    const { icon, iconAfter, loading, children } = this.props;
+    const { loading, children } = this.props;
 
-    return [
-      icon && <span className={`ico ico-${icon} ${classes.icon}`} key="icon" />,
-      children && (
-        <span className={classes.text} key="text">
-          {children}
-        </span>
-      ),
-      loading && (
+    if (loading) {
+      return (
         <Spinner
           className={classes.spinner}
           size={1.25}
           color={Spinner.COLOR_LIGHT}
           key="spinner"
         />
-      ),
-      iconAfter && (
-        <span
-          className={`ico ico-${iconAfter} ${classes.iconAfter}`}
-          key="icon-after"
-        />
       )
-    ];
+    }
+
+    return children;
   }
 
   /**
