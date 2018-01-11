@@ -1,0 +1,37 @@
+@import "../../styles/main";
+
+.icon {
+  box-sizing: border-box;
+  height: $size-xxxl * 4;
+  position: relative;
+  margin-bottom: 1%;
+  margin-right: 1%;
+  border: 1px solid $greyscale-80;
+  display: inline-block;
+  width: 24.2%;
+  background: $greyscale-100;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -$size-m;
+  }
+}
+
+.name {
+  border-top: 1px solid $greyscale-80;
+  background-color: $greyscale-100;
+  padding: $size-xxs;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  font-size: $size-xs;
+  text-align: center;
+}
