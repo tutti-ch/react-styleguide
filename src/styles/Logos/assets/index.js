@@ -1,2 +1,2 @@
-export * from "./tutti.ch";
+export * from "./tutti";
 export * from "./subscriptions";

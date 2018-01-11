@@ -7,6 +7,7 @@ export Table from "./components/Table";
 export Button from "./components/Button";
 export Pagination from "./components/Pagination";
 export Form from "./components/Form";
+export Logo from "./components/Logo";
 import * as Icons from "./styles/Icons/assets";
 import * as Illustrations from "./styles/Illustrations/assets";
 
