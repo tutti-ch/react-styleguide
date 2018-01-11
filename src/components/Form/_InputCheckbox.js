@@ -57,10 +57,11 @@ export class InputCheckbox extends Component {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
         const { name, checked, value } = this.props;
-        this.props.onChange(this.state.checked ? value : undefined, {
+        const newValue = this.state.checked ? value : undefined
+        this.props.onChange(newValue, {
           name,
           initialValue: checked,
-          formValue: checked ? null : value // Required for the getKeyValuePair function
+          formValue: newValue // Required for the getKeyValuePair function
         });
       }
     });
