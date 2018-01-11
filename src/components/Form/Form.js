@@ -7,6 +7,122 @@ import Slider from "./_Slider";
 import Table from "../Table";
 import InputRadioGroup from "./_InputRadioGroup";
 import Select from "./_Select";
+import Form from "./_Form";
+import Button from "../Button";
+
+/**
+ * =====================================================================
+ * This is an example form. Scroll Down to see the exported component. =
+ * =====================================================================
+ */
+class ExampleForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.times = 0;
+    this.state = {
+      values: null
+    };
+  }
+
+  // istanbul ignore next
+  handleSubmit(values) {
+    if (this.times++ === 0) {
+      return Promise.reject({ name: "This is wrong", radios: "Error message" });
+    }
+
+    this.setState({ values });
+    return Promise.resolve(true);
+  }
+
+  render() {
+    return (
+      <Form handleSubmit={this.handleSubmit}>
+        <div style={{ marginBottom: "1rem" }}>
+          If you check the source code, this is a nested form.
+        </div>
+        <div style={{ marginBottom: "1rem" }}>
+          <Form.Select
+            name="framework"
+            placeholder="Select your favorite framework"
+            options={[
+              { text: "React", value: "react" },
+              { text: "Vue.js", value: "vue" }
+            ]}
+          />
+        </div>
+        <div>
+          <Form.Input type="text" name="name" value="This is a default value" />
+          <Form.RadioGroup name="radios">
+            <Form.Radio label="Radio A" value="a" inline />
+            <Form.Radio
+              label="Radio B"
+              value="b"
+              inline
+              style={{ marginLeft: "10px" }}
+            />
+            <Form.Radio
+              label="Radio C"
+              value="c"
+              inline
+              style={{ marginLeft: "10px" }}
+            />
+          </Form.RadioGroup>
+        </div>
+        <div>
+          <Form.Checkbox name="cb" value="Hey0" checked inline label="Hey 0" />
+          <Form.Checkbox
+            name="cb"
+            value="Hey1"
+            inline
+            label="Hey 1"
+            style={{ marginLeft: "10px" }}
+          />
+          <Form.Checkbox
+            name="cb"
+            value="Hey2"
+            checked
+            inline
+            label="Hey 2"
+            style={{ marginLeft: "10px" }}
+          />
+        </div>
+        <div style={{ margin: "1.5rem 1rem 1rem 1rem" }}>
+          <Form.Slider
+            name={["minPrice", "maxPrice"]}
+            label="Price range"
+            values={[150, 230]}
+            min={100}
+            max={250}
+            step={10}
+            multiple
+          />
+          <pre
+            style={
+              this.state.values
+                ? {
+                    backgroundColor: "#fafafa",
+                    border: "1px solid #c5c5c5",
+                    padding: "0.25rem"
+                  }
+                : {}
+            }
+          >
+            <code>
+              {this.state.values &&
+                "Values: " + JSON.stringify(this.state.values, null, 2)}
+            </code>
+          </pre>
+        </div>
+        <div>
+          <Button type="submit" level={Button.LEVEL_SECONDARY}>
+            Submit
+          </Button>
+        </div>
+      </Form>
+    );
+  }
+}
 
 /**
  * This component is only used by the style guide.
@@ -47,6 +163,7 @@ export default () => (
               max={10000}
               values={[1300, 5780]}
               minDistance={2000}
+              name={["minDist", "maxDist"]}
               prefix={["From ", "To "]}
               suffix=".-"
               step={750}
@@ -60,6 +177,7 @@ export default () => (
               max={10000}
               values={[1300, 5780]}
               minDistance={0}
+              name={["minDist", "maxDist"]}
               prefix={["From ", "To "]}
               suffix=".-"
               step={1000}
@@ -94,6 +212,7 @@ export default () => (
                 { value: "6", label: "CHF 1'000" }
               ]}
               values={["2", "5"]}
+              name={["minDist", "maxDist"]}
               minDistance={1}
               prefix={["From ", "To "]}
               step={1}
@@ -111,6 +230,7 @@ export default () => (
                 { value: "5", label: "CHF 500" },
                 { value: "6", label: "CHF 1'000" }
               ]}
+              name={["minDist", "maxDist"]}
               values={[null, null]}
               minDistance={0}
               prefix={["From ", "To "]}
@@ -218,6 +338,12 @@ export default () => (
               { value: "Other", text: "Other" }
             ]}
           />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>Form</Table.Cell>
+        <Table.Cell colSpan={4}>
+          <ExampleForm />
         </Table.Cell>
       </Table.Row>
     </Table.Body>

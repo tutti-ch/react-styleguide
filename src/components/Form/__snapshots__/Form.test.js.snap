@@ -219,6 +219,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       min={1000}
                       minDistance={2000}
                       multiple={true}
+                      name={
+                        Array [
+                          "minDist",
+                          "maxDist",
+                        ]
+                      }
                       prefix={
                         Array [
                           "From ",
@@ -244,6 +250,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           minDistance={2000}
                           mouseThreshold={50}
                           multiple={true}
+                          name={
+                            Array [
+                              "minDist",
+                              "maxDist",
+                            ]
+                          }
                           onChange={[Function]}
                           prefix={
                             Array [
@@ -301,10 +313,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-min"
+                                name="minDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "minDist",
                                     "range": 1000,
                                     "value": 1300,
                                   }
@@ -325,10 +338,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-max"
+                                name="maxDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "maxDist",
                                     "range": 10000,
                                     "value": 5780,
                                   }
@@ -354,6 +368,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       min={1000}
                       minDistance={0}
                       multiple={true}
+                      name={
+                        Array [
+                          "minDist",
+                          "maxDist",
+                        ]
+                      }
                       prefix={
                         Array [
                           "From ",
@@ -379,6 +399,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           minDistance={0}
                           mouseThreshold={50}
                           multiple={true}
+                          name={
+                            Array [
+                              "minDist",
+                              "maxDist",
+                            ]
+                          }
                           onChange={[Function]}
                           prefix={
                             Array [
@@ -436,10 +462,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-min"
+                                name="minDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "minDist",
                                     "range": 1000,
                                     "value": 1300,
                                   }
@@ -460,10 +487,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-max"
+                                name="maxDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "maxDist",
                                     "range": 10000,
                                     "value": 5780,
                                   }
@@ -619,6 +647,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       label="Slider { range: Array, minDistance: 1, step: 1 }"
                       minDistance={1}
                       multiple={true}
+                      name={
+                        Array [
+                          "minDist",
+                          "maxDist",
+                        ]
+                      }
                       prefix={
                         Array [
                           "From ",
@@ -669,6 +703,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           minDistance={1}
                           mouseThreshold={50}
                           multiple={true}
+                          name={
+                            Array [
+                              "minDist",
+                              "maxDist",
+                            ]
+                          }
                           onChange={[Function]}
                           prefix={
                             Array [
@@ -754,10 +794,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-min"
+                                name="minDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "minDist",
                                     "range": 1,
                                     "value": 2,
                                   }
@@ -778,10 +819,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-max"
+                                name="maxDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "maxDist",
                                     "range": 6,
                                     "value": 5,
                                   }
@@ -800,6 +842,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       minDistance={0}
                       mouseThreshold={10}
                       multiple={true}
+                      name={
+                        Array [
+                          "minDist",
+                          "maxDist",
+                        ]
+                      }
                       prefix={
                         Array [
                           "From ",
@@ -851,6 +899,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           minDistance={0}
                           mouseThreshold={10}
                           multiple={true}
+                          name={
+                            Array [
+                              "minDist",
+                              "maxDist",
+                            ]
+                          }
                           onChange={[Function]}
                           prefix={
                             Array [
@@ -926,10 +980,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-min"
+                                name="minDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "minDist",
                                     "range": 1,
                                     "value": NaN,
                                   }
@@ -950,10 +1005,11 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               />
                               <input
                                 key="hidden-max"
+                                name="maxDist"
                                 type="hidden"
                                 value={
                                   Object {
-                                    "input": undefined,
+                                    "input": "maxDist",
                                     "range": 6,
                                     "value": NaN,
                                   }
@@ -2563,6 +2619,631 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       </span>
                     </div>
                   </WithWrapper>
+                </td>
+              </Component>
+            </tr>
+          </Component>
+          <Component>
+            <tr>
+              <Component>
+                <td>
+                  Form
+                </td>
+              </Component>
+              <Component
+                colSpan={4}
+              >
+                <td
+                  colSpan={4}
+                >
+                  <ExampleForm>
+                    <Form
+                      handleSubmit={[Function]}
+                    >
+                      <form
+                        onSubmit={[Function]}
+                      >
+                        <div
+                          style={
+                            Object {
+                              "marginBottom": "1rem",
+                            }
+                          }
+                        >
+                          If you check the source code, this is a nested form.
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "marginBottom": "1rem",
+                            }
+                          }
+                        >
+                          <WithWrapper
+                            name="framework"
+                            options={
+                              Array [
+                                Object {
+                                  "text": "React",
+                                  "value": "react",
+                                },
+                                Object {
+                                  "text": "Vue.js",
+                                  "value": "vue",
+                                },
+                              ]
+                            }
+                            placeholder="Select your favorite framework"
+                          >
+                            <div
+                              className=""
+                            >
+                              <Select
+                                multiple={false}
+                                name="framework"
+                                onChange={[Function]}
+                                options={
+                                  Array [
+                                    Object {
+                                      "text": "React",
+                                      "value": "react",
+                                    },
+                                    Object {
+                                      "text": "Vue.js",
+                                      "value": "vue",
+                                    },
+                                  ]
+                                }
+                                placeholder="Select your favorite framework"
+                                size="medium"
+                              >
+                                <OutsideClickable
+                                  onOutsideClick={[Function]}
+                                >
+                                  <div
+                                    className="undefined"
+                                    onClick={[Function]}
+                                  >
+                                    <div
+                                      className=""
+                                      onBlur={[Function]}
+                                      onFocus={[Function]}
+                                      tabIndex={0}
+                                    >
+                                      <div
+                                        className=""
+                                      >
+                                        <Option
+                                          closeIcon={false}
+                                          key="null"
+                                          selected={false}
+                                          text="Select your favorite framework"
+                                          value={null}
+                                        >
+                                          <div
+                                            className="undefined"
+                                            key="null"
+                                            onClick={[Function]}
+                                          >
+                                            <span>
+                                              Select your favorite framework
+                                            </span>
+                                          </div>
+                                        </Option>
+                                      </div>
+                                      <div
+                                        className=""
+                                      >
+                                        <Option
+                                          highlighted={false}
+                                          key="opt-react"
+                                          onClick={[Function]}
+                                          selected={false}
+                                          text="React"
+                                          tickIcon={false}
+                                          value="react"
+                                        >
+                                          <div
+                                            className=""
+                                            key="react"
+                                            onClick={[Function]}
+                                          >
+                                            <span>
+                                              React
+                                            </span>
+                                          </div>
+                                        </Option>
+                                        <Option
+                                          highlighted={false}
+                                          key="opt-vue"
+                                          onClick={[Function]}
+                                          selected={false}
+                                          text="Vue.js"
+                                          tickIcon={false}
+                                          value="vue"
+                                        >
+                                          <div
+                                            className=""
+                                            key="vue"
+                                            onClick={[Function]}
+                                          >
+                                            <span>
+                                              Vue.js
+                                            </span>
+                                          </div>
+                                        </Option>
+                                      </div>
+                                      <input
+                                        name="framework"
+                                        type="hidden"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </OutsideClickable>
+                              </Select>
+                            </div>
+                          </WithWrapper>
+                        </div>
+                        <div>
+                          <WithWrapper
+                            name="name"
+                            type="text"
+                            value="This is a default value"
+                          >
+                            <div
+                              className=""
+                            >
+                              <Input
+                                name="name"
+                                onChange={[Function]}
+                                type="text"
+                                value="This is a default value"
+                              >
+                                <input
+                                  name="name"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onKeyUp={[Function]}
+                                  type="text"
+                                  value="This is a default value"
+                                />
+                              </Input>
+                            </div>
+                          </WithWrapper>
+                          <InputGroup
+                            name="radios"
+                          >
+                            <WithWrapper
+                              checked={false}
+                              inline={true}
+                              key=".0"
+                              label="Radio A"
+                              name="radios"
+                              onChange={[Function]}
+                              value="a"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputRadio
+                                  checked={false}
+                                  label="Radio A"
+                                  name="radios"
+                                  onChange={[Function]}
+                                  value="a"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={false}
+                                      name="radios"
+                                      onChange={[Function]}
+                                      type="radio"
+                                    />
+                                    <span>
+                                      Radio A
+                                    </span>
+                                  </span>
+                                </InputRadio>
+                              </div>
+                            </WithWrapper>
+                            <WithWrapper
+                              checked={false}
+                              inline={true}
+                              key=".1"
+                              label="Radio B"
+                              name="radios"
+                              onChange={[Function]}
+                              style={
+                                Object {
+                                  "marginLeft": "10px",
+                                }
+                              }
+                              value="b"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputRadio
+                                  checked={false}
+                                  label="Radio B"
+                                  name="radios"
+                                  onChange={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": "10px",
+                                    }
+                                  }
+                                  value="b"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={false}
+                                      name="radios"
+                                      onChange={[Function]}
+                                      style={
+                                        Object {
+                                          "marginLeft": "10px",
+                                        }
+                                      }
+                                      type="radio"
+                                    />
+                                    <span>
+                                      Radio B
+                                    </span>
+                                  </span>
+                                </InputRadio>
+                              </div>
+                            </WithWrapper>
+                            <WithWrapper
+                              checked={false}
+                              inline={true}
+                              key=".2"
+                              label="Radio C"
+                              name="radios"
+                              onChange={[Function]}
+                              style={
+                                Object {
+                                  "marginLeft": "10px",
+                                }
+                              }
+                              value="c"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputRadio
+                                  checked={false}
+                                  label="Radio C"
+                                  name="radios"
+                                  onChange={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": "10px",
+                                    }
+                                  }
+                                  value="c"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={false}
+                                      name="radios"
+                                      onChange={[Function]}
+                                      style={
+                                        Object {
+                                          "marginLeft": "10px",
+                                        }
+                                      }
+                                      type="radio"
+                                    />
+                                    <span>
+                                      Radio C
+                                    </span>
+                                  </span>
+                                </InputRadio>
+                              </div>
+                            </WithWrapper>
+                          </InputGroup>
+                        </div>
+                        <div>
+                          <WithWrapper
+                            checked={true}
+                            inline={true}
+                            label="Hey 0"
+                            name="cb"
+                            value="Hey0"
+                          >
+                            <div
+                              className=""
+                            >
+                              <InputCheckbox
+                                checked={true}
+                                label="Hey 0"
+                                name="cb"
+                                onChange={[Function]}
+                                value="Hey0"
+                              >
+                                <span
+                                  onClick={[Function]}
+                                >
+                                  <input
+                                    checked={true}
+                                    name="cb"
+                                    onChange={[Function]}
+                                    type="checkbox"
+                                  />
+                                  <span>
+                                    Hey 0
+                                  </span>
+                                </span>
+                              </InputCheckbox>
+                            </div>
+                          </WithWrapper>
+                          <WithWrapper
+                            inline={true}
+                            label="Hey 1"
+                            name="cb"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                            value="Hey1"
+                          >
+                            <div
+                              className=""
+                            >
+                              <InputCheckbox
+                                checked={false}
+                                label="Hey 1"
+                                name="cb"
+                                onChange={[Function]}
+                                style={
+                                  Object {
+                                    "marginLeft": "10px",
+                                  }
+                                }
+                                value="Hey1"
+                              >
+                                <span
+                                  onClick={[Function]}
+                                >
+                                  <input
+                                    checked={false}
+                                    name="cb"
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "marginLeft": "10px",
+                                      }
+                                    }
+                                    type="checkbox"
+                                  />
+                                  <span>
+                                    Hey 1
+                                  </span>
+                                </span>
+                              </InputCheckbox>
+                            </div>
+                          </WithWrapper>
+                          <WithWrapper
+                            checked={true}
+                            inline={true}
+                            label="Hey 2"
+                            name="cb"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                            value="Hey2"
+                          >
+                            <div
+                              className=""
+                            >
+                              <InputCheckbox
+                                checked={true}
+                                label="Hey 2"
+                                name="cb"
+                                onChange={[Function]}
+                                style={
+                                  Object {
+                                    "marginLeft": "10px",
+                                  }
+                                }
+                                value="Hey2"
+                              >
+                                <span
+                                  onClick={[Function]}
+                                >
+                                  <input
+                                    checked={true}
+                                    name="cb"
+                                    onChange={[Function]}
+                                    style={
+                                      Object {
+                                        "marginLeft": "10px",
+                                      }
+                                    }
+                                    type="checkbox"
+                                  />
+                                  <span>
+                                    Hey 2
+                                  </span>
+                                </span>
+                              </InputCheckbox>
+                            </div>
+                          </WithWrapper>
+                        </div>
+                        <div
+                          style={
+                            Object {
+                              "margin": "1.5rem 1rem 1rem 1rem",
+                            }
+                          }
+                        >
+                          <WithWrapper
+                            label="Price range"
+                            max={250}
+                            min={100}
+                            multiple={true}
+                            name={
+                              Array [
+                                "minPrice",
+                                "maxPrice",
+                              ]
+                            }
+                            step={10}
+                            values={
+                              Array [
+                                150,
+                                230,
+                              ]
+                            }
+                          >
+                            <div
+                              className=""
+                            >
+                              <Slider
+                                label="Price range"
+                                max={250}
+                                min={100}
+                                minDistance={10}
+                                mouseThreshold={50}
+                                multiple={true}
+                                name={
+                                  Array [
+                                    "minPrice",
+                                    "maxPrice",
+                                  ]
+                                }
+                                onChange={[Function]}
+                                prefix=""
+                                step={10}
+                                suffix=""
+                                template=""
+                                values={
+                                  Array [
+                                    150,
+                                    230,
+                                  ]
+                                }
+                              >
+                                <span>
+                                  <span
+                                    style={
+                                      Object {
+                                        "left": "0%",
+                                        "width": "100%",
+                                      }
+                                    }
+                                  />
+                                  <span>
+                                    <span>
+                                      Price range
+                                    </span>
+                                    <span
+                                      key="minval"
+                                    >
+                                      150
+                                    </span>
+                                    <span
+                                      key="maxval"
+                                    >
+                                      230
+                                    </span>
+                                  </span>
+                                  <span>
+                                    <span
+                                      data-name="min"
+                                      key="min"
+                                      onMouseDown={[Function]}
+                                      onTouchMove={[Function]}
+                                      onTouchStart={[Function]}
+                                      style={
+                                        Object {
+                                          "left": "undefined%",
+                                        }
+                                      }
+                                      tabIndex={1}
+                                    />
+                                    <input
+                                      key="hidden-min"
+                                      name="minPrice"
+                                      type="hidden"
+                                      value={
+                                        Object {
+                                          "input": "minPrice",
+                                          "range": 100,
+                                          "value": 150,
+                                        }
+                                      }
+                                    />
+                                    <span
+                                      data-name="max"
+                                      key="max"
+                                      onMouseDown={[Function]}
+                                      onTouchMove={[Function]}
+                                      onTouchStart={[Function]}
+                                      style={
+                                        Object {
+                                          "left": "undefined%",
+                                        }
+                                      }
+                                      tabIndex={1}
+                                    />
+                                    <input
+                                      key="hidden-max"
+                                      name="maxPrice"
+                                      type="hidden"
+                                      value={
+                                        Object {
+                                          "input": "maxPrice",
+                                          "range": 250,
+                                          "value": 230,
+                                        }
+                                      }
+                                    />
+                                  </span>
+                                </span>
+                              </Slider>
+                            </div>
+                          </WithWrapper>
+                          <pre
+                            style={Object {}}
+                          >
+                            <code />
+                          </pre>
+                        </div>
+                        <div>
+                          <Button
+                            level="secondary"
+                            loading={false}
+                            rounded={true}
+                            size="medium"
+                            type="submit"
+                          >
+                            <button
+                              className=""
+                              type="submit"
+                            >
+                              <span
+                                key="text"
+                              >
+                                Submit
+                              </span>
+                            </button>
+                          </Button>
+                        </div>
+                      </form>
+                    </Form>
+                  </ExampleForm>
                 </td>
               </Component>
             </tr>

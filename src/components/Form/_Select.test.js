@@ -214,14 +214,16 @@ describe("(Component) Select", () => {
     expect(comp.state("highlighted")).toBe(-1);
     expect(onChange).toHaveBeenCalledWith(["Ember", "jQuery"], {
       name: "favs",
-      initialValue: ["Ember"]
+      initialValue: ["Ember"],
+      formValue: ["Ember", "jQuery"]
     });
     inst.select({ value: "jQuery" }, event);
     expect(comp.state("selected")).toEqual(["Ember"]);
     expect(comp.state("highlighted")).toBe(-1);
     expect(onChange).toHaveBeenCalledWith(["Ember"], {
       name: "favs",
-      initialValue: ["Ember"]
+      initialValue: ["Ember"],
+      formValue: ["Ember"]
     });
   });
 

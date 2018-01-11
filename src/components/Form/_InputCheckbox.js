@@ -59,7 +59,8 @@ export class InputCheckbox extends Component {
         const { name, checked, value } = this.props;
         this.props.onChange(this.state.checked ? value : undefined, {
           name,
-          initialValue: checked
+          initialValue: checked,
+          formValue: checked ? null : value // Required for the getKeyValuePair function
         });
       }
     });

@@ -57,7 +57,11 @@ export class Textarea extends Component {
   notify() {
     if (this.changed === true && typeof this.props.onChange === "function") {
       const { name, value } = this.props;
-      this.props.onChange(this.state.value, { name, initialValue: value });
+      this.props.onChange(this.state.value, {
+        name,
+        formValue: value,
+        initialValue: value
+      });
     }
 
     // Reset the value

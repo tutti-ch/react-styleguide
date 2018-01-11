@@ -6,7 +6,7 @@ export Spinner from "./components/Spinner";
 export Table from "./components/Table";
 export Button from "./components/Button";
 export Pagination from "./components/Pagination";
-export * as Form from "./components/Form";
+export Form from "./components/Form";
 import * as Icons from "./styles/Icons/assets";
 import * as Illustrations from "./styles/Illustrations/assets";
 

@@ -11,18 +11,18 @@ describe("(Component) InputRadio", () => {
     expect(comp.state("checked")).toBe(true);
   });
 
-  test("[toggle] should set the value and call the onChange from parent", () => {
+  test("[select] should set the value and call the onChange from parent", () => {
     const spy = jest.fn();
     const comp = shallow(<InputRadio onChange={spy} />);
     const inst = comp.instance();
-    inst.toggle();
+    inst.select();
     expect(comp.state("checked")).toBe(true);
     expect(spy).toHaveBeenCalled();
 
     comp.setProps({ onChange: undefined });
-    inst.toggle();
+    inst.select();
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(comp.state("checked")).toBe(false);
+    expect(comp.state("checked")).toBe(true); // A selected radio can not be unselected.
   });
 
   test("snapshot", () => {

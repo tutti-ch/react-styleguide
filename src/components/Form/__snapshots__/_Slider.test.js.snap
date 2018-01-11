@@ -2,18 +2,26 @@
 
 exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 1`] = `
 <Slider
-  decimals={2}
   max={10}
   min={1}
   minDistance={10}
-  minRange={1}
   mouseThreshold={50}
   multiple={true}
+  name={
+    Array [
+      "c",
+      "d",
+    ]
+  }
   prefix=""
   step={0.5}
   suffix=""
   template=""
-  values={Array []}
+  values={
+    Array [
+      2,
+    ]
+  }
 >
   <span>
     <span
@@ -26,6 +34,14 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
     />
     <span>
       <span />
+      <span
+        key="minval"
+      >
+        2.00
+      </span>
+      <span
+        key="maxval"
+      />
     </span>
     <span>
       <span
@@ -43,12 +59,13 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       />
       <input
         key="hidden-min"
+        name="c"
         type="hidden"
         value={
           Object {
-            "input": undefined,
+            "input": "c",
             "range": 1,
-            "value": NaN,
+            "value": 2,
           }
         }
       />
@@ -67,10 +84,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       />
       <input
         key="hidden-max"
+        name="d"
         type="hidden"
         value={
           Object {
-            "input": undefined,
+            "input": "d",
             "range": 10,
             "value": NaN,
           }
@@ -83,11 +101,9 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
 
 exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 2`] = `
 <Slider
-  decimals={2}
   max={10}
   min={1}
   minDistance={10}
-  minRange={1}
   mouseThreshold={50}
   multiple={true}
   name={
@@ -100,7 +116,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
   step={0.5}
   suffix=""
   template=""
-  values={Array []}
+  values={
+    Array [
+      2,
+    ]
+  }
 >
   <span>
     <span
@@ -113,6 +133,14 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
     />
     <span>
       <span />
+      <span
+        key="minval"
+      >
+        2.00
+      </span>
+      <span
+        key="maxval"
+      />
     </span>
     <span>
       <span
@@ -136,7 +164,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
           Object {
             "input": "pe",
             "range": 1,
-            "value": NaN,
+            "value": 2,
           }
         }
       />
@@ -175,14 +203,23 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
   max={1500}
   min={500}
   minDistance={10}
-  minRange={100}
   mouseThreshold={50}
   multiple={true}
+  name={
+    Array [
+      "a",
+      "b",
+    ]
+  }
   prefix=""
   step={250}
   suffix=""
   template=""
-  values={Array []}
+  values={
+    Array [
+      700,
+    ]
+  }
 >
   <span>
     <span
@@ -195,6 +232,14 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
     />
     <span>
       <span />
+      <span
+        key="minval"
+      >
+        700
+      </span>
+      <span
+        key="maxval"
+      />
     </span>
     <span>
       <span
@@ -212,12 +257,13 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       />
       <input
         key="hidden-min"
+        name="a"
         type="hidden"
         value={
           Object {
-            "input": undefined,
+            "input": "a",
             "range": 500,
-            "value": NaN,
+            "value": 700,
           }
         }
       />
@@ -236,10 +282,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
       />
       <input
         key="hidden-max"
+        name="b"
         type="hidden"
         value={
           Object {
-            "input": undefined,
+            "input": "b",
             "range": 1500,
             "value": NaN,
           }
@@ -255,13 +302,16 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
   max={1500}
   min={500}
   minDistance={10}
-  minRange={100}
   mouseThreshold={50}
   prefix=""
   step={250}
   suffix=""
   template=""
-  values={Array []}
+  values={
+    Array [
+      700,
+    ]
+  }
 >
   <span>
     <span
@@ -275,6 +325,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
     />
     <span>
       <span />
+      <span
+        key="minval"
+      >
+        700
+      </span>
     </span>
     <span>
       <span
@@ -297,7 +352,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
           Object {
             "input": undefined,
             "range": 500,
-            "value": NaN,
+            "value": 700,
           }
         }
       />

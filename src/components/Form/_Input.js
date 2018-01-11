@@ -54,7 +54,11 @@ export class Input extends Component {
   notify() {
     if (this.changed === true && typeof this.props.onChange === "function") {
       const { name, value } = this.props;
-      this.props.onChange(this.state.value, { name, initialValue: value });
+      this.props.onChange(this.state.value, {
+        name,
+        initialValue: value,
+        formValue: value
+      });
     }
 
     // Reset the value

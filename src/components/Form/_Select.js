@@ -294,7 +294,8 @@ export class Select extends Component {
         if (typeof this.props.onChange === "function") {
           this.props.onChange(multiple ? selected : selected[0], {
             name,
-            initialValue: this.props.selected
+            initialValue: this.props.selected,
+            formValue: multiple ? selected : selected[0]
           });
         }
       }

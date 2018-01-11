@@ -43,7 +43,7 @@ export class InputRadio extends PureComponent {
       checked: props.checked
     };
 
-    this.toggle = this.toggle.bind(this);
+    this.select = this.select.bind(this);
   }
 
   /**
@@ -56,15 +56,21 @@ export class InputRadio extends PureComponent {
   }
 
   /**
-   * Toggle the input checkbox.
+   * Select the input radio.
    */
-  toggle() {
-    this.setState({ checked: !this.state.checked }, () => {
+  select() {
+    if (this.state.checked) {
+      return;
+    }
+
+    // Toggling an input radio is not possible
+    this.setState({ checked: true }, () => {
       if (typeof this.props.onChange === "function") {
         const { name, checked, value } = this.props;
-        this.props.onChange(this.state.checked ? value : undefined, {
+        this.props.onChange(value, {
           name,
-          initialValue: checked
+          initialValue: checked,
+          formValue: value
         });
       }
     });
@@ -78,14 +84,14 @@ export class InputRadio extends PureComponent {
     return (
       // We do not use a real label here because react complains
       // about uncontrolled/controlled components.
-      <span onClick={this.toggle} className={classes.cbLabel}>
+      <span onClick={this.select} className={classes.cbLabel}>
         <input
           {...props}
           name={name}
           type="radio"
           value={value}
           checked={checked}
-          onChange={this.toggle}
+          onChange={this.select}
         />
         <span className={classes.labelText}>{label}</span>
       </span>

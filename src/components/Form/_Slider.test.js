@@ -4,6 +4,19 @@ import { mount } from "enzyme";
 import { Slider } from "./_Slider";
 
 describe("(Component) Slider", () => {
+  test("[validate] should validate the props", () => {
+    expect(() => Slider.validate({ name: "a", multiple: true })).toThrow(); // Should throw as it expects a name parameter.
+    expect(() =>
+      Slider.validate({ min: 50, max: 165, values: [20] })
+    ).toThrow(); // Should throw as min value is smaller than left extreme.
+    expect(() =>
+      Slider.validate({ max: 75, min: 0, values: [1, 76] })
+    ).toThrow(); //Should throw as max value is greater than right extreme.
+    expect(() =>
+      Slider.validate({ min: 15, max: 75, values: [18, 75] })
+    ).not.toThrow(); // Should NOT throw as max value is equal right extreme.
+  });
+
   test("[componentDidMount] should register a root element", done => {
     const comp = mount(<Slider min={1000} max={2000} />);
     const inst = comp.instance();
@@ -35,7 +48,7 @@ describe("(Component) Slider", () => {
   });
 
   test("[calculateMouseValue] should calculate the value at mouse position", () => {
-    const comp = mount(<Slider min={1000} max={2000} />);
+    const comp = mount(<Slider name="hey" min={1000} max={2000} />);
     const inst = comp.instance();
     inst.calculateMousePosition = jest.fn().mockReturnValue(75);
     expect(inst.calculateMouseValue({})).toBe(1750);
@@ -128,6 +141,7 @@ describe("(Component) Slider", () => {
         step={250}
         minDistance={300}
         mouseThreshold={10}
+        name={["a", "b"]}
         extremes
         multiple
       />
@@ -204,7 +218,8 @@ describe("(Component) Slider", () => {
     expect(comp.state("min").value).toBe(750);
     expect(onChange).toHaveBeenCalledWith(750, {
       name: "ps",
-      initialValue: undefined
+      initialValue: undefined,
+      formValue: [750, NaN]
     });
     expect(window.removeEventListener).toHaveBeenCalledWith(
       "mouseup",
@@ -330,18 +345,18 @@ describe("(Component) Slider", () => {
   });
 
   test("[getMaxRange] should return the max range", () => {
-    const comp = mount(<Slider range={[{}, { value: 100 }]} />);
+    const comp = mount(<Slider range={[{ value: 0 }, { value: 100 }]} />);
     const inst = comp.instance();
     expect(inst.getMaxRange()).toBe(100);
-    comp.setProps({ range: undefined, max: 41 });
+    comp.setProps({ range: undefined, max: 41, min: 20 });
     expect(inst.getMaxRange()).toBe(41);
   });
 
   test("[getMinRange] should return the min range", () => {
-    const comp = mount(<Slider range={[{ value: 415 }, {}]} />);
+    const comp = mount(<Slider range={[{ value: 415 }, { value: 505 }]} />);
     const inst = comp.instance();
     expect(inst.getMinRange()).toBe(415);
-    comp.setProps({ range: undefined, min: 411 });
+    comp.setProps({ range: undefined, min: 411, max: 500 });
     expect(inst.getMinRange()).toBe(411);
   });
 
@@ -355,11 +370,13 @@ describe("(Component) Slider", () => {
     comp.setProps({ onChange: jest.fn() });
     inst.notifyParent("min")();
     expect(inst.props.onChange).toHaveBeenCalledWith(120, {
+      formValue: [120, 450],
       initialValue: 120,
       name: "test"
     });
     inst.notifyParent("max")();
     expect(inst.props.onChange).toHaveBeenCalledWith(450, {
+      formValue: [120, 450],
       initialValue: 450,
       name: "test"
     });
@@ -374,7 +391,7 @@ describe("(Component) Slider", () => {
     });
 
     test("[getFormattedValue] should return undefined when value is null", () => {
-      const comp = mount(<Slider />);
+      const comp = mount(<Slider min={50} max={56} />);
       const inst = comp.instance();
       expect(inst.getFormattedValue()).toBeUndefined();
       comp.setProps({ step: 0.5 });
@@ -384,7 +401,7 @@ describe("(Component) Slider", () => {
     });
 
     test("[calculatePosition] should return null when the value is null", () => {
-      const comp = mount(<Slider />);
+      const comp = mount(<Slider min={100} max={150} />);
       const inst = comp.instance();
       expect(inst.calculatePosition(null)).toBe(null);
     });
@@ -393,14 +410,21 @@ describe("(Component) Slider", () => {
   describe("snapshots", () => {
     test("should create the right snapshot for single thumb", () => {
       const comp = mount(
-        <Slider min={500} max={1500} step={250} minRange={100} />
+        <Slider min={500} max={1500} step={250} values={[700]} />
       );
       expect(comp).toMatchSnapshot();
     });
 
     test("should create the right snapshot for multiple thumbs", () => {
       const comp = mount(
-        <Slider min={500} max={1500} step={250} minRange={100} multiple />
+        <Slider
+          min={500}
+          max={1500}
+          step={250}
+          values={[700]}
+          multiple
+          name={["a", "b"]}
+        />
       );
       expect(comp).toMatchSnapshot();
     });
@@ -411,8 +435,8 @@ describe("(Component) Slider", () => {
           min={1}
           max={10}
           step={0.5}
-          minRange={1}
-          decimals={2}
+          values={[2]}
+          name={["c", "d"]}
           multiple
         />
       );
