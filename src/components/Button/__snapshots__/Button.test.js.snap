@@ -4,8 +4,6 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
 <Button
   className="my-class"
   disabled={true}
-  icon="tutti-cube"
-  iconAfter="test-ico"
   level="primary"
   loading={false}
   rounded={true}
@@ -14,11 +12,31 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
   <button
     className="my-class"
     disabled={true}
-    icon="tutti-cube"
-    iconAfter="test-ico"
     type="submit"
   >
-    Test content
+    <Component
+      icon="tutti-cube"
+    >
+      <span
+        className="ico ico-tutti-cube undefined"
+        key="icon"
+      />
+    </Component>
+    <Component>
+      <span
+        key="text"
+      >
+        Test content 
+      </span>
+    </Component>
+    <Component
+      icon="text-ico"
+    >
+      <span
+        className="ico ico-text-ico undefined"
+        key="icon"
+      />
+    </Component>
   </button>
 </Button>
 `;
@@ -27,8 +45,6 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
 <Button
   className="my-class"
   disabled={true}
-  icon="tutti-cube"
-  iconAfter="test-ico"
   level="primary"
   loading={true}
   rounded={true}
@@ -38,8 +54,6 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
   <button
     className="my-class undefined"
     disabled={true}
-    icon="tutti-cube"
-    iconAfter="test-ico"
     type="button"
   >
     <Spinner

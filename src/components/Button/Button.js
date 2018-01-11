@@ -26,7 +26,7 @@ export default class Button extends Component {
     /**
      * The content that will be rendered inside the button.
      */
-    children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+    children: PropTypes.node,
 
     /**
      * The class name that will be passed to the button.

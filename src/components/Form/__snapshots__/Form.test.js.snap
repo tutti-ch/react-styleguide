@@ -3233,11 +3233,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               className=""
                               type="submit"
                             >
-                              <span
-                                key="text"
-                              >
-                                Submit
-                              </span>
+                              Submit
                             </button>
                           </Button>
                         </div>
