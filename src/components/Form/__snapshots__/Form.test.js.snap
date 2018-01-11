@@ -2641,6 +2641,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       handleSubmit={[Function]}
                     >
                       <form
+                        className=""
                         onSubmit={[Function]}
                       >
                         <div

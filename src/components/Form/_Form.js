@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import Input from "./_Input";
 import Textarea from "./_Textarea";
 import Radio from "./_InputRadio";
@@ -8,6 +9,7 @@ import Checkbox from "./_InputCheckbox";
 import Select from "./_Select";
 import Slider from "./_Slider";
 import { filterProps } from "../../helpers/functions";
+import classes from "./Form.scss";
 
 export default class Form extends Component {
   static Input = Input;
@@ -62,6 +64,7 @@ export default class Form extends Component {
 
   constructor(props) {
     super(props);
+    this.inputs = [];
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -128,14 +131,20 @@ export default class Form extends Component {
             }
           });
         }
+
+        // So that we display the shake.
+        this.forceUpdate();
       });
   }
 
   render() {
     const props = filterProps(Form.propTypes, this.props);
+    const formClasses = classNames({
+      [classes.hasError]: this.inputs.filter(i => i.error).length > 0
+    });
 
     return (
-      <form {...props} onSubmit={this.handleSubmit}>
+      <form {...props} onSubmit={this.handleSubmit} className={formClasses}>
         {this.props.children}
       </form>
     );
