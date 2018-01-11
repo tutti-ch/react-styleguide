@@ -54,10 +54,11 @@ export class Input extends Component {
   notify() {
     if (this.changed === true && typeof this.props.onChange === "function") {
       const { name, value } = this.props;
-      this.props.onChange(this.state.value, {
+      const newValue = this.state.value;
+      this.props.onChange(newValue, {
         name,
         initialValue: value,
-        formValue: value
+        formValue: newValue
       });
     }
 
