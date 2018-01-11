@@ -59,7 +59,7 @@ export class Textarea extends Component {
       const { name, value } = this.props;
       this.props.onChange(this.state.value, {
         name,
-        formValue: value,
+        formValue: this.state.value,
         initialValue: value
       });
     }
