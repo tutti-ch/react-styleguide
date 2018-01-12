@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -94,16 +95,35 @@ export default class Button extends Component {
   static Icon = props => (
     <span className={`ico ico-${props.icon} ${classes.icon}`} key="icon" />
   );
+
   static Text = props => (
     <span className={classes.text} key="text">
       {props.children}
     </span>
   );
 
-  constructor(props) {
+  static contextTypes = {
+    onSubmit: PropTypes.func
+  };
+
+  constructor(props, context) {
     super(props);
     this.getClasses = this.getClasses.bind(this);
     this.renderContent = this.renderContent.bind(this);
+
+    this.state = {
+      loading: props.loading
+    };
+
+    if (typeof context.onSubmit === "function") {
+      context.onSubmit(({ loading }) => this.setState({ loading }));
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loading !== this.state.loading) {
+      this.setState({ loading: nextProps.loading });
+    }
   }
 
   /**
@@ -140,7 +160,8 @@ export default class Button extends Component {
    * Render the content for the button.
    */
   renderContent() {
-    const { loading, children } = this.props;
+    const { children } = this.props;
+    const { loading } = this.state;
 
     if (loading) {
       return (

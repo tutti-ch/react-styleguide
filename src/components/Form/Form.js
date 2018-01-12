@@ -32,7 +32,9 @@ class ExampleForm extends React.Component {
     }
 
     this.setState({ values });
-    return Promise.resolve(true);
+    return new Promise(resolve => {
+      setTimeout(resolve, 1000);
+    });
   }
 
   render() {

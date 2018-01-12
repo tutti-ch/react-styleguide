@@ -43,6 +43,8 @@
 .spinner {
   // @include center;
   margin-right: $size-xs;
+  line-height: 1;
+  display: block;
 }
 
 .textLoading {

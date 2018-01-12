@@ -1,13 +1,15 @@
 /* global describe, test, expect, jest */
 import React from "react";
 import Form from "./index";
+import Button from "../Button";
 import { mount } from "enzyme";
 
 describe("(Component) Form", () => {
-  const componentFactory = handleSubmit => (
+  const componentFactory = (handleSubmit, children) => (
     <Form handleSubmit={handleSubmit}>
       <Form.Input name="firstName" value="abc" />
       <Form.Slider values={[5, 6]} min={5} max={10} name={["a", "b"]} />
+      {children}
     </Form>
   );
 
@@ -62,6 +64,31 @@ describe("(Component) Form", () => {
         expect(event.preventDefault).toHaveBeenCalled();
         done();
       });
+    });
+  });
+
+  test("[onSubmit] should register a listener which will be called on submit", done => {
+    const handleSubmit = () => {
+      return Promise.resolve();
+    };
+
+    const button = <Button level={Button.LEVEL_SECONDARY}>Test</Button>;
+    const comp = mount(componentFactory(handleSubmit, button));
+    const inst = comp.instance();
+    const spy = jest.spyOn(inst.listeners, "0");
+
+    expect(inst.listeners.length).toBe(1);
+    inst.handleSubmit({ preventDefault: jest.fn() }).then(() => {
+      expect(spy).toHaveBeenCalledTimes(2);
+      expect(spy).toHaveBeenCalledWith({
+        values: expect.anything(),
+        loading: true
+      });
+      expect(spy).toHaveBeenCalledWith({
+        values: expect.anything(),
+        loading: false
+      });
+      done();
     });
   });
 

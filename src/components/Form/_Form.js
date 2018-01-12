@@ -26,7 +26,8 @@ export default class Form extends Component {
   };
 
   static childContextTypes = {
-    register: PropTypes.func
+    register: PropTypes.func,
+    onSubmit: PropTypes.func
   };
 
   /**
@@ -65,6 +66,7 @@ export default class Form extends Component {
   constructor(props) {
     super(props);
     this.inputs = [];
+    this.listeners = [];
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -91,6 +93,16 @@ export default class Form extends Component {
           name,
           self
         });
+      },
+
+      /**
+       * Register a listener for the submit event.
+       *
+       * @param listener
+       */
+      onSubmit: listener => {
+        this.listeners = this.listeners || [];
+        this.listeners.push(listener);
       }
     };
   }
@@ -114,6 +126,7 @@ export default class Form extends Component {
       }
     });
 
+    this.listeners.forEach(l => l({ values, loading: true }));
     return this.props
       .handleSubmit(values)
       .then()
@@ -134,6 +147,9 @@ export default class Form extends Component {
 
         // So that we display the shake.
         this.forceUpdate();
+      })
+      .then(() => {
+        this.listeners.forEach(l => l({ values, loading: false }));
       });
   }
 
