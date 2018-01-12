@@ -1,2 +1,2 @@
-export Badge from "./badge.svg";
-export TicinoMap from "./ticino_map.svg";
+export Badge from "./badge.svg"
+export TicinoMap from "./ticino_map.svg"
