@@ -20,7 +20,7 @@ describe("(Component) Button", () => {
 
     expect(comp).toMatchSnapshot();
 
-    comp.setProps({ loading: true, type: "button" });
+    comp.setProps({ loading: true, type: "button", disabled: false }); // Should be still disabled true
     expect(comp).toMatchSnapshot();
   });
 });

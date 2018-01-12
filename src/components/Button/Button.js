@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -188,6 +187,11 @@ export default class Button extends Component {
     // By default, the type is submit
     if (typeof attrs.type === "undefined") {
       attrs.type = "submit";
+    }
+
+    // When it is loading, the button is disabled by default.
+    if (this.state.loading) {
+      attrs.disabled = true;
     }
 
     return (
