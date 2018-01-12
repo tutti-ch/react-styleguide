@@ -65,6 +65,7 @@ export default (WrappedComponent, mergeProps = {}) => {
         hasValue: !!this.props.value
       };
 
+      this.handleOnKeyup = this.handleOnKeyup.bind(this);
       this.handleOnChange = this.handleOnChange.bind(this);
       this.handleError = this.handleError.bind(this);
       this.getKeyValue = this.getKeyValue.bind(this);
@@ -148,6 +149,22 @@ export default (WrappedComponent, mergeProps = {}) => {
       }
     }
 
+    /**
+     * On key up reset the error state.
+     *
+     * @param e
+     */
+    handleOnKeyup(e) {
+      if (this.state.error) {
+        this.setState({ error: null })
+      }
+
+      // Bubble the event.
+      if (typeof this.props.onKeyUp === "function") {
+        this.props.onKeyUp(e);
+      }
+    }
+
     render() {
       const { inline, className } = this.props;
       const { hasValue, error } = this.state;
@@ -163,6 +180,7 @@ export default (WrappedComponent, mergeProps = {}) => {
 
       // Inject a wrapper function for on change
       injectedProps.onChange = this.handleOnChange;
+      injectedProps.onKeyUp = this.handleOnKeyup;
 
       const wrapperClasses = classNames(
         classes.wrapper,

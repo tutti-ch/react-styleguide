@@ -32,6 +32,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     >
                       <Input
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         type="text"
                         value=""
                       >
@@ -60,6 +61,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     >
                       <Input
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         type="text"
                         value=""
                       >
@@ -91,6 +93,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         max="1000"
                         min="100"
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         step="50"
                         type="number"
                         value="150"
@@ -120,6 +123,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     >
                       <Input
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         type="password"
                         value=""
                       >
@@ -145,6 +149,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     >
                       <Input
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         type="email"
                         value=""
                       >
@@ -170,6 +175,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     >
                       <Input
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         type="phone"
                         value=""
                       >
@@ -257,6 +263,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           prefix={
                             Array [
                               "From ",
@@ -406,6 +413,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           prefix={
                             Array [
                               "From ",
@@ -551,6 +559,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           minDistance={10}
                           mouseThreshold={50}
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           prefix=""
                           range={
                             Array [
@@ -710,6 +719,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           prefix={
                             Array [
                               "From ",
@@ -906,6 +916,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             ]
                           }
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           prefix={
                             Array [
                               "From ",
@@ -1052,6 +1063,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         checked={true}
                         label="Red"
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         value="red"
                       >
                         <span
@@ -1060,6 +1072,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           <input
                             checked={true}
                             onChange={[Function]}
+                            onKeyUp={[Function]}
                             type="checkbox"
                           />
                           <span>
@@ -1081,6 +1094,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         checked={true}
                         label="Blue"
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         value="blue"
                       >
                         <span
@@ -1089,6 +1103,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           <input
                             checked={true}
                             onChange={[Function]}
+                            onKeyUp={[Function]}
                             type="checkbox"
                           />
                           <span>
@@ -1109,6 +1124,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         checked={false}
                         label="Green"
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         value="green"
                       >
                         <span
@@ -1117,6 +1133,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           <input
                             checked={false}
                             onChange={[Function]}
+                            onKeyUp={[Function]}
                             type="checkbox"
                           />
                           <span>
@@ -1162,6 +1179,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           label="React.js"
                           name="r1"
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           value={10}
                         >
                           <span
@@ -1171,6 +1189,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               checked={true}
                               name="r1"
                               onChange={[Function]}
+                              onKeyUp={[Function]}
                               type="radio"
                             />
                             <span>
@@ -1196,6 +1215,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           label="Vue.js"
                           name="r1"
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           value={10}
                         >
                           <span
@@ -1205,6 +1225,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               checked={false}
                               name="r1"
                               onChange={[Function]}
+                              onKeyUp={[Function]}
                               type="radio"
                             />
                             <span>
@@ -1230,6 +1251,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           label="Angular.js"
                           name="r1"
                           onChange={[Function]}
+                          onKeyUp={[Function]}
                           value={10}
                         >
                           <span
@@ -1239,6 +1261,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               checked={false}
                               name="r1"
                               onChange={[Function]}
+                              onKeyUp={[Function]}
                               type="radio"
                             />
                             <span>
@@ -1276,6 +1299,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     >
                       <Textarea
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         value=""
                       >
                         <textarea
@@ -1357,6 +1381,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       <Select
                         multiple={false}
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         options={
                           Array [
                             Object {
@@ -1673,6 +1698,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       <Select
                         multiple={false}
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         options={
                           Array [
                             Object {
@@ -2006,6 +2032,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       <Select
                         multiple={true}
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         options={
                           Array [
                             Object {
@@ -2354,6 +2381,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       <Select
                         multiple={false}
                         onChange={[Function]}
+                        onKeyUp={[Function]}
                         options={
                           Array [
                             Object {
@@ -2683,6 +2711,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 multiple={false}
                                 name="framework"
                                 onChange={[Function]}
+                                onKeyUp={[Function]}
                                 options={
                                   Array [
                                     Object {
@@ -2798,6 +2827,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               <Input
                                 name="name"
                                 onChange={[Function]}
+                                onKeyUp={[Function]}
                                 type="text"
                                 value="This is a default value"
                               >
@@ -2832,6 +2862,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   label="Radio A"
                                   name="radios"
                                   onChange={[Function]}
+                                  onKeyUp={[Function]}
                                   value="a"
                                 >
                                   <span
@@ -2841,6 +2872,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       checked={false}
                                       name="radios"
                                       onChange={[Function]}
+                                      onKeyUp={[Function]}
                                       type="radio"
                                     />
                                     <span>
@@ -2872,6 +2904,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   label="Radio B"
                                   name="radios"
                                   onChange={[Function]}
+                                  onKeyUp={[Function]}
                                   style={
                                     Object {
                                       "marginLeft": "10px",
@@ -2886,6 +2919,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       checked={false}
                                       name="radios"
                                       onChange={[Function]}
+                                      onKeyUp={[Function]}
                                       style={
                                         Object {
                                           "marginLeft": "10px",
@@ -2922,6 +2956,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   label="Radio C"
                                   name="radios"
                                   onChange={[Function]}
+                                  onKeyUp={[Function]}
                                   style={
                                     Object {
                                       "marginLeft": "10px",
@@ -2936,6 +2971,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       checked={false}
                                       name="radios"
                                       onChange={[Function]}
+                                      onKeyUp={[Function]}
                                       style={
                                         Object {
                                           "marginLeft": "10px",
@@ -2968,6 +3004,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 label="Hey 0"
                                 name="cb"
                                 onChange={[Function]}
+                                onKeyUp={[Function]}
                                 value="Hey0"
                               >
                                 <span
@@ -2977,6 +3014,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     checked={true}
                                     name="cb"
                                     onChange={[Function]}
+                                    onKeyUp={[Function]}
                                     type="checkbox"
                                   />
                                   <span>
@@ -3005,6 +3043,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 label="Hey 1"
                                 name="cb"
                                 onChange={[Function]}
+                                onKeyUp={[Function]}
                                 style={
                                   Object {
                                     "marginLeft": "10px",
@@ -3019,6 +3058,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     checked={false}
                                     name="cb"
                                     onChange={[Function]}
+                                    onKeyUp={[Function]}
                                     style={
                                       Object {
                                         "marginLeft": "10px",
@@ -3053,6 +3093,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 label="Hey 2"
                                 name="cb"
                                 onChange={[Function]}
+                                onKeyUp={[Function]}
                                 style={
                                   Object {
                                     "marginLeft": "10px",
@@ -3067,6 +3108,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     checked={true}
                                     name="cb"
                                     onChange={[Function]}
+                                    onKeyUp={[Function]}
                                     style={
                                       Object {
                                         "marginLeft": "10px",
@@ -3125,6 +3167,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   ]
                                 }
                                 onChange={[Function]}
+                                onKeyUp={[Function]}
                                 prefix=""
                                 step={10}
                                 suffix=""

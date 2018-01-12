@@ -4,6 +4,19 @@ import { mount } from "enzyme";
 import Form from "../Form";
 
 describe("HOC (WithWrapper)", () => {
+  test("[handleOnKeyup] should reset the error state", () => {
+    const onKeyUp = jest.fn();
+    const comp = mount(<Form.Input onChange={spy} value="hey" error="asdas" onKeyUp={onKeyUp} />);
+    const inst = comp.instance();
+    const spy = jest.spyOn(inst, "setState");
+    inst.handleOnKeyup({})
+    expect(spy).toHaveBeenCalledWith({ error: null });
+    expect(onKeyUp).toHaveBeenCalledWith({});
+    comp.setProps({ onKeyUp: undefined, error: undefined });
+    inst.handleOnKeyup({})
+    expect(onKeyUp).toHaveBeenCalledTimes(1);
+  })
+
   test("[handleOnChange] should set a hasValue and call the onChange prop", () => {
     // The Input is actually wrapped in a HOC
     const spy = jest.fn();

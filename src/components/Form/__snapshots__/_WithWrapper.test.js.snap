@@ -11,6 +11,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
     <InputCheckbox
       checked={true}
       onChange={[Function]}
+      onKeyUp={[Function]}
     >
       <span
         onClick={[Function]}
@@ -18,6 +19,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
         <input
           checked={true}
           onChange={[Function]}
+          onKeyUp={[Function]}
           type="checkbox"
         />
         <span />
@@ -40,6 +42,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
   >
     <Input
       onChange={[Function]}
+      onKeyUp={[Function]}
       type="text"
       value="hello-world"
     >
@@ -68,6 +71,7 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
     <InputCheckbox
       checked={true}
       onChange={[Function]}
+      onKeyUp={[Function]}
     >
       <span
         onClick={[Function]}
@@ -75,6 +79,7 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
         <input
           checked={true}
           onChange={[Function]}
+          onKeyUp={[Function]}
           type="checkbox"
         />
         <span />
