@@ -101,4 +101,12 @@ describe("(Component) Form", () => {
       d: false
     });
   });
+
+  test("[componentWillUnmount] should remove the listeners", () => {
+    const comp = mount(<Form handleSubmit={jest.fn()} className="class-name"/>);
+    const inst = comp.instance();
+    inst.listeners = [1,2,3,4];
+    inst.componentWillUnmount();
+    expect(inst.listeners).toEqual([]);
+  })
 });

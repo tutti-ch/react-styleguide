@@ -21,6 +21,7 @@ export default class Form extends Component {
   static Textarea = Textarea;
 
   static propTypes = {
+    className: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string]),
     children: PropTypes.node,
     handleSubmit: PropTypes.func.isRequired // Function to handle submit.
   };
@@ -153,9 +154,16 @@ export default class Form extends Component {
       });
   }
 
+  /**
+   * Reset listeners.
+   */
+  componentWillUnmount() {
+    this.listeners = [];
+  }
+
   render() {
     const props = filterProps(Form.propTypes, this.props);
-    const formClasses = classNames({
+    const formClasses = classNames(this.props.className, {
       [classes.hasError]: this.inputs.filter(i => i.error).length > 0
     });
 
