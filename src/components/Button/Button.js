@@ -91,8 +91,14 @@ export default class Button extends Component {
     size: Button.SIZE_MEDIUM
   };
 
-  static Icon = props => <span className={`ico ico-${props.icon} ${classes.icon}`} key="icon" />
-  static Text = props => <span className={classes.text} key="text">{props.children}</span>
+  static Icon = props => (
+    <span className={`ico ico-${props.icon} ${classes.icon}`} key="icon" />
+  );
+  static Text = props => (
+    <span className={classes.text} key="text">
+      {props.children}
+    </span>
+  );
 
   constructor(props) {
     super(props);
@@ -144,7 +150,7 @@ export default class Button extends Component {
           color={Spinner.COLOR_LIGHT}
           key="spinner"
         />
-      )
+      );
     }
 
     return children;

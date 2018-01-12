@@ -156,7 +156,7 @@ export default (WrappedComponent, mergeProps = {}) => {
      */
     handleOnKeyup(e) {
       if (this.state.error) {
-        this.setState({ error: null })
+        this.setState({ error: null });
       }
 
       // Bubble the event.

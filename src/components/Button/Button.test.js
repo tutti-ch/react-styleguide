@@ -12,9 +12,9 @@ describe("(Component) Button", () => {
 
     const comp = mount(
       <Button level="primary" size="large" {...props}>
-        <Button.Icon icon="tutti-cube"/>
+        <Button.Icon icon="tutti-cube" />
         <Button.Text>Test content </Button.Text>
-        <Button.Icon icon="text-ico"/>
+        <Button.Icon icon="text-ico" />
       </Button>
     );
 

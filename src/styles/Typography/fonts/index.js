@@ -1,1 +1,1 @@
-export TuttiFont from "./TuttiFont.svg"
+export TuttiFont from "./TuttiFont.svg";
