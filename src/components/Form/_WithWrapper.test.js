@@ -26,21 +26,19 @@ describe("HOC (WithWrapper)", () => {
     const inst = comp.instance();
 
     inst.handleOnChange("some value", { formValue: "some value" });
-    expect(comp.state("hasValue")).toBe(true);
     expect(comp.state("formValue")).toBe("some value");
     expect(spy).toHaveBeenCalled();
     comp.setProps({ onChange: undefined });
     inst.handleOnChange("");
-    expect(comp.state("hasValue")).toBe(false);
     expect(comp.state("formValue")).toBe(null);
     expect(spy).toHaveBeenCalledTimes(1);
   });
 
   test("hasValue gets updated when new props arrive", () => {
     const comp = mount(<Form.Input />);
-    expect(comp.state("hasValue")).toBe(false);
+    expect(comp.find(".hasValue").exists()).toBe(false);
     comp.setProps({ value: "hey" });
-    expect(comp.state("hasValue")).toBe(true);
+    expect(comp.state("formValue")).toBe("hey")
   });
 
   describe("snapshot", () => {

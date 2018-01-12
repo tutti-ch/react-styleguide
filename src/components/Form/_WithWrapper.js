@@ -61,8 +61,7 @@ export default (WrappedComponent, mergeProps = {}) => {
 
       this.state = {
         formValue: initialValue,
-        error: props.error,
-        hasValue: !!this.props.value
+        error: props.error
       };
 
       this.handleOnKeyup = this.handleOnKeyup.bind(this);
@@ -117,7 +116,9 @@ export default (WrappedComponent, mergeProps = {}) => {
     }
 
     componentWillReceiveProps(nextProps, context) {
-      this.setState({ hasValue: !!nextProps.value });
+      if (nextProps.value !== this.props.value) {
+        this.setState({ formValue: nextProps.value });
+      }
 
       // Some components (e.g. Slider) allow name as an Array. For this reason
       // we have to use isEqual instead of a strict comparison.
@@ -134,7 +135,6 @@ export default (WrappedComponent, mergeProps = {}) => {
      */
     handleOnChange(value, opts) {
       this.setState({
-        hasValue: !!value,
         error: null,
         formValue: opts ? opts.formValue : null
       });
@@ -167,7 +167,8 @@ export default (WrappedComponent, mergeProps = {}) => {
 
     render() {
       const { inline, className } = this.props;
-      const { hasValue, error } = this.state;
+      const { error, formValue } = this.state;
+      const hasValue = !!formValue;
       const injectedProps = filterProps(WithWrapper.propTypes, this.props);
 
       let { label } = this.props;
