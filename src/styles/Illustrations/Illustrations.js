@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Illustrations.scss";
-import { BoxItemWrapper, BoxItem } from "../../internals/Box";
+import { BoxCardWrapper, BoxCard } from "../../internals/Box";
 
 export default class Illustrations extends Component {
   static propTypes = {
@@ -32,18 +32,17 @@ export default class Illustrations extends Component {
     const illustrations = this.getIllustrationList();
 
     return (
-      <BoxItemWrapper>
+      <BoxCardWrapper>
         {Object.keys(illustrations).map((illustration, index) => (
-          <BoxItem key={`asset-${index}`} name={illustration}>
+          <BoxCard key={`asset-${index}`} name={illustration}>
             <img
               className={classes.image}
               src={illustrations[illustration]}
               width="75"
-              height="75"
             />
-          </BoxItem>
+          </BoxCard>
         ))}
-      </BoxItemWrapper>
+      </BoxCardWrapper>
     );
   }
 }
