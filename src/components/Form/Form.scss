@@ -67,7 +67,8 @@ $inputHeight: $size-xxxl;
     padding: $size-xxxs $size-xxs;
     border-radius: $size-xxxs;
     font-size: $size-xs;
-    white-space: nowrap;
+    white-space: pre-wrap;
+    max-width: 55%;
     @include z-index("overlay", "ground");
 
     &:before {
