@@ -1,0 +1,5 @@
+export RedFridayMyadsDE from "./redFridayMyadsDE.svg"
+export RedFridayMyadsFR from "./redFridayMyadsFR.svg"
+export RedFridayMyadsIT from "./redFridayMyadsIT.svg"
+export RedFridaypaint from "./redFridaypaint.svg"
+export RedFridaypig from "./redFridaypig.svg"

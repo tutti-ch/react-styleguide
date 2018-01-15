@@ -1,0 +1,1 @@
+export TuttolinaSmile from "./tuttolina-smile.svg"
