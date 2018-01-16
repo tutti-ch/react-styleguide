@@ -35,7 +35,7 @@ export class Input extends Component {
 
     this.notify = this.notify.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleKeyUp = this.handleKeyUp.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
   }
 
@@ -85,13 +85,13 @@ export class Input extends Component {
    *
    * @param event
    */
-  handleKeyUp(event) {
+  handleKeyDown(event) {
     if (event.key === "Enter") {
       this.notify();
     }
 
-    if (typeof this.props.onKeyUp === "function") {
-      this.props.onKeyUp(event);
+    if (typeof this.props.onKeyDown === "function") {
+      this.props.onKeyDown(event);
     }
   }
 
@@ -118,7 +118,7 @@ export class Input extends Component {
         type={type}
         value={value}
         onBlur={this.handleBlur}
-        onKeyUp={this.handleKeyUp}
+        onKeyDown={this.handleKeyDown}
         onChange={this.handleChange}
       />
     );

@@ -29,20 +29,20 @@ describe("(Component) Input", () => {
     expect(onChange).not.toHaveBeenCalled(); // Because nothing changed.
   });
 
-  test("[handleKeyUp] should notify the parent and call attached onKeyUp", () => {
-    const onKeyUp = jest.fn();
+  test("[handleKeyDown] should notify the parent and call attached onKeyDown", () => {
+    const onKeyDown = jest.fn();
     const onChange = jest.fn();
-    const comp = shallow(<Input onKeyUp={onKeyUp} onChange={onChange} />);
+    const comp = shallow(<Input onKeyDown={onKeyDown} onChange={onChange} />);
     const inst = comp.instance();
     inst.handleChange({ target: { value: "abc" } });
-    inst.handleKeyUp({ key: "Enter" });
-    expect(onKeyUp).toHaveBeenCalledWith({ key: "Enter" });
+    inst.handleKeyDown({ key: "Enter" });
+    expect(onKeyDown).toHaveBeenCalledWith({ key: "Enter" });
     expect(onChange).toHaveBeenCalled();
 
-    comp.setProps({ onKeyUp: undefined });
+    comp.setProps({ onKeyDown: undefined });
     inst.handleChange({ target: { value: "def" } });
-    inst.handleKeyUp({ key: "ArrowDown" });
-    expect(onKeyUp).toHaveBeenCalledTimes(1); // Because we have set to undefined
+    inst.handleKeyDown({ key: "ArrowDown" });
+    expect(onKeyDown).toHaveBeenCalledTimes(1); // Because we have set to undefined
     expect(onChange).toHaveBeenCalledTimes(1); // Because they key up was not an enter 😀
   });
 
