@@ -69,6 +69,7 @@ export default class Form extends Component {
     this.inputs = [];
     this.listeners = [];
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.submitting = false;
   }
 
   getChildContext() {
@@ -110,8 +111,14 @@ export default class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    // Prevent re-submitting form until promise is resolved/rejected.
+    if (this.submitting) return false;
+    this.submitting = true;
+
     let values = {};
 
+    // Collect all values from the registered inputs.
     this.inputs.forEach(input => {
       // Reset error state
       if (input.error) {
@@ -127,10 +134,12 @@ export default class Form extends Component {
       }
     });
 
+    // Notify listeners and tell them that we are submitting.
     this.listeners.forEach(l => l({ values, loading: true }));
+
+    // Execute the handleSubmit function and wait for a response/reject.
     return this.props
       .handleSubmit(values)
-      .then()
       .catch(errors => {
         if (errors !== null && typeof errors === "object") {
           Object.keys(errors).forEach(key => {
@@ -151,6 +160,7 @@ export default class Form extends Component {
       })
       .then(() => {
         this.listeners.forEach(l => l({ values, loading: false }));
+        this.submitting = false;
       });
   }
 

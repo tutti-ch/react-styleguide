@@ -92,6 +92,22 @@ describe("(Component) Form", () => {
     });
   });
 
+  test("[onSubmit] should block submitting until a valid response has been received", done => {
+    const event = { preventDefault: jest.fn() };
+    const handleSubmit = () => {
+      expect(inst.submitting).toBe(true);
+      expect(inst.handleSubmit(event)).toBe(false);
+      return Promise.resolve();
+    };
+
+    const comp = mount(componentFactory(handleSubmit));
+    const inst = comp.instance();
+    inst.handleSubmit(event).then(() => {
+      expect(inst.submitting).toBe(false);
+      done();
+    })
+  })
+
   test("[assignKeyPair] should aggregate values with the same key", () => {
     const values = { a: "b", c: [1, 2] };
     const keyPair = { a: "d", c: 5, d: false, f: null };

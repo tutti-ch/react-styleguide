@@ -49,6 +49,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
       <input
         onBlur={[Function]}
         onChange={[Function]}
+        onKeyDown={[Function]}
         onKeyUp={[Function]}
         type="text"
         value="hello-world"

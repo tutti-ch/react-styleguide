@@ -8,7 +8,7 @@ exports[`(Component) Input snapshot 1`] = `
   <input
     onBlur={[Function]}
     onChange={[Function]}
-    onKeyUp={[Function]}
+    onKeyDown={[Function]}
     type="text"
     value="Life is good"
   />
