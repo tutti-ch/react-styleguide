@@ -1,9 +1,15 @@
-The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/tutti-ch/react-styleguide/tree/master/src/styles/Icons/assets "Link to react-styleguide github repo").
+The SVG Illustrations shown here are from [src/styles/Illustrations/assets](https://github.com/tutti-ch/react-styleguide/tree/master/src/styles/Illustrations/assets "Link to react-styleguide github repo").
 
-### Tuttilino Illustrations
+### Tuttolino Illustrations
 
 ```jsx noeditor
-<Illustrations directory="tuttilino" />
+<Illustrations directory="tuttolino" />
+```
+
+### Tuttolina Illustrations
+
+```jsx noeditor
+<Illustrations directory="tuttolina" />
 ```
 
 ### Subscriptions Illustrations
@@ -12,8 +18,21 @@ The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/t
 <Illustrations directory="subscriptions" />
 ```
 
-### Error Pages Illustrations
+### UI Illustrations
 
 ```jsx noeditor
-<Illustrations directory="error" />
+<Illustrations directory="UI" />
+```
+
+### Premium Illustrations
+
+```jsx noeditor
+<Illustrations directory="premium" />
+```
+
+
+### Campaigns Illustrations
+
+```jsx noeditor
+<Illustrations directory="campaigns" />
 ```
