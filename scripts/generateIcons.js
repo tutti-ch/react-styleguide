@@ -3,7 +3,7 @@ const fs = require("fs");
 const glob = require("glob");
 const WebfontsGenerator = require("webfonts-generator");
 
-const ignoreFolder = /(canton|category)\//;
+const ignoreFolder = /(canton|category|fonts)\//;
 
 // Normalize svg files - they might be broken as svg editors
 // tend to insert their own attributes, which might break the files.

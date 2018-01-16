@@ -12,7 +12,7 @@
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "icons": "find src/styles -type f -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
+    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
