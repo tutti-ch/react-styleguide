@@ -50,6 +50,12 @@ $inputHeight: $size-xxxl;
   perspective: 1000px;
 }
 
+.generic-error {
+  background: $red-50;
+  color: $greyscale-100;
+  padding: $size-xxs;
+}
+
 .wrapper {
   min-height: $size-xxxl;
   display: flex;

@@ -8,6 +8,7 @@ import RadioGroup from "./_InputRadioGroup";
 import Checkbox from "./_InputCheckbox";
 import Select from "./_Select";
 import Slider from "./_Slider";
+import Error from "./_Error";
 import { filterProps } from "../../helpers/functions";
 import classes from "./Form.scss";
 
@@ -19,16 +20,22 @@ export default class Form extends Component {
   static Select = Select;
   static Slider = Slider;
   static Textarea = Textarea;
+  static GenericError = Error;
 
   static propTypes = {
-    className: PropTypes.oneOfType([PropTypes.object, PropTypes.array, PropTypes.string]),
+    className: PropTypes.oneOfType([
+      PropTypes.object,
+      PropTypes.array,
+      PropTypes.string
+    ]),
     children: PropTypes.node,
     handleSubmit: PropTypes.func.isRequired // Function to handle submit.
   };
 
   static childContextTypes = {
     register: PropTypes.func,
-    onSubmit: PropTypes.func
+    onSubmit: PropTypes.func,
+    genericErrorHandler: PropTypes.func
   };
 
   /**
@@ -105,6 +112,16 @@ export default class Form extends Component {
       onSubmit: listener => {
         this.listeners = this.listeners || [];
         this.listeners.push(listener);
+      },
+
+      /**
+       * This is the generic error handler. In case the handleSubmit reject
+       * passes an _error key, it will be displayed by this component.
+       *
+       * @param self
+       */
+      genericErrorHandler: self => {
+        this.genericErrorHandler = self;
       }
     };
   }
@@ -153,6 +170,10 @@ export default class Form extends Component {
               }
             }
           });
+
+          if (errors._error && this.genericErrorHandler) {
+            this.genericErrorHandler.setError(errors._error);
+          }
         }
 
         // So that we display the shake.

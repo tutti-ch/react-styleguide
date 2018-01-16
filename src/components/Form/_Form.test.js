@@ -105,8 +105,8 @@ describe("(Component) Form", () => {
     inst.handleSubmit(event).then(() => {
       expect(inst.submitting).toBe(false);
       done();
-    })
-  })
+    });
+  });
 
   test("[assignKeyPair] should aggregate values with the same key", () => {
     const values = { a: "b", c: [1, 2] };
@@ -119,10 +119,21 @@ describe("(Component) Form", () => {
   });
 
   test("[componentWillUnmount] should remove the listeners", () => {
-    const comp = mount(<Form handleSubmit={jest.fn()} className="class-name"/>);
+    const comp = mount(
+      <Form handleSubmit={jest.fn()} className="class-name" />
+    );
     const inst = comp.instance();
-    inst.listeners = [1,2,3,4];
+    inst.listeners = [1, 2, 3, 4];
     inst.componentWillUnmount();
     expect(inst.listeners).toEqual([]);
-  })
+  });
+
+  test("[handleGenericError] lets a function register itself as a generic error handler", () => {
+    const comp = mount(
+      <Form handleSubmit={jest.fn()} className="class-name" />
+    );
+    const inst = comp.instance();
+    inst.getChildContext().genericErrorHandler("abc");
+    expect(inst.genericErrorHandler).toBe("abc");
+  });
 });

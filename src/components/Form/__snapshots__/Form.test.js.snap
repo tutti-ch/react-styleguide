@@ -3266,6 +3266,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               </Slider>
                             </div>
                           </WithWrapper>
+                          <Error />
                           <pre
                             style={Object {}}
                           >

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Form.GenericError should match the snapshots 1`] = `
+<Form
+  handleSubmit={[Function]}
+>
+  <form
+    className=""
+    onSubmit={[Function]}
+  >
+    <Error />
+  </form>
+</Form>
+`;
+
+exports[`(Component) Form.GenericError should match the snapshots 2`] = `
+<Form
+  handleSubmit={[Function]}
+>
+  <form
+    className=""
+    onSubmit={[Function]}
+  >
+    <Error>
+      <div>
+        Hey
+      </div>
+    </Error>
+  </form>
+</Form>
+`;

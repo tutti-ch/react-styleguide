@@ -38,7 +38,7 @@ describe("HOC (WithWrapper)", () => {
     const comp = mount(<Form.Input />);
     expect(comp.find(".hasValue").exists()).toBe(false);
     comp.setProps({ value: "hey" });
-    expect(comp.state("formValue")).toBe("hey")
+    expect(comp.state("formValue")).toBe("hey");
   });
 
   describe("snapshot", () => {

@@ -28,7 +28,11 @@ class ExampleForm extends React.Component {
   // istanbul ignore next
   handleSubmit(values) {
     if (this.times++ === 0) {
-      return Promise.reject({ name: "This is wrong", radios: "Error message" });
+      return Promise.reject({
+        name: "This is wrong",
+        radios: "Error message",
+        _error: "This is a generic error. Just pass in an _error key."
+      });
     }
 
     this.setState({ values });
@@ -99,6 +103,7 @@ class ExampleForm extends React.Component {
             step={10}
             multiple
           />
+          <Form.GenericError />
           <pre
             style={
               this.state.values
