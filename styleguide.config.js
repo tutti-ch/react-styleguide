@@ -48,9 +48,38 @@ module.exports = {
         'color':'transparent'
       },
     },
+    ReactComponent: {
+      root: {
+        'position': 'relative',
+        'margin-bottom': '60px'
+      }
+    },
+    TabButton: {
+      button: {
+        'position': 'absolute',
+        'top': '15px',
+        'right': '0',
+        'text-transform': 'capitalize'
+      }
+    },
     ToolbarButton: {
       button: {
         'display': 'none'
+      }
+    },
+    Pathline: {
+      pathline: {
+        'display': 'none'
+      }
+    },
+    Table: {
+      table: {
+        'position': 'absolute',
+        'box-shadow': '0 5px 5px rgba(0, 0, 0, 0.1)',
+        'background-color': '#ffffff',
+        'max-width': '800px',
+        'right': '0',
+        'top': '70px'
       }
     },
     SectionHeading: {
