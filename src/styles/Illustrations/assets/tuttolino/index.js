@@ -1,4 +1,3 @@
-
 export TuttolinoError from "./tuttolino-error.svg"
 export TuttolinoFamily from "./tuttolino-family.svg"
 export TuttolinoGay from "./tuttolino-gay.svg"

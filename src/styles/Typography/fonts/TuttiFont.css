@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?bf49090d1956190f93bdcdc8e4c9a665?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?bf49090d1956190f93bdcdc8e4c9a665") format("woff2"),
-url("TuttiFont.woff?bf49090d1956190f93bdcdc8e4c9a665") format("woff");
+	src: url("TuttiFont.eot?3e951a52301c31236f440eac55b23e6c?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?3e951a52301c31236f440eac55b23e6c") format("woff2"),
+url("TuttiFont.woff?3e951a52301c31236f440eac55b23e6c") format("woff");
 }
 
 .ico {
@@ -256,18 +256,96 @@ url("TuttiFont.woff?bf49090d1956190f93bdcdc8e4c9a665") format("woff");
 .ico-youtube:before {
 	content: "\f150";
 }
-.ico-badge:before {
+.ico-redFridayMyadsDE:before {
 	content: "\f151";
 }
-.ico-ticino_map:before {
+.ico-redFridayMyadsFR:before {
 	content: "\f152";
 }
-.ico-tuttilino-error:before {
+.ico-redFridayMyadsIT:before {
 	content: "\f153";
 }
-.ico-tuttilino-hey:before {
+.ico-redFridaypaint:before {
 	content: "\f154";
 }
-.ico-TuttiFont:before {
+.ico-redFridaypig:before {
 	content: "\f155";
+}
+.ico-preimumBump:before {
+	content: "\f156";
+}
+.ico-premiumCombo:before {
+	content: "\f157";
+}
+.ico-premiumGallery:before {
+	content: "\f158";
+}
+.ico-premiumHighlight:before {
+	content: "\f159";
+}
+.ico-abo1:before {
+	content: "\f15a";
+}
+.ico-abo2:before {
+	content: "\f15b";
+}
+.ico-abo3:before {
+	content: "\f15c";
+}
+.ico-abo4:before {
+	content: "\f15d";
+}
+.ico-abo5:before {
+	content: "\f15e";
+}
+.ico-advantage1Logo:before {
+	content: "\f15f";
+}
+.ico-advantage2Website:before {
+	content: "\f160";
+}
+.ico-advantage3Billing:before {
+	content: "\f161";
+}
+.ico-badge:before {
+	content: "\f162";
+}
+.ico-ticino_map:before {
+	content: "\f163";
+}
+.ico-tuttolina-smile:before {
+	content: "\f164";
+}
+.ico-tuttolino-error:before {
+	content: "\f165";
+}
+.ico-tuttolino-family:before {
+	content: "\f166";
+}
+.ico-tuttolino-gay:before {
+	content: "\f167";
+}
+.ico-tuttolino-glasses:before {
+	content: "\f168";
+}
+.ico-tuttolino-hey:before {
+	content: "\f169";
+}
+.ico-tuttolino-intro-screens:before {
+	content: "\f16a";
+}
+.ico-tuttolino-sergi:before {
+	content: "\f16b";
+}
+.ico-tuttolino-success:before {
+	content: "\f16c";
+}
+.ico-tuttolino-tablet:before {
+	content: "\f16d";
+}
+.ico-pushNotifications:before {
+	content: "\f16e";
+}
+.ico-websiteIntro:before {
+	content: "\f16f";
 }
