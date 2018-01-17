@@ -177,6 +177,7 @@ export default class Form extends Component {
         }
 
         // So that we display the shake.
+        this.genericError = errors ? !!errors._error : false;
         this.forceUpdate();
       })
       .then(() => {
@@ -195,7 +196,7 @@ export default class Form extends Component {
   render() {
     const props = filterProps(Form.propTypes, this.props);
     const formClasses = classNames(this.props.className, {
-      [classes.hasError]: this.inputs.filter(i => i.error).length > 0
+      [classes.hasError]: this.inputs.filter(i => i.error).length > 0 || this.genericError
     });
 
     return (
