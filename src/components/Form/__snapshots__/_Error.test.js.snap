@@ -18,7 +18,7 @@ exports[`(Component) Form.GenericError should match the snapshots 2`] = `
   handleSubmit={[Function]}
 >
   <form
-    className=""
+    className="undefined"
     onSubmit={[Function]}
   >
     <Error>
