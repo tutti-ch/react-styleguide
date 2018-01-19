@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { filterProps } from "../../helpers/functions";
 import WithWrapper from "./_WithWrapper";
 
+// istanbul ignore next
 const MutationObserver = typeof window !== "undefined"
   ? window.MutationObserver ||
     window.WebKitMutationObserver ||
@@ -58,7 +59,8 @@ export class Input extends Component {
             this.changed = true;
             this.setState({ value: target.defaultValue });
             this.notify();
-            this.observer.disconnect();
+            this.observer = this.observer.disconnect();
+            target.defaultValue = ""; // Reset so that react does not complain about controlled inputs
           }
         });
       });
