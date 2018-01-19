@@ -22,7 +22,9 @@ exports[`(Component) Form.GenericError should match the snapshots 2`] = `
     onSubmit={[Function]}
   >
     <Error>
-      <div>
+      <div
+        className=""
+      >
         Hey
       </div>
     </Error>
