@@ -3,6 +3,12 @@ import PropTypes from "prop-types";
 import { filterProps } from "../../helpers/functions";
 import WithWrapper from "./_WithWrapper";
 
+const MutationObserver = typeof window !== "undefined"
+  ? window.MutationObserver ||
+    window.WebKitMutationObserver ||
+    window.MozMutationObserver
+  : undefined;
+
 export class Input extends Component {
   static defaultProps = {
     value: "",
@@ -37,6 +43,37 @@ export class Input extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
+  }
+
+  // istanbul ignore next
+  componentDidMount() {
+    // This code fixes a bug which happens when a user saves information
+    // such as login information, and the browser fills the input automatically.
+    if (!this.props.value && MutationObserver) {
+      this.observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+          const target = mutation.target;
+
+          if (target.defaultValue && mutation.type === "attributes") {
+            this.changed = true;
+            this.setState({ value: target.defaultValue });
+            this.notify();
+            this.observer.disconnect();
+          }
+        });
+      });
+
+      this.observer.observe(this.refs.input, {
+        attributes: true
+      });
+    }
+  }
+
+  // istanbul ignore next
+  componentWillUnmount() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   /**
@@ -120,6 +157,7 @@ export class Input extends Component {
         onBlur={this.handleBlur}
         onKeyDown={this.handleKeyDown}
         onChange={this.handleChange}
+        ref="input"
       />
     );
   }

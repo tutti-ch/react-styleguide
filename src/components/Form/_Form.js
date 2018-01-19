@@ -196,7 +196,8 @@ export default class Form extends Component {
   render() {
     const props = filterProps(Form.propTypes, this.props);
     const formClasses = classNames(this.props.className, {
-      [classes.hasError]: this.inputs.filter(i => i.error).length > 0 || this.genericError
+      [classes.hasError]:
+        this.inputs.filter(i => i.error).length > 0 || this.genericError
     });
 
     return (
