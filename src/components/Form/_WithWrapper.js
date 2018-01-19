@@ -56,7 +56,7 @@ export default (WrappedComponent, mergeProps = {}) => {
       // that they are check to have a value to return to the Form component.
       const initialValue =
         !WrappedComponent.propTypes.checked || props.checked
-          ? props.value || props.values
+          ? props.value || props.values || props.selected
           : null;
 
       this.state = {
@@ -78,7 +78,7 @@ export default (WrappedComponent, mergeProps = {}) => {
      * @param props
      */
     register(context, props) {
-      if (typeof context.register === "function") {
+      if (typeof context.register === "function" && props.name) {
         context.register(props, this);
       }
     }
@@ -100,16 +100,18 @@ export default (WrappedComponent, mergeProps = {}) => {
      * @return {*}
      */
     getKeyValue() {
-      const name = this.props.name;
+      const { name, disabled } = this.props;
       const value = this.state.formValue;
       const retVal = {};
 
-      if (Array.isArray(name)) {
-        name.forEach((n, i) => {
-          retVal[n] = Array.isArray(value) ? value[i] : value;
-        });
-      } else {
-        retVal[name] = Array.isArray(value) ? value[0] : value;
+      if (!disabled) {
+        if (Array.isArray(name)) {
+          name.forEach((n, i) => {
+            retVal[n] = Array.isArray(value) ? value[i] : value;
+          });
+        } else {
+          retVal[name] = Array.isArray(value) ? value[0] : value;
+        }
       }
 
       return retVal;

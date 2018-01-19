@@ -72,7 +72,11 @@ describe("(Component) Form", () => {
       return Promise.resolve();
     };
 
-    const button = <Button level={Button.LEVEL_SECONDARY}>Test</Button>;
+    const button = (
+      <Button level={Button.LEVEL_SECONDARY} type="submit">
+        Test
+      </Button>
+    );
     const comp = mount(componentFactory(handleSubmit, button));
     const inst = comp.instance();
     const spy = jest.spyOn(inst.listeners, "0");

@@ -41,6 +41,24 @@ describe("HOC (WithWrapper)", () => {
     expect(comp.state("formValue")).toBe("hey");
   });
 
+  test("Handles initialvalues for Form.Select", () => {
+    const options = [
+      {
+        value: "blue",
+        text: "Blue"
+      },
+      {
+        value: "red",
+        text: "Red"
+      }
+    ];
+    const comp = mount(
+      <Form.Select name="color" selected="blue" options={options} />
+    );
+    expect(comp.find(".hasValue").exists()).toBe(false);
+    expect(comp.state("formValue")).toBe("blue");
+  });
+
   describe("snapshot", () => {
     test("should include a label span when label is not defined in the child component", () => {
       const comp = mount(

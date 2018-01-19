@@ -114,7 +114,7 @@ export default class Button extends Component {
       loading: props.loading
     };
 
-    if (typeof context.onSubmit === "function") {
+    if (typeof context.onSubmit === "function" && props.type === "submit") {
       context.onSubmit(({ loading }) => this.setState({ loading }));
     }
   }

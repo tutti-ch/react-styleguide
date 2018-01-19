@@ -151,6 +151,11 @@ export default class Form extends Component {
       }
     });
 
+    // Make sure to reset the generic error state
+    if (this.genericError && this.genericErrorHandler) {
+      this.genericErrorHandler.setError(null);
+    }
+
     // Notify listeners and tell them that we are submitting.
     this.listeners.forEach(l => l({ values, loading: true }));
 
