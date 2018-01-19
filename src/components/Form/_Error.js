@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classes from "./Form.scss";
+import classNames from "classnames";
 
 export default class Error extends Component {
   static contextTypes = {
@@ -26,11 +27,13 @@ export default class Error extends Component {
 
   render() {
     const { error } = this.state;
+    const { className } = this.props;
 
     if (!error) {
       return null;
     }
 
-    return <div className={classes.genericError}>{error}</div>;
+    const errorClasses = classNames(className, classes.genericError);
+    return <div className={errorClasses}>{error}</div>;
   }
 }
