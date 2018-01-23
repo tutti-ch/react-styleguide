@@ -114,7 +114,6 @@ export default (WrappedComponent, mergeProps = {}) => {
           retVal[name] = Array.isArray(value) ? value[0] : value;
         }
       }
-      console.log("Return Value", retVal);
       return retVal;
     }
 
