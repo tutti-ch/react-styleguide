@@ -59,7 +59,7 @@ class ExampleForm extends React.Component {
         </div>
         <div>
           <Form.Input type="text" name="name" value="This is a default value" />
-          <Form.RadioGroup name="radios">
+          <Form.RadioGroup name="radios" label="Radio Ga Ga">
             <Form.Radio label="Radio A" value="a" inline />
             <Form.Radio
               label="Radio B"

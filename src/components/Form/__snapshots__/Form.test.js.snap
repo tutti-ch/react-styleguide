@@ -1169,114 +1169,116 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                   colSpan={4}
                 >
                   <InputGroup>
-                    <WithWrapper
-                      checked={true}
-                      key=".0"
-                      label="React.js"
-                      name="r1"
-                      onChange={[Function]}
-                      value={10}
-                    >
-                      <div
-                        className=""
+                    <div>
+                      <WithWrapper
+                        checked={true}
+                        key=".0"
+                        label="React.js"
+                        name="r1"
+                        onChange={[Function]}
+                        value={10}
                       >
-                        <InputRadio
-                          checked={true}
-                          label="React.js"
-                          name="r1"
-                          onChange={[Function]}
-                          onKeyUp={[Function]}
-                          value={10}
+                        <div
+                          className=""
                         >
-                          <span
-                            onClick={[Function]}
+                          <InputRadio
+                            checked={true}
+                            label="React.js"
+                            name="r1"
+                            onChange={[Function]}
+                            onKeyUp={[Function]}
+                            value={10}
                           >
-                            <input
-                              checked={true}
-                              name="r1"
-                              onChange={[Function]}
-                              onKeyUp={[Function]}
-                              type="radio"
-                            />
-                            <span>
-                              React.js
+                            <span
+                              onClick={[Function]}
+                            >
+                              <input
+                                checked={true}
+                                name="r1"
+                                onChange={[Function]}
+                                onKeyUp={[Function]}
+                                type="radio"
+                              />
+                              <span>
+                                React.js
+                              </span>
                             </span>
-                          </span>
-                        </InputRadio>
-                      </div>
-                    </WithWrapper>
-                    <WithWrapper
-                      checked={false}
-                      key=".1"
-                      label="Vue.js"
-                      name="r1"
-                      onChange={[Function]}
-                      value={10}
-                    >
-                      <div
-                        className=""
+                          </InputRadio>
+                        </div>
+                      </WithWrapper>
+                      <WithWrapper
+                        checked={false}
+                        key=".1"
+                        label="Vue.js"
+                        name="r1"
+                        onChange={[Function]}
+                        value={10}
                       >
-                        <InputRadio
-                          checked={false}
-                          label="Vue.js"
-                          name="r1"
-                          onChange={[Function]}
-                          onKeyUp={[Function]}
-                          value={10}
+                        <div
+                          className=""
                         >
-                          <span
-                            onClick={[Function]}
+                          <InputRadio
+                            checked={false}
+                            label="Vue.js"
+                            name="r1"
+                            onChange={[Function]}
+                            onKeyUp={[Function]}
+                            value={10}
                           >
-                            <input
-                              checked={false}
-                              name="r1"
-                              onChange={[Function]}
-                              onKeyUp={[Function]}
-                              type="radio"
-                            />
-                            <span>
-                              Vue.js
+                            <span
+                              onClick={[Function]}
+                            >
+                              <input
+                                checked={false}
+                                name="r1"
+                                onChange={[Function]}
+                                onKeyUp={[Function]}
+                                type="radio"
+                              />
+                              <span>
+                                Vue.js
+                              </span>
                             </span>
-                          </span>
-                        </InputRadio>
-                      </div>
-                    </WithWrapper>
-                    <WithWrapper
-                      checked={false}
-                      key=".2"
-                      label="Angular.js"
-                      name="r1"
-                      onChange={[Function]}
-                      value={10}
-                    >
-                      <div
-                        className=""
+                          </InputRadio>
+                        </div>
+                      </WithWrapper>
+                      <WithWrapper
+                        checked={false}
+                        key=".2"
+                        label="Angular.js"
+                        name="r1"
+                        onChange={[Function]}
+                        value={10}
                       >
-                        <InputRadio
-                          checked={false}
-                          label="Angular.js"
-                          name="r1"
-                          onChange={[Function]}
-                          onKeyUp={[Function]}
-                          value={10}
+                        <div
+                          className=""
                         >
-                          <span
-                            onClick={[Function]}
+                          <InputRadio
+                            checked={false}
+                            label="Angular.js"
+                            name="r1"
+                            onChange={[Function]}
+                            onKeyUp={[Function]}
+                            value={10}
                           >
-                            <input
-                              checked={false}
-                              name="r1"
-                              onChange={[Function]}
-                              onKeyUp={[Function]}
-                              type="radio"
-                            />
-                            <span>
-                              Angular.js
+                            <span
+                              onClick={[Function]}
+                            >
+                              <input
+                                checked={false}
+                                name="r1"
+                                onChange={[Function]}
+                                onKeyUp={[Function]}
+                                type="radio"
+                              />
+                              <span>
+                                Angular.js
+                              </span>
                             </span>
-                          </span>
-                        </InputRadio>
-                      </div>
-                    </WithWrapper>
+                          </InputRadio>
+                        </div>
+                      </WithWrapper>
+                    </div>
                   </InputGroup>
                 </td>
               </Component>
@@ -2850,149 +2852,155 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             </div>
                           </WithWrapper>
                           <InputGroup
+                            label="Radio Ga Ga"
                             name="radios"
                           >
-                            <WithWrapper
-                              checked={false}
-                              inline={true}
-                              key=".0"
-                              label="Radio A"
-                              name="radios"
-                              onChange={[Function]}
-                              value="a"
-                            >
-                              <div
-                                className=""
+                            <div>
+                              <span>
+                                Radio Ga Ga
+                              </span>
+                              <WithWrapper
+                                checked={false}
+                                inline={true}
+                                key=".0"
+                                label="Radio A"
+                                name="radios"
+                                onChange={[Function]}
+                                value="a"
                               >
-                                <InputRadio
-                                  checked={false}
-                                  label="Radio A"
-                                  name="radios"
-                                  onChange={[Function]}
-                                  onKeyUp={[Function]}
-                                  value="a"
+                                <div
+                                  className=""
                                 >
-                                  <span
-                                    onClick={[Function]}
+                                  <InputRadio
+                                    checked={false}
+                                    label="Radio A"
+                                    name="radios"
+                                    onChange={[Function]}
+                                    onKeyUp={[Function]}
+                                    value="a"
                                   >
-                                    <input
-                                      checked={false}
-                                      name="radios"
-                                      onChange={[Function]}
-                                      onKeyUp={[Function]}
-                                      type="radio"
-                                    />
-                                    <span>
-                                      Radio A
+                                    <span
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        checked={false}
+                                        name="radios"
+                                        onChange={[Function]}
+                                        onKeyUp={[Function]}
+                                        type="radio"
+                                      />
+                                      <span>
+                                        Radio A
+                                      </span>
                                     </span>
-                                  </span>
-                                </InputRadio>
-                              </div>
-                            </WithWrapper>
-                            <WithWrapper
-                              checked={false}
-                              inline={true}
-                              key=".1"
-                              label="Radio B"
-                              name="radios"
-                              onChange={[Function]}
-                              style={
-                                Object {
-                                  "marginLeft": "10px",
-                                }
-                              }
-                              value="b"
-                            >
-                              <div
-                                className=""
-                              >
-                                <InputRadio
-                                  checked={false}
-                                  label="Radio B"
-                                  name="radios"
-                                  onChange={[Function]}
-                                  onKeyUp={[Function]}
-                                  style={
-                                    Object {
-                                      "marginLeft": "10px",
-                                    }
+                                  </InputRadio>
+                                </div>
+                              </WithWrapper>
+                              <WithWrapper
+                                checked={false}
+                                inline={true}
+                                key=".1"
+                                label="Radio B"
+                                name="radios"
+                                onChange={[Function]}
+                                style={
+                                  Object {
+                                    "marginLeft": "10px",
                                   }
-                                  value="b"
-                                >
-                                  <span
-                                    onClick={[Function]}
-                                  >
-                                    <input
-                                      checked={false}
-                                      name="radios"
-                                      onChange={[Function]}
-                                      onKeyUp={[Function]}
-                                      style={
-                                        Object {
-                                          "marginLeft": "10px",
-                                        }
-                                      }
-                                      type="radio"
-                                    />
-                                    <span>
-                                      Radio B
-                                    </span>
-                                  </span>
-                                </InputRadio>
-                              </div>
-                            </WithWrapper>
-                            <WithWrapper
-                              checked={false}
-                              inline={true}
-                              key=".2"
-                              label="Radio C"
-                              name="radios"
-                              onChange={[Function]}
-                              style={
-                                Object {
-                                  "marginLeft": "10px",
                                 }
-                              }
-                              value="c"
-                            >
-                              <div
-                                className=""
+                                value="b"
                               >
-                                <InputRadio
-                                  checked={false}
-                                  label="Radio C"
-                                  name="radios"
-                                  onChange={[Function]}
-                                  onKeyUp={[Function]}
-                                  style={
-                                    Object {
-                                      "marginLeft": "10px",
-                                    }
-                                  }
-                                  value="c"
+                                <div
+                                  className=""
                                 >
-                                  <span
-                                    onClick={[Function]}
-                                  >
-                                    <input
-                                      checked={false}
-                                      name="radios"
-                                      onChange={[Function]}
-                                      onKeyUp={[Function]}
-                                      style={
-                                        Object {
-                                          "marginLeft": "10px",
-                                        }
+                                  <InputRadio
+                                    checked={false}
+                                    label="Radio B"
+                                    name="radios"
+                                    onChange={[Function]}
+                                    onKeyUp={[Function]}
+                                    style={
+                                      Object {
+                                        "marginLeft": "10px",
                                       }
-                                      type="radio"
-                                    />
-                                    <span>
-                                      Radio C
+                                    }
+                                    value="b"
+                                  >
+                                    <span
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        checked={false}
+                                        name="radios"
+                                        onChange={[Function]}
+                                        onKeyUp={[Function]}
+                                        style={
+                                          Object {
+                                            "marginLeft": "10px",
+                                          }
+                                        }
+                                        type="radio"
+                                      />
+                                      <span>
+                                        Radio B
+                                      </span>
                                     </span>
-                                  </span>
-                                </InputRadio>
-                              </div>
-                            </WithWrapper>
+                                  </InputRadio>
+                                </div>
+                              </WithWrapper>
+                              <WithWrapper
+                                checked={false}
+                                inline={true}
+                                key=".2"
+                                label="Radio C"
+                                name="radios"
+                                onChange={[Function]}
+                                style={
+                                  Object {
+                                    "marginLeft": "10px",
+                                  }
+                                }
+                                value="c"
+                              >
+                                <div
+                                  className=""
+                                >
+                                  <InputRadio
+                                    checked={false}
+                                    label="Radio C"
+                                    name="radios"
+                                    onChange={[Function]}
+                                    onKeyUp={[Function]}
+                                    style={
+                                      Object {
+                                        "marginLeft": "10px",
+                                      }
+                                    }
+                                    value="c"
+                                  >
+                                    <span
+                                      onClick={[Function]}
+                                    >
+                                      <input
+                                        checked={false}
+                                        name="radios"
+                                        onChange={[Function]}
+                                        onKeyUp={[Function]}
+                                        style={
+                                          Object {
+                                            "marginLeft": "10px",
+                                          }
+                                        }
+                                        type="radio"
+                                      />
+                                      <span>
+                                        Radio C
+                                      </span>
+                                    </span>
+                                  </InputRadio>
+                                </div>
+                              </WithWrapper>
+                            </div>
                           </InputGroup>
                         </div>
                         <div>

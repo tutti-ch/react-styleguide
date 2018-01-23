@@ -1,6 +1,8 @@
 import React, { PureComponent, cloneElement, Children } from "react";
 import PropTypes from "prop-types";
 
+import classes from "./Form.scss";
+
 export default class InputGroup extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
@@ -14,7 +16,12 @@ export default class InputGroup extends PureComponent {
      * A name to pass to children. If you provide a name
      * attribute on the child, it will overwrite.
      */
-    name: PropTypes.string
+    name: PropTypes.string,
+
+    /**
+     * Label to show above the options
+     */
+    label: PropTypes.string
   };
 
   constructor(props) {
@@ -50,12 +57,18 @@ export default class InputGroup extends PureComponent {
   }
 
   render() {
-    return Children.map(this.props.children, (child, index) =>
-      cloneElement(child, {
-        checked: this.state.selected === index,
-        onChange: this.handleOnChange(index),
-        name: this.props.name || child.props.name // Radio group has a precedence
-      })
+    const { label } = this.props;
+    return (
+      <div>
+        {label && <span className={classes.radioLabel}>{label}</span>}
+        {Children.map(this.props.children, (child, index) =>
+          cloneElement(child, {
+            checked: this.state.selected === index,
+            onChange: this.handleOnChange(index),
+            name: this.props.name || child.props.name // Radio group has a precedence
+          })
+        )}
+      </div>
     );
   }
 }
