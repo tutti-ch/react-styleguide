@@ -48,16 +48,17 @@ export default (WrappedComponent, mergeProps = {}) => {
       register: PropTypes.func
     };
 
+    static getNormalizedValue(props) {
+      return props.value || props.values || props.selected;
+    }
+
     constructor(props, context) {
       super(props);
 
       // If checked property is defined on the child, it means it
       // is either a radio or a checkbox. For this cases, we required
       // that they are check to have a value to return to the Form component.
-      const initialValue =
-        !WrappedComponent.propTypes.checked || props.checked
-          ? props.value || props.values || props.selected
-          : null;
+      const initialValue = WithWrapper.getNormalizedValue(props);
 
       this.state = {
         formValue: initialValue,
@@ -113,13 +114,16 @@ export default (WrappedComponent, mergeProps = {}) => {
           retVal[name] = Array.isArray(value) ? value[0] : value;
         }
       }
-
+      console.log("Return Value", retVal);
       return retVal;
     }
 
     componentWillReceiveProps(nextProps, context) {
-      if (nextProps.value !== this.props.value) {
-        this.setState({ formValue: nextProps.value });
+      const newValue = WithWrapper.getNormalizedValue(nextProps);
+      const oldValue = WithWrapper.getNormalizedValue(this.props);
+
+      if (newValue !== oldValue) {
+        this.setState({ formValue: newValue });
       }
 
       // Some components (e.g. Slider) allow name as an Array. For this reason

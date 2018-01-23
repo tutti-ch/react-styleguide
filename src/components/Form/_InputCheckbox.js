@@ -57,7 +57,7 @@ export class InputCheckbox extends Component {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
         const { name, checked, value } = this.props;
-        const newValue = this.state.checked ? value : undefined;
+        const newValue = this.state.checked ? value : false;
         this.props.onChange(newValue, {
           name,
           initialValue: checked,

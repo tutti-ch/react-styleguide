@@ -144,11 +144,7 @@ export default class Form extends Component {
       }
 
       const { self } = input;
-
-      // istanbul ignore else
-      if (self.props.checked !== false) {
-        values = Form.assignKeyPair(values, self.getKeyValue());
-      }
+      values = Form.assignKeyPair(values, self.getKeyValue());
     });
 
     // Make sure to reset the generic error state
