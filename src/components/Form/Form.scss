@@ -566,6 +566,10 @@ $inputHeight: $size-xxxl;
   &.disabled {
     pointer-events: none;
 
+    .toggleOption {
+      background-color: transparent;
+    }
+
     .toggleSelected {
       background-color: $greyscale-60;
     }
@@ -576,6 +580,7 @@ $inputHeight: $size-xxxl;
     padding: $size-m;
     cursor: pointer;
     border-right: $border-default;
+    background-color: $greyscale-100;
 
     &:last-child {
       border-right: none;
