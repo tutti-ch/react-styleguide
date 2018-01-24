@@ -121,6 +121,13 @@ class ExampleForm extends React.Component {
             />
           </div>
         </div>
+        <div style={{ margin: "1.5rem 1rem 2.5rem 0" }}>
+          <Form.Toggle value="Trans" name="gender">
+            <Form.Toggle.Option value="Man">Man</Form.Toggle.Option>
+            <Form.Toggle.Option value="Female">Female</Form.Toggle.Option>
+            <Form.Toggle.Option value="Trans">Trans</Form.Toggle.Option>
+          </Form.Toggle>
+        </div>
         <div style={{ margin: "1.5rem 1rem 1rem 1rem" }}>
           <Form.Slider
             name={["minPrice", "maxPrice"]}
@@ -305,6 +312,26 @@ export default () => (
         </Table.Cell>
         <Table.Cell colSpan={4}>
           <Textarea label="This is a textarea" />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
+          <h3>Toggle</h3>
+        </Table.Cell>
+        <Table.Cell colSpan={4}>
+          <div>
+            <Form.Toggle value="Trans" name="gender">
+              <Form.Toggle.Option value="Man">Man</Form.Toggle.Option>
+              <Form.Toggle.Option value="Female">Female</Form.Toggle.Option>
+              <Form.Toggle.Option value="Trans">Trans</Form.Toggle.Option>
+            </Form.Toggle>
+          </div>
+          <div style={{ marginTop: "2rem" }}>
+            <Form.Toggle value="Toggle" name="type" disabled>
+              <Form.Toggle.Option value="Man">Disabled</Form.Toggle.Option>
+              <Form.Toggle.Option value="Toggle">Toggle</Form.Toggle.Option>
+            </Form.Toggle>
+          </div>
         </Table.Cell>
       </Table.Row>
       <Table.Row>

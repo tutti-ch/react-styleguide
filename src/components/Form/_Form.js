@@ -8,6 +8,7 @@ import RadioGroup from "./_InputRadioGroup";
 import Checkbox from "./_InputCheckbox";
 import Select from "./_Select";
 import Slider from "./_Slider";
+import Toggle from "./_Toggle";
 import Error from "./_Error";
 import { filterProps } from "../../helpers/functions";
 import classes from "./Form.scss";
@@ -21,6 +22,7 @@ export default class Form extends Component {
   static Slider = Slider;
   static Textarea = Textarea;
   static GenericError = Error;
+  static Toggle = Toggle;
 
   static propTypes = {
     className: PropTypes.oneOfType([

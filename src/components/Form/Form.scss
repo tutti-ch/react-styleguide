@@ -54,6 +54,7 @@ $inputHeight: $size-xxxl;
   background: $red-50;
   color: $greyscale-100;
   padding: $size-xxs;
+  border-radius: $border-radius-s;
 }
 
 .wrapper {
@@ -556,4 +557,33 @@ $inputHeight: $size-xxxl;
   color: $greyscale-60;
   font-size: 0.85rem;
   margin-right: $size-m;
+}
+
+.toggleWrapper {
+  border: $border-default;
+  border-radius: $border-radius-s;
+
+  &.disabled {
+    pointer-events: none;
+
+    .toggleSelected {
+      background-color: $greyscale-60;
+    }
+  }
+
+  .toggleOption {
+    display: inline-block;
+    padding: $size-m;
+    cursor: pointer;
+    border-right: $border-default;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .toggleSelected {
+    background: $blue-50;
+    color: $greyscale-100;
+  }
 }

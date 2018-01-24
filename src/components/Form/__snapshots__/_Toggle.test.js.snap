@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Toggle should match snapshots 1`] = `
+<WithWrapper
+  value="val1"
+>
+  <div
+    className=""
+  >
+    <Toggle
+      onChange={[Function]}
+      onKeyUp={[Function]}
+      value="val1"
+    >
+      <span
+        className=""
+      >
+        <Component
+          key=".0"
+          onClick={[Function]}
+          selected={true}
+          value="val1"
+        >
+          <span
+            className="undefined"
+            data-value="val1"
+            onClick={[Function]}
+          >
+            Value 1
+          </span>
+        </Component>
+        <Component
+          key=".1"
+          onClick={[Function]}
+          selected={false}
+          value="val2"
+        >
+          <span
+            className=""
+            data-value="val2"
+            onClick={[Function]}
+          >
+            Value 2
+          </span>
+        </Component>
+        <input
+          type="hidden"
+          value="val1"
+        />
+      </span>
+    </Toggle>
+  </div>
+</WithWrapper>
+`;
