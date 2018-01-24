@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?f26ea19f160458bac21cbe744b007661?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?f26ea19f160458bac21cbe744b007661") format("woff2"),
-url("TuttiFont.woff?f26ea19f160458bac21cbe744b007661") format("woff");
+	src: url("TuttiFont.eot?a7c6698a5fae086c1ea16993512c2842?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?a7c6698a5fae086c1ea16993512c2842") format("woff2"),
+url("TuttiFont.woff?a7c6698a5fae086c1ea16993512c2842") format("woff");
 }
 
 .ico {
@@ -106,246 +106,255 @@ url("TuttiFont.woff?f26ea19f160458bac21cbe744b007661") format("woff");
 .ico-play:before {
 	content: "\f11e";
 }
-.ico-plus:before {
+.ico-prev:before {
 	content: "\f11f";
 }
-.ico-prev:before {
+.ico-price-down:before {
 	content: "\f120";
 }
-.ico-price-down:before {
+.ico-price-up:before {
 	content: "\f121";
 }
-.ico-price-up:before {
+.ico-printer:before {
 	content: "\f122";
 }
-.ico-printer:before {
+.ico-privat:before {
 	content: "\f123";
 }
-.ico-privat:before {
+.ico-reset:before {
 	content: "\f124";
 }
-.ico-pro:before {
+.ico-rotate:before {
 	content: "\f125";
 }
-.ico-reset:before {
+.ico-rss:before {
 	content: "\f126";
 }
-.ico-rotate:before {
+.ico-saved-searches:before {
 	content: "\f127";
 }
-.ico-rss:before {
+.ico-savedSearches-off-add:before {
 	content: "\f128";
 }
-.ico-saved-searches:before {
+.ico-search:before {
 	content: "\f129";
 }
-.ico-savedSearches-off-add:before {
+.ico-select:before {
 	content: "\f12a";
 }
-.ico-search:before {
+.ico-share-ios:before {
 	content: "\f12b";
 }
-.ico-select:before {
+.ico-share:before {
 	content: "\f12c";
 }
-.ico-share-ios:before {
+.ico-shield:before {
 	content: "\f12d";
 }
-.ico-share:before {
+.ico-sms:before {
 	content: "\f12e";
 }
-.ico-shield:before {
+.ico-sort-by_date-down:before {
 	content: "\f12f";
 }
-.ico-sms:before {
+.ico-sort-by_date-up:before {
 	content: "\f130";
 }
-.ico-sort-by_date-down:before {
+.ico-sort-by_price-down:before {
 	content: "\f131";
 }
-.ico-sort-by_date-up:before {
+.ico-sort-by_price-up:before {
 	content: "\f132";
 }
-.ico-sort-by_price-down:before {
+.ico-star:before {
 	content: "\f133";
 }
-.ico-sort-by_price-up:before {
+.ico-tick-circle:before {
 	content: "\f134";
 }
-.ico-star:before {
+.ico-tick-empty:before {
 	content: "\f135";
 }
-.ico-tick-circle:before {
+.ico-tick-solid:before {
 	content: "\f136";
 }
-.ico-tick-empty:before {
+.ico-tick:before {
 	content: "\f137";
 }
-.ico-tick-solid:before {
+.ico-user:before {
 	content: "\f138";
 }
-.ico-tick:before {
+.ico-view-big:before {
 	content: "\f139";
 }
-.ico-user:before {
+.ico-view-list:before {
 	content: "\f13a";
 }
-.ico-view-big:before {
+.ico-warning:before {
 	content: "\f13b";
 }
-.ico-view-list:before {
+.ico-bump:before {
 	content: "\f13c";
 }
-.ico-warning:before {
+.ico-combo:before {
 	content: "\f13d";
 }
-.ico-bump:before {
+.ico-gallery:before {
 	content: "\f13e";
 }
-.ico-combo:before {
+.ico-highlight:before {
 	content: "\f13f";
 }
-.ico-gallery:before {
+.ico-sell-faster:before {
 	content: "\f140";
 }
-.ico-highlight:before {
+.ico-facebook:before {
 	content: "\f141";
 }
-.ico-sell-faster:before {
+.ico-google-plus:before {
 	content: "\f142";
 }
-.ico-facebook:before {
+.ico-instagram:before {
 	content: "\f143";
 }
-.ico-google-plus:before {
+.ico-share-facebook:before {
 	content: "\f144";
 }
-.ico-instagram:before {
+.ico-share-messenger:before {
 	content: "\f145";
 }
-.ico-share-facebook:before {
+.ico-share-whatsapp:before {
 	content: "\f146";
 }
-.ico-share-messenger:before {
+.ico-social-facebook:before {
 	content: "\f147";
 }
-.ico-share-whatsapp:before {
+.ico-social-gplus:before {
 	content: "\f148";
 }
-.ico-social-facebook:before {
+.ico-social-instagram:before {
 	content: "\f149";
 }
-.ico-social-gplus:before {
+.ico-social-rss:before {
 	content: "\f14a";
 }
-.ico-social-instagram:before {
+.ico-social-twitter:before {
 	content: "\f14b";
 }
-.ico-social-rss:before {
+.ico-social-youtube:before {
 	content: "\f14c";
 }
-.ico-social-twitter:before {
+.ico-twitter:before {
 	content: "\f14d";
 }
-.ico-social-youtube:before {
+.ico-youtube:before {
 	content: "\f14e";
 }
-.ico-twitter:before {
+.ico-redFridayMyadsDE:before {
 	content: "\f14f";
 }
-.ico-youtube:before {
+.ico-redFridayMyadsFR:before {
 	content: "\f150";
 }
-.ico-redFridayMyadsDE:before {
+.ico-redFridayMyadsIT:before {
 	content: "\f151";
 }
-.ico-redFridayMyadsFR:before {
+.ico-redFridaypaint:before {
 	content: "\f152";
 }
-.ico-redFridayMyadsIT:before {
+.ico-redFridaypig:before {
 	content: "\f153";
 }
-.ico-redFridaypaint:before {
+.ico-preimumBump:before {
 	content: "\f154";
 }
-.ico-redFridaypig:before {
+.ico-premiumCombo:before {
 	content: "\f155";
 }
-.ico-preimumBump:before {
+.ico-premiumGallery:before {
 	content: "\f156";
 }
-.ico-premiumCombo:before {
+.ico-premiumHighlight:before {
 	content: "\f157";
 }
-.ico-premiumGallery:before {
+.ico-abo1:before {
 	content: "\f158";
 }
-.ico-premiumHighlight:before {
+.ico-abo2:before {
 	content: "\f159";
 }
-.ico-abo1:before {
+.ico-abo3:before {
 	content: "\f15a";
 }
-.ico-abo2:before {
+.ico-abo4:before {
 	content: "\f15b";
 }
-.ico-abo3:before {
+.ico-abo5:before {
 	content: "\f15c";
 }
-.ico-abo4:before {
+.ico-advantage1Logo:before {
 	content: "\f15d";
 }
-.ico-abo5:before {
+.ico-advantage2Website:before {
 	content: "\f15e";
 }
-.ico-advantage1Logo:before {
+.ico-advantage3Billing:before {
 	content: "\f15f";
 }
-.ico-advantage2Website:before {
+.ico-badge:before {
 	content: "\f160";
 }
-.ico-advantage3Billing:before {
+.ico-ticino_map:before {
 	content: "\f161";
 }
-.ico-badge:before {
+.ico-tuttolina-smile:before {
 	content: "\f162";
 }
-.ico-ticino_map:before {
+.ico-tuttolino-error:before {
 	content: "\f163";
 }
-.ico-tuttolina-smile:before {
+.ico-tuttolino-family-sofa:before {
 	content: "\f164";
 }
-.ico-tuttolino-error:before {
+.ico-tuttolino-family:before {
 	content: "\f165";
 }
-.ico-tuttolino-family:before {
+.ico-tuttolino-gay:before {
 	content: "\f166";
 }
-.ico-tuttolino-gay:before {
+.ico-tuttolino-glasses:before {
 	content: "\f167";
 }
-.ico-tuttolino-glasses:before {
+.ico-tuttolino-hey:before {
 	content: "\f168";
 }
-.ico-tuttolino-hey:before {
+.ico-tuttolino-intro-screens:before {
 	content: "\f169";
 }
-.ico-tuttolino-intro-screens:before {
+.ico-tuttolino-sergi:before {
 	content: "\f16a";
 }
-.ico-tuttolino-sergi:before {
+.ico-tuttolino-success:before {
 	content: "\f16b";
 }
-.ico-tuttolino-success:before {
+.ico-tuttolino-tablet:before {
 	content: "\f16c";
 }
-.ico-tuttolino-tablet:before {
+.ico-pushNotifications:before {
 	content: "\f16d";
 }
-.ico-pushNotifications:before {
+.ico-websiteIntro:before {
 	content: "\f16e";
 }
-.ico-websiteIntro:before {
+.ico-myads-badge:before {
 	content: "\f16f";
+}
+.ico-plus:before {
+	content: "\f170";
+}
+.ico-pro:before {
+	content: "\f171";
+}
+.ico-vi-badge:before {
+	content: "\f172";
 }

@@ -1,19 +1,61 @@
 import React, { Component } from "react";
-
-import { BoxItemWrapper, BoxItem } from "../../internals/Box";
+import PropTypes from "prop-types";
+import { BoxItemWrapper, BoxItem, BoxCard } from "../../internals/Box";
 import LogoAnimated from "../../components/Logo";
 import LogoFallback from "../../components/Logo/assets/logo-fallback.svg";
 
 export default class Logos extends Component {
+
+  static propTypes = {
+    /**
+     * The directory name to load illustrations from.
+     *
+     * @ignore
+     */
+    directory: PropTypes.string
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.getLogosList = this.getLogosList.bind(this);
+  }
+
+  getLogosList() {
+    if (!this.props.directory) {
+      return null;
+    }
+
+    return require("./assets/" + this.props.directory + "/index.js");
+  }
+
+
   render() {
+    const directory = this.props.directory;
+    const logos = this.getLogosList();
+
     return (
       <BoxItemWrapper>
-        <BoxItem>
-          <LogoAnimated />
-        </BoxItem>
-        <BoxItem>
-          <img src={LogoFallback} height="44" />
-        </BoxItem>
+        {
+          !directory && <div>
+          <BoxItem>
+            <LogoAnimated />
+          </BoxItem>
+          <BoxItem>
+            <img src={LogoFallback} height="44" />
+          </BoxItem></div>
+        }
+        {
+            directory &&
+              Object.keys(logos).map((logo, index) => (
+                <BoxCard key={`asset-${index}`} name={logo}>
+                  <img
+                    src={logos[logo]}
+                    width="75"
+                  />
+                </BoxCard>
+              ))
+        }
       </BoxItemWrapper>
     );
   }
