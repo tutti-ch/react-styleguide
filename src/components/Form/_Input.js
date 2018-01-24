@@ -4,11 +4,12 @@ import { filterProps } from "../../helpers/functions";
 import WithWrapper from "./_WithWrapper";
 
 // istanbul ignore next
-const MutationObserver = typeof window !== "undefined"
-  ? window.MutationObserver ||
-    window.WebKitMutationObserver ||
-    window.MozMutationObserver
-  : undefined;
+const MutationObserver =
+  typeof window !== "undefined"
+    ? window.MutationObserver ||
+      window.WebKitMutationObserver ||
+      window.MozMutationObserver
+    : undefined;
 
 export class Input extends Component {
   static defaultProps = {

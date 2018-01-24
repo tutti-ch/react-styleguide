@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(Component) InputRadioGroup should handle the change of the children states 1`] = `
-<InputGroup
+<InputRadioGroup
   onChange={[Function]}
 >
   <div>
@@ -70,5 +70,5 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
       </span>
     </InputRadio>
   </div>
-</InputGroup>
+</InputRadioGroup>
 `;

@@ -1168,25 +1168,21 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                 <td
                   colSpan={4}
                 >
-                  <InputGroup>
-                    <div>
-                      <WithWrapper
-                        checked={true}
-                        key=".0"
-                        label="React.js"
-                        name="r1"
+                  <WithWrapper>
+                    <div
+                      className=""
+                    >
+                      <InputRadioGroup
                         onChange={[Function]}
-                        value={10}
+                        onKeyUp={[Function]}
                       >
-                        <div
-                          className=""
-                        >
+                        <div>
                           <InputRadio
                             checked={true}
+                            key=".0"
                             label="React.js"
                             name="r1"
                             onChange={[Function]}
-                            onKeyUp={[Function]}
                             value={10}
                           >
                             <span
@@ -1196,7 +1192,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 checked={true}
                                 name="r1"
                                 onChange={[Function]}
-                                onKeyUp={[Function]}
                                 type="radio"
                               />
                               <span>
@@ -1204,25 +1199,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               </span>
                             </span>
                           </InputRadio>
-                        </div>
-                      </WithWrapper>
-                      <WithWrapper
-                        checked={false}
-                        key=".1"
-                        label="Vue.js"
-                        name="r1"
-                        onChange={[Function]}
-                        value={10}
-                      >
-                        <div
-                          className=""
-                        >
                           <InputRadio
                             checked={false}
+                            key=".1"
                             label="Vue.js"
                             name="r1"
                             onChange={[Function]}
-                            onKeyUp={[Function]}
                             value={10}
                           >
                             <span
@@ -1232,7 +1214,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 checked={false}
                                 name="r1"
                                 onChange={[Function]}
-                                onKeyUp={[Function]}
                                 type="radio"
                               />
                               <span>
@@ -1240,25 +1221,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               </span>
                             </span>
                           </InputRadio>
-                        </div>
-                      </WithWrapper>
-                      <WithWrapper
-                        checked={false}
-                        key=".2"
-                        label="Angular.js"
-                        name="r1"
-                        onChange={[Function]}
-                        value={10}
-                      >
-                        <div
-                          className=""
-                        >
                           <InputRadio
                             checked={false}
+                            key=".2"
                             label="Angular.js"
                             name="r1"
                             onChange={[Function]}
-                            onKeyUp={[Function]}
                             value={10}
                           >
                             <span
@@ -1268,7 +1236,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 checked={false}
                                 name="r1"
                                 onChange={[Function]}
-                                onKeyUp={[Function]}
                                 type="radio"
                               />
                               <span>
@@ -1277,9 +1244,9 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             </span>
                           </InputRadio>
                         </div>
-                      </WithWrapper>
+                      </InputRadioGroup>
                     </div>
-                  </InputGroup>
+                  </WithWrapper>
                 </td>
               </Component>
             </tr>
@@ -2851,32 +2818,30 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               </Input>
                             </div>
                           </WithWrapper>
-                          <InputGroup
+                          <WithWrapper
+                            inline={true}
                             label="Radio Ga Ga"
                             name="radios"
                           >
-                            <div>
-                              <span>
-                                Radio Ga Ga
-                              </span>
-                              <WithWrapper
-                                checked={false}
-                                inline={true}
-                                key=".0"
-                                label="Radio A"
+                            <div
+                              className=""
+                            >
+                              <InputRadioGroup
+                                label="Radio Ga Ga"
                                 name="radios"
                                 onChange={[Function]}
-                                value="a"
+                                onKeyUp={[Function]}
                               >
-                                <div
-                                  className=""
-                                >
+                                <div>
+                                  <span>
+                                    Radio Ga Ga
+                                  </span>
                                   <InputRadio
                                     checked={false}
+                                    key=".0"
                                     label="Radio A"
                                     name="radios"
                                     onChange={[Function]}
-                                    onKeyUp={[Function]}
                                     value="a"
                                   >
                                     <span
@@ -2886,7 +2851,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                         checked={false}
                                         name="radios"
                                         onChange={[Function]}
-                                        onKeyUp={[Function]}
                                         type="radio"
                                       />
                                       <span>
@@ -2894,31 +2858,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       </span>
                                     </span>
                                   </InputRadio>
-                                </div>
-                              </WithWrapper>
-                              <WithWrapper
-                                checked={false}
-                                inline={true}
-                                key=".1"
-                                label="Radio B"
-                                name="radios"
-                                onChange={[Function]}
-                                style={
-                                  Object {
-                                    "marginLeft": "10px",
-                                  }
-                                }
-                                value="b"
-                              >
-                                <div
-                                  className=""
-                                >
                                   <InputRadio
                                     checked={false}
+                                    key=".1"
                                     label="Radio B"
                                     name="radios"
                                     onChange={[Function]}
-                                    onKeyUp={[Function]}
                                     style={
                                       Object {
                                         "marginLeft": "10px",
@@ -2933,7 +2878,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                         checked={false}
                                         name="radios"
                                         onChange={[Function]}
-                                        onKeyUp={[Function]}
                                         style={
                                           Object {
                                             "marginLeft": "10px",
@@ -2946,31 +2890,12 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       </span>
                                     </span>
                                   </InputRadio>
-                                </div>
-                              </WithWrapper>
-                              <WithWrapper
-                                checked={false}
-                                inline={true}
-                                key=".2"
-                                label="Radio C"
-                                name="radios"
-                                onChange={[Function]}
-                                style={
-                                  Object {
-                                    "marginLeft": "10px",
-                                  }
-                                }
-                                value="c"
-                              >
-                                <div
-                                  className=""
-                                >
                                   <InputRadio
                                     checked={false}
+                                    key=".2"
                                     label="Radio C"
                                     name="radios"
                                     onChange={[Function]}
-                                    onKeyUp={[Function]}
                                     style={
                                       Object {
                                         "marginLeft": "10px",
@@ -2985,7 +2910,6 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                         checked={false}
                                         name="radios"
                                         onChange={[Function]}
-                                        onKeyUp={[Function]}
                                         style={
                                           Object {
                                             "marginLeft": "10px",
@@ -2999,145 +2923,239 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                     </span>
                                   </InputRadio>
                                 </div>
-                              </WithWrapper>
+                              </InputRadioGroup>
                             </div>
-                          </InputGroup>
+                          </WithWrapper>
                         </div>
                         <div>
-                          <WithWrapper
-                            checked={true}
-                            inline={true}
-                            label="Hey 0"
-                            name="cb"
-                            value="Hey0"
-                          >
-                            <div
-                              className=""
-                            >
-                              <InputCheckbox
-                                checked={true}
-                                label="Hey 0"
-                                name="cb"
-                                onChange={[Function]}
-                                onKeyUp={[Function]}
-                                value="Hey0"
-                              >
-                                <span
-                                  onClick={[Function]}
-                                >
-                                  <input
-                                    checked={true}
-                                    name="cb"
-                                    onChange={[Function]}
-                                    onKeyUp={[Function]}
-                                    type="checkbox"
-                                  />
-                                  <span>
-                                    Hey 0
-                                  </span>
-                                </span>
-                              </InputCheckbox>
-                            </div>
-                          </WithWrapper>
-                          <WithWrapper
-                            inline={true}
-                            label="Hey 1"
-                            name="cb"
-                            style={
-                              Object {
-                                "marginLeft": "10px",
-                              }
-                            }
-                            value="Hey1"
-                          >
-                            <div
-                              className=""
-                            >
-                              <InputCheckbox
-                                checked={false}
-                                label="Hey 1"
-                                name="cb"
-                                onChange={[Function]}
-                                onKeyUp={[Function]}
-                                style={
-                                  Object {
-                                    "marginLeft": "10px",
-                                  }
+                          <div>
+                            <span
+                              style={
+                                Object {
+                                  "display": "inline-block",
+                                  "marginRight": "10px",
                                 }
-                                value="Hey1"
-                              >
-                                <span
-                                  onClick={[Function]}
-                                >
-                                  <input
-                                    checked={false}
-                                    name="cb"
-                                    onChange={[Function]}
-                                    onKeyUp={[Function]}
-                                    style={
-                                      Object {
-                                        "marginLeft": "10px",
-                                      }
-                                    }
-                                    type="checkbox"
-                                  />
-                                  <span>
-                                    Hey 1
-                                  </span>
-                                </span>
-                              </InputCheckbox>
-                            </div>
-                          </WithWrapper>
-                          <WithWrapper
-                            checked={true}
-                            inline={true}
-                            label="Hey 2"
-                            name="cb"
-                            style={
-                              Object {
-                                "marginLeft": "10px",
                               }
-                            }
-                            value="Hey2"
-                          >
-                            <div
-                              className=""
                             >
-                              <InputCheckbox
-                                checked={true}
-                                label="Hey 2"
-                                name="cb"
-                                onChange={[Function]}
-                                onKeyUp={[Function]}
-                                style={
-                                  Object {
-                                    "marginLeft": "10px",
-                                  }
-                                }
-                                value="Hey2"
+                              Checkbox group:
+                            </span>
+                            <WithWrapper
+                              checked={true}
+                              inline={true}
+                              label="Hey 0"
+                              name="cb"
+                              value="Hey0"
+                            >
+                              <div
+                                className=""
                               >
-                                <span
-                                  onClick={[Function]}
+                                <InputCheckbox
+                                  checked={true}
+                                  label="Hey 0"
+                                  name="cb"
+                                  onChange={[Function]}
+                                  onKeyUp={[Function]}
+                                  value="Hey0"
                                 >
-                                  <input
-                                    checked={true}
-                                    name="cb"
-                                    onChange={[Function]}
-                                    onKeyUp={[Function]}
-                                    style={
-                                      Object {
-                                        "marginLeft": "10px",
-                                      }
-                                    }
-                                    type="checkbox"
-                                  />
-                                  <span>
-                                    Hey 2
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={true}
+                                      name="cb"
+                                      onChange={[Function]}
+                                      onKeyUp={[Function]}
+                                      type="checkbox"
+                                    />
+                                    <span>
+                                      Hey 0
+                                    </span>
                                   </span>
-                                </span>
-                              </InputCheckbox>
-                            </div>
-                          </WithWrapper>
+                                </InputCheckbox>
+                              </div>
+                            </WithWrapper>
+                            <WithWrapper
+                              inline={true}
+                              label="Hey 1"
+                              name="cb"
+                              style={
+                                Object {
+                                  "marginLeft": "10px",
+                                }
+                              }
+                              value="Hey1"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputCheckbox
+                                  checked={false}
+                                  label="Hey 1"
+                                  name="cb"
+                                  onChange={[Function]}
+                                  onKeyUp={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": "10px",
+                                    }
+                                  }
+                                  value="Hey1"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={false}
+                                      name="cb"
+                                      onChange={[Function]}
+                                      onKeyUp={[Function]}
+                                      style={
+                                        Object {
+                                          "marginLeft": "10px",
+                                        }
+                                      }
+                                      type="checkbox"
+                                    />
+                                    <span>
+                                      Hey 1
+                                    </span>
+                                  </span>
+                                </InputCheckbox>
+                              </div>
+                            </WithWrapper>
+                            <WithWrapper
+                              checked={true}
+                              inline={true}
+                              label="Hey 2"
+                              name="cb"
+                              style={
+                                Object {
+                                  "marginLeft": "10px",
+                                }
+                              }
+                              value="Hey2"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputCheckbox
+                                  checked={true}
+                                  label="Hey 2"
+                                  name="cb"
+                                  onChange={[Function]}
+                                  onKeyUp={[Function]}
+                                  style={
+                                    Object {
+                                      "marginLeft": "10px",
+                                    }
+                                  }
+                                  value="Hey2"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={true}
+                                      name="cb"
+                                      onChange={[Function]}
+                                      onKeyUp={[Function]}
+                                      style={
+                                        Object {
+                                          "marginLeft": "10px",
+                                        }
+                                      }
+                                      type="checkbox"
+                                    />
+                                    <span>
+                                      Hey 2
+                                    </span>
+                                  </span>
+                                </InputCheckbox>
+                              </div>
+                            </WithWrapper>
+                          </div>
+                          <div>
+                            <span
+                              style={
+                                Object {
+                                  "display": "inline-block",
+                                  "marginRight": "10px",
+                                }
+                              }
+                            >
+                              Single checkboxes:
+                            </span>
+                            <WithWrapper
+                              checked={true}
+                              inline={true}
+                              label="Single cb 1"
+                              name="cb-single-1"
+                              value="CB 1"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputCheckbox
+                                  checked={true}
+                                  label="Single cb 1"
+                                  name="cb-single-1"
+                                  onChange={[Function]}
+                                  onKeyUp={[Function]}
+                                  value="CB 1"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={true}
+                                      name="cb-single-1"
+                                      onChange={[Function]}
+                                      onKeyUp={[Function]}
+                                      type="checkbox"
+                                    />
+                                    <span>
+                                      Single cb 1
+                                    </span>
+                                  </span>
+                                </InputCheckbox>
+                              </div>
+                            </WithWrapper>
+                            <WithWrapper
+                              checked={true}
+                              inline={true}
+                              label="Single cb 2"
+                              name="cb-single-2"
+                              value="CB 2"
+                            >
+                              <div
+                                className=""
+                              >
+                                <InputCheckbox
+                                  checked={true}
+                                  label="Single cb 2"
+                                  name="cb-single-2"
+                                  onChange={[Function]}
+                                  onKeyUp={[Function]}
+                                  value="CB 2"
+                                >
+                                  <span
+                                    onClick={[Function]}
+                                  >
+                                    <input
+                                      checked={true}
+                                      name="cb-single-2"
+                                      onChange={[Function]}
+                                      onKeyUp={[Function]}
+                                      type="checkbox"
+                                    />
+                                    <span>
+                                      Single cb 2
+                                    </span>
+                                  </span>
+                                </InputCheckbox>
+                              </div>
+                            </WithWrapper>
+                          </div>
                         </div>
                         <div
                           style={

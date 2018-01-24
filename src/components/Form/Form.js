@@ -59,39 +59,67 @@ class ExampleForm extends React.Component {
         </div>
         <div>
           <Form.Input type="text" name="name" value="This is a default value" />
-          <Form.RadioGroup name="radios" label="Radio Ga Ga">
-            <Form.Radio label="Radio A" value="a" inline />
+          <Form.RadioGroup name="radios" label="Radio Ga Ga" inline>
+            <Form.Radio label="Radio A" value="a" />
             <Form.Radio
               label="Radio B"
               value="b"
-              inline
               style={{ marginLeft: "10px" }}
             />
             <Form.Radio
               label="Radio C"
               value="c"
-              inline
               style={{ marginLeft: "10px" }}
             />
           </Form.RadioGroup>
         </div>
         <div>
-          <Form.Checkbox name="cb" value="Hey0" checked inline label="Hey 0" />
-          <Form.Checkbox
-            name="cb"
-            value="Hey1"
-            inline
-            label="Hey 1"
-            style={{ marginLeft: "10px" }}
-          />
-          <Form.Checkbox
-            name="cb"
-            value="Hey2"
-            checked
-            inline
-            label="Hey 2"
-            style={{ marginLeft: "10px" }}
-          />
+          <div>
+            <span style={{ marginRight: "10px", display: "inline-block" }}>
+              Checkbox group:
+            </span>
+            <Form.Checkbox
+              name="cb"
+              value="Hey0"
+              checked
+              inline
+              label="Hey 0"
+            />
+            <Form.Checkbox
+              name="cb"
+              value="Hey1"
+              inline
+              label="Hey 1"
+              style={{ marginLeft: "10px" }}
+            />
+            <Form.Checkbox
+              name="cb"
+              value="Hey2"
+              checked
+              inline
+              label="Hey 2"
+              style={{ marginLeft: "10px" }}
+            />
+          </div>
+          <div>
+            <span style={{ marginRight: "10px", display: "inline-block" }}>
+              Single checkboxes:
+            </span>
+            <Form.Checkbox
+              name="cb-single-1"
+              value="CB 1"
+              checked
+              inline
+              label="Single cb 1"
+            />
+            <Form.Checkbox
+              name="cb-single-2"
+              value="CB 2"
+              checked
+              inline
+              label="Single cb 2"
+            />
+          </div>
         </div>
         <div style={{ margin: "1.5rem 1rem 1rem 1rem" }}>
           <Form.Slider

@@ -2,9 +2,8 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { filterProps } from "../../helpers/functions";
 import classes from "./Form.scss";
-import WithWrapper from "./_WithWrapper";
 
-export class InputRadio extends PureComponent {
+export default class InputRadio extends PureComponent {
   static defaultProps = {
     checked: false
   };
@@ -98,5 +97,3 @@ export class InputRadio extends PureComponent {
     );
   }
 }
-
-export default WithWrapper(InputRadio);

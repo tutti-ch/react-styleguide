@@ -1,6 +1,7 @@
 /* global describe, test, expect, jest */
 import React from "react";
-import { InputRadio } from "./_InputRadio";
+import InputRadioGroup from "./_InputRadioGroup";
+import InputRadio from "./_InputRadio";
 import { shallow, mount } from "enzyme";
 
 describe("(Component) InputRadio", () => {
@@ -27,7 +28,10 @@ describe("(Component) InputRadio", () => {
 
   test("snapshot", () => {
     const comp = mount(
-      <InputRadio value="Life is good" checked label="My label" />
+      <InputRadioGroup name="input-name">
+        <InputRadio value="Life is good" checked label="My label" />
+        <InputRadio value="Life is good" checked label="My label" />
+      </InputRadioGroup>
     );
     expect(comp).toMatchSnapshot();
   });

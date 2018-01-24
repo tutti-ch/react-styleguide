@@ -36,12 +36,7 @@ export default (WrappedComponent, mergeProps = {}) => {
         PropTypes.string,
         PropTypes.array,
         PropTypes.object
-      ]),
-
-      /**
-       * The children to render.
-       */
-      children: PropTypes.node
+      ])
     };
 
     static contextTypes = {
@@ -49,6 +44,11 @@ export default (WrappedComponent, mergeProps = {}) => {
     };
 
     static getNormalizedValue(props) {
+      // Handle for radio inputs and checkboxes
+      if (WrappedComponent.propTypes.checked) {
+        return props.checked ? props.value : false;
+      }
+
       return props.value || props.values || props.selected;
     }
 

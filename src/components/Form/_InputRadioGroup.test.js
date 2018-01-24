@@ -1,7 +1,7 @@
 /* global describe, test, expect, jest */
 import React from "react";
-import InputRadioGroup from "./_InputRadioGroup";
-import { InputRadio } from "./_InputRadio";
+import { InputRadioGroup } from "./_InputRadioGroup";
+import InputRadio from "./_InputRadio";
 import { mount } from "enzyme";
 
 describe("(Component) InputRadioGroup", () => {

@@ -1,9 +1,9 @@
 import React, { PureComponent, cloneElement, Children } from "react";
 import PropTypes from "prop-types";
-
+import WithWrapper from "./_WithWrapper";
 import classes from "./Form.scss";
 
-export default class InputGroup extends PureComponent {
+export class InputRadioGroup extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
 
@@ -28,7 +28,8 @@ export default class InputGroup extends PureComponent {
     super(props);
 
     this.state = {
-      selected: null
+      selected: null,
+      value: undefined
     };
 
     Children.map(this.props.children, (child, index) => {
@@ -72,3 +73,5 @@ export default class InputGroup extends PureComponent {
     );
   }
 }
+
+export default WithWrapper(InputRadioGroup);

@@ -1,22 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(Component) InputRadio snapshot 1`] = `
-<InputRadio
-  checked={true}
-  label="My label"
-  value="Life is good"
+<WithWrapper
+  name="input-name"
 >
-  <span
-    onClick={[Function]}
+  <div
+    className=""
   >
-    <input
-      checked={true}
+    <InputRadioGroup
+      name="input-name"
       onChange={[Function]}
-      type="radio"
-    />
-    <span>
-      My label
-    </span>
-  </span>
-</InputRadio>
+      onKeyUp={[Function]}
+    >
+      <div>
+        <InputRadio
+          checked={false}
+          key=".0"
+          label="My label"
+          name="input-name"
+          onChange={[Function]}
+          value="Life is good"
+        >
+          <span
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              name="input-name"
+              onChange={[Function]}
+              type="radio"
+            />
+            <span>
+              My label
+            </span>
+          </span>
+        </InputRadio>
+        <InputRadio
+          checked={true}
+          key=".1"
+          label="My label"
+          name="input-name"
+          onChange={[Function]}
+          value="Life is good"
+        >
+          <span
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              name="input-name"
+              onChange={[Function]}
+              type="radio"
+            />
+            <span>
+              My label
+            </span>
+          </span>
+        </InputRadio>
+      </div>
+    </InputRadioGroup>
+  </div>
+</WithWrapper>
 `;
