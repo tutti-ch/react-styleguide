@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Tabs should render correctly 1`] = `
+<Tabs
+  defaultActiveTab={0}
+>
+  <div
+    className=""
+  >
+    <Tab
+      index={0}
+      isActive={true}
+      key=".0"
+      onClick={[Function]}
+      title="This is a tab"
+    >
+      <div
+        className="undefined"
+        onClick={[Function]}
+      >
+        This is a tab
+      </div>
+    </Tab>
+    <Tab
+      index={1}
+      isActive={false}
+      key=".1"
+      onClick={[Function]}
+      title="This is another tab"
+    >
+      <div
+        className=""
+        onClick={[Function]}
+      >
+        This is another tab
+      </div>
+    </Tab>
+    <Tab
+      index={2}
+      isActive={false}
+      key=".2"
+      onClick={[Function]}
+      title="And they keep coming"
+    >
+      <div
+        className=""
+        onClick={[Function]}
+      >
+        And they keep coming
+      </div>
+    </Tab>
+    <Tab
+      index={3}
+      isActive={false}
+      key=".3"
+      onClick={[Function]}
+      title="Secret ICO"
+    >
+      <div
+        className=""
+        onClick={[Function]}
+      >
+        Secret ICO
+      </div>
+    </Tab>
+    <div>
+      <h1>
+        An amazing tab
+      </h1>
+      <div>
+        lots of stuff
+      </div>
+    </div>
+  </div>
+</Tabs>
+`;
