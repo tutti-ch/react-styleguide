@@ -30,13 +30,15 @@ export default class Tabs extends Component {
    * to keep track of their state
    */
   renderTabs() {
-    return React.Children.map(this.props.children, (child, index) =>
-      React.cloneElement(child, {
+    return React.Children.map(this.props.children, (child, index) => {
+      if (!child) return null;
+
+      return React.cloneElement(child, {
         index,
         onClick: this.onTabClick,
         isActive: index === this.state.activeTab
-      })
-    );
+      });
+    });
   }
 
   /**
