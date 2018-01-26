@@ -173,7 +173,7 @@ export default (WrappedComponent, mergeProps = {}) => {
     render() {
       const { inline, className } = this.props;
       const { error, formValue } = this.state;
-      const hasValue = !!formValue;
+      const hasValue = !!formValue || mergeProps.hasValue;
       const injectedProps = filterProps(WithWrapper.propTypes, this.props);
 
       let { label } = this.props;

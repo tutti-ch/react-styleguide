@@ -1440,6 +1440,71 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       </div>
                     </WithWrapper>
                   </div>
+                  <div
+                    style={
+                      Object {
+                        "marginTop": "2rem",
+                      }
+                    }
+                  >
+                    <WithWrapper
+                      label="My label"
+                      name="type"
+                      value=""
+                    >
+                      <div
+                        className="undefined"
+                      >
+                        <Toggle
+                          name="type"
+                          onChange={[Function]}
+                          onKeyUp={[Function]}
+                          value=""
+                        >
+                          <span
+                            className=""
+                          >
+                            <Component
+                              key=".0"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Man"
+                            >
+                              <span
+                                className=""
+                                data-value="Man"
+                                onClick={[Function]}
+                              >
+                                No
+                              </span>
+                            </Component>
+                            <Component
+                              key=".1"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Toggle"
+                            >
+                              <span
+                                className=""
+                                data-value="Toggle"
+                                onClick={[Function]}
+                              >
+                                Value
+                              </span>
+                            </Component>
+                            <input
+                              name="type"
+                              type="hidden"
+                              value=""
+                            />
+                          </span>
+                        </Toggle>
+                        <span>
+                          My label
+                        </span>
+                      </div>
+                    </WithWrapper>
+                  </div>
                 </td>
               </Component>
             </tr>

@@ -332,6 +332,12 @@ export default () => (
               <Form.Toggle.Option value="Toggle">Toggle</Form.Toggle.Option>
             </Form.Toggle>
           </div>
+          <div style={{ marginTop: "2rem" }}>
+            <Form.Toggle value="" name="type" label={"My label"}>
+              <Form.Toggle.Option value="Man">No</Form.Toggle.Option>
+              <Form.Toggle.Option value="Toggle">Value</Form.Toggle.Option>
+            </Form.Toggle>
+          </div>
         </Table.Cell>
       </Table.Row>
       <Table.Row>

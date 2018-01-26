@@ -101,6 +101,6 @@ export class Toggle extends PureComponent {
   }
 }
 
-const WrappedToggle = WithWrapper(Toggle);
+const WrappedToggle = WithWrapper(Toggle, { hasValue: true });
 WrappedToggle.Option = Toggle.Option; // Make it accessible also for the default export.
 export default WrappedToggle;
