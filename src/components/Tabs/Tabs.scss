@@ -1,0 +1,35 @@
+@import "../../styles/main";
+
+$border-color: $greyscale-85;
+
+.tabs {
+  width: 100%;
+}
+
+.tab {
+  user-select: none;
+  display: inline-block;
+  margin: 0 -1px -1px -1px;
+  padding: $size-m;
+  text-align: center;
+  background: $greyscale-95;
+  border: 1px solid $border-color;
+
+  transition: all $transition-m;
+
+  &.active {
+    background: $greyscale-100;
+    border: 1px solid $border-color;
+    border-bottom: 1px solid $greyscale-100;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.content {
+  width: 100%;
+  display: block;
+  border-top: 1px solid $border-color;
+}
