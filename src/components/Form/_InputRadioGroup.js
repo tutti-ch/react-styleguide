@@ -27,16 +27,18 @@ export class InputRadioGroup extends PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {
+    const state = {
       selected: null,
       value: undefined
     };
 
     Children.map(this.props.children, (child, index) => {
       if (child.props.checked) {
-        this.setState({ selected: index });
+        state.selected = index;
       }
     });
+
+    this.state = state;
   }
 
   /**

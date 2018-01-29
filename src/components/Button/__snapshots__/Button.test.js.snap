@@ -8,6 +8,7 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
   loading={false}
   rounded={true}
   size="large"
+  type="submit"
 >
   <button
     className="my-class"
