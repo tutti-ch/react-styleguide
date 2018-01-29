@@ -34,7 +34,7 @@ export class InputRadioGroup extends PureComponent {
 
     Children.map(this.props.children, (child, index) => {
       if (child.props.checked) {
-        this.state.selected = index;
+        this.setState({ selected: index });
       }
     });
   }

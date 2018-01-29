@@ -88,7 +88,8 @@ export default class Button extends Component {
   static defaultProps = {
     rounded: true,
     loading: false,
-    size: Button.SIZE_MEDIUM
+    size: Button.SIZE_MEDIUM,
+    type: "submit"
   };
 
   static Icon = props => (
@@ -114,8 +115,11 @@ export default class Button extends Component {
       loading: props.loading
     };
 
-    if (typeof context.onSubmit === "function" && props.type === "submit") {
-      context.onSubmit(({ loading }) => this.setState({ loading }));
+    const { onSubmit } = context;
+    const { type = "submit" } = props;
+
+    if (typeof onSubmit === "function" && type === "submit") {
+      onSubmit(({ loading }) => this.setState({ loading }));
     }
   }
 
@@ -183,11 +187,6 @@ export default class Button extends Component {
    */
   render() {
     const attrs = filterProps(Button.propTypes, this.props);
-
-    // By default, the type is submit
-    if (typeof attrs.type === "undefined") {
-      attrs.type = "submit";
-    }
 
     // When it is loading, the button is disabled by default.
     if (this.state.loading) {
