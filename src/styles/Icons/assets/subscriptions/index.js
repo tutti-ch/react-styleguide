@@ -1,0 +1,1 @@
+export LockHexagon from "./lock-hexagon.svg"
