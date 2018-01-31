@@ -36,3 +36,9 @@ The SVG Illustrations shown here are from [src/styles/Illustrations/assets](http
 ```jsx noeditor
 <Illustrations directory="campaigns" />
 ```
+
+### Marketing Illustrations
+
+```jsx noeditor
+<Illustrations directory="marketing" />
+```
