@@ -261,7 +261,7 @@ $inputHeight: $size-xxxl;
     position: relative;
     outline: none;
     user-select: none;
-    width: 100%;
+    max-width: 100%;
 
     // Styles for when the placeholder is active
     &.placeholder {
@@ -275,9 +275,11 @@ $inputHeight: $size-xxxl;
     .ph {
       display: flex;
       flex-wrap: wrap;
+      max-width: 100%;
 
       .option {
-        padding-right: $size-xs;
+        max-width: 100%;
+        padding-right: $size-l;
         flex: 0 0 auto;
       }
 
@@ -304,6 +306,7 @@ $inputHeight: $size-xxxl;
     }
 
     .select-inner {
+      max-width: 100%;
       border: $border-default;
       background: $greyscale-100;
       min-height: $size-xxxl;
@@ -367,6 +370,10 @@ $inputHeight: $size-xxxl;
           font-weight: normal;
         }
       }
+    }
+
+    .text {
+      @include textTruncate;
     }
 
     .icon {
