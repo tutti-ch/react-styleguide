@@ -261,7 +261,7 @@ $inputHeight: $size-xxxl;
     position: relative;
     outline: none;
     user-select: none;
-    max-width: 100%;
+    width: 100%;
 
     // Styles for when the placeholder is active
     &.placeholder {
@@ -277,6 +277,7 @@ $inputHeight: $size-xxxl;
       flex-wrap: wrap;
       max-width: 100%;
       position: relative;
+      flex: 1;
 
       .option {
         max-width: 100%;
@@ -464,7 +465,7 @@ $inputHeight: $size-xxxl;
         border: 1px solid transparent;
       }
     }
-    
+
     .options {
       left: auto;
       min-width: 250px;
