@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?60f24bf5860451849b323b44113a43cd?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?60f24bf5860451849b323b44113a43cd") format("woff2"),
-url("TuttiFont.woff?60f24bf5860451849b323b44113a43cd") format("woff");
+	src: url("TuttiFont.eot?cffcabaa3e41fa824a27a0cfa07e7b53?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?cffcabaa3e41fa824a27a0cfa07e7b53") format("woff2"),
+url("TuttiFont.woff?cffcabaa3e41fa824a27a0cfa07e7b53") format("woff");
 }
 
 .ico {
@@ -268,96 +268,132 @@ url("TuttiFont.woff?60f24bf5860451849b323b44113a43cd") format("woff");
 .ico-redFridaypig:before {
 	content: "\f154";
 }
-.ico-preimumBump:before {
+.ico-advantage:before {
 	content: "\f155";
 }
-.ico-premiumCombo:before {
+.ico-gift:before {
 	content: "\f156";
 }
-.ico-premiumGallery:before {
+.ico-insert_new_ad:before {
 	content: "\f157";
 }
-.ico-premiumHighlight:before {
+.ico-light_bulb:before {
 	content: "\f158";
 }
-.ico-abo1:before {
+.ico-party:before {
 	content: "\f159";
 }
-.ico-abo2:before {
+.ico-promote:before {
 	content: "\f15a";
 }
-.ico-abo3:before {
+.ico-visualizations:before {
 	content: "\f15b";
 }
-.ico-abo4:before {
+.ico-with_gift:before {
 	content: "\f15c";
 }
-.ico-abo5:before {
+.ico-with_phone:before {
 	content: "\f15d";
 }
-.ico-advantage1Logo:before {
+.ico-premiumBump:before {
 	content: "\f15e";
 }
-.ico-advantage2Website:before {
+.ico-premiumCombo:before {
 	content: "\f15f";
 }
-.ico-advantage3Billing:before {
+.ico-premiumGallery:before {
 	content: "\f160";
 }
-.ico-badge:before {
+.ico-premiumHighlight:before {
 	content: "\f161";
 }
-.ico-ticino_map:before {
+.ico-abo1:before {
 	content: "\f162";
 }
-.ico-tuttolina-smile:before {
+.ico-abo2:before {
 	content: "\f163";
 }
-.ico-tuttolino-error:before {
+.ico-abo3:before {
 	content: "\f164";
 }
-.ico-tuttolino-family-sofa:before {
+.ico-abo4:before {
 	content: "\f165";
 }
-.ico-tuttolino-family:before {
+.ico-abo5:before {
 	content: "\f166";
 }
-.ico-tuttolino-gay:before {
+.ico-advantage1Logo:before {
 	content: "\f167";
 }
-.ico-tuttolino-glasses:before {
+.ico-advantage2Website:before {
 	content: "\f168";
 }
-.ico-tuttolino-hey:before {
+.ico-advantage3Billing:before {
 	content: "\f169";
 }
-.ico-tuttolino-intro-screens:before {
+.ico-badge:before {
 	content: "\f16a";
 }
-.ico-tuttolino-sergi:before {
+.ico-ticino_map:before {
 	content: "\f16b";
 }
-.ico-tuttolino-success:before {
+.ico-tuttolina-smile:before {
 	content: "\f16c";
 }
-.ico-tuttolino-tablet:before {
+.ico-tuttolino-error:before {
 	content: "\f16d";
 }
-.ico-pushNotifications:before {
+.ico-tuttolino-family-sofa:before {
 	content: "\f16e";
 }
-.ico-websiteIntro:before {
+.ico-tuttolino-family:before {
 	content: "\f16f";
 }
-.ico-myads-badge:before {
+.ico-tuttolino-gay:before {
 	content: "\f170";
 }
-.ico-plus:before {
+.ico-tuttolino-glasses:before {
 	content: "\f171";
 }
-.ico-pro:before {
+.ico-tuttolino-hey:before {
 	content: "\f172";
 }
-.ico-vi-badge:before {
+.ico-tuttolino-intro-screens:before {
 	content: "\f173";
+}
+.ico-tuttolino-sergi:before {
+	content: "\f174";
+}
+.ico-tuttolino-success:before {
+	content: "\f175";
+}
+.ico-tuttolino-tablet:before {
+	content: "\f176";
+}
+.ico-intro_screen_map:before {
+	content: "\f177";
+}
+.ico-intro_screen_savedsearches:before {
+	content: "\f178";
+}
+.ico-intro_screen_tags:before {
+	content: "\f179";
+}
+.ico-pushNotifications:before {
+	content: "\f17a";
+}
+.ico-websiteIntro:before {
+	content: "\f17b";
+}
+.ico-myads-badge:before {
+	content: "\f17c";
+}
+.ico-plus:before {
+	content: "\f17d";
+}
+.ico-pro:before {
+	content: "\f17e";
+}
+.ico-vi-badge:before {
+	content: "\f17f";
 }
