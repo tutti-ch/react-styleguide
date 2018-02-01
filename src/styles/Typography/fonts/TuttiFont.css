@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?cffcabaa3e41fa824a27a0cfa07e7b53?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?cffcabaa3e41fa824a27a0cfa07e7b53") format("woff2"),
-url("TuttiFont.woff?cffcabaa3e41fa824a27a0cfa07e7b53") format("woff");
+	src: url("TuttiFont.eot?bb762357334240bcde45aa3710a04d33?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?bb762357334240bcde45aa3710a04d33") format("woff2"),
+url("TuttiFont.woff?bb762357334240bcde45aa3710a04d33") format("woff");
 }
 
 .ico {
@@ -370,30 +370,33 @@ url("TuttiFont.woff?cffcabaa3e41fa824a27a0cfa07e7b53") format("woff");
 .ico-tuttolino-tablet:before {
 	content: "\f176";
 }
-.ico-intro_screen_map:before {
+.ico-ad_deleted_survey:before {
 	content: "\f177";
 }
-.ico-intro_screen_savedsearches:before {
+.ico-intro_screen_map:before {
 	content: "\f178";
 }
-.ico-intro_screen_tags:before {
+.ico-intro_screen_savedsearches:before {
 	content: "\f179";
 }
-.ico-pushNotifications:before {
+.ico-intro_screen_tags:before {
 	content: "\f17a";
 }
-.ico-websiteIntro:before {
+.ico-pushNotifications:before {
 	content: "\f17b";
 }
-.ico-myads-badge:before {
+.ico-websiteIntro:before {
 	content: "\f17c";
 }
-.ico-plus:before {
+.ico-myads-badge:before {
 	content: "\f17d";
 }
-.ico-pro:before {
+.ico-plus:before {
 	content: "\f17e";
 }
-.ico-vi-badge:before {
+.ico-pro:before {
 	content: "\f17f";
+}
+.ico-vi-badge:before {
+	content: "\f180";
 }
