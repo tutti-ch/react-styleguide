@@ -11,10 +11,12 @@ export Logo from "./components/Logo";
 export Tabs from "./components/Tabs";
 import * as Icons from "./styles/Icons/assets";
 import * as Illustrations from "./styles/Illustrations/assets";
+import * as Logos from "./styles/Logos/assets";
 
 export const icons = {
   ...Icons,
   ...Illustrations,
+  ...Logos,
   categories: {
     "1000": Icons.Immobilien,
     "4020": Icons.Antiquitaten,
