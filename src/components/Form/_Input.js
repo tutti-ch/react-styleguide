@@ -84,7 +84,8 @@ export class Input extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (nextProps.value !== this.props.value) {
-      this.setState({ value: nextProps.value });
+      this.changed = true;
+      this.setState({ value: nextProps.value || "" }, this.notify);
     }
   }
 

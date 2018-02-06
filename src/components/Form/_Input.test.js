@@ -46,6 +46,15 @@ describe("(Component) Input", () => {
     expect(onChange).toHaveBeenCalledTimes(1); // Because they key up was not an enter 😀
   });
 
+  test("Should call notify when new props are received", () => {
+    const notify = jest.fn();
+    const comp = shallow(<Input />);
+    const inst = comp.instance();
+    inst.notify = notify;
+    comp.setProps({ value: "newValue" });
+    expect(notify).toHaveBeenCalled();
+  });
+
   test("snapshot", () => {
     const comp = mount(<Input value="Life is good" type="text" />);
     expect(comp).toMatchSnapshot();

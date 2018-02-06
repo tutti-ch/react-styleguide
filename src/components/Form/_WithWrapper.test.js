@@ -30,7 +30,7 @@ describe("HOC (WithWrapper)", () => {
     expect(spy).toHaveBeenCalled();
     comp.setProps({ onChange: undefined });
     inst.handleOnChange("");
-    expect(comp.state("formValue")).toBe(null);
+    expect(comp.state("formValue")).toBe(undefined);
     expect(spy).toHaveBeenCalledTimes(1);
   });
 

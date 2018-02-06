@@ -138,10 +138,10 @@ export default (WrappedComponent, mergeProps = {}) => {
      * @param {string} value The changed value
      * @param {*} opts The additional props that we want to pass to the parent (such as the input name)
      */
-    handleOnChange(value, opts) {
+    handleOnChange(value, opts = {}) {
       this.setState({
         error: null,
-        formValue: opts ? opts.formValue : null
+        formValue: opts.formValue
       });
 
       // Do not confuse the parent, this is only required for this component.
