@@ -1,26 +1,25 @@
 {
   "name": "tutti-ch-styleguide",
-  "version": "1.4.46",
+  "version": "1.4.47",
   "description": "React-based styleguide for tutti.ch",
   "main": "src/index.js",
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
     "dist:build": "npm run test",
-    "dist:publish": "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
+    "dist:publish":
+      "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
+    "icons":
+      "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "prettier --write",
-      "git add"
-    ],
+    "*.{js,json}": ["prettier --write", "git add"],
     "*.scss": [
       "prettier --parser postcss --write",
       "stylelint-staged",
@@ -31,11 +30,7 @@
     "type": "git",
     "url": "git://github.com/tutti-ch/react-styleguide.git"
   },
-  "keywords": [
-    "react",
-    "tutti.ch",
-    "styleguide"
-  ],
+  "keywords": ["react", "tutti.ch", "styleguide"],
   "author": "Tutti AG Switzerland",
   "license": "MIT",
   "bugs": {
