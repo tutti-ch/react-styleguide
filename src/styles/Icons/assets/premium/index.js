@@ -1,4 +1,7 @@
 export Bump from "./bump.svg"
+export Bump1 from "./bump1.svg"
+export Bump2 from "./bump2.svg"
+export Bump3 from "./bump3.svg"
 export Combo from "./combo.svg"
 export Gallery from "./gallery.svg"
 export Highlight from "./highlight.svg"

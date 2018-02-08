@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?23df1bdd2f5b327f49903da95b702d93?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?23df1bdd2f5b327f49903da95b702d93") format("woff2"),
-url("TuttiFont.woff?23df1bdd2f5b327f49903da95b702d93") format("woff");
+	src: url("TuttiFont.eot?fb6c8ef309fdbc0b3d82c210bc9f2a96?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?fb6c8ef309fdbc0b3d82c210bc9f2a96") format("woff2"),
+url("TuttiFont.woff?fb6c8ef309fdbc0b3d82c210bc9f2a96") format("woff");
 }
 
 .ico {
@@ -196,207 +196,216 @@ url("TuttiFont.woff?23df1bdd2f5b327f49903da95b702d93") format("woff");
 .ico-bump:before {
 	content: "\f13c";
 }
-.ico-combo:before {
+.ico-bump1:before {
 	content: "\f13d";
 }
-.ico-gallery:before {
+.ico-bump2:before {
 	content: "\f13e";
 }
-.ico-highlight:before {
+.ico-bump3:before {
 	content: "\f13f";
 }
-.ico-sell-faster:before {
+.ico-combo:before {
 	content: "\f140";
 }
-.ico-facebook:before {
+.ico-gallery:before {
 	content: "\f141";
 }
-.ico-google-plus:before {
+.ico-highlight:before {
 	content: "\f142";
 }
-.ico-instagram:before {
+.ico-sell-faster:before {
 	content: "\f143";
 }
-.ico-share-facebook:before {
+.ico-facebook:before {
 	content: "\f144";
 }
-.ico-share-messenger:before {
+.ico-google-plus:before {
 	content: "\f145";
 }
-.ico-share-whatsapp:before {
+.ico-instagram:before {
 	content: "\f146";
 }
-.ico-social-facebook:before {
+.ico-share-facebook:before {
 	content: "\f147";
 }
-.ico-social-gplus:before {
+.ico-share-messenger:before {
 	content: "\f148";
 }
-.ico-social-instagram:before {
+.ico-share-whatsapp:before {
 	content: "\f149";
 }
-.ico-social-rss:before {
+.ico-social-facebook:before {
 	content: "\f14a";
 }
-.ico-social-twitter:before {
+.ico-social-gplus:before {
 	content: "\f14b";
 }
-.ico-social-youtube:before {
+.ico-social-instagram:before {
 	content: "\f14c";
 }
-.ico-twitter:before {
+.ico-social-rss:before {
 	content: "\f14d";
 }
-.ico-youtube:before {
+.ico-social-twitter:before {
 	content: "\f14e";
 }
-.ico-lock-hexagon:before {
+.ico-social-youtube:before {
 	content: "\f14f";
 }
-.ico-redFridayMyadsDE:before {
+.ico-twitter:before {
 	content: "\f150";
 }
-.ico-redFridayMyadsFR:before {
+.ico-youtube:before {
 	content: "\f151";
 }
-.ico-redFridayMyadsIT:before {
+.ico-lock-hexagon:before {
 	content: "\f152";
 }
-.ico-redFridaypaint:before {
+.ico-redFridayMyadsDE:before {
 	content: "\f153";
 }
-.ico-redFridaypig:before {
+.ico-redFridayMyadsFR:before {
 	content: "\f154";
 }
-.ico-advantage:before {
+.ico-redFridayMyadsIT:before {
 	content: "\f155";
 }
-.ico-gift:before {
+.ico-redFridaypaint:before {
 	content: "\f156";
 }
-.ico-insert_new_ad:before {
+.ico-redFridaypig:before {
 	content: "\f157";
 }
-.ico-light_bulb:before {
+.ico-advantage:before {
 	content: "\f158";
 }
-.ico-party:before {
+.ico-gift:before {
 	content: "\f159";
 }
-.ico-promote:before {
+.ico-insert_new_ad:before {
 	content: "\f15a";
 }
-.ico-visualizations:before {
+.ico-light_bulb:before {
 	content: "\f15b";
 }
-.ico-with_gift:before {
+.ico-party:before {
 	content: "\f15c";
 }
-.ico-with_phone:before {
+.ico-promote:before {
 	content: "\f15d";
 }
-.ico-premiumBump:before {
+.ico-visualizations:before {
 	content: "\f15e";
 }
-.ico-premiumCombo:before {
+.ico-with_gift:before {
 	content: "\f15f";
 }
-.ico-premiumGallery:before {
+.ico-with_phone:before {
 	content: "\f160";
 }
-.ico-premiumHighlight:before {
+.ico-premiumBump:before {
 	content: "\f161";
 }
-.ico-abo1:before {
+.ico-premiumCombo:before {
 	content: "\f162";
 }
-.ico-abo2:before {
+.ico-premiumGallery:before {
 	content: "\f163";
 }
-.ico-abo3:before {
+.ico-premiumHighlight:before {
 	content: "\f164";
 }
-.ico-abo4:before {
+.ico-abo1:before {
 	content: "\f165";
 }
-.ico-abo5:before {
+.ico-abo2:before {
 	content: "\f166";
 }
-.ico-advantage1Logo:before {
+.ico-abo3:before {
 	content: "\f167";
 }
-.ico-advantage2Website:before {
+.ico-abo4:before {
 	content: "\f168";
 }
-.ico-advantage3Billing:before {
+.ico-abo5:before {
 	content: "\f169";
 }
-.ico-badge:before {
+.ico-advantage1Logo:before {
 	content: "\f16a";
 }
-.ico-ticino_map:before {
+.ico-advantage2Website:before {
 	content: "\f16b";
 }
-.ico-tuttolina-smile:before {
+.ico-advantage3Billing:before {
 	content: "\f16c";
 }
-.ico-tuttolino-error:before {
+.ico-badge:before {
 	content: "\f16d";
 }
-.ico-tuttolino-family-sofa:before {
+.ico-ticino_map:before {
 	content: "\f16e";
 }
-.ico-tuttolino-family:before {
+.ico-tuttolina-smile:before {
 	content: "\f16f";
 }
-.ico-tuttolino-gay:before {
+.ico-tuttolino-error:before {
 	content: "\f170";
 }
-.ico-tuttolino-glasses:before {
+.ico-tuttolino-family-sofa:before {
 	content: "\f171";
 }
-.ico-tuttolino-hey:before {
+.ico-tuttolino-family:before {
 	content: "\f172";
 }
-.ico-tuttolino-intro-screens:before {
+.ico-tuttolino-gay:before {
 	content: "\f173";
 }
-.ico-tuttolino-sergi:before {
+.ico-tuttolino-glasses:before {
 	content: "\f174";
 }
-.ico-tuttolino-success:before {
+.ico-tuttolino-hey:before {
 	content: "\f175";
 }
-.ico-tuttolino-tablet:before {
+.ico-tuttolino-intro-screens:before {
 	content: "\f176";
 }
-.ico-ad_deleted_survey:before {
+.ico-tuttolino-sergi:before {
 	content: "\f177";
 }
-.ico-intro_screen_map:before {
+.ico-tuttolino-success:before {
 	content: "\f178";
 }
-.ico-intro_screen_savedsearches:before {
+.ico-tuttolino-tablet:before {
 	content: "\f179";
 }
-.ico-intro_screen_tags:before {
+.ico-ad_deleted_survey:before {
 	content: "\f17a";
 }
-.ico-pushNotifications:before {
+.ico-intro_screen_map:before {
 	content: "\f17b";
 }
-.ico-websiteIntro:before {
+.ico-intro_screen_savedsearches:before {
 	content: "\f17c";
 }
-.ico-myads-badge:before {
+.ico-intro_screen_tags:before {
 	content: "\f17d";
 }
-.ico-plus:before {
+.ico-pushNotifications:before {
 	content: "\f17e";
 }
-.ico-pro:before {
+.ico-websiteIntro:before {
 	content: "\f17f";
 }
-.ico-vi-badge:before {
+.ico-myads-badge:before {
 	content: "\f180";
+}
+.ico-plus:before {
+	content: "\f181";
+}
+.ico-pro:before {
+	content: "\f182";
+}
+.ico-vi-badge:before {
+	content: "\f183";
 }
