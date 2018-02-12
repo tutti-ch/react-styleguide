@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?6b7f8efa4fb0edcc1423011049ca0486?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?6b7f8efa4fb0edcc1423011049ca0486") format("woff2"),
-url("TuttiFont.woff?6b7f8efa4fb0edcc1423011049ca0486") format("woff");
+	src: url("TuttiFont.eot?971937fcaada3d63869e9093f609cf2d?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?971937fcaada3d63869e9093f609cf2d") format("woff2"),
+url("TuttiFont.woff?971937fcaada3d63869e9093f609cf2d") format("woff");
 }
 
 .ico {
@@ -397,15 +397,15 @@ url("TuttiFont.woff?6b7f8efa4fb0edcc1423011049ca0486") format("woff");
 .ico-websiteIntro:before {
 	content: "\f17f";
 }
-.ico-myads-badge:before {
+.ico-subscriptions-plus-light:before {
 	content: "\f180";
 }
-.ico-plus:before {
+.ico-subscriptions-plus-no_text:before {
 	content: "\f181";
 }
-.ico-pro:before {
+.ico-subscriptions-plus:before {
 	content: "\f182";
 }
-.ico-vi-badge:before {
+.ico-subscriptions-pro:before {
 	content: "\f183";
 }
