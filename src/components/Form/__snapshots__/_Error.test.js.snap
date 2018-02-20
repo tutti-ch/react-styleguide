@@ -23,7 +23,7 @@ exports[`(Component) Form.GenericError should match the snapshots 2`] = `
   >
     <Error>
       <div
-        className=""
+        className="errorMessage "
       >
         Hey
       </div>

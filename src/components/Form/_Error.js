@@ -34,6 +34,6 @@ export default class Error extends Component {
     }
 
     const errorClasses = classNames(className, classes.genericError);
-    return <div className={errorClasses}>{error}</div>;
+    return <div className={`errorMessage ${errorClasses}`}>{error}</div>;
   }
 }
