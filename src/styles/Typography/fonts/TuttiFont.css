@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?0226ba8ef67e5e58e0f95b8be22590bb?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?0226ba8ef67e5e58e0f95b8be22590bb") format("woff2"),
-url("TuttiFont.woff?0226ba8ef67e5e58e0f95b8be22590bb") format("woff");
+	src: url("TuttiFont.eot?b6535622cb3996e41daf314f1e6f56b2?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?b6535622cb3996e41daf314f1e6f56b2") format("woff2"),
+url("TuttiFont.woff?b6535622cb3996e41daf314f1e6f56b2") format("woff");
 }
 
 .ico {
@@ -349,66 +349,75 @@ url("TuttiFont.woff?0226ba8ef67e5e58e0f95b8be22590bb") format("woff");
 .ico-tuttolina-smile:before {
 	content: "\f16f";
 }
-.ico-tuttolino-error:before {
+.ico-tuttolino_holmes:before {
 	content: "\f170";
 }
-.ico-tuttolino-family-sofa:before {
+.ico-tuttolino-competitor:before {
 	content: "\f171";
 }
-.ico-tuttolino-family:before {
+.ico-tuttolino-error:before {
 	content: "\f172";
 }
-.ico-tuttolino-gay:before {
+.ico-tuttolino-family-sofa:before {
 	content: "\f173";
 }
-.ico-tuttolino-glasses:before {
+.ico-tuttolino-family:before {
 	content: "\f174";
 }
-.ico-tuttolino-hey:before {
+.ico-tuttolino-gay:before {
 	content: "\f175";
 }
-.ico-tuttolino-intro-screens:before {
+.ico-tuttolino-glasses:before {
 	content: "\f176";
 }
-.ico-tuttolino-sergi:before {
+.ico-tuttolino-hey:before {
 	content: "\f177";
 }
-.ico-tuttolino-success:before {
+.ico-tuttolino-intro-screens:before {
 	content: "\f178";
 }
-.ico-tuttolino-tablet:before {
+.ico-tuttolino-sergi:before {
 	content: "\f179";
 }
-.ico-ad_deleted_survey:before {
+.ico-tuttolino-success:before {
 	content: "\f17a";
 }
-.ico-intro_screen_map:before {
+.ico-tuttolino-tablet:before {
 	content: "\f17b";
 }
-.ico-intro_screen_savedsearches:before {
+.ico-tuttolino-tutti_fan-t:before {
 	content: "\f17c";
 }
-.ico-intro_screen_tags:before {
+.ico-ad_deleted_survey:before {
 	content: "\f17d";
 }
-.ico-pushNotifications:before {
+.ico-intro_screen_map:before {
 	content: "\f17e";
 }
-.ico-websiteIntro:before {
+.ico-intro_screen_savedsearches:before {
 	content: "\f17f";
 }
-.ico-subscriptions-plus-light:before {
+.ico-intro_screen_tags:before {
 	content: "\f180";
 }
-.ico-subscriptions-plus-no_text:before {
+.ico-pushNotifications:before {
 	content: "\f181";
 }
-.ico-subscriptions-plus:before {
+.ico-websiteIntro:before {
 	content: "\f182";
 }
-.ico-subscriptions-pro:before {
+.ico-subscriptions-plus-light:before {
 	content: "\f183";
 }
-.ico-logo-white:before {
+.ico-subscriptions-plus-no_text:before {
 	content: "\f184";
+}
+.ico-subscriptions-plus:before {
+	content: "\f185";
+}
+.ico-subscriptions-pro:before {
+	content: "\f186";
+}
+.ico-logo-white:before {
+	content: "\f187";
 }
