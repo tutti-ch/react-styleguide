@@ -1,4 +1,5 @@
 export Tuttolino404 from "./tuttolino-404.png"
+export TuttolinoCompetitor from "./tuttolino-competitor.svg"
 export TuttolinoError from "./tuttolino-error.svg"
 export TuttolinoErrorMobile from "./tuttolino-error-mobile.png"
 export TuttolinoFamily from "./tuttolino-family.svg"
