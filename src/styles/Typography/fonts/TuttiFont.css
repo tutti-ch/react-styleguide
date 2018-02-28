@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "TuttiFont";
-	src: url("TuttiFont.eot?b6535622cb3996e41daf314f1e6f56b2?#iefix") format("embedded-opentype"),
-url("TuttiFont.woff2?b6535622cb3996e41daf314f1e6f56b2") format("woff2"),
-url("TuttiFont.woff?b6535622cb3996e41daf314f1e6f56b2") format("woff");
+	src: url("TuttiFont.eot?bed187171c3a88113a87a328c11bd109?#iefix") format("embedded-opentype"),
+url("TuttiFont.woff2?bed187171c3a88113a87a328c11bd109") format("woff2"),
+url("TuttiFont.woff?bed187171c3a88113a87a328c11bd109") format("woff");
 }
 
 .ico {
@@ -349,28 +349,28 @@ url("TuttiFont.woff?b6535622cb3996e41daf314f1e6f56b2") format("woff");
 .ico-tuttolina-smile:before {
 	content: "\f16f";
 }
-.ico-tuttolino_holmes:before {
+.ico-tuttolino-competitor:before {
 	content: "\f170";
 }
-.ico-tuttolino-competitor:before {
+.ico-tuttolino-error:before {
 	content: "\f171";
 }
-.ico-tuttolino-error:before {
+.ico-tuttolino-family-sofa:before {
 	content: "\f172";
 }
-.ico-tuttolino-family-sofa:before {
+.ico-tuttolino-family:before {
 	content: "\f173";
 }
-.ico-tuttolino-family:before {
+.ico-tuttolino-gay:before {
 	content: "\f174";
 }
-.ico-tuttolino-gay:before {
+.ico-tuttolino-glasses:before {
 	content: "\f175";
 }
-.ico-tuttolino-glasses:before {
+.ico-tuttolino-hey:before {
 	content: "\f176";
 }
-.ico-tuttolino-hey:before {
+.ico-tuttolino-holmes:before {
 	content: "\f177";
 }
 .ico-tuttolino-intro-screens:before {
@@ -385,7 +385,7 @@ url("TuttiFont.woff?b6535622cb3996e41daf314f1e6f56b2") format("woff");
 .ico-tuttolino-tablet:before {
 	content: "\f17b";
 }
-.ico-tuttolino-tutti_fan-t:before {
+.ico-tuttolino-tutti_fan:before {
 	content: "\f17c";
 }
 .ico-ad_deleted_survey:before {
