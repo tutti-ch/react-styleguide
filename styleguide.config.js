@@ -94,7 +94,7 @@ module.exports = {
   require: [
     // Include our main scss file.
     path.join(__dirname, "src/styles/Typography/fonts/TuttiFont.css"),
-    path.join(__dirname, "src/styles/Typography/fonts/Nunito.scss"),
+    path.join(__dirname, "src/styles/Typography/fonts/_Nunito.scss"),
     path.join(__dirname, "src/index.scss"),
     path.join(__dirname, "src/normalize.scss")
   ]
