@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Logo.scss";
+import Image from  "../Image/Image";
+import logoPrint from "./assets/logo-fallback.svg";
 
 /* eslint-disable */
 const Logo = ({ className }) => (
@@ -28,6 +30,7 @@ const Logo = ({ className }) => (
         />
       </svg>
     </div>
+    <Image className={classes.logoPrint} src={logoPrint} alt="tutti.ch" />
   </div>
 );
 /* eslint-enable */

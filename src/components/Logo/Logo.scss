@@ -143,10 +143,22 @@ $heightCube: 0.65 * $height;
 - Uncomment spin-in in .cube once we get rid of platform
 */
 
+// Styles for print
+
+.logoPrint {
+  display: none!important;
+}
+
 @media print {
 
+  .logoPrint {
+    display: block!important;
+    width: 100%;
+    height: 100%;
+  }
+
   .logo {
-    background: url("./assets/logo-fallback.png")!important;
+    background: none;
     .cube-box,
     .font {
       display: none;
