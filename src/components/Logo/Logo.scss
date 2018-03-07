@@ -146,7 +146,7 @@ $heightCube: 0.65 * $height;
 @media print {
 
   .logo {
-    background: url("./assets/logo-fallback.png");
+    background: url("./assets/logo-fallback.png")!important;
     .cube-box,
     .font {
       display: none;
