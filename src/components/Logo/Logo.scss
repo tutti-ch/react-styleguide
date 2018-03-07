@@ -142,3 +142,14 @@ $heightCube: 0.65 * $height;
 - Make size of the logo a property
 - Uncomment spin-in in .cube once we get rid of platform
 */
+
+@media print {
+
+  .logo {
+    background: url("./assets/logo-fallback.png");
+    .cube-box,
+    .font {
+      display: none;
+    }
+  }
+}
