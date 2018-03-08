@@ -193,6 +193,7 @@ $inputHeight: $size-xxxl;
     border-radius: $size-xxxs / 2;
     border: 0 solid #010101;
     outline: none;
+    user-select: none;
 
     .label-text {
       display: inline-block;
