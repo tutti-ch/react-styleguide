@@ -380,13 +380,14 @@ export class Slider extends Component {
 
     const min = this.state.min;
     const max = this.state.max;
+    const target = this.target.getAttribute("data-name");
     let state;
 
-    if (delta < 0 && clientX < rect.left - mouseThreshold) {
+    if (target === "min" && delta < 0 && clientX < rect.left - mouseThreshold) {
       state = { min: { ...min, value: null, position: 0 } };
     }
 
-    if (delta > 0 && clientX > rect.right + mouseThreshold) {
+    if (target === "max" && delta > 0 && clientX > rect.right + mouseThreshold) {
       state = {
         max: { ...max, value: null, position: this.validateThumbPosition(100) }
       };

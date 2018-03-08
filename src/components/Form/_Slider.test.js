@@ -157,6 +157,8 @@ describe("(Component) Slider", () => {
     expect(inst.handleExtremes(-100, { left: 10, right: 900 }, 0)).toBe(false);
     expect(inst.handleExtremes(-100, { left: 10, right: 900 }, -1)).toBe(true);
 
+    inst.target.getAttribute = jest.fn().mockReturnValue("max")
+
     expect(inst.handleExtremes(100, { left: 10, right: 900 }, 910)).toBe(false);
     expect(inst.handleExtremes(100, { left: 10, right: 900 }, 911)).toBe(true);
     expect(inst.handleExtremes(100, { left: 10, right: 900 }, 50)).toBe(false);
