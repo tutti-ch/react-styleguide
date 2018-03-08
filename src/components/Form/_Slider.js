@@ -110,8 +110,15 @@ export class Slider extends Component {
    * @return {*}
    */
   static clientX(e) {
-    if (e.clientX) return e.clientX;
-    if (e.touches && e.touches[0]) return e.touches[0].clientX;
+    let clientX
+
+    if (e.clientX) clientX = e.clientX;
+    if (e.touches && e.touches[0]) clientX = e.touches[0].clientX;
+
+    // When the user goes out of the browser, clientX has a negative value.
+    // To overcome some weird bugs, always make sure that it stays positive.
+    // Also, FF returns NaN, so make sure that we always fallback to 0.
+    return Math.max(clientX, 0) || 0;
   }
 
   /**
