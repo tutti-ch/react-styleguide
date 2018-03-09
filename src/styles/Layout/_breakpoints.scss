@@ -83,3 +83,11 @@ $desktop: $wrapperAdvertisement;
     @content;
   }
 }
+
+// Small height media query
+
+@mixin short-device {
+  @media (max-height: $phone) {
+    @content;
+  }
+}
