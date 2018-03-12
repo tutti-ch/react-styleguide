@@ -6,15 +6,6 @@ import { Slider } from "./_Slider";
 describe("(Component) Slider", () => {
   test("[validate] should validate the props", () => {
     expect(() => Slider.validate({ name: "a", multiple: true })).toThrow(); // Should throw as it expects a name parameter.
-    expect(() =>
-      Slider.validate({ min: 50, max: 165, values: [20] })
-    ).toThrow(); // Should throw as min value is smaller than left extreme.
-    expect(() =>
-      Slider.validate({ max: 75, min: 0, values: [1, 76] })
-    ).toThrow(); //Should throw as max value is greater than right extreme.
-    expect(() =>
-      Slider.validate({ min: 15, max: 75, values: [18, 75] })
-    ).not.toThrow(); // Should NOT throw as max value is equal right extreme.
   });
 
   test("[componentDidMount] should register a root element", done => {

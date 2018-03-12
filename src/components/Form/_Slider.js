@@ -152,20 +152,9 @@ export class Slider extends Component {
       require(!props.name || Array.isArray(props.name), "[Slider]: Multiple thumbs require multiple names. Use an array with two values for the `name` prop."); // prettier-ignore
     }
 
-    if (props.min === "undefined" || props.max === "undefined") {
+    if (typeof props.min === "undefined" || typeof props.max === "undefined") {
       require(Array.isArray(props.range) && props.range.length);
     }
-
-    // Validate minimum and maximum value
-    const minValue = props.values[0];
-    const maxValue = props.values[1];
-    const minRange = typeof props.min === "undefined" ? props.range[0].value : props.min; // prettier-ignore
-    const maxRange = typeof props.max === "undefined" ? props.range[props.range.length - 1].value : props.max; // prettier-ignore
-    const minError = `[Slider]: Given minimum value is smaller than left extreme (${minValue}, ${minRange})` // prettier-ignore
-    const maxError = `[Slider]: Given maximum value is smaller than left extreme (${maxValue}, ${maxRange})` // prettier-ignore
-
-    require(typeof minValue === "undefined" || minValue === null || minValue >= minRange, minError); // prettier-ignore
-    require(typeof maxValue === "undefined" || maxValue === null || maxValue <= maxRange, maxError); // prettier-ignore
   }
 
   constructor(props) {
@@ -188,16 +177,20 @@ export class Slider extends Component {
     this.renderDesc = this.renderDesc.bind(this);
     this.notifyParent = this.notifyParent.bind(this);
 
+    // In case values are not null make sure that min is smaller than max
+    const minValue = Math.min(props.values[0], props.values[1]) || props.values[0]
+    const maxValue = Math.max(props.values[0], props.values[1]) || props.values[1]
+
     this.state = {
       min: {
-        range: this.getMinRange(),
+        range: this.getMinRange(), // Range is leftmost value
         input: Array.isArray(props.name) ? props.name[0] : props.name,
-        value: parseInt(props.values[0])
+        value: parseInt(minValue, 10) // Currently selected value
       },
       max: {
-        range: this.getMaxRange(),
+        range: this.getMaxRange(), // Range is the rightmost value
         input: Array.isArray(props.name) ? props.name[1] : props.name,
-        value: parseInt(props.values[1])
+        value: parseInt(maxValue, 10) // Currently selected value
       },
       prefix: Array.isArray(props.prefix)
         ? props.prefix
