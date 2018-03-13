@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import WithWrapper from "./_WithWrapper";
-import isEqual from "lodash.isequal";
 import get from "lodash.get";
 import classes from "./Form.scss";
 
@@ -242,29 +241,6 @@ export class Slider extends Component {
         ...this.state.max,
         input: Array.isArray(name) ? name[1] : name
       };
-    }
-
-    if (isEqual(values, this.props.values) === false) {
-      const minValue = values ? parseInt(values[0], 10) : undefined;
-      const maxValue = values ? parseInt(values[1], 10) : undefined;
-
-      if (this.refs.min) {
-        this.target = this.refs.min;
-        state.min = {
-          ...(state.min || this.state.min),
-          position: this.calculatePosition(minValue || this.getMinRange()),
-          value: minValue
-        };
-      }
-
-      if (this.refs.max) {
-        this.target = this.refs.max;
-        state.max = {
-          ...(state.max || this.state.max),
-          position: this.calculatePosition(maxValue || this.getMaxRange()),
-          value: maxValue
-        };
-      }
     }
 
     if (Object.keys(state).length) {

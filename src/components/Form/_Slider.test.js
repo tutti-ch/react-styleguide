@@ -394,13 +394,6 @@ describe("(Component) Slider", () => {
       max: { input: "new-name", range: 500, value: 450 },
       min: { input: "new-name", range: 100, value: 120 }
     });
-
-    inst.componentWillReceiveProps({ values: [130, 450] });
-
-    expect(spy).toHaveBeenCalledWith({
-      max: { input: undefined, range: 500, value: 450, position: 87.5 },
-      min: { input: undefined, range: 100, value: 130, position: 7.5 }
-    });
   });
 
   describe("values null", () => {
