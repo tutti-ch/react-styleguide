@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import WithWrapper from "./_WithWrapper";
+import isEqual from "lodash.isequal";
 import classes from "./Form.scss";
 
 export class Slider extends Component {
@@ -110,7 +111,7 @@ export class Slider extends Component {
    * @return {*}
    */
   static clientX(e) {
-    let clientX
+    let clientX;
 
     if (e.clientX) clientX = e.clientX;
     if (e.touches && e.touches[0]) clientX = e.touches[0].clientX;
@@ -178,8 +179,10 @@ export class Slider extends Component {
     this.notifyParent = this.notifyParent.bind(this);
 
     // In case values are not null make sure that min is smaller than max
-    const minValue = Math.min(props.values[0], props.values[1]) || props.values[0]
-    const maxValue = Math.max(props.values[0], props.values[1]) || props.values[1]
+    const minValue =
+      Math.min(props.values[0], props.values[1]) || props.values[0];
+    const maxValue =
+      Math.max(props.values[0], props.values[1]) || props.values[1];
 
     this.state = {
       min: {
@@ -226,7 +229,7 @@ export class Slider extends Component {
     });
   }
 
-  componentWillReceiveProps({ name }) {
+  componentWillReceiveProps({ name, values }) {
     const state = {};
 
     if (name !== this.props.name) {
@@ -238,6 +241,29 @@ export class Slider extends Component {
         ...this.state.max,
         input: Array.isArray(name) ? name[1] : name
       };
+    }
+
+    if (isEqual(values, this.props.values) === false) {
+      const minValue = values ? parseInt(values[0], 10) : undefined;
+      const maxValue = values ? parseInt(values[1], 10) : undefined;
+
+      if (this.refs.min) {
+        this.target = this.refs.min;
+        state.min = {
+          ...(state.min || this.state.min),
+          position: this.calculatePosition(minValue || this.getMinRange()),
+          value: minValue
+        };
+      }
+
+      if (this.refs.max) {
+        this.target = this.refs.max;
+        state.max = {
+          ...(state.max || this.state.max),
+          position: this.calculatePosition(maxValue || this.getMaxRange()),
+          value: maxValue
+        };
+      }
     }
 
     if (Object.keys(state).length) {
@@ -387,7 +413,11 @@ export class Slider extends Component {
       state = { min: { ...min, value: null, position: 0 } };
     }
 
-    if (target === "max" && delta > 0 && clientX > rect.right + mouseThreshold) {
+    if (
+      target === "max" &&
+      delta > 0 &&
+      clientX > rect.right + mouseThreshold
+    ) {
       state = {
         max: { ...max, value: null, position: this.validateThumbPosition(100) }
       };

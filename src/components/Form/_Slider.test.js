@@ -1,6 +1,6 @@
 /* global describe, test, expect, jest */
 import React from "react";
-import { mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 import { Slider } from "./_Slider";
 
 describe("(Component) Slider", () => {
@@ -148,7 +148,7 @@ describe("(Component) Slider", () => {
     expect(inst.handleExtremes(-100, { left: 10, right: 900 }, 0)).toBe(false);
     expect(inst.handleExtremes(-100, { left: 10, right: 900 }, -1)).toBe(true);
 
-    inst.target.getAttribute = jest.fn().mockReturnValue("max")
+    inst.target.getAttribute = jest.fn().mockReturnValue("max");
 
     expect(inst.handleExtremes(100, { left: 10, right: 900 }, 910)).toBe(false);
     expect(inst.handleExtremes(100, { left: 10, right: 900 }, 911)).toBe(true);
@@ -372,6 +372,28 @@ describe("(Component) Slider", () => {
       formValue: [120, 450],
       initialValue: 450,
       name: "test"
+    });
+  });
+
+  test("[componentWillReceiveProps] should set the state when name and/or values are changing", () => {
+    const comp = mount(
+      <Slider min={100} max={500} values={[120, 450]} name={["test", "test-max"]} multiple />
+    );
+    const inst = comp.instance();
+    const spy = jest.spyOn(inst, "setState");
+    inst.root = { offsetWidth: 540 }
+    inst.componentWillReceiveProps({ name: "new-name", values: [120, 450] });
+
+    expect(spy).toHaveBeenCalledWith({
+      max: { input: "new-name", range: 500, value: 450 },
+      min: { input: "new-name", range: 100, value: 120 }
+    });
+
+    inst.componentWillReceiveProps({ values: [130, 450]})
+
+    expect(spy).toHaveBeenCalledWith({
+      max: { input: undefined, range: 500, value: 450, position: 87.5 },
+      min: { input: undefined, range: 100, value: 130, position: 7.5 }
     });
   });
 
