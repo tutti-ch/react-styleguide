@@ -56,7 +56,11 @@ export class Input extends Component {
         mutations.forEach(mutation => {
           const target = mutation.target;
 
-          if (target.defaultValue && mutation.type === "attributes") {
+          if (
+            target.defaultValue &&
+            mutation.type === "attributes" &&
+            mutation.attributeName === "defaultValue"
+          ) {
             this.changed = true;
             this.setState({ value: target.defaultValue });
             this.notify();
