@@ -52,7 +52,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "0%",
           }
         }
         tabIndex={1}
@@ -77,7 +77,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "100%",
           }
         }
         tabIndex={1}
@@ -151,7 +151,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "0%",
           }
         }
         tabIndex={1}
@@ -176,7 +176,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "100%",
           }
         }
         tabIndex={1}
@@ -250,7 +250,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "0%",
           }
         }
         tabIndex={1}
@@ -275,7 +275,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for multi
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "100%",
           }
         }
         tabIndex={1}
@@ -340,7 +340,7 @@ exports[`(Component) Slider snapshots should create the right snapshot for singl
         onTouchStart={[Function]}
         style={
           Object {
-            "left": "undefined%",
+            "left": "0%",
           }
         }
         tabIndex={1}

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import WithWrapper from "./_WithWrapper";
 import isEqual from "lodash.isequal";
+import get from "lodash.get";
 import classes from "./Form.scss";
 
 export class Slider extends Component {
@@ -618,7 +619,12 @@ export class Slider extends Component {
     };
 
     const inputName = this.state[prop].input;
-    const position = this.state[prop].position;
+    const position =
+      this.state[prop].position ||
+      (prop === "max"
+        ? Slider.perc(get(this.refs, "max.offsetWidth"), get(this.root, "offsetWidth")) || 100
+        : 0);
+
     const styles = { left: `${position}%` };
 
     return [

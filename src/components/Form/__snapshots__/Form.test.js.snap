@@ -319,7 +319,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "0%",
                                   }
                                 }
                                 tabIndex={1}
@@ -344,7 +344,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "100%",
                                   }
                                 }
                                 tabIndex={1}
@@ -469,7 +469,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "0%",
                                   }
                                 }
                                 tabIndex={1}
@@ -494,7 +494,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "100%",
                                   }
                                 }
                                 tabIndex={1}
@@ -628,7 +628,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "0%",
                                   }
                                 }
                                 tabIndex={1}
@@ -803,7 +803,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "0%",
                                   }
                                 }
                                 tabIndex={1}
@@ -828,7 +828,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "100%",
                                   }
                                 }
                                 tabIndex={1}
@@ -990,7 +990,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "0%",
                                   }
                                 }
                                 tabIndex={1}
@@ -1015,7 +1015,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onTouchStart={[Function]}
                                 style={
                                   Object {
-                                    "left": "undefined%",
+                                    "left": "100%",
                                   }
                                 }
                                 tabIndex={1}
@@ -3536,7 +3536,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       onTouchStart={[Function]}
                                       style={
                                         Object {
-                                          "left": "undefined%",
+                                          "left": "0%",
                                         }
                                       }
                                       tabIndex={1}
@@ -3561,7 +3561,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       onTouchStart={[Function]}
                                       style={
                                         Object {
-                                          "left": "undefined%",
+                                          "left": "100%",
                                         }
                                       }
                                       tabIndex={1}

@@ -377,11 +377,17 @@ describe("(Component) Slider", () => {
 
   test("[componentWillReceiveProps] should set the state when name and/or values are changing", () => {
     const comp = mount(
-      <Slider min={100} max={500} values={[120, 450]} name={["test", "test-max"]} multiple />
+      <Slider
+        min={100}
+        max={500}
+        values={[120, 450]}
+        name={["test", "test-max"]}
+        multiple
+      />
     );
     const inst = comp.instance();
     const spy = jest.spyOn(inst, "setState");
-    inst.root = { offsetWidth: 540 }
+    inst.root = { offsetWidth: 540 };
     inst.componentWillReceiveProps({ name: "new-name", values: [120, 450] });
 
     expect(spy).toHaveBeenCalledWith({
@@ -389,7 +395,7 @@ describe("(Component) Slider", () => {
       min: { input: "new-name", range: 100, value: 120 }
     });
 
-    inst.componentWillReceiveProps({ values: [130, 450]})
+    inst.componentWillReceiveProps({ values: [130, 450] });
 
     expect(spy).toHaveBeenCalledWith({
       max: { input: undefined, range: 500, value: 450, position: 87.5 },
