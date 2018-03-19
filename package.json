@@ -12,9 +12,10 @@
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
+    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && npm run sprite && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
-    "prepush": "npm test"
+    "prepush": "npm test",
+    "sprite": "svg-sprite-generate -d src/styles/Icons/assets/canton -o src/styles/Icons/assets/canton/sprite.svg && svg-sprite-generate -d src/styles/Icons/assets/category -o src/styles/Icons/assets/category/sprite.svg"
   },
   "lint-staged": {
     "*.{js,json}": [
@@ -72,10 +73,11 @@
     "classnames": "^2.2.5",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
-    "save": "^2.3.1",
-    "susy": "^2.2.12",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-styleguidist": "^6.0.33"
+    "react-styleguidist": "^6.0.33",
+    "save": "^2.3.1",
+    "susy": "^2.2.12",
+    "svg-sprite-generator": "0.0.7"
   }
 }

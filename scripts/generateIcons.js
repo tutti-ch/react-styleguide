@@ -34,6 +34,7 @@ glob(src + "/**/*.svg", (err, files) => {
 
 // Support svg and png files.
 const extRegex = /\.(svg|png|jpg)$/;
+const spriteRegex = /canton|category/;
 
 const toCamelCase = str => {
   return (
@@ -48,11 +49,36 @@ const toCamelCase = str => {
 glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   let folders = {};
 
-  results.forEach(file => {
+  const fileInfo = file => {
+    const pieces = file.split("/");
+    const fname = pieces.pop();
+    const path = pieces.join("/") + "/index.js";
+
+    return { fname, path };
+  };
+
+  results.sort().forEach(file => {
+    if (spriteRegex.test(file)) {
+      const { fname, path } = fileInfo(file);
+
+      folders[path] = folders[path] || [
+        `import React from "react";`,
+        `import SVG from "./sprite.svg"`
+      ];
+      folders[path].push(
+        `export const ${toCamelCase(
+          fname
+        )} = <svg role="img" className="icon-svg"><use xlinkHref={\`\${SVG}#${fname.replace(
+          /\.svg$/,
+          ""
+        )}\`}/></svg>`
+      );
+      return;
+    }
+
+    // Do not match cantons/categories as we generate sprites for them.
     if (extRegex.test(file)) {
-      const pieces = file.split("/");
-      const fname = pieces.pop();
-      const path = pieces.join("/") + "/index.js";
+      const { fname, path } = fileInfo(file);
 
       folders[path] = folders[path] || [];
       folders[path].push(`export ${toCamelCase(fname)} from "./${fname}"`);
@@ -60,7 +86,7 @@ glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   });
 
   Object.keys(folders).forEach(file => {
-    fs.writeFile(file, folders[file].sort().join("\n"), err => {
+    fs.writeFile(file, folders[file].join("\n"), err => {
       if (err === null) {
         console.log("Created index file: " + file);
       }

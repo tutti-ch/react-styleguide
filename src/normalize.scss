@@ -482,3 +482,10 @@ h3 {
   margin: 0;
   color: $greyscale-60;
 }
+
+:global {
+  .icon-svg {
+    width: 36px;
+    height: 36px;
+  }
+}

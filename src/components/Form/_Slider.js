@@ -598,7 +598,10 @@ export class Slider extends Component {
     const position =
       this.state[prop].position ||
       (prop === "max"
-        ? Slider.perc(get(this.refs, "max.offsetWidth"), get(this.root, "offsetWidth")) || 100
+        ? Slider.perc(
+            get(this.refs, "max.offsetWidth"),
+            get(this.root, "offsetWidth")
+          ) || 100
         : 0);
 
     const styles = { left: `${position}%` };

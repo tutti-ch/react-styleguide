@@ -29,7 +29,11 @@ class Option extends Component {
     /**
      * The icon className.
      */
-    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+    icon: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.array,
+      PropTypes.node
+    ]),
 
     /**
      * The src of an img.
@@ -88,15 +92,11 @@ class Option extends Component {
     const {
       value,
       text,
-      icon,
       selected,
       highlighted,
       closeIcon,
       tickIcon
     } = this.props;
-    const isImage = !!(
-      icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)
-    ); // If either absolute url, or dataURI or url is an image
 
     const optClasses = classNames(
       {
@@ -107,19 +107,17 @@ class Option extends Component {
       classes.option
     );
 
+    let { icon } = this.props;
+
+    if (icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)) {
+      icon = <Image className={classes.icon} src={icon} />;
+    } else if (icon && icon.indexOf("ico") === 0) {
+      icon = <span className={classNames(classes.icon, icon)} />;
+    }
+
     return (
       <div onClick={this.select} className={optClasses} key={value}>
-        {icon &&
-          isImage === false && (
-            <span className={classNames(classes.icon, icon)} />
-          )}
-        {icon &&
-          isImage === true && (
-            /* istanbul ignore next */ <Image
-              className={classes.icon}
-              src={icon}
-            />
-          )}
+        {icon}
         <span className={classes.text}>{text}</span>
         {closeIcon && (
           <span
