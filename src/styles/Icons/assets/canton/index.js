@@ -1,6 +1,7 @@
 import React from "react";
 import SVG from "./sprite.svg"
 export const CantonAargau = <svg role="img" className="icon-svg"><use xlinkHref={`${SVG}#canton-aargau`}/></svg>
+export const CantonAll = <svg role="img" className="icon-svg"><use xlinkHref={`${SVG}#canton-all`}/></svg>
 export const CantonAppenzell = <svg role="img" className="icon-svg"><use xlinkHref={`${SVG}#canton-appenzell`}/></svg>
 export const CantonBasel = <svg role="img" className="icon-svg"><use xlinkHref={`${SVG}#canton-basel`}/></svg>
 export const CantonBern = <svg role="img" className="icon-svg"><use xlinkHref={`${SVG}#canton-bern`}/></svg>
