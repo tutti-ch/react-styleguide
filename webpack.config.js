@@ -13,7 +13,8 @@ const config = {
     react: "umd react",
     "react-dom": "umd react-dom",
     "lodash.get": "umd lodash.get",
-    "lodash.isequal": "umd lodash.isequal"
+    "lodash.isequal": "umd lodash.isequal",
+    "es6-promise": "umd es6-promise"
   },
 
   module: {
