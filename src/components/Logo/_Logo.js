@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Logo.scss";
-import Image from  "../Image/Image";
+import Image from "../Image/Image";
 import logoPrint from "./assets/logo-fallback.svg";
 
 /* eslint-disable */

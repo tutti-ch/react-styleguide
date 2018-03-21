@@ -3,7 +3,17 @@ const path = require("path");
 const config = {
   // The base directory for resolving the entry option
   resolve: {
-    modules: [path.resolve("./node_modules")]
+    modules: [path.resolve("./node_modules")],
+    alias: {
+      icons: path.resolve("./src/styles/Icons/assets")
+    }
+  },
+
+  externals: {
+    react: "umd react",
+    "react-dom": "umd react-dom",
+    "lodash.get": "umd lodash.get",
+    "lodash.isequal": "umd lodash.isequal"
   },
 
   module: {

@@ -19,7 +19,7 @@ const BoxCardWrapper = ({ className, children }) => (
 );
 
 BoxCardWrapper.propTypes = {
-  className: PropTypes.oneOf([
+  className: PropTypes.oneOfType([
     PropTypes.array,
     PropTypes.object,
     PropTypes.string

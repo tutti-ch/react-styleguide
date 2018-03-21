@@ -65,20 +65,14 @@ class Option extends Component {
     selected: false
   };
 
-  constructor(props) {
-    super(props);
-    this.select = this.select.bind(this);
-    this.close = this.close.bind(this);
-  }
-
-  select(e) {
+  select = e => {
     // istanbul ignore else
     if (typeof this.props.onClick === "function") {
       this.props.onClick(this.props, e);
     }
   }
 
-  close(e) {
+  close = e => {
     e.preventDefault();
     e.stopPropagation();
 
@@ -109,10 +103,12 @@ class Option extends Component {
 
     let { icon } = this.props;
 
-    if (icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)) {
-      icon = <Image className={classes.icon} src={icon} />;
-    } else if (icon && icon.indexOf("ico") === 0) {
-      icon = <span className={classNames(classes.icon, icon)} />;
+    if (typeof icon === "string") {
+      if (icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)) {
+        icon = <Image className={classes.icon} src={icon}/>;
+      } else if (icon && icon.indexOf("ico") === 0) {
+        icon = <span className={classNames(classes.icon, icon)}/>;
+      }
     }
 
     return (

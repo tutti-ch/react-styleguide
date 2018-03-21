@@ -50,7 +50,7 @@ export default class Icons extends Component {
     const icons = this.getIconList();
 
     return (
-      <BoxCardWrapper>
+      <BoxCardWrapper className={classes.wrapper}>
         {Object.keys(icons)
           .sort()
           .map((icon, index) => (

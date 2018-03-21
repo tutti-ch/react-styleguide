@@ -52,26 +52,35 @@ glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   const fileInfo = file => {
     const pieces = file.split("/");
     const fname = pieces.pop();
-    const path = pieces.join("/") + "/index.js";
+    const folder = pieces.pop();
+    const path = pieces.concat([folder]).join("/") + "/index.js";
 
-    return { fname, path };
+    return { fname, path, folder };
+  };
+
+  const viewbox = {
+    canton: `viewBox="0 0 35 35"`,
+    category: `viewBox="0 0 30 30"`
   };
 
   results.sort().forEach(file => {
     if (spriteRegex.test(file)) {
-      const { fname, path } = fileInfo(file);
+      const { fname, path, folder } = fileInfo(file);
+
+      // Do not export the sprite file.
+      if (fname === "sprite.svg") {
+        return;
+      }
 
       folders[path] = folders[path] || [
         `import React from "react";`,
         `import SVG from "./sprite.svg"`
       ];
+
       folders[path].push(
-        `export const ${toCamelCase(
-          fname
-        )} = <svg role="img" className="icon-svg"><use xlinkHref={\`\${SVG}#${fname.replace(
-          /\.svg$/,
-          ""
-        )}\`}/></svg>`
+        `export const ${toCamelCase(fname)} = <svg role="img" ${
+          viewbox[folder]
+        } className="svg-sprite"><use xlinkHref={\`\${SVG}#${fname.replace(/\.svg$/, "")}\`}/></svg>`
       );
       return;
     }

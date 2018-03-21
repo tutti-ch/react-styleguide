@@ -71,11 +71,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "lodash.get": "^4.4.2",
     "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-styleguidist": "^6.0.33",
+    "react-styleguidist": "^6.4.0",
     "save": "^2.3.1",
     "susy": "^2.2.12",
     "svg-sprite-generator": "0.0.7"
