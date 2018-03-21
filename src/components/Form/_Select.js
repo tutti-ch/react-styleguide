@@ -89,7 +89,9 @@ export class Select extends Component {
       options: options
         .filter(i => i)
         .map(i => ({ ...i, value: i.value.toString() })),
-      selected: selected.filter(i => typeof i !== "undefined").map(i => i.toString())
+      selected: selected
+        .filter(i => typeof i !== "undefined" && i !== null)
+        .map(i => i.toString())
     };
   }
 
