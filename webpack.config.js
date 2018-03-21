@@ -9,14 +9,6 @@ const config = {
     }
   },
 
-  externals: {
-    react: "umd react",
-    "react-dom": "umd react-dom",
-    "lodash.get": "umd lodash.get",
-    "lodash.isequal": "umd lodash.isequal",
-    "es6-promise": "umd es6-promise"
-  },
-
   module: {
     rules: [
       // Babel loader, will use your project’s .babelrc
