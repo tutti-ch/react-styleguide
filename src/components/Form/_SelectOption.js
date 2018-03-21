@@ -70,7 +70,7 @@ class Option extends Component {
     if (typeof this.props.onClick === "function") {
       this.props.onClick(this.props, e);
     }
-  }
+  };
 
   close = e => {
     e.preventDefault();
@@ -80,7 +80,7 @@ class Option extends Component {
     if (typeof this.props.onClose === "function") {
       this.props.onClose(this.props);
     }
-  }
+  };
 
   render() {
     const {
@@ -105,9 +105,9 @@ class Option extends Component {
 
     if (typeof icon === "string") {
       if (icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)) {
-        icon = <Image className={classes.icon} src={icon}/>;
+        icon = <Image className={classes.icon} src={icon} />;
       } else if (icon && icon.indexOf("ico") === 0) {
-        icon = <span className={classNames(classes.icon, icon)}/>;
+        icon = <span className={classNames(classes.icon, icon)} />;
       }
     }
 

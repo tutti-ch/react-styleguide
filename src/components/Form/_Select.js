@@ -78,17 +78,6 @@ export class Select extends Component {
   constructor(props) {
     super(props);
 
-    this.open = this.open.bind(this);
-    this.close = this.close.bind(this);
-    this.toggle = this.toggle.bind(this);
-    this.select = this.select.bind(this);
-    this.unselect = this.unselect.bind(this);
-    this.keyDown = this.keyDown.bind(this);
-    this.handleOnFocus = this.handleOnFocus.bind(this);
-    this.handleOnBlur = this.handleOnBlur.bind(this);
-    this.getSelectedOptions = this.getSelectedOptions.bind(this);
-    this.resetSelected = this.resetSelected.bind(this);
-
     let { sort, options, selected, multiple } = props;
 
     options = sort ? this.sortOptions(options) : options;
@@ -100,7 +89,7 @@ export class Select extends Component {
       options: options
         .filter(i => i)
         .map(i => ({ ...i, value: i.value.toString() })),
-      selected: selected.filter(i => i).map(i => i.toString())
+      selected: selected.filter(i => typeof i !== "undefined").map(i => i.toString())
     };
   }
 
@@ -141,7 +130,7 @@ export class Select extends Component {
    *
    * @memberof Select
    */
-  handleArrowDown() {
+  handleArrowDown = () => {
     let { highlighted } = this.state;
     const next = highlighted + 1;
 
@@ -153,14 +142,14 @@ export class Select extends Component {
     this.setState({ highlighted: next }, () => {
       this.optionsDiv.scrollTop = this.optionsDiv.children[next].offsetTop;
     });
-  }
+  };
 
   /**
    * Gets fired when user presses up key
    *
    * @memberof Select
    */
-  handleArrowUp() {
+  handleArrowUp = () => {
     let { highlighted } = this.state;
     const prev = highlighted - 1;
 
@@ -172,14 +161,14 @@ export class Select extends Component {
     this.setState({ highlighted: prev }, () => {
       this.optionsDiv.scrollTop = this.optionsDiv.children[prev].offsetTop;
     });
-  }
+  };
 
   /**
    * Handle keypresses when a dropdown is focused
    *
    * @memberof Select
    */
-  keyDown(event) {
+  keyDown = event => {
     const { highlighted, isOpen } = this.state;
 
     if (
@@ -209,12 +198,12 @@ export class Select extends Component {
         event.preventDefault();
         return this.close();
     }
-  }
+  };
 
   /**
    * Display the options.
    */
-  open() {
+  open = () => {
     if (this.props.disabled) {
       return;
     }
@@ -222,23 +211,23 @@ export class Select extends Component {
     this.setState({
       isOpen: true
     });
-  }
+  };
 
-  close() {
+  close = () => {
     if (this.state.isOpen) {
       this.setState({
         isOpen: false
       });
     }
-  }
+  };
 
-  toggle() {
+  toggle = () => {
     if (this.state.isOpen) {
       this.close();
     } else {
       this.open();
     }
-  }
+  };
 
   /**
    * Find the index by its value.
@@ -247,7 +236,7 @@ export class Select extends Component {
    * @param options
    * @return {number}
    */
-  findIndexByValue(value, options = null) {
+  findIndexByValue = (value, options = null) => {
     options = options || this.props.options;
 
     if (value) {
@@ -259,7 +248,7 @@ export class Select extends Component {
     }
 
     return -1;
-  }
+  };
 
   /**
    * Select and highlight the given item.
@@ -267,7 +256,7 @@ export class Select extends Component {
    * @param value
    * @param {*} event
    */
-  select({ value }, event) {
+  select = ({ value }, event) => {
     const { multiple, name } = this.props;
 
     let selected = [value];
@@ -300,14 +289,14 @@ export class Select extends Component {
         }
       }
     );
-  }
+  };
 
   /**
    * Unselect the given value.
    *
    * @param value
    */
-  unselect({ value }) {
+  unselect = ({ value }) => {
     const selected = this.state.selected.slice(0);
     const index = selected.indexOf(value);
 
@@ -323,7 +312,7 @@ export class Select extends Component {
         }
       });
     }
-  }
+  };
 
   /**
    * Sort the given options in alphanumeric order.
@@ -331,7 +320,7 @@ export class Select extends Component {
    * @param options
    * @return {*|Array.<T>|void}
    */
-  sortOptions(options) {
+  sortOptions = options => {
     return options.sort((a, b) => {
       const nameA = a.text.toUpperCase();
       const nameB = b.text.toUpperCase();
@@ -343,34 +332,34 @@ export class Select extends Component {
       // istanbul ignore next
       return 0;
     });
-  }
+  };
 
   /**
    * Attach an event handler to the document to catch the key strokes.
    */
-  handleOnFocus() {
+  handleOnFocus = () => {
     // istanbul ignore else
     if (typeof document !== "undefined") {
       document.addEventListener("keydown", this.keyDown);
     }
-  }
+  };
 
   /**
    * Detach the keydown event handler from the document.
    */
-  handleOnBlur() {
+  handleOnBlur = () => {
     // istanbul ignore else
     if (typeof document !== "undefined") {
       document.removeEventListener("keydown", this.keyDown);
     }
-  }
+  };
 
   /**
    * Return the selected option, or the placeholder if provided.
    *
    * @return {*}
    */
-  getSelectedOptions() {
+  getSelectedOptions = () => {
     const { placeholder } = this.props;
     const { options, selected } = this.state;
     const selectedOpts = options.filter(o => selected.indexOf(o.value) > -1);
@@ -380,12 +369,12 @@ export class Select extends Component {
     }
 
     return selectedOpts;
-  }
+  };
 
   /**
    * Reset selected values.
    */
-  resetSelected() {
+  resetSelected = () => {
     this.setState({ selected: [], highlighted: -1 }, () => {
       const { onChange, name, selected } = this.props;
 
@@ -396,7 +385,7 @@ export class Select extends Component {
         });
       }
     });
-  }
+  };
 
   render() {
     const { disabled, placeholder, multiple, name } = this.props;
