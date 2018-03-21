@@ -2,8 +2,10 @@ const src = __dirname + "/../src/styles";
 const fs = require("fs");
 const glob = require("glob");
 const WebfontsGenerator = require("webfonts-generator");
+const SpriteGenerator = require("svg-sprite-generator");
 
 const ignoreFolder = /(canton|category|fonts)\//;
+const spriteFolder = /canton|category|social_media/;
 
 // Normalize svg files - they might be broken as svg editors
 // tend to insert their own attributes, which might break the files.
@@ -34,7 +36,6 @@ glob(src + "/**/*.svg", (err, files) => {
 
 // Support svg and png files.
 const extRegex = /\.(svg|png|jpg)$/;
-const spriteRegex = /canton|category/;
 
 const toCamelCase = str => {
   return (
@@ -46,41 +47,62 @@ const toCamelCase = str => {
   );
 };
 
+// Remove previous sprites.
+const spriteFolders = [
+  src + "/Icons/assets/canton",
+  src + "/Icons/assets/category",
+  src + "/Icons/assets/social_media",
+]
+
+spriteFolders.forEach(folder => {
+  const sprite = folder + "/_sprite.svg";
+  if (fs.existsSync(sprite)) {
+    fs.unlinkSync(sprite);
+  }
+});
+
 glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   let folders = {};
 
   const fileInfo = file => {
     const pieces = file.split("/");
     const fname = pieces.pop();
-    const folder = pieces.pop();
-    const path = pieces.concat([folder]).join("/") + "/index.js";
+    const path = pieces.join("/") + "/index.js";
 
-    return { fname, path, folder };
+    return { fname, path };
   };
 
-  const viewbox = {
-    canton: `viewBox="0 0 35 35"`,
-    category: `viewBox="0 0 30 30"`
+  const getViewBox = file => {
+    const content = fs.readFileSync(file, "utf8");
+    const width = content.match(/width=["'](\d+)/);
+    const height = content.match(/height=["'](\d+)/);
+
+    if (!width || !height) {
+      const viewbox = content.match(/viewBox=['"][\s\d]+['"]/);
+      return viewbox ? viewbox[0] : "";
+    }
+
+    return `viewBox="0 0 ${width[1]} ${height[1]}"`;
   };
 
   results.sort().forEach(file => {
-    if (spriteRegex.test(file)) {
-      const { fname, path, folder } = fileInfo(file);
-
-      // Do not export the sprite file.
-      if (fname === "sprite.svg") {
-        return;
-      }
+    if (spriteFolder.test(file)) {
+      const { fname, path } = fileInfo(file);
 
       folders[path] = folders[path] || [
         `import React from "react";`,
-        `import SVG from "./sprite.svg"`
+        `import SVG from "./_sprite.svg"`
       ];
+
+      const viewbox = getViewBox(file);
 
       folders[path].push(
         `export const ${toCamelCase(fname)} = <svg role="img" ${
-          viewbox[folder]
-        } className="svg-sprite"><use xlinkHref={\`\${SVG}#${fname.replace(/\.svg$/, "")}\`}/></svg>`
+          viewbox
+        } className="svg-sprite"><use xlinkHref={\`\${SVG}#${fname.replace(
+          /\.svg$/,
+          ""
+        )}\`}/></svg>`
       );
       return;
     }
@@ -101,4 +123,25 @@ glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
       }
     });
   });
+});
+
+const callback = (err, stdout, stderr) => {
+  console.log(`stdout: ${stdout}`);
+  console.log(`stderr: ${stderr}`);
+  if (err !== null) {
+    console.log(`exec error: ${err}`);
+  }
+}
+
+// Finally re-add sprite.svgs
+spriteFolders.forEach(folder => {
+  const sprite = `${folder}/_sprite.svg`
+  process.argv = [process.argv[0], "-d", folder, "-o", sprite];
+  glob(folder + "/*.svg", (err, files) => {
+    SpriteGenerator.spriteFromFiles(files).then(file => {
+      console.log(sprite)
+      fs.writeFileSync(sprite, file)
+    })
+  })
+  // exec(`npm run svg-sprite-generate -d ${folder} -o ${sprite}`, callback);
 });

@@ -12,10 +12,9 @@
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && npm run sprite && node ./scripts/generateIcons.js",
+    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
-    "prepush": "npm test",
-    "sprite": "svg-sprite-generate -d src/styles/Icons/assets/canton -o src/styles/Icons/assets/canton/sprite.svg && svg-sprite-generate -d src/styles/Icons/assets/category -o src/styles/Icons/assets/category/sprite.svg"
+    "prepush": "npm test"
   },
   "lint-staged": {
     "*.{js,json}": [

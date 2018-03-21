@@ -1,5 +1,5 @@
 import React from "react";
-import SVG from "./sprite.svg"
+import SVG from "./_sprite.svg"
 export const Antiquitaten = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#antiquitaten`}/></svg>
 export const Baby = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#baby`}/></svg>
 export const Buecher = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#buecher`}/></svg>
