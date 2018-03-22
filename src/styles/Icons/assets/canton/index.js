@@ -1,27 +1,27 @@
 import React from "react";
-import SVG from "./_sprite.svg"
-export const CantonAargau = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-aargau`}/></svg>
-export const CantonAll = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-all`}/></svg>
-export const CantonAppenzell = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-appenzell`}/></svg>
-export const CantonBasel = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-basel`}/></svg>
-export const CantonBern = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-bern`}/></svg>
-export const CantonFreiburg = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-freiburg`}/></svg>
-export const CantonGenf = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-genf`}/></svg>
-export const CantonGlarus = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-glarus`}/></svg>
-export const CantonGraubunden = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-graubunden`}/></svg>
-export const CantonJura = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-jura`}/></svg>
-export const CantonLiechtenstein = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-liechtenstein`}/></svg>
-export const CantonLuzern = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-luzern`}/></svg>
-export const CantonNeuenburg = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-neuenburg`}/></svg>
-export const CantonNiedobwalden = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-niedobwalden`}/></svg>
-export const CantonSchaffhausen = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-schaffhausen`}/></svg>
-export const CantonSchwyz = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-schwyz`}/></svg>
-export const CantonSolothurn = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-solothurn`}/></svg>
-export const CantonStgallen = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-stgallen`}/></svg>
-export const CantonTessin = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-tessin`}/></svg>
-export const CantonThurgau = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-thurgau`}/></svg>
-export const CantonUri = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-uri`}/></svg>
-export const CantonWaadt = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-waadt`}/></svg>
-export const CantonWallis = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-wallis`}/></svg>
-export const CantonZug = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-zug`}/></svg>
-export const CantonZurich = <svg role="img" viewBox="0 0 35 35" className="svg-sprite"><use xlinkHref={`${SVG}#canton-zurich`}/></svg>
+import Sprite from "../../_Sprite";
+export const CantonAargau = <Sprite viewBox="0 0 35 35" id="canton-aargau"/>
+export const CantonAll = <Sprite viewBox="0 0 35 35" id="canton-all"/>
+export const CantonAppenzell = <Sprite viewBox="0 0 35 35" id="canton-appenzell"/>
+export const CantonBasel = <Sprite viewBox="0 0 35 35" id="canton-basel"/>
+export const CantonBern = <Sprite viewBox="0 0 35 35" id="canton-bern"/>
+export const CantonFreiburg = <Sprite viewBox="0 0 35 35" id="canton-freiburg"/>
+export const CantonGenf = <Sprite viewBox="0 0 35 35" id="canton-genf"/>
+export const CantonGlarus = <Sprite viewBox="0 0 35 35" id="canton-glarus"/>
+export const CantonGraubunden = <Sprite viewBox="0 0 35 35" id="canton-graubunden"/>
+export const CantonJura = <Sprite viewBox="0 0 35 35" id="canton-jura"/>
+export const CantonLiechtenstein = <Sprite viewBox="0 0 35 35" id="canton-liechtenstein"/>
+export const CantonLuzern = <Sprite viewBox="0 0 35 35" id="canton-luzern"/>
+export const CantonNeuenburg = <Sprite viewBox="0 0 35 35" id="canton-neuenburg"/>
+export const CantonNiedobwalden = <Sprite viewBox="0 0 35 35" id="canton-niedobwalden"/>
+export const CantonSchaffhausen = <Sprite viewBox="0 0 35 35" id="canton-schaffhausen"/>
+export const CantonSchwyz = <Sprite viewBox="0 0 35 35" id="canton-schwyz"/>
+export const CantonSolothurn = <Sprite viewBox="0 0 35 35" id="canton-solothurn"/>
+export const CantonStgallen = <Sprite viewBox="0 0 35 35" id="canton-stgallen"/>
+export const CantonTessin = <Sprite viewBox="0 0 35 35" id="canton-tessin"/>
+export const CantonThurgau = <Sprite viewBox="0 0 35 35" id="canton-thurgau"/>
+export const CantonUri = <Sprite viewBox="0 0 35 35" id="canton-uri"/>
+export const CantonWaadt = <Sprite viewBox="0 0 35 35" id="canton-waadt"/>
+export const CantonWallis = <Sprite viewBox="0 0 35 35" id="canton-wallis"/>
+export const CantonZug = <Sprite viewBox="0 0 35 35" id="canton-zug"/>
+export const CantonZurich = <Sprite viewBox="0 0 35 35" id="canton-zurich"/>

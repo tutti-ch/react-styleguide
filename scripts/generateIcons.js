@@ -1,37 +1,21 @@
 const src = __dirname + "/../src/styles";
 const fs = require("fs");
 const glob = require("glob");
-const WebfontsGenerator = require("webfonts-generator");
 const SpriteGenerator = require("svg-sprite-generator");
 
-const ignoreFolder = /(canton|category|fonts)\//;
-const spriteFolder = /canton|category|social_media/;
+const ignoreFolder = /(canton|category|fonts|_sprite)\//;
+const spriteFolder = /Icons\/assets/;
 
-// Normalize svg files - they might be broken as svg editors
-// tend to insert their own attributes, which might break the files.
-glob(src + "/**/*.svg", (err, files) => {
-  files = files.filter(f => !f.match(ignoreFolder));
+// Remove previous sprites.
+const spriteFolders = [src + "/Icons/assets"];
 
-  WebfontsGenerator(
-    {
-      files,
-      fontName: "TuttiFont",
-      css: true,
-      cddDest: src + "/styles/Typography/fonts",
-      dest: src + "/Typography/fonts",
-      templateOptions: {
-        classPrefix: "ico-",
-        baseSelector: ".ico"
-      }
-    },
-    (error, result) => {
-      if (error) {
-        console.log("Failed while generating icons!", error);
-      } else {
-        console.log("Generated fonts!");
-      }
-    }
-  );
+spriteFolders.forEach(folder => {
+  const sprite = folder + "/_sprite.svg";
+  if (fs.existsSync(sprite)) {
+    fs.unlinkSync(sprite);
+  } else {
+    console.log("Can't find sprite: " + sprite);
+  }
 });
 
 // Support svg and png files.
@@ -46,20 +30,6 @@ const toCamelCase = str => {
       .replace(extRegex, "")
   );
 };
-
-// Remove previous sprites.
-const spriteFolders = [
-  src + "/Icons/assets/canton",
-  src + "/Icons/assets/category",
-  src + "/Icons/assets/social_media",
-]
-
-spriteFolders.forEach(folder => {
-  const sprite = folder + "/_sprite.svg";
-  if (fs.existsSync(sprite)) {
-    fs.unlinkSync(sprite);
-  }
-});
 
 glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   let folders = {};
@@ -78,11 +48,11 @@ glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
     const height = content.match(/height=["'](\d+)/);
 
     if (!width || !height) {
-      const viewbox = content.match(/viewBox=['"][\s\d]+['"]/);
-      return viewbox ? viewbox[0] : "";
+      const viewbox = content.match(/viewBox=['"]([\s\d\.]+)['"]/);
+      return viewbox ? viewbox[1] : "";
     }
 
-    return `viewBox="0 0 ${width[1]} ${height[1]}"`;
+    return `0 0 ${width[1]} ${height[1]}`;
   };
 
   results.sort().forEach(file => {
@@ -91,20 +61,16 @@ glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
 
       folders[path] = folders[path] || [
         `import React from "react";`,
-        `import SVG from "./_sprite.svg"`
+        `import Sprite from "../../_Sprite";`
       ];
 
       const viewbox = getViewBox(file);
+      const id = fname.replace(/\.svg$/, "");
+      const sprite = `<Sprite viewBox="${viewbox}" id="${id}"/>`;
 
-      folders[path].push(
-        `export const ${toCamelCase(fname)} = <svg role="img" ${
-          viewbox
-        } className="svg-sprite"><use xlinkHref={\`\${SVG}#${fname.replace(
-          /\.svg$/,
-          ""
-        )}\`}/></svg>`
+      return folders[path].push(
+        `export const ${toCamelCase(fname)} = ${sprite}`
       );
-      return;
     }
 
     // Do not match cantons/categories as we generate sprites for them.
@@ -125,23 +91,13 @@ glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
   });
 });
 
-const callback = (err, stdout, stderr) => {
-  console.log(`stdout: ${stdout}`);
-  console.log(`stderr: ${stderr}`);
-  if (err !== null) {
-    console.log(`exec error: ${err}`);
-  }
-}
-
 // Finally re-add sprite.svgs
 spriteFolders.forEach(folder => {
-  const sprite = `${folder}/_sprite.svg`
-  process.argv = [process.argv[0], "-d", folder, "-o", sprite];
-  glob(folder + "/*.svg", (err, files) => {
+  const sprite = `${folder}/_sprite.svg`;
+  glob(folder + "/**/*.svg", (err, files) => {
     SpriteGenerator.spriteFromFiles(files).then(file => {
-      console.log(sprite)
-      fs.writeFileSync(sprite, file)
-    })
-  })
-  // exec(`npm run svg-sprite-generate -d ${folder} -o ${sprite}`, callback);
+      console.log(sprite);
+      fs.writeFileSync(sprite, file);
+    });
+  });
 });

@@ -12,7 +12,7 @@
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "icons": "find src/styles -type f ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
+    "icons": "find src/styles -type f ! -name '_sprite.svg' ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
@@ -65,7 +65,6 @@
     "stylelint": "^8.2.0",
     "svgo": "^1.0.3",
     "url-loader": "^0.6.2",
-    "webfonts-generator": "^0.4.0",
     "webpack": "^3.8.1"
   },
   "dependencies": {

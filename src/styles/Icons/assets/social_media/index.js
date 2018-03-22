@@ -1,14 +1,14 @@
 import React from "react";
-import SVG from "./_sprite.svg"
-export const Facebook = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#facebook`}/></svg>
-export const GooglePlus = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#google-plus`}/></svg>
-export const Instagram = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#instagram`}/></svg>
-export const ShareFacebook = <svg role="img" viewBox="0 0 50 50" className="svg-sprite"><use xlinkHref={`${SVG}#share-facebook`}/></svg>
-export const ShareMessenger = <svg role="img" viewBox="0 0 50 50" className="svg-sprite"><use xlinkHref={`${SVG}#share-messenger`}/></svg>
-export const ShareWhatsapp = <svg role="img" viewBox="0 0 50 50" className="svg-sprite"><use xlinkHref={`${SVG}#share-whatsapp`}/></svg>
-export const SocialFacebook = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#social-facebook`}/></svg>
-export const SocialGplus = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#social-gplus`}/></svg>
-export const SocialInstagram = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#social-instagram`}/></svg>
-export const SocialRss = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#social-rss`}/></svg>
-export const SocialTwitter = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#social-twitter`}/></svg>
-export const SocialYoutube = <svg role="img" viewBox="0 0 30 30" className="svg-sprite"><use xlinkHref={`${SVG}#social-youtube`}/></svg>
+import Sprite from "../../_Sprite";
+export const Facebook = <Sprite viewBox="0 0 30 30" id="facebook"/>
+export const GooglePlus = <Sprite viewBox="0 0 30 30" id="google-plus"/>
+export const Instagram = <Sprite viewBox="0 0 30 30" id="instagram"/>
+export const ShareFacebook = <Sprite viewBox="0 0 50 50" id="share-facebook"/>
+export const ShareMessenger = <Sprite viewBox="0 0 50 50" id="share-messenger"/>
+export const ShareWhatsapp = <Sprite viewBox="0 0 50 50" id="share-whatsapp"/>
+export const SocialFacebook = <Sprite viewBox="0 0 30 30" id="social-facebook"/>
+export const SocialGplus = <Sprite viewBox="0 0 30 30" id="social-gplus"/>
+export const SocialInstagram = <Sprite viewBox="0 0 30 30" id="social-instagram"/>
+export const SocialRss = <Sprite viewBox="0 0 30 30" id="social-rss"/>
+export const SocialTwitter = <Sprite viewBox="0 0 30 30" id="social-twitter"/>
+export const SocialYoutube = <Sprite viewBox="0 0 30 30" id="social-youtube"/>
