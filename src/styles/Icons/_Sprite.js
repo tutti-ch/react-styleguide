@@ -17,7 +17,7 @@ export default class Sprite extends React.Component {
   req = new XMLHttpRequest();
 
   componentWillMount() {
-    if (Sprite.loaded) {
+    if (Sprite.loaded || typeof XMLHttpRequest === "undefined") {
       return;
     }
 
