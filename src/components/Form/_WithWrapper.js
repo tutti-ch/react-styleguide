@@ -120,9 +120,18 @@ export default (WrappedComponent, mergeProps = {}) => {
     componentWillReceiveProps(nextProps, context) {
       const newValue = WithWrapper.getNormalizedValue(nextProps);
       const oldValue = WithWrapper.getNormalizedValue(this.props);
+      const state = {};
 
       if (newValue !== oldValue) {
-        this.setState({ formValue: newValue });
+        state.formValue = newValue;
+      }
+
+      if (nextProps.error !== this.props.error) {
+        state.error = nextProps.error;
+      }
+
+      if (Object.keys(state).length) {
+        this.setState(state);
       }
 
       // Some components (e.g. Slider) allow name as an Array. For this reason
