@@ -28,6 +28,7 @@ export default class Sprite extends React.Component {
     this.req.onload = () => {
       const div = document.createElement("div");
       div.innerHTML = this.req.responseText;
+      div.style.display = "none";
       document.body.insertBefore(div, document.body.childNodes[0]);
       this.setState({ ready: true });
     };
