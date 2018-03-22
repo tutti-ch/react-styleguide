@@ -14,6 +14,8 @@ export default class Sprite extends React.Component {
     ready: Sprite.loaded
   };
 
+  req = new XMLHttpRequest();
+
   componentWillMount() {
     if (Sprite.loaded) {
       return;
@@ -21,12 +23,11 @@ export default class Sprite extends React.Component {
 
     Sprite.loaded = true;
 
-    const req = new XMLHttpRequest();
-    req.open("GET", SVG, true);
-    req.send();
-    req.onload = () => {
+    this.req.open("GET", SVG, true);
+    this.req.send();
+    this.req.onload = () => {
       const div = document.createElement("div");
-      div.innerHTML = req.responseText;
+      div.innerHTML = this.req.responseText;
       document.body.insertBefore(div, document.body.childNodes[0]);
       this.setState({ ready: true });
     };
