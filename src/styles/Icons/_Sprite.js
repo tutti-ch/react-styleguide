@@ -5,6 +5,7 @@ import s4e from "svg4everybody";
 
 export default class Sprite extends React.Component {
   static loaded = false;
+  static loading = [];
 
   static propTypes = {
     id: PropTypes.string,
@@ -18,11 +19,11 @@ export default class Sprite extends React.Component {
   req = typeof XMLHttpRequest !== "undefined" && new XMLHttpRequest();
 
   componentWillMount() {
-    if (Sprite.loaded || !this.req) {
+    Sprite.loading.push(this);
+
+    if (Sprite.loading.length > 1 || !this.req) {
       return;
     }
-
-    Sprite.loaded = true;
 
     this.req.open("GET", SVG, true);
     this.req.send();
@@ -32,6 +33,8 @@ export default class Sprite extends React.Component {
       div.style.display = "none";
       document.body.insertBefore(div, document.body.childNodes[0]);
       this.setState({ ready: true }, s4e);
+      Sprite.loaded = true;
+      Sprite.loading.forEach(c => c.setState({ ready: true }))
     };
   }
 
@@ -42,7 +45,7 @@ export default class Sprite extends React.Component {
     if (!ready) {
       return (
         // Placeholder
-        <svg viewBox={viewBox} className={"svg-sprite"}>
+        <svg viewBox="0 0 35 35" className={"svg-placeholder"}>
           <path
             fill="#fff"
             d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"

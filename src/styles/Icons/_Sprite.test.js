@@ -12,6 +12,8 @@ describe("(Components) _Sprite", () => {
 
   beforeEach(() => {
     global.XMLHttpRequest = mockXML;
+    Sprite.loaded = false;
+    Sprite.loading = [];
   });
 
   afterEach(() => {
@@ -21,7 +23,7 @@ describe("(Components) _Sprite", () => {
   test("should return null when the Sprite is not loaded", () => {
     const comp = mount(<Sprite viewBox={"0 0 25 25"} id={"some-id"} />);
     expect(comp.html()).toBe(
-      `<svg viewBox="0 0 25 25" class="svg-sprite"><path fill="#fff" d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"></path><path d="M17.5 0C7.8 0 0 7.8 0 17.5S7.8 35 17.5 35 35 27.2 35 17.5 27.2 0 17.5 0z" fill="#e5e5e5"></path></svg>`
+      `<svg viewBox="0 0 35 35" class="svg-placeholder"><path fill="#fff" d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"></path><path d="M17.5 0C7.8 0 0 7.8 0 17.5S7.8 35 17.5 35 35 27.2 35 17.5 27.2 0 17.5 0z" fill="#e5e5e5"></path></svg>`
     );
   });
 
@@ -45,6 +47,7 @@ describe("(Components) _Sprite", () => {
     inst.componentWillMount();
     expect(inst.req.open).not.toHaveBeenCalled();
     Sprite.loaded = false;
+    Sprite.loading = [];
     inst.componentWillMount();
     expect(inst.req.open).toHaveBeenCalledWith("GET", "mockimage", true);
     expect(inst.req.send).toHaveBeenCalled();
