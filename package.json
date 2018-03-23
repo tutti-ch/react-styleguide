@@ -1,6 +1,6 @@
 {
   "name": "tutti-ch-styleguide",
-  "version": "1.4.83",
+  "version": "1.4.84",
   "description": "React-based styleguide for tutti.ch",
   "main": "src/index.js",
   "scripts": {
