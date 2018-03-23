@@ -20,7 +20,7 @@ describe("(Components) _Sprite", () => {
 
   test("should return null when the Sprite is not loaded", () => {
     const comp = mount(<Sprite viewBox={"0 0 25 25"} id={"some-id"} />);
-    expect(comp.html()).toBe(null);
+    expect(comp.html()).toBe("<svg></svg>");
   });
 
   test("should return the svg when the Sprite is loaded", () => {

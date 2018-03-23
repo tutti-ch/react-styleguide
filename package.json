@@ -78,6 +78,7 @@
     "react-styleguidist": "^6.4.0",
     "save": "^2.3.1",
     "susy": "^2.2.12",
-    "svg-sprite-generator": "0.0.7"
+    "svg-sprite-generator": "0.0.7",
+    "svg4everybody": "^2.1.9"
   }
 }
