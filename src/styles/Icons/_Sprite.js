@@ -40,7 +40,19 @@ export default class Sprite extends React.Component {
     const { ready } = this.state;
 
     if (!ready) {
-      return <svg viewBox={viewBox} className={"svg-sprite"}/>;
+      return (
+        // Placeholder
+        <svg viewBox={viewBox} className={"svg-sprite"}>
+          <path
+            fill="#fff"
+            d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"
+          />
+          <path
+            d="M17.5 0C7.8 0 0 7.8 0 17.5S7.8 35 17.5 35 35 27.2 35 17.5 27.2 0 17.5 0z"
+            fill="#e5e5e5"
+          />
+        </svg>
+      );
     }
 
     return (
