@@ -31,7 +31,7 @@ export default class Form extends Component {
       PropTypes.string
     ]),
     children: PropTypes.node,
-    handleSubmit: PropTypes.func.isRequired // Function to handle submit.
+    handleSubmit: PropTypes.func // Function to handle submit.
   };
 
   static childContextTypes = {
@@ -73,13 +73,9 @@ export default class Form extends Component {
     return values;
   }
 
-  constructor(props) {
-    super(props);
-    this.inputs = [];
-    this.listeners = [];
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.submitting = false;
-  }
+  inputs = [];
+  listeners = [];
+  submitting = [];
 
   getChildContext() {
     return {
@@ -128,7 +124,11 @@ export default class Form extends Component {
     };
   }
 
-  handleSubmit(e) {
+  handleSubmit = e => {
+    if (typeof this.props.handleSubmit !== "function") {
+      return;
+    }
+
     e.preventDefault();
 
     // Prevent re-submitting form until promise is resolved/rejected.
