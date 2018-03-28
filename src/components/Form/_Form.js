@@ -75,7 +75,7 @@ export default class Form extends Component {
 
   inputs = [];
   listeners = [];
-  submitting = [];
+  submitting = false;
 
   getChildContext() {
     return {
@@ -126,7 +126,7 @@ export default class Form extends Component {
 
   handleSubmit = e => {
     if (typeof this.props.handleSubmit !== "function") {
-      return;
+      return false;
     }
 
     e.preventDefault();

@@ -140,4 +140,12 @@ describe("(Component) Form", () => {
     inst.getChildContext().genericErrorHandler("abc");
     expect(inst.genericErrorHandler).toBe("abc");
   });
+
+  test("handleSubmit should return false when there is no function provided", () => {
+    const comp = mount(
+      <Form className="class-name" />
+    );
+    const inst = comp.instance();
+    expect(inst.handleSubmit()).toBe(false);
+  })
 });
