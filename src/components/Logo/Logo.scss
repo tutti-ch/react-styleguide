@@ -31,6 +31,7 @@ $heightCube: 0.65 * $height;
     width: auto;
     max-width: 11rem;
     margin-left: 0;
+    margin-right: $size-xxs;
     .cube-box,
     .font {
       display: none;
