@@ -22,7 +22,7 @@ export const Infinite = <Sprite viewBox="0 0 51 23" id="infinite"/>
 export const Info = <Sprite viewBox="0 0 30 30" id="info"/>
 export const InsertAd = <Sprite viewBox="0 0 49 49" id="insert-ad"/>
 export const InsertImage = <Sprite viewBox="0 0 30 30" id="insert-image"/>
-export const Login = <Sprite viewBox="0 0 34.3 29.8" id="login"/>
+export const Login = <Sprite viewBox="0 0 35 30" id="login"/>
 export const Logout = <Sprite viewBox="0 0 29 29" id="logout"/>
 export const MyAds = <Sprite viewBox="0 0 30 30" id="my-ads"/>
 export const Next = <Sprite viewBox="0 0 30 30" id="next"/>
