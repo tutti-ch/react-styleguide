@@ -30,6 +30,7 @@ $inputHeight: $size-xxxl;
 
 @include placeholder {
   color: $greyscale-60;
+  opacity: 0.6;
 }
 
 @mixin focus {
@@ -270,6 +271,7 @@ $inputHeight: $size-xxxl;
 
       .ph {
         color: $greyscale-60;
+        opacity: 0.6;
       }
     }
 
