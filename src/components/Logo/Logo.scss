@@ -27,7 +27,11 @@ $heightCube: 0.65 * $height;
   @include tablet-and-smaller {
     // Static logo also on mobile devices because of z-index issues (and there is no hover for rotation)
     // https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate
-    background: url("./assets/logo-fallback.svg");
+    background: url("./assets/logo-fallback.svg") no-repeat left center;
+    width: auto;
+    max-width: 11rem;
+    margin-left: 0;
+    margin-right: $size-xxs;
     .cube-box,
     .font {
       display: none;
