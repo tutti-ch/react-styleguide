@@ -28,7 +28,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="Block text input"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Input
                         onChange={[Function]}
@@ -58,7 +58,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="Inline text input"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Input
                         onChange={[Function]}
@@ -89,7 +89,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     value="150"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Input
                         max="1000"
@@ -122,7 +122,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="password"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Input
                         onChange={[Function]}
@@ -149,7 +149,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="email"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Input
                         onChange={[Function]}
@@ -176,7 +176,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     type="phone"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Input
                         onChange={[Function]}
@@ -1270,7 +1270,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     label="This is a textarea"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Textarea
                         onChange={[Function]}
@@ -1453,7 +1453,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                       value=""
                     >
                       <div
-                        className="undefined"
+                        className=""
                       >
                         <Toggle
                           name="type"
@@ -2896,7 +2896,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             placeholder="Select your favorite framework"
                           >
                             <div
-                              className=""
+                              className="undefined"
                             >
                               <Select
                                 multiple={false}

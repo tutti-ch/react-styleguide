@@ -38,7 +38,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
   value="hello-world"
 >
   <div
-    className="undefined"
+    className=""
   >
     <Input
       onChange={[Function]}
