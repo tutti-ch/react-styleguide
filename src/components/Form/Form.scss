@@ -140,7 +140,8 @@ $inputHeight: $size-xxxl;
   input:focus + .label,
   textarea:focus + .label,
   .slider .label,
-  &:not(.inline) .select + .label,
+  &.has-placeholder .label,
+  &.has-value:not(.inline) .select + .label,
   &.has-value:not(.select-wrapper) .label {
     font-size: 0.85rem;
     top: -$size-xxxs;

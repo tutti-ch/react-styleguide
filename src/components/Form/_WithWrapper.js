@@ -30,11 +30,6 @@ export default (WrappedComponent, mergeProps = {}) => {
       label: PropTypes.string,
 
       /**
-       * Whether the label is always on top or not.
-       */
-      labelOnTop: PropTypes.bool,
-
-      /**
        * The class name.
        */
       className: PropTypes.oneOfType([
@@ -185,9 +180,9 @@ export default (WrappedComponent, mergeProps = {}) => {
     }
 
     render() {
-      const { inline, className, labelOnTop } = this.props;
+      const { inline, className } = this.props;
       const { error, formValue } = this.state;
-      const hasValue = !!formValue || mergeProps.hasValue || labelOnTop;
+      const hasValue = !!formValue || mergeProps.hasValue;
       const injectedProps = filterProps(WithWrapper.propTypes, this.props);
 
       let { label } = this.props;
@@ -207,7 +202,8 @@ export default (WrappedComponent, mergeProps = {}) => {
         {
           [classes.inline]: inline,
           [classes.hasValue]: hasValue,
-          [classes.hasLabel]: label
+          [classes.hasLabel]: label,
+          [classes.hasPlaceholder]: !!this.props.placeholder
         },
         mergeProps.className,
         className
