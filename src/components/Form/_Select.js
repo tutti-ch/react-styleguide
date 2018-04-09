@@ -86,6 +86,7 @@ export class Select extends Component {
     this.state = {
       highlighted: !multiple ? this.findIndexByValue(selected[0]) : -1,
       isOpen: false,
+      isFocused: false,
       options: options
         .filter(i => i)
         .map(i => ({ ...i, value: i.value.toString() })),
@@ -125,6 +126,17 @@ export class Select extends Component {
         : -1;
       this.setState(state);
     }
+  }
+
+  // Extra check for safety, sometimes onBlur is not called so we need to make sure we remove the listener
+  componentDidUpdate() {
+    if (!this.state.isFocused) {
+      document.removeEventListener("keydown", this.keyDown);
+    }
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.keyDown);
   }
 
   /**
@@ -174,8 +186,7 @@ export class Select extends Component {
     const { highlighted, isOpen } = this.state;
 
     if (
-      ["ArrowDown", "Down", "ArrowUp", "Up", "Enter", " "].indexOf(event.key) >
-      -1
+      ["ArrowDown", "Down", "ArrowUp", "Up", "Enter"].indexOf(event.key) > -1
     ) {
       event.preventDefault();
 
@@ -343,6 +354,7 @@ export class Select extends Component {
     // istanbul ignore else
     if (typeof document !== "undefined") {
       document.addEventListener("keydown", this.keyDown);
+      this.setState({ isFocused: true });
     }
   };
 
@@ -353,6 +365,7 @@ export class Select extends Component {
     // istanbul ignore else
     if (typeof document !== "undefined") {
       document.removeEventListener("keydown", this.keyDown);
+      this.setState({ isFocused: false });
     }
   };
 

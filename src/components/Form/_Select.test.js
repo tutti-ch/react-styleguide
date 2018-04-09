@@ -236,9 +236,38 @@ describe("(Component) Select", () => {
 
     inst.handleOnFocus();
     expect(spyAdd).toHaveBeenCalledWith("keydown", inst.keyDown);
+    expect(comp.state().isFocused).toBe(true);
 
     inst.handleOnBlur();
     expect(spyRem).toHaveBeenCalledWith("keydown", inst.keyDown);
+    expect(comp.state().isFocused).toBe(false);
+  });
+
+  test("[componentDidUpdate] should remove the listener if not focused", () => {
+    const comp = mount(<Select options={[]} />);
+
+    const spyRem = jest.spyOn(document, "removeEventListener");
+    spyRem.mockClear();
+
+    // if focused, we should not remove the event listener
+    comp.setState({ isFocused: true });
+    expect(spyRem).toHaveBeenCalledTimes(0);
+
+    comp.setState({ isFocused: false });
+    expect(spyRem).toHaveBeenCalledTimes(1);
+  });
+
+  test("[componentWillUnmount] should remove the listener", () => {
+    const comp = mount(<Select options={[]} />);
+    const inst = comp.instance();
+
+    const spyRem = jest.spyOn(document, "removeEventListener");
+    spyRem.mockClear();
+
+    // causing a component update
+    expect(spyRem).toHaveBeenCalledTimes(0);
+    inst.componentWillUnmount();
+    expect(spyRem).toHaveBeenCalledTimes(1);
   });
 
   test("[getSelectedOptions] should return the selected options or the placeholder if given", () => {
