@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { filterProps } from "../../helpers/functions";
 import classes from "./Form.scss";
 import WithWrapper from "./_WithWrapper";
+import debounce from "lodash.debounce";
 
 export class InputCheckbox extends Component {
   static defaultProps = {
@@ -37,8 +38,6 @@ export class InputCheckbox extends Component {
     this.state = {
       checked: props.checked
     };
-
-    this.toggle = this.toggle.bind(this);
   }
 
   /**
@@ -53,7 +52,7 @@ export class InputCheckbox extends Component {
   /**
    * Toggle the input checkbox.
    */
-  toggle() {
+  toggle = debounce(() => {
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
         const { name, checked, value } = this.props;
@@ -65,7 +64,7 @@ export class InputCheckbox extends Component {
         });
       }
     });
-  }
+  }, 100, { leading: true, trailing: false })
 
   render() {
     const { value, checked } = this.state;
