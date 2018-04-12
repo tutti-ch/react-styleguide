@@ -18,6 +18,7 @@ describe("(Component) InputCheckbox", () => {
     inst.toggle();
     expect(comp.state("checked")).toBe(true);
     expect(spy).toHaveBeenCalled();
+    inst.toggle.cancel();
 
     comp.setProps({ onChange: undefined });
     inst.toggle();
