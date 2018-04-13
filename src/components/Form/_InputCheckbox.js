@@ -53,6 +53,10 @@ export class InputCheckbox extends Component {
    * Toggle the input checkbox.
    */
   toggle = debounce(() => {
+    if (this.props.disabled) {
+      return;
+    }
+
     this.setState({ checked: !this.state.checked }, () => {
       if (typeof this.props.onChange === "function") {
         const { name, checked, value } = this.props;
