@@ -52,12 +52,12 @@ describe("(Component) Image", function() {
   test("should trigger callbacks when the prop src is updated", () => {
     const instance = comp.instance();
     expect(instance.image.src).toBe(initialSrc);
-    instance.componentWillUpdate({ src: "my-src.jpg" });
+    instance.componentWillReceiveProps({ src: "my-src.jpg" });
     expect(instance.image.src).toBe("my-src.jpg");
 
     // The result shoult be the same because we did not change the
     // props.src (it is still the initialOne)
-    instance.componentWillUpdate({ src: initialSrc });
+    instance.componentWillReceiveProps({ src: initialSrc });
     expect(instance.image.src).toBe("my-src.jpg");
   });
 
