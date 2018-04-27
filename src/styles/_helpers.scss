@@ -124,25 +124,25 @@
     border-right: $perpendicular-borders;
     border-bottom: $size solid $color;
     border-top: $perpendicular-borders;
-    top: -$size*2;
+    top: -$size * 2;
   } @else if $direction == bottom {
     border-left: $perpendicular-borders;
     border-right: $perpendicular-borders;
     border-top: $size solid $color;
     border-bottom: $perpendicular-borders;
-    bottom: -$size*2;
+    bottom: -$size * 2;
   } @else if $direction == right {
     border-bottom: $perpendicular-borders;
     border-top: $perpendicular-borders;
     border-left: $size solid $color;
     border-right: $perpendicular-borders;
-    right: -$size*2;
+    right: -$size * 2;
   } @else if $direction == left {
     border-bottom: $perpendicular-borders;
     border-top: $perpendicular-borders;
     border-right: $size solid $color;
     border-left: $perpendicular-borders;
-    left: -$size*2;
+    left: -$size * 2;
   }
 }
 
@@ -150,6 +150,12 @@
 
 @mixin ifInternetExplorer {
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin ifEdge {
+  @supports (-ms-ime-align: auto) {
     @content;
   }
 }
