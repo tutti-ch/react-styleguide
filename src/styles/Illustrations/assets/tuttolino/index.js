@@ -1,19 +1,21 @@
-export Tuttolino404 from "./tuttolino-404.png"
-export TuttolinoCompetitor from "./tuttolino-competitor.svg"
-export TuttolinoErrorMobile from "./tuttolino-error-mobile.png"
-export TuttolinoError from "./tuttolino-error.svg"
-export TuttolinoFamilySofa from "./tuttolino-family-sofa.svg"
-export TuttolinoFamily from "./tuttolino-family.svg"
-export TuttolinoGay from "./tuttolino-gay.svg"
-export TuttolinoGlasses from "./tuttolino-glasses.svg"
-export TuttolinoHey from "./tuttolino-hey.svg"
-export TuttolinoHolmesBody from "./tuttolino-holmes-body.svg"
-export TuttolinoHolmesEyes from "./tuttolino-holmes-eyes.svg"
-export TuttolinoHolmesHand from "./tuttolino-holmes-hand.svg"
-export TuttolinoHolmesNoCircle from "./tuttolino-holmes-no_circle.svg"
-export TuttolinoHolmes from "./tuttolino-holmes.svg"
-export TuttolinoIntroScreens from "./tuttolino-intro-screens.svg"
-export TuttolinoSergi from "./tuttolino-sergi.svg"
-export TuttolinoSuccess from "./tuttolino-success.svg"
-export TuttolinoTablet from "./tuttolino-tablet.svg"
-export TuttolinoTuttiFan from "./tuttolino-tutti_fan.svg"
+import React from "react";
+import Image from "../../../../components/Image"
+export const Tuttolino404 = p => <Image {...p} src={require("./tuttolino-404.png")} />
+export const TuttolinoCompetitor = p => <Image {...p} src={require("./tuttolino-competitor.svg")} />
+export const TuttolinoErrorMobile = p => <Image {...p} src={require("./tuttolino-error-mobile.png")} />
+export const TuttolinoError = p => <Image {...p} src={require("./tuttolino-error.svg")} />
+export const TuttolinoFamilySofa = p => <Image {...p} src={require("./tuttolino-family-sofa.svg")} />
+export const TuttolinoFamily = p => <Image {...p} src={require("./tuttolino-family.svg")} />
+export const TuttolinoGay = p => <Image {...p} src={require("./tuttolino-gay.svg")} />
+export const TuttolinoGlasses = p => <Image {...p} src={require("./tuttolino-glasses.svg")} />
+export const TuttolinoHey = p => <Image {...p} src={require("./tuttolino-hey.svg")} />
+export const TuttolinoHolmesBody = p => <Image {...p} src={require("./tuttolino-holmes-body.svg")} />
+export const TuttolinoHolmesEyes = p => <Image {...p} src={require("./tuttolino-holmes-eyes.svg")} />
+export const TuttolinoHolmesHand = p => <Image {...p} src={require("./tuttolino-holmes-hand.svg")} />
+export const TuttolinoHolmesNoCircle = p => <Image {...p} src={require("./tuttolino-holmes-no_circle.svg")} />
+export const TuttolinoHolmes = p => <Image {...p} src={require("./tuttolino-holmes.svg")} />
+export const TuttolinoIntroScreens = p => <Image {...p} src={require("./tuttolino-intro-screens.svg")} />
+export const TuttolinoSergi = p => <Image {...p} src={require("./tuttolino-sergi.svg")} />
+export const TuttolinoSuccess = p => <Image {...p} src={require("./tuttolino-success.svg")} />
+export const TuttolinoTablet = p => <Image {...p} src={require("./tuttolino-tablet.svg")} />
+export const TuttolinoTuttiFan = p => <Image {...p} src={require("./tuttolino-tutti_fan.svg")} />

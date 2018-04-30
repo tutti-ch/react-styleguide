@@ -15,35 +15,16 @@ export default class Icons extends Component {
     directory: PropTypes.string
   };
 
-  constructor(props) {
-    super(props);
-
-    this.getIconList = this.getIconList.bind(this);
-    this.toIconName = this.toIconName.bind(this);
-  }
-
   /**
    * Return the icon list from the given directory name.
    */
-  getIconList() {
+  getIconList = () => {
     return require("./assets/" + this.props.directory + "/index.js");
   }
 
-  /**
-   * Given a ico name, generate
-   */
-  toIconName(icon) {
-    // Ignore font cases for these folders.
-    if (["canton", "category"].indexOf(this.props.directory) > -1) {
-      return icon;
-    }
-
-    return [
-      icon,
-      icon
-        .replace(/\.?([A-Z])/g, (x, y) => "-" + y.toLowerCase())
-        .replace(/^-/, "ico-")
-    ];
+  renderIcon = (icons, icon) => {
+    const Icon = icons[icon]
+    return <Icon width="75" height="75" className={classes.image} />
   }
 
   render() {
@@ -54,17 +35,8 @@ export default class Icons extends Component {
         {Object.keys(icons)
           .sort()
           .map((icon, index) => (
-            <BoxCard key={`asset-${index}`} name={this.toIconName(icon)}>
-              {typeof icons[icon] === "object" ? (
-                icons[icon]
-              ) : (
-                <img
-                  className={classes.image}
-                  src={icons[icon]}
-                  width="75"
-                  height="75"
-                />
-              )}
+            <BoxCard key={`asset-${index}`} name={icon}>
+              {this.renderIcon(icons, icon)}
             </BoxCard>
           ))}
       </BoxCardWrapper>

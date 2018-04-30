@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SVG from "./assets/_sprite.svg";
 import s4e from "svg4everybody";
+import cn from "classnames";
 
 export default class Sprite extends React.Component {
   static loaded = false;
@@ -38,18 +39,18 @@ export default class Sprite extends React.Component {
       document.body.insertBefore(div, document.body.childNodes[0]);
       this.setState({ ready: true }, s4e);
       Sprite.loaded = true;
-      Sprite.loading.forEach(c => c.setState({ ready: true }))
+      Sprite.loading.forEach(c => c.setState({ ready: true }));
     };
   }
 
   render() {
-    const { viewBox, id } = this.props;
+    const { viewBox, id, className, ...rest } = this.props;
     const { ready } = this.state;
 
     if (!ready) {
       return (
         // Placeholder
-        <svg viewBox="0 0 35 35" className={"svg-placeholder"}>
+        <svg viewBox="0 0 35 35" className={cn("svg-placeholder", className)}>
           <path
             fill="#fff"
             d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"
@@ -63,7 +64,12 @@ export default class Sprite extends React.Component {
     }
 
     return (
-      <svg role="img" viewBox={viewBox} className="svg-sprite">
+      <svg
+        role="img"
+        {...rest}
+        viewBox={viewBox}
+        className={cn("svg-sprite", className)}
+      >
         <use xlinkHref={"#" + id} />
       </svg>
     );

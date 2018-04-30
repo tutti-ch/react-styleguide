@@ -28,6 +28,11 @@ export default class Illustrations extends Component {
     return require("./assets/" + this.props.directory + "/index.js");
   }
 
+  renderIcon = (illustrations, illustration) => {
+    const Icon = illustrations[illustration];
+    return <Icon className={classes.image} src={illustrations[illustration]} />
+  }
+
   render() {
     const illustrations = this.getIllustrationList();
 
@@ -35,11 +40,7 @@ export default class Illustrations extends Component {
       <BoxCardWrapper>
         {Object.keys(illustrations).map((illustration, index) => (
           <BoxCard key={`asset-${index}`} name={illustration}>
-            <img
-              className={classes.image}
-              src={illustrations[illustration]}
-              width="75"
-            />
+            {this.renderIcon(illustrations, illustration)}
           </BoxCard>
         ))}
       </BoxCardWrapper>

@@ -1,10 +1,12 @@
-export Abo1 from "./abo1.svg"
-export Abo2 from "./abo2.svg"
-export Abo3 from "./abo3.svg"
-export Abo4 from "./abo4.svg"
-export Abo5 from "./abo5.svg"
-export Advantage1Logo from "./advantage1Logo.svg"
-export Advantage2Website from "./advantage2Website.svg"
-export Advantage3Billing from "./advantage3Billing.svg"
-export Badge from "./badge.svg"
-export TicinoMap from "./ticino_map.svg"
+import React from "react";
+import Image from "../../../../components/Image"
+export const Abo1 = p => <Image {...p} src={require("./abo1.svg")} />
+export const Abo2 = p => <Image {...p} src={require("./abo2.svg")} />
+export const Abo3 = p => <Image {...p} src={require("./abo3.svg")} />
+export const Abo4 = p => <Image {...p} src={require("./abo4.svg")} />
+export const Abo5 = p => <Image {...p} src={require("./abo5.svg")} />
+export const Advantage1Logo = p => <Image {...p} src={require("./advantage1Logo.svg")} />
+export const Advantage2Website = p => <Image {...p} src={require("./advantage2Website.svg")} />
+export const Advantage3Billing = p => <Image {...p} src={require("./advantage3Billing.svg")} />
+export const Badge = p => <Image {...p} src={require("./badge.svg")} />
+export const TicinoMap = p => <Image {...p} src={require("./ticino_map.svg")} />
