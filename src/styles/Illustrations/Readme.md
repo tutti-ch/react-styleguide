@@ -42,3 +42,9 @@ The SVG Illustrations shown here are from [src/styles/Illustrations/assets](http
 ```jsx noeditor
 <Illustrations directory="marketing" />
 ```
+
+### Error Illustrations
+
+```jsx noeditor
+<Illustrations directory="error" />
+```
