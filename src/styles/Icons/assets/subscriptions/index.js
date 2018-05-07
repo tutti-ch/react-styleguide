@@ -14,6 +14,7 @@ export const SubscriptionsProBump = p => <Image {...p} src={require("./subscript
 export const SubscriptionsProEye = p => <Image {...p} src={require("./subscriptions-pro-eye.svg")} />
 export const SubscriptionsProHexagon = p => <Image {...p} src={require("./subscriptions-pro-hexagon.svg")} />
 export const SubscriptionsProImages = p => <Image {...p} src={require("./subscriptions-pro-images.svg")} />
+export const SubscriptionsProImmo = p => <Image {...p} src={require("./subscriptions-pro-immo.svg")} />
 export const SubscriptionsProNoAds = p => <Image {...p} src={require("./subscriptions-pro-no_ads.svg")} />
 export const SubscriptionsProNotifications = p => <Image {...p} src={require("./subscriptions-pro-notifications.svg")} />
 export const SubscriptionsProRenew = p => <Image {...p} src={require("./subscriptions-pro-renew.svg")} />
