@@ -5,3 +5,4 @@ export const Tutti404PageDesign2015 = p => <Image {...p} src={require("./tutti-4
 export const TuttiBackground = p => <Image {...p} src={require("./tutti-background.svg")} />
 export const TuttiCloud1 = p => <Image {...p} src={require("./tutti-cloud-1.svg")} />
 export const TuttiCloud2 = p => <Image {...p} src={require("./tutti-cloud-2.svg")} />
+export const TuttiTumbleweed = p => <Image {...p} src={require("./tutti-tumbleweed.png")} />
