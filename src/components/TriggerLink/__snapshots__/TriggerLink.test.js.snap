@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(component) TriggerLink snapshot! 1`] = `
+<TriggerLink
+  onClick={[Function]}
+>
+  <button
+    className=""
+    onClick={[Function]}
+  >
+    Order pizza
+  </button>
+</TriggerLink>
+`;

@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "dev": "npm run styleguide",
+    "start": "npm run styleguide",
     "dist:build": "npm run test",
     "dist:publish": "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",

@@ -1,0 +1,13 @@
+@import "~susy/sass/susy";
+@import "../../styles/main";
+
+.triggerLink {
+  background: none;
+  border: 0;
+  color: $blue-50;
+
+  &:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+}
