@@ -5,6 +5,7 @@ export Image from "./components/Image";
 export Spinner from "./components/Spinner";
 export Table from "./components/Table";
 export Button from "./components/Button";
+export TriggerLink from "./components/TriggerLink";
 export Pagination from "./components/Pagination";
 export Form from "./components/Form";
 export Logo from "./components/Logo";
