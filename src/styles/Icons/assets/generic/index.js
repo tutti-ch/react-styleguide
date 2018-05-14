@@ -17,6 +17,7 @@ export const FilterOn = p => <Sprite {...p} viewBox="0 0 12 11" id="filter-on"/>
 export const Firma = p => <Sprite {...p} viewBox="0 0 30 30" id="firma"/>
 export const Garbage = p => <Sprite {...p} viewBox="0 0 30 30" id="garbage"/>
 export const Gear = p => <Sprite {...p} viewBox="0 0 30 30" id="gear"/>
+export const HouseTransparent = p => <Sprite {...p} viewBox="0 0 30 30" id="house-transparent"/>
 export const House = p => <Sprite {...p} viewBox="0 0 30 30" id="house"/>
 export const Infinite = p => <Sprite {...p} viewBox="0 0 51 23" id="infinite"/>
 export const Info = p => <Sprite {...p} viewBox="0 0 30 30" id="info"/>
