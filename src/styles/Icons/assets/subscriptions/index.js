@@ -5,7 +5,7 @@ export const LockHexagon = p => <Sprite {...p} viewBox="0 0 6.9 8.1" id="lock-he
 export const SubscriptionsApproval = p => <Image {...p} src={require("./subscriptions-approval.svg")} />
 export const SubscriptionsPerformance = p => <Image {...p} src={require("./subscriptions-performance.svg")} />
 export const SubscriptionsPlusBadge = p => <Image {...p} src={require("./subscriptions-plus-badge.svg")} />
-export const SubscriptionsPlusBump 2 = p => <Image {...p} src={require("./subscriptions-plus-bump 2.svg")} />
+export const SubscriptionsPlusBump = p => <Image {...p} src={require("./subscriptions-plus-bump.svg")} />
 export const SubscriptionsPlusEye = p => <Image {...p} src={require("./subscriptions-plus-eye.svg")} />
 export const SubscriptionsPlusHexagon = p => <Image {...p} src={require("./subscriptions-plus-hexagon.svg")} />
 export const SubscriptionsPlusImages = p => <Image {...p} src={require("./subscriptions-plus-images.svg")} />
