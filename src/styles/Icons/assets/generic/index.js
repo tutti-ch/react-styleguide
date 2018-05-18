@@ -24,6 +24,7 @@ export const Infinite = p => <Sprite {...p} viewBox="0 0 51 23" id="infinite"/>
 export const Info = p => <Sprite {...p} viewBox="0 0 30 30" id="info"/>
 export const InsertAd = p => <Sprite {...p} viewBox="0 0 49 49" id="insert-ad"/>
 export const InsertImage = p => <Sprite {...p} viewBox="0 0 30 30" id="insert-image"/>
+export const Lock = p => <Sprite {...p} viewBox="0 0 2.6 3.5" id="lock"/>
 export const Login = p => <Sprite {...p} viewBox="0 0 35 30" id="login"/>
 export const Logout = p => <Sprite {...p} viewBox="0 0 29 29" id="logout"/>
 export const MyAds = p => <Sprite {...p} viewBox="0 0 30 30" id="my-ads"/>
