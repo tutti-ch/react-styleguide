@@ -24,7 +24,6 @@ The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/t
 <Icons directory="premium" />
 ```
 
-
 ### Social media icons
 
 ```jsx noeditor
@@ -35,4 +34,10 @@ The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/t
 
 ```jsx noeditor
 <Icons directory="subscriptions" />
+```
+
+### Payment icons
+
+```jsx noeditor
+<Icons directory="payment" />
 ```

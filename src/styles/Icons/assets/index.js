@@ -4,3 +4,4 @@ export * from "./generic";
 export * from "./premium";
 export * from "./social_media";
 export * from "./subscriptions";
+export * from "./payment";
