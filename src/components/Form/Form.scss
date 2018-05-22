@@ -165,6 +165,8 @@ $inputHeight: $size-xxxl;
     user-select: none;
     cursor: pointer;
     color: $greyscale-60;
+    display: flex;
+    align-items: center;
   }
 
   .label {
