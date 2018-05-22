@@ -164,6 +164,7 @@ $inputHeight: $size-xxxl;
   .cb-label {
     user-select: none;
     cursor: pointer;
+    color: $greyscale-60;
   }
 
   .label {
@@ -303,7 +304,7 @@ $inputHeight: $size-xxxl;
         width: 0;
         top: 50%;
         transition: all $transition-m;
-        right: - $size-xs * 2;
+        right: -$size-xs * 2;
         margin-top: 0.2rem;
         position: absolute;
         transform: translateY(-50%);
@@ -485,7 +486,6 @@ $inputHeight: $size-xxxl;
 
   .select.multiple {
     .ph {
-
       // Styles for the arrow
       &:after {
         top: $size-xxxl / 2;
