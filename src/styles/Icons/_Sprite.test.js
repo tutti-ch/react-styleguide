@@ -44,11 +44,11 @@ describe("(Components) _Sprite", () => {
       send: jest.fn()
     };
 
-    inst.componentWillMount();
+    inst.componentDidMount();
     expect(inst.req.open).not.toHaveBeenCalled();
     Sprite.loaded = false;
     Sprite.loading = [];
-    inst.componentWillMount();
+    inst.componentDidMount();
     expect(inst.req.open).toHaveBeenCalledWith("GET", "mockimage", true);
     expect(inst.req.send).toHaveBeenCalled();
     expect(typeof inst.req.onload).toBe("function");

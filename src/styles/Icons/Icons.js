@@ -20,12 +20,12 @@ export default class Icons extends Component {
    */
   getIconList = () => {
     return require("./assets/" + this.props.directory + "/index.js");
-  }
+  };
 
   renderIcon = (icons, icon) => {
-    const Icon = icons[icon]
-    return <Icon width="75" height="75" className={classes.image} />
-  }
+    const Icon = icons[icon];
+    return <Icon width="75" height="75" className={classes.image} />;
+  };
 
   render() {
     const icons = this.getIconList();
