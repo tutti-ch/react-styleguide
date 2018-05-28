@@ -24,14 +24,20 @@ export class Toggle extends PureComponent {
     /**
      * Function that will be called when value changes.
      */
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+
+    /**
+     * The class name of the selected option.
+     */
+    selectedClass: PropTypes.string,
   };
 
-  static Option = ({ value, selected, children, onClick }) => (
+  static Option = ({ value, selected, selectedClass, children, onClick }) => (
     <span
       className={classNames(
         { [classes.toggleSelected]: selected },
-        classes.toggleOption
+        classes.toggleOption,
+        selectedClass
       )}
       data-value={value}
       onClick={onClick}
@@ -91,6 +97,7 @@ export class Toggle extends PureComponent {
       >
         {Children.map(children, child =>
           cloneElement(child, {
+            className: props.selectedClass,
             selected: value === child.props.value,
             onClick: this.handleOnClick
           })
