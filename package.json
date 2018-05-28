@@ -13,7 +13,9 @@
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "icons": "find src/styles -type f ! -name '_sprite.svg' ! -name 'TuttiFont.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo && node ./scripts/generateIcons.js",
+    "svgo": "find src/styles -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
+    "svgo-generic": "find src/styles/Icons/assets/generic -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo --config=.svgo.yml",
+    "icons": "npm run svgo && npm run svgo-generic && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },

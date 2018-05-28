@@ -1,0 +1,11 @@
+multipass: true
+
+plugins:
+  - removeViewBox: true
+  - removeStyleElement: true
+  - removeAttrs:
+      attrs: (fill|stroke|style|class)
+
+js2svg:
+  pretty: true
+  indent: '  '

@@ -19,28 +19,28 @@ export default class Sprite extends React.Component {
 
   req = typeof XMLHttpRequest !== "undefined" && new XMLHttpRequest();
 
-  componentWillMount() {
-    if (!this.req) {
-      return;
+  constructor(props) {
+    super(props);
+
+    if (this.req) {
+      Sprite.loading.push(this);
+
+      if (Sprite.loading.length > 1) {
+        return;
+      }
+
+      this.req.open("GET", SVG, true);
+      this.req.send();
+      this.req.onload = () => {
+        const div = document.createElement("div");
+        div.innerHTML = this.req.responseText;
+        div.style.display = "none";
+        document.body.insertBefore(div, document.body.childNodes[0]);
+        this.setState({ ready: true }, s4e);
+        Sprite.loaded = true;
+        Sprite.loading.forEach(c => c.setState({ ready: true }));
+      };
     }
-
-    Sprite.loading.push(this);
-
-    if (Sprite.loading.length > 1) {
-      return;
-    }
-
-    this.req.open("GET", SVG, true);
-    this.req.send();
-    this.req.onload = () => {
-      const div = document.createElement("div");
-      div.innerHTML = this.req.responseText;
-      div.style.display = "none";
-      document.body.insertBefore(div, document.body.childNodes[0]);
-      this.setState({ ready: true }, s4e);
-      Sprite.loaded = true;
-      Sprite.loading.forEach(c => c.setState({ ready: true }));
-    };
   }
 
   render() {
