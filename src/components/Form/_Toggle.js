@@ -1,7 +1,6 @@
 import React, { Children, PureComponent, cloneElement } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { filterProps } from "../../helpers/functions";
 import WithWrapper from "./_WithWrapper";
 import classes from "./Form.scss";
 
@@ -29,15 +28,17 @@ export class Toggle extends PureComponent {
     /**
      * The class name of the selected option.
      */
-    selectedClass: PropTypes.string,
+    selectedClass: PropTypes.string
   };
 
   static Option = ({ value, selected, selectedClass, children, onClick }) => (
     <span
       className={classNames(
-        { [classes.toggleSelected]: selected },
-        classes.toggleOption,
-        selectedClass
+        {
+          [classes.toggleSelected]: selected,
+          [selectedClass]: selected
+        },
+        classes.toggleOption
       )}
       data-value={value}
       onClick={onClick}
@@ -86,8 +87,7 @@ export class Toggle extends PureComponent {
 
   render() {
     const { value } = this.state;
-    const { name, children } = this.props;
-    const props = filterProps(Toggle.propTypes, this.props);
+    const { name, children, selectedClass, onChange, ...props } = this.props;
 
     return (
       <span
@@ -97,7 +97,7 @@ export class Toggle extends PureComponent {
       >
         {Children.map(children, child =>
           cloneElement(child, {
-            className: props.selectedClass,
+            selectedClass,
             selected: value === child.props.value,
             onClick: this.handleOnClick
           })

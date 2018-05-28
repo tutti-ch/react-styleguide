@@ -52,23 +52,27 @@ export class InputCheckbox extends Component {
   /**
    * Toggle the input checkbox.
    */
-  toggle = debounce(() => {
-    if (this.props.disabled) {
-      return;
-    }
-
-    this.setState({ checked: !this.state.checked }, () => {
-      if (typeof this.props.onChange === "function") {
-        const { name, checked, value } = this.props;
-        const newValue = this.state.checked ? value : false;
-        this.props.onChange(newValue, {
-          name,
-          initialValue: checked,
-          formValue: newValue // Required for the getKeyValuePair function
-        });
+  toggle = debounce(
+    () => {
+      if (this.props.disabled) {
+        return;
       }
-    });
-  }, 100, { leading: true, trailing: false })
+
+      this.setState({ checked: !this.state.checked }, () => {
+        if (typeof this.props.onChange === "function") {
+          const { name, checked, value } = this.props;
+          const newValue = this.state.checked ? value : false;
+          this.props.onChange(newValue, {
+            name,
+            initialValue: checked,
+            formValue: newValue // Required for the getKeyValuePair function
+          });
+        }
+      });
+    },
+    100,
+    { leading: true, trailing: false }
+  );
 
   render() {
     const { value, checked } = this.state;

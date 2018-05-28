@@ -187,7 +187,7 @@ export default class Form extends Component {
         this.listeners.forEach(l => l({ values, loading: false }));
         this.submitting = false;
       });
-  }
+  };
 
   /**
    * Reset listeners.

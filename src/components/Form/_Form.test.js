@@ -142,10 +142,8 @@ describe("(Component) Form", () => {
   });
 
   test("handleSubmit should return false when there is no function provided", () => {
-    const comp = mount(
-      <Form className="class-name" />
-    );
+    const comp = mount(<Form className="class-name" />);
     const inst = comp.instance();
     expect(inst.handleSubmit()).toBe(false);
-  })
+  });
 });
