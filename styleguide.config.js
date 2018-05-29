@@ -59,9 +59,12 @@ module.exports = {
     TabButton: {
       button: {
         position: "absolute",
-        top: "15px",
+        top: "95px",
         right: "0",
         "text-transform": "capitalize"
+      },
+      "rsg-usage": {
+        top: "0"
       }
     },
     ToolbarButton: {
@@ -81,11 +84,16 @@ module.exports = {
         "background-color": "#ffffff",
         "max-width": "800px",
         right: "0",
-        top: "70px"
+        top: "145px",
+        "z-index": "99999",
+        "box-sizing": "border-box",
+        display: "block",
+        padding: "20px",
+        border: "1px solid #e5e5e5"
       }
     },
     SectionHeading: {
-      root: {
+      wrapper: {
         "border-bottom": "1px solid #ccc"
       }
     }
