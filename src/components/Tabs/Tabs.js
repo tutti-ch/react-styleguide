@@ -6,24 +6,35 @@ import classes from "./Tabs.scss";
 import Tab from "./_Tab";
 
 export default class Tabs extends Component {
-  static defaultProps = { defaultActiveTab: 0 };
+  static defaultProps = {
+    defaultActiveTab: 0
+  };
+
+  static propTypes = {
+    defaultActiveTab: PropTypes.number,
+    onTabChange: PropTypes.func
+  };
+
   static Tab = Tab;
 
-  constructor(props, context) {
-    super(props, context);
-    this.state = { activeTab: this.props.defaultActiveTab };
-
-    this.onTabClick = this.onTabClick.bind(this);
-  }
+  state = {
+    activeTab: this.props.defaultActiveTab
+  };
 
   /**
    * Handle the tab being clicked.
    *
    * @param {*} tab
    */
-  onTabClick(tab) {
-    this.setState({ activeTab: tab });
-  }
+  onTabClick = tab => {
+    if (this.state.activeTab !== tab) {
+      this.setState({ activeTab: tab }, () => {
+        if (typeof this.props.onTabChange === "function") {
+          this.props.onTabChange(tab);
+        }
+      });
+    }
+  };
 
   /**
    * Takes the children passed to Tabs and enhance them with some extra props
@@ -47,13 +58,14 @@ export default class Tabs extends Component {
   renderActiveTabContent() {
     const { children } = this.props;
     const { activeTab } = this.state;
+
     if (children[activeTab]) {
       return children[activeTab].props.children;
     }
   }
 
   render() {
-    const { className, children } = this.props;
+    const { className } = this.props;
     const tabClasses = classNames(className, [classes.tabs]);
 
     return (
