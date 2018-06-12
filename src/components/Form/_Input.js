@@ -148,7 +148,6 @@ export class Input extends Component {
       // Next time when on blur or key up occurs,
       // they will know that the value changed.
       this.changed = true;
-      this.notify();
     });
   }
 
