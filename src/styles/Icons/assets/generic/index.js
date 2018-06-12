@@ -54,6 +54,7 @@ export const SortByDateDown = p => <Sprite {...p} viewBox="0 0 35 30" id="sort-b
 export const SortByDateUp = p => <Sprite {...p} viewBox="0 0 35 30" id="sort-by_date-up"/>
 export const SortByPriceDown = p => <Sprite {...p} viewBox="0 0 35 30" id="sort-by_price-down"/>
 export const SortByPriceUp = p => <Sprite {...p} viewBox="0 0 35 30" id="sort-by_price-up"/>
+export const StarHalf = p => <Sprite {...p} viewBox="0 0 18.9 18" id="star-half"/>
 export const Star = p => <Sprite {...p} viewBox="0 0 18 18" id="star"/>
 export const TickCircle = p => <Sprite {...p} viewBox="0 0 30 30" id="tick-circle"/>
 export const TickEmpty = p => <Sprite {...p} viewBox="0 0 30 30" id="tick-empty"/>
