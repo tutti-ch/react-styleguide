@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classes from "./Image.scss";
 import classNames from "classnames";
 import Spinner from "../Spinner";
+import { TuttiCube } from "../../styles/Icons/assets/generic";
 import { filterProps } from "../../helpers/functions";
 
 // This gets overwritten by the Readme.md for some reason
@@ -50,35 +51,26 @@ export default class Image extends Component {
     ])
   };
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      loaded: false,
-      error: false
-    };
-
-    this.onLoad = this.onLoad.bind(this);
-    this.onError = this.onError.bind(this);
-    this.renderError = this.renderError.bind(this);
-    this.renderSpinner = this.renderSpinner.bind(this);
-  }
+  state = {
+    loaded: false,
+    error: false
+  };
 
   /**
    * When the image is loaded set the state accordingly. This callback is triggered
    * by the Image class when its src property is updated.
    */
-  onLoad() {
+  onLoad = () => {
     this.setState({ error: false, loaded: true });
-  }
+  };
 
   /**
    * When the image failed to load set the state accordingly. This callback is triggered
    * by the Image class when its src property is updated.
    */
-  onError() {
+  onError = () => {
     this.setState({ error: true, loaded: true });
-  }
+  };
 
   componentDidMount() {
     // Why loading like this? Because we want to render only one element:
@@ -118,19 +110,14 @@ export default class Image extends Component {
    *
    * @return {*}
    */
-  renderError() {
+  renderError = () => {
     const { errorClassName } = this.props;
     return (
-      <span
-        className={classNames(
-          classes.error,
-          errorClassName,
-          "ico",
-          "ico-tutti-cube"
-        )}
-      />
+      <span className={classNames(classes.error, errorClassName)}>
+        <TuttiCube className={classes.cube} />
+      </span>
     );
-  }
+  };
 
   /**
    * Render the spinner. This is called when the image is still loading and
@@ -138,7 +125,7 @@ export default class Image extends Component {
    *
    * @return {*}
    */
-  renderSpinner() {
+  renderSpinner = () => {
     const { spinnerClassName, spinnerSize } = this.props;
 
     // Do not render if the spinner size is not provided
@@ -147,7 +134,7 @@ export default class Image extends Component {
     }
 
     return <Spinner className={spinnerClassName} size={spinnerSize} />;
-  }
+  };
 
   /**
    * Render the image component.

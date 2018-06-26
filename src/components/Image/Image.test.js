@@ -2,14 +2,25 @@
 import React from "react";
 import Image from "./index";
 import { mount } from "enzyme";
+import * as generic from "../../styles/Icons/assets/generic";
+jest.mock("../../styles/Icons/assets/generic");
 
-describe("(Component) Image", function() {
-  let comp;
+describe("(Component) Image", () => {
+  let comp, mock;
   const initialSrc = "https://tutti.ch/my-icon.jpg";
 
-  beforeEach(function() {
+  beforeAll(() => {
+    // mock TuttiCube for snaphots
+    mock = generic.TuttiCube.mockImplementation(() => <svg />);
+  })
+
+  beforeEach(() => {
     comp = mount(<Image src={initialSrc} />);
     comp.setState({ loaded: true });
+  });
+
+  afterAll(() => {
+    mock.mockReset();
   });
 
   test("snapshot should pass all props down", () => {
@@ -33,14 +44,14 @@ describe("(Component) Image", function() {
     comp.update();
 
     expect(comp.find("img").exists()).toBe(false);
-    expect(comp.find("span.ico.ico-tutti-cube").exists()).toBe(true);
+    expect(comp.find("svg").exists()).toBe(true);
 
     // It should revert on load
     comp.instance().onLoad();
     comp.update();
 
     expect(comp.find("img").exists()).toBe(true);
-    expect(comp.find("span.ico.ico-tutti-cube").exists()).toBe(false);
+    expect(comp.find("svg").exists()).toBe(false);
   });
 
   test("should always trigger callbacks", () => {
