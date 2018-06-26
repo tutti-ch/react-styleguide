@@ -12,6 +12,7 @@ export const DateUp = p => <Sprite {...p} viewBox="0 0 30 30" id="date-up"/>
 export const Dropdown = p => <Sprite {...p} viewBox="0 0 15 8" id="dropdown"/>
 export const Email = p => <Sprite {...p} viewBox="0 0 30 30" id="email"/>
 export const Error = p => <Sprite {...p} viewBox="0 0 30 30" id="error"/>
+export const EyeStriked = p => <Sprite {...p} viewBox="0 0 30 30" id="eye-striked"/>
 export const Eye = p => <Sprite {...p} viewBox="0 0 30 30" id="eye"/>
 export const FilterOff = p => <Sprite {...p} viewBox="0 0 11 11" id="filter-off"/>
 export const FilterOn = p => <Sprite {...p} viewBox="0 0 12 11" id="filter-on"/>
