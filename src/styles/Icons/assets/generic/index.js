@@ -1,5 +1,6 @@
 import React from "react";
 import Sprite from "../../_Sprite"
+export const Archive = p => <Sprite {...p} viewBox="0 0 30 30" id="archive"/>
 export const ArrowLink = p => <Sprite {...p} viewBox="0 0 30 30" id="arrow-link"/>
 export const Call = p => <Sprite {...p} viewBox="0 0 30 30" id="call"/>
 export const Categories = p => <Sprite {...p} viewBox="0 0 30 30" id="categories"/>
@@ -33,6 +34,7 @@ export const Next = p => <Sprite {...p} viewBox="0 0 30 30" id="next"/>
 export const PauseCircle = p => <Sprite {...p} viewBox="0 0 32 32" id="pause-circle"/>
 export const Pause = p => <Sprite {...p} viewBox="0 0 17 17" id="pause"/>
 export const Pencil = p => <Sprite {...p} viewBox="0 0 30 30" id="pencil"/>
+export const Phone = p => <Sprite {...p} viewBox="0 0 30 30" id="phone"/>
 export const Pin = p => <Sprite {...p} viewBox="0 0 9 14" id="pin"/>
 export const Play = p => <Sprite {...p} viewBox="0 0 32 32" id="play"/>
 export const Prev = p => <Sprite {...p} viewBox="0 0 30 30" id="prev"/>
