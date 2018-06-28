@@ -30,6 +30,7 @@ export const InsertImage = p => <Sprite {...p} viewBox="0 0 30 30" id="insert-im
 export const Lock = p => <Sprite {...p} viewBox="0 0 2.6 3.5" id="lock"/>
 export const Login = p => <Sprite {...p} viewBox="0 0 35 30" id="login"/>
 export const Logout = p => <Sprite {...p} viewBox="0 0 29 29" id="logout"/>
+export const Menu = p => <Sprite {...p} viewBox="0 0 24 24" id="menu"/>
 export const MyAds = p => <Sprite {...p} viewBox="0 0 30 30" id="my-ads"/>
 export const Next = p => <Sprite {...p} viewBox="0 0 30 30" id="next"/>
 export const PauseCircle = p => <Sprite {...p} viewBox="0 0 32 32" id="pause-circle"/>
