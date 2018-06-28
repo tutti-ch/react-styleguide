@@ -13,7 +13,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
     <ul>
       <Page
         disabled={false}
-        icon="ico-arrow-start"
+        icon={[Function]}
         number={1}
         onClick={[Function]}
       >
@@ -21,13 +21,30 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link  ico ico-arrow-start"
-          />
+            className="link "
+          >
+            <ArrowStart>
+              <Sprite
+                id="arrow-start"
+                viewBox="0 0 15.4 30"
+              >
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 15.4 30"
+                >
+                  <use
+                    xlinkHref="#arrow-start"
+                  />
+                </svg>
+              </Sprite>
+            </ArrowStart>
+          </div>
         </li>
       </Page>
       <Page
         disabled={false}
-        icon="ico-arrow-left"
+        icon={[Function]}
         number={301}
         onClick={[Function]}
       >
@@ -35,8 +52,25 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link  ico ico-arrow-left"
-          />
+            className="link "
+          >
+            <Prev>
+              <Sprite
+                id="prev"
+                viewBox="0 0 30 30"
+              >
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 30 30"
+                >
+                  <use
+                    xlinkHref="#prev"
+                  />
+                </svg>
+              </Sprite>
+            </Prev>
+          </div>
         </li>
       </Page>
       <li>
@@ -92,7 +126,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
       </Page>
       <Page
         disabled={true}
-        icon="ico-arrow-right"
+        icon={[Function]}
         number={302}
         onClick={[Function]}
       >
@@ -100,13 +134,30 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className="undefined"
         >
           <div
-            className="link  ico ico-arrow-right"
-          />
+            className="link "
+          >
+            <Next>
+              <Sprite
+                id="next"
+                viewBox="0 0 30 30"
+              >
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 30 30"
+                >
+                  <use
+                    xlinkHref="#next"
+                  />
+                </svg>
+              </Sprite>
+            </Next>
+          </div>
         </li>
       </Page>
       <Page
         disabled={true}
-        icon="ico-arrow-end"
+        icon={[Function]}
         number={302}
         onClick={[Function]}
       >
@@ -114,8 +165,25 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className="undefined"
         >
           <div
-            className="link  ico ico-arrow-end"
-          />
+            className="link "
+          >
+            <ArrowEnd>
+              <Sprite
+                id="arrow-end"
+                viewBox="0 0 15.4 30"
+              >
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 15.4 30"
+                >
+                  <use
+                    xlinkHref="#arrow-end"
+                  />
+                </svg>
+              </Sprite>
+            </ArrowEnd>
+          </div>
         </li>
       </Page>
     </ul>

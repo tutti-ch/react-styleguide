@@ -7,14 +7,14 @@ import classes from "./Pagination.scss";
 export default class Page extends Component {
   static propTypes = {
     number: PropTypes.number.isRequired,
-    icon: PropTypes.string,
+    icon: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
     disabled: PropTypes.bool,
     active: PropTypes.bool,
     onClick: PropTypes.func
   };
 
   render() {
-    const { number, icon, active, disabled, onClick } = this.props;
+    const { number, icon: Icon, active, disabled, onClick } = this.props;
 
     const listItemClasses = classNames(classes.page, {
       [classes.active]: active,
@@ -22,14 +22,11 @@ export default class Page extends Component {
       [classes.disabled]: disabled
     });
 
-    const linkClasses = classNames("link", [classes.link], {
-      ico: icon,
-      [icon]: icon
-    });
+    const linkClasses = classNames("link", [classes.link]);
 
     return (
       <li className={listItemClasses} onClick={onClick(number)}>
-        <div className={linkClasses}>{icon ? "" : number}</div>
+        <div className={linkClasses}>{Icon ? <Icon /> : number}</div>
       </li>
     );
   }

@@ -7,13 +7,14 @@ describe("(Component) SelectOption", () => {
   test("[select] should trigger the onClick prop", () => {
     const onClick = jest.fn();
     const event = {};
+    const Icon = () => "my-icon";
 
     const comp = mount(
       <SelectOption
         onClick={onClick}
         highlighted={true}
         selected={true}
-        icon="ico ico-tutti-cube"
+        icon={<Icon />}
         text="my option"
       />
     );
@@ -35,7 +36,7 @@ describe("(Component) SelectOption", () => {
       <SelectOption
         onClose={onClose}
         selected={false}
-        icon="ico ico-tutti-cube"
+        icon={"my-icon"}
         text="my option"
       />
     );

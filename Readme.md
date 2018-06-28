@@ -77,7 +77,6 @@ icons.cantons.CantonAargau
 icons.categories.Tv
 icons.SocialFacebook
 ```
-or simply use it as a css class `ico ico-canton-aargau`
 
 
 ## Publishing to Github Pages

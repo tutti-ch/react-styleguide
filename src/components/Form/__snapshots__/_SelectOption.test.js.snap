@@ -3,7 +3,7 @@
 exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] = `
 <Option
   highlighted={true}
-  icon="ico ico-tutti-cube"
+  icon={<Icon />}
   onClick={[Function]}
   selected={true}
   text="my option"
@@ -12,9 +12,9 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
     className=""
     onClick={[Function]}
   >
-    <span
-      className="ico ico-tutti-cube"
-    />
+    <Icon>
+      my-icon
+    </Icon>
     <span>
       my option
     </span>

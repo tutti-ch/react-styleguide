@@ -11,6 +11,9 @@
   transition: all $transition-m;
   position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:disabled,
   &:disabled:hover {
@@ -19,6 +22,12 @@
 
   &.noRounded {
     border-radius: 0;
+  }
+
+  :global .svg-sprite {
+    width: $size-m;
+    height: $size-m;
+    margin-right: $size-xxs;
   }
 }
 

@@ -1,7 +1,9 @@
 import React from "react";
 import Sprite from "../../_Sprite"
 export const Archive = p => <Sprite {...p} viewBox="0 0 30 30" id="archive"/>
+export const ArrowEnd = p => <Sprite {...p} viewBox="0 0 15.4 30" id="arrow-end"/>
 export const ArrowLink = p => <Sprite {...p} viewBox="0 0 30 30" id="arrow-link"/>
+export const ArrowStart = p => <Sprite {...p} viewBox="0 0 15.4 30" id="arrow-start"/>
 export const BubbleSpeech = p => <Sprite {...p} viewBox="0 0 30 30" id="bubble-speech"/>
 export const Call = p => <Sprite {...p} viewBox="0 0 30 30" id="call"/>
 export const Categories = p => <Sprite {...p} viewBox="0 0 30 30" id="categories"/>

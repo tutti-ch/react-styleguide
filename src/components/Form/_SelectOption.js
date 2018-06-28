@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Image from "../Image";
+import { Close, Tick } from "../../styles/Icons/assets/generic";
 import classNames from "classnames";
 import classes from "./Form.scss";
 
@@ -106,8 +107,6 @@ class Option extends Component {
     if (typeof icon === "string") {
       if (icon && icon.match(/^(\/|data:|https?:)|\.(svg|png|jpg|gif)$/)) {
         icon = <Image className={classes.icon} src={icon} />;
-      } else if (icon && icon.indexOf("ico") === 0) {
-        icon = <span className={classNames(classes.icon, icon)} />;
       }
     }
 
@@ -116,12 +115,9 @@ class Option extends Component {
         {icon}
         <span className={classes.text}>{text}</span>
         {closeIcon && (
-          <span
-            onClick={this.close}
-            className={`ico ico-close ${classes.icoClose}`}
-          />
+          <Close onClick={this.close} className={classes.icoClose} />
         )}
-        {tickIcon && <span className={`ico ico-tick ${classes.icoCheck}`} />}
+        {tickIcon && <Tick className={classes.icoCheck} />}
       </div>
     );
   }

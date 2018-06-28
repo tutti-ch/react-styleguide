@@ -269,6 +269,11 @@ $inputHeight: $size-xxxl;
     user-select: none;
     width: 100%;
 
+    :global .svg-sprite {
+      width: $size-xs;
+      height: $size-xs;
+    }
+
     // Styles for when the placeholder is active
     &.placeholder {
       position: relative;
@@ -289,6 +294,7 @@ $inputHeight: $size-xxxl;
       .option {
         max-width: 100%;
         flex: 0 0 auto;
+        fill: $greyscale-100;
       }
 
       .option:not(:last-child):after {

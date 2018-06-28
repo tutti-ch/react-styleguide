@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import {
+  ArrowStart,
+  ArrowEnd,
+  Next,
+  Prev
+} from "../../styles/Icons/assets/generic";
 import classes from "./Pagination.scss";
 import Page from "./_Page";
 
@@ -88,12 +93,12 @@ export default class Pagination extends Component {
               number={1}
               disabled={isFirst}
               onClick={onChange}
-              icon="ico-arrow-start"
+              icon={ArrowStart}
             />
             <Page
               number={isTooSmall ? 1 : previousPage}
               disabled={isTooSmall}
-              icon="ico-arrow-left"
+              icon={Prev}
               onClick={onChange}
             />
             <li className={classes.text}>{pageText}</li>
@@ -101,13 +106,13 @@ export default class Pagination extends Component {
             <Page
               number={isTooBig ? pagesCount : nextPage}
               disabled={isTooBig}
-              icon="ico-arrow-right"
+              icon={Next}
               onClick={onChange}
             />
             <Page
               number={pagesCount}
               disabled={isLast}
-              icon="ico-arrow-end"
+              icon={ArrowEnd}
               onClick={onChange}
             />
           </ul>

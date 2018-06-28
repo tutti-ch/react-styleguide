@@ -72,6 +72,12 @@ body.offline .page {
   height: auto;
   display: block;
   line-height: $size-xxl !important;
+
+  :global .svg-sprite {
+    width: $size-m;
+    height: $size-m;
+    margin: 0;
+  }
 }
 
 // the text 'page' appears for small screens

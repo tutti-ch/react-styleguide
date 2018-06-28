@@ -20,7 +20,7 @@ export default class Sprite extends React.Component {
   req = typeof XMLHttpRequest !== "undefined" && new XMLHttpRequest();
 
   componentDidMount() {
-    if (this.req) {
+    if (this.req && Sprite.loaded === false) {
       Sprite.loading.push(this);
 
       if (Sprite.loading.length > 1) {

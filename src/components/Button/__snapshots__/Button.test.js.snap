@@ -15,29 +15,10 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
     disabled={true}
     type="submit"
   >
-    <Component
-      icon="tutti-cube"
-    >
-      <span
-        className="ico ico-tutti-cube undefined"
-        key="icon"
-      />
-    </Component>
-    <Component>
-      <span
-        key="text"
-      >
-        Test content 
-      </span>
-    </Component>
-    <Component
-      icon="text-ico"
-    >
-      <span
-        className="ico ico-text-ico undefined"
-        key="icon"
-      />
-    </Component>
+    <span
+      className="tutti-cube"
+    />
+    Test content
   </button>
 </Button>
 `;

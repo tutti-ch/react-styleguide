@@ -79,10 +79,26 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 my-placeholder
               </span>
-              <span
-                className="ico ico-close undefined"
+              <Close
                 onClick={[Function]}
-              />
+              >
+                <Sprite
+                  id="close"
+                  onClick={[Function]}
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    onClick={[Function]}
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#close"
+                    />
+                  </svg>
+                </Sprite>
+              </Close>
             </div>
           </Option>
         </div>
@@ -106,9 +122,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 React.js
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -128,9 +157,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Vue.js
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -150,9 +192,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Angular.js
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -172,9 +227,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 jQuery
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -194,9 +262,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Knockout
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -216,9 +297,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Backbone
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -238,9 +332,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Ember
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -260,9 +367,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Bootstrap
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
           <Option
@@ -282,9 +402,22 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
               <span>
                 Other
               </span>
-              <span
-                className="ico ico-tick undefined"
-              />
+              <Tick>
+                <Sprite
+                  id="tick"
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#tick"
+                    />
+                  </svg>
+                </Sprite>
+              </Tick>
             </div>
           </Option>
         </div>

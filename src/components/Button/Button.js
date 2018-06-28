@@ -92,28 +92,16 @@ export default class Button extends Component {
     type: "submit"
   };
 
-  static Icon = props => (
-    <span className={`ico ico-${props.icon} ${classes.icon}`} key="icon" />
-  );
-
-  static Text = props => (
-    <span className={classes.text} key="text">
-      {props.children}
-    </span>
-  );
-
   static contextTypes = {
     onSubmit: PropTypes.func
   };
 
+  state = {
+    loading: this.props.loading
+  };
+
   constructor(props, context) {
     super(props);
-    this.getClasses = this.getClasses.bind(this);
-    this.renderContent = this.renderContent.bind(this);
-
-    this.state = {
-      loading: props.loading
-    };
 
     const { onSubmit } = context;
     const { type = "submit" } = props;
@@ -132,7 +120,7 @@ export default class Button extends Component {
   /**
    * Return the appropriate classes for the button.
    */
-  getClasses() {
+  getClasses = () => {
     const {
       level,
       size,
@@ -157,12 +145,12 @@ export default class Button extends Component {
         [classes.buttonLoading]: loading
       }
     );
-  }
+  };
 
   /**
    * Render the content for the button.
    */
-  renderContent() {
+  renderContent = () => {
     const { children } = this.props;
     const { loading } = this.state;
 
@@ -178,7 +166,7 @@ export default class Button extends Component {
     }
 
     return children;
-  }
+  };
 
   /**
    * Render the button.
