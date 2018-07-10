@@ -18,6 +18,12 @@ The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/t
 <Icons directory="generic" />
 ```
 
+### Logo icons
+
+```jsx noeditor
+<Icons directory="logos" />
+```
+
 ### Premium icons
 
 ```jsx noeditor
