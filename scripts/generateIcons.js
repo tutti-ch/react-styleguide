@@ -34,8 +34,8 @@ const helpers = (() => ({
    */
   getViewBox: file => {
     const content = fs.readFileSync(file, "utf8");
-    const width = content.match(/width=["'](\d+)/);
-    const height = content.match(/height=["'](\d+)/);
+    const width = content.match(/width=["']([\d\.]+)/);
+    const height = content.match(/height=["']([\d\.]+)/);
 
     // Svg sprites do not support linearGradients. We need
     // to export them as images.
