@@ -48,7 +48,7 @@ export default class Sprite extends React.Component {
     if (!ready) {
       return (
         // Placeholder
-        <svg viewBox="0 0 35 35" className={cn("svg-placeholder", className)}>
+        <svg viewBox="0 0 35 35" className={cn("svg-placeholder", "svg-sprite", className)}>
           <path
             fill="#fff"
             d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"
