@@ -9,12 +9,11 @@ describe("(Component) Toggle", function() {
     const comp = shallow(<TogglePure onChange={onChange} name="toggle" />);
     const inst = comp.instance();
     const event = {
-      preventDefault: jest.fn(),
-      target: { getAttribute: jest.fn().mockReturnValue("Value1") }
+      preventDefault: jest.fn()
     };
 
     const spy = jest.spyOn(inst, "setState");
-    inst.handleOnClick(event);
+    inst.handleOnClick(event, "Value1");
     expect(event.preventDefault).toHaveBeenCalled();
     expect(spy).toHaveBeenCalledWith({ value: "Value1" }, expect.any(Function));
     expect(onChange).toHaveBeenCalledWith("Value1", {

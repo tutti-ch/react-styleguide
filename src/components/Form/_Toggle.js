@@ -66,13 +66,12 @@ export class Toggle extends PureComponent {
     }
   }
 
-  handleOnClick(e) {
+  handleOnClick(e, value) {
     if (this.props.disabled) {
       return;
     }
 
     e.preventDefault();
-    const value = e.target.getAttribute("data-value");
 
     this.setState({ value }, () => {
       if (typeof this.props.onChange === "function") {
@@ -99,7 +98,7 @@ export class Toggle extends PureComponent {
           cloneElement(child, {
             selectedClass,
             selected: value === child.props.value,
-            onClick: this.handleOnClick
+            onClick: e => this.handleOnClick(e, child.props.value)
           })
         )}
         <input type="hidden" value={value} name={name} />
