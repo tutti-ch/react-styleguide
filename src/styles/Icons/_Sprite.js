@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import SVG from "./assets/_sprite.svg";
 import s4e from "svg4everybody";
 import cn from "classnames";
+import "./_Sprite.scss";
 
 export default class Sprite extends React.Component {
   static loaded = false;
@@ -45,19 +46,10 @@ export default class Sprite extends React.Component {
     const { viewBox, id, className, ...rest } = this.props;
     const { ready } = this.state;
 
+    // Display Placeholder
     if (!ready) {
       return (
-        // Placeholder
-        <svg viewBox="0 0 35 35" className={cn("svg-placeholder", "svg-sprite", className)}>
-          <path
-            fill="#fff"
-            d="M26.8 14.7h-6.6V8.1h-5.6v6.6H8v5.6h6.6v6.6h5.6v-6.6h6.6z"
-          />
-          <path
-            d="M17.5 0C7.8 0 0 7.8 0 17.5S7.8 35 17.5 35 35 27.2 35 17.5 27.2 0 17.5 0z"
-            fill="#e5e5e5"
-          />
-        </svg>
+        <span className={cn("svg-placeholder", "svg-sprite", className)} />
       );
     }
 

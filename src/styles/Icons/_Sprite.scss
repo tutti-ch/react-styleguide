@@ -1,0 +1,9 @@
+@import "../_main";
+
+:global .svg-placeholder {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: $greyscale-90;
+  border-radius: 50%;
+}
