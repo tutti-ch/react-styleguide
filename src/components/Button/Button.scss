@@ -28,6 +28,8 @@
     width: $size-m;
     height: $size-m;
     margin-right: $size-xxs;
+    flex: 0 0 auto;
+    align-self: center; // Required for Safari 9.1
   }
 }
 
