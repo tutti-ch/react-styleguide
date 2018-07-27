@@ -9,7 +9,6 @@ export const ArrowLink = p => <Sprite {...p} viewBox="0 0 30 30" id="arrow-link"
 export const ArrowRight = p => <Sprite {...p} viewBox="0 0 14 30" id="arrow-right"/>
 export const ArrowStart = p => <Sprite {...p} viewBox="0 0 15.4 30" id="arrow-start"/>
 export const Blackpoint = p => <Sprite {...p} viewBox="0 0 24 24" id="blackpoint"/>
-export const BubbleSpeech = p => <Sprite {...p} viewBox="0 0 30 30" id="bubble-speech"/>
 export const BubbleSpeech = p => <Sprite {...p} viewBox="0 0 30 30" id="bubble_speech"/>
 export const Call = p => <Sprite {...p} viewBox="0 0 30 30" id="call"/>
 export const Categories = p => <Sprite {...p} viewBox="0 0 30 30" id="categories"/>
