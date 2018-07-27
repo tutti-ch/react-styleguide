@@ -18,6 +18,7 @@ export const SubscriptionsProEye = p => <Image {...p} src={require("./subscripti
 export const SubscriptionsProGrey = p => <Sprite {...p} viewBox="0 0 26.5 30" id="subscriptions-pro-grey"/>
 export const SubscriptionsProHexagon = p => <Image {...p} src={require("./subscriptions-pro-hexagon.svg")} />
 export const SubscriptionsProImages = p => <Image {...p} src={require("./subscriptions-pro-images.svg")} />
+export const SubscriptionsProImmoTilted = p => <Image {...p} src={require("./subscriptions-pro-immo-tilted.svg")} />
 export const SubscriptionsProImmo = p => <Image {...p} src={require("./subscriptions-pro-immo.svg")} />
 export const SubscriptionsProNoAds = p => <Image {...p} src={require("./subscriptions-pro-no_ads.svg")} />
 export const SubscriptionsProNotifications = p => <Image {...p} src={require("./subscriptions-pro-notifications.svg")} />
