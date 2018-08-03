@@ -19,19 +19,13 @@ export default class Logos extends Component {
     directory: PropTypes.string
   };
 
-  constructor(props) {
-    super(props);
-
-    this.getLogosList = this.getLogosList.bind(this);
-  }
-
-  getLogosList() {
+  getLogosList = () => {
     if (!this.props.directory) {
       return null;
     }
 
     return require("./assets/" + this.props.directory + "/index.js");
-  }
+  };
 
   render() {
     const directory = this.props.directory;
@@ -53,11 +47,21 @@ export default class Logos extends Component {
         </BoxItemWrapper>
         <BoxCardWrapper>
           {directory &&
-            Object.keys(logos).map((logo, index) => (
-              <BoxCard key={`asset-${index}`} name={logo}>
-                <img src={logos[logo]} width="75" />
-              </BoxCard>
-            ))}
+            Object.keys(logos).map((logo, index) => {
+              const Logo = logos[logo];
+              return (
+                <BoxCard
+                  key={`asset-${index}`}
+                  name={logo}
+                  style={{
+                    background:
+                      logo.match(/white|negative/i) ? "#ccc" : undefined
+                  }}
+                >
+                  <Logo width={"75px"} />
+                </BoxCard>
+              );
+            })}
         </BoxCardWrapper>
       </div>
     );

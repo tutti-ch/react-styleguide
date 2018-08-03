@@ -9,10 +9,11 @@ import classes from "./Box.scss";
  * @param className
  * @param children
  * @param name
+ * @params style
  * @constructor
  */
-const BoxCard = ({ className, children, name }) => (
-  <div className={classNames(className, classes.card)}>
+const BoxCard = ({ className, children, name, style }) => (
+  <div className={classNames(className, classes.card)} style={style}>
     <div className={classes.inner}>
       <div className={classes.content}>{children}</div>
       <div className={classes.desc}>
