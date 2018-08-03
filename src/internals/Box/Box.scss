@@ -25,13 +25,15 @@
   }
 }
 
+$cardSize: $size-xxxl * 3;
+
 .card {
   flex: 0 1 auto;
   height: $size-xxxl * 3;
   position: relative;
   margin-right: 1.66%;
   margin-bottom: 1.75%;
-  width: $size-xxxl * 3;
+  width: $cardSize;
   border: 1px solid $greyscale-90;
   background: $greyscale-95;
 
@@ -63,5 +65,9 @@
     font-size: $size-xs;
     text-align: center;
     flex: 0 0 auto;
+    max-width: $cardSize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
   }
 }

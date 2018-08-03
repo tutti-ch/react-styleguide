@@ -12,18 +12,22 @@ import classes from "./Box.scss";
  * @params style
  * @constructor
  */
-const BoxCard = ({ className, children, name, style }) => (
-  <div className={classNames(className, classes.card)} style={style}>
-    <div className={classes.inner}>
-      <div className={classes.content}>{children}</div>
-      <div className={classes.desc}>
-        {Array.isArray(name)
-          ? name.map((n, i) => <div key={`key-${i}`}>{n}</div>)
-          : name}
+const BoxCard = ({ className, children, name, style }) => {
+  const _name = Array.isArray(name)
+    ? name.map((n, i) => <div key={`key-${i}`}>{n}</div>)
+    : name;
+
+  return (
+    <div className={classNames(className, classes.card)} style={style}>
+      <div className={classes.inner}>
+        <div className={classes.content}>{children}</div>
+        <div className={classes.desc} title={_name}>
+          {_name}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 BoxCard.propTypes = {
   className: PropTypes.oneOfType([
