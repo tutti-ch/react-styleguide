@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Components) Tooltip should first render null then after APPEAR_AFTER should appear and close when clicked on the X 1`] = `
+<Tooltip
+  arrowPosition="tl"
+  name="my-tooltip"
+>
+  <div
+    className=""
+  >
+    My super tooltip
+    <div
+      onClick={[Function]}
+    >
+      <Close>
+        <Sprite
+          id="close"
+          viewBox="0 0 30 30"
+        >
+          <svg
+            className="svg-sprite"
+            role="img"
+            viewBox="0 0 30 30"
+          >
+            <use
+              xlinkHref="#close"
+            />
+          </svg>
+        </Sprite>
+      </Close>
+    </div>
+  </div>
+</Tooltip>
+`;
+
+exports[`(Components) Tooltip should first render null then after APPEAR_AFTER should appear and close when clicked on the X 2`] = `
+<Tooltip
+  arrowPosition="tl"
+  name="my-tooltip"
+/>
+`;

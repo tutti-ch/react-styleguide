@@ -1,0 +1,130 @@
+@import "../../styles/main";
+
+$animationTime: 0.25s;
+
+:export {
+  animationTime: $animationTime;
+}
+
+@keyframes fade-in-sliding {
+  0% {
+    opacity: 0;
+    transform: translateY(8.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tooltip {
+  background: $blue-50;
+  display: inline-block;
+  position: absolute;
+  padding: $size-s $size-s * 2.5 $size-s $size-s;
+  border-radius: $border-radius-m;
+  transition: all $animationTime ease-in;
+  animation: fade-in-sliding $animationTime ease-in-out;
+  opacity: 1;
+  color: $greyscale-100;
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+  }
+
+  &.t, &.tr, &.tl {
+    &:after {
+      bottom: 100%;
+      border-left: $size-s solid transparent;
+      border-right: $size-s solid transparent;
+      border-bottom: $size-s solid $blue-50;
+    }
+  }
+
+  &.b:after,
+  &.t:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.br:after,
+  &.tr:after {
+    left: 85%;
+  }
+
+  &.bl:after,
+  &.tl:after {
+    right: 85%;
+  }
+
+  &.b, &.bl, &.br {
+    &:after {
+      top: 100%;
+      border-left: $size-s solid transparent;
+      border-right: $size-s solid transparent;
+      border-top: $size-s solid $blue-50;
+    }
+  }
+
+  &.r, &.rt, &.rb {
+    &:after {
+      left: 100%;
+      border-top: $size-xs solid transparent;
+      border-bottom: $size-xs solid transparent;
+      border-left: $size-xs solid $blue-50;
+    }
+  }
+
+  &.l:after,
+  &.r:after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &.rt:after,
+  &.lt:after {
+    top: $size-m;
+  }
+
+  &.rb:after,
+  &.lb:after {
+    bottom: $size-m;
+  }
+
+  &.l, &.lt, &.lb {
+    &:after {
+      right: 100%;
+      border-top: $size-xs solid transparent;
+      border-bottom: $size-xs solid transparent;
+      border-right: $size-xs solid $blue-50;
+    }
+  }
+
+  &.close {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .close-button {
+    position: absolute;
+    right: $size-xxs;
+    top: $size-xxs;
+    padding: $size-xxs;
+    cursor: pointer;
+
+    &:hover :global .svg-sprite {
+      fill: $blue-90;
+    }
+  }
+
+  :global .svg-sprite {
+    fill: $greyscale-100;
+    width: $size-s;
+    height: $size-s;
+    margin: 0;
+    transition: $transition-m;
+  }
+}
