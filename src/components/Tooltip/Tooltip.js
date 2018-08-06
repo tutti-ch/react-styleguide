@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from "react";
+import React, { PureComponent } from "react";
 import ToolTipComp from "./_Tooltip";
 import Form from "../Form";
 
@@ -37,7 +37,7 @@ export default class Tooltip extends PureComponent {
 
   render() {
     return (
-      <Fragment>
+      <div>
         <div style={{ marginBottom: "1rem" }}>
           <Form.Select
             onChange={this.changeArrow}
@@ -56,7 +56,7 @@ export default class Tooltip extends PureComponent {
         <a href={"#"} onClick={this.reset}>
           Click to reset tooltip state
         </a>
-      </Fragment>
+      </div>
     );
   }
 }
