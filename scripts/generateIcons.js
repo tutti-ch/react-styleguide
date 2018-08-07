@@ -78,7 +78,10 @@ const helpers = (() => ({
       helpers._dependencies[p][dep] = true;
 
       // Calculate the level of dependency till src folder.
-      const relative = path.relative(path.resolve(p, ".."), helpers._dependencyNames[dep]);
+      const relative = path.relative(
+        path.resolve(p, ".."),
+        helpers._dependencyNames[dep]
+      );
       arr.splice(1, 0, `import ${dep} from "${relative}"`);
     }
   }
@@ -103,15 +106,16 @@ glob(src + "/**/_sprite.svg", (err, results) => {
 
     results.sort().forEach(file => {
       const { fname, path } = helpers.fileInfo(file);
+      const camelCase = helpers.toCamelCase(fname);
 
       // Do not proceed if the same file name is used.
-      if (fileNameCache[fname]) {
-        console.warn("Duplicate file name: " + fname)
-        return
+      if (fileNameCache[camelCase]) {
+        console.warn("Duplicate file name: " + camelCase);
+        return;
       }
 
-      fileNameCache[fname] = true;
-      const exportConst = `export const ${helpers.toCamelCase(fname)}`;
+      fileNameCache[camelCase] = true;
+      const exportConst = `export const ${camelCase}`;
 
       folders[path] = folders[path] || [`import React from "react";`];
 

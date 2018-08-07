@@ -8,4 +8,3 @@ export const Bump3 = p => <Sprite {...p} viewBox="0 0 300 300" id="bump3"/>
 export const Combo = p => <Sprite {...p} viewBox="0 0 1171.4 490" id="combo"/>
 export const Gallery = p => <Sprite {...p} viewBox="0 0 490 490" id="gallery"/>
 export const Highlight = p => <Sprite {...p} viewBox="0 0 490 490" id="highlight"/>
-export const SellFaster = p => <Sprite {...p} viewBox="0 0 30 30" id="sell-faster"/>
