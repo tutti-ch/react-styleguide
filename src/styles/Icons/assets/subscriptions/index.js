@@ -1,7 +1,6 @@
 import React from "react";
-import Image from "../../../../components/Image"
 import Sprite from "../../_Sprite"
-export const LockHexagon = p => <Sprite {...p} viewBox="0 0 13.8 16.3" id="lock-hexagon"/>
+import Image from "../../../../components/Image"
 export const SubscriptionsApproval = p => <Image {...p} src={require("./subscriptions-approval.svg")} />
 export const SubscriptionsPerformance = p => <Image {...p} src={require("./subscriptions-performance.svg")} />
 export const SubscriptionsPlusBadge = p => <Image {...p} src={require("./subscriptions-plus-badge.svg")} />

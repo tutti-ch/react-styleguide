@@ -94,6 +94,8 @@ glob(src + "/**/_sprite.svg", (err, results) => {
     }
   });
 
+  const fileNameCache = {};
+
   // Now search all assets and prepare index files
   glob(src + "/**/*.{svg,png,jpg}", (err, results) => {
     let folders = {};
@@ -101,6 +103,14 @@ glob(src + "/**/_sprite.svg", (err, results) => {
 
     results.sort().forEach(file => {
       const { fname, path } = helpers.fileInfo(file);
+
+      // Do not proceed if the same file name is used.
+      if (fileNameCache[fname]) {
+        console.warn("Duplicate file name: " + fname)
+        return
+      }
+
+      fileNameCache[fname] = true;
       const exportConst = `export const ${helpers.toCamelCase(fname)}`;
 
       folders[path] = folders[path] || [`import React from "react";`];
