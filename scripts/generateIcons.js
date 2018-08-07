@@ -109,7 +109,7 @@ glob(src + "/**/_sprite.svg", (err, results) => {
       const camelCase = helpers.toCamelCase(fname);
 
       // Do not proceed if the same file name is used.
-      if (fileNameCache[camelCase]) {
+      if (fileNameCache[camelCase] && path.indexOf("styles/Icons/") > -1) {
         console.warn("Duplicate file name: " + camelCase);
         return;
       }
