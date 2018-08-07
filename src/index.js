@@ -10,6 +10,7 @@ export Pagination from "./components/Pagination";
 export Form from "./components/Form";
 export Logo from "./components/Logo";
 export Tabs from "./components/Tabs";
+export Tooltip from "./components/Tooltip"
 import * as Icons from "./styles/Icons/assets";
 import * as Illustrations from "./styles/Illustrations/assets";
 import * as Logos from "./styles/Logos/assets";
