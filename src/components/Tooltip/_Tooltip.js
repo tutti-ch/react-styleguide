@@ -8,7 +8,8 @@ export default class Tooltip extends PureComponent {
   static APPEAR_AFTER = 1000; // Will tell the tooltip to appear after this ms
 
   static defaultProps = {
-    arrowPosition: "t"
+    arrowPosition: "t",
+    appearAfter: Tooltip.APPEAR_AFTER
   };
 
   static propTypes = {
@@ -39,7 +40,12 @@ export default class Tooltip extends PureComponent {
      * A unique identifier. If the user has closed the tooltip before,
      * we will not show it again.
      */
-    name: PropTypes.string
+    name: PropTypes.string,
+
+    /**
+     * Number of ms for the tooltip to appear.
+     */
+    appearAfter: PropTypes.number
   };
 
   state = {
@@ -60,7 +66,7 @@ export default class Tooltip extends PureComponent {
             res
           );
         }
-      }, Tooltip.APPEAR_AFTER);
+      }, this.props.appearAfter);
     });
   }
 
@@ -81,7 +87,7 @@ export default class Tooltip extends PureComponent {
           }
         }, time);
       });
-    })
+    });
   };
 
   componentWillUnmount() {
@@ -90,7 +96,7 @@ export default class Tooltip extends PureComponent {
 
   render() {
     const { closed, render } = this.state;
-    const { arrowPosition } = this.props;
+    const { arrowPosition, appearAfter, name, children, ...rest } = this.props;
 
     if (!render) {
       return null;
@@ -101,8 +107,8 @@ export default class Tooltip extends PureComponent {
     });
 
     return (
-      <div className={tooltipClasses}>
-        {this.props.children}
+      <div {...rest} className={tooltipClasses}>
+        {children}
         <div className={classes.closeButton} onClick={this.close}>
           <Close />
         </div>

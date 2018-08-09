@@ -2,6 +2,7 @@
 
 exports[`(Components) Tooltip should first render null then after APPEAR_AFTER should appear and close when clicked on the X 1`] = `
 <Tooltip
+  appearAfter={1000}
   arrowPosition="tl"
   name="my-tooltip"
 >
@@ -35,6 +36,7 @@ exports[`(Components) Tooltip should first render null then after APPEAR_AFTER s
 
 exports[`(Components) Tooltip should first render null then after APPEAR_AFTER should appear and close when clicked on the X 2`] = `
 <Tooltip
+  appearAfter={1000}
   arrowPosition="tl"
   name="my-tooltip"
 />

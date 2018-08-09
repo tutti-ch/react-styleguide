@@ -406,6 +406,7 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
       </WithWrapper>
     </div>
     <Tooltip
+      appearAfter={1000}
       arrowPosition="t"
       name="tooltip-styleguide"
     />
