@@ -100,7 +100,7 @@
     line-height: $size-xxl;
   }
 
-  .icon:first-child  {
+  .icon:first-child {
     margin-right: $size-xs;
   }
 
@@ -125,7 +125,7 @@
     line-height: $size-xxxl;
   }
 
-  .icon:first-child  {
+  .icon:first-child {
     margin-right: $size-s;
   }
 
@@ -145,11 +145,6 @@
   background-color: $green-50;
   color: $greyscale-100;
 
-  &.buttonLoading:hover,
-  &.buttonLoading {
-    background-color: $green-80;
-  }
-
   &:hover {
     background-color: $green-60;
   }
@@ -158,11 +153,6 @@
 .button.secondary {
   background-color: $blue-50;
   color: $greyscale-100;
-
-  &.buttonLoading:hover,
-  &.buttonLoading {
-    background-color: $blue-80;
-  }
 
   &:hover {
     background-color: $blue-60;
@@ -173,11 +163,6 @@
   background-color: $greyscale-100;
   box-shadow: inset 0 0 0 1px $greyscale-60;
   color: $greyscale-40;
-
-  &.buttonLoading:hover,
-  &.buttonLoading {
-    background-color: $greyscale-95;
-  }
 
   &:hover {
     background-color: $greyscale-90;
@@ -251,19 +236,10 @@
   }
 }
 
-.spinner {
-  margin: 0;
-}
-
 .button.secondary.promote {
   background-color: $greyscale-100;
   box-shadow: inset 0 0 0 1px $orange-50;
   color: $orange-50;
-
-  &.buttonLoading:hover,
-  &.buttonLoading {
-    background-color: $greyscale-95;
-  }
 
   &:hover {
     background-color: $orange-50;
@@ -271,20 +247,13 @@
   }
 }
 
-.buttonLoading {
-  position: relative;
+.spinner {
+  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 
-  .icon,
-  .text {
-    visibility: hidden;
-  }
-
-  .spinner {
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    line-height: 1;
-    transform: translate(-50%, -50%);
-  }
+.spinner + .text {
+  visibility: hidden;
 }

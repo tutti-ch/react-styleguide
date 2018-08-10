@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-
+import { filterProps } from "../../helpers/functions";
 import Spinner from "../Spinner";
 import classes from "./Button.scss";
-import { filterProps } from "../../helpers/functions";
 
 export default class Button extends Component {
   static LEVEL_PRIMARY = "primary";
@@ -127,7 +126,6 @@ export default class Button extends Component {
       responsive,
       position,
       role,
-      loading,
       rounded,
       className
     } = this.props;
@@ -141,8 +139,7 @@ export default class Button extends Component {
       classes[position],
       {
         [classes.responsive]: responsive,
-        [classes.noRounded]: rounded === false,
-        [classes.buttonLoading]: loading
+        [classes.noRounded]: rounded === false
       }
     );
   };
@@ -155,14 +152,17 @@ export default class Button extends Component {
     const { loading } = this.state;
 
     if (loading) {
-      return (
+      return [
         <Spinner
           className={classes.spinner}
           size={1.25}
           color={Spinner.COLOR_LIGHT}
           key="spinner"
-        />
-      );
+        />,
+        <div className={classes.text} key={"text"}>
+          {children}
+        </div>
+      ];
     }
 
     return children;

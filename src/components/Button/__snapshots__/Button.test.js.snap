@@ -34,7 +34,7 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
   type="button"
 >
   <button
-    className="my-class undefined"
+    className="my-class"
     disabled={true}
     type="button"
   >
@@ -60,6 +60,14 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
         />
       </div>
     </Spinner>
+    <div
+      key="text"
+    >
+      <span
+        className="tutti-cube"
+      />
+      Test content
+    </div>
   </button>
 </Button>
 `;
