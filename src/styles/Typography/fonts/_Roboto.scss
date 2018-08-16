@@ -1,0 +1,17 @@
+/* nunito-300 - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("./Roboto-Light.ttf") format("ttf");
+}
+
+/* Roboto-regular - latin */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Regular"), local("Roboto-Regular"),
+    url("./Roboto-Medium.ttf") format("ttf");
+}

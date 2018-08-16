@@ -28,23 +28,31 @@
   color: $greyscale-60;
 }
 
-h1,h2,h3,h4,h5,h6 {
+body {
+  font-family: Roboto-Light !important;
+}
 
-  font-family: Nunito!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Roboto !important;
 
   a {
-    font-family: Nunito!important;
+    font-family: Roboto !important;
   }
 }
 
 p {
-  color: $greyscale-60!important;
+  color: $greyscale-60 !important;
 }
 
 h2 {
-  margin-top: 80px!important;
+  margin-top: 80px !important;
 }
 
 h3 {
-  margin-top: 40px!important;
+  margin-top: 40px !important;
 }
