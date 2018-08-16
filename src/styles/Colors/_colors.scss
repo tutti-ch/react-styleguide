@@ -59,15 +59,15 @@ $blue: (
 
 // Green palette
 
-$green-10: #082000;
-$green-20: #104100;
-$green-30: #186100;
-$green-40: #218200;
-$green-50: #24a300;
-$green-60: #52b532;
-$green-70: #7dc766;
-$green-80: #a8da99;
-$green-90: #d3eccc;
+$green-10: #004015;
+$green-20: #004015;
+$green-30: #00601f;
+$green-40: #00802a;
+$green-50: #00a034;
+$green-60: #33b35d;
+$green-70: #66c685;
+$green-80: #99d9ae;
+$green-90: #99d9ae;
 
 $green: (
   "10": $green-10,
@@ -131,15 +131,15 @@ $yellow: (
 
 // Orange palette
 
-$orange-10: #301808;
-$orange-20: #613110;
-$orange-30: #914919;
-$orange-40: #c26221;
-$orange-50: #f27a29;
-$orange-60: #f59554;
-$orange-70: #f7af7f;
-$orange-80: #facaa9;
-$orange-90: #fce4d4;
+$orange-10: #33200c;
+$orange-20: #663f18;
+$orange-30: #995f24;
+$orange-40: #cc7e30;
+$orange-50: #ff9e3c;
+$orange-60: #ffb163;
+$orange-70: #ffc58a;
+$orange-80: #ffd8b1;
+$orange-90: #ffecd8;
 
 $orange: (
   "10": $orange-10,
@@ -151,4 +151,28 @@ $orange: (
   "70": $orange-70,
   "80": $orange-80,
   "90": $orange-90
+);
+
+// Purple palette
+
+$purple-10: #1f152f;
+$purple-20: #3f2b5f;
+$purple-30: #5e408e;
+$purple-40: #7e56be;
+$purple-50: #9d6bed;
+$purple-60: #b189f1;
+$purple-70: #c4a6f4;
+$purple-80: #d8c4f8;
+$purple-90: #ebe1fb;
+
+$purple: (
+  "10": $purple-10,
+  "20": $purple-20,
+  "30": $purple-30,
+  "40": $purple-40,
+  "50": $purple-50,
+  "60": $purple-60,
+  "70": $purple-70,
+  "80": $purple-80,
+  "90": $purple-90
 );
