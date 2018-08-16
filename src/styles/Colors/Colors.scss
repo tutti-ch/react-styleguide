@@ -4,7 +4,7 @@
 @mixin palette($colorMap, $name) {
   @each $shade, $color in $colorMap {
     .#{$name}-#{$shade} {
-      background-color: #{$color};
+      background: #{$color};
     }
   }
 }
@@ -28,3 +28,4 @@
 @include palette($yellow, "yellow");
 @include palette($red, "red");
 @include palette($purple, "purple");
+@include palette($gradient, "gradient");

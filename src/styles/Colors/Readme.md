@@ -57,3 +57,11 @@ The purple color is used to create gradients for marketing / promo features.
 ```jsx noeditor
 <Colors color="purple" shades={[10, 20, 30, 40, 50, 60, 70, 80, 90]} />
 ```
+
+### Gradients
+
+The gradients are used for marketing / promo features.
+
+```jsx noeditor
+<Colors color="gradient" shades={['red', 'blue', 'green', 'orange', 'purple', 'yellow']} />
+```
