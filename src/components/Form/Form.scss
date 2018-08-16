@@ -525,6 +525,7 @@ $inputHeight: $size-xxxl;
           display: block;
           margin: 0 0 0 $size-xxs;
           transition: all $transition-s;
+          width: 0.8rem;
 
           &:hover {
             color: $blue-20;
