@@ -203,7 +203,8 @@ export default (WrappedComponent, mergeProps = {}) => {
           [classes.inline]: inline,
           [classes.hasValue]: hasValue,
           [classes.hasLabel]: label,
-          [classes.hasPlaceholder]: !!this.props.placeholder
+          [classes.hasPlaceholder]: !!this.props.placeholder,
+          [classes.hidden]: type === "hidden"
         },
         mergeProps.className,
         className
