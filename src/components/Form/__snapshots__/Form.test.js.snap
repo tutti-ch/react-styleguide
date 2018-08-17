@@ -1567,7 +1567,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     placeholder="Favorite framework"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Select
                         multiple={false}
@@ -1653,6 +1653,23 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               <div
                                 className=""
                               >
+                                <Option
+                                  key="placeholder-undefined"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Favorite framework"
+                                  value={null}
+                                >
+                                  <div
+                                    className="undefined"
+                                    key="null"
+                                    onClick={[Function]}
+                                  >
+                                    <span>
+                                      Favorite framework
+                                    </span>
+                                  </div>
+                                </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
@@ -1884,7 +1901,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     selected="React.js"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Select
                         multiple={false}
@@ -1972,6 +1989,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 className=""
                               >
                                 <Option
+                                  key="placeholder-undefined"
                                   onClick={[Function]}
                                   selected={false}
                                   text="Favorite framework"
@@ -2218,7 +2236,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     placeholder="Favorite framework"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Select
                         multiple={true}
@@ -2700,7 +2718,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                     placeholder="Favorite framework"
                   >
                     <div
-                      className="undefined"
+                      className=""
                     >
                       <Select
                         multiple={false}
@@ -2786,6 +2804,23 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                               <div
                                 className=""
                               >
+                                <Option
+                                  key="placeholder-undefined"
+                                  onClick={[Function]}
+                                  selected={false}
+                                  text="Favorite framework"
+                                  value={null}
+                                >
+                                  <div
+                                    className="undefined"
+                                    key="null"
+                                    onClick={[Function]}
+                                  >
+                                    <span>
+                                      Favorite framework
+                                    </span>
+                                  </div>
+                                </Option>
                                 <Option
                                   highlighted={false}
                                   key="opt-React.js"
@@ -3029,7 +3064,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             placeholder="Select your favorite framework"
                           >
                             <div
-                              className="undefined"
+                              className=""
                             >
                               <Select
                                 multiple={false}
@@ -3088,6 +3123,23 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                       <div
                                         className=""
                                       >
+                                        <Option
+                                          key="placeholder-framework"
+                                          onClick={[Function]}
+                                          selected={false}
+                                          text="Select your favorite framework"
+                                          value={null}
+                                        >
+                                          <div
+                                            className="undefined"
+                                            key="null"
+                                            onClick={[Function]}
+                                          >
+                                            <span>
+                                              Select your favorite framework
+                                            </span>
+                                          </div>
+                                        </Option>
                                         <Option
                                           highlighted={false}
                                           key="opt-react"
