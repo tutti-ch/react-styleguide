@@ -53,11 +53,6 @@ export default class Form extends Component {
    */
   static assignKeyPair(values, keyValuePair) {
     Object.keys(keyValuePair).forEach(k => {
-      // Skip empty values.
-      if (keyValuePair[k] === null || typeof keyValuePair[k] === "undefined") {
-        return;
-      }
-
       if (values[k]) {
         // Cast to an array ({ a: "b" } becomes { a: ["b"] })
         if (!Array.isArray(values[k])) {

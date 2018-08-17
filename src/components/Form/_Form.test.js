@@ -118,7 +118,8 @@ describe("(Component) Form", () => {
     expect(Form.assignKeyPair(values, keyPair)).toEqual({
       a: ["b", "d"],
       c: [1, 2, 5],
-      d: false
+      d: false,
+      f: null
     });
   });
 
