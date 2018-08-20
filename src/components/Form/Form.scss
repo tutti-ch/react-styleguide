@@ -336,7 +336,6 @@ $inputHeight: $size-xxxl;
         background: $greyscale-100;
         position: absolute;
         margin-top: -2px;
-        margin-bottom: 4rem; // When the options hit the bottom of page, this gives a bit of space
         top: 100%;
         right: -1px;
         left: -1px;
@@ -405,6 +404,7 @@ $inputHeight: $size-xxxl;
 
     &.is-open {
       .options {
+        margin-bottom: 4rem; // When the options hit the bottom of page, this gives a bit of space
         max-height: 320px;
         opacity: 1;
         visibility: visible;
