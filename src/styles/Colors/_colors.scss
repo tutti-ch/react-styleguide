@@ -179,12 +179,12 @@ $purple: (
 
 // Gradients palette
 
-$gradient-red: radial-gradient($red-80, $red-50);
-$gradient-blue: radial-gradient($blue-80, $blue-50);
-$gradient-green: radial-gradient($green-80, $green-50);
-$gradient-orange: radial-gradient($orange-80, $orange-50);
-$gradient-purple: radial-gradient($purple-80, $purple-50);
-$gradient-yellow: radial-gradient($yellow-80, $yellow-50);
+$gradient-red: linear-gradient(135deg, $red-80, $red-50);
+$gradient-blue: linear-gradient(135deg, $blue-80, $blue-50);
+$gradient-green: linear-gradient(135deg, $green-80, $green-50);
+$gradient-orange: linear-gradient(135deg, $orange-80, $orange-50);
+$gradient-purple: linear-gradient(135deg, $purple-80, $purple-50);
+$gradient-yellow: linear-gradient(135deg, $yellow-80, $yellow-50);
 
 $gradient: (
   "red": $gradient-red,
