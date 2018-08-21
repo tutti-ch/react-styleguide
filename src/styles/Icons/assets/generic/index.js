@@ -39,8 +39,8 @@ export const InsertImage = p => <Sprite {...p} viewBox="0 0 30 30" id="insert-im
 export const Label = p => <Sprite {...p} viewBox="0 0 32 32" id="label"/>
 export const LockHexagon = p => <Sprite {...p} viewBox="0 0 13.8 16.3" id="lock-hexagon"/>
 export const Lock = p => <Sprite {...p} viewBox="0 0 2.6 3.5" id="lock"/>
-export const Login = p => <Sprite {...p} viewBox="0 0 35 30" id="login"/>
-export const Logout = p => <Sprite {...p} viewBox="0 0 30 30" id="logout"/>
+export const Login = p => <Sprite {...p} viewBox="0 0 28.2 28.3" id="login"/>
+export const Logout = p => <Sprite {...p} viewBox="0 0 29 29" id="logout"/>
 export const Mail = p => <Sprite {...p} viewBox="0 0 30 30" id="mail"/>
 export const Menu = p => <Sprite {...p} viewBox="0 0 24 24" id="menu"/>
 export const MyItems = p => <Sprite {...p} viewBox="0 0 30 30" id="my-items"/>
