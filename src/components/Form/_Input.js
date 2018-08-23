@@ -21,7 +21,11 @@ export class Input extends Component {
     /**
      * The initial value.
      */
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    value: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+      PropTypes.bool
+    ]),
 
     /**
      * The input type.
