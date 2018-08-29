@@ -12,7 +12,7 @@ describe("(Component) Image", () => {
   beforeAll(() => {
     // mock TuttiCube for snaphots
     mock = generic.TuttiCube.mockImplementation(() => <svg />);
-  })
+  });
 
   beforeEach(() => {
     comp = mount(<Image src={initialSrc} />);

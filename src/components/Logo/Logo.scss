@@ -1,14 +1,10 @@
 @import "~susy/sass/susy";
 @import "../../styles/main";
 
-$height: 2.75rem;
-$heightCube: 0.65 * $height;
-
 .logo {
   display: flex;
   align-items: center;
-  width: 4.55 * $height;
-  height: $height;
+  height: 2.75rem;
   margin-left: $size-xxs;
   @include z-index("overlay", "ground");
 
@@ -16,156 +12,40 @@ $heightCube: 0.65 * $height;
     margin-left: $size-xxxs;
   }
 
-  @include ifInternetExplorer {
-    background: url("./assets/logo-fallback.svg");
-    .cube-box,
-    .font {
-      display: none;
+  .symbolBox {
+    height: 130%;
+    position: relative;
+    margin-right: 5%;
+
+    .symbolSquare {
+      height: 100%;
+      border-radius: $border-radius-l;
+      transform-origin: 75% 75%;
+      transition: $transition-m;
     }
-  }
 
-  @include tablet-and-smaller {
-    // Static logo also on mobile devices because of z-index issues (and there is no hover for rotation)
-    // https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate
-    background: url("./assets/logo-fallback.svg") no-repeat left center;
-    width: auto;
-    max-width: 11rem;
-    margin-left: 0;
-    margin-right: $size-xxs;
-    .cube-box,
-    .font {
-      display: none;
+    .symbolT {
+      position: absolute;
+      bottom: 5%;
+      height: 70%;
+      left: 26%;
     }
-  }
-}
-
-.font {
-  height: 100%;
-  width: 100%;
-  transition: all 0.5s ease;
-  margin-top: 0.2rem;
-
-  .st0 {
-    transition: all 0.5s ease;
-    fill: $red-60;
-  }
-}
-
-.cube-box {
-  margin-right: 7%;
-  @include z-index('topbar','penthouse');
-}
-
-.cube {
-  position: relative;
-  width: $heightCube;
-  height: $heightCube;
-  transform-style: preserve-3d;
-  transform: rotateX(-30deg) rotateY(-135deg); // Rotating the cube to isometric view
-  // animation: spin-in 1s ease-in forwards;
-
-  div {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 0 0 2px $greyscale-100; //To correct bug that shows other sides
-  }
-}
-
-// Positioning the sides
-
-.top {
-  transform: rotateX(-90deg) translateY(- $heightCube / 2);
-  transform-origin: top center;
-  background: url("./assets/side-car.svg");
-}
-
-.front {
-  transform: translateZ(- $heightCube / 2) rotateY(180deg);
-  background: url("./assets/side-sofa.svg");
-}
-
-.left {
-  transform: rotateY(-270deg) translateX($heightCube / 2);
-  transform-origin: top right;
-  background: url("./assets/side-house.svg");
-}
-
-.right {
-  transform: rotateY(270deg) translateX(- $heightCube / 2);
-  transform-origin: center left;
-  background: url("./assets/side-house.svg");
-}
-
-.back {
-  transform: translateZ($heightCube / 2);
-  background: url("./assets/side-shirt.svg");
-}
-
-/* .bottom {
-	transform: rotateX(90deg) translateY( $heightCube / 2);
-	transform-origin: bottom center;
-  background: url('./assets/side-front.svg');
-}
-*/
-
-@keyframes spin-in {
-  from {
-    transform: rotatex(-30deg) rotateY(45deg);
-  }
-  to {
-    transform: rotatex(-30deg) rotateY(225deg);
-  }
-}
-
-@keyframes spin-out {
-  0% {
-    transform: rotatex(-30deg) rotateY(225deg);
-  }
-  100% {
-    transform: rotatex(-30deg) rotateY(45deg);
-  }
-}
-
-.logo:hover {
-  cursor: pointer;
-
-  .cube {
-    animation: spin-in 0.5s ease-out forwards;
   }
 
   .font {
-    .st0 {
-      fill: $red-40;
+    height: 80%;
+    margin-top: 3%;
+  }
+
+  &:hover {
+    .symbolSquare {
+      cursor: pointer;
+      transform: rotate(-15deg);
+      opacity: 0.7;
     }
-  }
-}
 
-/* TODO:
-- use js to detect rotation value and change animation from it (to avoid jumping when interacting durin animation)
-- Make size of the logo a property
-- Uncomment spin-in in .cube once we get rid of platform
-*/
-
-// Styles for print
-
-.logoPrint {
-  display: none!important;
-}
-
-@media print {
-
-  .logoPrint {
-    display: block!important;
-    width: 100%;
-    height: 100%;
-  }
-
-  .logo {
-    background: none;
-    .cube-box,
     .font {
-      display: none;
+      opacity: 0.8;
     }
   }
 }

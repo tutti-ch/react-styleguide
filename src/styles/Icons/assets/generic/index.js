@@ -83,7 +83,7 @@ export const TickEmpty = p => <Sprite {...p} viewBox="0 0 30 30" id="tick-empty"
 export const TickSolid = p => <Sprite {...p} viewBox="0 0 20 20" id="tick-solid"/>
 export const Tick = p => <Sprite {...p} viewBox="0 0 30 30" id="tick"/>
 export const Trash = p => <Sprite {...p} viewBox="0 0 32 32" id="trash"/>
-export const TuttiCube = p => <Sprite {...p} viewBox="0 0 32 32" id="tutti-cube"/>
+export const TuttiCube = p => <Sprite {...p} viewBox="0 0 508 508" id="tutti-cube"/>
 export const TuttiPremium = p => <Sprite {...p} viewBox="0 0 32 32" id="tutti-premium"/>
 export const User = p => <Sprite {...p} viewBox="0 0 50 50" id="user"/>
 export const ViewBig = p => <Sprite {...p} viewBox="0 0 19 16.5" id="view-big"/>

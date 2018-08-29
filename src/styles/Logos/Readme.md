@@ -17,9 +17,3 @@ The SVG icons shown here are from [src/styles/Logos/assets/tutti](https://github
 ```jsx noeditor
 <Logos directory="subscriptions" />
 ```
-
-### Main logo - Tilted
-
-```jsx noeditor
-<Logos directory="tutti-2018" />
-```

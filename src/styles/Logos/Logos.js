@@ -7,7 +7,6 @@ import {
   BoxCard
 } from "../../internals/Box";
 import LogoAnimated from "../../components/Logo";
-import LogoFallback from "../../components/Logo/assets/logo-fallback.svg";
 
 export default class Logos extends Component {
   static propTypes = {
@@ -39,9 +38,6 @@ export default class Logos extends Component {
               <BoxItem>
                 <LogoAnimated />
               </BoxItem>
-              <BoxItem>
-                <img src={LogoFallback} height="44" />
-              </BoxItem>
             </div>
           )}
         </BoxItemWrapper>
@@ -54,8 +50,9 @@ export default class Logos extends Component {
                   key={`asset-${index}`}
                   name={logo}
                   style={{
-                    background:
-                      logo.match(/white|negative/i) ? "#ccc" : undefined
+                    background: logo.match(/white|negative/i)
+                      ? "#ccc"
+                      : undefined
                   }}
                 >
                   <Logo width={"75px"} />
