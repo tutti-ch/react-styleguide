@@ -49,3 +49,18 @@
     }
   }
 }
+
+.fallback {
+  display: none;
+}
+
+@include ifInternetExplorer {
+  .symbolBox,
+  .font {
+    display: none;
+  }
+
+  .fallback {
+    display: flex;
+  }
+}

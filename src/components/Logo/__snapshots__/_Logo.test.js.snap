@@ -44,6 +44,19 @@ exports[`(Components) Logo should match the snapshot 1`] = `
         src="mockimage"
       />
     </Image>
+    <Image
+      alt="tutti.ch"
+      src="mockimage"
+    >
+      <img
+        alt="tutti.ch"
+        className=""
+        draggable={true}
+        onError={[Function]}
+        onLoad={[Function]}
+        src="mockimage"
+      />
+    </Image>
   </div>
 </Logo>
 `;
