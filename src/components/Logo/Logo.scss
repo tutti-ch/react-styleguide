@@ -6,7 +6,6 @@
   align-items: center;
   height: 2.2rem;
   width: 10rem;
-  margin-left: $size-xxs;
   @include z-index("overlay", "ground");
 
   @include tablet-and-bigger {
@@ -21,7 +20,7 @@
 
     .symbolSquare {
       height: 2.6rem;
-      transform-origin: 2.1rem 2.1rem;
+      transform-origin: 1.8rem 1.8rem;
       transition: $transition-m;
     }
 
@@ -42,11 +41,11 @@
     .symbolSquare {
       cursor: pointer;
       transform: rotate(-15deg);
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
     .font {
-      opacity: 0.8;
+      opacity: 0.9;
     }
   }
 }
