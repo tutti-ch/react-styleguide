@@ -55,9 +55,13 @@
 }
 
 @include ifInternetExplorer {
+  .logo {
+    width: auto;
+  }
+
   .symbolBox,
   .font {
-    display: none;
+    display: none !important;
   }
 
   .fallback {
