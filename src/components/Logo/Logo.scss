@@ -4,7 +4,7 @@
 .logo {
   display: flex;
   align-items: center;
-  height: $size-xxl;
+  height: $size-xl;
   margin-left: $size-xxs;
   @include z-index("overlay", "ground");
 
@@ -15,7 +15,7 @@
   .symbolBox {
     height: 130%;
     position: relative;
-    margin-right: $size-xs;
+    margin-right: $size-xxs;
 
     .symbolSquare {
       height: 100%;
