@@ -8,10 +8,6 @@
   width: 10rem;
   @include z-index("overlay", "ground");
 
-  @include tablet-and-bigger {
-    margin-left: $size-xxxs;
-  }
-
   .symbolBox {
     position: relative;
     margin-right: $size-xxs;
