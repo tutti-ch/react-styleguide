@@ -37,7 +37,7 @@ $inputHeight: $size-xxxl;
 
   &:focus {
     outline: none;
-    border-color: $greyscale-00;
+    border-color: $greyscale-20;
   }
 }
 
@@ -326,7 +326,7 @@ $inputHeight: $size-xxxl;
       align-items: center;
 
       &:focus {
-        border-color: $greyscale-00;
+        border-color: $greyscale-20;
         outline: none;
       }
 
@@ -397,7 +397,7 @@ $inputHeight: $size-xxxl;
     &.is-open .options,
     &.is-open .select-inner,
     &:not(.disabled):hover .select-inner {
-      border-color: $greyscale-00;
+      border-color: $greyscale-80;
     }
 
     &.is-open {
@@ -413,9 +413,13 @@ $inputHeight: $size-xxxl;
       }
     }
 
-    &:not(.disabled):hover .ph:after,
+    &:not(.is-open):not(.disabled):hover .ph:after {
+      border-color: $greyscale-50 transparent transparent;
+    }
     &.is-open .ph:after {
-      border-color: $greyscale-00 transparent transparent;
+      border-color: transparent transparent $greyscale-50;
+      border-width: 0.2rem 0.4rem 0.4rem;
+      margin-top: 0;
     }
 
     &.disabled {
@@ -477,6 +481,11 @@ $inputHeight: $size-xxxl;
       left: auto;
       min-width: 250px;
       max-height: 320px;
+      margin-top: $size-xxs;
+
+      &.right {
+        left: 0;
+      }
     }
   }
 

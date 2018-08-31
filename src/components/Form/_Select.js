@@ -87,6 +87,7 @@ export class Select extends Component {
       highlighted: !multiple ? this.findIndexByValue(selected[0]) : -1,
       isOpen: false,
       isFocused: false,
+      direction: "left",
       options: options
         .filter(i => i)
         .map(i => ({ ...i, value: i.value.toString() })),
@@ -408,8 +409,17 @@ export class Select extends Component {
       highlighted,
       isOpen,
       options,
-      selected: selectedValues
+      selected: selectedValues,
+      direction
     } = this.state;
+
+    // Check if the rendered dropdown would fall out of viewport.
+    if (this.optionsDiv) {
+      const dropdownBounds = this.optionsDiv.getBoundingClientRect();
+      if (dropdownBounds.x < 0) {
+        this.setState({ direction: "right" });
+      }
+    }
 
     const selectClasses = classNames(classes.select, {
       [classes.multiple]: multiple,
@@ -443,7 +453,9 @@ export class Select extends Component {
             </div>
 
             <div
-              className={classNames(classes.options)}
+              className={classNames(classes.options, {
+                [classes.right]: direction === "right"
+              })}
               ref={r => {
                 this.optionsDiv = r;
               }}
