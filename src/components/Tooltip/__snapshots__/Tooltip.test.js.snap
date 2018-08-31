@@ -125,6 +125,7 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                 },
               ]
             }
+            required={false}
             selected="t"
             size="medium"
           >

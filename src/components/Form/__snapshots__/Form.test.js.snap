@@ -1614,6 +1614,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           ]
                         }
                         placeholder="Favorite framework"
+                        required={false}
                         size="medium"
                       >
                         <OutsideClickable
@@ -1948,6 +1949,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           ]
                         }
                         placeholder="Favorite framework"
+                        required={false}
                         selected="React.js"
                         size="medium"
                       >
@@ -2283,6 +2285,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           ]
                         }
                         placeholder="Favorite framework"
+                        required={false}
                         size="medium"
                       >
                         <OutsideClickable
@@ -2765,6 +2768,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           ]
                         }
                         placeholder="Favorite framework"
+                        required={false}
                         size="medium"
                       >
                         <OutsideClickable
@@ -3084,6 +3088,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                   ]
                                 }
                                 placeholder="Select your favorite framework"
+                                required={false}
                                 size="medium"
                               >
                                 <OutsideClickable

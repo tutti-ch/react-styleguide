@@ -67,12 +67,18 @@ export class Select extends Component {
     /**
      * The input name.
      */
-    name: PropTypes.string
+    name: PropTypes.string,
+
+    /**
+     * If it can be left empty or not. If not, the placeholder is not one of the options.
+     */
+    required: PropTypes.bool
   };
 
   static defaultProps = {
     multiple: false,
-    size: "medium"
+    size: "medium",
+    required: false
   };
 
   constructor(props) {
@@ -404,7 +410,7 @@ export class Select extends Component {
   };
 
   render() {
-    const { disabled, placeholder, multiple, name } = this.props;
+    const { disabled, placeholder, multiple, name, required } = this.props;
     const {
       highlighted,
       isOpen,
@@ -460,7 +466,7 @@ export class Select extends Component {
                 this.optionsDiv = r;
               }}
             >
-              {placeholder && !multiple ? (
+              {placeholder && !required && !multiple ? (
                 <Option
                   text={placeholder}
                   value={null}

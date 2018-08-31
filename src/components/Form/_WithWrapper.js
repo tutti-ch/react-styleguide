@@ -180,7 +180,7 @@ export default (WrappedComponent, mergeProps = {}) => {
     }
 
     render() {
-      const { inline, className } = this.props;
+      const { inline, className, type, placeholder } = this.props;
       const { error, formValue } = this.state;
       const hasValue = !!formValue || mergeProps.hasValue;
       const injectedProps = filterProps(WithWrapper.propTypes, this.props);
@@ -203,8 +203,8 @@ export default (WrappedComponent, mergeProps = {}) => {
           [classes.inline]: inline,
           [classes.hasValue]: hasValue,
           [classes.hasLabel]: label,
-          [classes.hasPlaceholder]: !!this.props.placeholder,
-          [classes.hidden]: this.props.type === "hidden"
+          [classes.hasPlaceholder]: !!placeholder,
+          [classes.hidden]: type === "hidden"
         },
         mergeProps.className,
         className

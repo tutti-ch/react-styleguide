@@ -44,6 +44,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
     ]
   }
   placeholder="my-placeholder"
+  required={false}
   selected={Array []}
   size="medium"
 >
@@ -474,6 +475,7 @@ exports[`(Component) Select [snapshot] should match 1`] = `
       },
     ]
   }
+  required={false}
   selected={
     Array [
       "jQuery",
