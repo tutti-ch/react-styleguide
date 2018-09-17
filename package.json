@@ -8,22 +8,23 @@
     "dev": "npm run styleguide",
     "start": "npm run styleguide",
     "dist:build": "npm run test",
-    "dist:publish": "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
+    "dist:publish":
+      "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "svgo": "find src/styles -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
-    "svgo-generic": "find src/styles/Icons/assets/generic -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo --config=.svgo.yml",
-    "icons": "npm run svgo && npm run svgo-generic && node ./scripts/generateIcons.js",
+    "svgo":
+      "find src/styles -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
+    "svgo-generic":
+      "find src/styles/Icons/assets/generic -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo --config=.svgo.yml",
+    "icons":
+      "npm run svgo && npm run svgo-generic && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
   "lint-staged": {
-    "*.{js,json}": [
-      "prettier --write",
-      "git add"
-    ],
+    "*.{js,json}": ["prettier --write", "git add"],
     "*.scss": [
       "prettier --parser postcss --write",
       "stylelint-staged",
@@ -34,11 +35,7 @@
     "type": "git",
     "url": "git://github.com/tutti-ch/react-styleguide.git"
   },
-  "keywords": [
-    "react",
-    "tutti.ch",
-    "styleguide"
-  ],
+  "keywords": ["react", "tutti.ch", "styleguide"],
   "author": "Tutti AG Switzerland",
   "license": "MIT",
   "bugs": {
@@ -63,6 +60,7 @@
     "lint-staged": "^5.0.0",
     "node-sass": "^4.6.1",
     "prettier": "^1.8.2",
+    "react-styleguidist": "^6.4.0",
     "regenerator-runtime": "^0.11.0",
     "sass-loader": "^6.0.6",
     "stylelint": "^8.2.0",
@@ -79,7 +77,6 @@
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-styleguidist": "^6.4.0",
     "save": "^2.3.1",
     "susy": "^2.2.12",
     "svg-sprite-generator": "0.0.7",
