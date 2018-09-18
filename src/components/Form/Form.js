@@ -3,7 +3,7 @@ import Input from "./_Input";
 import InputCheckbox from "./_InputCheckbox";
 import InputRadio from "./_InputRadio";
 import Textarea from "./_Textarea";
-import Slider from "./_Slider";
+// import Slider from "./_Slider";
 import Table from "../Table";
 import InputRadioGroup from "./_InputRadioGroup";
 import Select from "./_Select";
@@ -128,7 +128,7 @@ class ExampleForm extends React.Component {
             <Form.Toggle.Option value="Trans">Trans</Form.Toggle.Option>
           </Form.Toggle>
         </div>
-        <div style={{ margin: "1.5rem 1rem 1rem 1rem" }}>
+        {/* <div style={{ margin: "1.5rem 1rem 1rem 1rem" }}>
           <Form.Slider
             name={["minPrice", "maxPrice"]}
             label="Price range"
@@ -155,7 +155,7 @@ class ExampleForm extends React.Component {
                 "Values: " + JSON.stringify(this.state.values, null, 2)}
             </code>
           </pre>
-        </div>
+        </div> */}
         <div>
           <Button type="submit" level={Button.LEVEL_SECONDARY}>
             Submit
@@ -193,7 +193,7 @@ export default () => (
           <Input label="Phone" type="phone" />
         </Table.Cell>
       </Table.Row>
-      <Table.Row>
+      {/* <Table.Row>
         <Table.Cell>
           <h3>Slider</h3>
         </Table.Cell>
@@ -283,7 +283,7 @@ export default () => (
             />
           </div>
         </Table.Cell>
-      </Table.Row>
+      </Table.Row> */}
       <Table.Row>
         <Table.Cell>
           <h3>Checkbox</h3>

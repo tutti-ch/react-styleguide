@@ -7,7 +7,7 @@ import Radio from "./_InputRadio";
 import RadioGroup from "./_InputRadioGroup";
 import Checkbox from "./_InputCheckbox";
 import Select from "./_Select";
-import Slider from "./_Slider";
+// import Slider from "./_Slider"; removed slider as we don't use it at the moment
 import Toggle from "./_Toggle";
 import Error from "./_Error";
 import { filterProps } from "../../helpers/functions";
@@ -19,7 +19,7 @@ export default class Form extends Component {
   static RadioGroup = RadioGroup;
   static Checkbox = Checkbox;
   static Select = Select;
-  static Slider = Slider;
+  // static Slider = Slider;
   static Textarea = Textarea;
   static GenericError = Error;
   static Toggle = Toggle;
