@@ -37,6 +37,8 @@ export const Info = p => <Sprite {...p} viewBox="0 0 30 30" id="info"/>
 export const InsertAd = p => <Sprite {...p} viewBox="0 0 49.8 49.8" id="insert-ad"/>
 export const InsertImage = p => <Sprite {...p} viewBox="0 0 30 30" id="insert-image"/>
 export const Label = p => <Sprite {...p} viewBox="0 0 32 32" id="label"/>
+export const Launch = p => <Sprite {...p} viewBox="0 0 24 24" id="launch"/>
+export const Link = p => <Sprite {...p} viewBox="0 0 24 24" id="link"/>
 export const LockHexagon = p => <Sprite {...p} viewBox="0 0 13.8 16.3" id="lock-hexagon"/>
 export const Lock = p => <Sprite {...p} viewBox="0 0 2.6 3.5" id="lock"/>
 export const Login = p => <Sprite {...p} viewBox="0 0 28.2 28.3" id="login"/>
