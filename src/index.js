@@ -1,16 +1,17 @@
 /**
  * This file will get exported.
  */
-export Image from "./components/Image";
-export Spinner from "./components/Spinner";
-export Table from "./components/Table";
-export Button from "./components/Button";
-export TriggerLink from "./components/TriggerLink";
-export Pagination from "./components/Pagination";
-export Form from "./components/Form";
-export Logo from "./components/Logo";
-export Tabs from "./components/Tabs";
-export Tooltip from "./components/Tooltip"
+export { default as Image } from "./components/Image";
+export { default as Spinner } from "./components/Spinner";
+export { default as Table } from "./components/Table";
+export { default as Button } from "./components/Button";
+export { default as TriggerLink } from "./components/TriggerLink";
+export { default as Pagination } from "./components/Pagination";
+export { default as Form } from "./components/Form";
+export { default as Logo } from "./components/Logo";
+export { default as Tabs } from "./components/Tabs";
+export { default as Tooltip } from "./components/Tooltip";
+
 import * as Icons from "./styles/Icons/assets";
 import * as Illustrations from "./styles/Illustrations/assets";
 import * as Logos from "./styles/Logos/assets";
