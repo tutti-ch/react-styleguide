@@ -1,6 +1,6 @@
 {
   "name": "tutti-ch-styleguide",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "description": "React-based styleguide for tutti.ch",
   "main": "src/index.js",
   "scripts": {
@@ -8,23 +8,22 @@
     "dev": "npm run styleguide",
     "start": "npm run styleguide",
     "dist:build": "npm run test",
-    "dist:publish":
-      "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
+    "dist:publish": "git pull && npm run dist:build && npm version patch -m \"Upgrade package %s\" && git push && npm publish",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "stylelint-staged": "stylelint --syntax scss",
     "styleguide": "styleguidist server",
     "styleguide:build": "npm run icons && styleguidist build",
-    "svgo":
-      "find src/styles -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
-    "svgo-generic":
-      "find src/styles/Icons/assets/generic -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo --config=.svgo.yml",
-    "icons":
-      "npm run svgo && npm run svgo-generic && node ./scripts/generateIcons.js",
+    "svgo": "find src/styles -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo",
+    "svgo-generic": "find src/styles/Icons/assets/generic -type f ! -name '_sprite.svg' -name '*.svg' -print0 | xargs -0 -n 1 -P 6 svgo --config=.svgo.yml",
+    "icons": "npm run svgo && npm run svgo-generic && node ./scripts/generateIcons.js",
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"],
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ],
     "*.scss": [
       "prettier --parser postcss --write",
       "stylelint-staged",
@@ -35,7 +34,11 @@
     "type": "git",
     "url": "git://github.com/tutti-ch/react-styleguide.git"
   },
-  "keywords": ["react", "tutti.ch", "styleguide"],
+  "keywords": [
+    "react",
+    "tutti.ch",
+    "styleguide"
+  ],
   "author": "Tutti AG Switzerland",
   "license": "MIT",
   "bugs": {
