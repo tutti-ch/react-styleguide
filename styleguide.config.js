@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   styleguideDir: "docs",
 
-  template: "src/templates/index.html",
+  // template: "src/templates/index.html",
 
   // @see https://react-styleguidist.js.org/docs/components.html#sections
   //
