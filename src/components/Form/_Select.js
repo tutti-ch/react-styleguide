@@ -466,14 +466,6 @@ export class Select extends Component {
                 this.optionsDiv = r;
               }}
             >
-              {placeholder && !required && !multiple ? (
-                <Option
-                  text={placeholder}
-                  value={null}
-                  onClick={this.resetSelected}
-                  key={`placeholder-${name}`}
-                />
-              ) : null}
               {options.map(({ value, icon, image, text }, key) => {
                 return (
                   <Option
