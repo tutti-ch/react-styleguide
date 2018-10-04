@@ -95,7 +95,9 @@
     "stylelint": "^8.2.0",
     "svgo": "^1.0.3",
     "url-loader": "^0.6.2",
-    "webpack": "^3.8.1"
+    "webpack": "^3.8.1",
+    "svg-sprite-generator": "0.0.7",
+    "svg4everybody": "^2.1.9"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -106,8 +108,6 @@
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "save": "^2.3.1",
-    "svg-sprite-generator": "0.0.7",
-    "svg4everybody": "^2.1.9"
+    "save": "^2.3.1"
   }
 }
