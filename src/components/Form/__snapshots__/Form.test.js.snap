@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`(Styleguide) Form should match the snapshot 1`] = `
-<_default>
+<Component>
   <Table>
     <table
       className=""
@@ -2757,5 +2757,5 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
       </Component>
     </table>
   </Table>
-</_default>
+</Component>
 `;
