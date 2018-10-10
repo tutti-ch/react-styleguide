@@ -6,7 +6,7 @@ import Image from "../Image/Image";
 import TuttiSymbolSquare from "./assets/tutti-logo-square.svg";
 import TuttiSymbolT from "./assets/tutti-logo-t-white.svg";
 import TuttiFont from "./assets/tutti-logo-font.svg";
-import TuttiFallback from "./assets/tutti-logo.svg";
+import TuttiFallback from "./assets/tutti-logo-vertical-small.svg";
 
 const Logo = ({ className }) => (
   <div className={classes.logo}>
