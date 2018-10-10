@@ -45,6 +45,8 @@
 
 .fallback {
   display: none;
+  width: 10rem;
+  margin-right: $size-s;
 }
 
 @include ifInternetExplorer {
