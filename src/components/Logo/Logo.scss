@@ -59,7 +59,15 @@
     display: none !important;
   }
 
-  .fallback {
+  .hideFont {
+    width: 3rem;
+    margin-right: $size-xxs;
+    overflow: hidden;
+    display: block;
+  }
+
+  img.fallback.fallback {
     display: flex;
+    max-width: none;
   }
 }
