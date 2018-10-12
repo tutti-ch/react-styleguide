@@ -351,6 +351,7 @@ $inputHeight: $size-xxxl;
         .option {
           padding: 0 $size-xs;
           border-bottom: 1px solid $greyscale-95;
+          font-weight: normal;
 
           &:hover,
           &.highlighted {
