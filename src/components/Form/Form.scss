@@ -463,7 +463,7 @@ $inputHeight: $size-xxxl;
     }
 
     .select-inner {
-      border: 1px solid transparent;
+      border: none;
       display: inline-block;
       background-color: transparent;
       height: auto;
@@ -474,7 +474,7 @@ $inputHeight: $size-xxxl;
       }
 
       &:not(.disabled):hover {
-        border: 1px solid transparent;
+        border: none;
       }
     }
 
