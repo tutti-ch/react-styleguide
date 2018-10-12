@@ -4,7 +4,36 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
 <Option
   highlighted={true}
   icon={<Icon />}
-  onClick={[Function]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "highlighted": true,
+            "icon": <Icon />,
+            "onClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "text": "my option",
+          },
+          Object {},
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
   selected={true}
   text="my option"
 >

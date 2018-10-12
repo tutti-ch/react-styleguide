@@ -57,19 +57,15 @@ describe("(Component) Image", () => {
   test("should always trigger callbacks", () => {
     const img = mount(<Image src="my-image" />);
     const inst = img.instance();
+    inst.image.onload();
     expect(inst.state.loaded).toBe(true);
   });
 
   test("should trigger callbacks when the prop src is updated", () => {
     const instance = comp.instance();
     expect(instance.image.src).toBe(initialSrc);
-    instance.componentWillReceiveProps({ src: "my-src.jpg" });
-    expect(instance.image.src).toBe("my-src.jpg");
-
-    // The result shoult be the same because we did not change the
-    // props.src (it is still the initialOne)
-    instance.componentWillReceiveProps({ src: initialSrc });
-    expect(instance.image.src).toBe("my-src.jpg");
+    comp.setProps({ src: "my-src.jpg" });
+    expect(instance.image.src).toBe("http://localhost/my-src.jpg");
   });
 
   test("remove callbacks when component is unmounted", () => {
@@ -78,8 +74,8 @@ describe("(Component) Image", () => {
     expect(instance.image.onerror).toBeInstanceOf(Function);
 
     comp.unmount();
-    expect(instance.image.onload).toBeUndefined();
-    expect(instance.image.onerror).toBeUndefined();
+    expect(instance.image.onload).toBe(null);
+    expect(instance.image.onerror).toBe(null);
   });
 
   test("shows a spinner if spinner size is defined", () => {

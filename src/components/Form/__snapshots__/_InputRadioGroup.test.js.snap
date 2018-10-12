@@ -2,7 +2,24 @@
 
 exports[`(Component) InputRadioGroup should handle the change of the children states 1`] = `
 <InputRadioGroup
-  onChange={[Function]}
+  onChange={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          "ang",
+          Object {
+            "name": "fmw",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <div>
     <InputRadio

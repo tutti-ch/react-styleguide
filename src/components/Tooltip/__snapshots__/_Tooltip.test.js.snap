@@ -11,7 +11,7 @@ exports[`(Components) Tooltip should first render null then after APPEAR_AFTER s
   >
     My super tooltip
     <div
-      onClick={[Function]}
+      onClick={[MockFunction]}
     >
       <Close>
         <Sprite

@@ -2,7 +2,7 @@
 
 exports[`(Component) Form.GenericError should match the snapshots 1`] = `
 <Form
-  handleSubmit={[Function]}
+  handleSubmit={[MockFunction]}
 >
   <form
     className=""
@@ -15,7 +15,21 @@ exports[`(Component) Form.GenericError should match the snapshots 1`] = `
 
 exports[`(Component) Form.GenericError should match the snapshots 2`] = `
 <Form
-  handleSubmit={[Function]}
+  handleSubmit={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {},
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": Promise {},
+        },
+      ],
+    }
+  }
 >
   <form
     className="undefined"

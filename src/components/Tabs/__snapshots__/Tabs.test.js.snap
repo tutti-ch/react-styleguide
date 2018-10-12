@@ -3,7 +3,7 @@
 exports[`(Component) Tabs should render correctly 1`] = `
 <Tabs
   defaultActiveTab={0}
-  onTabChange={[Function]}
+  onTabChange={[MockFunction]}
 >
   <div
     className=""

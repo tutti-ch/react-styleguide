@@ -21,7 +21,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link "
+            className="link"
           >
             <ArrowStart>
               <Sprite
@@ -52,7 +52,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link "
+            className="link"
           >
             <Prev>
               <Sprite
@@ -86,7 +86,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link "
+            className="link"
           >
             300
           </div>
@@ -102,7 +102,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link "
+            className="link"
           >
             301
           </div>
@@ -118,7 +118,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className=""
         >
           <div
-            className="link "
+            className="link"
           >
             302
           </div>
@@ -134,7 +134,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className="undefined"
         >
           <div
-            className="link "
+            className="link"
           >
             <Next>
               <Sprite
@@ -165,7 +165,7 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           className="undefined"
         >
           <div
-            className="link "
+            className="link"
           >
             <ArrowEnd>
               <Sprite

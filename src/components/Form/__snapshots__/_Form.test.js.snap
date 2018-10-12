@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`(Component) Form handleSubmit should handle the submit event (error) 1`] = `[Function]`;
+exports[`(Component) Form handleSubmit should handle the submit event (error) 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "firstName": "abc",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": Promise {},
+    },
+  ],
+}
+`;
 
-exports[`(Component) Form handleSubmit should handle the submit event (success) 1`] = `[Function]`;
+exports[`(Component) Form handleSubmit should handle the submit event (success) 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "firstName": "abc",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": Promise {},
+    },
+  ],
+}
+`;

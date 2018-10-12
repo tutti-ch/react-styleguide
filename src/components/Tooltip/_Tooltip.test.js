@@ -4,19 +4,6 @@ import Tooltip from "./_Tooltip";
 import { mount } from "enzyme";
 
 describe("(Components) Tooltip", () => {
-  let ls = global.localStorage;
-
-  beforeEach(() => {
-    global.localStorage = {
-      setItem: jest.fn(),
-      getItem: jest.fn()
-    };
-  });
-
-  afterEach(() => {
-    global.localStorage = ls;
-  });
-
   test("should first render null then after APPEAR_AFTER should appear and close when clicked on the X", async done => {
     Tooltip.APPEAR_AFTER = 0;
     const tooltipName = "my-tooltip";
@@ -51,7 +38,7 @@ describe("(Components) Tooltip", () => {
     await inst.close();
     // Update the render
     comp.update();
-    expect(localStorage.setItem).toHaveBeenCalledWith(tooltipName, "set");
+    expect(window.localStorage.getItem(tooltipName)).toEqual("set");
     expect(comp).toMatchSnapshot();
 
     done();
@@ -59,7 +46,7 @@ describe("(Components) Tooltip", () => {
 
   test("render should be null when user already clicked on close for the tooltip", async done => {
     const tooltipName = "my-tooltip";
-    global.localStorage.getItem.mockReturnValue("set")
+
     const comp = mount(
       <Tooltip arrowPosition={"tl"} name={tooltipName}>
         My super tooltip
