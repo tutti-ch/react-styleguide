@@ -1,19 +1,14 @@
 @import "../../styles/main";
 
 .pagination_bar {
-  width: $phone;
+  width: 100%;
   margin: $size-xl auto;
   display: flex;
   justify-content: center;
   //   @include clearfix;
 
   @include tablet-and-bigger {
-    width: 100%;
     margin: $size-m 0 $size-xl 0;
-  }
-
-  @include phone-and-smaller {
-    width: 100%; // To avoid breaking layout in small phones
   }
 }
 
