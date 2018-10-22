@@ -7,7 +7,10 @@ The colors can be found in [react-mypages/src/styles/style_guide/\_colors.scss](
 The base colors are used for navigation & other interface elements.
 
 ```jsx noeditor
-<Colors color="greyscale" shades={['00', 20, 40, 50, 60, 75, 80, 85, 90, 95, 100]} />
+<Colors
+  color="greyscale"
+  shades={["00", 20, 30, 40, 50, 60, 75, 80, 85, 90, 95, 100]}
+/>
 ```
 
 ### Blue
@@ -63,5 +66,8 @@ The purple color is used to create gradients for marketing / promo features.
 The gradients are used for marketing / promo features.
 
 ```jsx noeditor
-<Colors color="gradient" shades={['red', 'blue', 'green', 'orange', 'purple', 'yellow']} />
+<Colors
+  color="gradient"
+  shades={["red", "blue", "green", "orange", "purple", "yellow"]}
+/>
 ```
