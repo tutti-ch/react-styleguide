@@ -577,6 +577,7 @@ $inputHeight: $size-xxxl;
 .toggleWrapper {
   border: $border-default;
   border-radius: $border-radius-s;
+  display: flex;
 
   &.disabled {
     pointer-events: none;
@@ -598,7 +599,7 @@ $inputHeight: $size-xxxl;
     background-color: $greyscale-100;
 
     &:last-child {
-      border-right: none;
+      border-right: 0;
     }
   }
 

@@ -89,18 +89,20 @@ export class Toggle extends PureComponent {
     const { name, children, selectedClass, onChange, ...props } = this.props;
 
     return (
-      <span
-        className={classNames(props.className, classes.toggleWrapper, {
-          [classes.disabled]: props.disabled
-        })}
-      >
-        {Children.map(children, child =>
-          cloneElement(child, {
-            selectedClass,
-            selected: value === child.props.value,
-            onClick: e => this.handleOnClick(e, child.props.value)
-          })
-        )}
+      <span>
+        <span
+          className={classNames(props.className, classes.toggleWrapper, {
+            [classes.disabled]: props.disabled
+          })}
+        >
+          {Children.map(children, child =>
+            cloneElement(child, {
+              selectedClass,
+              selected: value === child.props.value,
+              onClick: e => this.handleOnClick(e, child.props.value)
+            })
+          )}
+        </span>
         <input type="hidden" value={value} name={name} />
       </span>
     );
