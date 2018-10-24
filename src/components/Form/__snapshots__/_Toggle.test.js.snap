@@ -12,37 +12,39 @@ exports[`(Component) Toggle should match snapshots 1`] = `
       onKeyUp={[Function]}
       value="val1"
     >
-      <span
-        className=""
-      >
-        <Component
-          key=".0"
-          onClick={[Function]}
-          selected={true}
-          value="val1"
+      <span>
+        <span
+          className=""
         >
-          <span
-            className="undefined"
-            data-value="val1"
+          <Component
+            key=".0"
             onClick={[Function]}
+            selected={true}
+            value="val1"
           >
-            Value 1
-          </span>
-        </Component>
-        <Component
-          key=".1"
-          onClick={[Function]}
-          selected={false}
-          value="val2"
-        >
-          <span
-            className=""
-            data-value="val2"
+            <span
+              className="undefined"
+              data-value="val1"
+              onClick={[Function]}
+            >
+              Value 1
+            </span>
+          </Component>
+          <Component
+            key=".1"
             onClick={[Function]}
+            selected={false}
+            value="val2"
           >
-            Value 2
-          </span>
-        </Component>
+            <span
+              className=""
+              data-value="val2"
+              onClick={[Function]}
+            >
+              Value 2
+            </span>
+          </Component>
+        </span>
         <input
           type="hidden"
           value="val1"
