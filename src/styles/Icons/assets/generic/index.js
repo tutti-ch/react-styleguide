@@ -51,7 +51,7 @@ export const PauseCircle = p => <Sprite {...p} viewBox="0 0 32 32" id="pause-cir
 export const Pause = p => <Sprite {...p} viewBox="0 0 17 17" id="pause"/>
 export const Pencil = p => <Sprite {...p} viewBox="0 0 30 30" id="pencil"/>
 export const Phone = p => <Sprite {...p} viewBox="0 0 30 30" id="phone"/>
-export const Pin = p => <Sprite {...p} viewBox="0 0 9.9 14.8" id="pin"/>
+export const Pin = p => <Sprite {...p} viewBox="0 0 24 24" id="pin"/>
 export const Play = p => <Sprite {...p} viewBox="0 0 32 32" id="play"/>
 export const Plus = p => <Sprite {...p} viewBox="0 0 24 24" id="plus"/>
 export const PremiumBump = p => <Sprite {...p} viewBox="0 0 30 24.9" id="premium-bump"/>
