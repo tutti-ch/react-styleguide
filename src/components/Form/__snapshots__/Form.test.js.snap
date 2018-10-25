@@ -482,51 +482,53 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           onKeyUp={[Function]}
                           value="Trans"
                         >
-                          <span
-                            className=""
-                          >
-                            <Component
-                              key=".0"
-                              onClick={[Function]}
-                              selected={false}
-                              value="Man"
+                          <span>
+                            <span
+                              className=""
                             >
-                              <span
-                                className=""
-                                data-value="Man"
+                              <Component
+                                key=".0"
                                 onClick={[Function]}
+                                selected={false}
+                                value="Man"
                               >
-                                Man
-                              </span>
-                            </Component>
-                            <Component
-                              key=".1"
-                              onClick={[Function]}
-                              selected={false}
-                              value="Female"
-                            >
-                              <span
-                                className=""
-                                data-value="Female"
+                                <span
+                                  className=""
+                                  data-value="Man"
+                                  onClick={[Function]}
+                                >
+                                  Man
+                                </span>
+                              </Component>
+                              <Component
+                                key=".1"
                                 onClick={[Function]}
+                                selected={false}
+                                value="Female"
                               >
-                                Female
-                              </span>
-                            </Component>
-                            <Component
-                              key=".2"
-                              onClick={[Function]}
-                              selected={true}
-                              value="Trans"
-                            >
-                              <span
-                                className="undefined"
-                                data-value="Trans"
+                                <span
+                                  className=""
+                                  data-value="Female"
+                                  onClick={[Function]}
+                                >
+                                  Female
+                                </span>
+                              </Component>
+                              <Component
+                                key=".2"
                                 onClick={[Function]}
+                                selected={true}
+                                value="Trans"
                               >
-                                Trans
-                              </span>
-                            </Component>
+                                <span
+                                  className="undefined"
+                                  data-value="Trans"
+                                  onClick={[Function]}
+                                >
+                                  Trans
+                                </span>
+                              </Component>
+                            </span>
                             <input
                               name="gender"
                               type="hidden"
@@ -559,37 +561,39 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           onKeyUp={[Function]}
                           value="Toggle"
                         >
-                          <span
-                            className="undefined"
-                          >
-                            <Component
-                              key=".0"
-                              onClick={[Function]}
-                              selected={false}
-                              value="Man"
+                          <span>
+                            <span
+                              className="undefined"
                             >
-                              <span
-                                className=""
-                                data-value="Man"
+                              <Component
+                                key=".0"
                                 onClick={[Function]}
+                                selected={false}
+                                value="Man"
                               >
-                                Disabled
-                              </span>
-                            </Component>
-                            <Component
-                              key=".1"
-                              onClick={[Function]}
-                              selected={true}
-                              value="Toggle"
-                            >
-                              <span
-                                className="undefined"
-                                data-value="Toggle"
+                                <span
+                                  className=""
+                                  data-value="Man"
+                                  onClick={[Function]}
+                                >
+                                  Disabled
+                                </span>
+                              </Component>
+                              <Component
+                                key=".1"
                                 onClick={[Function]}
+                                selected={true}
+                                value="Toggle"
                               >
-                                Toggle
-                              </span>
-                            </Component>
+                                <span
+                                  className="undefined"
+                                  data-value="Toggle"
+                                  onClick={[Function]}
+                                >
+                                  Toggle
+                                </span>
+                              </Component>
+                            </span>
                             <input
                               name="type"
                               type="hidden"
@@ -621,37 +625,39 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           onKeyUp={[Function]}
                           value=""
                         >
-                          <span
-                            className=""
-                          >
-                            <Component
-                              key=".0"
-                              onClick={[Function]}
-                              selected={false}
-                              value="Man"
+                          <span>
+                            <span
+                              className=""
                             >
-                              <span
-                                className=""
-                                data-value="Man"
+                              <Component
+                                key=".0"
                                 onClick={[Function]}
+                                selected={false}
+                                value="Man"
                               >
-                                No
-                              </span>
-                            </Component>
-                            <Component
-                              key=".1"
-                              onClick={[Function]}
-                              selected={false}
-                              value="Toggle"
-                            >
-                              <span
-                                className=""
-                                data-value="Toggle"
+                                <span
+                                  className=""
+                                  data-value="Man"
+                                  onClick={[Function]}
+                                >
+                                  No
+                                </span>
+                              </Component>
+                              <Component
+                                key=".1"
                                 onClick={[Function]}
+                                selected={false}
+                                value="Toggle"
                               >
-                                Value
-                              </span>
-                            </Component>
+                                <span
+                                  className=""
+                                  data-value="Toggle"
+                                  onClick={[Function]}
+                                >
+                                  Value
+                                </span>
+                              </Component>
+                            </span>
                             <input
                               name="type"
                               type="hidden"
@@ -2675,51 +2681,53 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onKeyUp={[Function]}
                                 value="Trans"
                               >
-                                <span
-                                  className=""
-                                >
-                                  <Component
-                                    key=".0"
-                                    onClick={[Function]}
-                                    selected={false}
-                                    value="Man"
+                                <span>
+                                  <span
+                                    className=""
                                   >
-                                    <span
-                                      className=""
-                                      data-value="Man"
+                                    <Component
+                                      key=".0"
                                       onClick={[Function]}
+                                      selected={false}
+                                      value="Man"
                                     >
-                                      Man
-                                    </span>
-                                  </Component>
-                                  <Component
-                                    key=".1"
-                                    onClick={[Function]}
-                                    selected={false}
-                                    value="Female"
-                                  >
-                                    <span
-                                      className=""
-                                      data-value="Female"
+                                      <span
+                                        className=""
+                                        data-value="Man"
+                                        onClick={[Function]}
+                                      >
+                                        Man
+                                      </span>
+                                    </Component>
+                                    <Component
+                                      key=".1"
                                       onClick={[Function]}
+                                      selected={false}
+                                      value="Female"
                                     >
-                                      Female
-                                    </span>
-                                  </Component>
-                                  <Component
-                                    key=".2"
-                                    onClick={[Function]}
-                                    selected={true}
-                                    value="Trans"
-                                  >
-                                    <span
-                                      className="undefined"
-                                      data-value="Trans"
+                                      <span
+                                        className=""
+                                        data-value="Female"
+                                        onClick={[Function]}
+                                      >
+                                        Female
+                                      </span>
+                                    </Component>
+                                    <Component
+                                      key=".2"
                                       onClick={[Function]}
+                                      selected={true}
+                                      value="Trans"
                                     >
-                                      Trans
-                                    </span>
-                                  </Component>
+                                      <span
+                                        className="undefined"
+                                        data-value="Trans"
+                                        onClick={[Function]}
+                                      >
+                                        Trans
+                                      </span>
+                                    </Component>
+                                  </span>
                                   <input
                                     name="gender"
                                     type="hidden"
