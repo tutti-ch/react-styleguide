@@ -98,6 +98,10 @@ $inputHeight: $size-xxxl;
 
   & + .wrapper {
     margin-top: $size-xl;
+
+    &.noMargin {
+      margin-top: 0;
+    }
   }
 
   & + label.wrapper {

@@ -36,7 +36,12 @@ export default (WrappedComponent, mergeProps = {}) => {
         PropTypes.string,
         PropTypes.array,
         PropTypes.object
-      ])
+      ]),
+
+      /**
+       * Removes all margings on form wrapper
+       */
+      noMargin: PropTypes.bool
     };
 
     static contextTypes = {
@@ -180,7 +185,7 @@ export default (WrappedComponent, mergeProps = {}) => {
     }
 
     render() {
-      const { inline, className, type, placeholder } = this.props;
+      const { inline, className, type, placeholder, noMargin } = this.props;
       const { error, formValue } = this.state;
       const hasValue = !!formValue || mergeProps.hasValue;
       const injectedProps = filterProps(WithWrapper.propTypes, this.props);
@@ -207,6 +212,7 @@ export default (WrappedComponent, mergeProps = {}) => {
           [classes.hidden]: type === "hidden"
         },
         mergeProps.className,
+        { [classes.noMargin]: noMargin },
         className
       );
 
