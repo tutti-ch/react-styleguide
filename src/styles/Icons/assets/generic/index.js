@@ -11,6 +11,7 @@ export const ArrowStart = p => <Sprite {...p} viewBox="0 0 15.4 30" id="arrow-st
 export const Blackpoint = p => <Sprite {...p} viewBox="0 0 24 24" id="blackpoint"/>
 export const BubbleSpeech = p => <Sprite {...p} viewBox="0 0 30 30" id="bubble_speech"/>
 export const Call = p => <Sprite {...p} viewBox="0 0 30 30" id="call"/>
+export const Camera = p => <Sprite {...p} viewBox="0 0 20 18" id="camera"/>
 export const Categories = p => <Sprite {...p} viewBox="0 0 30 30" id="categories"/>
 export const CheckCircle = p => <Sprite {...p} viewBox="0 0 30 30" id="check-circle"/>
 export const Check = p => <Sprite {...p} viewBox="0 0 30 30" id="check"/>
