@@ -15,6 +15,10 @@ module.exports = {
   // -- sections: Array of subsections (can be nested)
   sections: [
     {
+      name: "Corporate identity",
+      components: "src/corporate_identity/**/[A-Z]*.js"
+    },
+    {
       name: "Styles",
       components: "src/styles/**/[A-Z]*.js"
     },
