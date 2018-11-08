@@ -22,11 +22,11 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
@@ -34,15 +34,14 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test
+      - run: npm test
 
       # Build the dist folder and push to gh-pages branch
       - run: pwd
       - run: git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
       - run: git config --global user.name "$GH_NAME" > /dev/null 2>&1
-      - run: yarn styleguide:build
+      - run: npm styleguide:build
       - run: git add -A
       - run: git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
       - run: git push --force --quiet origin master
       - run: echo Success!
-
