@@ -40,7 +40,7 @@ jobs:
       - run: pwd
       - run: git config --global user.email "$GH_EMAIL" > /dev/null 2>&1
       - run: git config --global user.name "$GH_NAME" > /dev/null 2>&1
-      - run: npm styleguide:build
+      - run: npm run styleguide:build
       - run: git add -A
       - run: git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
       - run: git push --force --quiet origin master
