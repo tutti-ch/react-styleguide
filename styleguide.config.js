@@ -15,15 +15,15 @@ module.exports = {
   // -- sections: Array of subsections (can be nested)
   sections: [
     {
-      name: "Corporate identity",
-      components: "src/corporate_identity/**/[A-Z]*.js"
+      name: "💗  Brand",
+      components: "src/brand/**/[A-Z]*.js"
     },
     {
-      name: "Styles",
+      name: "🎨  UI Styles",
       components: "src/styles/**/[A-Z]*.js"
     },
     {
-      name: "Components",
+      name: "📐  UI Components",
       components: "src/components/**/[A-Z]*.js"
     }
   ],
@@ -42,7 +42,8 @@ module.exports = {
     StyleGuide: {
       content: {
         margin: "0",
-        "max-width": "none"
+        "max-width": "none",
+        padding: "16px 32px"
       },
       sidebar: {
         background: "#ffffff",
@@ -53,6 +54,12 @@ module.exports = {
       },
       hasSidebar: {
         "padding-left": "250px"
+      },
+
+      ReactComponent: {
+        root: {
+          "margin-bottom": "0 !important"
+        }
       }
     },
     Logo: {
@@ -67,7 +74,9 @@ module.exports = {
     ReactComponent: {
       root: {
         position: "relative",
-        "margin-bottom": "60px"
+        "margin-bottom": "30px",
+        "padding-bottom": "30px",
+        "min-height": "100vh"
       }
     },
     TabButton: {
@@ -106,9 +115,23 @@ module.exports = {
         border: "1px solid #e5e5e5"
       }
     },
-    SectionHeading: {
-      wrapper: {
-        "border-bottom": "1px solid #ccc"
+    Heading: {
+      heading: {
+        "margin-top": "0 !important"
+      },
+      heading2: {
+        "font-weight": "bold"
+      },
+      heading1: {
+        "font-weight": "bold"
+      }
+    },
+    ComponentsList: {
+      list: {
+        "padding-left": " 16px !important"
+      },
+      isChild: {
+        "padding-left": " 8px !important"
       }
     }
   },

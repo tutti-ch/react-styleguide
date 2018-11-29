@@ -1,5 +1,5 @@
 ### Brand guidelines
 
 ```jsx noeditor
-<Brand />
+<Manual />
 ```
