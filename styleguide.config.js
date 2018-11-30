@@ -13,6 +13,11 @@ module.exports = {
   // -- content: A glob pattern string or a function returning a list of components.
   //             The same rule apply as for the root components option.
   // -- sections: Array of subsections (can be nested)
+
+  template: {
+    favicon: "./favicon.ico"
+  },
+
   sections: [
     {
       name: "💗  Brand",
