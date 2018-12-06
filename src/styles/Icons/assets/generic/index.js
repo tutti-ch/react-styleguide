@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "../../../../components/Image"
 import Sprite from "../../_Sprite"
 export const Archive = p => <Sprite {...p} viewBox="0 0 30 30" id="archive"/>
 export const ArrowCircularRight = p => <Sprite {...p} viewBox="0 0 30 30" id="arrow-circular-right"/>
@@ -53,7 +52,7 @@ export const PauseCircle = p => <Sprite {...p} viewBox="0 0 32 32" id="pause-cir
 export const Pause = p => <Sprite {...p} viewBox="0 0 17 17" id="pause"/>
 export const Pencil = p => <Sprite {...p} viewBox="0 0 30 30" id="pencil"/>
 export const Phone = p => <Sprite {...p} viewBox="0 0 30 30" id="phone"/>
-export const Pin = p => <Image {...p} src={require("./pin.svg")} />
+export const Pin = p => <Sprite {...p} viewBox="0 0 18 23.2" id="pin"/>
 export const Play = p => <Sprite {...p} viewBox="0 0 32 32" id="play"/>
 export const Plus = p => <Sprite {...p} viewBox="0 0 24 24" id="plus"/>
 export const PremiumBump = p => <Sprite {...p} viewBox="0 0 30 24.9" id="premium-bump"/>
