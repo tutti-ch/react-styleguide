@@ -47,3 +47,9 @@ The SVG icons shown here are from [src/styles/Icons/assets](https://github.com/t
 ```jsx noeditor
 <Icons directory="payment" />
 ```
+
+### Map icons
+
+```jsx noeditor
+<Icons directory="map" />
+```
