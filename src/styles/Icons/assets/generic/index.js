@@ -66,7 +66,7 @@ export const Privat = p => <Sprite {...p} viewBox="0 0 30 30" id="privat"/>
 export const Reset = p => <Sprite {...p} viewBox="0 0 30 30" id="reset"/>
 export const Rotate = p => <Sprite {...p} viewBox="0 0 30 30" id="rotate"/>
 export const Rss = p => <Sprite {...p} viewBox="0 0 52 52" id="rss"/>
-export const SadCube = p => <Sprite {...p} viewBox="0 0 80 80" id="sad_cube"/>
+export const SadCube = p => <Sprite {...p} viewBox="0 0 76.83 76.55" id="sad_cube"/>
 export const SavedSearchesOffAdd = p => <Sprite {...p} viewBox="0 0 49.8 51.9" id="saved-searches-off-add"/>
 export const SavedSearches = p => <Sprite {...p} viewBox="0 0 48 48" id="saved-searches"/>
 export const Search = p => <Sprite {...p} viewBox="0 0 30 30" id="search"/>
