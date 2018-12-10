@@ -40,7 +40,7 @@ const config = {
 
       // Helps importing files
       {
-        test: /\.(png|jpg|gif|svg|pdf|ai)$/,
+        test: /\.(png|jpg|gif|svg|pdf|ai|mp4)$/,
         loader: "file-loader",
         options: {
           name: () => (isProd ? "[hash:base64:5].[ext]" : "[path][name].[ext]")

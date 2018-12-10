@@ -1,5 +1,6 @@
 import React from "react";
-import AnimationNegative from "http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4";
+import animatioMain from "./logo-main-long.mp4";
+import animationNegative from "./logo-negative-short.mp4";
 
 /**
  *
@@ -8,7 +9,34 @@ import AnimationNegative from "http://www.sample-videos.com/video/mp4/720/big_bu
 
 class Animations extends React.Component {
   render() {
-    return <video width="320" height="240" src={AnimationNegative} />;
+    return (
+      <div>
+        <video
+          width="900"
+          height="600"
+          controls
+          autoplay
+          style={{
+            width: "100%",
+            "margin-bottom": "40px"
+          }}
+        >
+          <source src={animationNegative} type="video/mp4" />
+        </video>
+        <video
+          width="900"
+          height="600"
+          controls
+          autoplay
+          style={{
+            width: "100%",
+            "margin-bottom": "40px"
+          }}
+        >
+          <source src={animatioMain} type="video/mp4" />
+        </video>
+      </div>
+    );
   }
 }
 

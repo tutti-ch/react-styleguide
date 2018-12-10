@@ -1,4 +1,4 @@
-### Animations
+### Logo animations
 
 ```jsx noeditor
 <Animations />
