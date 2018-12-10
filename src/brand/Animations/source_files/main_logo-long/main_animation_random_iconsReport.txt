@@ -1,0 +1,41 @@
+Report created: 
+	9/27/2018	2:01:52 PM
+
+Project name: main_animation_random_icons.aep
+
+Source files collected to: 
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\1 and 3 animation
+
+Source files collected: All
+
+Collected comps:  
+	Comp 1
+	Comp 2
+	soccer.png Comp 1
+	house.png Comp 1
+	
+Number of collected files:  9
+
+Size of collected files:  17.2 MB
+
+Collected source files: 
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\car.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\house.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\instogram.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\music.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\soccer.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\square.tif
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\T.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\tshort.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\tutti.ch-brand_guidelines-beta-6.tif
+	
+Rendering plug-ins:
+	Classic 3D
+	
+Effects used:  2
+
+Effect:  Fill
+	
+Effect:  Slider Control
+	
+

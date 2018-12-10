@@ -1,0 +1,36 @@
+Report created: 
+	10/13/2018	1:04:19 AM
+
+Project name: loopss.aep
+
+Source files collected to: 
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\LOOP LOADING\files\loop loading
+
+Source files collected: All
+
+Collected comps:  
+	square
+	
+Number of collected files:  7
+
+Size of collected files:  14.0 MB
+
+Collected source files: 
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\ICONS\car.png
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\ICONS\house.png
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\ICONS\instogram.png
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\ICONS\music.png
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\ICONS\T PILKA.png
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\ICONS\tshort.png
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\tutti.ch\BANNER ANIMATION\FILES\(Footage)\square.tif
+	
+Rendering plug-ins:
+	Classic 3D
+	
+Effects used:  2
+
+Effect:  Fill
+	
+Effect:  Slider Control
+	
+

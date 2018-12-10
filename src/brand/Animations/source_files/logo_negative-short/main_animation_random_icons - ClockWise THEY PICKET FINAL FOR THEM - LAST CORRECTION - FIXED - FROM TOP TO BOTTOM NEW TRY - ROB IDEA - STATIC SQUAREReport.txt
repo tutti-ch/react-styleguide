@@ -1,0 +1,55 @@
+Report created: 
+	9/27/2018	2:02:41 PM
+
+Project name: main_animation_random_icons - ClockWise THEY PICKET FINAL FOR THEM - LAST CORRECTION - FIXED - FROM TOP TO BOTTOM NEW TRY - ROB IDEA - STATIC SQUARE.aep
+
+Source files collected to: 
+	E:\Bitsens\Logo animation 2018-08-05\MPEG FINAL LOGO ANIMATIONS\2 animation
+
+Source files collected: All
+
+Collected comps:  
+	Comp 1
+	Comp 2
+	soccer.png Comp 1
+	house.png Comp 1
+	Concept 1
+	Pre-comp 1
+	Comp 3
+	Comp 4
+	WHITE
+	FIXED LOGO WHITE
+	YOU CAN RETIME ME
+	
+Number of collected files:  12
+
+Size of collected files:  48.2 MB
+
+Collected source files: 
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\car.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\house.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\instogram.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\music.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\soccer.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\square.tif
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\T PILKA.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\tshort.png
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\TUTTI.CH-4-Rucksack019_v04-Rint.jpg
+	E:\Bitsens\Logo animation 2018-08-05\MEDZIAGA\tutti.ch-brand_guidelines-beta-6.tif
+	E:\Bitsens\Logo animation 2018-08-05\MPEG\Concept1_v3.mov
+	E:\Bitsens\Logo animation 2018-08-05\MPEG\Concept1_v4.mov
+	
+Rendering plug-ins:
+	Classic 3D
+	
+Effects used:  2
+
+Effect:  Fill
+	
+Effect:  Slider Control
+	
+
+Layer:  Text Layer
+	External dependencies:  
+		Font family: “Source Sans Pro”, Font style: “Regular”
+

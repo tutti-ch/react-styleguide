@@ -133,7 +133,14 @@ module.exports = {
     },
     ComponentsList: {
       list: {
-        "padding-left": " 16px !important"
+        "padding-left": " 16px !important",
+        color: "#333"
+      },
+      heading: {
+        "font-weight": "bold!important"
+      },
+      heading: {
+        "font-weight": "bold!important"
       },
       isChild: {
         "padding-left": " 8px !important"
