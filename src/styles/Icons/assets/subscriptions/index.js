@@ -6,15 +6,15 @@ export const SubscriptionsPerformance = p => <Image {...p} src={require("./subsc
 export const SubscriptionsPlusBadge = p => <Image {...p} src={require("./subscriptions-plus-badge.svg")} />
 export const SubscriptionsPlusBump = p => <Image {...p} src={require("./subscriptions-plus-bump.svg")} />
 export const SubscriptionsPlusEye = p => <Image {...p} src={require("./subscriptions-plus-eye.svg")} />
-export const SubscriptionsPlusGrey = p => <Sprite {...p} viewBox="0 0 26.5 30" id="subscriptions-plus-grey"/>
+export const SubscriptionsPlusGrey = p => <Sprite {...p} viewBox="0 0 26.6 26.6" id="subscriptions-plus-grey"/>
 export const SubscriptionsPlusHexagon = p => <Image {...p} src={require("./subscriptions-plus-hexagon.svg")} />
 export const SubscriptionsPlusImages = p => <Image {...p} src={require("./subscriptions-plus-images.svg")} />
 export const SubscriptionsPlusNoAds = p => <Image {...p} src={require("./subscriptions-plus-no_ads.svg")} />
-export const SubscriptionsPlusWhite = p => <Sprite {...p} viewBox="0 0 26.5 30" id="subscriptions-plus-white"/>
+export const SubscriptionsPlusWhite = p => <Sprite {...p} viewBox="0 0 26.6 26.6" id="subscriptions-plus-white"/>
 export const SubscriptionsProBadge = p => <Image {...p} src={require("./subscriptions-pro-badge.svg")} />
 export const SubscriptionsProBump = p => <Image {...p} src={require("./subscriptions-pro-bump.svg")} />
 export const SubscriptionsProEye = p => <Image {...p} src={require("./subscriptions-pro-eye.svg")} />
-export const SubscriptionsProGrey = p => <Sprite {...p} viewBox="0 0 26.5 30" id="subscriptions-pro-grey"/>
+export const SubscriptionsProGrey = p => <Sprite {...p} viewBox="0 0 26.6 26.6" id="subscriptions-pro-grey"/>
 export const SubscriptionsProHexagon = p => <Image {...p} src={require("./subscriptions-pro-hexagon.svg")} />
 export const SubscriptionsProImages = p => <Image {...p} src={require("./subscriptions-pro-images.svg")} />
 export const SubscriptionsProImmoTilted = p => <Image {...p} src={require("./subscriptions-pro-immo-tilted.svg")} />

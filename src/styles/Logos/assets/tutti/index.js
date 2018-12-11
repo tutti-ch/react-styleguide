@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../../../../components/Image"
 export const TuttiEmailPlaceholder = p => <Image {...p} src={require("./tutti-email_placeholder.png")} />
 export const TuttiLogoNegative = p => <Image {...p} src={require("./tutti-logo-negative.svg")} />
+export const TuttiLogoSquare = p => <Image {...p} src={require("./tutti-logo-square.svg")} />
 export const TuttiLogoSymbolNegative = p => <Image {...p} src={require("./tutti-logo-symbol-negative.svg")} />
 export const TuttiLogoSymbol = p => <Image {...p} src={require("./tutti-logo-symbol.svg")} />
 export const TuttiLogoVerticalSmall = p => <Image {...p} src={require("./tutti-logo-vertical-small.svg")} />
