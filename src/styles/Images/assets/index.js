@@ -1,3 +1,3 @@
 export default {
-    BackgroundsPlus = require("./backgrounds-plus.jpg")
-}
+  BackgroundsPlus: require("./backgrounds-plus.jpg")
+};
