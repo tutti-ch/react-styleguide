@@ -11,13 +11,12 @@ export { default as Form } from "./components/Form";
 export { default as Logo } from "./components/Logo";
 export { default as Tabs } from "./components/Tabs";
 export { default as Tooltip } from "./components/Tooltip";
+export { default as images } from "./images";
 
-import * as Images from "./styles/Images/assets";
 import * as Icons from "./styles/Icons/assets";
 import * as Illustrations from "./styles/Illustrations/assets";
 import * as Logos from "./styles/Logos/assets";
 
-export const images = Images;
 export const icons = {
   ...Icons,
   ...Illustrations,
