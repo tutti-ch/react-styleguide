@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../components/Image"
+import React from "react";
 export const Advantage = p => <Image {...p} src={require("./advantage.svg")} />
 export const Gift = p => <Image {...p} src={require("./gift.svg")} />
 export const InsertNewAd = p => <Image {...p} src={require("./insert_new_ad.svg")} />

@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
+import React from "react";
 export const CantonAargau = p => <Sprite {...p} viewBox="0 0 35 35" id="canton-aargau"/>
 export const CantonAll = p => <Sprite {...p} viewBox="0 0 35 35" id="canton-all"/>
 export const CantonAppenzell = p => <Sprite {...p} viewBox="0 0 35 35" id="canton-appenzell"/>

@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../../components/Image"
+import React from "react";
 export const AndroidChrome192x192 = p => <Image {...p} src={require("./android-chrome-192x192.png")} />
 export const AndroidChrome512x512 = p => <Image {...p} src={require("./android-chrome-512x512.png")} />
 export const AppleTouchIcon = p => <Image {...p} src={require("./apple-touch-icon.png")} />

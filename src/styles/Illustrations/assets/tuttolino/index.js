@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../components/Image"
+import React from "react";
 export const Tuttolino404 = p => <Image {...p} src={require("./tuttolino-404.png")} />
 export const TuttolinoCompetitor = p => <Image {...p} src={require("./tuttolino-competitor.svg")} />
 export const TuttolinoErrorMobile = p => <Image {...p} src={require("./tuttolino-error-mobile.png")} />

@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../components/Image"
+import React from "react";
 export const TuttiEmailPlaceholder = p => <Image {...p} src={require("./tutti-email_placeholder.png")} />
 export const TuttiLogoNegative = p => <Image {...p} src={require("./tutti-logo-negative.svg")} />
 export const TuttiLogoSquare = p => <Image {...p} src={require("./tutti-logo-square.svg")} />

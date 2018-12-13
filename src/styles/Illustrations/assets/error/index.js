@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../components/Image"
+import React from "react";
 export const MyadsEmpty = p => <Image {...p} src={require("./myads-empty.svg")} />
 export const Tutti404PageDesign2015 = p => <Image {...p} src={require("./tutti-404-page-design-2015.svg")} />
 export const TuttiBackground = p => <Image {...p} src={require("./tutti-background.svg")} />

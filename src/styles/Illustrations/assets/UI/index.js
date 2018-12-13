@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../components/Image"
+import React from "react";
 export const AdDeletedSurvey = p => <Image {...p} src={require("./ad_deleted_survey.svg")} />
 export const AppRating = p => <Image {...p} src={require("./appRating.svg")} />
 export const IntroScreenMap = p => <Image {...p} src={require("./intro_screen_map.svg")} />

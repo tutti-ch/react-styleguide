@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Image from "../../../../components/Image"
+import React from "react";
 export const Abo1 = p => <Image {...p} src={require("./abo1.svg")} />
 export const Abo2 = p => <Image {...p} src={require("./abo2.svg")} />
 export const Abo3 = p => <Image {...p} src={require("./abo3.svg")} />

@@ -1,6 +1,7 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
 import Image from "../../../../components/Image"
+import React from "react";
 export const SubscriptionsApproval = p => <Image {...p} src={require("./subscriptions-approval.svg")} />
 export const SubscriptionsPerformance = p => <Image {...p} src={require("./subscriptions-performance.svg")} />
 export const SubscriptionsPlusBadge = p => <Image {...p} src={require("./subscriptions-plus-badge.svg")} />

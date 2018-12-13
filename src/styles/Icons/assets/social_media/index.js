@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
+import React from "react";
 export const Facebook = p => <Sprite {...p} viewBox="0 0 30 30" id="facebook"/>
 export const Instagram = p => <Sprite {...p} viewBox="0 0 30 30" id="instagram"/>
 export const ShareFacebook = p => <Sprite {...p} viewBox="0 0 50 50" id="share-facebook"/>

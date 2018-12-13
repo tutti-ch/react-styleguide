@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
+import React from "react";
 export const PaymentEfinance = p => <Sprite {...p} viewBox="0 0 120 80" id="payment-efinance"/>
 export const PaymentMastercard = p => <Sprite {...p} viewBox="0 0 120 80" id="payment-mastercard"/>
 export const PaymentPostfinance = p => <Sprite {...p} viewBox="0 0 120 80" id="payment-postfinance"/>

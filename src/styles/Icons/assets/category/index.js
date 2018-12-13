@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
+import React from "react";
 export const Antiquitaten = p => <Sprite {...p} viewBox="0 0 30 30" id="antiquitaten"/>
 export const Baby = p => <Sprite {...p} viewBox="0 0 30 30" id="baby"/>
 export const Buecher = p => <Sprite {...p} viewBox="0 0 30 30" id="buecher"/>

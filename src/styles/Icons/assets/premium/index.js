@@ -1,5 +1,6 @@
-import React from "react";
+// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
+import React from "react";
 export const BumpTransparent = p => <Sprite {...p} viewBox="0 0 160 160" id="bump-transparent"/>
 export const Bump = p => <Sprite {...p} viewBox="0 0 490 490" id="bump"/>
 export const Bump1 = p => <Sprite {...p} viewBox="0 0 300 300" id="bump1"/>
