@@ -117,7 +117,10 @@ glob(src + "/**/_sprite.svg", (err, results) => {
       fileNameCache[camelCase] = true;
       const exportConst = `export const ${camelCase}`;
 
-      folders[path] = folders[path] || [`import React from "react";`];
+      folders[path] = folders[path] || [
+        `// THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.`,
+        `import React from "react";`
+      ];
 
       // Make sure that we take sprites only within allowed folders.
       const viewbox =
