@@ -27,6 +27,8 @@ export const Email = p => <Sprite {...p} viewBox="0 0 30 30" id="email"/>
 export const Error = p => <Sprite {...p} viewBox="0 0 30 30" id="error"/>
 export const EyeStriked = p => <Sprite {...p} viewBox="0 0 30 30" id="eye-striked"/>
 export const Eye = p => <Sprite {...p} viewBox="0 0 30 30" id="eye"/>
+export const FilterCircleOff = p => <Sprite {...p} viewBox="0 0 31 31" id="filter-circle-off"/>
+export const FilterCircleOn = p => <Sprite {...p} viewBox="0 0 31 31" id="filter-circle-on"/>
 export const FilterOff = p => <Sprite {...p} viewBox="0 0 11.7 11.3" id="filter-off"/>
 export const FilterOn = p => <Sprite {...p} viewBox="0 0 12 11.6" id="filter-on"/>
 export const Firma = p => <Sprite {...p} viewBox="0 0 30 30" id="firma"/>
