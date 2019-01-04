@@ -471,6 +471,8 @@ $inputHeight: $size-xxxl;
       display: inline-block;
       background-color: transparent;
       height: auto;
+      min-height: auto;
+      line-height: normal;
 
       .options .option {
         line-height: $size-xxxl;
