@@ -7,27 +7,26 @@
 
   .symbolBox {
     position: relative;
-    margin-right: $size-m;
+    margin-right: $size-s;
     display: flex;
     align-items: center;
 
     .symbolSquare {
-      height: 3.1rem;
+      height: 2.5rem;
       transform-origin: 1.8rem 1.8rem;
       transition: $transition-m;
     }
 
     .symbolT {
       position: absolute;
-      bottom: 0.2rem;
-      height: 2.1rem;
-      left: 0.9rem;
+      bottom: 0.1rem;
+      height: 1.8rem;
+      left: 0.7rem;
     }
   }
 
   .font {
     height: 1.6rem;
-    margin-top: 0.1rem;
   }
 
   &:hover {
@@ -39,6 +38,26 @@
 
     .font {
       opacity: 0.9;
+    }
+  }
+
+  @include tablet-and-smaller {
+    .symbolBox {
+      margin-right: $size-xxs;
+
+      .symbolSquare {
+        height: 2.1rem;
+      }
+
+      .symbolT {
+        bottom: 0.1rem;
+        height: 1.5rem;
+        left: 0.5rem;
+      }
+    }
+
+    .font {
+      height: 1.3rem;
     }
   }
 }
