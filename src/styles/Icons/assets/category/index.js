@@ -16,6 +16,7 @@ export const Immobilien = p => <Sprite {...p} viewBox="0 0 30 30" id="immobilien
 export const Kleidung = p => <Sprite {...p} viewBox="0 0 30 30" id="kleidung"/>
 export const Musik = p => <Sprite {...p} viewBox="0 0 30 30" id="musik"/>
 export const Sammeln = p => <Sprite {...p} viewBox="0 0 30 30" id="sammeln"/>
+export const Services = p => <Sprite {...p} viewBox="0 0 30 30" id="services"/>
 export const Sonstiges = p => <Sprite {...p} viewBox="0 0 30 30" id="sonstiges"/>
 export const Spielzeuge = p => <Sprite {...p} viewBox="0 0 30 30" id="spielzeuge"/>
 export const Sport = p => <Sprite {...p} viewBox="0 0 30 30" id="sport"/>
