@@ -33,6 +33,7 @@ export const icons = {
     "5600": Icons.Foto,
     "3200": Icons.Garten,
     "3000": Icons.Haushalt,
+    "6500": Icons.Services,
     "6600": Icons.Kleidung,
     "4300": Icons.Musik,
     "4160": Icons.Sammeln,
