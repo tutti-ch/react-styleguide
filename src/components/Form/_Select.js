@@ -111,19 +111,28 @@ export class Select extends Component {
    * @param options
    * @param multiple
    */
-  componentWillReceiveProps({ selected, options, sort, multiple }) {
+  componentDidUpdate(oldProps) {
+    // Extra check for safety, sometimes onBlur is not called so we need to make sure we remove the listener
+    if (!this.state.isFocused) {
+      document.removeEventListener("keydown", this.keyDown);
+    }
+
+    const { selected, options, sort, multiple } = this.props;
     const state = {};
 
     // Update the selected value
-    if (!isEqual(selected, this.props.selected)) {
+    if (!isEqual(selected, oldProps.selected)) {
       state.selected = Array.isArray(selected) ? selected : [selected];
       state.selected = state.selected.filter(i => i).map(i => i.toString());
     }
 
     // Re-sort options if the order has been changed
-    if (!isEqual(options, this.props.options)) {
-      options = options.map(i => ({ ...i, value: i.value.toString() }));
-      state.options = sort ? this.sortOptions(options) : options;
+    if (!isEqual(options, oldProps.options)) {
+      const mappedOptions = options.map(i => ({
+        ...i,
+        value: i.value.toString()
+      }));
+      state.options = sort ? this.sortOptions(mappedOptions) : mappedOptions;
     }
 
     if (Object.keys(state).length) {
@@ -132,13 +141,6 @@ export class Select extends Component {
         ? this.findIndexByValue(selected[0], state.options)
         : -1;
       this.setState(state);
-    }
-  }
-
-  // Extra check for safety, sometimes onBlur is not called so we need to make sure we remove the listener
-  componentDidUpdate() {
-    if (!this.state.isFocused) {
-      document.removeEventListener("keydown", this.keyDown);
     }
   }
 

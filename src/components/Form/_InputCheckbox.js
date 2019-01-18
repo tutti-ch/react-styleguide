@@ -43,9 +43,9 @@ export class InputCheckbox extends Component {
   /**
    * Sync the value.
    */
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.checked !== this.props.checked) {
-      this.setState({ checked: nextProps.checked });
+  componentDidUpdate(oldProps) {
+    if (oldProps.checked !== this.props.checked) {
+      this.setState({ checked: this.props.checked });
     }
   }
 

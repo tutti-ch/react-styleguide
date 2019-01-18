@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`(Component) Slider [componentDidUpdate] should set the state when name and/or values are changing 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "max": Object {
+          "input": "new-name",
+          "range": 500,
+          "value": 450,
+        },
+        "min": Object {
+          "input": "new-name",
+          "range": 100,
+          "value": 120,
+        },
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
 exports[`(Component) Slider snapshots should create the right snapshot for decimals and steps specified 1`] = `
 <Slider
   max={10}
@@ -158,11 +185,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       />
       <input
         key="hidden-min"
-        name="pe"
+        name="c"
         type="hidden"
         value={
           Object {
-            "input": "pe",
+            "input": "c",
             "range": 1,
             "value": 2,
           }
@@ -183,11 +210,11 @@ exports[`(Component) Slider snapshots should create the right snapshot for decim
       />
       <input
         key="hidden-max"
-        name="ps"
+        name="d"
         type="hidden"
         value={
           Object {
-            "input": "ps",
+            "input": "d",
             "range": 10,
             "value": NaN,
           }

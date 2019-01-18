@@ -4,11 +4,12 @@ import { InputCheckbox } from "./_InputCheckbox";
 import { shallow, mount } from "enzyme";
 
 describe("(Component) InputCheckbox", () => {
-  test("[componentWillReceiveProps] should sync the state with props", () => {
+  test("[componentDidUpdate] should sync the state with props", () => {
     const comp = shallow(<InputCheckbox />);
     const inst = comp.instance();
-    inst.componentWillReceiveProps({ checked: true });
-    expect(comp.state("checked")).toBe(true);
+    inst.setState = jest.fn();
+    comp.setProps({ checked: true });
+    expect(inst.setState).toMatchSnapshot();
   });
 
   test("[toggle] should set the value and call the onChange from parent", () => {

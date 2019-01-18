@@ -130,7 +130,7 @@ export class Slider extends Component {
    * @return {number}
    */
   static perc(val, total) {
-    return 100 * val / total;
+    return (100 * val) / total;
   }
 
   /**
@@ -229,10 +229,12 @@ export class Slider extends Component {
     });
   }
 
-  componentWillReceiveProps({ name, values }) {
-    const state = {};
+  componentDidUpdate(oldProps) {
+    const { name } = this.props;
 
-    if (name !== this.props.name) {
+    if (name !== oldProps.name) {
+      const state = {};
+
       state.min = {
         ...this.state.min,
         input: Array.isArray(name) ? name[0] : name
@@ -241,10 +243,10 @@ export class Slider extends Component {
         ...this.state.max,
         input: Array.isArray(name) ? name[1] : name
       };
-    }
 
-    if (Object.keys(state).length) {
-      this.setState(state);
+      if (Object.keys(state).length) {
+        this.setState(state);
+      }
     }
   }
 
@@ -285,7 +287,7 @@ export class Slider extends Component {
     const total = maxRange - minRange;
     const distance = value - minRange;
 
-    return this.validateThumbPosition(distance * 100 / total);
+    return this.validateThumbPosition((distance * 100) / total);
   }
 
   /**
@@ -299,7 +301,7 @@ export class Slider extends Component {
     const rect = this.root.getBoundingClientRect();
     const totalLen = this.root.offsetWidth;
     const clientX = Slider.clientX(e);
-    return Math.max(Math.min((clientX - rect.left) * 100 / totalLen, 100), 0);
+    return Math.max(Math.min(((clientX - rect.left) * 100) / totalLen, 100), 0);
   }
 
   /**
@@ -309,12 +311,15 @@ export class Slider extends Component {
    * @return {number}
    */
   calculateMouseValue(e) {
-    const { min: { range: minRange }, max: { range: maxRange } } = this.state;
+    const {
+      min: { range: minRange },
+      max: { range: maxRange }
+    } = this.state;
 
     const total = maxRange - minRange;
     const mousePos = this.calculateMousePosition(e);
 
-    return Math.round(minRange + total * mousePos / 100);
+    return Math.round(minRange + (total * mousePos) / 100);
   }
 
   /**
@@ -338,7 +343,7 @@ export class Slider extends Component {
     if (range.length === 0) {
       const min = this.state.min.range;
       const max = this.state.max.range;
-      prevValue = Math.max(value - (value - min) % step, min); // This calc gives us the prev value
+      prevValue = Math.max(value - ((value - min) % step), min); // This calc gives us the prev value
       nextValue = Math.min(prevValue + step, max); // prevValue + step is the next value
     } else {
       const sorted = range.map(i => +i.value).sort((a, b) => a - b);
@@ -630,7 +635,10 @@ export class Slider extends Component {
    */
   renderDesc() {
     const { multiple } = this.props;
-    let { min: { value: minValue }, max: { value: maxValue } } = this.state;
+    let {
+      min: { value: minValue },
+      max: { value: maxValue }
+    } = this.state;
     let { prefix, suffix } = this.props;
     let minValueText, maxValueText;
 

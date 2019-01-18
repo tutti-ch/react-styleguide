@@ -90,10 +90,10 @@ export class Input extends Component {
   /**
    * Sync the value.
    */
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) {
+  componentDidUpdate(oldProps) {
+    if (oldProps.value !== this.props.value) {
       this.changed = true;
-      this.setState({ value: nextProps.value || "" }, this.notify);
+      this.setState({ value: this.props.value || "" }, this.notify);
     }
   }
 

@@ -70,10 +70,6 @@ export default (WrappedComponent, mergeProps = {}) => {
         error: props.error
       };
 
-      this.handleOnKeyup = this.handleOnKeyup.bind(this);
-      this.handleOnChange = this.handleOnChange.bind(this);
-      this.handleError = this.handleError.bind(this);
-      this.getKeyValue = this.getKeyValue.bind(this);
       this.register(context, props);
     }
 
@@ -95,9 +91,9 @@ export default (WrappedComponent, mergeProps = {}) => {
      *
      * @param error
      */
-    handleError(error) {
+    handleError = error => {
       this.setState({ error });
-    }
+    };
 
     /**
      * This function is required by the form component. It will be used
@@ -105,7 +101,7 @@ export default (WrappedComponent, mergeProps = {}) => {
      *
      * @return {*}
      */
-    getKeyValue() {
+    getKeyValue = () => {
       const { name, disabled } = this.props;
       const value = this.state.formValue;
       const retVal = {};
@@ -120,19 +116,19 @@ export default (WrappedComponent, mergeProps = {}) => {
         }
       }
       return retVal;
-    }
+    };
 
-    componentWillReceiveProps(nextProps, context) {
-      const newValue = WithWrapper.getNormalizedValue(nextProps);
-      const oldValue = WithWrapper.getNormalizedValue(this.props);
+    componentDidUpdate(oldProps) {
+      const newValue = WithWrapper.getNormalizedValue(this.props);
+      const oldValue = WithWrapper.getNormalizedValue(oldProps);
       const state = {};
 
       if (newValue !== oldValue) {
         state.formValue = newValue;
       }
 
-      if (nextProps.error !== this.props.error) {
-        state.error = nextProps.error;
+      if (oldProps.error !== this.props.error) {
+        state.error = this.props.error;
       }
 
       if (Object.keys(state).length) {
@@ -141,8 +137,8 @@ export default (WrappedComponent, mergeProps = {}) => {
 
       // Some components (e.g. Slider) allow name as an Array. For this reason
       // we have to use isEqual instead of a strict comparison.
-      if (isEqual(nextProps.name, this.props.name) === false) {
-        this.register(context, nextProps);
+      if (isEqual(oldProps.name, this.props.name) === false) {
+        this.register(this.context, this.props);
       }
     }
 
@@ -152,7 +148,7 @@ export default (WrappedComponent, mergeProps = {}) => {
      * @param {string} value The changed value
      * @param {*} opts The additional props that we want to pass to the parent (such as the input name)
      */
-    handleOnChange(value, opts = {}) {
+    handleOnChange = (value, opts = {}) => {
       this.setState({
         error: null,
         formValue: opts.formValue
@@ -166,14 +162,14 @@ export default (WrappedComponent, mergeProps = {}) => {
       if (typeof this.props.onChange === "function") {
         this.props.onChange(value, opts);
       }
-    }
+    };
 
     /**
      * On key up reset the error state.
      *
      * @param e
      */
-    handleOnKeyup(e) {
+    handleOnKeyup = e => {
       if (this.state.error) {
         this.setState({ error: null });
       }
@@ -182,7 +178,7 @@ export default (WrappedComponent, mergeProps = {}) => {
       if (typeof this.props.onKeyUp === "function") {
         this.props.onKeyUp(e);
       }
-    }
+    };
 
     render() {
       const { inline, className, type, placeholder, noMargin } = this.props;

@@ -16,56 +16,62 @@ describe("(Component) Select", () => {
     { value: "Other", text: "Other" }
   ];
 
-  test("[componentWillReceiveProps] should update the state when the component receives new props", () => {
+  // test("[componentDidUpdate] should update the state when the component receives new props", () => {
+  //   const options = getOptions();
+  //   const comp = mount(<Select options={options} selected="jQuery" />);
+  //   expect(comp.state("selected")).toEqual(["jQuery"]);
+
+  //   const spy = jest.spyOn(comp.instance(), "sortOptions");
+  //   comp.setProps({ selected: ["jQuery", "Ember"], multiple: true });
+
+  //   expect(comp.state("selected")).toEqual(["jQuery", "Ember"]);
+  //   expect(spy).not.toHaveBeenCalled();
+
+  //   comp.setProps({
+  //     options: [{ value: "NewF.js", text: "New Framework" }],
+  //     sort: true
+  //   });
+  //   expect(spy).toHaveBeenCalled();
+
+  //   const setStateSpy = jest.spyOn(comp.instance(), "setState");
+  //   comp.setProps({});
+  //   expect(setStateSpy).not.toHaveBeenCalled();
+
+  //   comp.setProps({ options, sort: false, selected: "React.js" });
+  //   expect(setStateSpy).toHaveBeenCalledWith({
+  //     highlighted: -1,
+  //     selected: ["React.js"],
+  //     options: options
+  //   });
+  // });
+
+  test("[componentDidUpdate] should handle highlighted state", () => {
     const options = getOptions();
     const comp = mount(<Select options={options} selected="jQuery" />);
-    expect(comp.state("selected")).toEqual(["jQuery"]);
 
-    const spy = jest.spyOn(comp.instance(), "sortOptions");
-    comp.setProps({ selected: ["jQuery", "Ember"], multiple: true });
-
-    expect(comp.state("selected")).toEqual(["jQuery", "Ember"]);
-    expect(spy).not.toHaveBeenCalled();
-
-    comp.setProps({
-      options: [{ value: "NewF.js", text: "New Framework" }],
-      sort: true
-    });
-    expect(spy).toHaveBeenCalled();
-
-    const setStateSpy = jest.spyOn(comp.instance(), "setState");
-    comp.setProps({});
-    expect(setStateSpy).not.toHaveBeenCalled();
-
-    comp.setProps({ options, sort: false, selected: "React.js" });
-    expect(setStateSpy).toHaveBeenCalledWith({
-      highlighted: -1,
-      selected: ["React.js"],
-      options: options
-    });
-  });
-
-  test("[componentWillReceiveProps] should handle highlighted state", () => {
-    const options = getOptions();
-    const comp = mount(<Select options={options} selected="jQuery" />);
-    const inst = comp.instance();
     expect(comp.state("selected")).toEqual(["jQuery"]);
     expect(comp.state("highlighted")).toBe(3);
+    const newOptions = getOptions();
 
-    options[3].value = "nojQuery";
-    inst.componentWillReceiveProps({ options });
+    newOptions[3].value = "nojQuery";
+    comp.setProps({
+      options: newOptions,
+      selected: undefined
+    });
     expect(comp.state("highlighted")).toBe(-1);
     expect(comp.state("selected")).toEqual([]);
-    options[3].value = "jQuery";
-    inst.componentWillReceiveProps({ options, selected: ["jQuery"] });
-    expect(comp.state("selected")).toEqual(["jQuery"]);
-    expect(comp.state("highlighted")).toBe(3);
-    inst.componentWillReceiveProps({
-      options,
-      selected: ["jQuery"],
+  });
+
+  test("[componentDidUpdate] should disable highlighted state when multiline", () => {
+    const options = getOptions();
+    const comp = mount(<Select options={options} selected="jQuery" />);
+
+    comp.setProps({
+      selected: ["Ember"],
       multiple: true
     });
-    expect(comp.state("selected")).toEqual(["jQuery"]);
+
+    expect(comp.state("selected")).toEqual(["Ember"]);
     expect(comp.state("highlighted")).toBe(-1); // does not support multiple
   });
 

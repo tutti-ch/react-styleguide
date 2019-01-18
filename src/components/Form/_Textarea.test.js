@@ -4,11 +4,12 @@ import { Textarea } from "./_Textarea";
 import { shallow, mount } from "enzyme";
 
 describe("(Component) Textarea", () => {
-  test("[componentWillReceiveProps] should sync the state with props", () => {
+  test("[componentDidUpdate] should sync the state with props", () => {
     const comp = shallow(<Textarea />);
     const inst = comp.instance();
-    inst.componentWillReceiveProps({ value: "Frocello" });
-    expect(comp.state("value")).toBe("Frocello");
+    inst.setState = jest.fn();
+    comp.setProps({ value: "Frocello" });
+    expect(inst.setState).toMatchSnapshot();
   });
 
   test("[handleChange] should set the value and call the onChange from parent", () => {

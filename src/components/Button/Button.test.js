@@ -4,9 +4,8 @@ import Button from "./Button";
 import { mount } from "enzyme";
 
 describe("(Component) Button", () => {
-  test("should render snapshot correctly", done => {
+  test("should render snapshot correctly", () => {
     const props = {
-      disabled: true,
       className: "my-class"
     };
 
@@ -18,13 +17,26 @@ describe("(Component) Button", () => {
     );
 
     expect(comp).toMatchSnapshot();
+  });
+
+  test("should be disabled if button is loading", () => {
+    const props = {
+      disabled: true,
+      loading: true,
+      type: "button",
+      className: "my-class"
+    };
+
+    const comp = mount(
+      <Button level="primary" size="large" {...props}>
+        <span className={"tutti-cube"} />
+        Test content
+      </Button>
+    );
 
     // Should be still disabled true because when state.loading is true
     // the attribute is overwritten.
     comp.setProps({ loading: true, type: "button", disabled: false });
-    setTimeout(() => {
-      expect(comp).toMatchSnapshot();
-      done();
-    }, 100);
+    expect(comp).toMatchSnapshot();
   });
 });

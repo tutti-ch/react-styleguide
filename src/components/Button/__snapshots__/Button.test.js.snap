@@ -1,29 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`(Component) Button should render snapshot correctly 1`] = `
-<Button
-  className="my-class"
-  disabled={true}
-  level="primary"
-  loading={false}
-  rounded={true}
-  size="large"
-  type="submit"
->
-  <button
-    className="my-class"
-    disabled={true}
-    type="submit"
-  >
-    <span
-      className="tutti-cube"
-    />
-    Test content
-  </button>
-</Button>
-`;
-
-exports[`(Component) Button should render snapshot correctly 2`] = `
+exports[`(Component) Button should be disabled if button is loading 1`] = `
 <Button
   className="my-class"
   disabled={false}
@@ -68,6 +45,27 @@ exports[`(Component) Button should render snapshot correctly 2`] = `
       />
       Test content
     </div>
+  </button>
+</Button>
+`;
+
+exports[`(Component) Button should render snapshot correctly 1`] = `
+<Button
+  className="my-class"
+  level="primary"
+  loading={false}
+  rounded={true}
+  size="large"
+  type="submit"
+>
+  <button
+    className="my-class"
+    type="submit"
+  >
+    <span
+      className="tutti-cube"
+    />
+    Test content
   </button>
 </Button>
 `;

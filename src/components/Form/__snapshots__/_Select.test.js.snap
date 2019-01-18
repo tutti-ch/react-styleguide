@@ -52,7 +52,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
     onOutsideClick={[Function]}
   >
     <div
-      className="undefined"
+      className=""
       onClick={[Function]}
     >
       <div
@@ -66,19 +66,57 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
         >
           <Option
             closeIcon={true}
-            key="null"
+            key="React.js"
             onClose={[Function]}
             selected={false}
-            text="my-placeholder"
-            value={null}
+            text="React.js"
+            value="React.js"
           >
             <div
-              className="undefined"
-              key="null"
+              className=""
+              key="React.js"
               onClick={[Function]}
             >
               <span>
-                my-placeholder
+                React.js
+              </span>
+              <Close
+                onClick={[Function]}
+              >
+                <Sprite
+                  id="close"
+                  onClick={[Function]}
+                  viewBox="0 0 30 30"
+                >
+                  <svg
+                    className="svg-sprite"
+                    onClick={[Function]}
+                    role="img"
+                    viewBox="0 0 30 30"
+                  >
+                    <use
+                      xlinkHref="#close"
+                    />
+                  </svg>
+                </Sprite>
+              </Close>
+            </div>
+          </Option>
+          <Option
+            closeIcon={true}
+            key="jQuery"
+            onClose={[Function]}
+            selected={false}
+            text="jQuery"
+            value="jQuery"
+          >
+            <div
+              className=""
+              key="jQuery"
+              onClick={[Function]}
+            >
+              <span>
+                jQuery
               </span>
               <Close
                 onClick={[Function]}
@@ -110,7 +148,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             highlighted={false}
             key="opt-React.js"
             onClick={[Function]}
-            selected={false}
+            selected={true}
             text="React.js"
             tickIcon={true}
             value="React.js"
@@ -215,7 +253,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             highlighted={false}
             key="opt-jQuery"
             onClick={[Function]}
-            selected={false}
+            selected={true}
             text="jQuery"
             tickIcon={true}
             value="jQuery"
@@ -424,7 +462,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
         </div>
         <input
           type="hidden"
-          value=""
+          value="React.js,jQuery"
         />
       </div>
     </div>

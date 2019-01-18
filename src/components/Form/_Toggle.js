@@ -60,9 +60,9 @@ export class Toggle extends PureComponent {
   /**
    * Sync the value.
    */
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.value !== this.props.value) {
-      this.setState({ value: nextProps.value });
+  componentDidUpdate(oldProps) {
+    if (oldProps.value !== this.props.value) {
+      this.setState({ value: this.props.value });
     }
   }
 

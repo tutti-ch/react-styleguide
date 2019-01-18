@@ -5,10 +5,9 @@ import InputRadio from "./_InputRadio";
 import { shallow, mount } from "enzyme";
 
 describe("(Component) InputRadio", () => {
-  test("[componentWillReceiveProps] should sync the state with props", () => {
+  test("[componentDidUpdate] should sync the state with props", () => {
     const comp = shallow(<InputRadio />);
-    const inst = comp.instance();
-    inst.componentWillReceiveProps({ checked: true });
+    comp.setProps({ checked: true });
     expect(comp.state("checked")).toBe(true);
   });
 

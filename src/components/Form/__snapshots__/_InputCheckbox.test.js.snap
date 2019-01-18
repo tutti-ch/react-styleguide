@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`(Component) InputCheckbox [componentDidUpdate] should sync the state with props 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "checked": true,
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "isThrow": false,
+      "value": undefined,
+    },
+  ],
+}
+`;
+
 exports[`(Component) InputCheckbox snapshot 1`] = `
 <InputCheckbox
   checked={true}

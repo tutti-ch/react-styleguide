@@ -90,9 +90,9 @@ export default class Image extends Component {
 
   // need to check both on update and on mount because sometimes the image gets called with an empty url at first
   // (eg. before we fetch the ad url from an api call)
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.src !== this.props.src) {
-      this.image.src = nextProps.src;
+  componentDidUpdate(oldProps) {
+    if (oldProps.src !== this.props.src) {
+      this.image.src = this.props.src;
       this.setState({ loaded: false });
     }
   }

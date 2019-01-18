@@ -28,13 +28,13 @@ describe("(Component) Toggle", function() {
     expect(event.preventDefault).toHaveBeenCalledTimes(1);
   });
 
-  test("[componentWillReceiveProps] should update the state when the value changes", () => {
+  test("[componentDidUpdate] should update the state when the value changes", () => {
     const onChange = jest.fn();
     const comp = shallow(<TogglePure onChange={onChange} name="toggle" />);
     const inst = comp.instance();
     const spy = jest.spyOn(inst, "setState");
-    inst.componentWillReceiveProps({ value: "My value" });
-    expect(spy).toHaveBeenCalledWith({ value: "My value" });
+    comp.setProps({ value: "My value" });
+    expect(spy).toHaveBeenCalled();
   });
 
   test("should match snapshots", () => {

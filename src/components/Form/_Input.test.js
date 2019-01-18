@@ -4,10 +4,9 @@ import { Input } from "./_Input";
 import { shallow, mount } from "enzyme";
 
 describe("(Component) Input", () => {
-  test("[componentWillReceiveProps] should sync the state with props", () => {
+  test("[componentDidUpdate] should sync the state with props", () => {
     const comp = shallow(<Input />);
-    const inst = comp.instance();
-    inst.componentWillReceiveProps({ value: "Frocello" });
+    comp.setProps({ value: "Frocello" });
     expect(comp.state("value")).toBe("Frocello");
   });
 
