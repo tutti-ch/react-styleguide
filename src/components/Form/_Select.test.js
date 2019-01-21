@@ -16,34 +16,34 @@ describe("(Component) Select", () => {
     { value: "Other", text: "Other" }
   ];
 
-  // test("[componentDidUpdate] should update the state when the component receives new props", () => {
-  //   const options = getOptions();
-  //   const comp = mount(<Select options={options} selected="jQuery" />);
-  //   expect(comp.state("selected")).toEqual(["jQuery"]);
+  test("[componentDidUpdate] should update the state when the component receives new props", () => {
+    const options = getOptions();
+    const comp = mount(<Select options={options} selected="jQuery" />);
+    expect(comp.state("selected")).toEqual(["jQuery"]);
 
-  //   const spy = jest.spyOn(comp.instance(), "sortOptions");
-  //   comp.setProps({ selected: ["jQuery", "Ember"], multiple: true });
+    const spy = jest.spyOn(comp.instance(), "sortOptions");
+    comp.setProps({ selected: ["jQuery", "Ember"], multiple: true });
 
-  //   expect(comp.state("selected")).toEqual(["jQuery", "Ember"]);
-  //   expect(spy).not.toHaveBeenCalled();
+    expect(comp.state("selected")).toEqual(["jQuery", "Ember"]);
+    expect(spy).not.toHaveBeenCalled();
 
-  //   comp.setProps({
-  //     options: [{ value: "NewF.js", text: "New Framework" }],
-  //     sort: true
-  //   });
-  //   expect(spy).toHaveBeenCalled();
+    comp.setProps({
+      options: [{ value: "NewF.js", text: "New Framework" }],
+      sort: true
+    });
+    expect(spy).toHaveBeenCalled();
 
-  //   const setStateSpy = jest.spyOn(comp.instance(), "setState");
-  //   comp.setProps({});
-  //   expect(setStateSpy).not.toHaveBeenCalled();
+    const setStateSpy = jest.spyOn(comp.instance(), "setState");
+    comp.setProps({});
+    expect(setStateSpy).not.toHaveBeenCalled();
 
-  //   comp.setProps({ options, sort: false, selected: "React.js" });
-  //   expect(setStateSpy).toHaveBeenCalledWith({
-  //     highlighted: -1,
-  //     selected: ["React.js"],
-  //     options: options
-  //   });
-  // });
+    comp.setProps({ options, sort: false, selected: "React.js" });
+    expect(setStateSpy).toHaveBeenCalledWith({
+      highlighted: -1,
+      selected: ["React.js"],
+      options: options
+    });
+  });
 
   test("[componentDidUpdate] should handle highlighted state", () => {
     const options = getOptions();
