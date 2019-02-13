@@ -1,11 +1,8 @@
 import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
 import ToolTipComp from "./_Tooltip";
 import Form from "../Form";
 
 export default class Tooltip extends PureComponent {
-  static propTypes = { className: PropTypes.string };
-
   reset = e => {
     e.preventDefault();
     localStorage.removeItem("tooltip-styleguide");
@@ -39,10 +36,8 @@ export default class Tooltip extends PureComponent {
   };
 
   render() {
-    const { className } = this.props;
-
     return (
-      <div className={className}>
+      <div>
         <div style={{ marginBottom: "1rem" }}>
           <Form.Select
             onChange={this.changeArrow}

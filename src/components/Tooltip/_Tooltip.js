@@ -13,6 +13,7 @@ export default class Tooltip extends PureComponent {
   };
 
   static propTypes = {
+    className,
     /**
      * The position of the arrow.
      */
@@ -96,15 +97,27 @@ export default class Tooltip extends PureComponent {
 
   render() {
     const { closed, render } = this.state;
-    const { arrowPosition, appearAfter, name, children, ...rest } = this.props;
+    const {
+      className,
+      arrowPosition,
+      appearAfter,
+      name,
+      children,
+      ...rest
+    } = this.props;
 
     if (!render) {
       return null;
     }
 
-    const tooltipClasses = classNames(classes.tooltip, classes[arrowPosition], {
-      [classes.close]: closed
-    });
+    const tooltipClasses = classNames(
+      className,
+      classes.tooltip,
+      classes[arrowPosition],
+      {
+        [classes.close]: closed
+      }
+    );
 
     return (
       <div {...rest} className={tooltipClasses}>
