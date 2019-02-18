@@ -78,4 +78,13 @@ describe("(Components) Tooltip", () => {
     inst.componentWillUnmount();
     expect(inst.unmounted).toBe(true);
   });
+
+  test("should get className from props", () => {
+    const comp = mount(
+      <Tooltip className="markoisgay" arrowPosition={"tl"} name={"lorem ipsum"}>
+        My super tooltip
+      </Tooltip>
+    );
+    expect(comp).toMatchSnapshot();
+  });
 });

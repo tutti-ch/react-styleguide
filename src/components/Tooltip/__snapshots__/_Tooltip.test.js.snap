@@ -41,3 +41,12 @@ exports[`(Components) Tooltip should first render null then after APPEAR_AFTER s
   name="my-tooltip"
 />
 `;
+
+exports[`(Components) Tooltip should get className from props 1`] = `
+<Tooltip
+  appearAfter={1000}
+  arrowPosition="tl"
+  className="markoisgay"
+  name="lorem ipsum"
+/>
+`;

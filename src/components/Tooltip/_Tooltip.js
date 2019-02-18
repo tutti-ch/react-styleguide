@@ -13,7 +13,7 @@ export default class Tooltip extends PureComponent {
   };
 
   static propTypes = {
-    className,
+    className: PropTypes.string,
     /**
      * The position of the arrow.
      */
