@@ -84,7 +84,7 @@ $desktop: $wrapperAdvertisement;
 // Small height media query
 
 @mixin short-device {
-  @media (max-height: $phone) {
+  @media (max-height: 600px) {
     @content;
   }
 }
