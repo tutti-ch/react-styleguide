@@ -2,13 +2,13 @@
 
 .pagination_bar {
   width: 100%;
-  margin: $size-xl auto;
+  padding: $size-xl auto;
   display: flex;
   justify-content: center;
   //   @include clearfix;
 
   @include tablet-and-bigger {
-    margin: $size-m 0 $size-xl 0;
+    padding: $size-m 0 $size-xl 0;
   }
 }
 
@@ -39,7 +39,7 @@
     background: $blue-70;
 
     div {
-      color: white;
+      color: $greyscale-100;
     }
   }
 }
