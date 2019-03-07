@@ -202,26 +202,30 @@ export class Slider extends Component {
         ? props.suffix
         : [props.suffix, props.suffix]
     };
+
+    this.slider = React.createRef();
+    this.max = React.createRef();
+    this.min = React.createRef();
   }
 
   /**
    * Register the root component here to save some operations later.
    */
   componentDidMount() {
-    this.root = ReactDOM.findDOMNode(this);
+    this.root = this.slider.current;
 
     // The timeout is required so that refs are mounted properly
     setTimeout(() => {
       const max = { ...this.state.max };
       const min = { ...this.state.min };
 
-      if (this.refs.min) {
-        this.target = this.refs.min;
+      if (this.min.current) {
+        this.target = this.min.current;
         min.position = this.calculatePosition(min.value || this.getMinRange());
       }
 
-      if (this.refs.max) {
-        this.target = this.refs.max;
+      if (this.max.current) {
+        this.target = this.max.current;
         max.position = this.calculatePosition(max.value || this.getMaxRange());
       }
 
@@ -604,7 +608,7 @@ export class Slider extends Component {
       this.state[prop].position ||
       (prop === "max"
         ? Slider.perc(
-            get(this.refs, "max.offsetWidth"),
+            get(this.max, "current.offsetWidth"),
             get(this.root, "offsetWidth")
           ) || 100
         : 0);
@@ -618,7 +622,7 @@ export class Slider extends Component {
         style={styles}
         tabIndex={1}
         key={prop}
-        ref={prop}
+        ref={this[prop]}
         {...events}
       />,
       <input
@@ -691,7 +695,7 @@ export class Slider extends Component {
     }
 
     return (
-      <span className={classes.slider}>
+      <span className={classes.slider} ref={this.slider}>
         <span className={classes.thumbBg} style={styles} />
         <span className={classes.label}>
           <span className={classes.labelText}>{label}</span>

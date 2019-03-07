@@ -12,11 +12,11 @@ describe("(Component) Slider", () => {
     const comp = mount(<Slider min={1000} max={2000} />);
     const inst = comp.instance();
     inst.root = { offsetWidth: 500 };
-    inst.refs.min = {
+    inst.min.current = {
       getAttribute: jest.fn().mockReturnValue("min"),
       offsetWidth: 50
     };
-    inst.refs.max = {
+    inst.max.current = {
       getAttribute: jest.fn().mockReturnValue("max"),
       offsetWidth: 50
     };
@@ -26,8 +26,8 @@ describe("(Component) Slider", () => {
       expect(comp.state("min").position).toBe(0);
       expect(comp.state("max").position).toBe(90);
 
-      inst.refs.min = undefined;
-      inst.refs.max = undefined;
+      inst.min.current = undefined;
+      inst.max.current = undefined;
       inst.calculatePosition = jest.fn();
       inst.componentDidMount();
 

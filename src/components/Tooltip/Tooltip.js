@@ -6,12 +6,14 @@ export default class Tooltip extends PureComponent {
   reset = e => {
     e.preventDefault();
     localStorage.removeItem("tooltip-styleguide");
-    this.refs.tooltip.setState({ render: true, closed: false });
+    this.tooltip.current.setState({ render: true, closed: false });
   };
 
   state = {
     selectedArrow: "t"
   };
+
+  tooltip = React.createRef();
 
   arrowPositions = [
     { text: "Top center", value: "t" },
@@ -47,7 +49,7 @@ export default class Tooltip extends PureComponent {
         </div>
         <ToolTipComp
           name={"tooltip-styleguide"}
-          ref={"tooltip"}
+          ref={this.tooltip}
           arrowPosition={this.state.selectedArrow}
         >
           This is the tooltip. It will fade away if you click on the close
