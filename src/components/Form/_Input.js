@@ -45,6 +45,8 @@ export class Input extends Component {
       value: props.value
     };
 
+    this.input = React.createRef();
+
     this.notify = this.notify.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -74,7 +76,7 @@ export class Input extends Component {
         });
       });
 
-      this.observer.observe(this.refs.input, {
+      this.observer.observe(this.input.current, {
         attributes: true
       });
     }
@@ -169,7 +171,7 @@ export class Input extends Component {
         onBlur={this.handleBlur}
         onKeyDown={this.handleKeyDown}
         onChange={this.handleChange}
-        ref="input"
+        ref={this.input}
       />
     );
   }
