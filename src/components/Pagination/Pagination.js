@@ -86,7 +86,7 @@ export default class Pagination extends Component {
     const isFirst = page === 1;
 
     return (
-      <div>
+      <>
         {pagesCount > 1 && (
           <ul className={classes.pagination_bar}>
             <Page
@@ -117,7 +117,7 @@ export default class Pagination extends Component {
             />
           </ul>
         )}
-      </div>
+      </>
     );
   }
 }
