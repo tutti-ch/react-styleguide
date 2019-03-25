@@ -27,7 +27,7 @@ export default (WrappedComponent, mergeProps = {}) => {
       /**
        * The input label.
        */
-      label: PropTypes.string,
+      label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 
       /**
        * The class name.
