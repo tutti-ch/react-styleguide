@@ -30,7 +30,7 @@ export default (WrappedComponent, mergeProps = {}) => {
       label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 
       /**
-       * The class name.
+       * The classname.
        */
       className: PropTypes.oneOfType([
         PropTypes.string,
