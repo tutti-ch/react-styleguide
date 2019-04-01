@@ -39,13 +39,17 @@ export default class Pagination extends Component {
     /**
      * Number of pages visible at the same time to the user
      */
-    pageBucket: PropTypes.number
+    pageBucket: PropTypes.number,
+
+    // Generates the URL for the single pages
+    getPageUrl: PropTypes.func
   };
 
   static defaultProps = {
     itemsPerPage: 10,
     pageBucket: 10,
-    onChange: () => {}
+    onChange: () => {},
+    getPageUrl: () => "#"
   };
 
   render() {
@@ -55,7 +59,8 @@ export default class Pagination extends Component {
       page,
       pageBucket,
       onChange,
-      pageText
+      pageText,
+      getPageUrl
     } = this.props;
     const pagesCount = Math.ceil(totalItems / itemsPerPage);
     const currentBucket = Math.floor((page - 0.5) / pageBucket);
@@ -74,6 +79,7 @@ export default class Pagination extends Component {
           number={o}
           active={page === o}
           onClick={onChange}
+          url={getPageUrl(o)}
         />
       );
     }
@@ -88,34 +94,40 @@ export default class Pagination extends Component {
     return (
       <>
         {pagesCount > 1 && (
-          <ul className={classes.pagination_bar}>
-            <Page
-              number={1}
-              disabled={isFirst}
-              onClick={onChange}
-              icon={ArrowStart}
-            />
-            <Page
-              number={isTooSmall ? 1 : previousPage}
-              disabled={isTooSmall}
-              icon={Prev}
-              onClick={onChange}
-            />
-            <li className={classes.text}>{pageText}</li>
-            {pages}
-            <Page
-              number={isTooBig ? pagesCount : nextPage}
-              disabled={isTooBig}
-              icon={Next}
-              onClick={onChange}
-            />
-            <Page
-              number={pagesCount}
-              disabled={isLast}
-              icon={ArrowEnd}
-              onClick={onChange}
-            />
-          </ul>
+          <nav role="navigation" aria-label="Pagination Navigation">
+            <ul className={classes.pagination_bar}>
+              <Page
+                number={1}
+                disabled={isFirst}
+                onClick={onChange}
+                icon={ArrowStart}
+                url={getPageUrl(1)}
+              />
+              <Page
+                number={isTooSmall ? 1 : previousPage}
+                disabled={isTooSmall}
+                icon={Prev}
+                onClick={onChange}
+                url={getPageUrl(isTooSmall ? 1 : previousPage)}
+              />
+              <li className={classes.text}>{pageText}</li>
+              {pages}
+              <Page
+                number={isTooBig ? pagesCount : nextPage}
+                disabled={isTooBig}
+                icon={Next}
+                onClick={onChange}
+                url={getPageUrl(isTooBig ? pagesCount : nextPage)}
+              />
+              <Page
+                number={pagesCount}
+                disabled={isLast}
+                icon={ArrowEnd}
+                onClick={onChange}
+                url={getPageUrl(pagesCount)}
+              />
+            </ul>
+          </nav>
         )}
       </>
     );

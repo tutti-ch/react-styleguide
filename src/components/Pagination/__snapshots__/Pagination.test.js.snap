@@ -2,6 +2,7 @@
 
 exports[`(Component) Pagination should match the snapshot 1`] = `
 <Pagination
+  getPageUrl={[Function]}
   itemsPerPage={10}
   onChange={[Function]}
   page={302}
@@ -9,182 +10,215 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
   pageText="Page"
   totalItems={3020}
 >
-  <ul>
-    <Page
-      disabled={false}
-      icon={[Function]}
-      number={1}
-      onClick={[Function]}
-    >
-      <li
-        className=""
+  <nav
+    aria-label="Pagination Navigation"
+    role="navigation"
+  >
+    <ul>
+      <Page
+        disabled={false}
+        icon={[Function]}
+        number={1}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className=""
         >
-          <ArrowStart>
-            <Sprite
-              id="arrow-start"
-              viewBox="0 0 15.4 30"
-            >
-              <svg
-                className="svg-sprite"
-                role="img"
+          <a
+            aria-label="Go to page 1"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            <ArrowStart>
+              <Sprite
+                id="arrow-start"
                 viewBox="0 0 15.4 30"
               >
-                <use
-                  xlinkHref="#arrow-start"
-                />
-              </svg>
-            </Sprite>
-          </ArrowStart>
-        </div>
-      </li>
-    </Page>
-    <Page
-      disabled={false}
-      icon={[Function]}
-      number={301}
-      onClick={[Function]}
-    >
-      <li
-        className=""
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 15.4 30"
+                >
+                  <use
+                    xlinkHref="#arrow-start"
+                  />
+                </svg>
+              </Sprite>
+            </ArrowStart>
+          </a>
+        </li>
+      </Page>
+      <Page
+        disabled={false}
+        icon={[Function]}
+        number={301}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className=""
         >
-          <Prev>
-            <Sprite
-              id="prev"
-              viewBox="0 0 30 30"
-            >
-              <svg
-                className="svg-sprite"
-                role="img"
+          <a
+            aria-label="Go to page 301"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            <Prev>
+              <Sprite
+                id="prev"
                 viewBox="0 0 30 30"
               >
-                <use
-                  xlinkHref="#prev"
-                />
-              </svg>
-            </Sprite>
-          </Prev>
-        </div>
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 30 30"
+                >
+                  <use
+                    xlinkHref="#prev"
+                  />
+                </svg>
+              </Sprite>
+            </Prev>
+          </a>
+        </li>
+      </Page>
+      <li>
+        Page
       </li>
-    </Page>
-    <li>
-      Page
-    </li>
-    <Page
-      active={false}
-      key="pagination-300"
-      number={300}
-      onClick={[Function]}
-    >
-      <li
-        className=""
+      <Page
+        active={false}
+        key="pagination-300"
+        number={300}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className=""
         >
-          300
-        </div>
-      </li>
-    </Page>
-    <Page
-      active={false}
-      key="pagination-301"
-      number={301}
-      onClick={[Function]}
-    >
-      <li
-        className=""
+          <a
+            aria-label="Go to page 300"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            300
+          </a>
+        </li>
+      </Page>
+      <Page
+        active={false}
+        key="pagination-301"
+        number={301}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className=""
         >
-          301
-        </div>
-      </li>
-    </Page>
-    <Page
-      active={true}
-      key="pagination-302"
-      number={302}
-      onClick={[Function]}
-    >
-      <li
-        className=""
+          <a
+            aria-label="Go to page 301"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            301
+          </a>
+        </li>
+      </Page>
+      <Page
+        active={true}
+        key="pagination-302"
+        number={302}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className=""
         >
-          302
-        </div>
-      </li>
-    </Page>
-    <Page
-      disabled={true}
-      icon={[Function]}
-      number={302}
-      onClick={[Function]}
-    >
-      <li
-        className="undefined"
+          <a
+            aria-label="Go to page 302"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            302
+          </a>
+        </li>
+      </Page>
+      <Page
+        disabled={true}
+        icon={[Function]}
+        number={302}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className="undefined"
         >
-          <Next>
-            <Sprite
-              id="next"
-              viewBox="0 0 30 30"
-            >
-              <svg
-                className="svg-sprite"
-                role="img"
+          <a
+            aria-label="Go to page 302"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            <Next>
+              <Sprite
+                id="next"
                 viewBox="0 0 30 30"
               >
-                <use
-                  xlinkHref="#next"
-                />
-              </svg>
-            </Sprite>
-          </Next>
-        </div>
-      </li>
-    </Page>
-    <Page
-      disabled={true}
-      icon={[Function]}
-      number={302}
-      onClick={[Function]}
-    >
-      <li
-        className="undefined"
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 30 30"
+                >
+                  <use
+                    xlinkHref="#next"
+                  />
+                </svg>
+              </Sprite>
+            </Next>
+          </a>
+        </li>
+      </Page>
+      <Page
+        disabled={true}
+        icon={[Function]}
+        number={302}
+        onClick={[Function]}
+        url="#"
       >
-        <div
-          className="link"
+        <li
+          className="undefined"
         >
-          <ArrowEnd>
-            <Sprite
-              id="arrow-end"
-              viewBox="0 0 15.4 30"
-            >
-              <svg
-                className="svg-sprite"
-                role="img"
+          <a
+            aria-label="Go to page 302"
+            className="link"
+            href="#"
+            onClick={[Function]}
+          >
+            <ArrowEnd>
+              <Sprite
+                id="arrow-end"
                 viewBox="0 0 15.4 30"
               >
-                <use
-                  xlinkHref="#arrow-end"
-                />
-              </svg>
-            </Sprite>
-          </ArrowEnd>
-        </div>
-      </li>
-    </Page>
-  </ul>
+                <svg
+                  className="svg-sprite"
+                  role="img"
+                  viewBox="0 0 15.4 30"
+                >
+                  <use
+                    xlinkHref="#arrow-end"
+                  />
+                </svg>
+              </Sprite>
+            </ArrowEnd>
+          </a>
+        </li>
+      </Page>
+    </ul>
+  </nav>
 </Pagination>
 `;

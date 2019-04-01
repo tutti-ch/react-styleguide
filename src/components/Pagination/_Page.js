@@ -10,11 +10,25 @@ export default class Page extends Component {
     icon: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
     disabled: PropTypes.bool,
     active: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    url: PropTypes.string
+  };
+
+  static defaultProps = {
+    url: "#"
+  };
+
+  handleClick = number => e => {
+    e.preventDefault();
+    const { onClick } = this.props;
+
+    if (typeof onClick === "function") {
+      this.props.onClick(number);
+    }
   };
 
   render() {
-    const { number, icon: Icon, active, disabled, onClick } = this.props;
+    const { number, icon: Icon, active, disabled, url } = this.props;
 
     const listItemClasses = classNames(classes.page, {
       [classes.active]: active,
@@ -25,8 +39,15 @@ export default class Page extends Component {
     const linkClasses = classNames("link", [classes.link]);
 
     return (
-      <li className={listItemClasses} onClick={onClick(number)}>
-        <div className={linkClasses}>{Icon ? <Icon /> : number}</div>
+      <li className={listItemClasses}>
+        <a
+          href={url}
+          className={linkClasses}
+          aria-label={`Go to page ${number}`}
+          onClick={this.handleClick(number)}
+        >
+          {Icon ? <Icon /> : number}
+        </a>
       </li>
     );
   }

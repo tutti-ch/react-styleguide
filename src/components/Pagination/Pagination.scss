@@ -42,6 +42,10 @@
       color: $greyscale-100;
     }
   }
+
+  .link {
+    color: #fff;
+  }
 }
 
 .inactive {
@@ -71,6 +75,8 @@ body.offline .page {
   height: auto;
   display: block;
   line-height: $size-xxl !important;
+  text-decoration: none;
+  color: $blue-40;
 
   :global .svg-sprite {
     width: $size-m;
