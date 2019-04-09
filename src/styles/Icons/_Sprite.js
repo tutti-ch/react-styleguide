@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import SVG from "./assets/_sprite.svg";
+import SVG from "./assets/sprite.svg";
 import s4e from "svg4everybody";
 import cn from "classnames";
 import "./_Sprite.scss";

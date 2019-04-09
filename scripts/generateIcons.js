@@ -88,7 +88,7 @@ const helpers = (() => ({
 }))();
 
 // Remove old _sprite files.
-glob(src + "/**/_sprite.svg", (err, results) => {
+glob(src + "/**/sprite.svg", (err, results) => {
   results.forEach(sprite => {
     if (fs.existsSync(sprite)) {
       fs.unlinkSync(sprite);
@@ -154,7 +154,7 @@ glob(src + "/**/_sprite.svg", (err, results) => {
     });
 
     // Finally re-add sprite.svgs
-    const sprite = `${src}/Icons/assets/_sprite.svg`;
+    const sprite = `${src}/Icons/assets/sprite.svg`;
     SpriteGenerator.spriteFromFiles(spriteFiles).then(file => {
       fs.writeFileSync(sprite, file);
     });
