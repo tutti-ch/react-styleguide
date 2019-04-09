@@ -15,7 +15,7 @@ class Animations extends React.Component {
           width="900"
           height="600"
           controls
-          autoplay
+          autoPlay
           style={{
             width: "100%",
             "margin-bottom": "40px"
@@ -27,7 +27,7 @@ class Animations extends React.Component {
           width="900"
           height="600"
           controls
-          autoplay
+          autoPlay
           style={{
             width: "100%",
             "margin-bottom": "40px"
