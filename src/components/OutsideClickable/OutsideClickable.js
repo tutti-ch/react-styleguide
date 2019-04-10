@@ -1,16 +1,19 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
 export default class OutsideClickable extends Component {
   static propTypes = {
     children: PropTypes.node,
-    onOutsideClick: PropTypes.func.isRequired
+    onOutsideClick: PropTypes.func.isRequired,
+    className: PropTypes.string,
+    toggle: PropTypes.func
   };
 
   constructor(props) {
     super(props);
-    this.contains = this.contains.bind(this);
+
+    this.outsideClickable = React.createRef();
   }
 
   componentDidMount() {
@@ -21,15 +24,19 @@ export default class OutsideClickable extends Component {
     window.removeEventListener("click", this.contains);
   }
 
-  contains(e) {
-    const node = ReactDOM.findDOMNode(this);
+  contains = e => {
+    const node = this.outsideClickable.current;
 
     if (node && node.contains(e.target) === false) {
       this.props.onOutsideClick.call();
     }
-  }
+  };
 
   render() {
-    return this.props.children;
+    return (
+      <div className={this.props.className} ref={this.outsideClickable}>
+        {this.props.children}
+      </div>
+    );
   }
 }

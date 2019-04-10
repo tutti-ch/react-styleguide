@@ -437,7 +437,10 @@ export class Select extends Component {
     });
 
     return (
-      <OutsideClickable onOutsideClick={this.close}>
+      <OutsideClickable
+        onOutsideClick={this.close}
+        className={classes.maxWidth}
+      >
         <div className={selectClasses} onClick={this.toggle}>
           <div
             className={classNames(classes.selectInner)}
