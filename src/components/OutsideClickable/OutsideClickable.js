@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+/* OutsideClickable only accepts one top-level child */
+import React, { Component, Children, cloneElement } from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
@@ -12,8 +13,6 @@ export default class OutsideClickable extends Component {
 
   constructor(props) {
     super(props);
-
-    this.outsideClickable = React.createRef();
   }
 
   componentDidMount() {
@@ -25,18 +24,37 @@ export default class OutsideClickable extends Component {
   }
 
   contains = e => {
-    const node = this.outsideClickable.current;
-
+    const node = this.outsideClickable;
     if (node && node.contains(e.target) === false) {
       this.props.onOutsideClick.call();
     }
   };
 
+  onlyOneChild = () => {
+    if (this.props.children.length > 1) {
+      throw new Error("Multiple children are not allowed in OutsideClickable");
+      return;
+    }
+    return true;
+  };
+
   render() {
     return (
-      <div className={this.props.className} ref={this.outsideClickable}>
-        {this.props.children}
-      </div>
+      this.onlyOneChild() &&
+      Children.map(this.props.children, child =>
+        cloneElement(child, {
+          ref: node => {
+            // Keep your own reference
+            this.outsideClickable = node;
+            // Call the original ref, if any
+            const { ref } = child;
+
+            if (typeof ref === "function") {
+              ref(node);
+            }
+          }
+        })
+      )
     );
   }
 }

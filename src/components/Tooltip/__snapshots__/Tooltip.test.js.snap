@@ -132,275 +132,274 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
             <OutsideClickable
               onOutsideClick={[Function]}
             >
-              <div>
+              <div
+                className=""
+                key=".0"
+                onClick={[Function]}
+              >
                 <div
                   className=""
-                  onClick={[Function]}
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                  tabIndex={0}
                 >
                   <div
                     className=""
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                    tabIndex={0}
                   >
-                    <div
-                      className=""
-                    >
-                      <Option
-                        closeIcon={false}
-                        key="t"
-                        selected={false}
-                        text="Top center"
-                        value="t"
-                      >
-                        <div
-                          className=""
-                          key="t"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Top center
-                          </span>
-                        </div>
-                      </Option>
-                    </div>
-                    <div
-                      className=""
-                    >
-                      <Option
-                        highlighted={true}
-                        key="opt-t"
-                        onClick={[Function]}
-                        selected={true}
-                        text="Top center"
-                        tickIcon={false}
-                        value="t"
-                      >
-                        <div
-                          className=""
-                          key="t"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Top center
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-tr"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Top right"
-                        tickIcon={false}
-                        value="tr"
-                      >
-                        <div
-                          className=""
-                          key="tr"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Top right
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-tl"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Top left"
-                        tickIcon={false}
-                        value="tl"
-                      >
-                        <div
-                          className=""
-                          key="tl"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Top left
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-b"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Bottom center"
-                        tickIcon={false}
-                        value="b"
-                      >
-                        <div
-                          className=""
-                          key="b"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Bottom center
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-br"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Bottom right"
-                        tickIcon={false}
-                        value="br"
-                      >
-                        <div
-                          className=""
-                          key="br"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Bottom right
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-bl"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Bottom left"
-                        tickIcon={false}
-                        value="bl"
-                      >
-                        <div
-                          className=""
-                          key="bl"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Bottom left
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-r"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Right center"
-                        tickIcon={false}
-                        value="r"
-                      >
-                        <div
-                          className=""
-                          key="r"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Right center
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-rt"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Right top"
-                        tickIcon={false}
-                        value="rt"
-                      >
-                        <div
-                          className=""
-                          key="rt"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Right top
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-rb"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Right bottom"
-                        tickIcon={false}
-                        value="rb"
-                      >
-                        <div
-                          className=""
-                          key="rb"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Right bottom
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-l"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Left center"
-                        tickIcon={false}
-                        value="l"
-                      >
-                        <div
-                          className=""
-                          key="l"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Left center
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-lt"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Left top"
-                        tickIcon={false}
-                        value="lt"
-                      >
-                        <div
-                          className=""
-                          key="lt"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Left top
-                          </span>
-                        </div>
-                      </Option>
-                      <Option
-                        highlighted={false}
-                        key="opt-lb"
-                        onClick={[Function]}
-                        selected={false}
-                        text="Left bottom"
-                        tickIcon={false}
-                        value="lb"
-                      >
-                        <div
-                          className=""
-                          key="lb"
-                          onClick={[Function]}
-                        >
-                          <span>
-                            Left bottom
-                          </span>
-                        </div>
-                      </Option>
-                    </div>
-                    <input
-                      type="hidden"
+                    <Option
+                      closeIcon={false}
+                      key="t"
+                      selected={false}
+                      text="Top center"
                       value="t"
-                    />
+                    >
+                      <div
+                        className=""
+                        key="t"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Top center
+                        </span>
+                      </div>
+                    </Option>
                   </div>
+                  <div
+                    className=""
+                  >
+                    <Option
+                      highlighted={true}
+                      key="opt-t"
+                      onClick={[Function]}
+                      selected={true}
+                      text="Top center"
+                      tickIcon={false}
+                      value="t"
+                    >
+                      <div
+                        className=""
+                        key="t"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Top center
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-tr"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Top right"
+                      tickIcon={false}
+                      value="tr"
+                    >
+                      <div
+                        className=""
+                        key="tr"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Top right
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-tl"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Top left"
+                      tickIcon={false}
+                      value="tl"
+                    >
+                      <div
+                        className=""
+                        key="tl"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Top left
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-b"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Bottom center"
+                      tickIcon={false}
+                      value="b"
+                    >
+                      <div
+                        className=""
+                        key="b"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Bottom center
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-br"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Bottom right"
+                      tickIcon={false}
+                      value="br"
+                    >
+                      <div
+                        className=""
+                        key="br"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Bottom right
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-bl"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Bottom left"
+                      tickIcon={false}
+                      value="bl"
+                    >
+                      <div
+                        className=""
+                        key="bl"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Bottom left
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-r"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Right center"
+                      tickIcon={false}
+                      value="r"
+                    >
+                      <div
+                        className=""
+                        key="r"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Right center
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-rt"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Right top"
+                      tickIcon={false}
+                      value="rt"
+                    >
+                      <div
+                        className=""
+                        key="rt"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Right top
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-rb"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Right bottom"
+                      tickIcon={false}
+                      value="rb"
+                    >
+                      <div
+                        className=""
+                        key="rb"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Right bottom
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-l"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Left center"
+                      tickIcon={false}
+                      value="l"
+                    >
+                      <div
+                        className=""
+                        key="l"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Left center
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-lt"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Left top"
+                      tickIcon={false}
+                      value="lt"
+                    >
+                      <div
+                        className=""
+                        key="lt"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Left top
+                        </span>
+                      </div>
+                    </Option>
+                    <Option
+                      highlighted={false}
+                      key="opt-lb"
+                      onClick={[Function]}
+                      selected={false}
+                      text="Left bottom"
+                      tickIcon={false}
+                      value="lb"
+                    >
+                      <div
+                        className=""
+                        key="lb"
+                        onClick={[Function]}
+                      >
+                        <span>
+                          Left bottom
+                        </span>
+                      </div>
+                    </Option>
+                  </div>
+                  <input
+                    type="hidden"
+                    value="t"
+                  />
                 </div>
               </div>
             </OutsideClickable>
