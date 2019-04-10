@@ -1,6 +1,6 @@
 /* global describe, it, expect, jest */
 import React from "react";
-import { mount } from "enzyme";
+import { shallow, mount } from "enzyme";
 import OutsideClickable from "./index";
 
 describe("(Component) OutsideClickable", () => {
@@ -27,5 +27,23 @@ describe("(Component) OutsideClickable", () => {
     // It should not detect the outside click anymore since we have unmounted the component
     document.body.click();
     expect(myEvent.mock.calls.length).toBe(1);
+  });
+
+  it("should throw an error if it receives multiple children", () => {
+    const myEvent = jest.fn();
+    let error;
+
+    try {
+      const comp = shallow(
+        <OutsideClickable onOutsideClick={myEvent}>
+          <div>First child</div>
+          <div>Second child</div>
+        </OutsideClickable>
+      );
+    } catch (e) {
+      error = e;
+    }
+
+    expect(() => comp).toThrowError();
   });
 });
