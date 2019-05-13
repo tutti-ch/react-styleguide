@@ -35,11 +35,18 @@ export default class Sprite extends React.Component {
         div.innerHTML = this.req.responseText;
         div.style.display = "none";
         document.body.insertBefore(div, document.body.childNodes[0]);
-        this.setState({ ready: true }, s4e);
         Sprite.loaded = true;
-        Sprite.loading.forEach(c => c.setState({ ready: true }));
+
+        if (this.unmounted !== true) {
+          this.setState({ ready: true }, s4e);
+          Sprite.loading.forEach(c => c.setState({ ready: true }));
+        }
       };
     }
+  }
+
+  componentWillUnmount() {
+    this.unmounted = true;
   }
 
   render() {
