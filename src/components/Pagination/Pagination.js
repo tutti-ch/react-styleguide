@@ -19,7 +19,7 @@ export default class Pagination extends Component {
     /**
      * Number of total items that needs to be paginated
      */
-    totalItems: PropTypes.number.isRequired,
+    totalItems: PropTypes.number,
 
     /**
      * Text shown before the page number (only mobile view)
