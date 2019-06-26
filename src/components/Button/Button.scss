@@ -2,7 +2,7 @@
 
 .button {
   border-radius: $border-radius-s;
-  line-height: $size-l;
+  line-height: $size-m;
   border: none;
   padding: 0;
   margin: 0;
@@ -64,14 +64,14 @@
 // SIZE
 
 .button.small {
-  line-height: $size-xl;
+  line-height: $size-m;
   padding: 0 $size-s;
 
   height: $size-xl;
 
   .icon {
     height: $size-xl;
-    line-height: $size-xl;
+    line-height: $size-m;
   }
 
   .icon:first-child {
@@ -89,14 +89,14 @@
 }
 
 .button.medium {
-  line-height: $size-xxl;
+  line-height: $size-m;
   padding: 0 $size-m;
 
   height: $size-xxl;
 
   .icon {
     height: $size-xxl;
-    line-height: $size-xxl;
+    line-height: $size-m;
   }
 
   .icon:first-child {
@@ -114,14 +114,14 @@
 }
 
 .button.large {
-  line-height: $size-xxxl;
+  line-height: $size-m;
   padding: 0 $size-l;
 
   height: $size-xxxl;
 
   .icon {
     height: $size-xxxl;
-    line-height: $size-xxxl;
+    line-height: $size-m;
   }
 
   .icon:first-child {
