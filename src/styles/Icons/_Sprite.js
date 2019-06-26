@@ -39,7 +39,11 @@ export default class Sprite extends React.Component {
 
         if (this.unmounted !== true) {
           this.setState({ ready: true }, s4e);
-          Sprite.loading.forEach(c => c.setState({ ready: true }));
+          Sprite.loading.forEach(c => {
+            if (!c.unmounted) {
+              c.setState({ ready: true });
+            }
+          });
         }
       };
     }
