@@ -452,7 +452,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.25rem; // We currently don't have a size variable for that
+  font-size: $size-ml; // We currently don't have a size variable for that
   margin-top: $size-s;
   margin-bottom: $size-xl;
 
