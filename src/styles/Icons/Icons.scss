@@ -52,12 +52,3 @@
   font-size: $size-xs;
   text-align: center;
 }
-
-.icon-category {
-  fill: $base-60;
-  transition: $transition-m;
-
-  &:hover {
-    fill: $red-50;
-  }
-}

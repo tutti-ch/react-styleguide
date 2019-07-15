@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import classes from "./Icons.scss";
-import cn from "classnames";
 import { BoxCardWrapper, BoxCard } from "../../internals/Box";
 
 export default class Icons extends Component {
@@ -25,13 +24,7 @@ export default class Icons extends Component {
 
   renderIcon = (icons, icon) => {
     const Icon = icons[icon];
-    const { directory } = this.props;
-
-    const classnames = cn(classes.image, {
-      [classes[`icon-${directory}`]]: classes[`icon-${directory}`]
-    });
-
-    return <Icon width="75" height="75" className={classnames} />;
+    return <Icon width="75" height="75" className={classes.image} />;
   };
 
   render() {
