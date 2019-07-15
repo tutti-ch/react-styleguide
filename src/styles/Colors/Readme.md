@@ -4,7 +4,7 @@ The colors can be found [here](https://github.com/tutti-ch/react-styleguide/blob
 
 ### Greyscale
 
-The base colors are used for navigation & other interface elements.
+The colors used for text
 
 ```jsx noeditor
 <Colors
@@ -13,9 +13,25 @@ The base colors are used for navigation & other interface elements.
 />
 ```
 
+### Base
+
+The base colors are used for navigation & other interface elements.
+
+```jsx noeditor
+<Colors color="base" shades={[40, 60, 70, 80, 90, 99]} />
+```
+
+### Red
+
+The red color is the accent color to give focus to some UI elements against the base colors.
+
+```jsx noeditor
+<Colors color="red" shades={[10, 20, 30, 40, 50, 60, 70, 80, 90]} />
+```
+
 ### Blue
 
-The color blue is most often associated with the selling experience across the UI.
+The color blue is used for info communication.
 
 ```jsx noeditor
 <Colors color="blue" shades={[10, 20, 30, 40, 50, 60, 70, 80, 90, 95]} />
@@ -23,18 +39,10 @@ The color blue is most often associated with the selling experience across the U
 
 ### Green
 
-The color green is most often associated with the buying experience across the UI.
+The color is used for success communication.
 
 ```jsx noeditor
 <Colors color="green" shades={[10, 20, 30, 40, 50, 60, 70, 80, 90]} />
-```
-
-### Red
-
-The red color is used used sparingly within the UI and most often for important notifications or error messages.
-
-```jsx noeditor
-<Colors color="red" shades={[10, 20, 30, 40, 50, 60, 70, 80, 90]} />
 ```
 
 ### Yellow

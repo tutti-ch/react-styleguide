@@ -21,6 +21,7 @@
 }
 
 @include palette($greyscale, "greyscale");
+@include palette($base, "base");
 @include palette($orange, "orange");
 @include palette($blue, "blue");
 @include palette($green, "green");
