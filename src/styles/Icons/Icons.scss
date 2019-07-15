@@ -54,5 +54,10 @@
 }
 
 .icon-category {
-  fill: #95a5b9;
+  fill: $base-60;
+  transition: $transition-m;
+
+  &:hover {
+    fill: $red-50;
+  }
 }
