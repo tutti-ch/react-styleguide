@@ -35,6 +35,10 @@
   width: 60px;
   height: 60px;
   fill: $greyscale-50;
+
+  circle {
+    fill: $base-60;
+  }
 }
 
 .name {
