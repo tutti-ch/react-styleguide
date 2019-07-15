@@ -157,7 +157,7 @@ class ExampleForm extends React.Component {
           </pre>
         </div> */}
         <div>
-          <Button type="submit" level={Button.LEVEL_SECONDARY}>
+          <Button type="submit" level={Button.LEVEL_PRIMARY}>
             Submit
           </Button>
         </div>
