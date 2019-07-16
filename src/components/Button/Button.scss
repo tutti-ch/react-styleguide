@@ -160,11 +160,11 @@
 
 .button.tertiary {
   background-color: $greyscale-100;
-  box-shadow: inset 0 0 0 1px $base-60;
+  box-shadow: inset 0 0 0 1px $greyscale-60;
   color: $greyscale-40;
 
   &:hover {
-    background-color: $base-90;
+    background-color: $greyscale-90;
   }
 }
 
