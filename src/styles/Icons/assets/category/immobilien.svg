@@ -2,15 +2,12 @@
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd; }
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-</style>
-<path id="Path" class="st0" d="M12,0C5.36,0,0,5.36,0,12s5.36,12,12,12s12-5.36,12-12S18.64,0,12,0z"/>
-<path id="Combined-Shape" class="st1" d="M7.879,6.3l1.248,0.005c0.206,0.001,0.372,0.168,0.372,0.373v0.529l-1.66,1.504
+
+<path id="Path" d="M12,0C5.36,0,0,5.36,0,12s5.36,12,12,12s12-5.36,12-12S18.64,0,12,0z"/>
+<path id="Combined-Shape" style="fill-rule: evenodd;clip-rule: evenodd;fill:#FFFFFF;" d="M7.879,6.3l1.248,0.005c0.206,0.001,0.372,0.168,0.372,0.373v0.529l-1.66,1.504
 	C7.757,8.786,7.631,8.779,7.556,8.697C7.523,8.661,7.505,8.613,7.505,8.563v-1.89c0-0.206,0.167-0.373,0.373-0.373
 	C7.879,6.3,7.879,6.3,7.879,6.3z"/>
-<path class="st1" d="M18.22,10.689l-5.229-4.528c-0.282-0.244-0.701-0.243-0.982,0.003l-5.154,4.528
+<path style="fill-rule: evenodd;clip-rule: evenodd;fill:#FFFFFF;" d="M18.22,10.689l-5.229-4.528c-0.282-0.244-0.701-0.243-0.982,0.003l-5.154,4.528
 	c-0.161,0.142-0.254,0.346-0.254,0.561C6.602,11.666,6.936,12,7.348,12H7.8v5.627C7.8,17.833,7.967,18,8.173,18h2.453
 	C10.833,18,11,17.833,11,17.627v-3.124c0-0.206,0.167-0.373,0.373-0.373h2.253c0.206,0,0.373,0.167,0.373,0.373v3.124
 	C14,17.833,14.167,18,14.373,18h2.253C16.833,18,17,17.833,17,17.627V12h0.731c0.217,0,0.423-0.094,0.564-0.258

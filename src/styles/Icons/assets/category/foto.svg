@@ -2,12 +2,9 @@
 <!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill-rule:evenodd;clip-rule:evenodd; }
-	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-</style>
-<path id="Path" class="st0" d="M12,0C5.36,0,0,5.36,0,12s5.36,12,12,12s12-5.36,12-12S18.64,0,12,0z"/>
-<path id="camera" class="st1" d="M8.735,7.791c0.497-0.067,0.876-0.509,1.138-1.327C9.961,6.187,10.217,6,10.507,6h3.036
+
+<path id="Path" d="M12,0C5.36,0,0,5.36,0,12s5.36,12,12,12s12-5.36,12-12S18.64,0,12,0z"/>
+<path id="camera" style="fill-rule: evenodd;clip-rule: evenodd;fill:#FFFFFF;" d="M8.735,7.791c0.497-0.067,0.876-0.509,1.138-1.327C9.961,6.187,10.217,6,10.507,6h3.036
 	c0.269,0,0.511,0.162,0.615,0.41c0.33,0.791,0.68,1.244,1.05,1.36l1.455-0.005C17.399,7.763,17.998,8.358,18,9.094
 	c0,0.001,0,0.003,0,0.004v6.535c0,0.734-0.594,1.33-1.328,1.333l-9.334,0.03C6.601,16.998,6.002,16.403,6,15.667
 	c0-0.001,0-0.003,0-0.004V9.128c0-0.734,0.594-1.33,1.328-1.333L8.735,7.791z M12,15c1.381,0,2.5-1.119,2.5-2.5S13.381,10,12,10
