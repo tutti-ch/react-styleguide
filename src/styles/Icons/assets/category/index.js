@@ -1,6 +1,7 @@
 // THIS FILE IS AUTO-GENERATED, DO NOT TOUCH.
 import Sprite from "../../_Sprite"
 import React from "react";
+export const  services = p => <Sprite {...p} viewBox="0 0 24 24" id=" services"/>
 export const Antiquitaten = p => <Sprite {...p} viewBox="0 0 24 24" id="antiquitaten"/>
 export const Baby = p => <Sprite {...p} viewBox="0 0 24 24" id="baby"/>
 export const Buecher = p => <Sprite {...p} viewBox="0 0 24 24" id="buecher"/>
@@ -16,6 +17,8 @@ export const Immobilien = p => <Sprite {...p} viewBox="0 0 24 24" id="immobilien
 export const Kleidung = p => <Sprite {...p} viewBox="0 0 24 24" id="kleidung"/>
 export const Musik = p => <Sprite {...p} viewBox="0 0 24 24" id="musik"/>
 export const Sammeln = p => <Sprite {...p} viewBox="0 0 24 24" id="sammeln"/>
+export const ServicesEdit2 = p => <Sprite {...p} viewBox="0 0 24 24" id="services-edit-2"/>
+export const ServicesEdit = p => <Sprite {...p} viewBox="0 0 24 24" id="services-edit"/>
 export const Services = p => <Sprite {...p} viewBox="0 0 24 24" id="services"/>
 export const Sonstiges = p => <Sprite {...p} viewBox="0 0 24 24" id="sonstiges"/>
 export const Spielzeuge = p => <Sprite {...p} viewBox="0 0 24 24" id="spielzeuge"/>
