@@ -57,7 +57,7 @@ describe("(Component) Form", () => {
     };
 
     const button = (
-      <Button level={Button.LEVEL_SECONDARY} type="submit">
+      <Button level={Button.LEVEL_PRIMARY} type="submit">
         Test
       </Button>
     );

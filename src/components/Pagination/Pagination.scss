@@ -36,7 +36,8 @@
   @include tablet-and-bigger {
     width: 7.14%; // 100% divided in 14 blocks
     padding-left: 0;
-    background: $blue-70;
+    background: $base-40;
+    border-radius: $border-radius-s;
 
     div {
       color: $greyscale-100;

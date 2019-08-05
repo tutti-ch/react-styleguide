@@ -32,6 +32,24 @@ $greyscale: (
   "100": $greyscale-100
 );
 
+// Base palette
+
+$base-40: #616b77;
+$base-60: #95a5b9;
+$base-70: #afb9c5;
+$base-80: #cdd6dc;
+$base-90: #e4e9ed;
+$base-99: #f5f9ff;
+
+$base: (
+  "40": $base-40,
+  "60": $base-60,
+  "70": $base-70,
+  "80": $base-80,
+  "90": $base-90,
+  "99": $base-99
+);
+
 // Blue palette
 
 $blue-10: #001e2d;

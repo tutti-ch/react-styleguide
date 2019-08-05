@@ -2745,7 +2745,7 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                         </div>
                         <div>
                           <Button
-                            level="secondary"
+                            level="primary"
                             loading={false}
                             rounded={true}
                             size="medium"

@@ -141,20 +141,20 @@
 // ROLE
 
 .button.primary {
-  background-color: $green-50;
+  background-color: $red-50;
   color: $greyscale-100;
 
   &:hover {
-    background-color: $green-60;
+    background-color: $red-60;
   }
 }
 
 .button.secondary {
-  background-color: $blue-50;
+  background-color: $base-40;
   color: $greyscale-100;
 
   &:hover {
-    background-color: $blue-60;
+    background-color: $base-60;
   }
 }
 
