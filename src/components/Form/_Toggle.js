@@ -32,7 +32,7 @@ export class Toggle extends PureComponent {
   };
 
   static Option = ({ value, selected, selectedClass, children, onClick }) => (
-    <span
+    <div
       className={classNames(
         {
           [classes.toggleSelected]: selected,
@@ -44,7 +44,7 @@ export class Toggle extends PureComponent {
       onClick={onClick}
     >
       {children}
-    </span>
+    </div>
   );
 
   constructor(props) {
@@ -89,8 +89,8 @@ export class Toggle extends PureComponent {
     const { name, children, selectedClass, onChange, ...props } = this.props;
 
     return (
-      <span>
-        <span
+      <>
+        <div
           className={classNames(props.className, classes.toggleWrapper, {
             [classes.disabled]: props.disabled
           })}
@@ -102,9 +102,9 @@ export class Toggle extends PureComponent {
               onClick: e => this.handleOnClick(e, child.props.value)
             })
           )}
-        </span>
+        </div>
         <input type="hidden" value={value} name={name} />
-      </span>
+      </>
     );
   }
 }

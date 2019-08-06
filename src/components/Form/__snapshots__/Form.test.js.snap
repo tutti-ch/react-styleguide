@@ -516,59 +516,57 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           onKeyUp={[Function]}
                           value="Trans"
                         >
-                          <span>
-                            <span
-                              className="toggleWrapper"
+                          <div
+                            className="toggleWrapper"
+                          >
+                            <Component
+                              key=".0"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Man"
                             >
-                              <Component
-                                key=".0"
+                              <div
+                                className="toggleOption"
+                                data-value="Man"
                                 onClick={[Function]}
-                                selected={false}
-                                value="Man"
                               >
-                                <span
-                                  className="toggleOption"
-                                  data-value="Man"
-                                  onClick={[Function]}
-                                >
-                                  Man
-                                </span>
-                              </Component>
-                              <Component
-                                key=".1"
+                                Man
+                              </div>
+                            </Component>
+                            <Component
+                              key=".1"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Female"
+                            >
+                              <div
+                                className="toggleOption"
+                                data-value="Female"
                                 onClick={[Function]}
-                                selected={false}
-                                value="Female"
                               >
-                                <span
-                                  className="toggleOption"
-                                  data-value="Female"
-                                  onClick={[Function]}
-                                >
-                                  Female
-                                </span>
-                              </Component>
-                              <Component
-                                key=".2"
-                                onClick={[Function]}
-                                selected={true}
-                                value="Trans"
-                              >
-                                <span
-                                  className="toggleSelected undefined toggleOption"
-                                  data-value="Trans"
-                                  onClick={[Function]}
-                                >
-                                  Trans
-                                </span>
-                              </Component>
-                            </span>
-                            <input
-                              name="gender"
-                              type="hidden"
+                                Female
+                              </div>
+                            </Component>
+                            <Component
+                              key=".2"
+                              onClick={[Function]}
+                              selected={true}
                               value="Trans"
-                            />
-                          </span>
+                            >
+                              <div
+                                className="toggleSelected undefined toggleOption"
+                                data-value="Trans"
+                                onClick={[Function]}
+                              >
+                                Trans
+                              </div>
+                            </Component>
+                          </div>
+                          <input
+                            name="gender"
+                            type="hidden"
+                            value="Trans"
+                          />
                         </Toggle>
                       </div>
                     </WithWrapper>
@@ -595,45 +593,43 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           onKeyUp={[Function]}
                           value="Toggle"
                         >
-                          <span>
-                            <span
-                              className="toggleWrapper disabled"
+                          <div
+                            className="toggleWrapper disabled"
+                          >
+                            <Component
+                              key=".0"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Man"
                             >
-                              <Component
-                                key=".0"
+                              <div
+                                className="toggleOption"
+                                data-value="Man"
                                 onClick={[Function]}
-                                selected={false}
-                                value="Man"
                               >
-                                <span
-                                  className="toggleOption"
-                                  data-value="Man"
-                                  onClick={[Function]}
-                                >
-                                  Disabled
-                                </span>
-                              </Component>
-                              <Component
-                                key=".1"
-                                onClick={[Function]}
-                                selected={true}
-                                value="Toggle"
-                              >
-                                <span
-                                  className="toggleSelected undefined toggleOption"
-                                  data-value="Toggle"
-                                  onClick={[Function]}
-                                >
-                                  Toggle
-                                </span>
-                              </Component>
-                            </span>
-                            <input
-                              name="type"
-                              type="hidden"
+                                Disabled
+                              </div>
+                            </Component>
+                            <Component
+                              key=".1"
+                              onClick={[Function]}
+                              selected={true}
                               value="Toggle"
-                            />
-                          </span>
+                            >
+                              <div
+                                className="toggleSelected undefined toggleOption"
+                                data-value="Toggle"
+                                onClick={[Function]}
+                              >
+                                Toggle
+                              </div>
+                            </Component>
+                          </div>
+                          <input
+                            name="type"
+                            type="hidden"
+                            value="Toggle"
+                          />
                         </Toggle>
                       </div>
                     </WithWrapper>
@@ -659,45 +655,43 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                           onKeyUp={[Function]}
                           value=""
                         >
-                          <span>
-                            <span
-                              className="toggleWrapper"
+                          <div
+                            className="toggleWrapper"
+                          >
+                            <Component
+                              key=".0"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Man"
                             >
-                              <Component
-                                key=".0"
+                              <div
+                                className="toggleOption"
+                                data-value="Man"
                                 onClick={[Function]}
-                                selected={false}
-                                value="Man"
                               >
-                                <span
-                                  className="toggleOption"
-                                  data-value="Man"
-                                  onClick={[Function]}
-                                >
-                                  No
-                                </span>
-                              </Component>
-                              <Component
-                                key=".1"
+                                No
+                              </div>
+                            </Component>
+                            <Component
+                              key=".1"
+                              onClick={[Function]}
+                              selected={false}
+                              value="Toggle"
+                            >
+                              <div
+                                className="toggleOption"
+                                data-value="Toggle"
                                 onClick={[Function]}
-                                selected={false}
-                                value="Toggle"
                               >
-                                <span
-                                  className="toggleOption"
-                                  data-value="Toggle"
-                                  onClick={[Function]}
-                                >
-                                  Value
-                                </span>
-                              </Component>
-                            </span>
-                            <input
-                              name="type"
-                              type="hidden"
-                              value=""
-                            />
-                          </span>
+                                Value
+                              </div>
+                            </Component>
+                          </div>
+                          <input
+                            name="type"
+                            type="hidden"
+                            value=""
+                          />
                         </Toggle>
                         <span
                           className="label"
@@ -2871,59 +2865,57 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                                 onKeyUp={[Function]}
                                 value="Trans"
                               >
-                                <span>
-                                  <span
-                                    className="toggleWrapper"
+                                <div
+                                  className="toggleWrapper"
+                                >
+                                  <Component
+                                    key=".0"
+                                    onClick={[Function]}
+                                    selected={false}
+                                    value="Man"
                                   >
-                                    <Component
-                                      key=".0"
+                                    <div
+                                      className="toggleOption"
+                                      data-value="Man"
                                       onClick={[Function]}
-                                      selected={false}
-                                      value="Man"
                                     >
-                                      <span
-                                        className="toggleOption"
-                                        data-value="Man"
-                                        onClick={[Function]}
-                                      >
-                                        Man
-                                      </span>
-                                    </Component>
-                                    <Component
-                                      key=".1"
+                                      Man
+                                    </div>
+                                  </Component>
+                                  <Component
+                                    key=".1"
+                                    onClick={[Function]}
+                                    selected={false}
+                                    value="Female"
+                                  >
+                                    <div
+                                      className="toggleOption"
+                                      data-value="Female"
                                       onClick={[Function]}
-                                      selected={false}
-                                      value="Female"
                                     >
-                                      <span
-                                        className="toggleOption"
-                                        data-value="Female"
-                                        onClick={[Function]}
-                                      >
-                                        Female
-                                      </span>
-                                    </Component>
-                                    <Component
-                                      key=".2"
-                                      onClick={[Function]}
-                                      selected={true}
-                                      value="Trans"
-                                    >
-                                      <span
-                                        className="toggleSelected undefined toggleOption"
-                                        data-value="Trans"
-                                        onClick={[Function]}
-                                      >
-                                        Trans
-                                      </span>
-                                    </Component>
-                                  </span>
-                                  <input
-                                    name="gender"
-                                    type="hidden"
+                                      Female
+                                    </div>
+                                  </Component>
+                                  <Component
+                                    key=".2"
+                                    onClick={[Function]}
+                                    selected={true}
                                     value="Trans"
-                                  />
-                                </span>
+                                  >
+                                    <div
+                                      className="toggleSelected undefined toggleOption"
+                                      data-value="Trans"
+                                      onClick={[Function]}
+                                    >
+                                      Trans
+                                    </div>
+                                  </Component>
+                                </div>
+                                <input
+                                  name="gender"
+                                  type="hidden"
+                                  value="Trans"
+                                />
                               </Toggle>
                             </div>
                           </WithWrapper>
