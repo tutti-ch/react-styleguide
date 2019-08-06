@@ -584,6 +584,7 @@ $inputHeight: $size-xxxl;
   border: $border-default;
   border-radius: $border-radius-s;
   display: flex;
+  width: 100%;
 
   &.disabled {
     pointer-events: none;
@@ -604,6 +605,8 @@ $inputHeight: $size-xxxl;
     cursor: pointer;
     border-right: $border-default;
     background-color: $greyscale-100;
+    flex: 1;
+    text-align: center;
 
     &:last-child {
       border-right: 0;
