@@ -1,0 +1,50 @@
+@import "../../../styles/main.scss";
+
+.stepperContainer {
+  display: flex;
+  padding: $size-xxxs;
+  border: 1px solid $greyscale-80;
+  position: relative;
+  margin-top: $size-l;
+
+  .decrease,
+  .increase {
+    border: 0;
+    width: 100%;
+    max-width: 3rem;
+    height: 3rem;
+    font-size: $size-l;
+    font-weight: normal;
+    color: $greyscale-20;
+
+    &:hover {
+      background-color: $base-40;
+      color: #fff;
+      transition: background-color 100ms linear;
+    }
+  }
+
+  input[type="text"].input {
+    border: 0;
+    text-align: center;
+    padding: 0;
+  }
+
+  .decrease {
+    border-right: 1px solid $greyscale-80;
+    margin-right: $size-s;
+  }
+
+  .increase {
+    border-left: 1px solid $greyscale-80;
+    margin-left: $size-s;
+  }
+}
+
+.ownLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $greyscale-40;
+  font-size: $size-s;
+}

@@ -7,6 +7,7 @@ import Radio from "./_InputRadio";
 import RadioGroup from "./_InputRadioGroup";
 import Checkbox from "./_InputCheckbox";
 import Select from "./_Select";
+import Stepper from "./Stepper";
 // import Slider from "./_Slider"; removed slider as we don't use it at the moment
 import Toggle from "./_Toggle";
 import Error from "./_Error";
@@ -23,6 +24,7 @@ export default class Form extends Component {
   static Textarea = Textarea;
   static GenericError = Error;
   static Toggle = Toggle;
+  static Stepper = Stepper;
 
   static propTypes = {
     className: PropTypes.oneOfType([

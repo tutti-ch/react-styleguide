@@ -12,8 +12,10 @@ const config = {
   resolve: {
     modules: [path.resolve("./node_modules")],
     alias: {
-      icons: path.resolve("./src/styles/Icons/assets")
-    }
+      icons: path.resolve("./src/styles/Icons/assets"),
+      "@": path.join(root, "src")
+    },
+    extensions: [".js", ".json"]
   },
 
   entry: {

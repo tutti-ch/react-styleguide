@@ -2743,6 +2743,67 @@ exports[`(Styleguide) Form should match the snapshot 1`] = `
                             </div>
                           </WithWrapper>
                         </div>
+                        <div
+                          style={
+                            Object {
+                              "margin": "1.5rem 1rem 2.5rem 0",
+                            }
+                          }
+                        >
+                          <WithWrapper
+                            id="rooms"
+                            name="Rooms"
+                            ownLabel="Rooms"
+                            step={0.5}
+                          >
+                            <div
+                              className=""
+                            >
+                              <Input
+                                id="rooms"
+                                max={5}
+                                min={0}
+                                name="Rooms"
+                                onChange={[Function]}
+                                onKeyUp={[Function]}
+                                ownLabel="Rooms"
+                                step={0.5}
+                                value={0}
+                              >
+                                <label
+                                  htmlFor="rooms"
+                                >
+                                  Rooms
+                                </label>
+                                <div>
+                                  <button
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    -
+                                  </button>
+                                  <input
+                                    autoComplete="off"
+                                    id="rooms"
+                                    name="Rooms"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyUp={[Function]}
+                                    type="text"
+                                    value={0}
+                                  />
+                                  <button
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    +
+                                  </button>
+                                </div>
+                              </Input>
+                            </div>
+                          </WithWrapper>
+                        </div>
                         <div>
                           <Button
                             level="primary"

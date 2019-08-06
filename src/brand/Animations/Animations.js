@@ -18,7 +18,7 @@ class Animations extends React.Component {
           autoPlay
           style={{
             width: "100%",
-            "margin-bottom": "40px"
+            marginBottom: "40px"
           }}
         >
           <source src={animationNegative} type="video/mp4" />
@@ -30,7 +30,7 @@ class Animations extends React.Component {
           autoPlay
           style={{
             width: "100%",
-            "margin-bottom": "40px"
+            marginBottom: "40px"
           }}
         >
           <source src={animatioMain} type="video/mp4" />

@@ -128,6 +128,9 @@ class ExampleForm extends React.Component {
             <Form.Toggle.Option value="Trans">Trans</Form.Toggle.Option>
           </Form.Toggle>
         </div>
+        <div style={{ margin: "1.5rem 1rem 2.5rem 0" }}>
+          <Form.Stepper name="Rooms" id="rooms" step={0.5} ownLabel="Rooms" />
+        </div>
         {/* <div style={{ margin: "1.5rem 1rem 1rem 1rem" }}>
           <Form.Slider
             name={["minPrice", "maxPrice"]}
