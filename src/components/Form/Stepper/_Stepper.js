@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
-import { filterProps } from "@/helpers/functions";
+import { filterProps } from "../../../helpers/functions";
 import WithWrapper from "../_WithWrapper";
 import * as helpers from "./helpers";
 import classes from "./Stepper.scss";
