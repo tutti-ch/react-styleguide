@@ -55,7 +55,7 @@ describe("HOC (WithWrapper)", () => {
     const comp = mount(
       <Form.Select name="color" selected="blue" options={options} />
     );
-    expect(comp.find(".hasValue").exists()).toBe(false);
+    expect(comp.find(".hasValue").exists()).toBe(true);
     expect(comp.state("formValue")).toBe("blue");
   });
 

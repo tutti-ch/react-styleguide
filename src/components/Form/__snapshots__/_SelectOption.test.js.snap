@@ -15,7 +15,7 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
               "calls": [Circular],
               "results": Array [
                 Object {
-                  "isThrow": false,
+                  "type": "return",
                   "value": undefined,
                 },
               ],
@@ -28,7 +28,7 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],
@@ -38,13 +38,15 @@ exports[`(Component) SelectOption [select] should trigger the onClick prop 1`] =
   text="my option"
 >
   <div
-    className=""
+    className="selected highlighted option"
     onClick={[Function]}
   >
     <Icon>
       my-icon
     </Icon>
-    <span>
+    <span
+      className="text"
+    >
       my option
     </span>
   </div>

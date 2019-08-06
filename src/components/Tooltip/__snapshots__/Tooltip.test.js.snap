@@ -67,7 +67,7 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
         selected="t"
       >
         <div
-          className=""
+          className="wrapper hasValue selectWrapper"
         >
           <Select
             multiple={false}
@@ -133,18 +133,18 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
               onOutsideClick={[Function]}
             >
               <div
-                className=""
+                className="select"
                 key=".0"
                 onClick={[Function]}
               >
                 <div
-                  className=""
+                  className="selectInner"
                   onBlur={[Function]}
                   onFocus={[Function]}
                   tabIndex={0}
                 >
                   <div
-                    className=""
+                    className="ph"
                   >
                     <Option
                       closeIcon={false}
@@ -154,18 +154,20 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="t"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="t"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Top center
                         </span>
                       </div>
                     </Option>
                   </div>
                   <div
-                    className=""
+                    className="options"
                   >
                     <Option
                       highlighted={true}
@@ -177,11 +179,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="t"
                     >
                       <div
-                        className=""
+                        className="selected highlighted option"
                         key="t"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Top center
                         </span>
                       </div>
@@ -196,11 +200,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="tr"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="tr"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Top right
                         </span>
                       </div>
@@ -215,11 +221,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="tl"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="tl"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Top left
                         </span>
                       </div>
@@ -234,11 +242,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="b"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="b"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Bottom center
                         </span>
                       </div>
@@ -253,11 +263,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="br"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="br"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Bottom right
                         </span>
                       </div>
@@ -272,11 +284,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="bl"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="bl"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Bottom left
                         </span>
                       </div>
@@ -291,11 +305,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="r"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="r"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Right center
                         </span>
                       </div>
@@ -310,11 +326,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="rt"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="rt"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Right top
                         </span>
                       </div>
@@ -329,11 +347,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="rb"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="rb"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Right bottom
                         </span>
                       </div>
@@ -348,11 +368,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="l"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="l"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Left center
                         </span>
                       </div>
@@ -367,11 +389,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="lt"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="lt"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Left top
                         </span>
                       </div>
@@ -386,11 +410,13 @@ exports[`(Styleguide) Tooltip should mount 1`] = `
                       value="lb"
                     >
                       <div
-                        className=""
+                        className="option"
                         key="lb"
                         onClick={[Function]}
                       >
-                        <span>
+                        <span
+                          className="text"
+                        >
                           Left bottom
                         </span>
                       </div>

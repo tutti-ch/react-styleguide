@@ -7,10 +7,11 @@ exports[`(Components) Tooltip should first render null then after APPEAR_AFTER s
   name="my-tooltip"
 >
   <div
-    className=""
+    className="tooltip tl"
   >
     My super tooltip
     <div
+      className="closeButton"
       onClick={[MockFunction]}
     >
       <Close>

@@ -5,7 +5,7 @@ exports[`(Component) InputRadio snapshot 1`] = `
   name="input-name"
 >
   <div
-    className=""
+    className="wrapper"
   >
     <InputRadioGroup
       name="input-name"
@@ -22,6 +22,7 @@ exports[`(Component) InputRadio snapshot 1`] = `
           value="Life is good"
         >
           <span
+            className="cbLabel"
             onClick={[Function]}
           >
             <input
@@ -30,7 +31,9 @@ exports[`(Component) InputRadio snapshot 1`] = `
               onChange={[Function]}
               type="radio"
             />
-            <span>
+            <span
+              className="labelText"
+            >
               My label
             </span>
           </span>
@@ -44,6 +47,7 @@ exports[`(Component) InputRadio snapshot 1`] = `
           value="Life is good"
         >
           <span
+            className="cbLabel"
             onClick={[Function]}
           >
             <input
@@ -52,7 +56,9 @@ exports[`(Component) InputRadio snapshot 1`] = `
               onChange={[Function]}
               type="radio"
             />
-            <span>
+            <span
+              className="labelText"
+            >
               My label
             </span>
           </span>

@@ -14,7 +14,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": undefined,
         },
       ],
@@ -30,6 +30,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
       onChange={[Function]}
     >
       <span
+        className="cbLabel"
         onClick={[Function]}
       >
         <input
@@ -38,7 +39,9 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
           onChange={[Function]}
           type="radio"
         />
-        <span>
+        <span
+          className="labelText"
+        >
           React.js
         </span>
       </span>
@@ -51,6 +54,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
       onChange={[Function]}
     >
       <span
+        className="cbLabel"
         onClick={[Function]}
       >
         <input
@@ -59,7 +63,9 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
           onChange={[Function]}
           type="radio"
         />
-        <span>
+        <span
+          className="labelText"
+        >
           Vue.js
         </span>
       </span>
@@ -73,6 +79,7 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
       value="ang"
     >
       <span
+        className="cbLabel"
         onClick={[Function]}
       >
         <input
@@ -81,7 +88,9 @@ exports[`(Component) InputRadioGroup should handle the change of the children st
           onChange={[Function]}
           type="radio"
         />
-        <span>
+        <span
+          className="labelText"
+        >
           Angular.js
         </span>
       </span>

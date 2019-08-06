@@ -6,7 +6,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
   error="Cannot proceed like this"
 >
   <div
-    className=""
+    className="wrapper"
   >
     <InputCheckbox
       checked={true}
@@ -14,6 +14,7 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
       onKeyUp={[Function]}
     >
       <span
+        className="cbLabel"
         onClick={[Function]}
       >
         <input
@@ -22,10 +23,14 @@ exports[`HOC (WithWrapper) snapshot should display an error span when there is a
           onKeyUp={[Function]}
           type="checkbox"
         />
-        <span />
+        <span
+          className="labelText"
+        />
       </span>
     </InputCheckbox>
-    <span>
+    <span
+      className="error"
+    >
       Cannot proceed like this
     </span>
   </div>
@@ -38,7 +43,7 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
   value="hello-world"
 >
   <div
-    className=""
+    className="wrapper hasValue hasLabel"
   >
     <Input
       onChange={[Function]}
@@ -55,7 +60,9 @@ exports[`HOC (WithWrapper) snapshot should include a label span when label is no
         value="hello-world"
       />
     </Input>
-    <span>
+    <span
+      className="label"
+    >
       My awesome label
     </span>
   </div>
@@ -67,7 +74,7 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
   checked={true}
 >
   <div
-    className=""
+    className="wrapper"
   >
     <InputCheckbox
       checked={true}
@@ -75,6 +82,7 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
       onKeyUp={[Function]}
     >
       <span
+        className="cbLabel"
         onClick={[Function]}
       >
         <input
@@ -83,7 +91,9 @@ exports[`HOC (WithWrapper) snapshot should not include a label span when the lab
           onKeyUp={[Function]}
           type="checkbox"
         />
-        <span />
+        <span
+          className="labelText"
+        />
       </span>
     </InputCheckbox>
   </div>

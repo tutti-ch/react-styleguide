@@ -11,19 +11,21 @@ exports[`(Component) Button should be disabled if button is loading 1`] = `
   type="button"
 >
   <button
-    className="my-class"
+    className="my-class button primary large undefined undefined"
     disabled={true}
     type="button"
   >
     <Spinner
+      className="spinner"
       color="light"
       key="spinner"
       size={1.25}
     >
       <div
-        className=""
+        className="wrapper spinner"
       >
         <div
+          className="spinner"
           style={
             Object {
               "borderBottom": "0.125rem solid rgba(255, 255, 255, 0.6)",
@@ -38,6 +40,7 @@ exports[`(Component) Button should be disabled if button is loading 1`] = `
       </div>
     </Spinner>
     <div
+      className="text"
       key="text"
     >
       <span
@@ -59,7 +62,7 @@ exports[`(Component) Button should render snapshot correctly 1`] = `
   type="submit"
 >
   <button
-    className="my-class"
+    className="my-class button primary large undefined undefined"
     type="submit"
   >
     <span

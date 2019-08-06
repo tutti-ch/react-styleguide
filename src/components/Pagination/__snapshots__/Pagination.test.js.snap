@@ -14,7 +14,9 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
     aria-label="Pagination Navigation"
     role="navigation"
   >
-    <ul>
+    <ul
+      className="pagination_bar"
+    >
       <Page
         disabled={false}
         icon={[Function]}
@@ -23,11 +25,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className=""
+          className="page"
         >
           <a
             aria-label="Go to page 1"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >
@@ -58,11 +60,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className=""
+          className="page"
         >
           <a
             aria-label="Go to page 301"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >
@@ -85,7 +87,9 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
           </a>
         </li>
       </Page>
-      <li>
+      <li
+        className="text"
+      >
         Page
       </li>
       <Page
@@ -96,11 +100,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className=""
+          className="page inactive"
         >
           <a
             aria-label="Go to page 300"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >
@@ -116,11 +120,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className=""
+          className="page inactive"
         >
           <a
             aria-label="Go to page 301"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >
@@ -136,11 +140,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className=""
+          className="page active"
         >
           <a
             aria-label="Go to page 302"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >
@@ -156,11 +160,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className="undefined"
+          className="page disabled"
         >
           <a
             aria-label="Go to page 302"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >
@@ -191,11 +195,11 @@ exports[`(Component) Pagination should match the snapshot 1`] = `
         url="#"
       >
         <li
-          className="undefined"
+          className="page disabled"
         >
           <a
             aria-label="Go to page 302"
-            className="link"
+            className="link link"
             href="#"
             onClick={[Function]}
           >

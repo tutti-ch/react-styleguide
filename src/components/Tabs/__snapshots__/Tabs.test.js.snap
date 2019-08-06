@@ -6,7 +6,7 @@ exports[`(Component) Tabs should render correctly 1`] = `
   onTabChange={[MockFunction]}
 >
   <div
-    className=""
+    className="tabs"
   >
     <Tab
       index={0}
@@ -16,7 +16,7 @@ exports[`(Component) Tabs should render correctly 1`] = `
       title="This is a tab"
     >
       <div
-        className="undefined"
+        className="tab active"
         onClick={[Function]}
       >
         This is a tab
@@ -30,7 +30,7 @@ exports[`(Component) Tabs should render correctly 1`] = `
       title="This is another tab"
     >
       <div
-        className=""
+        className="tab"
         onClick={[Function]}
       >
         This is another tab
@@ -44,7 +44,7 @@ exports[`(Component) Tabs should render correctly 1`] = `
       title="And they keep coming"
     >
       <div
-        className=""
+        className="tab"
         onClick={[Function]}
       >
         And they keep coming
@@ -58,13 +58,15 @@ exports[`(Component) Tabs should render correctly 1`] = `
       title="Secret ICO"
     >
       <div
-        className=""
+        className="tab"
         onClick={[Function]}
       >
         Secret ICO
       </div>
     </Tab>
-    <div>
+    <div
+      className="content"
+    >
       <h1>
         An amazing tab
       </h1>

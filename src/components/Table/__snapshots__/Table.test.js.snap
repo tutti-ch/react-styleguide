@@ -3,7 +3,7 @@
 exports[`(Component) Table should render correctly 1`] = `
 <Table>
   <table
-    className=""
+    className="table"
   >
     <Component>
       <caption>

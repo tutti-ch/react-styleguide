@@ -24,7 +24,7 @@ exports[`(Component) Form.GenericError should match the snapshots 2`] = `
       ],
       "results": Array [
         Object {
-          "isThrow": false,
+          "type": "return",
           "value": Promise {},
         },
       ],
@@ -32,12 +32,12 @@ exports[`(Component) Form.GenericError should match the snapshots 2`] = `
   }
 >
   <form
-    className="undefined"
+    className="hasError"
     onSubmit={[Function]}
   >
     <Error>
       <div
-        className="errorMessage "
+        className="errorMessage genericError"
       >
         Hey
       </div>

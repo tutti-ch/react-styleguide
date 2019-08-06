@@ -3,24 +3,30 @@
 exports[`(Components) Logo should match the snapshot 1`] = `
 <Logo>
   <div
-    className=""
+    className="logo"
   >
-    <div>
+    <div
+      className="symbolBox"
+    >
       <Image
         alt="tutti.ch"
+        className="symbolSquare"
         src="mockimage"
       />
       <Image
         alt="tutti.ch"
+        className="symbolT"
         src="mockimage"
       />
     </div>
     <Image
       alt="tutti.ch"
+      className="font"
       src="mockimage"
     />
     <Image
       alt="tutti.ch"
+      className="fallback"
       src="mockimage"
     />
   </div>

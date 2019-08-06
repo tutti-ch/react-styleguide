@@ -52,18 +52,18 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
     onOutsideClick={[Function]}
   >
     <div
-      className=""
+      className="select multiple"
       key=".0"
       onClick={[Function]}
     >
       <div
-        className=""
+        className="selectInner"
         onBlur={[Function]}
         onFocus={[Function]}
         tabIndex={0}
       >
         <div
-          className=""
+          className="ph"
         >
           <Option
             closeIcon={true}
@@ -74,23 +74,27 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="React.js"
           >
             <div
-              className=""
+              className="option"
               key="React.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 React.js
               </span>
               <Close
+                className="icoClose"
                 onClick={[Function]}
               >
                 <Sprite
+                  className="icoClose"
                   id="close"
                   onClick={[Function]}
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoClose"
                     onClick={[Function]}
                     role="img"
                     viewBox="0 0 30 30"
@@ -112,23 +116,27 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="jQuery"
           >
             <div
-              className=""
+              className="option"
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 jQuery
               </span>
               <Close
+                className="icoClose"
                 onClick={[Function]}
               >
                 <Sprite
+                  className="icoClose"
                   id="close"
                   onClick={[Function]}
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoClose"
                     onClick={[Function]}
                     role="img"
                     viewBox="0 0 30 30"
@@ -143,7 +151,7 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
           </Option>
         </div>
         <div
-          className=""
+          className="options"
         >
           <Option
             highlighted={false}
@@ -155,20 +163,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="React.js"
           >
             <div
-              className=""
+              className="selected option"
               key="React.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 React.js
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -190,20 +203,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Vue.js"
           >
             <div
-              className=""
+              className="option"
               key="Vue.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Vue.js
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -225,20 +243,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Angular.js"
           >
             <div
-              className=""
+              className="option"
               key="Angular.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Angular.js
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -260,20 +283,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="jQuery"
           >
             <div
-              className=""
+              className="selected option"
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 jQuery
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -295,20 +323,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Knockout"
           >
             <div
-              className=""
+              className="option"
               key="Knockout"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Knockout
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -330,20 +363,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Backbone"
           >
             <div
-              className=""
+              className="option"
               key="Backbone"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Backbone
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -365,20 +403,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Ember"
           >
             <div
-              className=""
+              className="option"
               key="Ember"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Ember
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -400,20 +443,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Bootstrap"
           >
             <div
-              className=""
+              className="option"
               key="Bootstrap"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Bootstrap
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -435,20 +483,25 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
             value="Other"
           >
             <div
-              className=""
+              className="option"
               key="Other"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Other
               </span>
-              <Tick>
+              <Tick
+                className="icoCheck"
+              >
                 <Sprite
+                  className="icoCheck"
                   id="tick"
                   viewBox="0 0 30 30"
                 >
                   <svg
-                    className="svg-sprite"
+                    className="svg-sprite icoCheck"
                     role="img"
                     viewBox="0 0 30 30"
                   >
@@ -526,18 +579,18 @@ exports[`(Component) Select [snapshot] should match 1`] = `
     onOutsideClick={[Function]}
   >
     <div
-      className=""
+      className="select"
       key=".0"
       onClick={[Function]}
     >
       <div
-        className=""
+        className="selectInner"
         onBlur={[Function]}
         onFocus={[Function]}
         tabIndex={0}
       >
         <div
-          className=""
+          className="ph"
         >
           <Option
             closeIcon={false}
@@ -547,18 +600,20 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="jQuery"
           >
             <div
-              className=""
+              className="option"
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 jQuery
               </span>
             </div>
           </Option>
         </div>
         <div
-          className=""
+          className="options"
         >
           <Option
             highlighted={false}
@@ -570,11 +625,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="React.js"
           >
             <div
-              className=""
+              className="option"
               key="React.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 React.js
               </span>
             </div>
@@ -589,11 +646,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Vue.js"
           >
             <div
-              className=""
+              className="option"
               key="Vue.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Vue.js
               </span>
             </div>
@@ -608,11 +667,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Angular.js"
           >
             <div
-              className=""
+              className="option"
               key="Angular.js"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Angular.js
               </span>
             </div>
@@ -627,11 +688,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="jQuery"
           >
             <div
-              className=""
+              className="selected highlighted option"
               key="jQuery"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 jQuery
               </span>
             </div>
@@ -646,11 +709,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Knockout"
           >
             <div
-              className=""
+              className="option"
               key="Knockout"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Knockout
               </span>
             </div>
@@ -665,11 +730,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Backbone"
           >
             <div
-              className=""
+              className="option"
               key="Backbone"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Backbone
               </span>
             </div>
@@ -684,11 +751,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Ember"
           >
             <div
-              className=""
+              className="option"
               key="Ember"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Ember
               </span>
             </div>
@@ -703,11 +772,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Bootstrap"
           >
             <div
-              className=""
+              className="option"
               key="Bootstrap"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Bootstrap
               </span>
             </div>
@@ -722,11 +793,13 @@ exports[`(Component) Select [snapshot] should match 1`] = `
             value="Other"
           >
             <div
-              className=""
+              className="option"
               key="Other"
               onClick={[Function]}
             >
-              <span>
+              <span
+                className="text"
+              >
                 Other
               </span>
             </div>

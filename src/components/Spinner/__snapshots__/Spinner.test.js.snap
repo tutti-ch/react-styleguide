@@ -7,9 +7,10 @@ exports[`(Component) Spinner should match the snapshot 1`] = `
   size={8}
 >
   <div
-    className="my-class"
+    className="wrapper my-class"
   >
     <div
+      className="spinner"
       style={
         Object {
           "borderBottom": "0.8rem solid rgba(0, 0, 0, 0.1)",

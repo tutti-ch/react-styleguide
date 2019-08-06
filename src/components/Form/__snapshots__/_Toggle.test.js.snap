@@ -5,7 +5,7 @@ exports[`(Component) Toggle should match snapshots 1`] = `
   value="val1"
 >
   <div
-    className=""
+    className="wrapper hasValue"
   >
     <Toggle
       onChange={[Function]}
@@ -14,7 +14,7 @@ exports[`(Component) Toggle should match snapshots 1`] = `
     >
       <span>
         <span
-          className=""
+          className="toggleWrapper"
         >
           <Component
             key=".0"
@@ -23,7 +23,7 @@ exports[`(Component) Toggle should match snapshots 1`] = `
             value="val1"
           >
             <span
-              className="undefined"
+              className="toggleSelected undefined toggleOption"
               data-value="val1"
               onClick={[Function]}
             >
@@ -37,7 +37,7 @@ exports[`(Component) Toggle should match snapshots 1`] = `
             value="val2"
           >
             <span
-              className=""
+              className="toggleOption"
               data-value="val2"
               onClick={[Function]}
             >

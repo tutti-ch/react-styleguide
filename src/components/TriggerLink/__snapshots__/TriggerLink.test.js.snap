@@ -5,7 +5,7 @@ exports[`(component) TriggerLink snapshot! 1`] = `
   onClick={[Function]}
 >
   <button
-    className=""
+    className="triggerLink"
     onClick={[Function]}
   >
     Order pizza
