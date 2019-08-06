@@ -7,7 +7,7 @@ import Radio from "./_InputRadio";
 import RadioGroup from "./_InputRadioGroup";
 import Checkbox from "./_InputCheckbox";
 import Select from "./_Select";
-import Stepper from "./_Stepper";
+import Stepper from "./Stepper";
 // import Slider from "./_Slider"; removed slider as we don't use it at the moment
 import Toggle from "./_Toggle";
 import Error from "./_Error";
