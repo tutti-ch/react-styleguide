@@ -41,7 +41,12 @@ export default (WrappedComponent, mergeProps = {}) => {
       /**
        * Removes all margings on form wrapper
        */
-      noMargin: PropTypes.bool
+      noMargin: PropTypes.bool,
+
+      /**
+       * Force the label stay on top.
+       */
+      labelOnTop: PropTypes.bool
     };
 
     static contextTypes = {
@@ -181,9 +186,9 @@ export default (WrappedComponent, mergeProps = {}) => {
     };
 
     render() {
-      const { inline, className, type, placeholder, noMargin } = this.props;
+      const { inline, className, type, placeholder, noMargin, labelOnTop } = this.props; // prettier-ignore
       const { error, formValue } = this.state;
-      const hasValue = !!formValue || mergeProps.hasValue;
+      const hasValue = !!formValue || mergeProps.hasValue || labelOnTop;
       const injectedProps = filterProps(WithWrapper.propTypes, this.props);
 
       let { label } = this.props;
