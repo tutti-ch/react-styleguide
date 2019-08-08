@@ -14,7 +14,7 @@
     font-size: $size-l;
     font-weight: normal;
     color: $greyscale-20;
-    @include z-index("ground", "first");
+    @include z-index("content", "ground");
     background: $greyscale-100;
 
     &:hover {
