@@ -14,12 +14,13 @@
     font-size: $size-l;
     font-weight: normal;
     color: $greyscale-20;
-    z-index: 10;
+    @include z-index("ground", "first");
+    background: $greyscale-100;
 
     &:hover {
       background-color: $base-40;
-      color: #fff;
-      transition: background-color 100ms linear;
+      color: $greyscale-100;
+      transition: $transition-m;
     }
   }
 
