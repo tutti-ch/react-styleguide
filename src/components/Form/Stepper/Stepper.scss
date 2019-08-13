@@ -9,13 +9,14 @@
   .decrease,
   .increase {
     border: 0;
-    width: 100%;
-    max-width: 3rem;
+    width: 3rem;
     font-size: $size-l;
     font-weight: normal;
     color: $greyscale-20;
     @include z-index("content", "ground");
     background: $greyscale-100;
+    z-index: 10;
+    flex: 1 0 auto;
 
     &:hover {
       background-color: $base-40;
@@ -32,6 +33,8 @@
     margin: $size-xxxs 0;
     line-height: $size-xxl;
     min-height: $size-xxl;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 }
 
