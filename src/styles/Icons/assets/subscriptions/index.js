@@ -3,6 +3,7 @@ import Sprite from "../../_Sprite"
 import Image from "../../../../components/Image"
 import React from "react";
 export const SubscriptionsApproval = p => <Image {...p} src={require("./subscriptions-approval.svg")} />
+export const SubscriptionsLockHexagon = p => <Sprite {...p} viewBox="0 0 35 35" id="subscriptions-lock-hexagon"/>
 export const SubscriptionsPerformance = p => <Image {...p} src={require("./subscriptions-performance.svg")} />
 export const SubscriptionsPlusBadge = p => <Image {...p} src={require("./subscriptions-plus-badge.svg")} />
 export const SubscriptionsPlusBump = p => <Image {...p} src={require("./subscriptions-plus-bump.svg")} />
