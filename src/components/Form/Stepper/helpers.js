@@ -4,7 +4,7 @@
  * @param {object} props component props
  * @param {number} newValue value to be sent to Form wrapper
  */
-export const notify = (props, newValue) => () => {
+export const notify = (props, newValue) => {
   const { name, value, onChange } = props;
   if (typeof onChange === "function") {
     onChange(newValue, {
