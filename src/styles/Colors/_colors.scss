@@ -11,7 +11,8 @@ $greyscale-75: #bfbfbf;
 $greyscale-80: #cccccc;
 $greyscale-85: #d9d9d9;
 $greyscale-90: #e5e5e5;
-$greyscale-95: #f2f2f2;
+$greyscale-95: #fafafa;
+$greyscale-98: #f2f2f2;
 $greyscale-99: #fcfcfc;
 $greyscale-100: #ffffff;
 
@@ -28,6 +29,7 @@ $greyscale: (
   "85": $greyscale-85,
   "90": $greyscale-90,
   "95": $greyscale-95,
+  "95": $greyscale-98,
   "99": $greyscale-99,
   "100": $greyscale-100
 );
@@ -39,6 +41,7 @@ $base-60: #95a5b9;
 $base-70: #afb9c5;
 $base-80: #cdd6dc;
 $base-90: #e4e9ed;
+$base-95: #eff0f2;
 $base-99: #f5f9ff;
 
 $base: (
@@ -47,6 +50,7 @@ $base: (
   "70": $base-70,
   "80": $base-80,
   "90": $base-90,
+  "95": $base-95,
   "99": $base-99
 );
 
