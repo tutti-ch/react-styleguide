@@ -582,7 +582,8 @@ $inputHeight: $size-xxxl;
 
 .toggleWrapper {
   border: $border-default;
-  border-radius: $border-radius-s;
+  line-height: $size-xxxl;
+  min-height: $size-xxl;
   display: flex;
   width: 100%;
 
@@ -601,7 +602,8 @@ $inputHeight: $size-xxxl;
 
   .toggleOption {
     display: inline-block;
-    padding: $size-m;
+    padding: 0 $size-m;
+
     cursor: pointer;
     border-right: $border-default;
     background-color: $greyscale-100;
