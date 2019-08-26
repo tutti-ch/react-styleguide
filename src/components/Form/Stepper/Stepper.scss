@@ -5,17 +5,27 @@
   border: 1px solid $greyscale-90;
   position: relative;
   width: 100%;
+  border-radius: $border-radius-s;
+
+  .increase {
+    border-radius: 0 $border-radius-s $border-radius-s 0;
+  }
+
+  .decrease {
+    border-radius: $border-radius-s 0 0 $border-radius-s;
+  }
 
   .decrease,
   .increase {
     border: 0;
-    width: 100%;
-    max-width: 3rem;
+    width: 3rem;
     font-size: $size-l;
     font-weight: normal;
     color: $greyscale-20;
     @include z-index("content", "ground");
     background: $greyscale-100;
+    z-index: 10;
+    flex: 1 0 auto;
 
     &:hover {
       background-color: $base-40;
@@ -32,6 +42,9 @@
     margin: $size-xxxs 0;
     line-height: $size-xxl;
     min-height: $size-xxl;
+    flex: 1 1 auto;
+    min-width: 0;
+    border-radius: 0;
   }
 }
 

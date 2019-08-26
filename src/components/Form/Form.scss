@@ -116,14 +116,14 @@ $inputHeight: $size-xxxl;
   textarea {
     border: $border-default;
     background-color: $greyscale-100;
-    border-radius: 2px;
+    border-radius: $border-radius-s;
     position: relative;
     box-sizing: border-box;
     width: 100%;
     @include focus();
     min-height: $size-xxxl;
   }
-
+ 
   input {
     line-height: $inputHeight;
     padding: 0 $size-s;
@@ -319,6 +319,7 @@ $inputHeight: $size-xxxl;
     .select-inner {
       max-width: 100%;
       border: $border-default;
+      border-radius: $border-radius-s;
       background: $greyscale-100;
       min-height: $size-xxxl;
       line-height: $size-xxxl;
@@ -522,7 +523,7 @@ $inputHeight: $size-xxxl;
         .option {
           background-color: $blue-50;
           color: $greyscale-100;
-          border-radius: 3px;
+          border-radius: $border-radius-s;
           padding: $size-xxxs $size-xxs;
           margin: 0 $size-s $size-s 0;
           transition: all $transition-m;

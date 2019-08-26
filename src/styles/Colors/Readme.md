@@ -9,7 +9,7 @@ The colors used for text
 ```jsx noeditor
 <Colors
   color="greyscale"
-  shades={["00", 20, 30, 40, 50, 60, 75, 80, 85, 90, 95, 100]}
+  shades={["00", 20, 30, 40, 50, 60, 75, 80, 85, 90, 95, 98, 100]}
 />
 ```
 
@@ -18,7 +18,7 @@ The colors used for text
 The base colors are used for navigation & other interface elements.
 
 ```jsx noeditor
-<Colors color="base" shades={[40, 60, 70, 80, 90, 99]} />
+<Colors color="base" shades={[40, 60, 70, 80, 90, 95, 99]} />
 ```
 
 ### Red
