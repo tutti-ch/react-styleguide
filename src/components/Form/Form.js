@@ -299,6 +299,16 @@ export default () => (
       </Table.Row>
       <Table.Row>
         <Table.Cell>
+          <h3>Checkbox switch</h3>
+        </Table.Cell>
+        <Table.Cell colSpan={4}>
+          <InputCheckbox value="red" label="Red" checked type="switch" />
+          <InputCheckbox value="blue" label="Blue" checked type="switch" />
+          <InputCheckbox value="green" label="Green" type="switch" />
+        </Table.Cell>
+      </Table.Row>
+      <Table.Row>
+        <Table.Cell>
           <h3>Button Group</h3>
         </Table.Cell>
         <Table.Cell colSpan={4}>

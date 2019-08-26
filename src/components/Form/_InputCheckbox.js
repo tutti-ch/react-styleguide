@@ -4,6 +4,7 @@ import { filterProps } from "../../helpers/functions";
 import classes from "./Form.scss";
 import WithWrapper from "./_WithWrapper";
 import debounce from "lodash.debounce";
+import classNames from "classnames";
 
 export class InputCheckbox extends Component {
   static defaultProps = {
@@ -29,7 +30,12 @@ export class InputCheckbox extends Component {
     /**
      * The input name.
      */
-    name: PropTypes.string
+    name: PropTypes.string,
+
+    /**
+     * The type.
+     */
+    type: PropTypes.oneOf(["checkbox", "switch"])
   };
 
   constructor(props) {
@@ -76,13 +82,15 @@ export class InputCheckbox extends Component {
 
   render() {
     const { value, checked } = this.state;
-    const { label, name } = this.props;
+    const { label, name, type } = this.props;
     const props = filterProps(InputCheckbox.propTypes, this.props);
-
+    const className = classNames(classes.cbLabel, {
+      [classes.switch]: type === "switch"
+    });
     return (
       // We do not use a real label here because react complains
       // about uncontrolled/controlled components.
-      <span onClick={this.toggle} className={classes.cbLabel}>
+      <span onClick={this.toggle} className={className}>
         <input
           {...props}
           name={name}
