@@ -123,7 +123,7 @@ $inputHeight: $size-xxxl;
     @include focus();
     min-height: $size-xxxl;
   }
- 
+
   input {
     line-height: $inputHeight;
     padding: 0 $size-s;
@@ -585,6 +585,8 @@ $inputHeight: $size-xxxl;
   border: $border-default;
   line-height: $size-xxxl;
   min-height: $size-xxl;
+  border-radius: $border-radius-s;
+  overflow: hidden;
   display: flex;
   width: 100%;
 
