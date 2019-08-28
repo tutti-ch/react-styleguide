@@ -2,7 +2,7 @@
 
 .stepperContainer {
   display: flex;
-  border: 1px solid $greyscale-90;
+  border: $border-default;
   position: relative;
   width: 100%;
   border-radius: $border-radius-s;
@@ -36,8 +36,8 @@
 
   input[type="text"].input {
     border: 0;
-    border-right: 1px solid $greyscale-90;
-    border-left: 1px solid $greyscale-90;
+    border-right: $border-default;
+    border-left: $border-default;
     text-align: center;
     margin: $size-xxxs 0;
     line-height: $size-xxl;
