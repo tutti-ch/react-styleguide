@@ -58,9 +58,6 @@ export const Phone = p => <Sprite {...p} viewBox="0 0 30 30" id="phone"/>
 export const Pin = p => <Sprite {...p} viewBox="0 0 31.3 40" id="pin"/>
 export const Play = p => <Sprite {...p} viewBox="0 0 32 32" id="play"/>
 export const Plus = p => <Sprite {...p} viewBox="0 0 24 24" id="plus"/>
-export const PremiumBump = p => <Sprite {...p} viewBox="0 0 30 24.9" id="premium-bump"/>
-export const PremiumDbump = p => <Sprite {...p} viewBox="0 0 30 25" id="premium-dbump"/>
-export const PremiumWbump = p => <Sprite {...p} viewBox="0 0 30 25" id="premium-wbump"/>
 export const Prev = p => <Sprite {...p} viewBox="0 0 30 30" id="prev"/>
 export const PriceDown = p => <Sprite {...p} viewBox="0 0 30 30" id="price-down"/>
 export const PriceUp = p => <Sprite {...p} viewBox="0 0 30 30" id="price-up"/>
