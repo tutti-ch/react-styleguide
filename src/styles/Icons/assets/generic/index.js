@@ -37,7 +37,7 @@ export const Gear = p => <Sprite {...p} viewBox="0 0 30 30" id="gear"/>
 export const HouseTransparent = p => <Sprite {...p} viewBox="0 0 30 30" id="house-transparent"/>
 export const House = p => <Sprite {...p} viewBox="0 0 30 30" id="house"/>
 export const Infinite = p => <Sprite {...p} viewBox="0 0 51 23" id="infinite"/>
-export const Info = p => <Sprite {...p} viewBox="0 0 30 30" id="info"/>
+export const Info = p => <Sprite {...p} viewBox="0 0 24 24" id="info"/>
 export const InsertAd = p => <Sprite {...p} viewBox="0 0 49.8 49.8" id="insert-ad"/>
 export const InsertImage = p => <Sprite {...p} viewBox="0 0 30 30" id="insert-image"/>
 export const Label = p => <Sprite {...p} viewBox="0 0 32 32" id="label"/>
