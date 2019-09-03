@@ -26,6 +26,7 @@
     background: $greyscale-100;
     z-index: 10;
     flex: 1 0 auto;
+    touch-action: manipulation;
 
     &:hover {
       background-color: $base-40;
