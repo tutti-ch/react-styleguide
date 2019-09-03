@@ -7,4 +7,3 @@ export const Dbump = p => <Sprite {...p} viewBox="0 0 32 32" id="dbump"/>
 export const Gallery = p => <Sprite {...p} viewBox="0 0 32 32" id="gallery"/>
 export const Highlight = p => <Sprite {...p} viewBox="0 0 46 46" id="highlight"/>
 export const Wbump = p => <Sprite {...p} viewBox="0 0 32 32" id="wbump"/>
-export const Ybump = p => <Sprite {...p} viewBox="0 0 24 24" id="ybump"/>
