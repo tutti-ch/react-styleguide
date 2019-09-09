@@ -180,6 +180,7 @@ $inputHeight: $size-xxxl;
     color: $greyscale-60;
     transform: translateY(-50%);
     transition: $transition-s;
+    text-transform: capitalize;
   }
 
   .slider .label,
