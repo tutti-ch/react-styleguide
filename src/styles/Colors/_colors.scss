@@ -36,6 +36,7 @@ $greyscale: (
 
 // Base palette
 
+$base-20: #383e45;
 $base-40: #616b77;
 $base-60: #95a5b9;
 $base-70: #afb9c5;
@@ -45,6 +46,7 @@ $base-95: #eff0f2;
 $base-99: #f5f9ff;
 
 $base: (
+  "20": $base-20,
   "40": $base-40,
   "60": $base-60,
   "70": $base-70,
