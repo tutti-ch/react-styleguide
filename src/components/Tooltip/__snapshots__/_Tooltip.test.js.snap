@@ -17,12 +17,12 @@ exports[`(Components) Tooltip should first render null then after APPEAR_AFTER s
       <Close>
         <Sprite
           id="close"
-          viewBox="0 0 30 30"
+          viewBox="0 0 24 24"
         >
           <svg
             className="svg-sprite"
             role="img"
-            viewBox="0 0 30 30"
+            viewBox="0 0 24 24"
           >
             <use
               xlinkHref="#close"
