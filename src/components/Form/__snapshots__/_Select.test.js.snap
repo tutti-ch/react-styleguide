@@ -91,13 +91,13 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                   className="icoClose"
                   id="close"
                   onClick={[Function]}
-                  viewBox="0 0 30 30"
+                  viewBox="0 0 24 24"
                 >
                   <svg
                     className="svg-sprite icoClose"
                     onClick={[Function]}
                     role="img"
-                    viewBox="0 0 30 30"
+                    viewBox="0 0 24 24"
                   >
                     <use
                       xlinkHref="#close"
@@ -133,13 +133,13 @@ exports[`(Component) Select [getSelectedOptions] should return the selected opti
                   className="icoClose"
                   id="close"
                   onClick={[Function]}
-                  viewBox="0 0 30 30"
+                  viewBox="0 0 24 24"
                 >
                   <svg
                     className="svg-sprite icoClose"
                     onClick={[Function]}
                     role="img"
-                    viewBox="0 0 30 30"
+                    viewBox="0 0 24 24"
                   >
                     <use
                       xlinkHref="#close"
