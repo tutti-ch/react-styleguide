@@ -50,7 +50,8 @@ export default (WrappedComponent, mergeProps = {}) => {
     };
 
     static contextTypes = {
-      register: PropTypes.func
+      register: PropTypes.func,
+      unregister: PropTypes.func
     };
 
     static getNormalizedValue(props) {
@@ -75,6 +76,8 @@ export default (WrappedComponent, mergeProps = {}) => {
         error: props.error
       };
 
+      this.context = context;
+
       this.register(context, props);
     }
 
@@ -88,6 +91,20 @@ export default (WrappedComponent, mergeProps = {}) => {
       if (typeof context.register === "function" && props.name) {
         context.register(props, this);
       }
+    }
+
+    /**
+     * Context function to unregister the component to the form.
+     *
+     */
+    unregister() {
+      if (typeof this.context.unregister === "function" && this.props.name) {
+        this.context.unregister(this.props.name);
+      }
+    }
+
+    componentWillUnmount() {
+      this.unregister();
     }
 
     /**
