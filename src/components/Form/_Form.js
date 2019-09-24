@@ -38,6 +38,7 @@ export default class Form extends Component {
 
   static childContextTypes = {
     register: PropTypes.func,
+    unregister: PropTypes.func,
     onSubmit: PropTypes.func,
     genericErrorHandler: PropTypes.func
   };
@@ -90,13 +91,26 @@ export default class Form extends Component {
        */
       register: (props, self) => {
         const { name, value } = props;
+
         this.inputs = this.inputs || [];
+
         this.inputs.push({
           defaultValue: value || props.values, // Values is used by slider
           error: null,
           name,
           self
         });
+      },
+
+      /**
+       * Remove input from the the registreted input list, as it will no longer be bound to the form events
+       */
+      unregister: name => {
+        if (!this.inputs) {
+          return;
+        }
+
+        this.inputs = this.inputs.filter(input => input.name !== name);
       },
 
       /**
