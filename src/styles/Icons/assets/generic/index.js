@@ -24,8 +24,8 @@ export const ClockTransparent = p => <Sprite {...p} viewBox="0 0 53 53" id="cloc
 export const Clock = p => <Sprite {...p} viewBox="0 0 53 53" id="clock"/>
 export const CloseTags = p => <Sprite {...p} viewBox="0 0 5.9 5.9" id="close-tags"/>
 export const Close = p => <Sprite {...p} viewBox="0 0 24 24" id="close"/>
-export const DateDown = p => <Sprite {...p} viewBox="0 0 24 24" id="date-down"/>
-export const DateUp = p => <Sprite {...p} viewBox="0 0 24 24" id="date-up"/>
+export const DateDown = p => <Sprite {...p} viewBox="0 0 20 20" id="date-down"/>
+export const DateUp = p => <Sprite {...p} viewBox="0 0 20 20" id="date-up"/>
 export const Dropdown = p => <Sprite {...p} viewBox="0 0 24 24" id="dropdown"/>
 export const Edit = p => <Sprite {...p} viewBox="0 0 24 24" id="edit"/>
 export const Email = p => <Sprite {...p} viewBox="0 0 30 30" id="email"/>
@@ -65,8 +65,8 @@ export const Play = p => <Sprite {...p} viewBox="0 0 24 24" id="play"/>
 export const PlusCircle = p => <Sprite {...p} viewBox="0 0 24 24" id="plus-circle"/>
 export const Plus = p => <Sprite {...p} viewBox="0 0 24 24" id="plus"/>
 export const Prev = p => <Sprite {...p} viewBox="0 0 30 30" id="prev"/>
-export const PriceDown = p => <Sprite {...p} viewBox="0 0 24 24" id="price-down"/>
-export const PriceUp = p => <Sprite {...p} viewBox="0 0 24 24" id="price-up"/>
+export const PriceDown = p => <Sprite {...p} viewBox="0 0 20 19" id="price-down"/>
+export const PriceUp = p => <Sprite {...p} viewBox="0 0 20 19" id="price-up"/>
 export const Printer = p => <Sprite {...p} viewBox="0 0 28 24" id="printer"/>
 export const Privat = p => <Sprite {...p} viewBox="0 0 24 24" id="privat"/>
 export const Redo = p => <Sprite {...p} viewBox="0 0 24 24" id="redo"/>
