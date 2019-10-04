@@ -46,7 +46,11 @@ h6 {
 }
 
 p {
-  color: $greyscale-60 !important;
+  color: $greyscale-30 !important;
+}
+
+.regularTypography {
+  font-family: Roboto-Regular !important;
 }
 
 h2 {
@@ -55,4 +59,13 @@ h2 {
 
 h3 {
   margin-top: 40px !important;
+}
+
+.typographySection h1,
+.typographySection h2,
+.typographySection h3,
+.typographySection h4,
+.typographySection h5,
+.typographySection h6 {
+  margin: $size-m 0 !important;
 }
