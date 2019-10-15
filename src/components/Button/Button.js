@@ -106,14 +106,14 @@ export default class Button extends Component {
     const { type = "submit" } = props;
 
     if (typeof onSubmit === "function" && type === "submit") {
-      onSubmit(({ loading }) => this.setState({ loading }));
+      onSubmit(({ loading }) => this.updateState({ loading }));
     }
   }
 
   componentDidUpdate(oldProps) {
     const { loading } = this.props;
     if (loading !== oldProps.loading) {
-      this.setState({ loading });
+      this.updateState({ loading });
     }
   }
 
@@ -168,6 +168,16 @@ export default class Button extends Component {
 
     return children;
   };
+
+  updateState(...args) {
+    if (this.unmounted !== true) {
+      this.setState(...args);
+    }
+  }
+
+  componentWillUnmount() {
+    this.unmounted = true;
+  }
 
   /**
    * Render the button.
