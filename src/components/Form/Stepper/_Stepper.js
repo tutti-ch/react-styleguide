@@ -4,6 +4,7 @@ import { filterProps } from "../../../helpers/functions";
 import WithWrapper from "../_WithWrapper";
 import * as helpers from "./helpers";
 import classes from "./Stepper.scss";
+import cn from "classnames";
 
 /**
  * Renders an input with two buttons, + and -
@@ -25,11 +26,16 @@ const Stepper = props => {
           {ownLabel}
         </label>
       )}
-      <div className={classes.stepperContainer}>
+      <div
+        className={cn(classes.stepperContainer, {
+          [classes.disabled]: props.disabled
+        })}
+      >
         <button
           onClick={helpers.decrease(props, value, setValue)}
           type="button"
           className={classes.decrease}
+          disabled={props.disabled}
         >
           -
         </button>
@@ -50,6 +56,7 @@ const Stepper = props => {
           onClick={helpers.increase(props, value, setValue)}
           type="button"
           className={classes.increase}
+          disabled={props.disabled}
         >
           +
         </button>

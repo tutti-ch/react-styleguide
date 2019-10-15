@@ -47,6 +47,19 @@
     min-width: 0;
     border-radius: 0;
   }
+
+  &.disabled {
+    background: $greyscale-95;
+    cursor: not-allowed;
+
+    button {
+      background: $greyscale-95;
+    }
+
+    input[type="text"].input {
+      border: none !important; // important is required because :disabled sets its
+    }
+  }
 }
 
 .ownLabel {
