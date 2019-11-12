@@ -16,13 +16,19 @@ export default class OutsideClickable extends Component {
   }
 
   componentDidMount() {
-    const event = "ontouchstart" in window ? "touchstart" : "click";
-    document.body.addEventListener(event, this.contains);
+    if ("ontouchstart" in window) {
+      document.body.addEventListener("touchstart", this.contains);
+    } else {
+      window.addEventListener("click", this.contains);
+    }
   }
 
   componentWillUnmount() {
-    const event = "ontouchstart" in window ? "touchstart" : "click";
-    document.body.removeEventListener(event, this.contains);
+    if ("ontouchstart" in window) {
+      document.body.removeEventListener("touchstart", this.contains);
+    } else {
+      window.removeEventListener("click", this.contains);
+    }
   }
 
   contains = e => {
