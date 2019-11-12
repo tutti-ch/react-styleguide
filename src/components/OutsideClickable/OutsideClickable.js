@@ -17,7 +17,6 @@ export default class OutsideClickable extends Component {
 
   componentDidMount() {
     const event = "ontouchstart" in window ? "touchstart" : "click";
-    console.log(event);
     document.body.addEventListener(event, this.contains);
   }
 
