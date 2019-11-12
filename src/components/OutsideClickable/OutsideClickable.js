@@ -16,15 +16,19 @@ export default class OutsideClickable extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("click", this.contains);
+    const event = "ontouchstart" in window ? "touchstart" : "click";
+    console.log(event);
+    document.body.addEventListener(event, this.contains);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("click", this.contains);
+    const event = "ontouchstart" in window ? "touchstart" : "click";
+    document.body.removeEventListener(event, this.contains);
   }
 
   contains = e => {
     const node = this.outsideClickable;
+
     if (node && node.contains(e.target) === false) {
       this.props.onOutsideClick.call();
     }
@@ -33,8 +37,8 @@ export default class OutsideClickable extends Component {
   onlyOneChild = () => {
     if (this.props.children.length > 1) {
       throw new Error("Multiple children are not allowed in OutsideClickable");
-      return;
     }
+
     return true;
   };
 
