@@ -21,3 +21,7 @@
 .shadowTopM {
   @include mediumShadowTop;
 }
+
+.darkShadowLarge {
+  @include darkShadowLarge;
+}

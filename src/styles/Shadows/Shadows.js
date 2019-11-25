@@ -18,6 +18,11 @@ const Shadows = () => {
       <BoxItem label="Medium Top Shadow">
         <div className={classNames(classes.shadowSample, classes.shadowTopM)} />
       </BoxItem>
+      <BoxItem label="Dark Shadow Large">
+        <div
+          className={classNames(classes.shadowSample, classes.darkShadowLarge)}
+        />
+      </BoxItem>
     </BoxItemWrapper>
   );
 };

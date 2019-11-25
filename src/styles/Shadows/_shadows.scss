@@ -1,21 +1,25 @@
 @import "../Colors/colors";
 
-@mixin mediumShadow {
-  box-shadow: 0 3px 5px 0 transparentize($greyscale-00, 0.85);
-}
+// Regular (short) shadows
 
 @mixin lightShadow {
   box-shadow: 0 2px 5px 0 transparentize($greyscale-00, 0.95);
 }
 
-@mixin superShadow {
-  box-shadow: 0 0 20px 0 transparentize($greyscale-00, 0.95);
+@mixin mediumShadow {
+  box-shadow: 0 3px 5px 0 transparentize($greyscale-00, 0.85);
+}
+
+@mixin lightShadowTop {
+  box-shadow: 0 -2px 5px 0 transparentize($greyscale-00, 0.95);
 }
 
 @mixin mediumShadowTop {
   box-shadow: 0 -3px 5px 0 transparentize($greyscale-00, 0.85);
 }
 
-@mixin lightShadowTop {
-  box-shadow: 0 -2px 5px 0 transparentize($greyscale-00, 0.95);
+// Extended shadows: To be used for big tooltips
+
+@mixin darkShadowLarge {
+  box-shadow: 0 0 25px 0 transparentize($greyscale-00, 0.7);
 }
