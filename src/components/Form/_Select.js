@@ -24,7 +24,7 @@ export class Select extends Component {
      */
     options: PropTypes.arrayOf(
       PropTypes.shape({
-        text: PropTypes.string.isRequired,
+        text: PropTypes.node.isRequired,
         value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
           .isRequired
       })
