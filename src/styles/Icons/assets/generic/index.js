@@ -36,6 +36,7 @@ export const FilterCircleOff = p => <Sprite {...p} viewBox="0 0 31 31" id="filte
 export const FilterCircleOn = p => <Sprite {...p} viewBox="0 0 31 31" id="filter-circle-on"/>
 export const FilterOff = p => <Sprite {...p} viewBox="0 0 11.7 11.3" id="filter-off"/>
 export const FilterOn = p => <Sprite {...p} viewBox="0 0 12 11.6" id="filter-on"/>
+export const Filter = p => <Sprite {...p} viewBox="0 0 24 24" id="filter"/>
 export const Firma = p => <Sprite {...p} viewBox="0 0 24 24" id="firma"/>
 export const Garbage = p => <Sprite {...p} viewBox="0 0 24 24" id="garbage"/>
 export const Gear = p => <Sprite {...p} viewBox="0 0 24 24" id="gear"/>
