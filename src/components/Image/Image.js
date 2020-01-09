@@ -25,7 +25,7 @@ export default class Image extends Component {
     /**
      * The image source.
      */
-    src: PropTypes.string.isRequired,
+    src: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
 
     /**
      * The size of the spinner while image is loading. By default this is disabled, set any number to activate.
@@ -72,6 +72,16 @@ export default class Image extends Component {
     this.setState({ error: true, loaded: true });
   };
 
+  /**
+   * Return the src. Under some cases, the require statement might return an { default: "path-to-img" }.
+   * We use the <Image /> component extensively with the sprite. This is a helper function to return
+   * the string in case the require statement returns an object.
+   */
+  src() {
+    const { src } = this.props;
+    return src ? src.default || src : "";
+  }
+
   componentDidMount() {
     // Why loading like this? Because we want to render only one element:
     // for error: true => we render the cube
@@ -85,14 +95,14 @@ export default class Image extends Component {
 
     // Make sure to have this otherwise neither onload nor onerror will be triggered
     // and the image will spin forever.
-    this.image.src = this.props.src;
+    this.image.src = this.src();
   }
 
   // need to check both on update and on mount because sometimes the image gets called with an empty url at first
   // (eg. before we fetch the ad url from an api call)
   componentDidUpdate(oldProps) {
     if (oldProps.src !== this.props.src) {
-      this.image.src = this.props.src;
+      this.image.src = this.src();
       this.setState({ loaded: false });
     }
   }
@@ -142,7 +152,7 @@ export default class Image extends Component {
    * @return {*}
    */
   render() {
-    const { src } = this.props;
+    const src = this.src();
     const { error, loaded } = this.state;
 
     if (error) {
