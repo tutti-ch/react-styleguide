@@ -39,7 +39,7 @@ module.exports = {
       linkHover: "#005b89"
     },
     fontFamily: {
-      base: "'Roboto-Light',sans-serif"
+      base: "'Roboto',sans-serif"
     }
   },
 
@@ -81,7 +81,7 @@ module.exports = {
         position: "relative",
         "margin-bottom": "30px",
         "padding-bottom": "30px",
-        "min-height": "100vh"
+        height: "100%"
       }
     },
     TabButton: {
@@ -150,7 +150,6 @@ module.exports = {
 
   require: [
     // Include our main scss file.
-    path.join(__dirname, "src/styles/Typography/fonts/_Roboto.scss"),
     path.join(__dirname, "src/index.scss"),
     path.join(__dirname, "src/normalize.scss")
   ]

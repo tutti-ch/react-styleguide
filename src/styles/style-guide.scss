@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: Roboto-Light !important;
+  font-family: "Roboto", sans-serif !important;
 }
 
 h1,
@@ -38,10 +38,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Roboto !important;
+  font-family: "Roboto", sans-serif !important;
 
   a {
-    font-family: Roboto !important;
+    font-family: "Roboto", sans-serif !important;
   }
 }
 
@@ -50,7 +50,8 @@ p {
 }
 
 .regularTypography {
-  font-family: Roboto-Regular !important;
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400;
 }
 
 h2 {
