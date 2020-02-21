@@ -30,8 +30,8 @@ export const Dropdown = p => <Sprite {...p} viewBox="0 0 24 24" id="dropdown"/>
 export const Edit = p => <Sprite {...p} viewBox="0 0 24 24" id="edit"/>
 export const Email = p => <Sprite {...p} viewBox="0 0 30 30" id="email"/>
 export const Error = p => <Sprite {...p} viewBox="0 0 24 24" id="error"/>
-export const EyeStriked = p => <Sprite {...p} viewBox="0 0 30 30" id="eye-striked"/>
-export const Eye = p => <Sprite {...p} viewBox="0 0 30 30" id="eye"/>
+export const EyeStriked = p => <Sprite {...p} viewBox="0 0 21 18" id="eye-striked"/>
+export const Eye = p => <Sprite {...p} viewBox="0 0 20 14" id="eye"/>
 export const FilterCircleOff = p => <Sprite {...p} viewBox="0 0 31 31" id="filter-circle-off"/>
 export const FilterCircleOn = p => <Sprite {...p} viewBox="0 0 31 31" id="filter-circle-on"/>
 export const FilterOff = p => <Sprite {...p} viewBox="0 0 11.7 11.3" id="filter-off"/>
