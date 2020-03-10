@@ -36,18 +36,24 @@ $greyscale: (
 
 // Base palette
 
-$base-20: #383e45;
-$base-40: #616b77;
-$base-60: #95a5b9;
-$base-70: #afb9c5;
-$base-80: #cdd6dc;
-$base-90: #e4e9ed;
-$base-95: #eff0f2;
-$base-99: #f5f9ff;
+$base-10: #0d131a;
+$base-20: #1c2633;
+$base-30: #2e3c4d;
+$base-40: #425366;
+$base-50: #596b80;
+$base-60: #738499;
+$base-70: #8f9fb3;
+$base-80: #adbbcc;
+$base-90: #cfd9e6;
+$base-95: #e6ecf2;
+$base-99: #fafbfc;
 
 $base: (
+  "10": $base-10,
   "20": $base-20,
+  "30": $base-30,
   "40": $base-40,
+  "50": $base-50,
   "60": $base-60,
   "70": $base-70,
   "80": $base-80,
