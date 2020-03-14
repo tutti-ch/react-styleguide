@@ -25,4 +25,4 @@ export const Telefon = p => <Sprite {...p} viewBox="0 0 24 24" id="telefon"/>
 export const Tickets = p => <Sprite {...p} viewBox="0 0 24 24" id="tickets"/>
 export const Tiere = p => <Sprite {...p} viewBox="0 0 24 24" id="tiere"/>
 export const Tv = p => <Sprite {...p} viewBox="0 0 24 24" id="tv"/>
-export const Volunteering = p => <Sprite {...p} viewBox="0 0 27 24" id="volunteering"/>
+export const Volunteering = p => <Sprite {...p} viewBox="0 0 26.966 24" id="volunteering"/>
