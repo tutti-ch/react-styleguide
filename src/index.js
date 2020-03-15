@@ -45,7 +45,8 @@ export const icons = {
     "9080": Icons.Tickets,
     "8000": Icons.Tiere,
     "5400": Icons.Tv,
-    "7020": Icons.Sonstiges
+    "7020": Icons.Sonstiges,
+    "6300": Icons.Volunteering
   },
   cantons: {
     "1": Icons.CantonAargau,
